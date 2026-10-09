@@ -1,7 +1,7 @@
 {
-  "name": "bez-opcije",
+  "name": "scifi-stories",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,7 @@
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.4",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {

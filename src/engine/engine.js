@@ -1,5 +1,5 @@
-import story from '../data/story.json';
 import { cleanName, nameTokens } from './player';
+import { clearSave, readSave, writeSave } from './storage';
 
 /*
   Ose (skriveni brojači), čitaocu se nikad ne prikazuju:
@@ -9,11 +9,8 @@ import { cleanName, nameTokens } from './player';
   Svaki izbor ima težine w: { b, s, u }. Kraj priče proizlazi iz zbira svih izbora.
 */
 export const AXES = ['b', 's', 'u'];
-const STORAGE_KEY = 'bez-opcije-v1';
 // Kratki pasusi (replike) ostaju na istoj strani sa prethodnim pasusom.
 const SHORT_PARAGRAPH = 80;
-
-export const getNode = (id) => story.nodes[id];
 
 // Rod glavnog lika: 'm' (Lazar) ili 'f' (Milica). Tekst je napisan u muškom rodu,
 // a ženska varijanta stoji u polju sa nastavkom "f" (tf, leadf, textf, closingf).
@@ -63,6 +60,14 @@ const matches = (cond, picks) => {
 export const visibleParagraphs = (node, picks) =>
   (node.paragraphs || []).filter((p) => matches(p.if, picks));
 
+export const resolveNext = (node, picks) => {
+  if (node.branch) {
+    const hit = node.branch.find((b) => matches(b.if, picks));
+    return hit ? hit.next : null;
+  }
+  return node.next || null;
+};
+
 // Strane scene: svaki pasus je nova strana, osim kratkih replika koje se lepe na prethodnu.
 // Svaka strana nosi "lead": rečenicu koja nagoveštava šta na njoj sledi.
 // Replike nose "who" (ime govornika koje se prikazuje iznad teksta).
@@ -89,34 +94,7 @@ export const buildPages = (node, picks, player = DEFAULT_PLAYER) => {
   return pages;
 };
 
-export const getImage = (id) => (id && story.images ? story.images[id] || null : null);
-
-export const resolveNext = (node, picks) => {
-  if (node.branch) {
-    const hit = node.branch.find((b) => matches(b.if, picks));
-    return hit ? hit.next : null;
-  }
-  return node.next || null;
-};
-
-// Nagoveštaj prve strane sledeće scene (za dugme na kraju scene bez izbora).
-export const nextSceneLead = (node, picks, player = DEFAULT_PLAYER) => {
-  const nextId = resolveNext(node, picks);
-  if (!nextId || !story.nodes[nextId]) return null;
-  const first = buildPages(story.nodes[nextId], picks, player)[0];
-  return first ? first.lead : null;
-};
-
-export const initialState = {
-  screen: 'start', // start | play | mirror
-  node: story.start,
-  picks: [],
-  ending: null,
-  gender: DEFAULT_GENDER,
-  name: '',
-};
-
-export const reducer = (state, action) => {
+const makeReducer = (initialState) => (state, action) => {
   switch (action.type) {
     case 'BEGIN':
       return { ...initialState, screen: 'play', gender: action.gender === 'f' ? 'f' : DEFAULT_GENDER, name: cleanName(action.name) };
@@ -135,33 +113,53 @@ export const reducer = (state, action) => {
   }
 };
 
-export const loadSaved = () => {
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    const saved = JSON.parse(raw);
+// Motor vezan za jednu priču (story.json) i njen slug (ključ za čuvanje napretka).
+export const createEngine = (story, slug) => {
+  const getNode = (id) => story.nodes[id];
+  const getImage = (id) => (id && story.images ? story.images[id] || null : null);
+
+  // Nagoveštaj prve strane sledeće scene (za dugme na kraju scene bez izbora).
+  const nextSceneLead = (node, picks, player = DEFAULT_PLAYER) => {
+    const nextId = resolveNext(node, picks);
+    if (!nextId || !story.nodes[nextId]) return null;
+    const first = buildPages(story.nodes[nextId], picks, player)[0];
+    return first ? first.lead : null;
+  };
+
+  const initialState = {
+    screen: 'start', // start | play | mirror
+    node: story.start,
+    picks: [],
+    ending: null,
+    gender: DEFAULT_GENDER,
+    name: '',
+  };
+
+  const loadSaved = () => {
+    const saved = readSave(slug);
     if (!saved || !story.nodes[saved.node] || !Array.isArray(saved.picks)) return null;
     if (saved.gender !== 'f') saved.gender = DEFAULT_GENDER;
     saved.name = cleanName(saved.name);
     return saved;
-  } catch {
-    return null;
-  }
-};
+  };
 
-export const persist = (state) => {
-  try {
+  const persist = (state) => {
     if (state.screen === 'play') {
-      window.localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({ node: state.node, picks: state.picks, gender: state.gender, name: state.name })
-      );
+      writeSave(slug, { node: state.node, picks: state.picks, gender: state.gender, name: state.name });
     } else if (state.screen === 'mirror') {
-      window.localStorage.removeItem(STORAGE_KEY);
+      clearSave(slug);
     }
-  } catch {
-    /* localStorage može biti nedostupan; priča radi i bez njega */
-  }
-};
+  };
 
-export default story;
+  return {
+    story,
+    slug,
+    getNode,
+    getImage,
+    nextSceneLead,
+    initialState,
+    reducer: makeReducer(initialState),
+    loadSaved,
+    persist,
+  };
+};

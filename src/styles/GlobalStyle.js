@@ -1,50 +1,62 @@
-import { createGlobalStyle, keyframes } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-export const fadeUp = keyframes`
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-`;
-
-export const drift = keyframes`
-  0%   { transform: translate3d(0, 0, 0); }
-  50%  { transform: translate3d(14px, 10px, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-`;
-
+// Jedino mesto za globalna pravila. Bootstrap (reboot + grid) se uvozi jednom u main.jsx,
+// a ovde se dopunjuje tako da boje, fontovi i linkovi uvek dolaze iz aktivne teme.
 const GlobalStyle = createGlobalStyle`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   :root {
-    --paper: ${({ theme }) => theme.colors.paper};
-    --ink: ${({ theme }) => theme.colors.ink};
-    --amber: ${({ theme }) => theme.colors.amber};
-    --steel: ${({ theme }) => theme.colors.steel};
+    color-scheme: ${({ theme }) => theme.mode};
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.textFaint} transparent;
   }
 
   html, body, #root {
     min-height: 100%;
   }
 
+  html {
+    background: ${({ theme }) => theme.bg};
+  }
+
   body {
     margin: 0;
-    background: ${({ theme }) => theme.colors.paper};
-    color: ${({ theme }) => theme.colors.ink};
-    font-family: ${({ theme }) => theme.fonts.prose};
+    background-color: ${({ theme }) => theme.bg};
+    color: ${({ theme }) => theme.text};
+    font-family: ${({ theme }) => theme.fontBody};
     font-size: ${({ theme }) => theme.sizes.prose};
-    line-height: 1.85;
+    line-height: ${({ theme }) => theme.lineHeights.prose};
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    transition: background-color ${({ theme }) => theme.transitions.theme},
+      color ${({ theme }) => theme.transitions.theme};
   }
 
   ::selection {
-    background: ${({ theme }) => theme.colors.amberSoft};
+    background: ${({ theme }) => theme.selection};
   }
 
-  button {
+  button, input {
     font-family: inherit;
   }
 
-  button:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors.steel};
+  a {
+    color: ${({ theme }) => theme.text};
+    text-decoration-color: ${({ theme }) => theme.border};
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.text};
+    text-decoration-color: ${({ theme }) => theme.accent};
+  }
+
+  :focus-visible {
+    outline: 2px solid ${({ theme }) => theme.focusRing};
     outline-offset: 3px;
   }
 
@@ -53,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 `;
