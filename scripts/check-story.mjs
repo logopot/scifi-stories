@@ -1,19 +1,26 @@
-// Provera priče: reference, dostižnost, jedinstveni id-evi, raspodela krajeva i procena vremena čitanja.
+// Provera priča iz registra: reference, dostižnost, jedinstveni id-evi, raspodela krajeva i procena vremena čitanja.
+// Upotreba: npm run check-story [slug]   (bez slug-a proverava sve priče sa status 'ready'; zatim teme i strukturu)
 import { existsSync, readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { getStoryEntry, stories } from '../src/stories/index.js';
+import { themes } from '../src/styles/themes.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const story = JSON.parse(readFileSync(join(here, '../src/data/story.json'), 'utf8'));
-const { nodes } = story;
 const AXES = ['b', 's', 'u'];
+let failed = false;
+
+const checkStory = (entry) => {
+const story = JSON.parse(readFileSync(join(here, '../src/stories/' + entry.slug + '/story.json'), 'utf8'));
+const { nodes } = story;
 const errors = [];
 const err = (m) => errors.push(m);
-
 // --- strukturne provere ---
 const images = story.images || {};
 for (const [k, im] of Object.entries(images)) {
   if (!im.src) err(`slika ${k}: nema src`);
+  else if (!im.src.startsWith('img/' + entry.slug + '/')) err(`slika ${k}: src mora počinjati sa img/${entry.slug}/ (je: ${im.src})`);
   else if (!existsSync(join(here, '../public', im.src))) console.warn(`UPOZORENJE: nedostaje fajl public/${im.src} (slika "${k}")`);
 }
 for (const [id, n] of Object.entries(nodes)) {
@@ -160,8 +167,53 @@ const avg = wsum / N;
 console.log(`Reči po igri: min ${wmin} | prosek ${Math.round(avg)} | max ${wmax}  ->  čitanje ~${Math.round(avg / 180)} min (180 reči/min), bez razmišljanja o izborima`);
 console.log('Namerne putanje (ka osi):', forced, '| uvek prva:', alwaysFirst, '| uvek poslednja:', alwaysLast);
 
+// --- metapodaci priče i registra ---
+const desc = story.meta && story.meta.description;
+if (!Array.isArray(desc) || !desc.length || desc.some((d) => typeof d !== 'string' || !d.trim())) {
+  err('meta.description mora biti niz od bar jednog neispraznog pasusa (opis na stranici priče)');
+}
+if (!themes[entry.slug]) err(`nema teme "${entry.slug}" u src/styles/themes.js`);
+if (entry.cover && !existsSync(join(here, '../public', entry.cover))) console.warn(`UPOZORENJE: nedostaje naslovna slika public/${entry.cover}`);
+
 if (errors.length) {
-  console.error(`\nGREŠKE (${errors.length}):\n- ${errors.join('\n- ')}`);
+  console.error(`\nGREŠKE u "${entry.slug}" (${errors.length}):\n- ${errors.join('\n- ')}`);
+  return false;
+}
+console.log(`\n"${entry.slug}": sve provere prošle.`);
+return true;
+};
+
+// --- glavni tok ---
+const slugArg = process.argv[2];
+let targets = stories.filter((s) => s.status === 'ready');
+if (slugArg) {
+  const one = getStoryEntry(slugArg);
+  if (!one) {
+    console.error(`Nepoznat slug "${slugArg}". Dostupni: ${stories.map((s) => s.slug).join(', ')}`);
+    process.exit(1);
+  }
+  targets = [one];
+}
+for (const entry of targets) {
+  console.log(`\n=== ${entry.slug} ===`);
+  if (entry.status === 'soon') {
+    console.log('status "soon": nema story.json za proveru.');
+  } else if (!checkStory(entry)) {
+    failed = true;
+  }
+}
+// Registar: svaka priča ima temu.
+stories.forEach((s) => { if (!themes[s.slug]) { console.error(`Registar: nema teme za "${s.slug}"`); failed = true; } });
+
+// Teme (kontrast) i struktura komponenti.
+for (const script of ['check-themes.mjs', 'check-structure.mjs']) {
+  console.log(`\n=== ${script} ===`);
+  const r = spawnSync(process.execPath, [join(here, script)], { stdio: 'inherit' });
+  if (r.status !== 0) failed = true;
+}
+
+if (failed) {
+  console.error('\nProvere NISU prošle.');
   process.exit(1);
 }
 console.log('\nSve provere prošle.');
