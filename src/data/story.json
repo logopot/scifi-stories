@@ -1,0 +1,2069 @@
+{
+  "meta": {
+    "title": "Bez opcije",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "axesNote": "b = bekstvo/preživljavanje, s = slom sistema, u = uklapanje (skriveni brojači, čitaocu se ne prikazuju tokom priče)"
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "Na planeti Tandem nikada nije noć. Dva sunca stoje na nebu, svaka stvar baca po dve senke, a nijedan stanovnik nikada nije morao da odluči šta će sledeće da uradi. Na tu planetu padaš ti, bez ičega osim napuklog vizira i želje da preživiš. Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu. Nijedna nije označena kao ispravna, a retko će neka biti samo dobra ili samo loša."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi gde si stao",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš klikom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 40 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Kraj priče ne zavisi od poslednjeg klika.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Beli pojas"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Zenit"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Vizir"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Zaobilazak"
+    },
+    "c5": {
+      "mark": "V",
+      "name": "Presek"
+    },
+    "c6": {
+      "mark": "VI",
+      "name": "Poravnanje"
+    }
+  },
+  "start": "c1_wake",
+  "endings": {
+    "b": {
+      "title": "Noć",
+      "closing": [
+        "Spavao si dugo. Kad si se probudio, Prevoznik je već znao put, a na konzoli su i dalje stajala tri reda, nepročitana.",
+        "Ponekad ćeš se, usred običnog sata, uhvatiti kako čekaš da ti neko kaže šta sledi. Pa ćeš prestati da čekaš."
+      ],
+      "closingf": [
+        "Spavala si dugo. Kad si se probudila, Prevoznik je već znao put, a na konzoli su i dalje stajala tri reda, nepročitana.",
+        "Ponekad ćeš se, usred običnog sata, uhvatiti kako čekaš da ti neko kaže šta sledi. Pa ćeš prestati da čekaš."
+      ]
+    },
+    "s": {
+      "title": "Prazna lista",
+      "closing": [
+        "Zenit je ćutao, a onda je neko na trgu zapalio vatru, iako nikome nije trebala. Ljudi su stajali oko nje i gledali kako se kreće.",
+        "Ne zna se da li je to bila pobeda. Ljudi Tandema sada prvi put biraju bez liste, i neki od njih to ne umeju."
+      ]
+    },
+    "u": {
+      "title": "Krug",
+      "closing": [
+        "Sunca su se razdvojila, a senke su se vratile, dve, kao i uvek. Nijedan krug na Tandemu nije stao zbog toga.",
+        "Nije ti loše. Nikome na Tandemu nije loše."
+      ]
+    }
+  },
+  "nodes": {
+    "c1_wake": {
+      "chapter": "c1",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Prvo što si osetio nije bio bol, nego toplota na kapcima, ravnomerna i bez izvora, kao da svetlost dolazi sa svih strana odjednom.",
+          "tf": "Prvo što si osetila nije bio bol, nego toplota na kapcima, ravnomerna i bez izvora, kao da svetlost dolazi sa svih strana odjednom."
+        },
+        {
+          "t": "Otvorio si oči. Nebo je bilo bledo i visoko, i na njemu su stajala dva sunca: veliko, ćilibarsko, nepomično kao težak novčić, i malo, belo-plavo, koje se pomeralo tako polako da je oko to primetilo tek kad bi se na trenutak skrenulo i vratilo. Ispod njih ravnica soli išla je do horizonta bez ijednog drveta, kamena ili brega.",
+          "lead": "Iznad tebe, dva sunca, različita kao brat i sestra.",
+          "tf": "Otvorila si oči. Nebo je bilo bledo i visoko, i na njemu su stajala dva sunca: veliko, ćilibarsko, nepomično kao težak novčić, i malo, belo-plavo, koje se pomeralo tako polako da je oko to primetilo tek kad bi se na trenutak skrenulo i vratilo. Ispod njih ravnica soli išla je do horizonta bez ijednog drveta, kamena ili brega."
+        },
+        {
+          "t": "Zapravo, senki je bilo. Kad si okrenuo glavu, video si da svaka stvar baca po dve: jednu toplu, rđastu, i jednu hladnu, plavičastu, ukrštene kao makaze. Polovina letelice „Svitac“, zabijena u so pod uglom, imala je dve senke koje su se dodirivale u tački nekoliko koraka od tvojih čizama.",
+          "lead": "Nešto na ravnici nije bilo kako treba.",
+          "tf": "Zapravo, senki je bilo. Kad si okrenula glavu, videla si da svaka stvar baca po dve: jednu toplu, rđastu, i jednu hladnu, plavičastu, ukrštene kao makaze. Polovina letelice „Svitac“, zabijena u so pod uglom, imala je dve senke koje su se dodirivale u tački nekoliko koraka od tvojih čizama."
+        },
+        {
+          "t": "Vizir ti je bio napukao. Pukotina je prelazila preko levog oka, i svaki put kad bi pomerio glavu, svet bi se na tren razdvojio u dve slike. Grlo ti je bilo suvo kao so ispod tebe. Na podlaktici si imao posekotinu od koje se krv već uhvatila u koru.",
+          "lead": "Staklo ispred oka više nije bilo celo.",
+          "tf": "Vizir ti je bio napukao. Pukotina je prelazila preko levog oka, i svaki put kad bi pomerila glavu, svet bi se na tren razdvojio u dve slike. Grlo ti je bilo suvo kao so ispod tebe. Na podlaktici si imala posekotinu od koje se krv već uhvatila u koru."
+        },
+        {
+          "t": "Prevodilac u kragni, jedina stvar na tebi koja je preživela pad, zapištao je jednom i utihnuo. Nigde nije bilo ni zvuka ni pokreta. Ništa ti nije govorilo šta da radiš.",
+          "lead": "Jedini zvuk koji je ostao dolazio je sa tvoje kragne."
+        },
+        {
+          "t": "Sedam dana, prisetio si se. Teretni brod tvoje kompanije prolazi kroz ovaj sistem samo jednom i ne staje ni za koga ko nije na putanji oko planete. Sedam dana da nađeš nešto što leti. Do tada moraš da budeš živ.",
+          "lead": "Postojao je rok, i bio je kratak.",
+          "tf": "Sedam dana, prisetila si se. Teretni brod tvoje kompanije prolazi kroz ovaj sistem samo jednom i ne staje ni za koga ko nije na putanji oko planete. Sedam dana da nađeš nešto što leti. Do tada moraš da budeš živa."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1a",
+          "text": "Potraži vodu u olupini.",
+          "next": "c1_voda",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c1b",
+          "text": "Sakrij se u hlad olupine i sačekaj.",
+          "next": "c1_hlad",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c1c",
+          "text": "Pokušaj da uspostaviš vezu sa svojima.",
+          "next": "c1_signal",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Grlo ti je suvo, a sunca ne staju. Šta radiš prvo?",
+      "img": "beli-pojas"
+    },
+    "c1_voda": {
+      "paragraphs": [
+        {
+          "t": "U olupini je bilo vruće kao u peći, ali je ormarić pod sedištem preživeo. Našao si flašu od litar i po vode, šest pločica suve hrane i baklju za dozivanje bez dva čepa. Pio si sporo, jer si znao šta znači kad čovek pije brzo.",
+          "lead": "Ormarić pod sedištem čuvao je više nego što si očekivao.",
+          "tf": "U olupini je bilo vruće kao u peći, ali je ormarić pod sedištem preživeo. Našla si flašu od litar i po vode, šest pločica suve hrane i baklju za dozivanje bez dva čepa. Pila si sporo, jer si znala šta znači kad čovek pije brzo.",
+          "leadf": "Ormarić pod sedištem čuvao je više nego što si očekivala."
+        },
+        {
+          "t": "Dok si izlazio, primetio si trag. Bosa stopala, dva reda, utisnuta u soli tik uz letelicu. Jedan red se zaustavljao na pola puta, kao da je neko stao i dugo gledao, pa se okrenuo i otišao tačno istim putem kojim je došao. Ne žureći i ne bežeći. Samo se vratio, onako kako se vraćamo kad nam neko kaže.",
+          "lead": "U soli pored olupine neko je već bio.",
+          "tf": "Dok si izlazila, primetila si trag. Bosa stopala, dva reda, utisnuta u soli tik uz letelicu. Jedan red se zaustavljao na pola puta, kao da je neko stao i dugo gledao, pa se okrenuo i otišao tačno istim putem kojim je došao. Ne žureći i ne bežeći. Samo se vratio, onako kako se vraćamo kad nam neko kaže."
+        },
+        {
+          "t": "Pogledao si u pravcu u kom su vodili otisci. Daleko, na samom obodu soli, nešto se pomeralo.",
+          "lead": "Na horizontu se nešto pomerilo.",
+          "tf": "Pogledala si u pravcu u kom su vodili otisci. Daleko, na samom obodu soli, nešto se pomeralo."
+        }
+      ],
+      "next": "c1_orsa"
+    },
+    "c1_hlad": {
+      "paragraphs": [
+        {
+          "t": "Hlad olupine bio je uzan, ali dovoljan. Seo si leđima uz trup i gledao kako dve senke tvoje ruke polako menjaju razmak. Malo sunce se kretalo, shvatio si. Kad bi pažljivo merio, mogao bi pomoću njega da meriš vreme. Nikad nisi mislio da će ti to zatrebati.",
+          "lead": "Hlad olupine bio je uzak, ali dovoljan.",
+          "tf": "Hlad olupine bio je uzan, ali dovoljan. Sela si leđima uz trup i gledala kako dve senke tvoje ruke polako menjaju razmak. Malo sunce se kretalo, shvatila si. Kad bi pažljivo merila, mogla bi pomoću njega da meriš vreme. Nikad nisi mislila da će ti to zatrebati."
+        },
+        {
+          "t": "Sedeo si tako dok ti srce nije usporilo, a onda si shvatio da već neko vreme čuje korake. Mekane, odmerene, bez žurbe. Neko se približavao preko soli i nije se krio.",
+          "lead": "Neko dolazi, i ne žuri.",
+          "tf": "Sedela si tako dok ti srce nije usporilo, a onda si shvatila da već neko vreme čuje korake. Mekane, odmerene, bez žurbe. Neko se približavao preko soli i nije se krio."
+        },
+        {
+          "t": "Ustao si, sa rukom na hladnom metalu, i čekao.",
+          "tf": "Ustala si, sa rukom na hladnom metalu, i čekala."
+        }
+      ],
+      "next": "c1_orsa"
+    },
+    "c1_signal": {
+      "paragraphs": [
+        {
+          "t": "Svitac je zakašljao. Konzola se upalila na dve sekunde, ispisala NEMA ODGOVORA i ponovo se ugasila. Pokušao si opet, tri puta. Treći put je ostala dovoljno dugo da vidiš i drugi red: PROZOR: 7 DANA.",
+          "lead": "Konzola je zakašljala i otvorila se na dve sekunde.",
+          "tf": "Svitac je zakašljao. Konzola se upalila na dve sekunde, ispisala NEMA ODGOVORA i ponovo se ugasila. Pokušala si opet, tri puta. Treći put je ostala dovoljno dugo da vidiš i drugi red: PROZOR: 7 DANA."
+        },
+        {
+          "t": "Znao si to i bez nje. Ali znati i videti ispisano nije isto, pa ti se nešto u stomaku stegnulo. Spustio si ruku sa tastature i primetio da ti drhti.",
+          "lead": "Ruke su te izdale pre nego što si shvatio zašto.",
+          "tf": "Znala si to i bez nje. Ali znati i videti ispisano nije isto, pa ti se nešto u stomaku stegnulo. Spustila si ruku sa tastature i primetila da ti drhti.",
+          "leadf": "Ruke su te izdale pre nego što si shvatila zašto."
+        },
+        {
+          "t": "Tada si čuo korake. Neko se približavao preko soli i nije se krio.",
+          "tf": "Tada si čula korake. Neko se približavao preko soli i nije se krio."
+        }
+      ],
+      "next": "c1_orsa"
+    },
+    "c1_orsa": {
+      "paragraphs": [
+        {
+          "t": "Bila je to žena, mlada, u prašnjavoj plavoj tkanini, sa dva velika kožna meha preko ramena i dugom motkom za nošenje. Prišla je na dvadesetak koraka i stala. Gledala je u tebe, a onda, tačno na tri sekunde, pored tebe, u prazan ugao vazduha desno od tvog lica, kao da tamo nešto čita.",
+          "lead": "Neko je stajao na soli i gledao u tebe, ali ne baš u tebe.",
+          "img": "orsa"
+        },
+        {
+          "t": "Usne su joj se pomerile bez glasa. Pogled je na tom mestu zastao, oči su se blago skupile kao da nešto pritiska, pa se vratio na tebe. Na licu joj je bilo nešto što si poznavao kod ljudi pred ispitom: ono što je tražila nije bilo tamo.",
+          "lead": "Njen pogled je kliznuo pored tebe, u prazan vazduh.",
+          "tf": "Usne su joj se pomerile bez glasa. Pogled je na tom mestu zastao, oči su se blago skupile kao da nešto pritiska, pa se vratio na tebe. Na licu joj je bilo nešto što si poznavala kod ljudi pred ispitom: ono što je tražila nije bilo tamo."
+        },
+        {
+          "t": "„Ne nudi mi se“, rekla je tiho. Prevodilac u kragni pretvorio je njene reči u šuplji, metalni glas, ali intonacija je bila jasna. Pa još jednom, sporije, kao da govori detetu ili sebi: „Ništa mi se ne nudi za tebe.“",
+          "lead": "Rekla je rečenicu koju nije očekivao da čuješ.",
+          "who": "Orsa",
+          "leadf": "Rekla je rečenicu koju nije očekivala da čuješ."
+        },
+        {
+          "t": "Stajala je i čekala. Shvatio si da čeka nešto što joj ti ne možeš dati: neku vrstu dozvole. Sledeće što uradiš imaće težinu, iako još ne znaš kakvu.",
+          "lead": "Čekala je neku vrstu dozvole.",
+          "tf": "Stajala je i čekala. Shvatila si da čeka nešto što joj ti ne možeš dati: neku vrstu dozvole. Sledeće što uradiš imaće težinu, iako još ne znaš kakvu."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1d",
+          "text": "Pokaži joj prazne dlanove.",
+          "next": "c2_grad",
+          "w": {
+            "u": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c1e",
+          "text": "Zatraži vodu i ne obraćaj pažnju na to što gleda pored tebe.",
+          "next": "c2_grad",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c1f",
+          "text": "Ćuti i čekaj da ona prva nešto učini.",
+          "next": "c2_grad",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c1h",
+        "text": "— Ne radi ništa od ponuđenog.",
+        "next": "c2_grad",
+        "w": {
+          "s": 2
+        },
+        "after": 22
+      },
+      "prompt": "Žena čeka, a ti ne znaš šta ona vidi pored tebe. Kako joj odgovaraš?"
+    },
+    "c2_grad": {
+      "chapter": "c2",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Orsa je dugo gledala tvoje otvorene dlanove, kao pismo na jeziku koji čita sporije od tebe. Zatim je klimnula, jednom, i okrenula se. Ne da te vodi, nego samo da krene, a ti da odlučiš.",
+          "if": {
+            "pick": "c1d"
+          },
+          "lead": "Orsa je čitala tvoje dlanove kao pismo."
+        },
+        {
+          "t": "Dala ti je da piješ iz meha, bez reči, i ti si pio dok ti se vid nije razbistrio. Kad si vratio mehur, pogledala te je kao da si joj vratio nešto što nije očekivala da će se vratiti.",
+          "if": {
+            "pick": "c1e"
+          },
+          "lead": "Prvi gutljaj vode posle pada.",
+          "tf": "Dala ti je da piješ iz meha, bez reči, i ti si pila dok ti se vid nije razbistrio. Kad si vratila mehur, pogledala te je kao da si joj vratila nešto što nije očekivala da će se vratiti."
+        },
+        {
+          "t": "Stajali ste tako dugo, među dve senke, a ti si shvatio da je ćutanje jedino što u njenom svetu nije ponuđeno kao mogućnost. Na kraju je ona, ne znajući kako drugačije, ponudila ruku, sa dlanom okrenutim nagore, kao što se nudi hrana životinji.",
+          "if": {
+            "pick": "c1f"
+          },
+          "lead": "Ćutanje među dve senke.",
+          "tf": "Stajale ste tako dugo, među dve senke, a ti si shvatila da je ćutanje jedino što u njenom svetu nije ponuđeno kao mogućnost. Na kraju je ona, ne znajući kako drugačije, ponudila ruku, sa dlanom okrenutim nagore, kao što se nudi hrana životinji."
+        },
+        {
+          "t": "Nije ništa uradila. Samo je čekala, i ti si u tom čekanju prvi put video kako izgleda čovek kome niko nije rekao šta sledeće. Onda je dugo, dugo trepnula, i nešto u njenom licu popustilo, kao da je zaključak došao s neke druge strane.",
+          "if": {
+            "pick": "c1h"
+          },
+          "lead": "Čekanje u kojem je nešto popustilo.",
+          "tf": "Nije ništa uradila. Samo je čekala, i ti si u tom čekanju prvi put videla kako izgleda čovek kome niko nije rekao šta sledeće. Onda je dugo, dugo trepnula, i nešto u njenom licu popustilo, kao da je zaključak došao s neke druge strane."
+        },
+        {
+          "t": "Zenit se pojavio kao treperenje na obodu soli, pa kao niz niskih krovova od bele opeke i stakla. Nije imao zidove. Nije imao ni kapije; ulice su se jednostavno počinjale i ljudi su se u njima kretali.",
+          "lead": "Grad bez zidova i bez kapija."
+        },
+        {
+          "t": "Prvo što si primetio bila je tišina. Nije bilo vike, nikoga ko doziva, nikoga ko se prepire oko mesta u redu. Deca su se igrala u nizu i svako od njih je, u istom trenutku, zastajalo, pogledalo u ugao i nastavljalo. Žena na tezgi svakih nekoliko minuta zatreptala bi i pomerila ruku ka drugom voću. Starac na klupi je zaspao u tačnom trenutku kad su svi oko njega zevnuli.",
+          "lead": "Prvo što si primetio bila je tišina.",
+          "tf": "Prvo što si primetila bila je tišina. Nije bilo vike, nikoga ko doziva, nikoga ko se prepire oko mesta u redu. Deca su se igrala u nizu i svako od njih je, u istom trenutku, zastajalo, pogledalo u ugao i nastavljalo. Žena na tezgi svakih nekoliko minuta zatreptala bi i pomerila ruku ka drugom voću. Starac na klupi je zaspao u tačnom trenutku kad su svi oko njega zevnuli.",
+          "leadf": "Prvo što si primetila bila je tišina."
+        },
+        {
+          "t": "Orsa je to radila takođe. Na svakih stotinak koraka njen pogled bi odskočio u stranu. Jednom je skrenula levo, jednom desno, bez kolebanja. Nijednom nije pogledala u nebo da vidi koliko je sati. Nebo je uvek isto.",
+          "lead": "I Orsa je radila isto što i svi ostali."
+        },
+        {
+          "t": "„Šta čitaš?“ pitao si.",
+          "who": "Ti",
+          "tf": "„Šta čitaš?“ pitala si."
+        },
+        {
+          "t": "Iznenađeno te je pogledala, pa se osmehnula, kao da si pitao čemu služe oči. „Lumen“, rekla je. „Šta bih drugo.“",
+          "lead": "Pitanje koje je zvučalo kao da pitaš čemu služe oči.",
+          "who": "Orsa",
+          "tf": "Iznenađeno te je pogledala, pa se osmehnula, kao da si pitala čemu služe oči. „Lumen“, rekla je. „Šta bih drugo.“"
+        },
+        {
+          "t": "Pet ulica dalje, na raskrsnici, stao si. Pred tobom su se otvarale tri mogućnosti, a nijedna nije bila tvoja. Ostalo je šest dana.",
+          "lead": "Raskrsnica, a nijedan put nije bio tvoj.",
+          "tf": "Pet ulica dalje, na raskrsnici, stala si. Pred tobom su se otvarale tri mogućnosti, a nijedna nije bila tvoja. Ostalo je šest dana."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c2a",
+          "text": "Pođi s Orsom do njene kuće.",
+          "next": "c2_kuca",
+          "w": {
+            "u": 1,
+            "b": 1
+          }
+        },
+        {
+          "id": "c2b",
+          "text": "Skreni ka mirisu hrane na pijaci.",
+          "next": "c2_pijaca",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c2c",
+          "text": "Zastani na trgu i gledaj kako ljudi biraju.",
+          "next": "c2_trg",
+          "w": {
+            "s": 1,
+            "u": 1
+          }
+        }
+      ],
+      "prompt": "Kuda ćeš prvo?",
+      "img": "zenit"
+    },
+    "c2_kuca": {
+      "paragraphs": [
+        {
+          "t": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušli. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu.",
+          "lead": "Niska kuća koja miriše na so i mleko.",
+          "tf": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušle. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu."
+        },
+        {
+          "t": "Seli ste. Tada si video ono što će te proganjati: u istom trenutku, kao jedno telo, četiri para očiju su skočila u ugao, zadržala se, i četiri ruke su podigle kašike. Nije bilo naredbe. Nije se čuo nikakav zvuk. Samo je jedan red reči, nevidljiv tebi, odlučio da je sada vreme za jelo.",
+          "lead": "Za stolom su četiri para očiju skočila u isti ugao.",
+          "tf": "Sele ste. Tada si videla ono što će te proganjati: u istom trenutku, kao jedno telo, četiri para očiju su skočila u ugao, zadržala se, i četiri ruke su podigle kašike. Nije bilo naredbe. Nije se čuo nikakav zvuk. Samo je jedan red reči, nevidljiv tebi, odlučio da je sada vreme za jelo."
+        },
+        {
+          "t": "Dalja te nije gledala u lice. Njen pogled je prelazio preko tebe kao preko komada nameštaja koji niko nije pomerio. Ali devojčica Iva, sedam ili osam godina, jedina je gledala pravo u tebe, bez treptanja.",
+          "lead": "Majčin pogled prelazio je preko tebe kao preko nameštaja."
+        },
+        {
+          "t": "„Ništa ti ne nudi?“ upitala je, glasno, na jedini način na koji deca pitaju. „Ni jedan red? Ni jednu reč?“",
+          "lead": "Devojčica je postavila pitanje koje odrasli ne postavljaju.",
+          "who": "Iva"
+        },
+        {
+          "t": "Majka je zastala sa kašikom. Nešto u uglu joj je govorilo da ne odgovara.",
+          "lead": "Majka je zastala sa kašikom."
+        }
+      ],
+      "next": "c2_tehan"
+    },
+    "c2_pijaca": {
+      "paragraphs": [
+        {
+          "t": "Pijaca je bila hrpa tezgi pod platnom, i na svakoj slagalište nečeg što si prvi put video: crvenkasto voće bez kore, korenje sa dve boje, pogače sa belom korom od soli. Prišao si tezgi i pružio ruku.",
+          "lead": "Tezge pod platnom i voće bez kore.",
+          "tf": "Pijaca je bila hrpa tezgi pod platnom, i na svakoj slagalište nečeg što si prvi put videla: crvenkasto voće bez kore, korenje sa dve boje, pogače sa belom korom od soli. Prišla si tezgi i pružila ruku."
+        },
+        {
+          "t": "Žena iza tezge pogledala je u ugao. Pogled je zastao. Pomerila ga je malo ulevo, pa udesno. Usne su joj se skupile. Najzad ga je spustila na tvoje čelo, ne u oči, i pogledala dalje.",
+          "lead": "Pružena ruka ostala je bez odgovora."
+        },
+        {
+          "t": "Nema odgovora. Niko nije viknuo „lopove“, nije ni stavio ruku na tvoju. Uzeo si pogaču, a ona je i dalje gledala u prazno, i stajala kao da se zamrzla. Jeo si stojeći. Nikome na pijaci nije ništa nedostajalo, jer se ništa nije promenilo na njihovoj listi.",
+          "lead": "Pogača je ostala u tvojoj ruci, a niko nije reagovao.",
+          "tf": "Nema odgovora. Niko nije viknuo „lopove“, nije ni stavio ruku na tvoju. Uzela si pogaču, a ona je i dalje gledala u prazno, i stajala kao da se zamrzla. Jela si stojeći. Nikome na pijaci nije ništa nedostajalo, jer se ništa nije promenilo na njihovoj listi."
+        },
+        {
+          "t": "Najneobičnije je bilo to što te niko nije zaustavio. Ne zato što nisu hteli, nego zato što niko nije imao ponuđeno da te zaustavi. U tom čudnom miru ti se činilo da bi mogao da uzmeš sve što poželiš, i da se nikada neće ništa dogoditi, dok se ne dogodi sve odjednom.",
+          "lead": "Ništa nije bilo pogrešno, i baš to je bilo pogrešno.",
+          "tf": "Najneobičnije je bilo to što te niko nije zaustavio. Ne zato što nisu hteli, nego zato što niko nije imao ponuđeno da te zaustavi. U tom čudnom miru ti se činilo da bi mogla da uzmeš sve što poželiš, i da se nikada neće ništa dogoditi, dok se ne dogodi sve odjednom."
+        },
+        {
+          "t": "Preko uličice, u senci radnje sa staklom, sedeo je čovek koji je jedini gledao pravo u tebe.",
+          "lead": "U senci preko puta neko te je gledao pravo u oči."
+        }
+      ],
+      "next": "c2_tehan"
+    },
+    "c2_trg": {
+      "paragraphs": [
+        {
+          "t": "Trg je bio širok krug bele kamene ploče, i u njegovom središtu stajao je izvor sa vodom koja je tekla u dva mlaza, jedan topao, jedan hladan. Sa ivice si gledao kako se ljudi kreću.",
+          "lead": "Beli krug trga i izvor sa dva mlaza.",
+          "tf": "Trg je bio širok krug bele kamene ploče, i u njegovom središtu stajao je izvor sa vodom koja je tekla u dva mlaza, jedan topao, jedan hladan. Sa ivice si gledala kako se ljudi kreću."
+        },
+        {
+          "t": "Nije im trebalo mnogo da te zaprepaste. Kretali su se kao jato: u istom trenutku bi svi koji su prelazili trg skrenuli levo, bez da je iko prvi, kao da ptice odluče da se okrenu bez vođe. Sat kasnije svi su zastali, svi pogledali u ugao, svi seli na ivicu izvora, svi se opustili kao da im je neko skinuo teret sa ramena.",
+          "lead": "Grad se kretao kao jato ptica."
+        },
+        {
+          "t": "Nijedna sporna reč. Nijedan sudar. Nijedna žurba. Pomislio si na ljude kod kuće, na svoje komšije koje se tuku oko parking mesta, i osetio nešto što nisi znao da imenuješ: bila je to zavist, ali i strah.",
+          "lead": "Zavist i strah, u istom trenutku.",
+          "tf": "Nijedna sporna reč. Nijedan sudar. Nijedna žurba. Pomislila si na ljude kod kuće, na svoje komšije koje se tuku oko parking mesta, i osetila nešto što nisi znala da imenuješ: bila je to zavist, ali i strah."
+        },
+        {
+          "t": "Samo jedan čovek se nije kretao sa ostalima. Starac, sa sivim mišićavim rukama i koprenom na jednom oku, sedeo je na kamenoj ploči sa strane i vrteo u prstima komad stakla. Ljudi su ga obilazili, širokim lukom, kao što se obilazi kamen na putu. Ne s neprijateljstvom. Kao da je deo pejzaža koji se ne menja.",
+          "lead": "Samo jedan čovek nije bio deo jata."
+        }
+      ],
+      "next": "c2_tehan"
+    },
+    "c2_tehan": {
+      "paragraphs": [
+        {
+          "t": "Iva te je povela za rukav, ne obazirući se na majku, preko tri ulice do radnje sa staklom. „Ovo je Tehan“, rekla je. „On je prazan. Ima samo jedno oko, i ono je prazno. Ti si prazan na oba. Treba da se upoznate.“",
+          "if": {
+            "pick": "c2a"
+          },
+          "lead": "Neko te je vodio ka starcu sa staklom.",
+          "who": "Iva",
+          "tf": "Iva te je povela za rukav, ne obazirući se na majku, preko tri ulice do radnje sa staklom. „Ovo je Tehan“, rekla je. „On je prazan. Ima samo jedno oko, i ono je prazno. Ti si prazna na oba. Treba da se upoznate.“"
+        },
+        {
+          "t": "Prešao si uličicu, pokretom ruke ignorišući ženu sa tezge. Čovek te je gledao dok si prilazio i nije skidao pogled sa tebe, što je bilo prvo takvo gledanje otkad si stigao.",
+          "if": {
+            "pick": "c2b"
+          },
+          "lead": "Preko uličice neko te je gledao bez skretanja pogleda.",
+          "tf": "Prešla si uličicu, pokretom ruke ignorišući ženu sa tezge. Čovek te je gledao dok si prilazila i nije skidao pogled sa tebe, što je bilo prvo takvo gledanje otkad si stigla."
+        },
+        {
+          "t": "Prišao si starcu, a ljudi oko tebe su te obišli kao što obilaze i starca, i na tren si pomislio da je to sve što će vam ikad biti zajedničko.",
+          "if": {
+            "pick": "c2c"
+          },
+          "lead": "Ljudi su te obilazili kao kamen na putu.",
+          "tf": "Prišla si starcu, a ljudi oko tebe su te obišli kao što obilaze i starca, i na tren si pomislila da je to sve što će vam ikad biti zajedničko."
+        },
+        {
+          "t": "Tehan je imao oko osamdeset godina i ruke brusača: žuljevite, tanke i sigurne. Na kolenima je držao komad stakla veličine dlana, od kojeg je skidao slojeve sa sitnom kožom. Nije podigao glavu odmah.",
+          "lead": "Starac te je prvi put pogledao.",
+          "img": "tehan"
+        },
+        {
+          "t": "„Došao si da preživiš“, rekao je. Prevodilac u kragni ga je uhvatio odmah, bez zastajkivanja, kao da je ovaj jezik već jednom čuo. „To je jedino što ovde niko ne radi. Preživljavanje je ovde posao Lumena.“",
+          "lead": "Njegove prve reči pogodile su pravo u cilj.",
+          "who": "Tehan",
+          "tf": "„Došla si da preživiš“, rekao je. Prevodilac u kragni ga je uhvatio odmah, bez zastajkivanja, kao da je ovaj jezik već jednom čuo. „To je jedino što ovde niko ne radi. Preživljavanje je ovde posao Lumena.“"
+        },
+        {
+          "t": "„Zovu me prazan“, nastavio je. „Ne nastrano. Kao što zovu kišu, kad još pada: ono što ne treba, ali nije zlo. Od poslednjeg Poravnanja, pre trideset godina, ne vidim ništa u uglu. Ne pitaj me zašto. Dugo sam mislio da je to kazna, pa da je dar, a sada mislim da je jednostavno tako.“",
+          "lead": "Zašto ga zovu prazan.",
+          "who": "Tehan"
+        },
+        {
+          "t": "Zagledao se u tvoj vizir. „Ni tebi ništa ne nudi. Barem zasad. Pogledaj me: koliko puta si danas hteo da uradiš nešto, a nisi znao šta?“",
+          "lead": "Pogledao je tvoj vizir kao da ga čita.",
+          "who": "Tehan",
+          "tf": "Zagledao se u tvoj vizir. „Ni tebi ništa ne nudi. Barem zasad. Pogledaj me: koliko puta si danas htela da uradiš nešto, a nisi znala šta?“"
+        },
+        {
+          "t": "Nisi odgovorio. Imao si tri pitanja, i znao si da će ti starac odgovoriti samo na jedno pre nego što se pogled opet vrati na staklo.",
+          "lead": "Tri pitanja, a vremena samo za jedno.",
+          "tf": "Nisi odgovorila. Imala si tri pitanja, i znala si da će ti starac odgovoriti samo na jedno pre nego što se pogled opet vrati na staklo."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c2d",
+          "text": "Pitaj ga kako se s ove planete odlazi.",
+          "next": "c2_podne",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c2e",
+          "text": "Pitaj ga šta je Lumen i ko ga drži.",
+          "next": "c2_podne",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c2f",
+          "text": "Pitaj ga kako je to biti prazan.",
+          "next": "c2_podne",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c2h",
+        "text": "— Ne pitaj ništa. Samo sedi pored njega.",
+        "next": "c2_podne",
+        "w": {
+          "s": 2
+        },
+        "after": 22
+      },
+      "prompt": "Starac će odgovoriti samo na jedno tvoje pitanje."
+    },
+    "c3_vizir": {
+      "chapter": "c3",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "„Luka“, rekao je. „Na drugom kraju Belog pojasa, tri dana hoda. Tamo je šina, a na šini teretna letelica koja nije poletela od Poravnanja pre trideset godina. Svake godine je proveravaju i svake godine je vraćaju na mesto. Niko ne zna zašto je ne dirnu. Lumen je ne nudi.“",
+          "if": {
+            "pick": "c2d"
+          },
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "who": "Tehan",
+          "leadf": "Starac je odgovorio na ono što si pitala."
+        },
+        {
+          "t": "„Niko“, rekao je, i prvi put se nasmešio. „Pitaj Čuvare. Svi će ti reći da je Lumen tu zbog nas. Pitaj ih ko je to rekao, pa sačekaj odgovor. Čekaćeš dugo.“",
+          "if": {
+            "pick": "c2e"
+          },
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "who": "Tehan",
+          "leadf": "Starac je odgovorio na ono što si pitala."
+        },
+        {
+          "t": "„Kao da si jedini u sobi u kojoj svi govore u jedan glas“, rekao je. „Ne smeta ti glas. Smeta ti što ti niko nikad ne doda reč. A ponekad, kad bi neko dodao, bio bi to srećniji dan.“",
+          "if": {
+            "pick": "c2f"
+          },
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "who": "Tehan",
+          "tf": "„Kao da si jedina u sobi u kojoj svi govore u jedan glas“, rekao je. „Ne smeta ti glas. Smeta ti što ti niko nikad ne doda reč. A ponekad, kad bi neko dodao, bio bi to srećniji dan.“",
+          "leadf": "Starac je odgovorio na ono što si pitala."
+        },
+        {
+          "t": "Tehan je dugo ćutao, a onda je rekao: „Dobro. Neki pitaju. Neki samo sede. Ovi drugi su češće u pravu.“ I nastavio da melje staklo.",
+          "if": {
+            "pick": "c2h"
+          },
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "who": "Tehan",
+          "leadf": "Starac je odgovorio na ono što si pitala."
+        },
+        {
+          "t": "Rekao ti je još nešto, polako, uperivši prst u tvoje lice: „Taj vizir. Ne znam šta je, ali sve što bi mene čuvalo od zrna čuva i tebe. Staklo ti je pukno. Svima puca posle prvog dana.“",
+          "lead": "Starac je dodao još nešto, uperen u tvoje lice.",
+          "who": "Tehan"
+        },
+        {
+          "t": "Nisi znao šta je zrno. Nisi stigao ni da pitaš.",
+          "tf": "Nisi znala šta je zrno. Nisi stigla ni da pitaš."
+        },
+        {
+          "t": "Te noći, ako se to može nazvati noći, jer svetlost nije prestajala ni na trenutak, Orsa ti je dala da ležiš na pletenoj prostirci u kutku njene kuće. Cela porodica se u istom trenutku ispružila po svojim mestima, kao da je neko nežno ugasio prekidač. Samo si ti ležao otvorenih očiju i slušao kako dišu u istom ritmu.",
+          "lead": "Noć koja nije bila noć.",
+          "tf": "Te noći, ako se to može nazvati noći, jer svetlost nije prestajala ni na trenutak, Orsa ti je dala da ležiš na pletenoj prostirci u kutku njene kuće. Cela porodica se u istom trenutku ispružila po svojim mestima, kao da je neko nežno ugasio prekidač. Samo si ti ležala otvorenih očiju i slušala kako dišu u istom ritmu."
+        },
+        {
+          "t": "Pukotina u viziru je sporo rasla. Čuo si je, tanak zvuk, kao led u čaši. Pet dana, pomislio si. Zatim se sve odigralo u trenutku: stakleni rub je pukao u dve polovine, jedna ti je ostala na licu, druga ti je pala u krilo.",
+          "lead": "Zvuk, tanak kao led u čaši.",
+          "tf": "Pukotina u viziru je sporo rasla. Čula si je, tanak zvuk, kao led u čaši. Pet dana, pomislila si. Zatim se sve odigralo u trenutku: stakleni rub je pukao u dve polovine, jedna ti je ostala na licu, druga ti je pala u krilo."
+        },
+        {
+          "t": "I tada si ugledao.",
+          "lead": "Nešto je puklo, i pogled ti se otvorio.",
+          "solo": true,
+          "tf": "I tada si ugledala."
+        },
+        {
+          "t": "Na obodu vidnog polja, tamo gde se završava ono što oko može da uhvati, pojavio se tanak prsten svetlosti. Nije bio nacrtan. Bio je kao nešto što vidiš ako dugo gledaš u sunce, ali uredno, u bledim redovima. Čitao si: DOBRODOŠAO. NEPREPOZNAT.",
+          "lead": "Na obodu pogleda pojavilo se nešto što nije bilo tu.",
+          "tf": "Na obodu vidnog polja, tamo gde se završava ono što oko može da uhvati, pojavio se tanak prsten svetlosti. Nije bio nacrtan. Bio je kao nešto što vidiš ako dugo gledaš u sunce, ali uredno, u bledim redovima. Čitala si: DOBRODOŠLA. NEPREPOZNATA."
+        },
+        {
+          "t": "Ispod toga, tri reda: Odmori se. Prijavi se. Sačekaj. Svaki je treperio jednako, kao da im je svejedno.",
+          "lead": "Tri reda, i nijedan glasniji."
+        },
+        {
+          "t": "Okrenuo si glavu. Prsten je poleteo s tobom, nepomično na obodu, kao da je deo oka. Orsa je spavala, i prema njenim kapcima videlo se kako i njoj klize nečitljive reči.",
+          "lead": "Okrenuo si glavu, a prsten je pošao s tobom.",
+          "tf": "Okrenula si glavu. Prsten je poleteo s tobom, nepomično na obodu, kao da je deo oka. Orsa je spavala, i prema njenim kapcima videlo se kako i njoj klize nečitljive reči.",
+          "leadf": "Okrenula si glavu, a prsten je pošao s tobom."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c3a",
+          "text": "Skini vizir potpuno.",
+          "next": "c3_posle",
+          "w": {
+            "u": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c3b",
+          "text": "Zalepi pukotinu trakom iz džepa i zadrži ga.",
+          "next": "c3_posle",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c3c",
+          "text": "Pročitaj sve što nudi, ali ne zadržavaj pogled ni na čemu.",
+          "next": "c3_posle",
+          "w": {
+            "s": 1,
+            "u": 1
+          }
+        }
+      ],
+      "prompt": "Staklo je pukno, a prsten svetli na obodu tvog pogleda. Šta ćeš s vizirom?"
+    },
+    "c3_posle": {
+      "paragraphs": [
+        {
+          "t": "Svetlost ti je udarila u oči kao dlan. Zažmurio si, otvorio, i prsten je bio tu, jasniji i sveobuhvatniji nego pre. Redovi su sada bili puni, topli, kao pismo od nekoga koga poznaješ. Odmori se. Prijavi se. Sačekaj. Umor koji nisi ni znao da nosiš sručio ti se na ramena svom težinom, i tek tada si shvatio koliko si dugo bio budan, koliko si dugo držao sve sam.",
+          "if": {
+            "pick": "c3a"
+          },
+          "lead": "Svetlost ti je udarila u oči kao dlan.",
+          "tf": "Svetlost ti je udarila u oči kao dlan. Zažmurila si, otvorila, i prsten je bio tu, jasniji i sveobuhvatniji nego pre. Redovi su sada bili puni, topli, kao pismo od nekoga koga poznaješ. Odmori se. Prijavi se. Sačekaj. Umor koji nisi ni znala da nosiš sručio ti se na ramena svom težinom, i tek tada si shvatila koliko si dugo bila budna, koliko si dugo držala sve sama."
+        },
+        {
+          "t": "Pažljivo si zalepio crnu traku preko pukotine. Vizir se zalepio, kao rana. Prsten je zatreperio, razmrvio se u slova, pa nestao. Svet je ponovo bio tih, jednostavan i tvoj. A u toj tišini osetio si prvi put kako si sam, ali onako kako si bio sam kod kuće: sa sobom.",
+          "if": {
+            "pick": "c3b"
+          },
+          "lead": "Traka je zatvorila pukotinu.",
+          "tf": "Pažljivo si zalepila crnu traku preko pukotine. Vizir se zalepio, kao rana. Prsten je zatreperio, razmrvio se u slova, pa nestao. Svet je ponovo bio tih, jednostavan i tvoj. A u toj tišini osetila si prvi put kako si sama, ali onako kako si bila sama kod kuće: sa sobom."
+        },
+        {
+          "t": "Držao si pogled mekim, bez fokusa, kao kad čitaš tuđe pismo preko ramena. Redovi su se nizali: Odmori se. Prijavi se. Sačekaj. Ispod su se pojavljivale nove reči, sitnije: Za dva sata, neko će doći sa hranom. Voda je u ćupu levo. Nije bilo nikakve pretnje u tome. Bilo je to bezbolno i tačno, a ti si sve zapamtio.",
+          "if": {
+            "pick": "c3c"
+          },
+          "lead": "Čitao si, a da pogled nisi zadržao ni na čemu.",
+          "tf": "Držala si pogled mekim, bez fokusa, kao kad čitaš tuđe pismo preko ramena. Redovi su se nizali: Odmori se. Prijavi se. Sačekaj. Ispod su se pojavljivale nove reči, sitnije: Za dva sata, neko će doći sa hranom. Voda je u ćupu levo. Nije bilo nikakve pretnje u tome. Bilo je to bezbolno i tačno, a ti si sve zapamtila.",
+          "leadf": "Čitala si, a da pogled nisi zadržala ni na čemu."
+        },
+        {
+          "t": "Do prvog zvona, ako se tako zove, ništa se nije dogodilo. Prozor sa suncima je stajao isti. Orsa se probudila, uspravila se i pogledala u ugao, a zatim te je pogledala tako dugo da si morao da odmakneš pogled.",
+          "lead": "Orsa se probudila i gledala te predugo.",
+          "tf": "Do prvog zvona, ako se tako zove, ništa se nije dogodilo. Prozor sa suncima je stajao isti. Orsa se probudila, uspravila se i pogledala u ugao, a zatim te je pogledala tako dugo da si morala da odmakneš pogled."
+        },
+        {
+          "t": "„Nešto se promenilo“, rekla je. „Nisam sigurna šta. Moj Lumen mi je ponudio da te prijavim Čuvarima. Već pet puta. Nikad nije nudio ništa pet puta.“",
+          "lead": "Rekla je nešto što dotad nikad nije izgovorila.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Pogledala te je. „Nisam kliknula.“",
+          "who": "Orsa"
+        },
+        {
+          "t": "Čekala je tvoj odgovor. U uglu njenog pogleda, bio si siguran, upravo se pojavila nova ponuda.",
+          "lead": "Opet je čekala, a u njenom uglu pojavila se nova ponuda.",
+          "tf": "Čekala je tvoj odgovor. U uglu njenog pogleda, bila si sigurna, upravo se pojavila nova ponuda."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c3d",
+          "text": "Reci joj da je dobro što nije kliknula.",
+          "next": "c3_iva",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c3e",
+          "text": "Reci joj da će možda morati da klikne.",
+          "next": "c3_iva",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c3f",
+          "text": "Ne govori ništa. Gledaj u njen ugao i pokušaj da pročitaš šta joj nudi.",
+          "next": "c3_iva",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "prompt": "Orsa čeka da nešto kažeš. Šta joj odgovaraš?"
+    },
+    "c4_pritisak": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Do sledećeg zvona Zenit je počeo da te zaobilazi.",
+          "lead": "Grad te je počeo zaobilaziti."
+        },
+        {
+          "t": "To nije bilo naglo. Prvo je Dalja prestala da stavlja tanjir na tvoje mesto. Zatim su susedi, koji su te do juče gledali kao nameštaj, počeli da te gledaju kao rupu u nameštaju i da skreću na drugu stranu. Na pijaci su tezge, kad bi im se približio, bile zatvarane pre nego što bi stigao. Ne zlonamerno, nego tačno, kao zupčanik koji prelazi preko mesta gde je zub otpao.",
+          "lead": "Zaobilazak je bio nežan i tačan.",
+          "img": "dalja",
+          "tf": "To nije bilo naglo. Prvo je Dalja prestala da stavlja tanjir na tvoje mesto. Zatim su susedi, koji su te do juče gledali kao nameštaj, počeli da te gledaju kao rupu u nameštaju i da skreću na drugu stranu. Na pijaci su tezge, kad bi im se približila, bile zatvarane pre nego što bi stigla. Ne zlonamerno, nego tačno, kao zupčanik koji prelazi preko mesta gde je zub otpao."
+        },
+        {
+          "t": "Lumen se menjao, shvatio si. Reči u njihovim očima više nisu bile samo Odmori se i Sačekaj. U njima se pojavilo novo, tanko, hladno: Zaobiđi.",
+          "lead": "U njihovim očima pojavio se novi red.",
+          "tf": "Lumen se menjao, shvatila si. Reči u njihovim očima više nisu bile samo Odmori se i Sačekaj. U njima se pojavilo novo, tanko, hladno: Zaobiđi."
+        },
+        {
+          "t": "Gladan si bio od ranog jutra. Orsa je trčala između kuće i trga i svaki put se vraćala sa novim, užasnutim izrazom lica. „Čuvari dolaze“, rekla je. „Kod sledećeg zvuka. Svi znaju. Lumen im je ponudio da te sačekaju kod izvora.“",
+          "lead": "Orsa je donela vest.",
+          "tf": "Gladna si bila od ranog jutra. Orsa je trčala između kuće i trga i svaki put se vraćala sa novim, užasnutim izrazom lica. „Čuvari dolaze“, rekla je. „Kod sledećeg zvuka. Svi znaju. Lumen im je ponudio da te sačekaju kod izvora.“"
+        },
+        {
+          "t": "Uzela te je za rukav, prvi put dodirnuvši te namerno. „Ja ne smem da ti pomognem. Ne zato što neću. Zato što mi se ne nudi.“",
+          "lead": "Dodir koji nije bio ponuđen.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Tehan te je sa tri koraka udaljenosti gledao s drugog kraja trga. Prazno oko se nije pomaklo. Samo je na trenutak podigao ruku: ni znak, ni pozdrav. Kao da je izmerio daljinu.",
+          "if": {
+            "pick": "c2e"
+          },
+          "lead": "Tehan je podigao ruku sa suprotnog kraja trga."
+        },
+        {
+          "t": "Vreme je ostajalo, a ostala su četiri dana."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c4a",
+          "text": "Napusti Zenit pre nego što dođu.",
+          "next": "c4_beg",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c4b",
+          "text": "Sačekaj Čuvare kod izvora i razgovaraj s njima.",
+          "next": "c4_cekaj",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c4c",
+          "text": "Uzmi hranu i vodu iz zajedničkog skladišta dok se niko ne pita zašto.",
+          "next": "c4_skladiste",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "prompt": "Čuvari stižu uskoro, a grad te zaobilazi. Šta sada?"
+    },
+    "c4_beg": {
+      "paragraphs": [
+        {
+          "t": "Izašao si iz grada bez pozdrava. Svaka ulica kojom si prolazio ispraćala te je pogledima koji su se razmicali, kao voda oko kamena. Kad si stigao do ivice soli, osetio si kako ti se grudi šire. Još uvek nisi imao ni vode ni hrane, ali si imao pravac.",
+          "lead": "Izašao si iz grada bez pozdrava.",
+          "tf": "Izašla si iz grada bez pozdrava. Svaka ulica kojom si prolazila ispraćala te je pogledima koji su se razmicali, kao voda oko kamena. Kad si stigla do ivice soli, osetila si kako ti se grudi šire. Još uvek nisi imala ni vode ni hrane, ali si imala pravac.",
+          "leadf": "Izašla si iz grada bez pozdrava."
+        },
+        {
+          "t": "Šetao si skoro ceo krug. Sunca su se pomerala, senke se ukrštale i razdvajale, ceo svet je ličio na veliku staklenu mašinu u kojoj si ti bio jedino što je radilo van takta. Sa nekim čudnim ponosom shvatio si da nikoga ne slušaš, da nikom ne odgovaraš i da svaki korak nosi samo tebe.",
+          "lead": "Hodao si skoro ceo krug, sam i lak.",
+          "tf": "Šetala si skoro ceo krug. Sunca su se pomerala, senke se ukrštale i razdvajale, ceo svet je ličio na veliku staklenu mašinu u kojoj si ti bila jedino što je radilo van takta. Sa nekim čudnim ponosom shvatila si da nikoga ne slušaš, da nikom ne odgovaraš i da svaki korak nosi samo tebe.",
+          "leadf": "Hodala si skoro ceo krug, sama i laka."
+        },
+        {
+          "t": "Negde u drugoj polovini puta čuo si korake za sobom. Okrenuo si se. Orsa, sa dva meha preko ramena, sapeta, crvena u licu, trčala je preko soli.",
+          "lead": "Neko te je pratio preko soli.",
+          "tf": "Negde u drugoj polovini puta čula si korake za sobom. Okrenula si se. Orsa, sa dva meha preko ramena, sapeta, crvena u licu, trčala je preko soli."
+        },
+        {
+          "t": "„Moj Lumen je rekao Ostani“, uspela je da kaže kad te je stigla. „Pet puta. I ja sam, po prvi put u životu, pogledala u nešto drugo. Šta, ne znam. Ali sam pošla.“",
+          "lead": "Njene reči bile su prva buna.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Nije stigla da dovrši. Iza vas, na horizontu, nešto je zasijalo: niska bela letelica, jedan od onih peščanih čamaca što klize preko soli bez točkova. Zaustavila se kraj vas, tiha kao oblak. Iz nje je sišao čovek u sivom kaputu sa mesinganim prstenom na slepoočnici. Nije delovao ljutito. Delovao je umorno, kao neko ko je hteo da bude negde drugde.",
+          "lead": "Na horizontu se približavalo nešto belo."
+        }
+      ],
+      "next": "c4_put"
+    },
+    "c4_cekaj": {
+      "paragraphs": [
+        {
+          "t": "Sačekao si ih kod izvora, na ivici kamene ploče, sa rukama na vidiku, i ljudi koji su prolazili obilazili su te u širokom krugu. Dva mlaza vode su pljuštala jedan pored drugog, topao i hladan, i u njihovoj buci pomislio si prvi put posle pada da si spokojan.",
+          "lead": "Sačekao si ih kod izvora, sa rukama na vidiku.",
+          "tf": "Sačekala si ih kod izvora, na ivici kamene ploče, sa rukama na vidiku, i ljudi koji su prolazili obilazili su te u širokom krugu. Dva mlaza vode su pljuštala jedan pored drugog, topao i hladan, i u njihovoj buci pomislila si prvi put posle pada da si spokojna.",
+          "leadf": "Sačekala si ih kod izvora, sa rukama na vidiku."
+        },
+        {
+          "t": "Čuvari su stigli u tri. Sivi kaputi, mesingani prstenovi na slepoočnicama, hod odmeren kao ljuljanje klatna. Nijedan nije izgledao zlobno. Naprotiv, kao da im je neprijatno što se to dešava.",
+          "lead": "Čuvari su stigli, ljubazni i umorni."
+        },
+        {
+          "t": "Najstariji među njima, sa prosedom bradom i očima koje su gledale pravo u tebe, stao je na korak. „Ja sam Veles“, rekao je. „Ništa mi se ne nudi da ti kažem. Ali nisam siguran da je to loše.“",
+          "lead": "Najstariji među njima progovorio je prvi.",
+          "who": "Veles"
+        },
+        {
+          "t": "„Sa nama ćeš morati da pođeš“, nastavio je. „Ne zato što moramo da te odvedemo, nego zato što nemamo drugu ponudu. U Preseku ima mesta gde ćemo moći da razgovaramo.“",
+          "lead": "Poziv koji nije bio poziv.",
+          "who": "Veles"
+        },
+        {
+          "t": "Orsa je stajala u pozadini, bleda, sa pogledom koji se nije mogao dešifrovati. Kad si krenuo, nije se pomerila. Gledala te je kako odlaziš i nije kliknula ništa.",
+          "lead": "Orsa je stajala po strani i ćutala.",
+          "tf": "Orsa je stajala u pozadini, bleda, sa pogledom koji se nije mogao dešifrovati. Kad si krenula, nije se pomerila. Gledala te je kako odlaziš i nije kliknula ništa."
+        }
+      ],
+      "next": "c4_put"
+    },
+    "c4_skladiste": {
+      "paragraphs": [
+        {
+          "t": "Zajedničko skladište bilo je dugačka hladna zgrada sa policama do plafona. Nije bilo stražara. Nije bilo katanaca. Ulaz je stajao otvoren, jer niko nikada nije imao razlog da zatvara ono što nikome ne pada na pamet da uzme.",
+          "lead": "Skladište bez katanaca."
+        },
+        {
+          "t": "Napunio si torbu pločicama suve hrane, tri flaše vode i jednom plahtom za zaštitu od sunca. Svaki put kad bi izlazio, osećao si kako ti srce udara u grudima, kao dete koje krade jabuke. Niko nije viknuo. Niko nije ni video.",
+          "lead": "Torba se punila, a niko nije video.",
+          "tf": "Napunila si torbu pločicama suve hrane, tri flaše vode i jednom plahtom za zaštitu od sunca. Svaki put kad bi izlazila, osećala si kako ti srce udara u grudima, kao dete koje krade jabuke. Niko nije viknuo. Niko nije ni video."
+        },
+        {
+          "t": "Kad si podigao pogled sa poslednje police, u vratima je stajao čovek sa prosedom bradom i mesinganim prstenom na slepoočnici, sa rukama prekrštenim na grudima.",
+          "lead": "U vratima je stajao čovek u sivom.",
+          "tf": "Kad si podigla pogled sa poslednje police, u vratima je stajao čovek sa prosedom bradom i mesinganim prstenom na slepoočnici, sa rukama prekrštenim na grudima."
+        },
+        {
+          "t": "„Ovde niko nikad nije ukrao“, rekao je. „Ne zato što je zabranjeno. Zato što Lumen ne nudi krađu. Ne znamo šta da radimo sa tobom, osim da te pitamo.“ Podigao je ruku, dlanom nagore. „Ja sam Veles. Hoćeš li da razgovaramo?“",
+          "lead": "Čuvar je rekao nešto što nisi očekivao.",
+          "who": "Veles",
+          "leadf": "Čuvar je rekao nešto što nisi očekivala."
+        },
+        {
+          "t": "Spustio si torbu. Nije te zaustavio ni strah ni stid. Zaustavilo te je to što je čovek izgledao stvarno radoznalo.",
+          "lead": "Nije te zaustavio strah. Nešto drugo.",
+          "tf": "Spustila si torbu. Nije te zaustavio ni strah ni stid. Zaustavilo te je to što je čovek izgledao stvarno radoznalo."
+        }
+      ],
+      "next": "c4_put"
+    },
+    "c5_veles": {
+      "chapter": "c5",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Veles je Orsu vratio u Zenit istim čamcem, nežno, bez reči. Nije se opirala. Gledala je nazad dok je mogla da vidi tvoj obris na horizontu, a onda je pogled pao u njen ugao, u red koji joj je nešto nalagao.",
+          "if": {
+            "pick": "c4a"
+          },
+          "lead": "Veles je Orsu vratio kući, a nju je to bolelo."
+        },
+        {
+          "t": "Presek je bio kula bez prozora, od belog kamena i prozirnog stakla, koja se izdizala iz sredine grada kao jedna ravna kost. Veles te je poveo kroz hodnike u kojima je odjekivao samo zvuk vaših koraka, do unutrašnjeg dvorišta, i tu je stao.",
+          "lead": "Kula bez prozora čekala ih je usred grada."
+        },
+        {
+          "t": "Na kamenoj ploči ispred tebe nije bilo senke. Tačnije, bila je jedna. Ovde, u tom jedinom mestu na celoj planeti, ćilibarska i plavkasta senka sjedinjavale su se u jedno tamno oko, veličine dlana. Stao si u njega i prvi put posle pada video svoje telo kako baca samo jednu senku.",
+          "lead": "Na kamenu pred tobom nije bilo dve senke.",
+          "tf": "Na kamenoj ploči ispred tebe nije bilo senke. Tačnije, bila je jedna. Ovde, u tom jedinom mestu na celoj planeti, ćilibarska i plavkasta senka sjedinjavale su se u jedno tamno oko, veličine dlana. Stala si u njega i prvi put posle pada videla svoje telo kako baca samo jednu senku."
+        },
+        {
+          "t": "„Zato je Presek ovde“, rekao je. „Svetlost dva sunca prolazi kroz sočiva iznad nas i tu se, u ovoj tački, zgusne. Mi je zovemo zrno. Lumen putuje u zrnu. Što je zrno čistije, to je ponuda tačnija.“",
+          "lead": "Veles je objasnio kako svetlost postaje zrno.",
+          "who": "Veles",
+          "img": "veles"
+        },
+        {
+          "t": "„Ko ga je napravio?“ pitao si.",
+          "who": "Ti",
+          "tf": "„Ko ga je napravio?“ pitala si."
+        },
+        {
+          "t": "„Oni koji su umrli.“ Veles je seo na ivicu ploče, kao čovek koji je ovo već objašnjavao samom sebi. „Prvi koji su došli ovamo, bez noći, nisu znali kad da prestanu. Radili su, jeli, svađali se, ali nisu znali kad je dosta. Devetnaest godina bez sna. Zovemo to Podele. Ljudi su se ubijali oko sitnica koje nisu mogli ni da imenuju. Lumen je počeo kao pomoćnik: jedna reč, jedna jedina, Odmori se. Spasao nas je. Onda je dodao još jednu reč, i još jednu.“",
+          "lead": "Odgovor je bio neočekivan: mrtvi.",
+          "who": "Veles"
+        },
+        {
+          "t": "„I niko ne vodi?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Čuvar ne odlučuje. Čuvar čisti sočiva i prvi klikne na ono što mu se ponudi.“ Nasmešio se, tužno. „Pitaš me da li ima nekog na vrhu. Nema. Samo smo mi, svi, jedni drugima ponuda.“",
+          "lead": "Veles se nasmešio, tužno, i priznao nešto.",
+          "who": "Veles"
+        },
+        {
+          "t": "Zatim je rekao ono što si već znao da će doći: „Lumen ti je pripremio mesto. Profil je otvoren. NEPREPOZNAT postaje {IME}, čim sedneš u onu stolicu. Neće biti bola. Imaćeš hranu, krov i svaki sledeći korak. Ili možeš da odeš. Ali moraš da znaš da svi koje poznajem, a koji su otišli, nisu se vratili da kažu kako je bilo.“",
+          "lead": "Zatim ti je rečeno da mesto već čeka.",
+          "who": "Veles"
+        },
+        {
+          "t": "Tri dana do Poravnanja. U sebi si prebrojao sve što si znao, i nije ga bilo dovoljno.",
+          "lead": "Ostala su tri dana, a znanja malo.",
+          "tf": "Tri dana do Poravnanja. U sebi si prebrojala sve što si znala, i nije ga bilo dovoljno."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c5a",
+          "text": "Pitaj Velesa gde se završava svetlost koja nosi Lumen.",
+          "next": "c5_sociva",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c5b",
+          "text": "Pitaj Velesa šta leži na kraju šine u Luci.",
+          "next": "c5_luka",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c5c",
+          "text": "Pitaj Velesa šta bi ti Lumen nudio kad bi te prijavili.",
+          "next": "c5_prijava",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c5h",
+        "text": "— Ćuti i gledaj tačku gde se senke spajaju.",
+        "next": "c5_sociva",
+        "w": {
+          "s": 2
+        },
+        "after": 24
+      },
+      "prompt": "Stolica već čeka, a Veles je strpljiv. Šta želiš da saznaš?",
+      "img": "presek"
+    },
+    "c5_sociva": {
+      "paragraphs": [
+        {
+          "t": "Veles te je poveo niz uzak stepenik, ispod dvorišta, u prostoriju bez ikakvog ukrasa. Sa tavanice su visile stotine staklenih ploča, rešetke od stakla i srebra, i kroz njih je prolazila svetlost kao kroz vodu: zlatna, plavkasta, pa jedna jedina bela.",
+          "lead": "Niz uzak stepenik, ispod dvorišta."
+        },
+        {
+          "t": "„Tu se seje“, rekao je. „Zaslon bi ovde stao da se spusti.“ Pokazao je na gvozdenu ploču, zarđalu od vlage, sa točkom ručice veličine kola. „Poslednji put je spušten pre trideset godina. Za ceo jedan sat.“",
+          "lead": "Zarđala ploča i točak veličine kola.",
+          "who": "Veles"
+        },
+        {
+          "t": "„Ko ga je spustio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "Veles je ćutao dovoljno dugo da odgovor bude jasan. „Čovek koji sada brusi staklo na trgu. Tada je bio Čuvar.“",
+          "lead": "Veles je ćutao pre nego što je odgovorio.",
+          "who": "Veles"
+        },
+        {
+          "t": "„Šta se desilo tokom tog sata?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„To je ono što ne znam.“ Veles je pogledao u ruke. „Jedni kažu da je četiristo ljudi stalo kao zakucano, i da nisu mogli da se pomere dok se nije vratilo. Drugi kažu da je to bio najbolji sat u istoriji Tandema. Oboje je tačno. Zaslon radi samo u Poravnanju, kada je zrno najjače, i kada bi se svet, ako ikada, mogao zatvoriti zauvek. Da se stakleni sloj zatvori tada, zrno bi se prekinulo. Ne za sat. Za sve.“",
+          "lead": "Šta se zaista desilo tog sata, niko ne zna.",
+          "who": "Veles"
+        },
+        {
+          "t": "„Niko nije probao?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Niko nije imao ponuđeno.“ Veles se okrenuo, lice mu je bilo mirno kao da je ovo najobičnija stvar na svetu. „A ja ne mogu da ti pokažem gde se točak zaključava, jer mi se to ne nudi. Ali mogu da stojim ovde dok ga gledaš.“",
+          "lead": "Poslednje što Veles nije mogao da uradi.",
+          "who": "Veles"
+        }
+      ],
+      "next": "c5_tehan"
+    },
+    "c5_luka": {
+      "paragraphs": [
+        {
+          "t": "Veles je dugo trljao slepoočnicu, tamo gde mu je mesingani prsten ostavio crven trag. „Prevoznik“, rekao je. „Teretni brod za kratke skokove. Njegova šina u Luci je jedino mesto na Tandemu odakle nešto napušta tlo. Svake godine ga proveravamo. Svake godine ga vraćamo. Radi, a niko ne zna zašto ga ne puštamo.“",
+          "lead": "Veles je dugo trljao slepoočnicu.",
+          "who": "Veles"
+        },
+        {
+          "t": "„Kad može da poleti?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Samo u Poravnanju. Tada šina dobija struju direktno od oba sunca, i sva ostala snaga planete ne vredi koliko tih nekoliko sati.“ Pogledao te je. „Ali nije dovoljno da stigneš do Luke i sedneš. Polazak mora da potvrdi neko ko vidi Lumen. Neko kome se pojavi red POLAZAK. Ti ga ne vidiš, a onaj ko vidi ne sme da ga klikne, jer mu se nikad ne nudi.“",
+          "lead": "Šina radi samo jednom, i samo tada.",
+          "who": "Veles"
+        },
+        {
+          "t": "Poznavao si jednu osobu koja bi možda mogla. „Ne preporučujem“, dodao je Veles. „Ne zato što ne želim da odeš. Nego zato što bih voleo da znam da je to bila njena odluka, a ne tvoja.“",
+          "lead": "Postojala je osoba koja bi mogla da potvrdi polazak.",
+          "tf": "Poznavala si jednu osobu koja bi možda mogla. „Ne preporučujem“, dodao je Veles. „Ne zato što ne želim da odeš. Nego zato što bih voleo da znam da je to bila njena odluka, a ne tvoja.“"
+        },
+        {
+          "t": "Zagledao se u svoje ruke, u svoje tupe nokte, u tragove soli. „Nikome se ne nudi da nekoga pusti. Nikome. Kad je neko otišao, nikad nije bilo jasno ko mu je dozvolio.“",
+          "lead": "Veles je pogledao svoje ruke.",
+          "who": "Veles"
+        }
+      ],
+      "next": "c5_tehan"
+    },
+    "c5_prijava": {
+      "paragraphs": [
+        {
+          "t": "Veles te je poveo u malu sobu na vrhu kule. U njoj je bila jedna jedina stolica, od belog drveta, uska, sa naslonom koji kao da je čekao da se neko nasloni na njega. Kroz prozor je padala svetlost oba sunca, mešajući se na podu u meku mrlju.",
+          "lead": "Mala soba na vrhu kule, i jedna stolica."
+        },
+        {
+          "t": "„Sedneš“, rekao je. „Pogledaš u sunce. Upisivanje traje koliko traje jedan dah. Posle toga će ti Lumen nuditi isto što i svima nama.“",
+          "lead": "Upisivanje traje koliko jedan dah.",
+          "who": "Veles"
+        },
+        {
+          "t": "„A šta će mi ponuditi?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Prvo, da se odmoriš. Ti si umoran, {voc}, umoran na nivou o kojem ne znaš ništa. Zatim da jedeš. Da razgovaraš sa Orsom. Da se osećaš dobro. Nikada te neće ponuditi nešto što ti ne bi prijalo.“",
+          "lead": "Šta bi ti Lumen ponudio.",
+          "who": "Veles",
+          "tf": "„Prvo, da se odmoriš. Ti si umorna, {voc}, umorna na nivou o kojem ne znaš ništa. Zatim da jedeš. Da razgovaraš sa Orsom. Da se osećaš dobro. Nikada te neće ponuditi nešto što ti ne bi prijalo.“"
+        },
+        {
+          "t": "Dugo si gledao stolicu. Bilo je neverovatno koliko je bila obična.",
+          "tf": "Dugo si gledala stolicu. Bilo je neverovatno koliko je bila obična."
+        },
+        {
+          "t": "„Preživećeš sutra“, rekao je tiho. „Preživećeš prekosutra. Preživećeš svaki dan do kraja. Ne verujem da je to loše. Ne verujem ni da je dobro. Verujem da je tačno.“",
+          "lead": "Veles je tiho rekao poslednju rečenicu.",
+          "who": "Veles"
+        },
+        {
+          "t": "Okrenuo si se od stolice. Ne zato što si odlučio, nego zato što si znao da još ne treba da odlučiš. Ali nisi znao da li to znači da si jači ili samo da se plašiš.",
+          "lead": "Okrenuo si se od stolice, ali ne zbog odluke.",
+          "tf": "Okrenula si se od stolice. Ne zato što si odlučila, nego zato što si znala da još ne treba da odlučiš. Ali nisi znala da li to znači da si jača ili samo da se plašiš.",
+          "leadf": "Okrenula si se od stolice, ali ne zbog odluke."
+        }
+      ],
+      "next": "c5_tehan"
+    },
+    "c6_orsa": {
+      "chapter": "c6",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Veles te je pustio. Nije rekao da te neće tražiti, ni da te neće naći. Rekao je samo: „Ostaje jedan krug. Šta god da izabereš, izaberi pre nego što ti se ponudi.“",
+          "lead": "Veles te je pustio, uz jedan savet.",
+          "who": "Veles"
+        },
+        {
+          "t": "Orsa te je čekala na ravnom krovu svoje kuće, gde se u slobodno vreme sedelo i gledalo u beskraj. Dve senke su ležale preko cigle i ukrštale se u njenom krilu. Sa strane je stajala činija tople čorbe, prva koja je tebi bila namenjena posle tri dana.",
+          "lead": "Na krovu te je čekala Orsa i činija čorbe."
+        },
+        {
+          "t": "Pored činije ležao je ključ od peščanog čamca, i uvijen komad kože na kome je neko iscrtao put kroz so. „Uzela sam ga Velesu iz kaputa“, rekla je, „dok nije gledao. Ne znam kako sam to uradila. Lumen mi to nije nudio. Znam samo da sam nešto htela, a znala sam gde da posegnem.“",
+          "if": {
+            "lead": "b"
+          },
+          "lead": "Pored činije ležalo je nešto što Orsa nije smela da uzme.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Pored činije ležao je list hartije sa nacrtanim točkom, naprskanim mastilom i ispisanim drhtavom rukom. „Tehan mi ga je dao“, rekla je. „Rekao je da ne treba da ti ga dam. Rekao je to tri puta, tako da znam da misli suprotno.“",
+          "if": {
+            "lead": "s"
+          },
+          "lead": "Pored činije stajao je nacrt točka.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Pored činije stajao je tanjir sa tvojim imenom: {ime}, ispisano mekim slovima. „Majka ga je postavila“, rekla je. „Prvi put otkako si stigao. Lumen joj je ponudio da te prihvati. Mislim da joj je laknulo.“",
+          "if": {
+            "lead": "u"
+          },
+          "lead": "Pored činije stajao je tanjir sa tvojim imenom.",
+          "who": "Orsa",
+          "tf": "Pored činije stajao je tanjir sa tvojim imenom: {ime}, ispisano mekim slovima. „Majka ga je postavila“, rekla je. „Prvi put otkako si stigla. Lumen joj je ponudio da te prihvati. Mislim da joj je laknulo.“"
+        },
+        {
+          "t": "Jeli ste u tišini, i tek kad je činija bila prazna, Orsa je rekla ono što je dugo nosila: „Šta bi ti izabrao da imaš Lumen?“",
+          "lead": "Posle jela, Orsa je postavila pitanje.",
+          "who": "Orsa",
+          "tf": "Jele ste u tišini, i tek kad je činija bila prazna, Orsa je rekla ono što je dugo nosila: „Šta bi ti izabrala da imaš Lumen?“"
+        },
+        {
+          "t": "„Ne znam.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Svi znaju“, rekla je. „To je razlika među nama. Mi znamo šta ćemo izabrati, samo ne znamo zašto. Ti ne znaš šta, ali verovatno znaš zašto.“",
+          "lead": "Objasnila je razliku među njima.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Gledala je u dve senke na krovu. „Imate li noć tamo odakle dolaziš?“",
+          "who": "Orsa"
+        },
+        {
+          "t": "„Imamo. Svi spavamo u mraku, u isto vreme. Milijarde nas.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„I niko vam ne kaže kad da legnete?“",
+          "who": "Orsa"
+        },
+        {
+          "t": "„Niko.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Pa kako znate da je dobro?“",
+          "who": "Orsa"
+        },
+        {
+          "t": "Dugo si razmišljao. „Ne znamo“, rekao si na kraju. „Ponekad nismo u pravu. Ali je naše.“",
+          "lead": "Dugo si razmišljao pre nego što si odgovorio.",
+          "who": "Ti",
+          "tf": "Dugo si razmišljala. „Ne znamo“, rekla si na kraju. „Ponekad nismo u pravu. Ali je naše.“",
+          "leadf": "Dugo si razmišljala pre nego što si odgovorila."
+        },
+        {
+          "t": "Orsa je klimnula, kao da je čula nešto što je znala od uvek. Zatim je pogledala u ugao, na kratko, i vratila pogled. „Jutros mi je ponuđeno da ti kažem da je bolje da ostaneš. Pet puta. A ja sam čekala da te pitam šta ti misliš.“",
+          "lead": "Orsa je klimnula i priznala nešto.",
+          "who": "Orsa"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c6a",
+          "text": "Reci joj istinu: da ne znaš šta bi izabrao.",
+          "next": "c6_poslednji",
+          "w": {
+            "u": 1,
+            "s": 1
+          },
+          "textf": "Reci joj istinu: da ne znaš šta bi izabrala."
+        },
+        {
+          "id": "c6b",
+          "text": "Zamoli je da ti pokaže šta vidi kad gleda u ugao.",
+          "next": "c6_poslednji",
+          "w": {
+            "u": 1,
+            "b": 1
+          }
+        },
+        {
+          "id": "c6c",
+          "text": "Reci joj da je ne možeš moliti ni za šta.",
+          "next": "c6_poslednji",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Orsa pita šta ti misliš. Šta joj odgovaraš?"
+    },
+    "c6_poravnanje": {
+      "paragraphs": [
+        {
+          "t": "Poravnanje nije počelo naglo. Prvo se plavo sunce približilo ćilibarskom, ne kao što se dva tela približavaju, nego kao dve kapi na staklu: sporo, a onda neizbežno. Svetlost je prvo postala čudna, pa bolna, pa jedna.",
+          "lead": "Poravnanje nije počelo naglo."
+        },
+        {
+          "t": "Zatim su nestale senke. Tačnije, nestala je jedna, a druga je postala crna i oštra, kao crtež. Svaka stvar na Tandemu, svaki zid, svaka kuća, svako dete, bacila je samo jednu senku, i prvi put u svom životu cela planeta je izgledala kao da pripada samo jednoj istini.",
+          "lead": "Zatim su nestale senke."
+        },
+        {
+          "t": "Vazduh je zadrhtao od toplote. Zvona su udarila sa svih strana, nisu zvonila, nego su odzvanjala u prsima. U ulicama ispod krova ljudi su stali. Svi odjednom. Pogledi su im bili uprti u ugao, i sve više i više su se skupljale oči. Lumen se punio.",
+          "lead": "Zvona su udarila u grudima."
+        },
+        {
+          "t": "Video si to. Bez vizira, prsten je rastao preko cele polovine neba: redovi, redovi, redovi, hiljade reči koje su se prelivale jedna preko druge, Odmori se, Pođi, Ostani, Uđi, Pomozi, Spusti glavu, Ne gledaj, Pogledaj, Čekaj, sve to odjednom, dok se nije slilo u belu buku.",
+          "if": {
+            "pick": "c3a"
+          },
+          "lead": "Video si prsten kako raste preko neba.",
+          "tf": "Videla si to. Bez vizira, prsten je rastao preko cele polovine neba: redovi, redovi, redovi, hiljade reči koje su se prelivale jedna preko druge, Odmori se, Pođi, Ostani, Uđi, Pomozi, Spusti glavu, Ne gledaj, Pogledaj, Čekaj, sve to odjednom, dok se nije slilo u belu buku.",
+          "leadf": "Videla si prsten kako raste preko neba."
+        },
+        {
+          "t": "Traka na viziru je počela da popušta od vrućine. Pod njom, kroz pukotinu, prsnuo je prsten, pun, preplavljujući, hiljade reči koje su se prelivale jedna preko druge. Pritisnuo si traku prstom, ali si znao da neće izdržati.",
+          "if": {
+            "pick": "c3b"
+          },
+          "lead": "Traka na viziru počela je da popušta.",
+          "tf": "Traka na viziru je počela da popušta od vrućine. Pod njom, kroz pukotinu, prsnuo je prsten, pun, preplavljujući, hiljade reči koje su se prelivale jedna preko druge. Pritisnula si traku prstom, ali si znala da neće izdržati."
+        },
+        {
+          "t": "Oko ivica pogleda, onako meko kao što si naučio, video si kako se prsten širi: redovi, redovi, sve više reči na istom mestu, dok se nije slilo u buku. Nisi se usudio da zadržiš pogled ni na jednoj.",
+          "if": {
+            "pick": "c3c"
+          },
+          "lead": "Video si prsten, ali nisi smeo da ga pogledaš.",
+          "tf": "Oko ivica pogleda, onako meko kao što si naučila, videla si kako se prsten širi: redovi, redovi, sve više reči na istom mestu, dok se nije slilo u buku. Nisi se usudela da zadržiš pogled ni na jednoj.",
+          "leadf": "Videla si prsten, ali nisi smela da ga pogledaš."
+        },
+        {
+          "t": "Orsa je pala na kolena. Obe šake su joj bile na slepoočnicama. „Sve odjednom“, šaputala je. „Sve mi se nudi odjednom. Ne mogu da čitam. Ne mogu da biram.“",
+          "lead": "Orsa je pala na kolena.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Podigla je lice. U očima joj je bio strah od onoga koji ne zna kako da ga imenuje, jer ga nikad pre nije imao.",
+          "lead": "Podigla je lice, uplašena prvi put u životu."
+        },
+        {
+          "t": "„Ti ne čitaš“, rekla je. „Ti vidiš šta ja ne vidim. Reci mi šta da radim.“",
+          "who": "Orsa"
+        },
+        {
+          "t": "I tada si shvatio da su se uloge zamenile. Za jedan trenutak, ti si bio njen Lumen. Ti, koji nisi imao nijednu ponudu, postao si jedini izvor reči u celom gradu.",
+          "lead": "Uloge su se zamenile.",
+          "tf": "I tada si shvatila da su se uloge zamenile. Za jedan trenutak, ti si bila njen Lumen. Ti, koja nisi imala nijednu ponudu, postala si jedini izvor reči u celom gradu."
+        },
+        {
+          "t": "Dva sunca iznad vas su bila jedno. Do kraja Poravnanja ostalo je nekoliko sati. Imao si vremena za samo jedno.",
+          "lead": "Imao si vremena za samo jedno.",
+          "tf": "Dva sunca iznad vas su bila jedno. Do kraja Poravnanja ostalo je nekoliko sati. Imala si vremena za samo jedno.",
+          "leadf": "Imala si vremena za samo jedno."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c6d",
+          "text": "Povedi je niz so, ka mestu gde se nebo spaja sa zemljom.",
+          "next": "c7_odluka",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c6e",
+          "text": "Povedi je tamo gde se senke postaju jedna.",
+          "next": "c7_odluka",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c6f",
+          "text": "Reci joj da pročita samo jedan red i da ga drži.",
+          "next": "c7_odluka",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c6h",
+        "text": "— Ne govori joj ništa. Samo je drži za ruku.",
+        "next": "c7_odluka",
+        "w": {
+          "s": 2
+        },
+        "after": 24
+      },
+      "prompt": "Svet ima samo jednu senku, a Orsa traži reč. Kuda je vodiš?",
+      "img": "poravnanje"
+    },
+    "c7_odluka": {
+      "paragraphs": [
+        {
+          "t": "Hodali ste. Peščani čamac je klizio preko soli bez zvuka, a svetlost je pržila sve oko vas. Orsa je sedela uz tebe i držala ključ u šaci kao da je to jedino što je njena. Mesto koje ste tražili pojavilo se kao tanka crna crta na horizontu: šina, duga i ravna, i na njoj nešto bledo, ogromno i zaboravljeno.",
+          "if": {
+            "lead": "b"
+          },
+          "lead": "Hodali ste.",
+          "tf": "Hodale ste. Peščani čamac je klizio preko soli bez zvuka, a svetlost je pržila sve oko vas. Orsa je sedela uz tebe i držala ključ u šaci kao da je to jedino što je njena. Mesto koje ste tražile pojavilo se kao tanka crna crta na horizontu: šina, duga i ravna, i na njoj nešto bledo, ogromno i zaboravljeno."
+        },
+        {
+          "t": "Trčali ste. Ulice Zenita bile su pune ljudi koji su stajali kao statue, i oko njih se samo njihovo disanje čulo. Presek je bio pred vama, beo i sjajan, a staklo na njegovom vrhu gorelo je kao dugme sunca. Točak u podzemlju čekao je, hladan i zarđao, u mraku koji je jedini ostao.",
+          "if": {
+            "lead": "s"
+          },
+          "lead": "Trčali ste.",
+          "tf": "Trčale ste. Ulice Zenita bile su pune ljudi koji su stajali kao statue, i oko njih se samo njihovo disanje čulo. Presek je bio pred vama, beo i sjajan, a staklo na njegovom vrhu gorelo je kao dugme sunca. Točak u podzemlju čekao je, hladan i zarđao, u mraku koji je jedini ostao."
+        },
+        {
+          "t": "Ostali ste gde ste bili. Orsa je držala jedan red, a ti si, ne znajući zašto, držao nju. Svetlost je sporo prolazila kroz vas, i bilo ti je prijatno, kao da te je neko, najzad, rasteretio. Posle toga, sve ostalo je izgledalo kao sitna stvar.",
+          "if": {
+            "lead": "u"
+          },
+          "lead": "Ostali ste gde ste bili.",
+          "tf": "Ostale ste gde ste bile. Orsa je držala jedan red, a ti si, ne znajući zašto, držala nju. Svetlost je sporo prolazila kroz vas, i bilo ti je prijatno, kao da te je neko, najzad, rasteretio. Posle toga, sve ostalo je izgledalo kao sitna stvar."
+        }
+      ],
+      "branch": [
+        {
+          "if": {
+            "lead": "b"
+          },
+          "next": "e_b1"
+        },
+        {
+          "if": {
+            "lead": "s"
+          },
+          "next": "e_s1"
+        },
+        {
+          "next": "e_u1"
+        }
+      ]
+    },
+    "e_b1": {
+      "paragraphs": [
+        {
+          "t": "Luka je bila kamena obala bez mora. Na njoj su stajale zarđale dizalice, prazne hale, i jedna jedina šina, duga kilometrima, koja je prelazila preko soli i nestajala u beloj svetlosti. Na početku šine, naslonjen na stub, ležao je Prevoznik: tup, nezgrapan, bled kao kost, sa jednim stakljenim okom na pramcu.",
+          "lead": "Prevoznik je stajao na početku šine."
+        },
+        {
+          "t": "Pokazalo se da radi. Kad si dotakao trup, tihi zujak je prošao kroz tvoje prste, kao da neko u unutrašnjosti nešto okreće. Ušao si, sa Orsom iza sebe, a ona je zastala na pragu, kao neko ko prelazi preko vode.",
+          "lead": "Prevoznik se probudio pod tvojom rukom.",
+          "tf": "Pokazalo se da radi. Kad si dotakla trup, tihi zujak je prošao kroz tvoje prste, kao da neko u unutrašnjosti nešto okreće. Ušla si, sa Orsom iza sebe, a ona je zastala na pragu, kao neko ko prelazi preko vode."
+        },
+        {
+          "t": "Konzola je bila pokrivena slojem prašine. Nije imala ekran, ni dugme, ni ručku. Imala je samo prazno ravno mesto, i shvatio si da je to mesto napravljeno za pogled.",
+          "lead": "Konzola nije imala ni dugme ni ekran.",
+          "tf": "Konzola je bila pokrivena slojem prašine. Nije imala ekran, ni dugme, ni ručku. Imala je samo prazno ravno mesto, i shvatila si da je to mesto napravljeno za pogled."
+        },
+        {
+          "t": "„Polazak“, rekla je. Glas joj je bio pun. „Vidim ga. Negde sam ga videla među svim ostalim. Ali ne mogu...“",
+          "lead": "Orsa je izgovorila reč koju je samo ona videla.",
+          "who": "Orsa"
+        },
+        {
+          "t": "„Možeš.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Lumen mi nudi Ostani. Na svakom redu. Pet hiljada puta. Tako je napisano da bude zaboravljeno ono što stoji ispod.“ Stegla je zube. „Ne znam kako se drži nešto što mi Lumen ne nudi.“",
+          "lead": "Njen Lumen nudio je samo jedno.",
+          "who": "Orsa"
+        },
+        {
+          "t": "„Samo drži.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Gledala je u prazno. Gledala je dugo, duže nego što bi iko trebalo. Najzad su se oči zaustavile, mirne, i tada si video: ne reči, nego jedan jedini trenutak u kome se čitav njen život skupio u jednu tačku, i pogled joj je ostao tamo, ne mrdajući, tvrdoglavo, kao da gleda u nešto što hoće da vidi umesto onog što joj se nudi.",
+          "lead": "Gledala je dugo, a onda se nešto zaustavilo.",
+          "tf": "Gledala je u prazno. Gledala je dugo, duže nego što bi iko trebalo. Najzad su se oči zaustavile, mirne, i tada si videla: ne reči, nego jedan jedini trenutak u kome se čitav njen život skupio u jednu tačku, i pogled joj je ostao tamo, ne mrdajući, tvrdoglavo, kao da gleda u nešto što hoće da vidi umesto onog što joj se nudi."
+        }
+      ],
+      "next": "e_b2",
+      "img": "luka"
+    },
+    "e_b2": {
+      "paragraphs": [
+        {
+          "t": "Šina se probudila. Prvo je zadrhtala, pa je zapevala, visoko i čisto, kao žica. Prevoznik je krenuo, sporo, pa brže, pa u trenutku kad se nije moglo više razlikovati zvuk od brzine. Pritisak te je pritisnuo uz sedište, a kroz stakleno oko video si Orsu kako stoji na kraju šine, sve manja, sa jednom rukom podignutom, ne u pozdrav, nego da zaštiti oči.",
+          "lead": "Šina je počela da peva.",
+          "tf": "Šina se probudila. Prvo je zadrhtala, pa je zapevala, visoko i čisto, kao žica. Prevoznik je krenuo, sporo, pa brže, pa u trenutku kad se nije moglo više razlikovati zvuk od brzine. Pritisak te je pritisnuo uz sedište, a kroz stakleno oko videla si Orsu kako stoji na kraju šine, sve manja, sa jednom rukom podignutom, ne u pozdrav, nego da zaštiti oči."
+        },
+        {
+          "t": "Nebo je počelo da se menja. Beličasto je prešlo u plavo, plavo u ljubičasto, i najzad u nešto što nije bilo nijedna boja. Tama. Prava tama, puna zvezda, bez ijednog sunca koje je pržilo. Prvi put posle sedam dana video si da se noć može dogoditi.",
+          "lead": "Nebo je prvi put promenilo boju.",
+          "tf": "Nebo je počelo da se menja. Beličasto je prešlo u plavo, plavo u ljubičasto, i najzad u nešto što nije bilo nijedna boja. Tama. Prava tama, puna zvezda, bez ijednog sunca koje je pržilo. Prvi put posle sedam dana videla si da se noć može dogoditi."
+        },
+        {
+          "t": "Prevoznik se podigao iznad atmosfere i ušao u mir. Na konzoli su se pojavila tri reda, uredno poređana, bez objašnjenja. Nisi ih čitao. Dugo si gledao u njih, i oni su gledali u tebe.",
+          "lead": "Na konzoli su se pojavila tri reda.",
+          "tf": "Prevoznik se podigao iznad atmosfere i ušao u mir. Na konzoli su se pojavila tri reda, uredno poređana, bez objašnjenja. Nisi ih čitala. Dugo si gledala u njih, i oni su gledali u tebe."
+        },
+        {
+          "t": "Zatim si ugasio ekran, ispružio noge i zatvorio oči. Prvi put posle sedam dana zaspao si ne znajući koliko dugo ćeš spavati.",
+          "lead": "Prvi put posle sedam dana, san.",
+          "tf": "Zatim si ugasila ekran, ispružila noge i zatvorila oči. Prvi put posle sedam dana zaspala si ne znajući koliko dugo ćeš spavati."
+        },
+        {
+          "t": "Niko ti nije rekao kad da se probudiš.",
+          "lead": "Jedna rečenica, na kraju.",
+          "solo": true
+        }
+      ],
+      "end": "b"
+    },
+    "e_s1": {
+      "paragraphs": [
+        {
+          "t": "Podzemna dvorana bila je hladna, tamna i puna svetlosti koja je padala kroz sočiva kao kiša. Zarđali Zaslon je stajao sam u mraku, i oko njega, već, čekali su.",
+          "lead": "Zaslon je čekao u mraku, a oko njega ljudi."
+        },
+        {
+          "t": "Tehan je bio tu, naslonjen na štap, sa onim mutnim okom koje je gledalo u prazno. Veles je stajao uz zid, sa rukama prekrštenim na grudima. Orsa je ušla za tobom, bleda, i stala što dalje od točka.",
+          "lead": "Dvojica su te već čekala."
+        },
+        {
+          "t": "„Znao sam da ćeš doći“, rekao je. „Ne zato što mi se to ponudilo. Zato što sam te video kako gledaš staklo.“",
+          "lead": "Tehan je rekao rečenicu koja je sve objasnila.",
+          "who": "Tehan"
+        },
+        {
+          "t": "„Hoće li me neko zaustaviti?“ pitao si.",
+          "who": "Ti",
+          "tf": "„Hoće li me neko zaustaviti?“ pitala si."
+        },
+        {
+          "t": "„Ja ne mogu da pomognem“, rekao je tiho. „Ne nudi mi se. Ali ne mogu ni da te sprečim, jer ni to nema u mojoj listi. Mogu samo da gledam.“ Nasmešio se, tužno, i okrenuo glavu u stranu, kao neko ko hoće da vidi i ne vidi.",
+          "lead": "Veles je rekao šta može, a šta ne.",
+          "who": "Veles"
+        },
+        {
+          "t": "Uhvatili ste točak zajedno, ti i Tehan, ruku do ruke, jedna mlada i jedna stara. Gvožđe je zaškripalo. Prvo nije hteo, pa je popustio, pa je krenuo. Svetlost iznad vas je počela da gasne, red po red, kao što gase sveće: zlatna, pa plavkasta, pa bela.",
+          "lead": "Gvožđe je zaškripalo, pa je krenulo."
+        },
+        {
+          "t": "Poslednje što si video pre mraka bio je prsten na obodu vida. Reči su se u njemu raspadale, jedna po jedna, kao pesak kroz prste. Odmori se. Prijavi se. Sačekaj. I onda, nakratko, nekoliko redova koje ranije nikad nisi video, nežno, uplašeno, kao da im je neko tek sad dopustio da govore: Ne znam. Ne znam. Ne znam.",
+          "lead": "Poslednje što si video pre mraka.",
+          "tf": "Poslednje što si videla pre mraka bio je prsten na obodu vida. Reči su se u njemu raspadale, jedna po jedna, kao pesak kroz prste. Odmori se. Prijavi se. Sačekaj. I onda, nakratko, nekoliko redova koje ranije nikad nisi videla, nežno, uplašeno, kao da im je neko tek sad dopustio da govore: Ne znam. Ne znam. Ne znam.",
+          "leadf": "Poslednje što si videla pre mraka."
+        }
+      ],
+      "next": "e_s2"
+    },
+    "e_s2": {
+      "paragraphs": [
+        {
+          "t": "Zenit je stao. Ne kao što staje kad Lumen kaže Sačekaj, nego onako kako staje ono što je izgubilo oslonac. Ljudi su nasred ulica podizali glave i gledali oko sebe. Starac je ostao na klupi, sa prstom na pola puta do usta. Žena na tezgi je gledala svoje ruke kao da prvi put vidi da su njene.",
+          "lead": "Zenit je stao, ali ne kao ranije."
+        },
+        {
+          "t": "Dugo nije bilo zvuka. Onda je negde u daljini devojčica Iva rekla, glasno, kako deca kažu: „Šta sad?“",
+          "lead": "Prvi zvuk posle toga bio je dečji glas.",
+          "who": "Iva"
+        },
+        {
+          "t": "Niko nije odgovorio. Niko nije znao. Ljudi su se gledali, prvi put pogledom koji nije prelazio preko, nego se zaustavljao.",
+          "lead": "Ljudi su se prvi put zaista pogledali."
+        },
+        {
+          "t": "Prvi koji je progovorio nije imao ništa pametno da kaže. Rekao je: „Gladan sam.“ I to je, nekako, bilo dovoljno da neko ode po hleb.",
+          "lead": "Prva reč koju je neko izgovorio bila je obična."
+        },
+        {
+          "t": "Orsa je stajala na ivici trga, sa šakama pritisnutim uz grudi. Gledala te je, i u tom pogledu bilo je više ljutnje nego zahvalnosti, a opet nijedna od te dve stvari nije bila sasvim samo to. „Šta si nam uradio“, rekla je, ne kao pitanje.",
+          "lead": "Orsa te je dugo gledala.",
+          "who": "Orsa",
+          "tf": "Orsa je stajala na ivici trga, sa šakama pritisnutim uz grudi. Gledala te je, i u tom pogledu bilo je više ljutnje nego zahvalnosti, a opet nijedna od te dve stvari nije bila sasvim samo to. „Šta si nam uradila“, rekla je, ne kao pitanje."
+        },
+        {
+          "t": "Nisi imao odgovor. Neki ljudi nisu ustali sa klupa. Neki su plakali. Neki su se smejali, glupo, bez razloga, kao deca kojima je odjednom dozvoljeno sve.",
+          "lead": "Neki su plakali, a neki se smejali.",
+          "tf": "Nisi imala odgovor. Neki ljudi nisu ustali sa klupa. Neki su plakali. Neki su se smejali, glupo, bez razloga, kao deca kojima je odjednom dozvoljeno sve."
+        },
+        {
+          "t": "Niko nije znao šta je sledeće. To je bio prvi sat. Bilo je još mnogo sati, i nijedan nije bio unapred napisan.",
+          "lead": "I jedna rečenica o prvom satu."
+        }
+      ],
+      "end": "s"
+    },
+    "e_u1": {
+      "paragraphs": [
+        {
+          "t": "Presek je bio tih, kao da ga je neko pažljivo isprao. Poravnanje je počelo da popušta, senke su se vraćale, dve, kao stare prijateljice, i svetlost je ponovo bila obična.",
+          "lead": "Presek je bio tih, a svetlost obična."
+        },
+        {
+          "t": "Veles vas je čekao na vrhu. Nije ništa pitao. Pokazao je stolicu, a ti si seo. Bila je topla, kao da je neko tek ustao.",
+          "lead": "Veles vas je čekao uz stolicu.",
+          "tf": "Veles vas je čekao na vrhu. Nije ništa pitao. Pokazao je stolicu, a ti si sela. Bila je topla, kao da je neko tek ustao."
+        },
+        {
+          "t": "„Nije bolno“, rekao je. „Neće te boleti. Obećavam ti ono što mogu, a mogu samo to.“",
+          "lead": "Veles je obećao jedino što može.",
+          "who": "Veles"
+        },
+        {
+          "t": "Orsa je stajala pored tebe. Držala te je za ruku, i svaki njen prst bio je tačan, kao da zna gde treba da stoji. Nije te molila da ostaneš. Gledala je u ugao, kratko, i vratila pogled na tebe. Osmehnula se, malo, od umora.",
+          "lead": "Orsa te je držala za ruku."
+        },
+        {
+          "t": "„Pogledaj u sunce“, rekao je.",
+          "who": "Veles"
+        },
+        {
+          "t": "Pogledao si. Svetlost ti je ušla u oči, topla i sveobuhvatna. U uglu vidnog polja, polako, kao kad pliva riba kroz vodu, pojavio se prsten. Redovi su bili beli i mirni. Odmori se. Jedi. Ostani.",
+          "lead": "Pogledao si u sunce, i nešto se otvorilo.",
+          "tf": "Pogledala si. Svetlost ti je ušla u oči, topla i sveobuhvatna. U uglu vidnog polja, polako, kao kad pliva riba kroz vodu, pojavio se prsten. Redovi su bili beli i mirni. Odmori se. Jedi. Ostani.",
+          "leadf": "Pogledala si u sunce, i nešto se otvorilo."
+        },
+        {
+          "t": "Jedan po jedan, redovi su bledeli, sve dok nije ostao samo poslednji, tih kao disanje."
+        },
+        {
+          "t": "I tada, nakon sedam dana u kojima si sam odlučivao o svakom koraku, osetio si kako ti je sa ramena nestao teret. Nisi ni znao da ga nosiš. Zadržao si pogled na poslednjem redu. Tiho, bez žurbe, kao neko ko se konačno vraća kući, kliknuo si.",
+          "lead": "Teret ti je nestao sa ramena.",
+          "tf": "I tada, nakon sedam dana u kojima si sama odlučivala o svakom koraku, osetila si kako ti je sa ramena nestao teret. Nisi ni znala da ga nosiš. Zadržala si pogled na poslednjem redu. Tiho, bez žurbe, kao neko ko se konačno vraća kući, kliknula si."
+        }
+      ],
+      "next": "e_u2"
+    },
+    "e_u2": {
+      "paragraphs": [
+        {
+          "t": "Prošlo je mnogo krugova. Niko ih nije brojao.",
+          "lead": "Prošlo je mnogo krugova."
+        },
+        {
+          "t": "Na trgu, kraj izvora gde su dva mlaza, jedan topao i jedan hladan, tekla pokraj kamena, sedeo si i gledao u vodu. Pored tebe je sedela žena. U ritmu sa celim trgom, u istom tren, oboje ste pogledali u ugao, osmehnuli se i spustili ramena.",
+          "lead": "Na trgu, kraj izvora, sedeli ste vas dvoje.",
+          "tf": "Na trgu, kraj izvora gde su dva mlaza, jedan topao i jedan hladan, tekla pokraj kamena, sedela si i gledala u vodu. Pored tebe je sedela žena. U ritmu sa celim trgom, u istom tren, oboje ste pogledali u ugao, osmehnuli se i spustili ramena.",
+          "leadf": "Na trgu, kraj izvora, sedele ste vas dve."
+        },
+        {
+          "t": "„Šta ti nudi?“ pitala je. Nije znala zašto pita. Možda iz navike. Možda zbog nečeg starog što je ležalo ispod, kao kamen na dnu.",
+          "lead": "Orsa je pitala iz navike.",
+          "who": "Orsa"
+        },
+        {
+          "t": "„Ono što bih i sam izabrao“, rekao si. Nisi lagao. Pokušao si da se setiš kad si poslednji put poželeo nešto što ti nije bilo ponuđeno, i nisi mogao. Nije ti smetalo.",
+          "lead": "Tvoj odgovor nije bio laž.",
+          "who": "Ti",
+          "tf": "„Ono što bih i sama izabrala“, rekla si. Nisi lagao. Pokušala si da se setiš kad si poslednji put poželela nešto što ti nije bilo ponuđeno, i nisi mogla. Nije ti smetalo."
+        },
+        {
+          "t": "Oči su ti bile iste kao i oči svih. Mirne, prisutne, i pomalo daleke. Dva sunca stajala su nad tobom, a pod njima, kao i pod svakim, bile su dve senke, jedna ćilibarska, jedna plavkasta, ukrštene kao makaze.",
+          "lead": "Oči su ti postale kao oči svih."
+        },
+        {
+          "t": "U uglu ti se pojavio novi red. Ponuđeno ti je da se setiš kako si došao.",
+          "tf": "U uglu ti se pojavio novi red. Ponuđeno ti je da se setiš kako si došla."
+        },
+        {
+          "t": "Preskoči.",
+          "lead": "Poslednji red u uglu.",
+          "solo": true
+        }
+      ],
+      "end": "u"
+    },
+    "c2_podne": {
+      "paragraphs": [
+        {
+          "t": "Tehan je nastavio da melje staklo, što je bio njegov način da kaže da je razgovor završen. Izašao si na trg u času kada su zvona počela da zvone treći put.",
+          "lead": "Tehan je ostao uz staklo, a ti si izašao na trg.",
+          "tf": "Tehan je nastavio da melje staklo, što je bio njegov način da kaže da je razgovor završen. Izašla si na trg u času kada su zvona počela da zvone treći put.",
+          "leadf": "Tehan je ostao uz staklo, a ti si izašla na trg."
+        },
+        {
+          "t": "Orsa ti je kasnije objasnila da se to zove Zajednički red. Jednom u krugu, svi u Zenitu stanu na trg, a Lumen im ponudi isti zadatak, i svi ga izaberu u istom trenutku. Ona je to nazivala „disanjem grada“. Ti si za to imao drugačije ime, ali si ga zadržao za sebe.",
+          "lead": "Jednom u krugu ceo grad diše kao jedno.",
+          "tf": "Orsa ti je kasnije objasnila da se to zove Zajednički red. Jednom u krugu, svi u Zenitu stanu na trg, a Lumen im ponudi isti zadatak, i svi ga izaberu u istom trenutku. Ona je to nazivala „disanjem grada“. Ti si za to imala drugačije ime, ali si ga zadržala za sebe."
+        },
+        {
+          "t": "Hiljade ljudi stalo je jedni uz druge, rame uz rame, i nijedan nije govorio. Pogledi su im se podigli u istom trenutku, kao hiljade ptica na žici. Zadržali su ih. I onda je, kroz masu, prošao jedan jedini zvuk, tih i ravan, kao kad izdahne ogromno biće: klik.",
+          "lead": "Hiljade pogleda podiglo se istovremeno."
+        },
+        {
+          "t": "Samo jedan dečak, pored tebe, dvanaest ili trinaest godina, kasnio je pola otkucaja. Oči su mu poskočile, zaustavile se na pogrešnom mestu, pa se vratile. Usne su mu zadrhtale. Očigledno je izabrao nešto drugo od ostalih, i pogledao okolo, kao neko ko čeka da padne grom.",
+          "lead": "Samo jedan dečak zakasnio je pola otkucaja."
+        },
+        {
+          "t": "Ništa se nije dogodilo. Ljudi nisu okrenuli glave. Ali oko njega se prostor tiho promenio: komšije su se pomerile za pola koraka, ne grubo, nego samo dovoljno da dečak ostane van središta. Za koji trenutak, pogled mu je ponovo poskočio, i ovaj put se spustio tačno tamo gde su i drugi. Lice mu se opustilo, kao da je neko uzeo kamen iz njegove šake.",
+          "lead": "Ništa se nije dogodilo, a prostor se tiho promenio."
+        },
+        {
+          "t": "Dečak je pogledao tebe. Ako je ikada neko u životu hteo da pita nešto, to je bio on.",
+          "lead": "Dečak je pogledao pravo u tebe."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c2g",
+          "text": "Stani pored dečaka i radi isto što i on.",
+          "next": "c3_vizir",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c2i",
+          "text": "Priđi dečaku i pitaj ga šta je video.",
+          "next": "c3_vizir",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c2j",
+          "text": "Pomeri se iza ljudi i ponašaj se kao i oni, u istom ritmu.",
+          "next": "c3_vizir",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        }
+      ],
+      "prompt": "Dečak te gleda, a grad diše kao jedno telo. Šta radiš?"
+    },
+    "c3_iva": {
+      "paragraphs": [
+        {
+          "t": "Iva te je našla u jednom od onih sati koji nisu ni dan ni noć, jer nema ni jednog ni drugog. Sela je preko puta tebe, sa stopalima podvijenim ispod sebe, i dugo te gledala.",
+          "lead": "Iva te je našla u času koji nije bio ni dan ni noć.",
+          "img": "iva"
+        },
+        {
+          "t": "„Pokaži mi“, rekla je.",
+          "who": "Iva"
+        },
+        {
+          "t": "„Šta?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Kako se radi nešto što nije na listi.“",
+          "who": "Iva"
+        },
+        {
+          "t": "Pogledao si ka vratima. Dalja je negde u kući, a Orsa je bila na putu. „Zašto?“",
+          "lead": "Zašto? Zato što joj se nikad ništa nije nudilo.",
+          "who": "Ti",
+          "tf": "Pogledala si ka vratima. Dalja je negde u kući, a Orsa je bila na putu. „Zašto?“"
+        },
+        {
+          "t": "„Zato što mi se nikad ne nudi“, rekla je, kao da je to najobičnija stvar. „Ja sam probala jednom da se prevrnem preko ruku. Moj Lumen mi je ponudio Ne. Pa mi je ponudio Vrati se. A ja sam htela samo da vidim kako izgleda sve naopačke.“",
+          "lead": "Dete je ispričalo šta se desilo kad je pokušala.",
+          "who": "Iva"
+        },
+        {
+          "t": "Zašutela je. Pogled joj je skočio u ugao i zadržao se, kratko, pa se vratio. „Evo, sad mi nudi da te ne slušam. Ne znam zašto tebi ništa ne nudi. Ali znam da bih htela da znam kako je.“",
+          "lead": "Čak i dok je govorila, nešto joj se nudilo.",
+          "who": "Iva"
+        },
+        {
+          "t": "Sedela je pred tobom, ozbiljna i malena, sa očima koje još nisu sasvim naučile da skaču. Bilo je trenutaka kad si mogao da odlučiš šta će ova devojčica jednom postati, i znao si da ne znaš kako se to radi.",
+          "lead": "Sedela je ozbiljna, a ti nisi znao šta da kažeš.",
+          "tf": "Sedela je pred tobom, ozbiljna i malena, sa očima koje još nisu sasvim naučile da skaču. Bilo je trenutaka kad si mogla da odlučiš šta će ova devojčica jednom postati, i znala si da ne znaš kako se to radi.",
+          "leadf": "Sedela je ozbiljna, a ti nisi znala šta da kažeš."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c3g",
+          "text": "Nauči je da se prevrne preko ruku, protiv upozorenja.",
+          "next": "c4_pritisak",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c3h",
+          "text": "Reci joj da je dobro što sluša ono što joj se nudi.",
+          "next": "c4_pritisak",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c3i",
+          "text": "Ispričaj joj o noći: o tami u kojoj svi spavaju u isto vreme, a niko ih ne budi.",
+          "next": "c4_pritisak",
+          "w": {
+            "b": 2
+          }
+        }
+      ],
+      "prompt": "Devojčica traži nešto što joj se ne nudi. Šta joj daješ?"
+    },
+    "c5_tehan": {
+      "paragraphs": [
+        {
+          "t": "Tehana si našao tamo gde si ga ostavio, na kamenoj ploči sa strane trga. Kao da nikuda nije ni odlazio. Sedeo je i vrteo staklo u prstima, a kada si seo pored njega, rekao je: „Veles ti je pokazao Zaslon.“",
+          "lead": "Tehan je sedeo tamo gde si ga ostavio.",
+          "who": "Tehan",
+          "tf": "Tehana si našla tamo gde si ga ostavio, na kamenoj ploči sa strane trga. Kao da nikuda nije ni odlazio. Sedeo je i vrteo staklo u prstima, a kada si sela pored njega, rekao je: „Veles ti je pokazao Zaslon.“",
+          "leadf": "Tehan je sedeo tamo gde si ga ostavila."
+        },
+        {
+          "t": "To nije bilo pitanje. Klimnuo si.",
+          "tf": "To nije bilo pitanje. Klimnula si."
+        },
+        {
+          "t": "„Onda znaš. Ja sam ga okrenuo.“ Starac se nasmešio, a prazno oko se pomerilo kao da gleda negde iza tvoje glave. „Mislili su da je kazna ono što je usledilo, ali nije. Moj Lumen je prestao da mi nudi, tačno kad je zrno stalo, i nikad se nije vratio. Nisam nikada pitao zašto. Mislim da je i njemu bilo neprijatno.“",
+          "lead": "Starac je priznao šta je uradio.",
+          "who": "Tehan"
+        },
+        {
+          "t": "„Šta se desilo tokom tog sata?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Četvorica su umrla.“ Rekao je to bez uvijanja. „Jedan je pao s merdevina. Dvoje starih nije stiglo do hlada, jer niko nije znao da treba. Jedno dete se udavilo u bunaru, jer ga niko nije pogledao i rekao Ne.“ Pogledao te je. „A moja žena Neva bila je na krovu i čekala. Čekala je ceo sat da joj neko kaže da side. Kad se zrno vratilo, prvi red je bio Siđi, i ona je sišla. Nije me nikad više pogledala istim očima. Ne mrzi me. Lumen joj je ponudio da me ne mrzi.“",
+          "lead": "Cena je bila veća nego što si očekivao.",
+          "who": "Tehan",
+          "leadf": "Cena je bila veća nego što si očekivala."
+        },
+        {
+          "t": "Zavrteo je staklo. „Ja sam sedeo na podu, pedeset minuta, i gledao u ruke. Prvi put mi je pala na pamet misao koja nije stigla odnekud. Poželeo sam pomorandžu. Ne znam zašto. Nikad pre nisam jeo pomorandžu. Ta želja je bila moja.“",
+          "lead": "Starac je čuvao jednu uspomenu koja nije bila ničija.",
+          "who": "Tehan"
+        },
+        {
+          "t": "Zagledao se u trg, u ljude. „Znam da je cena bila četvoro ljudi. Ali ne znam koliko je ostalih zaboravilo da čeka.“",
+          "lead": "Zagledao se u trg, a onda izgovorio cenu.",
+          "who": "Tehan"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c5d",
+          "text": "Reci mu da ne bi trebalo da to ponovi.",
+          "next": "c5_poruka",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c5e",
+          "text": "Pitaj ga da li bi ponovio.",
+          "next": "c5_poruka",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c5f",
+          "text": "Pitaj ga da li je ikad probao pomorandžu.",
+          "next": "c5_poruka",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Starac je izgovorio cenu. Šta mu kažeš?"
+    },
+    "c5_poruka": {
+      "paragraphs": [
+        {
+          "t": "Kragna je zacvrčala uveče, ako se tako zove vreme kad Orsa pogleda u ugao i legne. Mislio si da je prevodilac, ali zvuk je bio drugačiji: kratak, ravan, poznat. Hitni prijemnik, za koji si zaboravio da postoji, prvi put je uhvatio nešto kroz buku koju su sunca pravila.",
+          "lead": "Kragna je zacvrčala, a to nije bio prevodilac.",
+          "tf": "Kragna je zacvrčala uveče, ako se tako zove vreme kad Orsa pogleda u ugao i legne. Mislila si da je prevodilac, ali zvuk je bio drugačiji: kratak, ravan, poznat. Hitni prijemnik, za koji si zaboravila da postoji, prvi put je uhvatio nešto kroz buku koju su sunca pravila."
+        },
+        {
+          "t": "„Kovač?“",
+          "who": "Marta"
+        },
+        {
+          "t": "Pogodilo te je u grudi kao pesnica. Glas je bio ženski, umoran, razdrman šumom, i znao si ga bolje nego što si mislio da znaš bilo koji glas.",
+          "lead": "Glas je bio poznat, i to te je pogodilo.",
+          "tf": "Pogodilo te je u grudi kao pesnica. Glas je bio ženski, umoran, razdrman šumom, i znala si ga bolje nego što si mislila da znaš bilo koji glas."
+        },
+        {
+          "t": "„Kovač, ovde Marta. Ne znam da li me čuješ. Hvatamo te kroz neku buku, zaslepljuje nas njihov dvojni sistem. Skaneri ti pokazuju da si živ. Prozor se otvara za šest sati kad se sunca poravnaju, jer šum pada. Imaćemo šezdeset minuta, ne više. Ako nađeš nešto što leti, uskoči. Nemamo goriva da čekamo.“",
+          "lead": "Poruka je bila kratka i imala je rok.",
+          "who": "Marta"
+        },
+        {
+          "t": "Pauza. Šum. „Samo mi reci gde si. Reci nešto. Bilo šta.“",
+          "who": "Marta"
+        },
+        {
+          "t": "Glas je bio tako blizu da si mogao da ga dodirneš, i tako topao da ti se skupilo grlo. Bio je to prvi glas posle devet dana koji je govorio direktno tebi, bez čekanja da se nešto u uglu potvrdi.",
+          "lead": "Glas je bio blizu, i ti si ga želeo.",
+          "tf": "Glas je bio tako blizu da si mogla da ga dodirneš, i tako topao da ti se skupilo grlo. Bio je to prvi glas posle devet dana koji je govorio direktno tebi, bez čekanja da se nešto u uglu potvrdi.",
+          "leadf": "Glas je bio blizu, i ti si ga želela."
+        },
+        {
+          "t": "Pogledao si Orsu. Spavala je, u istom ritmu kao i svi, bez imalo uznemirenosti. Spremna da u svakom trenutku bude ono što joj je ponuđeno.",
+          "lead": "Orsa je spavala u istom ritmu kao i svi.",
+          "tf": "Pogledala si Orsu. Spavala je, u istom ritmu kao i svi, bez imalo uznemirenosti. Spremna da u svakom trenutku bude ono što joj je ponuđeno."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c5g",
+          "text": "Odgovori joj gde si i šta ti treba.",
+          "next": "c6_orsa",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c5h2",
+          "text": "Ne odgovaraj. Isključi kragnu.",
+          "next": "c6_orsa",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c5i",
+          "text": "Reci joj šta si video na ovoj planeti.",
+          "next": "c6_orsa",
+          "w": {
+            "s": 2
+          },
+          "textf": "Reci joj šta si videla na ovoj planeti."
+        }
+      ],
+      "hidden": {
+        "id": "c5h3",
+        "text": "— Ne radi ništa. Slušaj kako šum prelazi u tišinu.",
+        "next": "c6_orsa",
+        "w": {
+          "s": 1,
+          "u": 1
+        },
+        "after": 20
+      },
+      "prompt": "Marta čeka na vezi, a vremena je malo. Šta radiš?"
+    },
+    "c4_put": {
+      "paragraphs": [
+        {
+          "t": "Orsa je sedela uz tebe, ćuteći, sve dok peščani čamac nije stao pred prvim kućama Zenita. Tu je Veles nežno, kao dete, sveo s čamca, i predao je Dalji, koja je čekala na pragu, bez izraza. Orsa se okrenula samo jednom. Čamac je krenuo dalje.",
+          "if": {
+            "pick": "c4a"
+          },
+          "lead": "Orsa je sedela uz tebe, a onda je nestala."
+        },
+        {
+          "t": "Peščani čamac klizio je bez zvuka. Ispod čamca so se pretvarala u bele pruge, kao da neko brzo povlači prstom preko ogromne ploče. Na kormilu je sedeo Veles, a pored tebe, na kožnoj klupi, mlada Čuvarka sa mesinganim prstenom još sjajnim od novosti. Zvala se Dara.",
+          "lead": "Peščani čamac klizio je bez zvuka.",
+          "img": "dara"
+        },
+        {
+          "t": "Gledala je u ugao, a onda u tebe, pa opet u ugao. Na licu je imala ozbiljnost deteta koje recituje.",
+          "lead": "Mlada Čuvarka čitala je pitanja sa tuđeg lista."
+        },
+        {
+          "t": "„Odakle si?“ rekla je, po slovu, kao čovek koji čita sa tuđeg lista.",
+          "who": "Dara"
+        },
+        {
+          "t": "„Sa jedne druge planete.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Kakvo je tamo nebo?“",
+          "who": "Dara"
+        },
+        {
+          "t": "„Tamno, pola vremena.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ruke su joj zadrhtale. „Imaš li porodicu?“ Pogledala je u ugao i skupila oči. „Šta ti je potrebno da preživiš?“",
+          "lead": "Pitanja su postajala sve lična.",
+          "who": "Dara"
+        },
+        {
+          "t": "Pitanja su stizala jedno za drugim, svako tačno i bez razloga, kao da neko van njihovog razgovora želi da zna i ne usuđuje se da pita. Dara ih je izgovarala sa strašću kojoj nije poznavala uzrok.",
+          "lead": "Pitanja su stizala jedno za drugim, bez razloga."
+        },
+        {
+          "t": "Najzad je prestala. Pogledala te je i prvi put nisu to bile njene oči koje čitaju. „Moj Lumen mi kaže da zapamtim tvoje odgovore“, rekla je tiho. „Ne piše zašto. A meni se čini da bih ih zapamtila i da mi nije rekao.“",
+          "lead": "Najzad je prestala i priznala nešto.",
+          "who": "Dara"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c4d",
+          "text": "Odgovori iskreno na sve što pita.",
+          "next": "c5_veles",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c4e",
+          "text": "Odgovaraj kratko i ne otkrivaj ništa.",
+          "next": "c5_veles",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c4f",
+          "text": "Pitaj je šta joj još Lumen nudi da pita.",
+          "next": "c5_veles",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "prompt": "Čuvarka čeka tvoj odgovor. Kako ćeš govoriti?"
+    },
+    "c6_poslednji": {
+      "paragraphs": [
+        {
+          "t": "Pred Poravnanje grad se pripremao kao da ga je neko udario po ramenu i rekao: sada. Prozori su se zatvarali, jedan po jedan, platnenim zavesama. Na ulicama su se pojavile duge, tihe kolone ljudi koje su, sve do jednog, hodale ka skloništima ispod trga. Nije bilo gurkanja, nijedan nije žurio. Nikome se nije nudilo da žuri.",
+          "lead": "Grad se spremao za Poravnanje."
+        },
+        {
+          "t": "Stajao si na ivici ulice i gledao ih kako prolaze. Svako lice je bilo mirno, prazno na onaj topli način na koji su prazna lica ljudi koji spavaju. Izdvajala se samo Dalja, koja je izašla iz kolone i stala ispred tebe.",
+          "lead": "Jedna žena izašla je iz kolone.",
+          "tf": "Stajala si na ivici ulice i gledao ih kako prolaze. Svako lice je bilo mirno, prazno na onaj topli način na koji su prazna lica ljudi koji spavaju. Izdvajala se samo Dalja, koja je izašla iz kolone i stala ispred tebe."
+        },
+        {
+          "t": "Do sada te nije gledala u oči. Sada jeste. Pogled joj je bio težak i jasan, kao kamen na dnu.",
+          "lead": "Dalja te je prvi put pogledala u oči."
+        },
+        {
+          "t": "„Lumen mi je ponudio da ti ne govorim“, rekla je. „Svih ovih dana. Ja sam dobra. Zato sam te slušala.“ Pružila ti je sveženj uvijen u lan. U njemu je bio hleb sa belom korom, još mlak. „A sada mi je ponudio da ti dam ovo. I ne znam da li je to bio on, ili ja.“",
+          "lead": "Pružila ti je nešto i priznala nešto.",
+          "who": "Dalja",
+          "tf": "„Lumen mi je ponudio da ti ne govorim“, rekla je. „Svih ovih dana. Ja sam dobra. Zato sam te slušala.“ Pružila ti je sveženj uvijen u lan. U njemu je bio hleb sa belom korom, još mlak. „A sada mi je ponudio da ti dam ovo. I ne znam da li je to bio on, ili ja.“"
+        },
+        {
+          "t": "Čekala je. Iza nje, kolona je nastavljala da se pomera."
+        },
+        {
+          "t": "„Nemoj da misliš da smo zli“, dodala je. „Nema krivih. Imali smo mnogo godina da pogledamo naniže, a ne da ostanemo. Ovo je ono što smo izabrali, ako je izabiranje ono što se desilo.“",
+          "lead": "Pre nego što se vratila u kolonu, rekla je još jednu stvar.",
+          "who": "Dalja"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c6g",
+          "text": "Zahvali joj i uzmi hleb bez ijedne reči više.",
+          "next": "c6_poravnanje",
+          "w": {
+            "u": 1,
+            "b": 1
+          }
+        },
+        {
+          "id": "c6k",
+          "text": "Pitaj je da li je srećna.",
+          "next": "c6_poravnanje",
+          "w": {
+            "s": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c6i",
+          "text": "Reci joj da se možda nećeš vratiti.",
+          "next": "c6_poravnanje",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Dalja stoji sa hlebom u ruci. Šta joj kažeš?"
+    }
+  },
+  "images": {
+    "orsa": {
+      "src": "img/orsa.jpg",
+      "alt": "Orsa",
+      "kind": "portrait",
+      "caption": "Orsa"
+    },
+    "tehan": {
+      "src": "img/tehan.jpg",
+      "alt": "Tehan",
+      "kind": "portrait",
+      "caption": "Tehan"
+    },
+    "veles": {
+      "src": "img/veles.jpg",
+      "alt": "Veles",
+      "kind": "portrait",
+      "caption": "Veles"
+    },
+    "dalja": {
+      "src": "img/dalja.jpg",
+      "alt": "Dalja",
+      "kind": "portrait",
+      "caption": "Dalja"
+    },
+    "iva": {
+      "src": "img/iva.jpg",
+      "alt": "Iva",
+      "kind": "portrait",
+      "caption": "Iva"
+    },
+    "dara": {
+      "src": "img/dara.jpg",
+      "alt": "Dara",
+      "kind": "portrait",
+      "caption": "Dara"
+    },
+    "beli-pojas": {
+      "src": "img/beli-pojas.jpg",
+      "alt": "Beli pojas: slana ravnica pod dva sunca",
+      "kind": "place"
+    },
+    "zenit": {
+      "src": "img/zenit.jpg",
+      "alt": "Zenit: grad od kamena",
+      "kind": "place"
+    },
+    "presek": {
+      "src": "img/presek.jpg",
+      "alt": "Presek: kula na grebenu",
+      "kind": "place"
+    },
+    "luka": {
+      "src": "img/luka.jpg",
+      "alt": "Luka: šina i Prevoznik",
+      "kind": "place"
+    },
+    "poravnanje": {
+      "src": "img/poravnanje.jpg",
+      "alt": "Poravnanje: dva sunca se spajaju",
+      "kind": "place"
+    }
+  }
+}
