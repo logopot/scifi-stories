@@ -144,6 +144,28 @@ Ose: `b` = bekstvo/preživljavanje, `s` = slom sistema, `u` = uklapanje. Težine
 kod izjednačenja pobeđuje osa koju je čitalac poslednju pojačao. Čitalac na kraju vidi samo tekst kraja, bez statistike.
 Posle svake izmene priče pokreni `npm run check-story`.
 
+## Likovi (`characters`, `who`, `with`)
+
+Na vrhu `story.json` stoji mapa `characters`; ključ je tačno ime govornika kakvo se koristi u `who`:
+
+```
+"characters": {
+  "Orsa": { "img": "orsa" },     // img = id iz "images" (kind: "portrait")
+  "Marta": { "img": null }       // bez portreta: krug sa prvim slovom imena
+}
+```
+
+- Pasus sa `"who": "Orsa"` ispisuje ime govornika sa okruglim licem pored njega (isto lice na svakoj strani). Ako strana već prikazuje veliki portret tog lika (`img` na pasusu), mala slika se ne dodaje.
+- Pasus može imati `"with": ["Marta"]`: red lica ispod kojih piše ime, iznad pasusa. Koristi se samo kad strana uvodi lik po imenu, a lik ne govori.
+- Ako slika nedostaje ili se ne učita, prikazuje se slovo (nema ikone pokvarene slike i nema skakanja rasporeda).
+- Kad dobiješ sliku za lik: dodaj unos u `images` (`kind: "portrait"`), fajl u `public/img/<slug>/` i promeni `img` u `characters`.
+- `npm run check-story` traži da svaki `who` i `with` postoji u `characters`, da `img` postoji u `images`, i upozorava na likove bez portreta.
+
+## Čitač: ponašanje
+
+- Napred se ide samo dugmetom-nagoveštajem (i dugmadima izbora). Klik na tekst, sliku ili pozadinu ne radi ništa, a tekst se može označiti. Tasteri: razmak / Enter / → napred, ← nazad, 1–9 izbor opcije; ne reaguju dok je fokus u polju za ime.
+- Svaka nova strana, scena, izbor, nastavak, restart i ekran kraja počinju na vrhu (`useScrollReset`, pre iscrtavanja, bez glatkog skrolovanja), a fokus prelazi na novu stranu. Slike imaju rezervisan prostor (16:9 za mesta, 3:4 za portrete).
+
 ## Slike
 
 Slike nisu deo koda: stavi ih u `public/img/<slug>/` (JPG). Za „Bez opcije“:

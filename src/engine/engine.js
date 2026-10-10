@@ -77,7 +77,7 @@ export const buildPages = (node, picks, player = DEFAULT_PLAYER) => {
     const last = pages[pages.length - 1];
     const text = tr(p.t, p.tf, player);
     const lead = tr(p.lead, p.leadf, player);
-    const line = { t: text, who: p.who || null };
+    const line = { t: text, who: p.who || null, with: p.with || [] };
     if (i > 0 && !p.solo && !last.solo && text.length < SHORT_PARAGRAPH) {
       last.texts.push(line);
       if (p.img && !last.portrait) last.portrait = p.img;
@@ -118,6 +118,13 @@ export const createEngine = (story, slug) => {
   const getNode = (id) => story.nodes[id];
   const getImage = (id) => (id && story.images ? story.images[id] || null : null);
 
+  // Lik po imenu govornika (ključ u story.characters): { name, imageId, image }; bez slike ostaje slovo.
+  const getCharacter = (name) => {
+    const c = story.characters && story.characters[name];
+    const imageId = (c && c.img) || null;
+    return { name, imageId, image: imageId ? getImage(imageId) : null };
+  };
+
   // Nagoveštaj prve strane sledeće scene (za dugme na kraju scene bez izbora).
   const nextSceneLead = (node, picks, player = DEFAULT_PLAYER) => {
     const nextId = resolveNext(node, picks);
@@ -156,6 +163,7 @@ export const createEngine = (story, slug) => {
     slug,
     getNode,
     getImage,
+    getCharacter,
     nextSceneLead,
     initialState,
     reducer: makeReducer(initialState),

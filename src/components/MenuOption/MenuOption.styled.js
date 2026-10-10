@@ -28,6 +28,10 @@ export const Root = styled.button`
     flex: none;
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    min-height: ${({ theme }) => theme.sizes.touchMin};
+  }
+
   &:hover,
   &:focus-visible {
     padding-left: ${({ theme }) => theme.space[70]};

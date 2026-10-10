@@ -167,6 +167,30 @@ const avg = wsum / N;
 console.log(`Reči po igri: min ${wmin} | prosek ${Math.round(avg)} | max ${wmax}  ->  čitanje ~${Math.round(avg / 180)} min (180 reči/min), bez razmišljanja o izborima`);
 console.log('Namerne putanje (ka osi):', forced, '| uvek prva:', alwaysFirst, '| uvek poslednja:', alwaysLast);
 
+// --- likovi: svaki govornik (who) i svaki lik iz `with` mora biti u characters; img je id iz images ili null (slovo) ---
+const characters = story.characters || {};
+const named = new Set();
+for (const [id, n] of Object.entries(nodes)) {
+  (n.paragraphs || []).forEach((p, i) => {
+    if (p.who && !p.who.includes('{')) named.add(p.who);
+    if (p.with !== undefined && !Array.isArray(p.with)) err(`${id}[${i}]: with mora biti niz imena`);
+    (Array.isArray(p.with) ? p.with : []).forEach((w) => {
+      if (!(w in characters)) err(`${id}[${i}]: with "${w}" nije u characters`);
+      named.add(w);
+    });
+  });
+}
+named.forEach((w) => {
+  if (!(w in characters)) err(`govornik "${w}" nije u characters (dodaj ga, ili { "img": null } ako nema portret)`);
+});
+for (const [name, c] of Object.entries(characters)) {
+  if (!c || !('img' in c)) err(`characters.${name}: nedostaje polje img (id slike ili null)`);
+  else if (c.img !== null && !images[c.img]) err(`characters.${name}: slika "${c.img}" ne postoji u images`);
+  else if (c.img !== null && images[c.img].kind !== 'portrait') err(`characters.${name}: slika "${c.img}" nije kind "portrait"`);
+}
+const noPortrait = [...named].filter((w) => characters[w] && characters[w].img === null);
+if (noPortrait.length) console.warn(`UPOZORENJE: bez portreta (prikazuje se slovo): ${noPortrait.join(', ')}`);
+
 // --- metapodaci priče i registra ---
 const desc = story.meta && story.meta.description;
 if (!Array.isArray(desc) || !desc.length || desc.some((d) => typeof d !== 'string' || !d.trim())) {

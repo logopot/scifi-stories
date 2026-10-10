@@ -6,6 +6,9 @@ const picture = css`
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: ${({ $variant, theme }) => ($variant === 'portrait' ? theme.sizes.ratioPortrait : theme.sizes.ratioPlace)};
+    object-fit: cover;
+    object-position: top;
     border-radius: ${({ theme }) => theme.radii.sm};
     box-shadow: 0 10px 30px -18px ${({ theme }) => theme.shadow};
     animation: ${fadeUp} ${({ theme }) => theme.motion.figure} ease both;

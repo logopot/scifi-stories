@@ -7,4 +7,8 @@ export const Root = styled.section`
   min-height: ${({ theme }) => theme.sizes.pageMinHeight};
   padding-bottom: ${({ theme }) => theme.space[250]};
   animation: ${turnIn} ${({ theme }) => theme.motion.paragraph} ease both;
+
+  &:focus {
+    outline: none;
+  }
 `;

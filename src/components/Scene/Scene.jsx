@@ -1,7 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { buildPages, resolveNext, tr } from '../../engine/engine';
 import { useStory } from '../../engine/StoryContext';
+import useScrollReset from '../../hooks/useScrollReset';
 import ChapterMark from '../ChapterMark';
+import CharacterRow from '../CharacterRow';
 import Figure from '../Figure';
 import Heading from '../Heading';
 import Hint from '../Hint';
@@ -15,6 +17,7 @@ import * as S from './Scene.styled';
 
 const DEFAULT_IDLE_SECONDS = 20;
 const CLICK_GUARD_MS = 350; // sprečava da dupli klik preskoči stranu
+const TYPING_TAGS = ['INPUT', 'TEXTAREA', 'SELECT'];
 
 export default function Scene({ nodeId, picks, player, dispatch }) {
   const { story, engine } = useStory();
@@ -31,9 +34,11 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
   const nextLead = !isLast ? pages[page + 1].lead : null;
   const sceneLead = isLast && !hasChoices && !node.end ? engine.nextSceneLead(node, picks, player) : null;
 
-  // Nova strana ili scena: na vrh.
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
+  // Nova strana ili scena: na vrh pre iscrtavanja, a fokus na novu stranu (bez dodatnog skrola).
+  const boxRef = useRef(null);
+  useScrollReset([nodeId, page]);
+  useLayoutEffect(() => {
+    boxRef.current?.focus({ preventScroll: true });
   }, [nodeId, page]);
 
   // Skrivena opcija se pojavljuje tek kad čitalac okleva na poslednjoj strani sa izborom.
@@ -79,8 +84,10 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
   // Tastatura: razmak / Enter / → = dalje, ← = nazad, 1-9 = izbor opcije na poslednjoj strani.
   useEffect(() => {
     const onKey = (e) => {
-      const tag = document.activeElement?.tagName;
-      if (tag === 'BUTTON' && (e.key === 'Enter' || e.key === ' ')) return;
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const active = document.activeElement;
+      if (active && (TYPING_TAGS.includes(active.tagName) || active.isContentEditable)) return;
+      if (active?.tagName === 'BUTTON' && (e.key === 'Enter' || e.key === ' ')) return;
       const forward = [' ', 'Enter', 'ArrowRight'].includes(e.key);
       if (e.key === 'ArrowLeft') {
         turn(-1);
@@ -108,8 +115,8 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
   const current = pages[page];
 
   return (
-    <S.Article onClick={() => !isLast && turn(1)}>
-      <PageBox key={`${nodeId}-${page}`}>
+    <S.Article>
+      <PageBox key={`${nodeId}-${page}`} ref={boxRef}>
         {chapter && node.showChapter && page === 0 && (
           <>
             <ChapterMark>{chapter.mark}</ChapterMark>
@@ -120,25 +127,33 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
         {current.place && <Figure image={engine.getImage(current.place)} variant="place" />}
         {current.portrait && <Figure image={engine.getImage(current.portrait)} variant="portrait" />}
 
-        {current.texts.map(({ t, who }, i) => (
-          <Paragraph key={i} who={who}>
-            {t}
-          </Paragraph>
-        ))}
+        {current.texts.map(({ t, who, with: withNames }, i) => {
+          const speaker = who ? engine.getCharacter(who) : null;
+          // Veliki portret istog lika na strani je dovoljan: tada nema malog lica.
+          const sameAsPortrait = (c) => Boolean(c.imageId) && c.imageId === current.portrait;
+          const extras = (withNames || []).map(engine.getCharacter).filter((c) => !sameAsPortrait(c));
+          return (
+            <React.Fragment key={i}>
+              {extras.length > 0 && <CharacterRow characters={extras} />}
+              <Paragraph
+                who={who ? tr(who, null, player) : null}
+                image={speaker && speaker.image}
+                showAvatar={!(speaker && sameAsPortrait(speaker))}
+              >
+                {t}
+              </Paragraph>
+            </React.Fragment>
+          );
+        })}
 
         {!isLast && (
-          <Hint
-            onClick={(e) => {
-              e.stopPropagation(); // inače bi klik na dugme i klik na članak okrenuli dve strane
-              turn(1);
-            }}
-          >
+          <Hint onClick={() => turn(1)}>
             {nextLead || story.ui.next}
           </Hint>
         )}
 
         {isLast && hasChoices && (
-          <Menu onClick={(e) => e.stopPropagation()}>
+          <Menu>
             {node.prompt && <MenuLabel>{tr(node.prompt, node.promptf, player)}</MenuLabel>}
             {node.choices.map((c, i) => (
               <MenuOption key={c.id} index={i} onClick={() => choose(c)}>
