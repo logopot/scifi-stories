@@ -5,7 +5,7 @@
     "description": [
       "U gradu Utočištu voda se ne meri litrima, nego dozvolama. Poslednje jezero zove se Sabirnik, a pravila njegove raspodele sprovodi sistem po imenu Merač.",
       "Odbor mere te šalje sa jednim zadatkom: da pregledaš knjigu raspodele pre nego što se zatvore kapije. Niko ti ne kaže šta ćeš u njoj naći.",
-      "Pred tobom su ljudi koji ti govore delimičnu istinu, mašina koja ne laže i prolaz kroz koji više ne stiže ono što je gradu potrebno. Odluke su tvoje, a nijedna nije označena kao ispravna."
+      "Pred tobom su ljudi koji ti govore delimičnu istinu, mašina koja ne laže i prolaz kroz koji više ne stiže ono što je gradu potrebno."
     ],
     "axes": [
       {
@@ -27,7 +27,7 @@
     "finish": "Do kraja",
     "start": {
       "intro": [
-        "Utočište je grad ispod Visoke brane, na dnu doline u kojoj je nekada bilo jezero. Voda se ovde deli po meri, a meru izračunava sistem koji se zove Merač. Ti dolaziš sa jednim zadatkom i tri dana vremena. Pred tobom će se pojavljivati ponude, i nijedna nije označena kao ispravna."
+        "Utočište je grad ispod Visoke brane, na dnu doline u kojoj je nekada bilo jezero. Voda se ovde deli po meri, a meru izračunava sistem koji se zove Merač. Ti dolaziš sa jednim zadatkom i tri dana vremena. Pred tobom će se pojavljivati ponude."
       ],
       "begin": "Počni",
       "continue": "Nastavi čitanje",
@@ -1116,6 +1116,10 @@
         {
           "t": "Utočište se i dalje raspravlja. Na tvom pečatu stoji nova poruka od Odbora, kraća od prethodne: „Zabeleženo.“ Ne znaš da li je to odgovor ili samo prvo slovo nečega što još nije izgovoreno.",
           "lead": "Nova poruka kraća od prethodne."
+        },
+        {
+          "t": "Sutradan u podne iz doline stiže prvi čovek iz nizvodnih sela, sa praznom kantom na ramenu. Staje pred kapijom i čeka da ga neko pita odakle dolazi. Teja ga pušta unutra bez reči.",
+          "lead": "Čovek sa praznom kantom na kapiji."
         }
       ],
       "end": "e"
@@ -1196,6 +1200,10 @@
         {
           "t": "Na tvom pečatu stoji poruka Odbora: „Preuzeto.“ Ispod nje, sitnim slovima, potpisuje se Merač. Prvi put ima potpis, jer mu je neko rekao da ga stavi.",
           "lead": "Prvi potpis Merača."
+        },
+        {
+          "t": "Te večeri, kad se trg prazni, u kocki ostaje upaljeno jedno svetlo. Ekran ispisuje novi red, pa još jedan, polako, kao neko ko uči da piše. Niko ga ne čita.",
+          "lead": "Svetlo u kocki."
         }
       ],
       "end": "t"
@@ -1270,6 +1278,10 @@
         {
           "t": "Tvoj pečat vibrira poslednji put. Odbor ne piše ništa. Na ekranu se pojavljuje samo jedna reč: „Ostajete.“ Ne znaš da li je to pitanje ili naredba. Na zidu kocke ostaje trag krede.",
           "lead": "Jedna reč na ekranu: ostajete."
+        },
+        {
+          "t": "Pred zoru čuješ kako neko lupa na zatvorenu kapiju, tri kratka udarca pa tri duga. Teja ne otvara, ali ne odlazi. Stoji s druge strane, sa rukom na ključu, i sluša kako se udarci ponavljaju.",
+          "lead": "Kucanje na zatvorenu kapiju."
         }
       ],
       "end": "o"

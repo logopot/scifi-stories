@@ -249,3 +249,7 @@ Isto kao `src/stories/_template/story.json` (3 scene, 2 ose):
 ```
 
 Za novu priču još: dodaj unos u `src/stories/index.js`, temu u `src/styles/themes.js` i slike u `public/img/<slug>/` (vidi README).
+
+## Završeci i ton
+
+Završeci su epilozi priče, kao kraj poglavlja u knjizi, a ne rešenje testa. Poslednja scena svakog kraja zatvara priču mirnom, konkretnom slikom ili ostavlja polaznu tačku za nastavak (dolazak, vrata, poruka, put, otvoreno pitanje u svetu). Nijedan tekst, ni uvod, ni opis, ni naracija, ni pitanja, ni završeci, ne komentariše izbore čitaoca kao ispravne, pogrešne, dobre, loše, označene ili preporučene, i ne kaže da su „odluke tvoje“. Nema ekrana sa rezultatom, ocenom ili zbirom izbora, i nijedan kraj ne imenuje izbor ni osu. Završni pasus je običan pasus priče (`t`, `tf` gde treba, `lead`), kratak (2–4 rečenice), bez objašnjenja smisla priče.

@@ -5,12 +5,21 @@
     "description": [
       "Na planeti Tandem nikada nije noć. Dva sunca stoje na nebu, svaka stvar baca po dve senke, a nijedan stanovnik nikada nije morao da odluči šta će sledeće da uradi.",
       "Na tu planetu padaš ti, bez ičega osim napuklog vizira i želje da preživiš.",
-      "Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu. Nijedna nije označena kao ispravna, a retko će neka biti samo dobra ili samo loša."
+      "Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu."
     ],
     "axes": [
-      { "id": "b", "name": "bekstvo / preživljavanje" },
-      { "id": "s", "name": "slom sistema" },
-      { "id": "u", "name": "uklapanje" }
+      {
+        "id": "b",
+        "name": "bekstvo / preživljavanje"
+      },
+      {
+        "id": "s",
+        "name": "slom sistema"
+      },
+      {
+        "id": "u",
+        "name": "uklapanje"
+      }
     ]
   },
   "ui": {
@@ -18,7 +27,7 @@
     "finish": "Do kraja",
     "start": {
       "intro": [
-        "Na planeti Tandem nikada nije noć. Dva sunca stoje na nebu, svaka stvar baca po dve senke, a nijedan stanovnik nikada nije morao da odluči šta će sledeće da uradi. Na tu planetu padaš ti, bez ičega osim napuklog vizira i želje da preživiš. Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu. Nijedna nije označena kao ispravna, a retko će neka biti samo dobra ili samo loša."
+        "Na planeti Tandem nikada nije noć. Dva sunca stoje na nebu, svaka stvar baca po dve senke, a nijedan stanovnik nikada nije morao da odluči šta će sledeće da uradi. Na tu planetu padaš ti, bez ičega osim napuklog vizira i želje da preživiš. Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu."
       ],
       "begin": "Počni",
       "continue": "Nastavi gde si stao",
@@ -388,7 +397,9 @@
         {
           "t": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušli. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu.",
           "lead": "Niska kuća koja miriše na so i mleko.",
-          "with": ["Dalja"],
+          "with": [
+            "Dalja"
+          ],
           "tf": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušle. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu."
         },
         {
@@ -1433,6 +1444,11 @@
           "tf": "Prevoznik se podigao iznad atmosfere i ušao u mir. Na konzoli su se pojavila tri reda, uredno poređana, bez objašnjenja. Nisi ih čitala. Dugo si gledala u njih, i oni su gledali u tebe."
         },
         {
+          "t": "Pod sedištem si napipao zavežljaj koji ti je neko ubacio pred polazak: hleb, so i komad tkanine. Nisi ga otvarao, samo si ga stavio pod glavu. Mirisao je na zemlju koju si ostavio.",
+          "lead": "Zavežljaj pod sedištem.",
+          "tf": "Pod sedištem si napipala zavežljaj koji ti je neko ubacio pred polazak: hleb, so i komad tkanine. Nisi ga otvarala, samo si ga stavila pod glavu. Mirisao je na zemlju koju si ostavila."
+        },
+        {
           "t": "Zatim si ugasio ekran, ispružio noge i zatvorio oči. Prvi put posle sedam dana zaspao si ne znajući koliko dugo ćeš spavati.",
           "lead": "Prvi put posle sedam dana, san.",
           "tf": "Zatim si ugasila ekran, ispružila noge i zatvorila oči. Prvi put posle sedam dana zaspala si ne znajući koliko dugo ćeš spavati."
@@ -1516,6 +1532,10 @@
         {
           "t": "Niko nije znao šta je sledeće. To je bio prvi sat. Bilo je još mnogo sati, i nijedan nije bio unapred napisan.",
           "lead": "I jedna rečenica o prvom satu."
+        },
+        {
+          "t": "Pred veče se na putu koji vodi iz grada pojavio stub prašine. Neko je rekao da su to trgovci iz sledećeg naselja, neko da nisu. Ljudi su stajali i čekali da vide ko dolazi, i prvi put nisu znali šta će mu reći.",
+          "lead": "Prašina na putu."
         }
       ],
       "end": "s"
@@ -1582,11 +1602,15 @@
           "t": "„Ono što bih i sam izabrao“, rekao si. Nisi lagao. Pokušao si da se setiš kad si poslednji put poželeo nešto što ti nije bilo ponuđeno, i nisi mogao. Nije ti smetalo.",
           "lead": "Tvoj odgovor nije bio laž.",
           "who": "Ti",
-          "tf": "„Ono što bih i sama izabrala“, rekla si. Nisi lagao. Pokušala si da se setiš kad si poslednji put poželela nešto što ti nije bilo ponuđeno, i nisi mogla. Nije ti smetalo."
+          "tf": "„Ono što bih i sama izabrala“, rekla si. Nisi lagala. Pokušala si da se setiš kad si poslednji put poželela nešto što ti nije bilo ponuđeno, i nisi mogla. Nije ti smetalo."
         },
         {
           "t": "Oči su ti bile iste kao i oči svih. Mirne, prisutne, i pomalo daleke. Dva sunca stajala su nad tobom, a pod njima, kao i pod svakim, bile su dve senke, jedna ćilibarska, jedna plavkasta, ukrštene kao makaze.",
           "lead": "Oči su ti postale kao oči svih."
+        },
+        {
+          "t": "Na trgu se, jedan po jedan, otvorio red ispred izvora. Niko nije žurio. Voda je tekla kraj kamena, topla i hladna, ni brža ni sporija nego juče.",
+          "lead": "Red ispred izvora."
         },
         {
           "t": "U uglu ti se pojavio novi red. Ponuđeno ti je da se setiš kako si došao.",
@@ -2014,14 +2038,32 @@
     }
   },
   "characters": {
-    "Orsa": { "img": "orsa" },
-    "Tehan": { "img": "tehan" },
-    "Veles": { "img": "veles" },
-    "Dalja": { "img": "dalja" },
-    "Iva": { "img": "iva" },
-    "Dara": { "img": "dara" },
-    "Marta": { "img": "marta" },
-    "__reader__": { "who": "Ti", "imgM": "citalac-m", "imgF": "citalac-z" }
+    "Orsa": {
+      "img": "orsa"
+    },
+    "Tehan": {
+      "img": "tehan"
+    },
+    "Veles": {
+      "img": "veles"
+    },
+    "Dalja": {
+      "img": "dalja"
+    },
+    "Iva": {
+      "img": "iva"
+    },
+    "Dara": {
+      "img": "dara"
+    },
+    "Marta": {
+      "img": "marta"
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
   },
   "images": {
     "orsa": {
