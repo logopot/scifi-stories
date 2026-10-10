@@ -26,6 +26,17 @@ export const stories = [
     status: 'ready',
     load: () => import('./poslednja-mera/story.json'),
   },
+  {
+    slug: 'tri-i-deset',
+    title: 'Tri i deset',
+    tagline: 'U planinskom gradu noćna smena čeka oblak otpada, a mašina već ima plan.',
+    genre: 'Naučna fantastika',
+    minutes: 20,
+    cover: 'img/tri-i-deset/cover.jpg',
+    coverAlt: 'Stub: toranj sa antenama iznad planinskog grada i Obruča u noći',
+    status: 'ready',
+    load: () => import('./tri-i-deset/story.json'),
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
   {
     slug: 'tihi-sat',

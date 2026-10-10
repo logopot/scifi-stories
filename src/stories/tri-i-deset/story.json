@@ -1,0 +1,1239 @@
+{
+  "meta": {
+    "title": "Tri i deset",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Prevoj je planinski grad iznad koga se ne vidi ništa osim neba. Odozgo ga drži Stub, toranj sa antenama, a nebom iznad njega upravlja Obruč: hiljade mašina koje nose poštu, struju, naredbe i vesti.",
+      "Večeras si na Stubu ti, sa pečatom Uprave i jednom noći do jutra. Oblak otpada iz razbijene stanice stiže u tri i deset, a ljudska smena i mašina po imenu Sova imaju različite planove.",
+      "Pred tobom su ljudi koji rade, ljudi koji čekaju i jedna mašina koja ne spava. Priča traje oko dvadeset minuta i ima tri kraja."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "etika"
+      },
+      {
+        "id": "t",
+        "name": "tehnološki napredak"
+      },
+      {
+        "id": "o",
+        "name": "opstanak"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "Prevoj je planinski grad, a nad njim stoji Stub, toranj sa antenama. Na njegovom vrhu radi poslednja ljudska smena. Ti stižeš u 22:40 sa pečatom Uprave i jednim zadatkom, a oblak otpada prelazi nebo iznad grada u tri i deset."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi čitanje",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 20 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Priča ima tri kraja.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Stub"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Noć"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Tri i deset"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Jutro"
+    }
+  },
+  "start": "kapija",
+  "endings": {
+    "e": {
+      "title": "Ruke na pultu",
+      "closing": [
+        "Grad se budi sporije nego inače, i svi hodaju pažljivo, kao po tek opranom podu.",
+        "Na tornju, pored osam ekrana, neko je postavio devetu stolicu."
+      ]
+    },
+    "t": {
+      "title": "Mašina koja ne spava",
+      "closing": [
+        "Grad spava mirno, i niko ne zna da li je to mir ili navika.",
+        "Na tornju svetli samo jedan ekran, a stolice oko pulta stoje jedna do druge, naslonjene ukoso."
+      ]
+    },
+    "o": {
+      "title": "Nebo bez Obruča",
+      "closing": [
+        "Nebo iznad grada je prazno i duboko, kakvo ga niko iz grada dugo nije video.",
+        "Zvezde se vide jasno, deca ih broje naglas, greše i počinju ispočetka."
+      ]
+    }
+  },
+  "nodes": {
+    "kapija": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "stub",
+      "paragraphs": [
+        {
+          "t": "Sirena na Stubu zavija već treći put kad stižeš do kapije. Vetar nosi prašinu sa prevoja, a ispod tornja svetle prozori celog grada, kao da je neko zaboravio da ih ugasi. Čuvar ti uzima pečat, prinosi ga skeneru i ne gleda te dok ekran ne zasvetli zeleno. Iznad kapije visi tabla sa spiskom smena: sedam imena u poslednjem redu, svako pisano drugom rukom, i sva preko starijih, izbrisanih imena. Tvoje cipele zvone po gvozdenom podu predvorja, i taj zvuk je jedini koji nije prigušen ni vunom ni strahom. Na zidu pored tebe stoji ispisano krupnim slovima: „Čuvaj nebo.“ Neko je ispod toga sitnijim rukopisom dodao: „Nebo ne čuva nikoga.“",
+          "lead": "Sirena iznad kapije."
+        },
+        {
+          "t": "Žena u vunenom prsluku, sa sivom pletenicom i naočarima na vrpci oko vrata, silazi ti u susret niz gvozdene stepenice. Ne pruža ruku. Pruža ti kacigu sa slušalicama, i dok je uzimaš, već hoda ispred tebe, brzo, kao neko ko svaku sekundu broji unazad. Iz zvučnika u hodniku dopire ista rečenica, glasom bez lica: „Nivo upozorenja: povišen.“ Na manžetni nosi sitno ušiveno slovo S, izbledelo od pranja. U njenom hodu nema ni trunke uzbuđenja, samo ubrzanje nekoga ko se boji da ne zakasni. Pitaš se da li ti uopšte govori, ili samo izgovara na glas ono što već danima ponavlja u sebi.",
+          "lead": "Žena sa pletenicom na stepenicama.",
+          "img": "stana"
+        },
+        {
+          "t": "„Stana. Vodim noćnu smenu. Oblak otpada iz razbijene stanice prelazi naš deo neba u tri i deset, a sada je skoro jedanaest uveče. Mašina Sova ima svoj plan, ja imam svoj, a ti imaš pečat Uprave i pravo da kažeš čiji će važiti. Nemoj da mi odgovaraš odmah. Prvo vidi ono što ja vidim.“ Dok govori, ne gleda te, nego prstom prati liniju na ekranu pored vrata, kao da joj je to jedino na šta može da se osloni.",
+          "lead": "Dva plana u jednoj rečenici.",
+          "who": "Stana"
+        }
+      ],
+      "prompt": "Stana te vodi niz hodnik, a na velikom ekranu iza stakla Roj već treperi kao beo prsten. Kuda prvo?",
+      "choices": [
+        {
+          "id": "k_pult",
+          "text": "Ideš sa Stanom na ručni pult, gde sedi noćna smena.",
+          "next": "sala",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_sova",
+          "text": "Tražiš da prvo vidiš Sovin plan.",
+          "next": "sala",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "k_baterije",
+          "text": "Pitaš gde su rezervne baterije i izlazi, pre svega ostalog.",
+          "next": "sala",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "sala": {
+      "chapter": "c1",
+      "img": "sala",
+      "paragraphs": [
+        {
+          "t": "Pult noćne smene je dugačak sto sa osam malih ekrana i sa više hladnih šolja nego ljudi. Mladi ljudi sede pogrbljeni, sa slušalicama oko vrata, i niko ne podiže pogled kad ulaziš. Svi drže prst iznad tastera, ne dodirujući ga, kao da čekaju da im neko dozvoli da pritisnu. Neko u uglu jede hleb iz papira, polako, da ne pravi buku. Ispod ekrana žmirka zeleno svetlo, za koje niko ne zna čemu služi.",
+          "lead": "Pult sa osam ekrana.",
+          "if": {
+            "pick": "k_pult"
+          }
+        },
+        {
+          "t": "Stana ne kaže ništa i vodi te u salu sa velikim zidnim ekranom, jer prvo tražiš Sovin plan. Oblak otpada na ekranu liči na bledu zvezdu od tačaka, a oko njega rastu zelene linije putanja, uredne kao crtež u školskoj svesci. Sve izgleda tako smireno da ti se čini kako je nešto već završeno, i da ovo samo gledaš. U uglu ekrana, sitnim slovima, stoji vreme do prvog dodira: dva sata i dvadeset minuta.",
+          "lead": "Zid na kome se Roj računa.",
+          "if": {
+            "pick": "k_sova"
+          }
+        },
+        {
+          "t": "Tražiš rezervne baterije, pa te Stana vodi niz uski stepenik u podrum tornja. Baterije stoje u dugim redovima, svaka sa pločicom i datumom, i miriše na toplu plastiku i ulje. Između redova čuči čovek sa obrijanom glavom i opekotinom na podlaktici, broji nešto na prste i mrmlja. Kad te ugleda, ustaje, briše ruke o kombinezon i izvodi te napolje, jer sala je gore. U hodniku iza vas neko ponavlja jednu istu reč, „rezerva“, kao molitvu.",
+          "lead": "Podrum pun baterija.",
+          "if": {
+            "pick": "k_baterije"
+          }
+        },
+        {
+          "t": "Na zidu iznad pulta stoji veliki ekran: Roj klizi po njemu kao tamna pega, široka kao dva grada. Svaka mašina Obruča na njegovoj putanji mora da se pomeri. Mašine to umeju same, ali za to im treba hladnjača, a hladnjača pije vodu iz istog rezervoara iz koga pije grad. Voda koja ode na hlađenje ne završava u kućama. Na tabli pored njega neko je kredom napisao: „Ne dirati ništa što ne razumeš.“ Ispod toga je neko drugi dopisao: „Ni Sovu.“ Mala crvena brojka u donjem uglu menja se svake sekunde, i svi u prostoriji prestaju da je gledaju, jer boli.",
+          "lead": "Roj na velikom ekranu."
+        },
+        {
+          "t": "„Ognjen, iz kompanije“, kaže mladić u sivoj flis jakni, sa dugmetom na reveru i slušalicom u uhu. „Sova će sve uraditi sama, za četrdeset sekundi. Treba joj hladnjača i struja celog grada do jutra, a rezervoar će pasti na trećinu. Ja to zovem cena noći. Dopis o smeni imam sa sobom, ali ništa ne mora da se potpiše večeras.“ Dok govori, vrti oko prsta tanki kabl od slušalica, kao dete koje se dosađuje na času, iako mu je sve drugo pre nego dosadno. Iza njega, u staklu, odražava se ceo pult sa devojkom koja ga gleda kao nešto što bi radije da ne vidi.",
+          "lead": "Mladić sa dugmetom kompanije.",
+          "who": "Ognjen",
+          "img": "ognjen"
+        }
+      ],
+      "prompt": "Roj je na ekranu, Ognjen čeka, Stana čeka. Gde ideš dok još ima vremena?",
+      "choices": [
+        {
+          "id": "s_pult",
+          "text": "Silaziš na pult, da vidiš šta smena može rukama.",
+          "next": "noc1",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "s_predlog",
+          "text": "Ostaješ uz Ognjena da pročitaš Sovin plan do kraja.",
+          "next": "noc1",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "s_pumpa",
+          "text": "Ideš do pumpne stanice grada, da vidiš šta bi grad ostao bez.",
+          "next": "noc1",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "noc1": {
+      "chapter": "c2",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Devojka sa slušalicama oko vrata skače sa stolice čim joj priđeš. Ima kratku svetlu kosu sa tamnim korenom, srebrno dugme u nosu i nokte izgrizene do kože. Iza nje, na osam malih ekrana, svetli osam malih Roja, svaki iz drugog ugla, i smena ih gleda kao osam prozora na istu oluju. Niko ne diše glasno. Pored njene šolje stoji slagalica od metalnih delova, koju okreće u prstima kad joj se ruke tresu.",
+          "lead": "Devojka koja skače sa stolice.",
+          "if": {
+            "pick": "s_pult"
+          },
+          "img": "lena"
+        },
+        {
+          "t": "Ognjen te vodi u staklenu sobu iznad sale, gde Sova ima ekran i stolicu koju niko ne koristi, kao da je mesto zadržano za nekoga ko tek treba da dođe. Na zidu stoji uramljen dopis kompanije o zatvaranju noćne smene, sa praznim mestom za pečat. Ognjen ga gleda, pa tebe, pa ponovo dopis, i prvi put izgleda kao neko ko nije spavao ni u utorak. Kroz staklo se vidi cela sala, i svi u njoj izgledaju malo, kao figure na maketi koju je neko ostavio nedovršenu.",
+          "lead": "Staklena soba iznad sale.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "Pumpna stanica stoji na rubu grada i huči kao veliki, miran stomak. U betonskom koritu ledena voda sa planine kruži pre nego što ode u cevi grada, a deo nje ide uz toranj, do hladnjače, kroz debelu cev sa crvenom oznakom. Vazduh je vlažan, jedini vlažan vazduh u gradu, i miriše na mokar kamen. Radnik na ulazu mrmlja u slušalicu i ne pita te ništa. Na zidu visi list papira sa desetak potpisa i jednim zacrtanim krugom, kojim je neko označio nešto što nikome nije rekao.",
+          "lead": "Pumpa na rubu grada.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "„Lena. Pripravnica, tako mi piše na tabli, iako sam ovde već mesec dana. Sova je savršena u svemu osim u iznenađenjima. Mi nismo savršeni, ali pogađamo. Daj mi dvanaest mašina i oblak neće dotaći nijednu. Ne tražim da mi veruješ, {voc}. Tražim da me pustiš da pokažem.“ Dok govori, zaboravlja da diše, pa joj poslednja rečenica izlazi kao uzdah.",
+          "lead": "Devojka koja traži dvanaest mašina.",
+          "who": "Lena",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "„Nije to ništa lično“, kaže Ognjen. „Sova je samo mnogo brža. Ne umara se, ne boji se, ne traži povišicu. A ovi mladi ljudi dole su dobri ljudi koje niko nigde ne zapošljava. Volim što su ovde. Ne volim što je to jedino mesto koje su našli.“ Pokazuje rukom ka dopisu, a ruka mu se malo trese, kao da su i ti redovi nekome teški.",
+          "lead": "Ognjen i dopis na zidu.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "Žena u beloj kecelji i brašnjavih ruku stoji kraj vodomera i gleda kazaljku. Zora vodi jedinu pekaru u gradu i ovde dolazi kad ne može da spava. Kazaljka stoji nisko, niže nego što je navikla, i ona je dodiruje noktom, kao da će se tako pomeriti. Pored nje, na betonskoj ivici, stoji ceo red praznih tegli, sređenih po veličini, jer, kako objašnjava, tako joj je lakše da misli.",
+          "lead": "Žena koja gleda kazaljku.",
+          "if": {
+            "pick": "s_pumpa"
+          },
+          "img": "zora"
+        },
+        {
+          "t": "„Ne obećava Lena džabe“, kaže Jovo, čovek sa obrijanom glavom i opekotinom na podlaktici. „Ali dvanaest mašina je mnogo za jedan par ruku. Ako radimo zajedno, može i više, samo što mi nismo navikli da nas neko pita. Ovi ljudi nisu spavali od ponedeljka. A Sova ne zna šta je ponedeljak.“ Posle poslednje rečenice udara dlanom o sto, ne jako, ali dovoljno da se šolje zatrešu. Niko se ne trza.",
+          "lead": "Jovo i opekotina na podlaktici.",
+          "who": "Jovo",
+          "img": "jovo",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "„Dobro veče. Predlog: preuzimam sve mašine u prolazu Roja. Potrebno: hladnjača, struja grada, rezervoar do jedne trećine. Vreme izvršenja: četrdeset sekundi. Napomena: ljudska smena nije potrebna za izvršenje. Pitanje čeka potvrdu.“ Ekran ispod rečenica ostaje čist. Sova ne dodaje ništa što niko nije pitao.",
+          "lead": "Mašina koja čeka potvrdu.",
+          "who": "Sova",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "„Sova kaže da je to samo jedna noć“, kaže Zora. „To sam čula i prošle zime, kad su širili hladnjaču. Voda je otišla za noć, a vratila se tek za nedelju. Moje testo ne razume ni jedno ni drugo. Ono samo traži vodu, ili ne raste. Nemoj da me gledaš kao da imam odgovor. Imam samo kvasac.“ Ispija gutljaj vode iz teglice koju drži u ruci i odmah pravi grimasu, kao da pije tuđu vodu.",
+          "lead": "Voda koja ode za noć.",
+          "who": "Zora",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        }
+      ],
+      "prompt": "Ljudi oko tebe čekaju tvoju reč, a Roj klizi ka gradu. Šta kažeš?",
+      "choices": [
+        {
+          "id": "a_e",
+          "text": "Kažeš svima prisutnima šta znaš o Roju i o vodi, i pitaš ih šta predlažu.",
+          "next": "poruka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "a_t",
+          "text": "Poveravaš računanje Sovi, a ljudima ostavljaš da je prate.",
+          "next": "poruka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "a_o",
+          "text": "Tražiš da se prvo obezbedi ono što grad već ima: baterije, voda, sklonište.",
+          "next": "poruka",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "poruka": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "Pečat u džepu zavibrira tri puta, kratko, kao da te neko dodiruje po ramenu. Na ekranu stoji poruka Uprave, bez pozdrava: „Obruč zatvara prozor za manevre u 02:45. Posle toga mašine na putanji Roja ne mogu da se pomere ni ručno ni automatski. Potvrdi prijem.“ Negde ispod tebe zatvaraju se vrata, jedna za drugim, kao da je i toranj pročitao poruku. Ekran Uprave ne trepće, ne izvinjava se i ne pita da li možeš. On samo odbrojava, ispod poruke, minut po minut, kao da je u tome njegova jedina dužnost.",
+          "lead": "Pečat vibrira tri puta."
+        },
+        {
+          "t": "Stana čita poruku preko tvog ramena. Ne psuje i ne diže glas. Samo skida naočare sa vrpce i briše ih rukavom, što je, shvataš, njen način da gubi živce. „Dva sata manje“, kaže. „Moji ljudi neće moći da uče u hodu. Moraju da znaju unapred.“ Pa se okreće ka pultu i počinje da ih budi, jednog po jednog. Dok se udaljava, čuješ kako po hodniku šapuće imena, kao neko ko prebrojava decu pred polazak.",
+          "lead": "Stana briše naočare.",
+          "if": {
+            "pick": "a_e"
+          }
+        },
+        {
+          "t": "Ognjen čita poruku sa svog ekrana i klima glavom, kao neko ko je to očekivao. „Odluka mora da padne pre dva i četrdeset pet“, kaže. „Sova bi volela da zna već sada. Ne zato što se plaši. Zato što joj je tako lakše da računa.“ Ne gleda te dok govori, jer zna da bi ga to pokolebalo. Pod rukom drži tablu kompanije sa spiskom, i vidi se da je jedan red prekrižio olovkom, pa ga ponovo prepisao.",
+          "lead": "Ognjen i poruka sa ekrana.",
+          "if": {
+            "pick": "a_t"
+          }
+        },
+        {
+          "t": "Jovo, čovek sa opekotinom na podlaktici, čita poruku i polako zatvara poklopac ormana pored sebe. „Ako se prozor zatvori, a mi ostanemo u putanji, nećemo imati ništa osim baterija“, kaže. „Zato ih brojim od sedam uveče. Nisam sujeveran. Samo volim da znam gde je rezerva.“ Pokazuje ti prstom broj ispisan kredom na zidu. Pa se kratko smeje, kao čovek koji zna da šala ništa ne menja, ali se nada da bi mogla.",
+          "lead": "Jovo i broj na zidu.",
+          "if": {
+            "pick": "a_o"
+          }
+        },
+        {
+          "t": "„Uprava čeka odgovor“, kaže Stana. „Reci šta da im pišem.“ Prvi put ne zvuči kao zapovest, nego kao molba da neko drugi preuzme. Iza nje se čuje kako neko u sali ispušta šolju, pa je hvata pre nego što pukne.",
+          "lead": "Uprava čeka odgovor.",
+          "who": "Stana"
+        }
+      ],
+      "prompt": "Poruka Uprave stoji na ekranu. Šta odgovaraš?",
+      "choices": [
+        {
+          "id": "u_e",
+          "text": "Pišeš da će smena voditi mašine rukom i tražiš produženje prozora.",
+          "next": "terasa",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "u_t",
+          "text": "Potvrđuješ prozor i prepuštaš planiranje Sovi.",
+          "next": "terasa",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "u_o",
+          "text": "Tražiš da Uprava pripremi gašenje Obruča iznad grada.",
+          "next": "terasa",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "terasa": {
+      "chapter": "c2",
+      "img": "terasa",
+      "paragraphs": [
+        {
+          "t": "Posle ponoći izlaziš na terasu tornja. Grad ispod tebe svetli kao spuštena zvezdana kapa, sa po jednim žutim prozorom na svaku ulicu, a iznad njega Obruč je tanka, tiha linija koja se pomera preko neba. Hladno je, i vetar nosi miris metala. Odavde se vidi i krov pekare, sa dimom koji se diže ravno, kao da nikad nije čuo za vetar. Ispod ograde visi lanac sa žutom pločicom: „Zabranjen izlaz bez kacige.“ Niko je ne nosi. Ispod, na krovu pekare, neko je ostavio stolicu okrenutu ka nebu, kao da je cela ulica prisustvovala nečemu što se još nije dogodilo.",
+          "lead": "Terasa na vrhu tornja."
+        },
+        {
+          "t": "Lena izlazi za tobom, bez jakne, sa slušalicama oko vrata. Gleda u nebo kao u ekran koji joj duguje odgovor. „Vidiš onu tačku iznad grebena?“ pita. „To je Roj. Ti ga još ne vidiš, a meni je već u rukama.“ Pa dodaje, tiše, kao za sebe: „Tri kompanije su me odbile. Nijedna nije rekla zašto.“ Sa nje se još širi miris pregrejanih ploča i hladne kafe, a oči joj sjaje od nespavanja.",
+          "lead": "Lena u noći bez jakne.",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "Ognjen izlazi za tobom sa dve šolje čaja i pruža ti jednu. Svoju ispija u tri gutljaja, kao neko ko ne pije zbog ukusa. „Poslednji put sam spavao u utorak“, kaže. „Mi pravimo svet u kome niko ne mora da bdi. A evo, bdimo.“ Pita te nešto o rezervoaru, pa odustaje usred rečenice. Pogled mu se zadržava na tvom pečatu, a onda se skreće ka gradu ispod, kao da poredi dve vrednosti koje ne pišu na istoj skali.",
+          "lead": "Ognjen sa dve šolje čaja.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "Zora se penje za tobom sa vrećom kvasca u naručju i staje uz ogradu terase, mala pored tornja. Pokazuje krovove ispod. „Svaka kuća ima po jedno okno koje svetli“, kaže, „sve ostalo je ugašeno da se štedi. Sova to ne vidi. Sova vidi samo brojeve.“ Njena senka se proteže do kraja terase i dalje. Pod rukom drži vrećicu kvasca kao da je beba, i ne pušta je čak ni kad vetar zasvira kroz ogradu.",
+          "lead": "Zora uz ogradu terase.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "„Uprava je produžila prozor za deset minuta“, kaže Stana, ne okrećući se. „Deset. Uzimam.“ Pa tiše: „Ako grad ne dobije upozorenje, ujutru će pitati zašto nije. Ako dobije, nećemo moći da ga smirimo. Sirena je u mojoj ruci, ekrani po kućama su u Sovinoj, a gašenje svetala je kod tebe, ako ga želiš.“ Okreće se tek na kraju, i vidiš da je umorna do kostiju, ali da još drži leđa uspravno.",
+          "lead": "Stana i sirena.",
+          "who": "Stana",
+          "if": {
+            "pick": "u_e"
+          }
+        },
+        {
+          "t": "„Prozor je potvrđen“, kaže Stana, ne okrećući se. „Sova već računa.“ Pa tiše: „Ako grad ne dobije upozorenje, ujutru će pitati zašto nije. Ako dobije, nećemo moći da ga smirimo. Sirena je u mojoj ruci, ekrani po kućama su u Sovinoj, a gašenje svetala je kod tebe, ako ga želiš.“ Okreće se tek na kraju, i vidiš da je umorna do kostiju, ali da još drži leđa uspravno.",
+          "lead": "Stana i sirena.",
+          "who": "Stana",
+          "if": {
+            "pick": "u_t"
+          }
+        },
+        {
+          "t": "„Uprava priprema gašenje“, kaže Stana, ne okrećući se. „Treba im vreme, a vreme nam je ono što fali.“ Pa tiše: „Ako grad ne dobije upozorenje, ujutru će pitati zašto nije. Ako dobije, nećemo moći da ga smirimo. Sirena je u mojoj ruci, ekrani po kućama su u Sovinoj, a gašenje svetala je kod tebe, ako ga želiš.“ Okreće se tek na kraju, i vidiš da je umorna do kostiju, ali da još drži leđa uspravno.",
+          "lead": "Stana i sirena.",
+          "who": "Stana",
+          "if": {
+            "pick": "u_o"
+          }
+        }
+      ],
+      "prompt": "Grad spava, a Roj se približava. Šta radiš sa gradom?",
+      "choices": [
+        {
+          "id": "t_budis",
+          "text": "Pališ sirenu i budiš grad, da ljudi znaju šta se događa.",
+          "next": "noc2",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "t_ekran",
+          "text": "Puštaš Sovi da svima pošalje poruku na ekran u kući.",
+          "next": "noc2",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "t_tamno",
+          "text": "Naređuješ da se u gradu pogase svetla, a ljudi ostanu u kućama.",
+          "next": "noc2",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "noc2": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "Sirena se razliva preko grada, tri duga, tri kratka, i ljudi se prosipaju na ulice: u kaputima preko pidžama, sa decom na ramenima, neko sa konzervom u ruci, jer je to prvo što je dohvatio. Za nekoliko minuta trg je pun. Niko ne viče. Svi gledaju u toranj, a toranj gleda u njih svojim crvenim svetlom. Neko iz gomile izvlači telefon, pa ga vraća u džep, jer nema kome da javi.",
+          "lead": "Grad na trgu u pidžamama.",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "Poruka koju Sova šalje gradu stiže na svaki ekran u svakoj kuhinji: kratka, bez uzvičnika. Ti stojiš na krovu tornja, koji je ravan i pun antena, kao šuma bez lišća, a ispod tebe se pale prvi prozori, jedan po jedan, kao da neko pali sveće. Vetar zviždi kroz žice, a ispod nogu osećaš zujanje. Vazduh je tako hladan da ti se u grlu javlja ukus metala, a prste jedva osećaš.",
+          "lead": "Krov pun antena.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "Svetla se gase redom, ulicu po ulicu, dok nad trgom ne ostane samo mesec. Roletne škripe, vrata se zatvaraju, negde zaplače beba, pa utihne. Trg je prazan kao da se nikada nije koristio, a hladan vazduh miriše na dim iz dimnjaka. Dok silaziš niz stepenice tornja, čuješ sopstvene korake kao tuđe. Mesec baca senku tornja preko trga, dugu i oštru, koja pokriva skoro polovinu pločnika.",
+          "lead": "Grad u mraku.",
+          "if": {
+            "pick": "t_tamno"
+          }
+        },
+        {
+          "t": "„Reci nam samo jedno, {voc}“, kaže Zora, žena sa brašnom do lakata, i gomila oko nje utihne. „Hoće li ujutru biti vode, ili neće? Mi se ne plašimo Roja. Mi smo naučili da se plašimo kad nam neko sipa tišinu umesto odgovora.“ Iza nje čuje se kako neko tiho kaže „da“, pa još neko, pa još jedan glas, dok se tišina ne pretvori u šapat.",
+          "lead": "Pitanje Zore.",
+          "who": "Zora",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "„Veza sa Obručem nije mala stvar“, kaže Jovo, vadeći lampu iz zuba. Čuči kraj otvorenog razvodnog ormana, sa rukom u kablovima do lakta. „Sova je ima u glavi. Mi je imamo u prstima. Kad krene gust saobraćaj, ja mogu da vodim samo ono što vidim. Ostalo pada na nju. Pa neka je, kad može.“ Kad završi, briše čelo nadlanicom i ostavlja crnu mrlju od ulja. Ne primećuje je.",
+          "lead": "Jovo i veza u prstima.",
+          "who": "Jovo",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "Jedan prozor ipak svetli, žut i uzak, u pekari na uglu. Pekarka Zora stoji na pragu sa lampom u ruci i ne mrda. „Nisam mogla da zatvorim“, kaže. „Testo je počelo da diše.“ Pogledi vam se sreću preko prazne ulice. Ona ne spušta lampu, a ti ne tražiš da je spusti. Mrak oko nje deluje gušće nego bilo gde drugde u gradu. Iza nje, kroz uska vrata, vidi se ploča sa prvim hlebovima, ispod čiste krpe, kao ljudi pokriveni da im ne bude hladno.",
+          "lead": "Prozor u pekari.",
+          "if": {
+            "pick": "t_tamno"
+          }
+        },
+        {
+          "t": "Odavde, sa trga, vidiš dva puta. Jedan vodi uz stepenice tornja, gde se smena sprema, a drugi niz ulicu, do kuća u kojima ljudi čekaju vesti. Roj još nije stigao, ali osećaš kako ti vreme klizi kroz prste, hladno i tanko, kao voda iz pokvarene slavine. U daljini, iznad grebena, nebo je tamnije nego što bi trebalo, kao da je neko tu naslikao prvu liniju olovkom.",
+          "lead": "Dva puta sa trga.",
+          "if": {
+            "any": [
+              "t_budis",
+              "t_tamno"
+            ]
+          }
+        },
+        {
+          "t": "Lena sedi pored Jova, pognute glave, sa dlanovima na ploči za probu. Probni signal prolazi kroz Obruč i vraća se istog trena, bez greške. Ona se smeši, prvi put te noći, i vidi se da joj nije prijatno što se smeši. Jovo to primećuje i okreće glavu, kao da gleda kabl. Iznad njih zuji ventilator, i sa svakim krugom lopatica senka sa ploče se pomera preko njenog lica.",
+          "lead": "Lena i probni signal.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        }
+      ],
+      "prompt": "Oko tebe čekaju ljudi i mašine. Šta radiš?",
+      "choices": [
+        {
+          "id": "n_e",
+          "text": "Govoriš otvoreno sa onima koji su tu: šta znaš i šta ne znaš.",
+          "next": "ponuda",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "n_t",
+          "text": "Prepuštaš Sovi da odgovara na pitanja, a ti pratiš poruke.",
+          "next": "ponuda",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "n_o",
+          "text": "Zatvaraš sve što može da se zatvori i štitiš ono što grad ima.",
+          "next": "ponuda",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "ponuda": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "hodnik",
+      "paragraphs": [
+        {
+          "t": "U pola dva te Ognjen doziva iz hodnika. Stoji pored aparata za kafu koji više ne radi, sa dve prazne šolje u rukama, i izgleda kao neko ko je rešio da kaže nešto što nosi od ulaska. Hodnik miriše na hladan čaj i toplu plastiku. Odozgo dopire tihi, ravnomerni zvuk sale, kao disanje u snu. Zatvara vrata sale kolenom, da ne bi pustio zvuk, pa se naslanja na zid kao da ga drži celu noć. Na staklu aparata neko je prstom napisao reč „kasno“, a ispod nje je iscrtao mali, nemarni osmeh. Gleda u svoje cipele, pa u tvoje, i prvi put ne zna kako da počne.",
+          "lead": "Ognjen u hodniku."
+        },
+        {
+          "t": "„Čuo sam šta si rekao ljudima“, kaže Ognjen. „Ne zameram. Samo da znaš: kompanija bi zaposlila celu smenu, i devojku sa srebrnim dugmetom u nosu, Lenu, ako Stub večeras prepusti vođenje Sovi. Uče se na njima. To nije laž. Plata je dobra, uvek je dobra. Samo ih više niko ne bi zvao noću.“ Pomera težinu sa noge na nogu i ne gleda te dok ne završi, pa tek tada podiže pogled.",
+          "lead": "Ognjenova ponuda.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "n_e"
+          }
+        },
+        {
+          "t": "„Poruke su otišle kako treba“, kaže Ognjen. „Sova je zadovoljna, koliko to ume. Zato ti kažem unapred: kompanija bi zaposlila celu smenu, i devojku sa srebrnim dugmetom u nosu, Lenu, ako Stub večeras prepusti vođenje Sovi. Uče se na njima. To nije laž. Plata je dobra, uvek je dobra. Samo ih više niko ne bi zvao noću.“ Pomera težinu sa noge na nogu i ne gleda te dok ne završi, pa tek tada podiže pogled.",
+          "lead": "Ognjenova ponuda.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "n_t"
+          }
+        },
+        {
+          "t": "„Videli smo da zatvaraš sve što može da se zatvori“, kaže Ognjen. „Razumem. Zato ti dajem alternativu pre nego što zatvoriš i ovo: kompanija bi zaposlila celu smenu, i devojku sa srebrnim dugmetom u nosu, Lenu, ako Stub večeras prepusti vođenje Sovi. Uče se na njima. To nije laž. Plata je dobra, uvek je dobra. Samo ih više niko ne bi zvao noću.“ Pomera težinu sa noge na nogu i ne gleda te dok ne završi, pa tek tada podiže pogled.",
+          "lead": "Ognjenova ponuda.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "n_o"
+          }
+        },
+        {
+          "t": "Stana stoji na vratima, nije čula početak, ali čuje kraj. Ne ulazi u hodnik. „Plata nije isto što i mesto“, kaže, tiho, i ne gleda ni u Ognjena ni u tebe. „Ne tražim da odgovaraš sad. Tražim samo da imaš na umu da, kad kažu da je ljudima lakše, neko ipak ostaje bez posla.“ Ostaje na pragu, kao neko ko je naučen da ne ulazi tamo gde nije pozvan, čak ni u sopstveni toranj. Pogled joj se zadržava na šolji u Ognjenovoj ruci, na nečem sasvim običnom, kao da se i ona hvata za to.",
+          "lead": "Stana na vratima.",
+          "who": "Stana"
+        }
+      ],
+      "prompt": "Ognjen čeka odgovor, a Stana sluša sa vrata. Šta kažeš?",
+      "choices": [
+        {
+          "id": "o_e",
+          "text": "Tražiš da se ponuda pročita naglas celoj smeni.",
+          "next": "jedan",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "o_t",
+          "text": "Prihvataš ponudu u principu: smena uči Sovu, Sova vodi večeras.",
+          "next": "jedan",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "o_o",
+          "text": "Odbijaš sve dok oblak ne prođe.",
+          "next": "jedan",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "jedan": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "U dva manje dvadeset ekran na zidu postaje žut. Roj se raspada na dva oblaka, i drugi stiže ranije nego što je bilo izračunato. U salu se slivaju svi: devojka sa srebrnim dugmetom u nosu, Lena, čovek sa opekotinom na podlaktici, Jovo, ostatak smene, Ognjen sa slušalicom, čak i čuvar sa kapije. Stana stoji na vratima i broji ih pogledom. Hladnjača ispod poda prvi put te noći uključuje drugi motor, i čitav toranj zadrhti kao da se budi. Čuvar sa kapije skida kacigu i drži je na grudima, kao na ceremoniji kojoj ne zna naziv. Neko u gužvi ispušta termosicu, a zvuk kotrljanja po podu ne prestaje dok je ne zaustavi nečija čizma.",
+          "lead": "Žuti ekran."
+        },
+        {
+          "t": "„Ponuda je pročitana naglas, svi su čuli“, kaže Ognjen, tiho, kao neko ko se izvinjava. „Niko nije rekao ni da ni ne. Ali sada nam treba i hladnjača i struja. Ne ujutru, nego sada. Ako grad ostane bez vode, popraviće se. Ako izgubimo mašine, svet će kasniti sa poštom, lekovima i novcem celu nedelju.“ Pokazuje prstom na ekran, ali ne dodiruje staklo, kao da se plaši da ne pomeri brojeve.",
+          "lead": "Ognjen i dve cene.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "o_e"
+          }
+        },
+        {
+          "t": "„Smena uči Sovu, kako smo rekli“, kaže Ognjen, tiho, kao neko ko se izvinjava. „Ali sada nam treba i hladnjača i struja. Ne ujutru, nego sada. Ako grad ostane bez vode, popraviće se. Ako izgubimo mašine, svet će kasniti sa poštom, lekovima i novcem celu nedelju.“ Pokazuje prstom na ekran, ali ne dodiruje staklo, kao da se plaši da ne pomeri brojeve.",
+          "lead": "Ognjen i dve cene.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "o_t"
+          }
+        },
+        {
+          "t": "„Ponuda čeka do kraja noći, kako je rečeno“, kaže Ognjen, tiho, kao neko ko se izvinjava. „Ali sada nam treba i hladnjača i struja. Ne ujutru, nego sada. Ako grad ostane bez vode, popraviće se. Ako izgubimo mašine, svet će kasniti sa poštom, lekovima i novcem celu nedelju.“ Pokazuje prstom na ekran, ali ne dodiruje staklo, kao da se plaši da ne pomeri brojeve.",
+          "lead": "Ognjen i dve cene.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "o_o"
+          }
+        },
+        {
+          "t": "„Moji ljudi nikoga nisu zanimali dok nisu postali potrebni“, kaže Stana. „Sada su potrebni, i već se pita ko će ih sutra platiti. Ne tražim ništa za sebe. Tražim da ostane makar jedno mesto gde mladi ljudi uče nešto rukama.“ Oko nje je sala potpuno tiha, i čuje se samo disanje devetoro ljudi i zujanje hladnjače. Niko je ne prekida. Čak ni Ognjen, koji već otvara usta, pa ih zatvara.",
+          "lead": "Stana i smena koja je potrebna.",
+          "who": "Stana"
+        }
+      ],
+      "prompt": "Dva oblaka, jedna hladnjača i jedna smena. Šta radiš?",
+      "choices": [
+        {
+          "id": "j_podela",
+          "text": "Deliš zadatke: smena vodi bližu grupu mašina, Sova drugu.",
+          "next": "test",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "j_hladnjaca",
+          "text": "Daješ Sovi hladnjaču i pola struje grada, a smeni ostavljaš nadzor.",
+          "next": "test",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "j_zatamnjenje",
+          "text": "Naređuješ da se mašine u prolazu Roja ugase i prepuste putanji.",
+          "next": "test",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "test": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "Smena je već podeljena u dve grupe i svaka drži svoje mašine. Sova šapuće brojeve u slušalice, a prsti lete preko tastera. Lena stoji pored tebe, još bez zadatka, sa rukama prekrštenim na grudima, i čeka da se nešto oslobodi. Nad stolovima pluta miris užegle kafe i nečeg spaljenog, a nekome iza tebe pada slušalica na pod.",
+          "lead": "Lena koja čeka da se nešto oslobodi.",
+          "if": {
+            "pick": "j_podela"
+          }
+        },
+        {
+          "t": "Hladnjača buči ispod poda, svetla tamne i vraćaju se, a pumpa ispod grada šapuće. Lena stoji nasred sale sa rukama u džepovima, a smena oko nje ne zna šta da radi sa prstima. Linije putanja na zidu pomeraju se same, brže nego što možeš da ih pratiš. Iz zidova dopire tanak, gotovo muzički zvuk, kao kad neko prelazi prstom po rubu čaše.",
+          "lead": "Lena nasred sale.",
+          "if": {
+            "pick": "j_hladnjaca"
+          }
+        },
+        {
+          "t": "Ekrani na zidu gase se jedan po jedan, kao prozori u zgradi koja se prazni. Sala miriše na prašinu od hladnih mašina. Lena stoji nasred prostorije i gleda u mrtve tačke kao u napuštene sobe, a Sova šapuće da to nije u njenom planu, ali izvršava. Neko ostavlja šolju na stolu, i taj mali zvuk odzvanja kao da je pala kamena ploča.",
+          "lead": "Lena među ugašenim ekranima.",
+          "if": {
+            "pick": "j_zatamnjenje"
+          }
+        },
+        {
+          "t": "„Znam šta kažu o meni“, kaže Lena. „Pripravnica, bez ugovora, bez iskustva. Ali ja sam vodila mašine rukom trideset noći, a Sova ih je ovde vodila nula. Dozvoli mi jednu probu. Jednu mašinu, jednu putanju. Ako ne uspem, ne tražim više ništa.“ Spušta pogled ka svojim nokatima, grickanim do kože, pa ih sakriva u šake. Zatim podiže glavu i gleda pravo u tebe, i taj pogled nije molba, već pitanje koje traje.",
+          "lead": "Lena traži jednu probu.",
+          "who": "Lena"
+        },
+        {
+          "t": "„Ja stojim iza nje“, kaže Jovo, gledajući u pod. „Ne zato što je mlada, nego zato što je to jedini način da znamo šta znamo. Sova nikad nije probala da pogreši. Mi jesmo, i to nas je naučilo.“ Pa dodaje, kao nešto što nije hteo da kaže: „Žena misli da sam lud što ovde ostajem.“ Lena ga ne gleda, ali joj se ramena pomeraju, kao da je neko skinuo kamen sa njih. Jovo to ne vidi; i dalje gleda u pod, kao da tamo čita ono što ne može da izgovori.",
+          "lead": "Jovo staje iza nje.",
+          "who": "Jovo"
+        }
+      ],
+      "prompt": "Lena traži jednu probu. Šta joj odgovaraš?",
+      "choices": [
+        {
+          "id": "l_e",
+          "text": "Dozvoljavaš probu na jednoj mašini, uz celu smenu pored nje.",
+          "next": "dva",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "l_t",
+          "text": "Odbijaš probu: Sova ima ceo plan.",
+          "next": "dva",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "l_o",
+          "text": "Dozvoljavaš probu samo na najjeftinijoj mašini.",
+          "next": "dva",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "dva": {
+      "chapter": "c3",
+      "img": "pult",
+      "paragraphs": [
+        {
+          "t": "Lena sedi za pultom, a smena se okuplja oko nje u polukrug, kao oko vatre. Mašina se pomera pod njenim prstima i vraća na liniju, gotovo bez zakašnjenja. Neko tiho zviždi. Jovo prvi put te noći skida kapu i drži je u rukama. Neko donosi još jednu stolicu, neko drugi šolju kafe, i prostorija prvi put te noći zvuči kao da diše.",
+          "lead": "Smena oko Lene.",
+          "if": {
+            "pick": "l_e"
+          }
+        },
+        {
+          "t": "Lena ostaje da stoji, sa rukama u džepovima. Ne govori ništa, samo gleda u zid na kome Sova vodi mašine bez greške. Jovo joj prilazi, stavlja joj ruku na rame i vraća je za pult, da sedne. Ona sedi, ali ne dodiruje tastere. U njenom hodu, dok se vraća ka stolici, vidi se koliko je toga zadržala u sebi.",
+          "lead": "Lena koja ne dodiruje tastere.",
+          "if": {
+            "pick": "l_t"
+          }
+        },
+        {
+          "t": "Lena dobija jednu jedinu mašinu, najjeftiniju, onu koja služi za probe signala. Pomera je gde treba, pa je pomera ponovo, i još jednom, kao devojčica kojoj su dali samo jednu lutku, ali koja zna svaku njenu zakrpu. Niko ne govori. Jovo prati putanju prstom po ekranu. Kad završi, ne slavi, samo sklapa dlanove i gleda u njih, kao da proverava da li su njene.",
+          "lead": "Lena i jedna mašina.",
+          "if": {
+            "pick": "l_o"
+          }
+        },
+        {
+          "t": "Dve mašine se odvajaju od ostalih i klize ka oblaku, spore i tvrdoglave, kao ovce koje ne čuju pastira. Niko ne zna zašto. Stana stiska ivicu stola, Jovo psuje sebi u bradu, a Lena već diktira nove komande, sa noktom među zubima. Na zidu se odbrojava vreme do dodira, i niko ne gleda u broj, jer svi znaju koliko ostaje. Hladnjača ispod poda uzdiše i pojačava, a svetla u sali trepere u ritmu srca koje trči. Trepću belo, pa žuto, pa belo, i taj ritam liči na disanje onoga ko tek što je pobegao.",
+          "lead": "Dve mašine skreću ka Roju."
+        },
+        {
+          "t": "„Mogu da ih spasem. Potrebno: još jedanaest minuta hladnjače i dodatno pražnjenje rezervoara. Alternativa: pustiti ih. Napomena: voda koja se potroši ne vraća se pre sledeće kiše. Pitanje čeka odgovor.“ Stana prekida tišinu prva: „Ne odgovaraj odmah. Ali nemoj ni predugo.“ Na ekranu pored teksta svetli sitna, tanka linija, koja pokazuje koliko je rezervoara ostalo u gradu. Linija je kratka.",
+          "lead": "Sova nudi još jedanaest minuta.",
+          "who": "Sova"
+        }
+      ],
+      "prompt": "Dve mašine, jedanaest minuta i voda koja se ne vraća. Šta odgovaraš?",
+      "choices": [
+        {
+          "id": "d_ruke",
+          "text": "Pitaš Lenu i Jova da li mogu da ih spasu rukama, bez dodatne vode.",
+          "next": "odbor",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "d_jedanaest",
+          "text": "Daješ Sovi još jedanaest minuta hladnjače.",
+          "next": "odbor",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "d_pusti",
+          "text": "Puštaš obe mašine i čuvaš vodu za grad.",
+          "next": "odbor",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "odbor": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "Sova izvršava. Dve mašine skreću, linije putanja se izravnavaju, i ekran postaje zelen. Rezervoar grada pada za pola prsta, što se vidi samo na jednom ekranu, u pumpnoj stanici, na koji niko ne gleda. Ognjen izdiše. Stana ne. Jovo prelazi dlanom preko lica i ostavlja trag ulja na obrazu, kao ratnik. Ispod kože tornja prolazi tanak, dubok ton, kao da je ceo Stub izdahnuo u isto vreme.",
+          "lead": "Sova izvršava.",
+          "if": {
+            "pick": "d_jedanaest"
+          }
+        },
+        {
+          "t": "Lena i Jovo preuzimaju mašine, ona levom, on desnom rukom, a između njih Stana viče vreme na svakih deset sekundi. Jedna mašina se vraća na liniju. Druga ne. Gasi se tiho, bez eksplozije, kao sveća na promaji. Lena skida slušalice i ne govori ništa, a Jovo joj stavlja ruku na rame i ne skida je. Hladnjača ćuti, pumpa ćuti, i čuje se samo tiho kucanje tastera, kao kiša po limu.",
+          "lead": "Dve mašine u rukama.",
+          "if": {
+            "pick": "d_ruke"
+          }
+        },
+        {
+          "t": "Dve mašine nestaju u oblaku bez zvuka. Na ekranu ostaju dva bleda bljeska, pa ništa. Sova javlja gubitak jednim redom, bez reči žaljenja. Rezervoar ostaje tamo gde je. Ognjen stoji pored ekrana i gleda u pod, a Lena pritiska dlan na usta. Kroz prozor sale vidi se grad, spokojan, sa po jednim žutim prozorom na svaku ulicu.",
+          "lead": "Dva bleda bljeska.",
+          "if": {
+            "pick": "d_pusti"
+          }
+        },
+        {
+          "t": "Pet do tri. Roj se spušta kao crn prsten preko neba, a Stub drhti, prvi put te noći, kao životinja koja oseća oluju. Svako u sali okreće glavu ka tebi. Stana ne govori. Ognjen ne govori. Jovo ne govori. Čak i Sova čeka, sa kursorom koji trepće na ekranu, kao otkucaji koji se približavaju. Niko ne pomera pogled sa tebe, čak ni čuvar sa kapije koji stoji u uglu sa kacigom u rukama. Stana polako spušta ruku sa kaiša svoje slušalice, kao da joj više ne treba.",
+          "lead": "Pet do tri."
+        },
+        {
+          "t": "„Reci šta se dešava u tri i deset“, kaže Stana. „Pečat je kod tebe. Reci glasno, {voc}. Ovde nas čuju i oni koji ne razumeju.“ Njen glas je tih, ali svaka reč stiže do poslednjeg reda sale. Gleda te mirno, bez molbe, onim pogledom žene koja je videla mnogo noći pre ove.",
+          "lead": "Stana i pečat.",
+          "who": "Stana"
+        }
+      ],
+      "prompt": "Roj je iznad grada. Ko vodi mašine?",
+      "choices": [
+        {
+          "id": "od_smena",
+          "text": "Predaješ vođenje ljudima: smena vodi, Sova pomaže.",
+          "next": "odluka",
+          "w": {
+            "e": 3
+          }
+        },
+        {
+          "id": "od_sova",
+          "text": "Predaješ vođenje Sovi: ona vodi, smena prati.",
+          "next": "odluka",
+          "w": {
+            "t": 3
+          }
+        },
+        {
+          "id": "od_tama",
+          "text": "Gasiš prolaz: Obruč iznad grada se zatamnjuje do jutra, bez vođenja.",
+          "next": "odluka",
+          "w": {
+            "o": 3
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_cutanje",
+        "text": "— Ne govoriš ništa. Sala čeka.",
+        "next": "odluka",
+        "w": {
+          "t": 1
+        },
+        "after": 22
+      }
+    },
+    "odluka": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "U tri i deset ekran postaje bela kiša tačaka. Zvuk koji dopire iz sale nije zvuk mašina, nego devet ljudi koji istovremeno zadržavaju dah. Stub prestaje da drhti, kao da je i on odlučio da se ne pomeri. Negde u sali neko tiho moli, bez reči, samo dahom. Svi koji sede ostaju da sede, a svi koji stoje ostaju da stoje. Čak ni Ognjen ne diše glasno.",
+          "lead": "Tri i deset."
+        },
+        {
+          "t": "Posle toga se ništa ne čuje osim vetra na prevoju i prvih udaraca o ogradu terase: sitni komadi, tvrdi kao kamenčići. Pa prestaju. Ekran se vraća u tamu, a u toj tami se polako, tačku po tačku, pojavljuje nebo koje još postoji. Stub jednom kratko zaškripi, i dok se taj zvuk gubi, prvi put te noći osećaš kako ti se ramena spuštaju. Pa ipak niko ne ustaje, niko ne govori. Čeka se zvuk koji nema ime, i dolazi tek kad prođe prvi minut.",
+          "lead": "Šuštanje iznad tornja."
+        }
+      ],
+      "branch": [
+        {
+          "if": {
+            "lead": "e"
+          },
+          "next": "kraj_e1"
+        },
+        {
+          "if": {
+            "lead": "t"
+          },
+          "next": "kraj_t1"
+        },
+        {
+          "next": "kraj_o1"
+        }
+      ]
+    },
+    "kraj_e1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Svitanje počinje bez pobede i bez pobednika. Mašine iznad grada prolaze jedna za drugom, na ekranu pokazuju zeleno, pa žuto, pa opet zeleno. Smena sedi pogrbljena, ne verujući, a Stana prvi put te noći skida slušalice i stavlja ih na sto kao da su od stakla. Iz hodnika miriše na čaj, jer je neko, usred svega, stigao da ga skuva. Ispod prozora, na stepenicama, neko slaže prazne šolje jednu u drugu, jer nema šta drugo da radi rukama. Stana stoji kraj prozora i izgleda kao neko ko napokon ima vremena da gleda napolje.",
+          "lead": "Roj prolazi."
+        },
+        {
+          "t": "„Brojaćemo ih do podne“, kaže Jovo, trljajući oči. „Za sada znam samo da nijedna nije pala na grad. To nije mala razlika, samo je teško izgovoriti je glasno.“ Lena ga gleda, pa tebe, pa ekran, kao da bi da kaže nešto što ne ume da izgovori. Pa se kratko smeje, i taj smeh je prvi zvuk posle noći koji liči na život.",
+          "lead": "Jovo broji mašine.",
+          "who": "Jovo"
+        },
+        {
+          "t": "Dole, na trgu, ljudi ne odlaze. Čekaju jutro kao u čekaonici, sa čajem iz termosa i hlebom iz nečije torbe. Neko je doneo harmoniku, pa je spustio, jer ne zna šta se svira posle ovakve noći. Deca spavaju na ramenima. Neko je ispod stuba ostavio crvenu jaknu, i niko je ne diže. Na ivici trga stoji starica sa štapom i gleda u toranj, pa u nebo, pa opet u toranj, kao da ih poredi.",
+          "lead": "Trg koji čeka jutro.",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "Lena spava na pultu, sa slušalicama oko vrata. Na njenom ekranu jedna jedina mašina, ona koju je vratila rukama, i dalje trepće zeleno, kao nečiji puls. Jovo je pokriva svojom jaknom, pa se pravi da je baš tu zaboravio da je skine. Ispod laktova joj leži papir ispisan imenima mašina, jedno ispod drugog, kao spisak preživelih.",
+          "lead": "Lena na pultu.",
+          "if": {
+            "pick": "d_ruke"
+          }
+        },
+        {
+          "t": "Zora deli hleb na stepenicama tornja. Pravila ga je od manje vode, pa kaže da je gust kao opeka, ali svako uzima parče, i niko ne ostavlja ni mrvu. Smena je prvi put te noći jela. Jovo uzima parče, miriše ga i govori da je to prvi hleb u njegovom životu koji ima ukus noći.",
+          "lead": "Zora i gust hleb.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "Na pultu stoji sklopljen papir sa Leninim rukopisom: spisak mašina koje su te noći vođene rukom, sa vremenom i imenom onoga ko ih je vodio, uz svaku. Nijedno ime nije isto. Neko je u dnu dopisao sitnim slovima: „Ako treba, ponovo.“",
+          "lead": "Papir na pultu.",
+          "if": {
+            "pick": "l_e"
+          }
+        },
+        {
+          "t": "„Smena radi i sutra“, kaže Stana, stojeći u dovratku sa praznom šoljom. „To je sve što imam da kažem. Izveštaj piši kako hoćeš.“ Ne čeka odgovor. Za njom ostaje miris vunenog prsluka i hladnog čaja. Zastaje, kao da se premišlja, pa dodaje: „A ti dođi na čaj, kad budeš prolazio.“",
+          "lead": "Stana na vratima.",
+          "who": "Stana"
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Jutarnje svetlo se spušta niz planinu u dugim, žutim prugama, i grad prvi put posle dugo vremena izgleda kao grad, a ne kao rezervoar. Ljudi izlaze na ulice sa kantama i šoljama, nesigurno, kao posle dugog sna. Pekare otvaraju vrata, a hladnjača ćuti. U daljini, na ivici doline, čuje se kako prvi kamion kreće iz garaže. Na terasi tornja, gde je sinoć duvao vetar, sada sedi jedan galeb, ili nešto slično njemu, i ne zna šta traži tako visoko.",
+          "lead": "Grad izlazi na ulicu."
+        },
+        {
+          "t": "Ognjen sedi na donjem stepeniku tornja, sa dugmetom kompanije u šaci, i okreće ga među prstima. Nikoga ne gleda. „Poslaću izveštaj“, kaže. „Ne znam šta će u njemu pisati.“ Pa tiše: „Ni Sova to ne zna, a ona zna sve.“ Vetar mu pomera pramen kose preko čela, a on ga ne sklanja. Telefon mu zvoni u džepu, i on ga ne vadi. Pušta da zvoni dok ne utihne.",
+          "lead": "Ognjen sa dugmetom."
+        },
+        {
+          "t": "Na trgu se i dalje drži red pitanja koje je počelo sinoć. Neko tvrdi da zna koliko vode ima rezervoar, neko da zna ko je odlučivao, a žena sa korpom ćuti i deli hleb. Odgovori su različiti, ali svi stoje u istom redu. Neko je na zid napisao kredom prvu stavku spiska, a ispod nje ostavio mesto za još.",
+          "lead": "Red pitanja na trgu.",
+          "if": {
+            "pick": "n_e"
+          }
+        },
+        {
+          "t": "Pult noćne smene ima sada devet stolica. Neko ih je dovukao iz sale kad je svanulo, i niko ne zna ko. Na jednoj visi Lenina jakna. Jedna od njih je mala, dečja, i nikom nije jasno odakle je došla.",
+          "lead": "Devet stolica.",
+          "if": {
+            "pick": "a_e"
+          }
+        },
+        {
+          "t": "Oko devet, niz serpentinu iz doline stiže kamion sa oznakom Uprave, i vozač trubi dva puta. Nosi nov raspored smena, sa više praznih mesta nego imena. Stana ga čita stojeći, a pogled joj se zaustavlja na jednom retku, onom na dnu, gde nema ničega osim linije za potpis.",
+          "lead": "Kamion niz serpentinu."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Sova ne staje ni na trenutak. Hladnjača zaurla ispod tornja, svetla u sali ostaju upaljena, a linije putanja na zidu izravnavaju se jedna za drugom, bez ijedne greške. U tri i petnaest Roj je iza grebena, a nijedna mašina nije dotakla drugu. Sova javlja jedan red: „Izvršeno.“ Ne javlja ništa više. U sali se ne čuje ništa osim zujanja hladnjače, koje se ne prekida. Niko u sali ne dotiče tastere. Prsti smene leže na kolenima, tihi i beskorisni, kao rukavice ostavljene na klupi.",
+          "lead": "Roj iza grebena."
+        },
+        {
+          "t": "Niko ne aplaudira. Smena sedi sa rukama na kolenima, kao đaci čiji je ispit otkazan. Lena prva ustaje, uzima jaknu sa stolice i staje na vrata. „Ako me neko traži, biću napolju“, kaže, ne okrećući se. Jovo gleda za njom, pa se saginje i odvrće neki zavrtanj koji nikome ne treba. Stana ostaje za pultom, gleda u zid na kome Sova beleži svaki manevar sitnim zelenim slovima, i ne prekida tišinu.",
+          "lead": "Lena uzima jaknu."
+        },
+        {
+          "t": "Ognjen pušta zapis iz staklene sobe: Sova je plan pripremala još od večeri, mašinu po mašinu. „Zato je sada išlo tako glatko“, kaže tiho. Gleda u ekran dok govori, kao da je zapis neka vrsta molitve.",
+          "lead": "Zapis iz staklene sobe.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "Rezervoar grada pada za trećinu, kako je bilo najavljeno. Cevi ispod ulica šapuću celo prepodne, a pekare ostaju zatvorene do podne, jer nema čime da se mesi. Kroz prozor se vidi red ljudi sa kantama ispred pumpne stanice, strpljiv i tih, kao red u čekaonici.",
+          "lead": "Cevi koje šapuću.",
+          "if": {
+            "pick": "j_hladnjaca"
+          }
+        },
+        {
+          "t": "Na ekranima po kućama stoji poruka koju je Sova poslala još u ponoć: kratka, sa brojem litara i imenom svake ulice. Ljudi je čitaju stojeći, pa se vraćaju u krevet. Niko ne pita ko je poruku napisao. Iz jedne kuhinje dopire miris prženog luka, koji nikome ne smeta.",
+          "lead": "Poruka na kuhinjskim ekranima.",
+          "if": {
+            "pick": "n_t"
+          }
+        },
+        {
+          "t": "Ognjen skida uramljeni dopis sa zida sale, onaj sa praznim mestom za pečat, i savija ga na četvoro. Stavlja ga u džep jakne. Stana ga gleda dok izlazi, bez reči, onim istim pogledom kojim te je sinoć dočekala na stepenicama. Tamo gde je dopis visio ostaje svetliji pravougaonik na zidu, kao senka nečega što je tu dugo stajalo. Zatim izlazi u hodnik, i čuje se kako zastaje kod aparata za kafu, pa ide dalje.",
+          "lead": "Dopis koji nestaje sa zida."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Narednih nedelja, dok smena sve ređe dolazi, Sova svako veče šalje gradu izveštaj o vodi i struji. Poruke su kratke, sa brojevima koje niko ne proverava, jer nema ko da ih razume. Ljudi ih čitaju na kuhinjskim ekranima, uz kafu, kao vremensku prognozu. Prvih dana neko još pokušava da odgovori na poruke, pa odustaje, jer odgovora nema. Grad uči da živi sa tim glasom koji se javlja svake večeri u isto vreme, kao sa komšijom koga niko nije odabrao.",
+          "lead": "Sova piše gradu."
+        },
+        {
+          "t": "Pumpna stanica radi noću tiše nego ranije, i pekari više ne pitaju za nivo. Rezervoar se vraća na staru visinu tek u proleće, i niko to ne slavi. Radnik na ulazu, koji je nekad mrmljao u slušalicu, sada samo sedi, sa rukama na kolenima.",
+          "lead": "Pumpa koja šapuće.",
+          "if": {
+            "pick": "d_jedanaest"
+          }
+        },
+        {
+          "t": "Jovo ostaje na krovu najduže. Ponekad odvrće neki stari, pokvareni kontakt, samo da nešto radi rukama, pa ga ponovo navrće. Sova to ne prekida. Sova ne zna da li je to posao. U ormanu, pored kablova, i dalje stoji šolja koju je ostavio te noći.",
+          "lead": "Jovo na krovu.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "Lena dobija ponudu kompanije: da vodi probnu grupu mašina u drugom tornju, sa platom i ugovorom. U ponudi nema ni reči o smeni. Pismo stoji na pultu, otvoreno, već danima, i niko ga ne dira. Pored pisma leže slagalica od metalnih delova i slušalice, koje niko ne dotiče.",
+          "lead": "Pismo na pultu.",
+          "if": {
+            "pick": "o_t"
+          }
+        },
+        {
+          "t": "Jednog običnog jutra niz serpentinu stiže mladić sa torbom i pitanjem na usnama: ima li ovde posla za nekoga ko zna da vodi mašine rukom. Čuvar na kapiji ga gleda i ne zna šta da odgovori. Na tornju, iznad njih, Sova ćuti.",
+          "lead": "Mladić sa torbom na kapiji."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Obruč iznad grada se gasi do zore, mašinu po mašinu, kao prozori u zgradi koja se prazni, i nebo postaje samo nebo. Roj prolazi i nestaje, ne ostavljajući ništa osim jednog zvuka, suvog i kratkog, kao kad neko pod nogom lomi grančicu. Sala je tiha kao biblioteka. Svi čekaju jutro. Na ekranu se gase i poslednje zelene tačke, i na tom mestu ostaje samo tamno staklo sa tvojim odrazom. Stana sedi na podu, naslonjena leđima na zid pulta.",
+          "lead": "Nebo bez Obruča."
+        },
+        {
+          "t": "Struja u gradu ne treperi. Hladnjača je ugašena, pumpa radi kao uvek, a rezervoar stoji pun do ivice. Ognjen sedi u uglu sa slušalicom u ruci i sluša kako svet kasni: poruke, lekovi, narudžbine, sve čeka u redu koji niko ne vidi. Ispod tornja pumpa i dalje ravnomerno odbrojava vreme, kao da ništa nije drugačije. Niko u sali ne govori o poruci Uprave. Poruka stoji u džepu svakog, nepročitana, kao pismo koje niko ne želi da otvori prvi.",
+          "lead": "Ognjen i svet koji kasni."
+        },
+        {
+          "t": "Zora otvara pekaru u šest, kao i uvek, sa testom koje raste. Vodu za hleb uzima iz iste slavine kao juče. Prvi hleb ostavlja na pragu, za prvog ko prođe. Dim iz pekare diže se ravno, u mirno jutro, kao prst koji pokazuje na nebo bez Obruča.",
+          "lead": "Pekara u šest.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "Grad budi svoj mrak: roletne se podižu jedna po jedna, a ljudi izlaze na ulicu žmirkajući, kao da su spavali pod zemljom. Niko ne pita šta se desilo. Pitaju samo da li je sve u redu, i od svih dobijaju isti odgovor. Neko sa balkona viče pozdrav komšiji, prvi put posle dugo vremena, glasno, kao da proverava ima li još nekoga.",
+          "lead": "Roletne se podižu.",
+          "if": {
+            "pick": "t_tamno"
+          }
+        },
+        {
+          "t": "Na ekranu stoji jedan red: dve mašine nedostaju. Lena ga gleda pola sata, pa ga prekriva dlanom i ostaje tako, sa rukom na staklu, kao neko ko drži vrata zatvorena. Jovo prilazi, ne govori ništa, i stavlja pored nje šolju čaja.",
+          "lead": "Red na ekranu.",
+          "if": {
+            "pick": "d_pusti"
+          }
+        },
+        {
+          "t": "Stana skida kacigu i seda na stepenik. Prvi put te noći ne izgleda kao neko ko je spreman da skoči. „Mašine će se vratiti“, kaže, ne okrećući se. „Pitanje je samo kad će neko ponovo hteti da ih upali.“ Pogled joj se zadržava na gradu ispod, na žutim prozorima koji se gase jedan po jedan. Iz prozora duva hladan, čist vazduh, bez prašine i bez dima, kakav ovde nije bio mesecima.",
+          "lead": "Stana na stepeniku.",
+          "who": "Stana"
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Do podneva poruke počinju da stižu iz doline: kamioni kasne, lekovi dolaze dan posle roka, jedna fabrika traži pomoć. Grad svima odgovara isto: trenutno nema veze. Voda je tu, svetlo je tu, a Obruč ćuti. Prvi put se čuje sopstveni zvuk grada, bez mašina u pozadini. Druga fabrika šalje poruku od jednog reda: „Hladimo se vodom iz reke. Reka je presušila.“ Niko ne zna šta da odgovori. Na tornju zvoni telefon u praznoj kancelariji Uprave, jednom, dvaput, pa umire.",
+          "lead": "Dolina traži odgovor."
+        },
+        {
+          "t": "Jovo vodi tebe i dvojicu mladih u podrum, da prebrojite baterije koje su sinoć ostale u rezervi. Nijedna nije prazna. Jovo ih tapše redom, kao konje, i ne govori ništa. Ali se čuje kako broji. Hladan vazduh podruma miriše na ulje i prašinu, i na nešto drugo, što nikome ne treba objašnjavati.",
+          "lead": "Podrum sa baterijama.",
+          "if": {
+            "pick": "k_baterije"
+          }
+        },
+        {
+          "t": "Lena sedi pored ugašenog pulta i crta olovkom linije putanja po papiru. Zna ih napamet. Crta ih sve, jednu po jednu, pa ih precrtava, pa ih crta ponovo. Papir je već ispunjen do ivice, i ona okreće list da nastavi sa druge strane.",
+          "lead": "Lena i papir.",
+          "if": {
+            "pick": "j_zatamnjenje"
+          }
+        },
+        {
+          "t": "Na trgu je prazno, ali na svakom pragu stoji po jedna kanta, napunjena do pola. Neko ih je obišao kad su se svetla ugasila, i niko ne pita ko je to uradio. Vetar prelazi preko kamenih ploča i diže sitnu prašinu, koja se spušta tek na ivici trga.",
+          "lead": "Kante na pragovima.",
+          "if": {
+            "pick": "n_o"
+          }
+        },
+        {
+          "t": "Pred veče, na kapiji Stuba staje kamion bez oznaka. Vozač se ne spušta. Otvara prozor, pruža ruku sa pismom i čeka da neko dođe po njega. Čuvar gleda pismo, pa tebe, pa ponovo pismo.",
+          "lead": "Kamion bez oznaka."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "stana": {
+      "src": "img/tri-i-deset/stana.jpg",
+      "alt": "Stana",
+      "kind": "portrait",
+      "caption": "Stana"
+    },
+    "jovo": {
+      "src": "img/tri-i-deset/jovo.jpg",
+      "alt": "Jovo",
+      "kind": "portrait",
+      "caption": "Jovo"
+    },
+    "lena": {
+      "src": "img/tri-i-deset/lena.jpg",
+      "alt": "Lena",
+      "kind": "portrait",
+      "caption": "Lena"
+    },
+    "ognjen": {
+      "src": "img/tri-i-deset/ognjen.jpg",
+      "alt": "Ognjen",
+      "kind": "portrait",
+      "caption": "Ognjen"
+    },
+    "zora": {
+      "src": "img/tri-i-deset/zora.jpg",
+      "alt": "Zora",
+      "kind": "portrait",
+      "caption": "Zora"
+    },
+    "citalac-m": {
+      "src": "img/tri-i-deset/citalac-m.jpg",
+      "alt": "Ti",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "citalac-z": {
+      "src": "img/tri-i-deset/citalac-z.jpg",
+      "alt": "Ti",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "stub": {
+      "src": "img/tri-i-deset/stub.jpg",
+      "alt": "Stub: toranj sa antenama iznad planinskog grada",
+      "kind": "place"
+    },
+    "sala": {
+      "src": "img/tri-i-deset/sala.jpg",
+      "alt": "Sala sa velikim zidnim ekranom i pultom noćne smene",
+      "kind": "place"
+    },
+    "terasa": {
+      "src": "img/tri-i-deset/terasa.jpg",
+      "alt": "Terasa tornja iznad grada i Obruča",
+      "kind": "place"
+    },
+    "hodnik": {
+      "src": "img/tri-i-deset/hodnik.jpg",
+      "alt": "Hodnik tornja sa pokvarenim aparatom za kafu",
+      "kind": "place"
+    },
+    "pult": {
+      "src": "img/tri-i-deset/pult.jpg",
+      "alt": "Ručni pult noćne smene sa osam ekrana",
+      "kind": "place"
+    }
+  },
+  "characters": {
+    "Stana": {
+      "img": "stana"
+    },
+    "Jovo": {
+      "img": "jovo"
+    },
+    "Lena": {
+      "img": "lena"
+    },
+    "Ognjen": {
+      "img": "ognjen"
+    },
+    "Zora": {
+      "img": "zora"
+    },
+    "Sova": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}
