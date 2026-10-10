@@ -155,6 +155,7 @@ Na vrhu `story.json` stoji mapa `characters`; ključ je tačno ime govornika kak
 }
 ```
 
+- Čitalac: unos `"__reader__": { "who": "Ti", "imgM": "citalac-m", "imgF": "citalac-z" }`. Pasusi sa `"who": "Ti"` (ili samo tokenom `{ime}`/`{IME}`) prikazuju ime koje je čitalac upisao (ili Lazar/Milica) i njegov portret prema rodu. Obična pripovedna proza nema lice, a dugmad izbora su samo tekst.
 - Pasus sa `"who": "Orsa"` ispisuje ime govornika sa okruglim licem pored njega (isto lice na svakoj strani). Ako strana već prikazuje veliki portret tog lika (`img` na pasusu), mala slika se ne dodaje.
 - Pasus može imati `"with": ["Marta"]`: red lica ispod kojih piše ime, iznad pasusa. Koristi se samo kad strana uvodi lik po imenu, a lik ne govori.
 - Ako slika nedostaje ili se ne učita, prikazuje se slovo (nema ikone pokvarene slike i nema skakanja rasporeda).
@@ -172,6 +173,7 @@ Slike nisu deo koda: stavi ih u `public/img/<slug>/` (JPG). Za „Bez opcije“:
 
 - Likovi (portret, 3:4): `orsa.jpg`, `tehan.jpg`, `veles.jpg`, `dalja.jpg`, `iva.jpg`, `dara.jpg`
 - Mesta (široke, 16:9): `beli-pojas.jpg`, `zenit.jpg`, `presek.jpg`, `luka.jpg`, `poravnanje.jpg`
+- Ostali portreti (3:4): `marta.jpg`, `citalac-m.jpg`, `citalac-z.jpg` (lice čitaoca za muški i ženski rod)
 - Naslovna slika kartice: `cover.jpg`
 
 Spisak je u `story.json` pod `images`. Slika mesta se vezuje poljem `img` na sceni (prikazuje se na njenoj prvoj strani), slika lika poljem `img` na pasusu (prikazuje se uz taj pasus). Ako fajla nema, strana izgleda kao bez slike. `npm run check-story` upozorava na fajlove koji nedostaju.

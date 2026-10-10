@@ -2016,8 +2016,8 @@
     "Dalja": { "img": "dalja" },
     "Iva": { "img": "iva" },
     "Dara": { "img": "dara" },
-    "Marta": { "img": null },
-    "Ti": { "img": null }
+    "Marta": { "img": "marta" },
+    "__reader__": { "who": "Ti", "imgM": "citalac-m", "imgF": "citalac-z" }
   },
   "images": {
     "orsa": {
@@ -2055,6 +2055,24 @@
       "alt": "Dara",
       "kind": "portrait",
       "caption": "Dara"
+    },
+    "marta": {
+      "src": "img/bez-opcije/marta.jpg",
+      "alt": "Marta",
+      "kind": "portrait",
+      "caption": "Marta"
+    },
+    "citalac-m": {
+      "src": "img/bez-opcije/citalac-m.jpg",
+      "alt": "Ti",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "citalac-z": {
+      "src": "img/bez-opcije/citalac-z.jpg",
+      "alt": "Ti",
+      "kind": "portrait",
+      "caption": "Ti"
     },
     "beli-pojas": {
       "src": "img/bez-opcije/beli-pojas.jpg",
