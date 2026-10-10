@@ -27,4 +27,8 @@ export const Root = styled.button`
   &:hover {
     color: ${({ theme }) => theme.text};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    min-height: ${({ theme }) => theme.sizes.touchMin};
+  }
 `;

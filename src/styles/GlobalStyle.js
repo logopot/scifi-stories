@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    scroll-behavior: auto !important;
     background: ${({ theme }) => theme.bg};
   }
 

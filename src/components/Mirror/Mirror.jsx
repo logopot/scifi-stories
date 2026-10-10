@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { tr } from '../../engine/engine';
 import { useStory } from '../../engine/StoryContext';
+import useScrollReset from '../../hooks/useScrollReset';
 import Button from '../Button';
 import ChapterMark from '../ChapterMark';
 import Heading from '../Heading';
@@ -14,9 +15,7 @@ export default function Mirror({ ending, player, onRestart }) {
   const { ui, endings } = story;
   const data = endings[ending];
 
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, []);
+  useScrollReset([]);
 
   return (
     <PageBox>

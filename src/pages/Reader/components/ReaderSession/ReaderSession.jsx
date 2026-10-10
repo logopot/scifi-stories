@@ -3,6 +3,7 @@ import Mirror from '../../../../components/Mirror';
 import Scene from '../../../../components/Scene';
 import StartScreen from '../../../../components/StartScreen';
 import { useStory } from '../../../../engine/StoryContext';
+import useScrollReset from '../../../../hooks/useScrollReset';
 import { loadReaderPrefs, saveReaderPrefs } from '../../../../engine/storage';
 import * as S from './ReaderSession.styled';
 
@@ -19,6 +20,9 @@ export default function ReaderSession({ resume }) {
   useEffect(() => {
     engine.persist(state);
   }, [engine, state]);
+
+  // Prelaz između ekrana (početni, priča, kraj) uvek počinje na vrhu.
+  useScrollReset([state.screen]);
 
   const player = { gender: state.gender, name: state.name };
 

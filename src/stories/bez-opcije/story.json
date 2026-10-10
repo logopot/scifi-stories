@@ -233,9 +233,9 @@
         },
         {
           "t": "„Ne nudi mi se“, rekla je tiho. Prevodilac u kragni pretvorio je njene reči u šuplji, metalni glas, ali intonacija je bila jasna. Pa još jednom, sporije, kao da govori detetu ili sebi: „Ništa mi se ne nudi za tebe.“",
-          "lead": "Rekla je rečenicu koju nije očekivao da čuješ.",
+          "lead": "Rekla je rečenicu koju nisi očekivao da čuješ.",
           "who": "Orsa",
-          "leadf": "Rekla je rečenicu koju nije očekivala da čuješ."
+          "leadf": "Rekla je rečenicu koju nisi očekivala da čuješ."
         },
         {
           "t": "Stajala je i čekala. Shvatio si da čeka nešto što joj ti ne možeš dati: neku vrstu dozvole. Sledeće što uradiš imaće težinu, iako još ne znaš kakvu.",
@@ -384,6 +384,7 @@
         {
           "t": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušli. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu.",
           "lead": "Niska kuća koja miriše na so i mleko.",
+          "with": ["Dalja"],
           "tf": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušle. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu."
         },
         {
@@ -2007,6 +2008,16 @@
       ],
       "prompt": "Dalja stoji sa hlebom u ruci. Šta joj kažeš?"
     }
+  },
+  "characters": {
+    "Orsa": { "img": "orsa" },
+    "Tehan": { "img": "tehan" },
+    "Veles": { "img": "veles" },
+    "Dalja": { "img": "dalja" },
+    "Iva": { "img": "iva" },
+    "Dara": { "img": "dara" },
+    "Marta": { "img": null },
+    "Ti": { "img": null }
   },
   "images": {
     "orsa": {
