@@ -88,6 +88,7 @@ Sve boje žive u `src/styles/themes.js` i samo tamo. Svaka tema je običan objek
 | `btnQuietText`, `btnQuietBorder`, `btnQuietBgHover`, `btnQuietTextHover` | tiho dugme (npr. „Počni ispočetka“): u mirovanju i na hover |
 | `choiceBg`, `choiceBorder`, `choiceBgSelected`, `choiceTextSelected`, `choiceDot` | birljive opcije: dugmad za rod (neizabrano / izabrano) i marker opcija u čitaču |
 | `btnDisabledBg`, `btnDisabledText` | onemogućeno dugme |
+| `scrim`, `onImage` | preliv (rgba) preko slike na kartici i boja teksta preko njega; kontrast `onImage` naspram `scrim` (preko bele slike) mora biti bar 4.5:1 |
 | `logoBackdrop` | pozadina kruga iza logoa (`transparent` na svetlim, svetao krug na tamnim temama) |
 | `fontBody`, `fontHeading` | font teksta i naslova |
 

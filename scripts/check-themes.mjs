@@ -3,7 +3,7 @@ import { siteTheme, themes } from '../src/styles/themes.js';
 
 export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentStrong', 'onAccent',
-  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
+  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'scrim', 'onImage', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
   'btnQuietText', 'btnQuietBorder', 'btnQuietBgHover', 'btnQuietTextHover', 'choiceBg', 'choiceBorder', 'choiceBgSelected',
   'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fontBody', 'fontHeading',
 ];
@@ -65,6 +65,18 @@ for (const [key, t] of Object.entries(all)) {
     const ok = c >= min;
     console.log(`${ok ? 'ok  ' : 'LOŠE'} ${key.padEnd(15)} ${fg}/${bg}: ${c.toFixed(2)} (min ${min})`);
     if (!ok) errors.push(`tema "${key}": kontrast ${fg}/${bg} je ${c.toFixed(2)}, a mora biti bar ${min}`);
+  }
+  // Tekst preko slike (kartica): onImage naspram scrim boje, gledano preko najsvetlije moguće slike (bele).
+  const m = /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/.exec(t.scrim || '');
+  if (!m || !/^#[0-9a-f]{3,6}$/i.test(t.onImage || '')) {
+    errors.push(`tema "${key}": scrim mora biti rgba(r, g, b, a), a onImage #hex`);
+  } else {
+    const a = m[4] === undefined ? 1 : Number(m[4]);
+    const over = [m[1], m[2], m[3]].map((v) => Math.round(Number(v) * a + 255 * (1 - a)));
+    const hex = `#${over.map((v) => v.toString(16).padStart(2, '0')).join('')}`;
+    const ci = contrast(t.onImage, hex);
+    console.log(`${ci >= 4.5 ? 'ok  ' : 'LOŠE'} ${key.padEnd(15)} onImage/scrim (preko bele): ${ci.toFixed(2)} (min 4.5)`);
+    if (ci < 4.5) errors.push(`tema "${key}": kontrast onImage/scrim je ${ci.toFixed(2)}, a mora biti bar 4.5`);
   }
   for (const [fg, bg, min] of SOFT_PAIRS) {
     const c = contrast(t[fg], t[bg]);

@@ -89,6 +89,13 @@ export const sizes = {
   logoSm: '28px',
   logoXs: '24px',
   logoPad: '4px',
+  cardRatio: '3 / 4',
+  cardMaxMobile: '420px',
+  cardCircle: '48px',
+  cardCircleLg: '56px',
+  cardIcon: '24px',
+  cardZoom: 1.04,
+  cardNudge: '4px',
   avatarSm: '44px',
   avatarMd: '56px',
   ratioPlace: '16 / 9',
@@ -109,6 +116,7 @@ export const transitions = {
   base: '0.25s ease',
   theme: '0.45s ease',
   lift: '0.3s ease',
+  zoom: '0.6s ease',
 };
 
 export const motion = {
@@ -117,6 +125,14 @@ export const motion = {
   figure: '1.2s',
   hint: '1.4s',
   sky: '0.8s',
+};
+
+// Prelivi preko slike kartice: pun do prve vrednosti, pa nestaje do druge (gore i dole).
+export const scrimStops = {
+  topSolid: '30%',
+  topEnd: '70%',
+  bottomSolid: '25%',
+  bottomEnd: '55%',
 };
 
 export const zIndex = {
@@ -160,6 +176,7 @@ export const tokens = {
   transitions,
   motion,
   zIndex,
+  scrimStops,
   breakpoints,
   skyDecor,
   opacity,

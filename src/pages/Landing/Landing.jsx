@@ -22,7 +22,9 @@ export default function Landing() {
       <div className="row g-4">
         {stories.map((entry) => (
           <div key={entry.slug} className="col-12 col-md-6 col-lg-4">
-            <StoryCard entry={entry} />
+            <S.Slot>
+              <StoryCard entry={entry} />
+            </S.Slot>
           </div>
         ))}
       </div>

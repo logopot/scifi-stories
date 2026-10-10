@@ -1,6 +1,7 @@
 // Registar priča. Jedan unos po priči; boje su u src/styles/themes.js (ključ = slug).
 // status: 'ready' (ima story.json) | 'soon' (samo rezervisano mesto, nije otvoriva sa početne strane).
 // Cover je putanja u public/ (bez početne kose crte); ako slike nema, kartica dobija gradijent teme.
+// coverPosition (opciono, CSS object-position, podrazumevano 'center') bira koji deo slike ostaje vidljiv u kartici 3:4.
 export const stories = [
   {
     slug: 'bez-opcije',
