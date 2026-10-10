@@ -233,7 +233,7 @@
       "paragraphs": [
         {
           "t": "Ilarion te dočekuje na kruni brane, ispod neba čije se crvenilo u ovo doba nikad ne gasi do kraja. Visok je i pogrbljen, sa rukama prljavim od mašinskog ulja, i nosi dva ručna sata: jedan za dan, drugi za ono što on zove vreme vode.",
-          "lead": "Starac koji nosi dva sata.",
+          "lead": "Starac koji nosi dva ručna sata.",
           "img": "ilarion"
         },
         {
@@ -268,7 +268,7 @@
         },
         {
           "t": "„Jedan sat meri dane“, objašnjava, i kuca po prvom. „Drugi meri ono što nam je ostalo, prema današnjoj potrošnji.“ Kuca po drugom. „Prvi ide napred, drugi nazad. Uskoro će se sresti. Ne znam šta se tada dešava sa vremenom.“",
-          "lead": "Dva sata koja idu jedan prema drugom.",
+          "lead": "Dva ručna sata koja idu jedan prema drugom.",
           "who": "Ilarion"
         },
         {
@@ -1144,7 +1144,7 @@
         },
         {
           "t": "Ilarion gleda zapornice sa krune brane. Nikad nije video da se pokreću bez njegove ruke. Ne buni se. Samo skida jedan od dva ručna sata i stavlja ga u džep.",
-          "lead": "Starac koji skida jedan sat.",
+          "lead": "Starac koji skida jedan ručni sat.",
           "if": {
             "pick": "k_brana"
           }
