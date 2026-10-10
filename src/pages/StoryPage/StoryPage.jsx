@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Button from '../../components/Button';
 import Cover from '../../components/Cover';
 import Heading from '../../components/Heading';
+import LogoLink from '../../components/LogoLink';
 import Page from '../../components/Page';
 import Paragraph from '../../components/Paragraph';
 import Subtitle from '../../components/Subtitle';
@@ -46,6 +47,7 @@ function StoryPageContent({ entry }) {
   return (
     <Page variant="narrow">
       <S.Back>
+        <LogoLink size="sm" />
         <TextLink to="/">← Sve priče</TextLink>
       </S.Back>
       <Cover src={entry.cover} alt={entry.coverAlt} rounded />

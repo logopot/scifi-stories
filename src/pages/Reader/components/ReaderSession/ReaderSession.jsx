@@ -1,7 +1,9 @@
 import React, { useEffect, useReducer } from 'react';
+import LogoLink from '../../../../components/LogoLink';
 import Mirror from '../../../../components/Mirror';
 import Scene from '../../../../components/Scene';
 import StartScreen from '../../../../components/StartScreen';
+import TextLink from '../../../../components/TextLink';
 import { useStory } from '../../../../engine/StoryContext';
 import useScrollReset from '../../../../hooks/useScrollReset';
 import { loadReaderPrefs, saveReaderPrefs } from '../../../../engine/storage';
@@ -28,7 +30,10 @@ export default function ReaderSession({ resume }) {
 
   return (
     <>
-      <S.BackLink to="/">← Sve priče</S.BackLink>
+      <S.BackBar>
+        <LogoLink size="xs" />
+        <TextLink to="/">← Sve priče</TextLink>
+      </S.BackBar>
       {state.screen === 'start' && (
         <StartScreen
           prefs={loadReaderPrefs()}

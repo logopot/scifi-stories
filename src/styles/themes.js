@@ -24,6 +24,7 @@ export const bezOpcije = {
   selection: 'rgba(217, 137, 43, 0.35)',
   focusRing: '#4f7ea6',
   shadow: 'rgba(60, 40, 20, 0.5)',
+  logoBackdrop: 'transparent',
   fontBody: fonts.serif,
   fontHeading: fonts.serif,
 };
@@ -49,6 +50,7 @@ export const siteTheme = {
   selection: 'rgba(70, 96, 126, 0.3)',
   focusRing: '#46607e',
   shadow: 'rgba(34, 38, 43, 0.4)',
+  logoBackdrop: 'transparent',
   fontBody: fonts.serif,
   fontHeading: fonts.serif,
 };
@@ -74,6 +76,7 @@ export const tihiSat = {
   selection: 'rgba(127, 180, 232, 0.35)',
   focusRing: '#7fb4e8',
   shadow: 'rgba(0, 0, 0, 0.6)',
+  logoBackdrop: 'rgba(255, 255, 255, 0.9)',
   fontBody: fonts.serif,
   fontHeading: fonts.ui,
 };
@@ -99,6 +102,7 @@ export const zelenaGranica = {
   selection: 'rgba(45, 117, 86, 0.3)',
   focusRing: '#2d7556',
   shadow: 'rgba(27, 42, 33, 0.4)',
+  logoBackdrop: 'transparent',
   fontBody: fonts.serif,
   fontHeading: fonts.serif,
 };

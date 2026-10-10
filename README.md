@@ -81,6 +81,7 @@ Sve boje žive u `src/styles/themes.js` i samo tamo. Svaka tema je običan objek
 | `selection` | boja označenog teksta (i prva senka naslova) |
 | `focusRing` | obris fokusa |
 | `shadow` | boja senke slika i kartica |
+| `logoBackdrop` | pozadina kruga iza logoa (`transparent` na svetlim, svetao krug na tamnim temama) |
 | `fontBody`, `fontHeading` | font teksta i naslova |
 
 `tokens.js` sadrži sve što nije boja (razmaci `space`, veličine slova `fs`, `tracking`, `radii`, `breakpoints`, `transitions`, `zIndex`, `fonts`, ...) i spaja se sa temom u `getTheme(slug)`. Ključevi razmaka su stotinke jedinice: `theme.space[150]` = 1.5rem, `theme.fs[98]` = 0.98rem.

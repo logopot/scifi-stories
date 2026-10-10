@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Back = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.space[100]};
   margin-bottom: ${({ theme }) => theme.space[150]};
 `;
 

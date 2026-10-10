@@ -3,7 +3,7 @@ import { siteTheme, themes } from '../src/styles/themes.js';
 
 export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentContrast',
-  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'fontBody', 'fontHeading',
+  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'fontBody', 'fontHeading',
 ];
 const SKIES = ['twin-suns', 'stars', 'plain'];
 const MODES = ['light', 'dark'];

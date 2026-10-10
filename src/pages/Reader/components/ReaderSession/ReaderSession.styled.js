@@ -1,15 +1,18 @@
 import styled from 'styled-components';
-import TextLink from '../../../../components/TextLink';
 
-// Tih link nazad: van toka teksta, pa ne menja raspored čitanja i nestaje sa skrolom.
-export const BackLink = styled(TextLink)`
+// Tih povratak na sajt: van toka teksta, pa ne menja raspored čitanja i nestaje sa skrolom.
+export const BackBar = styled.div`
   position: absolute;
   top: ${({ theme }) => theme.space[100]};
   left: ${({ theme }) => theme.space[100]};
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.space[70]};
   opacity: ${({ theme }) => theme.opacity.muted};
+  transition: opacity ${({ theme }) => theme.transitions.base};
 
   &:hover,
-  &:focus-visible {
+  &:focus-within {
     opacity: 1;
   }
 `;

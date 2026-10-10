@@ -9,6 +9,9 @@ export const Bar = styled.header`
 `;
 
 export const Brand = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.space[90]};
   font-family: ${({ theme }) => theme.fontHeading};
   font-size: ${({ theme }) => theme.fs[110]};
   letter-spacing: ${({ theme }) => theme.tracking[4]};
@@ -19,6 +22,10 @@ export const Brand = styled(Link)`
     color: ${({ theme }) => theme.text};
     text-decoration: underline;
   }
+`;
+
+export const BrandName = styled.span`
+  font-family: ${({ theme }) => theme.fontHeading};
 `;
 
 export const Skip = styled.a`
