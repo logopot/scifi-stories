@@ -169,10 +169,15 @@ console.log('Namerne putanje (ka osi):', forced, '| uvek prva:', alwaysFirst, '|
 
 // --- likovi: svaki govornik (who) i svaki lik iz `with` mora biti u characters; img je id iz images ili null (slovo) ---
 const characters = story.characters || {};
+const reader = characters.__reader__ || null;
+const READER_TOKEN = /^\{(ime|IME)\}$/;
+const isReaderWho = (w) => Boolean(reader) && (w === (reader.who || 'Ti') || READER_TOKEN.test(w));
 const named = new Set();
+let readerSpeaks = false;
 for (const [id, n] of Object.entries(nodes)) {
   (n.paragraphs || []).forEach((p, i) => {
-    if (p.who && !p.who.includes('{')) named.add(p.who);
+    if (p.who && (p.who === 'Ti' || READER_TOKEN.test(p.who))) readerSpeaks = true;
+    if (p.who && !isReaderWho(p.who) && !p.who.includes('{')) named.add(p.who);
     if (p.with !== undefined && !Array.isArray(p.with)) err(`${id}[${i}]: with mora biti niz imena`);
     (Array.isArray(p.with) ? p.with : []).forEach((w) => {
       if (!(w in characters)) err(`${id}[${i}]: with "${w}" nije u characters`);
@@ -183,13 +188,28 @@ for (const [id, n] of Object.entries(nodes)) {
 named.forEach((w) => {
   if (!(w in characters)) err(`govornik "${w}" nije u characters (dodaj ga, ili { "img": null } ako nema portret)`);
 });
+if (readerSpeaks && !reader) err('pasusi govore u ime čitaoca (who "Ti"), a nema characters.__reader__ { who, imgM, imgF }');
+const checkImg = (label, id) => {
+  if (id === null || id === undefined) return;
+  if (!images[id]) err(`${label}: slika "${id}" ne postoji u images`);
+  else if (images[id].kind !== 'portrait') err(`${label}: slika "${id}" nije kind "portrait"`);
+};
 for (const [name, c] of Object.entries(characters)) {
-  if (!c || !('img' in c)) err(`characters.${name}: nedostaje polje img (id slike ili null)`);
-  else if (c.img !== null && !images[c.img]) err(`characters.${name}: slika "${c.img}" ne postoji u images`);
-  else if (c.img !== null && images[c.img].kind !== 'portrait') err(`characters.${name}: slika "${c.img}" nije kind "portrait"`);
+  if (name === '__reader__') {
+    if (!c.imgM || !c.imgF) err('characters.__reader__: potrebna su polja imgM i imgF (id portreta za rod m i f)');
+    checkImg('characters.__reader__.imgM', c.imgM);
+    checkImg('characters.__reader__.imgF', c.imgF);
+  } else if (!c || !('img' in c)) err(`characters.${name}: nedostaje polje img (id slike ili null)`);
+  else checkImg(`characters.${name}`, c.img);
 }
 const noPortrait = [...named].filter((w) => characters[w] && characters[w].img === null);
 if (noPortrait.length) console.warn(`UPOZORENJE: bez portreta (prikazuje se slovo): ${noPortrait.join(', ')}`);
+const missingFiles = Object.entries(characters)
+  .flatMap(([name, c]) => [c.img, c.imgM, c.imgF].filter(Boolean).map((id) => [name, id]))
+  .filter(([, id]) => images[id] && images[id].src && !existsSync(join(here, '../public', images[id].src)));
+if (missingFiles.length) {
+  console.warn(`UPOZORENJE: nema fajla portreta (prikazuje se slovo): ${missingFiles.map(([n, id]) => `${n} (${images[id].src})`).join(', ')}`);
+}
 
 // --- metapodaci priče i registra ---
 const desc = story.meta && story.meta.description;

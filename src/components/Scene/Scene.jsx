@@ -128,15 +128,15 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
         {current.portrait && <Figure image={engine.getImage(current.portrait)} variant="portrait" />}
 
         {current.texts.map(({ t, who, with: withNames }, i) => {
-          const speaker = who ? engine.getCharacter(who) : null;
+          const speaker = who ? engine.getCharacter(who, player) : null;
           // Veliki portret istog lika na strani je dovoljan: tada nema malog lica.
           const sameAsPortrait = (c) => Boolean(c.imageId) && c.imageId === current.portrait;
-          const extras = (withNames || []).map(engine.getCharacter).filter((c) => !sameAsPortrait(c));
+          const extras = (withNames || []).map((n) => engine.getCharacter(n, player)).filter((c) => !sameAsPortrait(c));
           return (
             <React.Fragment key={i}>
               {extras.length > 0 && <CharacterRow characters={extras} />}
               <Paragraph
-                who={who ? tr(who, null, player) : null}
+                who={speaker ? speaker.name : null}
                 image={speaker && speaker.image}
                 showAvatar={!(speaker && sameAsPortrait(speaker))}
               >
