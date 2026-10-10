@@ -119,10 +119,18 @@ export const createEngine = (story, slug) => {
   const getImage = (id) => (id && story.images ? story.images[id] || null : null);
 
   // Lik po imenu govornika (ključ u story.characters): { name, imageId, image }; bez slike ostaje slovo.
-  const getCharacter = (name) => {
+  // Čitalac (characters.__reader__, who 'Ti' ili samo token imena) dobija svoje ime i portret prema rodu.
+  const reader = (story.characters && story.characters.__reader__) || null;
+  const isReader = (name) =>
+    Boolean(reader) && (name === (reader.who || 'Ti') || /^{(ime|IME)}$/.test(name));
+  const getCharacter = (name, player = DEFAULT_PLAYER) => {
+    if (isReader(name)) {
+      const imageId = (player.gender === 'f' ? reader.imgF : reader.imgM) || null;
+      return { name: tr('{ime}', null, player), imageId, image: imageId ? getImage(imageId) : null, reader: true };
+    }
     const c = story.characters && story.characters[name];
     const imageId = (c && c.img) || null;
-    return { name, imageId, image: imageId ? getImage(imageId) : null };
+    return { name: tr(name, null, player), imageId, image: imageId ? getImage(imageId) : null };
   };
 
   // Nagoveštaj prve strane sledeće scene (za dugme na kraju scene bez izbora).
