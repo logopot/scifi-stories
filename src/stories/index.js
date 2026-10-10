@@ -15,6 +15,17 @@ export const stories = [
     status: 'ready',
     load: () => import('./bez-opcije/story.json'),
   },
+  {
+    slug: 'poslednja-mera',
+    title: 'Poslednja mera',
+    tagline: 'Grad na dnu brane deli vodu po pravilima koja više niko ne piše.',
+    genre: 'Naučna fantastika',
+    minutes: 20,
+    cover: 'img/poslednja-mera/cover.jpg',
+    coverAlt: 'Utočište: grad ispod Visoke brane i suvo dno jezera',
+    status: 'ready',
+    load: () => import('./poslednja-mera/story.json'),
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
   {
     slug: 'tihi-sat',
