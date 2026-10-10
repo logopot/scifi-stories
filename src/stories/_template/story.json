@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Naslov priče",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Jedan do tri kratka pasusa o početnoj situaciji, bez otkrivanja zapleta i krajeva."
+    ],
+    "axes": [
+      { "id": "a", "name": "prva osa (samo za autore)" },
+      { "id": "b", "name": "druga osa (samo za autore)" }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": ["Uvodni tekst na početnom ekranu."],
+      "begin": "Počni",
+      "continue": "Nastavi gde si stao",
+      "tip": "Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva.",
+      "genders": { "m": "Muški", "f": "Ženski" },
+      "note": "Kraj priče ne zavisi od poslednjeg klika.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": { "m": "Lazar", "f": "Milica" }
+    },
+    "mirror": { "kicker": "Kraj", "restart": "Počni ispočetka" }
+  },
+  "chapters": {},
+  "start": "pocetak",
+  "endings": {
+    "a": {
+      "title": "Kraj A",
+      "closing": ["Završni pasus kraja A."],
+      "closingf": ["Završni pasus kraja A."]
+    },
+    "b": {
+      "title": "Kraj B",
+      "closing": ["Završni pasus kraja B."],
+      "closingf": ["Završni pasus kraja B."]
+    }
+  },
+  "nodes": {
+    "pocetak": {
+      "paragraphs": [
+        {
+          "t": "Stojiš na raskrsnici, {ime}. Pred tobom su dva puta.",
+          "tf": "Stojiš na raskrsnici, {ime}. Pred tobom su dva puta.",
+          "lead": "Dva puta, a ti stojiš između."
+        }
+      ],
+      "prompt": "Kojim ćeš putem?",
+      "choices": [
+        { "id": "levo", "text": "Levo.", "next": "kraj_a", "w": { "a": 1 } },
+        { "id": "desno", "text": "Desno.", "next": "kraj_b", "w": { "b": 1 } }
+      ]
+    },
+    "kraj_a": {
+      "paragraphs": [
+        { "t": "Put levo vodi do kraja A.", "lead": "Put koji je vodio ulevo." }
+      ],
+      "end": "a"
+    },
+    "kraj_b": {
+      "paragraphs": [
+        { "t": "Put desno vodi do kraja B.", "lead": "Put koji je vodio udesno." }
+      ],
+      "end": "b"
+    }
+  },
+  "images": {},
+  "characters": {}
+}

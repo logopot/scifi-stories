@@ -2,13 +2,16 @@ import { cleanName, nameTokens } from './player';
 import { clearSave, readSave, writeSave } from './storage';
 
 /*
-  Ose (skriveni brojači), čitaocu se nikad ne prikazuju:
-    b = bekstvo / preživljavanje
-    s = slom sistema
-    u = uklapanje
-  Svaki izbor ima težine w: { b, s, u }. Kraj priče proizlazi iz zbira svih izbora.
+  Ose (skriveni brojači) definiše svaka priča u meta.axes: [{ id, name }]; čitaocu se nikad ne prikazuju.
+  Svaki izbor ima težine w: { <idOse>: broj }. Kraj priče proizlazi iz zbira svih izbora, a ključevi
+  endings su id-evi osa. Sve funkcije ispod primaju listu id-eva osa (axes).
 */
-export const AXES = ['b', 's', 'u'];
+// Id-evi osa jedne priče (ako meta.axes nedostaje, uzimaju se ključevi endings).
+export const getAxes = (story) => {
+  const defs = story.meta && story.meta.axes;
+  if (Array.isArray(defs) && defs.length) return defs.map((a) => a.id);
+  return Object.keys(story.endings || {});
+};
 // Kratki pasusi (replike) ostaju na istoj strani sa prethodnim pasusom.
 const SHORT_PARAGRAPH = 80;
 
@@ -27,17 +30,17 @@ export const tr = (base, fem, player = DEFAULT_PLAYER) => {
   return text.replace(NAME_TOKENS, (_, k) => names[k]);
 };
 
-export const totals = (picks) => {
-  const t = { b: 0, s: 0, u: 0 };
-  picks.forEach((p) => AXES.forEach((a) => { t[a] += (p.w && p.w[a]) || 0; }));
+export const totals = (picks, axes) => {
+  const t = Object.fromEntries(axes.map((a) => [a, 0]));
+  picks.forEach((p) => axes.forEach((a) => { t[a] += (p.w && p.w[a]) || 0; }));
   return t;
 };
 
 // Dominantna osa. Kod nerešenog: pobeđuje osa koju je čitalac poslednju pojačao među izjednačenima.
-export const leadAxis = (picks) => {
-  const t = totals(picks);
-  const max = Math.max(...AXES.map((a) => t[a]));
-  let cands = AXES.filter((a) => t[a] === max);
+export const leadAxis = (picks, axes) => {
+  const t = totals(picks, axes);
+  const max = Math.max(...axes.map((a) => t[a]));
+  let cands = axes.filter((a) => t[a] === max);
   for (let i = picks.length - 1; i >= 0 && cands.length > 1; i -= 1) {
     const w = picks[i].w || {};
     const best = Math.max(...cands.map((a) => w[a] || 0));
@@ -46,23 +49,23 @@ export const leadAxis = (picks) => {
   return cands[0];
 };
 
-const matches = (cond, picks) => {
+const matches = (cond, picks, axes) => {
   if (!cond) return true;
   const ids = picks.map((p) => p.id);
   if (cond.pick && !ids.includes(cond.pick)) return false;
   if (cond.notPick && ids.includes(cond.notPick)) return false;
   if (cond.any && !cond.any.some((id) => ids.includes(id))) return false;
-  if (cond.lead && leadAxis(picks) !== cond.lead) return false;
+  if (cond.lead && leadAxis(picks, axes) !== cond.lead) return false;
   return true;
 };
 
 // Pasusi koji se vide za dati skup izbora: [{ t, lead?, solo?, who? }]
-export const visibleParagraphs = (node, picks) =>
-  (node.paragraphs || []).filter((p) => matches(p.if, picks));
+export const visibleParagraphs = (node, picks, axes) =>
+  (node.paragraphs || []).filter((p) => matches(p.if, picks, axes));
 
-export const resolveNext = (node, picks) => {
+export const resolveNext = (node, picks, axes) => {
   if (node.branch) {
-    const hit = node.branch.find((b) => matches(b.if, picks));
+    const hit = node.branch.find((b) => matches(b.if, picks, axes));
     return hit ? hit.next : null;
   }
   return node.next || null;
@@ -71,9 +74,9 @@ export const resolveNext = (node, picks) => {
 // Strane scene: svaki pasus je nova strana, osim kratkih replika koje se lepe na prethodnu.
 // Svaka strana nosi "lead": rečenicu koja nagoveštava šta na njoj sledi.
 // Replike nose "who" (ime govornika koje se prikazuje iznad teksta).
-export const buildPages = (node, picks, player = DEFAULT_PLAYER) => {
+export const buildPages = (node, picks, player = DEFAULT_PLAYER, axes = []) => {
   const pages = [];
-  visibleParagraphs(node, picks).forEach((p, i) => {
+  visibleParagraphs(node, picks, axes).forEach((p, i) => {
     const last = pages[pages.length - 1];
     const text = tr(p.t, p.tf, player);
     const lead = tr(p.lead, p.leadf, player);
@@ -115,6 +118,9 @@ const makeReducer = (initialState) => (state, action) => {
 
 // Motor vezan za jednu priču (story.json) i njen slug (ključ za čuvanje napretka).
 export const createEngine = (story, slug) => {
+  const axes = getAxes(story);
+  const pagesOf = (node, picks, player = DEFAULT_PLAYER) => buildPages(node, picks, player, axes);
+  const nextOf = (node, picks) => resolveNext(node, picks, axes);
   const getNode = (id) => story.nodes[id];
   const getImage = (id) => (id && story.images ? story.images[id] || null : null);
 
@@ -135,9 +141,9 @@ export const createEngine = (story, slug) => {
 
   // Nagoveštaj prve strane sledeće scene (za dugme na kraju scene bez izbora).
   const nextSceneLead = (node, picks, player = DEFAULT_PLAYER) => {
-    const nextId = resolveNext(node, picks);
+    const nextId = nextOf(node, picks);
     if (!nextId || !story.nodes[nextId]) return null;
-    const first = buildPages(story.nodes[nextId], picks, player)[0];
+    const first = pagesOf(story.nodes[nextId], picks, player)[0];
     return first ? first.lead : null;
   };
 
@@ -172,6 +178,9 @@ export const createEngine = (story, slug) => {
     getNode,
     getImage,
     getCharacter,
+    axes,
+    buildPages: pagesOf,
+    resolveNext: nextOf,
     nextSceneLead,
     initialState,
     reducer: makeReducer(initialState),

@@ -142,15 +142,16 @@ Napredak se čuva po priči u `localStorage` pod `scifi-<slug>-v1`; ime i rod č
   "choices": [ { "id": "jedinstveniId", "text": "...", "next": "druga_scena", "w": { "b": 1, "s": 0, "u": 2 } } ],
   "hidden": { "id": "...", "text": "— ...", "next": "...", "w": {...}, "after": 22 },  // pojavi se posle N sekundi oklevanja
   "next": "scena",                // ili "branch": [ { "if": {...}, "next": "..." }, { "next": "podrazumevano" } ]
-  "end": "b"                      // poslednja scena kraja ("b" | "s" | "u")
+  "end": "b"                      // poslednja scena kraja (id jedne ose iz meta.axes)
 }
 ```
 
 **Strane:** svaki pasus je jedna strana. Pasusi kraći od 80 znakova (replike) lepe se na prethodnu stranu, osim ako imaju `solo`.
 Dugme za sledeću stranu prikazuje `lead` te strane (umesto „Dalje“); na kraju scene bez izbora prikazuje `lead` prve strane sledeće scene.
 
-Ose: `b` = bekstvo/preživljavanje, `s` = slom sistema, `u` = uklapanje. Težine `w` se sabiraju kroz celu priču;
+Ose definiše svaka priča u `meta.axes` (2–4 ose, npr. `{ "id": "b", "name": "bekstvo" }`; ime je samo za autore), a ključevi `endings` su id-evi osa. Težine `w` se sabiraju kroz celu priču;
 kod izjednačenja pobeđuje osa koju je čitalac poslednju pojačao. Čitalac na kraju vidi samo tekst kraja, bez statistike.
+Kompletna šema (sva polja, pravila strana, uslovi, rod i tokeni imena) je u [docs/STORY_SCHEMA.md](docs/STORY_SCHEMA.md), a minimalna priča u `src/stories/_template/story.json`.
 Posle svake izmene priče pokreni `npm run check-story`.
 
 ## Likovi (`characters`, `who`, `with`)

@@ -7,7 +7,11 @@
       "Na tu planetu padaš ti, bez ičega osim napuklog vizira i želje da preživiš.",
       "Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu. Nijedna nije označena kao ispravna, a retko će neka biti samo dobra ili samo loša."
     ],
-    "axesNote": "b = bekstvo/preživljavanje, s = slom sistema, u = uklapanje (skriveni brojači, čitaocu se ne prikazuju tokom priče)"
+    "axes": [
+      { "id": "b", "name": "bekstvo / preživljavanje" },
+      { "id": "s", "name": "slom sistema" },
+      { "id": "u", "name": "uklapanje" }
+    ]
   },
   "ui": {
     "next": "Dalje",

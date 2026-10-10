@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { buildPages, resolveNext, tr } from '../../engine/engine';
+import { tr } from '../../engine/engine';
 import { useStory } from '../../engine/StoryContext';
 import useScrollReset from '../../hooks/useScrollReset';
 import ChapterMark from '../ChapterMark';
@@ -23,7 +23,7 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
   const { story, engine } = useStory();
   const node = engine.getNode(nodeId);
   // Strane se računaju jednom po sceni (uslovni pasusi zavise od ranijih izbora).
-  const pages = useMemo(() => buildPages(node, picks, player), [nodeId]); // eslint-disable-line react-hooks/exhaustive-deps
+  const pages = useMemo(() => engine.buildPages(node, picks, player), [nodeId]); // eslint-disable-line react-hooks/exhaustive-deps
   const [page, setPage] = useState(0);
   const [ghostVisible, setGhostVisible] = useState(false);
   const lastTurn = useRef(0);
@@ -66,9 +66,9 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
       dispatch({ type: 'FINISH', ending: node.end });
       return;
     }
-    const next = resolveNext(node, picks);
+    const next = engine.resolveNext(node, picks);
     if (next) dispatch({ type: 'GOTO', next });
-  }, [node, picks, dispatch]);
+  }, [engine, node, picks, dispatch]);
 
   const choose = useCallback(
     (choice, hidden = false) => {
