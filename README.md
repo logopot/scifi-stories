@@ -81,6 +81,12 @@ Sve boje žive u `src/styles/themes.js` i samo tamo. Svaka tema je običan objek
 | `selection` | boja označenog teksta (i prva senka naslova) |
 | `focusRing` | obris fokusa |
 | `shadow` | boja senke slika i kartica |
+| `btnBg`, `btnText`, `btnBorder` | glavno dugme (Button primary, „Otvori“ na kartici) u mirovanju |
+| `btnBgHover`, `btnTextHover`, `btnBorderHover` | isto dugme na hover i fokus tastaturom |
+| `btnBgActive` | isto dugme dok je pritisnuto |
+| `btnQuietText`, `btnQuietBorder`, `btnQuietBgHover`, `btnQuietTextHover` | tiho dugme (npr. „Počni ispočetka“): u mirovanju i na hover |
+| `choiceBg`, `choiceBorder`, `choiceBgSelected`, `choiceTextSelected`, `choiceDot` | birljive opcije: dugmad za rod (neizabrano / izabrano) i marker opcija u čitaču |
+| `btnDisabledBg`, `btnDisabledText` | onemogućeno dugme |
 | `logoBackdrop` | pozadina kruga iza logoa (`transparent` na svetlim, svetao krug na tamnim temama) |
 | `fontBody`, `fontHeading` | font teksta i naslova |
 
@@ -105,7 +111,7 @@ export const mojaPrica = {
 
 Tema se bira po prvom segmentu URL-a (`ThemeController`), pa je poznata pre prvog crtanja; `vite.config.js` iz `themes.js` ubacuje boju pozadine i `theme-color` u `index.html`, tako da pri tvrdom osvežavanju nema treptaja. Kartice na početnoj strani se crtaju u temi svoje priče (ugnježdeni `ThemeProvider`). Teme „Tihi sat“ (tamna) i „Zelena granica“ (svetla) su rezervisana mesta; brišu se brisanjem unosa u `src/stories/index.js` i u `themes.js`.
 
-`npm run check-story` proverava da sve teme imaju isti skup tokena i kontrast (WCAG): `text/bg`, `textMuted/bg`, `text/surface`, `accentContrast/accent` moraju imati bar 4.5:1.
+`npm run check-story` proverava da sve teme imaju isti skup tokena i kontrast (WCAG): `text/bg`, `textMuted/bg`, `text/surface`, `accentContrast/accent`, `btnText/btnBg`, `btnTextHover/btnBgHover`, `btnQuietTextHover/btnQuietBgHover` i `choiceTextSelected/choiceBgSelected` moraju imati bar 4.5:1, a `btnBorder/bg` i `focusRing/bg` bar 3:1. Nova tema znači samo popuniti ceo skup tokena; dugmad ne sadrže nijednu boju.
 
 Tema „Bez opcije“ je tačan izgled priče pre uvođenja tema; ne menja se.
 

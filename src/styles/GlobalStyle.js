@@ -56,6 +56,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration-color: ${({ theme }) => theme.accent};
   }
 
+  button {
+    color: inherit;
+  }
+
   :focus-visible {
     outline: 2px solid ${({ theme }) => theme.focusRing};
     outline-offset: 3px;

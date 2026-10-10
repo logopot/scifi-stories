@@ -24,7 +24,7 @@ export const Root = styled.button`
 
   &::before {
     content: ${({ $ghost }) => ($ghost ? "'—'" : "'◦'")};
-    color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.choiceDot};
     flex: none;
   }
 

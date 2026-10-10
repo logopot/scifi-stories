@@ -3,7 +3,9 @@ import { siteTheme, themes } from '../src/styles/themes.js';
 
 export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentContrast',
-  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'fontBody', 'fontHeading',
+  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
+  'btnQuietText', 'btnQuietBorder', 'btnQuietBgHover', 'btnQuietTextHover', 'choiceBg', 'choiceBorder', 'choiceBgSelected',
+  'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fontBody', 'fontHeading',
 ];
 const SKIES = ['twin-suns', 'stars', 'plain'];
 const MODES = ['light', 'dark'];
@@ -14,6 +16,12 @@ const PAIRS = [
   ['textMuted', 'bg', 4.5],
   ['accentContrast', 'accent', 4.5],
   ['text', 'surface', 4.5],
+  ['btnText', 'btnBg', 4.5],
+  ['btnTextHover', 'btnBgHover', 4.5],
+  ['btnQuietTextHover', 'btnQuietBgHover', 4.5],
+  ['choiceTextSelected', 'choiceBgSelected', 4.5],
+  ['btnBorder', 'bg', 3],
+  ['focusRing', 'bg', 3],
 ];
 // Samo upozorenje: sitni dekorativni tekst (broj strane, oznake).
 const SOFT_PAIRS = [['textFaint', 'bg', 3]];

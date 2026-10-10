@@ -1,21 +1,30 @@
 import styled from 'styled-components';
-import { buttonHover, buttonLook } from '../../styles/mixins';
+import {
+  buttonActive,
+  buttonDisabled,
+  buttonHover,
+  buttonLook,
+  buttonQuiet,
+  buttonQuietHover,
+} from '../../styles/mixins';
 
+const quiet = ({ $variant }) => $variant === 'quiet';
+
+// Hover i fokus tastaturom menjaju samo boje; obris fokusa je globalni (theme.focusRing).
 export const Root = styled.button`
   ${buttonLook}
-  ${({ $variant, theme }) =>
-    $variant === 'quiet' &&
-    `
-      border-color: ${theme.border};
-      color: ${theme.textMuted};
-    `}
+  ${(props) => quiet(props) && buttonQuiet}
 
-  &:disabled {
-    opacity: ${({ theme }) => theme.opacity.disabled};
-    cursor: not-allowed;
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    ${(props) => (quiet(props) ? buttonQuietHover : buttonHover)}
   }
 
-  &:hover:not(:disabled) {
-    ${buttonHover}
+  &:active:not(:disabled) {
+    ${(props) => (quiet(props) ? buttonQuietHover : buttonActive)}
+  }
+
+  &:disabled {
+    ${buttonDisabled}
   }
 `;
