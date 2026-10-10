@@ -6,6 +6,7 @@ import Sky from '../../components/Sky';
 import TextLink from '../../components/TextLink';
 import { createEngine } from '../../engine/engine';
 import { StoryContext } from '../../engine/StoryContext';
+import { SITE_NAME } from '../../config';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import useStoryData from '../../hooks/useStoryData';
 import { getStoryEntry } from '../../stories';
@@ -33,7 +34,7 @@ function ReaderLoader({ entry }) {
   const engine = useMemo(() => (story ? createEngine(story, entry.slug) : null), [story, entry.slug]);
   const context = useMemo(() => (engine ? { slug: entry.slug, story, engine } : null), [engine, story, entry.slug]);
 
-  useDocumentMeta(`${entry.title} · Scifi priče`, entry.tagline);
+  useDocumentMeta(`${entry.title} · ${SITE_NAME}`, entry.tagline);
 
   return (
     <>

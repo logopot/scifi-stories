@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { SITE_NAME } from './src/config.js';
 import { siteTheme, themes } from './src/styles/themes.js';
 
 // Boja pozadine i theme-color po ruti, ubačeni u index.html pre učitavanja skripte,
@@ -10,6 +11,7 @@ const bootTheme = () => ({
     const bgBySlug = Object.fromEntries(Object.entries(themes).map(([slug, t]) => [slug, t.bg]));
     const script = `(function(){var m=${JSON.stringify(bgBySlug)};var s=location.pathname.split('/')[1]||'';var c=Object.prototype.hasOwnProperty.call(m,s)?m[s]:${JSON.stringify(siteTheme.bg)};var st=document.createElement('style');st.id='boot-theme';st.textContent='html,body{background:'+c+'}';document.head.appendChild(st);var mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',c);})();`;
     return html
+      .replaceAll('{{SITE_NAME}}', SITE_NAME)
       .replace('<meta name="theme-color" content="" />', `<meta name="theme-color" content="${siteTheme.bg}" />`)
       .replace('</head>', `    <script>${script}</script>\n  </head>`);
   },

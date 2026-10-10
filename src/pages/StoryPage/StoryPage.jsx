@@ -8,6 +8,7 @@ import Paragraph from '../../components/Paragraph';
 import Subtitle from '../../components/Subtitle';
 import TextLink from '../../components/TextLink';
 import { clearSave, hasSave } from '../../engine/storage';
+import { SITE_NAME } from '../../config';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import useStoryData from '../../hooks/useStoryData';
 import { getStoryEntry } from '../../stories';
@@ -30,7 +31,7 @@ function StoryPageContent({ entry }) {
   const description = soon ? entry.description || [] : story?.meta?.description || [];
   const readPath = `/${entry.slug}/citaj`;
 
-  useDocumentMeta(`${entry.title} · Scifi priče`, entry.tagline);
+  useDocumentMeta(`${entry.title} · ${SITE_NAME}`, entry.tagline);
 
   const details = [entry.genre, entry.minutes ? `oko ${entry.minutes} min` : null, soon ? 'Uskoro' : 'Priča se sama čuva']
     .filter(Boolean)

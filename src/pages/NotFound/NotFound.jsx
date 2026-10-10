@@ -3,11 +3,12 @@ import Button from '../../components/Button';
 import Heading from '../../components/Heading';
 import Page from '../../components/Page';
 import Paragraph from '../../components/Paragraph';
+import { SITE_NAME } from '../../config';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import * as S from './NotFound.styled';
 
 export default function NotFound() {
-  useDocumentMeta('Nema takve priče · Scifi priče', 'Tražena stranica ne postoji.');
+  useDocumentMeta(`Nema takve priče · ${SITE_NAME}`, 'Tražena stranica ne postoji.');
 
   return (
     <Page variant="narrow">

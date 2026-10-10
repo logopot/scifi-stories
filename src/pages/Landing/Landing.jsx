@@ -3,6 +3,7 @@ import Heading from '../../components/Heading';
 import Page from '../../components/Page';
 import StoryCard from '../../components/StoryCard';
 import Subtitle from '../../components/Subtitle';
+import { SITE_NAME } from '../../config';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { stories } from '../../stories';
 import * as S from './Landing.styled';
@@ -10,12 +11,12 @@ import * as S from './Landing.styled';
 const SUBTITLE = 'Kratke interaktivne naučnofantastične priče. Ti si glavni lik.';
 
 export default function Landing() {
-  useDocumentMeta('Scifi priče', SUBTITLE);
+  useDocumentMeta(SITE_NAME, SUBTITLE);
 
   return (
     <Page variant="wide">
       <S.Intro>
-        <Heading variant="title">Scifi priče</Heading>
+        <Heading variant="title">{SITE_NAME}</Heading>
         <Subtitle>{SUBTITLE}</Subtitle>
       </S.Intro>
       <div className="row g-4">
