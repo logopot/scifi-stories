@@ -22,7 +22,7 @@ export const stories = [
     genre: 'Naučna fantastika',
     minutes: 20,
     cover: 'img/poslednja-mera/cover.jpg',
-    coverAlt: 'Zaklon: grad ispod Visoke brane i suvo dno jezera',
+    coverAlt: 'Utočište: grad ispod Visoke brane i suvo dno jezera',
     status: 'ready',
     load: () => import('./poslednja-mera/story.json'),
   },

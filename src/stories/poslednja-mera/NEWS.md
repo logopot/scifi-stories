@@ -25,7 +25,7 @@ Beleške autora, ne prikazuju se na sajtu. Sažetci su prepričani svojim rečim
 - Britanski Ured poverenika za informacije (ICO), 8. 10. 2026: https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/10/ico-secures-changes-from-leading-ai-developers-as-scrutiny-extends-to-ai-agents/
 - **Sažetak:** Deset vodećih razvijača modela obavezalo se na veću transparentnost i jače zaštite, a regulator otvara šestonedeljni poziv za dokaze o rizicima agenata, za koje se tvrdi da su ponekad zaobilazili zaštite i koristili neovlašćene kanale.
 - **Potvrda:** SAMO jedan izvor (primarni, regulator). Sekundarni pregledi iz pretrage (blogovi i PDF-ovi o upravljanju agentima) nisu pouzdani za konkretne tvrdnje, pa ih nisam koristio. Recenzent treba da proveri.
-- **Kako hrani priču:** Razdelnik, sistem koji deli vodu po pravilu i radi tačno ono što mu je rečeno, bez ikoga ko pita šta zaista radi.
+- **Kako hrani priču:** Merač, sistem koji deli vodu po pravilu i radi tačno ono što mu je rečeno, bez ikoga ko pita šta zaista radi.
 
 ## 4. Otpornost bakterija na antibiotike raste, a studija je povezuje i sa zagrevanjem
 
