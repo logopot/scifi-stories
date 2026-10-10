@@ -74,7 +74,8 @@ Sve boje žive u `src/styles/themes.js` i samo tamo. Svaka tema je običan objek
 | `bg`, `bgSoft` | osnovna pozadina i njen tamniji/svetliji kraj gradijenta |
 | `surface` | površina kartica i okvira |
 | `text`, `textMuted`, `textFaint` | glavni tekst, prigušeni tekst, sitne oznake (broj strane, natpisi) |
-| `accent`, `accentContrast` | akcenat i boja teksta preko akcenta |
+| `accent` | akcenat (obrisi, naglašeni tekst, dekor) |
+| `accentStrong`, `onAccent` | tamniji akcenat za pune pozadine (hover dugmeta, oznaka „Nastavi“, izabrana opcija, slovo-avatar) i beli tekst preko njega (bar 4.5:1) |
 | `secondary`, `secondarySoft` | druga boja teme (hover linija, druga senka naslova) i njena prozirna varijanta |
 | `glowA`, `glowB` | dva sjaja pozadine |
 | `border` | linije i okviri |
@@ -99,7 +100,7 @@ export const mojaPrica = {
   name: 'moja-prica', mode: 'light', sky: 'twin-suns',
   bg: '#eef2f7', bgSoft: '#dde5ef', surface: '#f8fafc',
   text: '#1d2733', textMuted: '#465566', textFaint: '#66788a',
-  accent: '#2a5d9f', accentContrast: '#ffffff',
+  accent: '#2a5d9f', accentStrong: '#2a5d9f', onAccent: '#ffffff',
   secondary: '#c0792d', secondarySoft: 'rgba(192, 121, 45, 0.3)',
   glowA: 'rgba(90, 140, 220, 0.4)', glowB: 'rgba(240, 190, 120, 0.4)',
   border: 'rgba(29, 39, 51, 0.2)', selection: 'rgba(42, 93, 159, 0.3)',
@@ -111,7 +112,7 @@ export const mojaPrica = {
 
 Tema se bira po prvom segmentu URL-a (`ThemeController`), pa je poznata pre prvog crtanja; `vite.config.js` iz `themes.js` ubacuje boju pozadine i `theme-color` u `index.html`, tako da pri tvrdom osvežavanju nema treptaja. Kartice na početnoj strani se crtaju u temi svoje priče (ugnježdeni `ThemeProvider`). Teme „Tihi sat“ (tamna) i „Zelena granica“ (svetla) su rezervisana mesta; brišu se brisanjem unosa u `src/stories/index.js` i u `themes.js`.
 
-`npm run check-story` proverava da sve teme imaju isti skup tokena i kontrast (WCAG): `text/bg`, `textMuted/bg`, `text/surface`, `accentContrast/accent`, `btnText/btnBg`, `btnTextHover/btnBgHover`, `btnQuietTextHover/btnQuietBgHover` i `choiceTextSelected/choiceBgSelected` moraju imati bar 4.5:1, a `btnBorder/bg` i `focusRing/bg` bar 3:1. Nova tema znači samo popuniti ceo skup tokena; dugmad ne sadrže nijednu boju.
+`npm run check-story` proverava da sve teme imaju isti skup tokena i kontrast (WCAG): `text/bg`, `textMuted/bg`, `text/surface`, `onAccent/accentStrong`, `btnText/bg`, `btnTextHover/btnBgHover`, `btnQuietTextHover/btnQuietBgHover` i `choiceTextSelected/choiceBgSelected` moraju imati bar 4.5:1, a `btnBorder/bg` i `focusRing/bg` bar 3:1. Nova tema znači samo popuniti ceo skup tokena; dugmad ne sadrže nijednu boju.
 
 Tema „Bez opcije“ je tačan izgled priče pre uvođenja tema; ne menja se.
 

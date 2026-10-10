@@ -10,7 +10,7 @@ export const Root = styled.span`
   letter-spacing: ${({ theme }) => theme.tracking[20]};
   text-transform: uppercase;
   border-radius: ${({ theme }) => theme.radii.sm};
-  border: 1px solid ${({ $variant, theme }) => ($variant === 'accent' ? theme.accent : theme.border)};
-  background: ${({ $variant, theme }) => ($variant === 'accent' ? theme.accent : theme.surface)};
-  color: ${({ $variant, theme }) => ($variant === 'accent' ? theme.accentContrast : theme.textMuted)};
+  border: 1px solid ${({ $variant, theme }) => ($variant === 'accent' ? theme.accentStrong : theme.border)};
+  background: ${({ $variant, theme }) => ($variant === 'accent' ? theme.accentStrong : theme.surface)};
+  color: ${({ $variant, theme }) => ($variant === 'accent' ? theme.onAccent : theme.textMuted)};
 `;

@@ -2,7 +2,7 @@
 import { siteTheme, themes } from '../src/styles/themes.js';
 
 export const REQUIRED = [
-  'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentContrast',
+  'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentStrong', 'onAccent',
   'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
   'btnQuietText', 'btnQuietBorder', 'btnQuietBgHover', 'btnQuietTextHover', 'choiceBg', 'choiceBorder', 'choiceBgSelected',
   'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fontBody', 'fontHeading',
@@ -14,9 +14,9 @@ const MODES = ['light', 'dark'];
 const PAIRS = [
   ['text', 'bg', 4.5],
   ['textMuted', 'bg', 4.5],
-  ['accentContrast', 'accent', 4.5],
+  ['onAccent', 'accentStrong', 4.5],
+  ['btnText', 'bg', 4.5],
   ['text', 'surface', 4.5],
-  ['btnText', 'btnBg', 4.5],
   ['btnTextHover', 'btnBgHover', 4.5],
   ['btnQuietTextHover', 'btnQuietBgHover', 4.5],
   ['choiceTextSelected', 'choiceBgSelected', 4.5],

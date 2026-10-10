@@ -11,8 +11,8 @@ export const Root = styled.span`
   overflow: hidden;
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.border};
-  background: ${({ theme }) => theme.accent};
-  color: ${({ theme }) => theme.accentContrast};
+  background: ${({ theme }) => theme.accentStrong};
+  color: ${({ theme }) => theme.onAccent};
   font-family: ${({ theme }) => theme.fontHeading};
   font-size: ${({ theme }) => theme.fs[110]};
   font-weight: 600;
