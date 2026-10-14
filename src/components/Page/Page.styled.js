@@ -10,6 +10,9 @@ export const Main = styled.main`
           min-height: ${theme.sizes.screenMinHeight};
           min-height: ${theme.sizes.screenMinHeightDynamic};
           padding: ${theme.space[350]} 0 ${theme.space[600]};
+          /* uvodne animacije strana i ekrana (turnIn, fadeUp) pomeraju sadržaj nekoliko piksela udesno; bez isecanja
+             bi telefon dobio vodoravno pomeranje */
+          overflow-x: clip;
         `
       : css`
           flex: 1 0 auto;

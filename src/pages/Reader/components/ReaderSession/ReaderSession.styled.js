@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // Tih povratak na sajt: van toka teksta, pa ne menja raspored čitanja i nestaje sa skrolom.
 export const BackBar = styled.div`
   position: absolute;
+  z-index: ${({ theme }) => theme.zIndex.floating};
   top: ${({ theme }) => theme.space[100]};
   left: ${({ theme }) => theme.space[100]};
   display: flex;

@@ -4,7 +4,6 @@ import { useStory } from '../../engine/StoryContext';
 import useScrollReset from '../../hooks/useScrollReset';
 import ChapterMark from '../ChapterMark';
 import CharacterRow from '../CharacterRow';
-import Figure from '../Figure';
 import Heading from '../Heading';
 import Hint from '../Hint';
 import Menu from '../Menu';
@@ -12,7 +11,8 @@ import MenuLabel from '../MenuLabel';
 import MenuOption from '../MenuOption';
 import PageBox from '../PageBox';
 import PageNumber from '../PageNumber';
-import Paragraph from '../Paragraph';
+import SceneLine from '../SceneLine';
+import SpeechPanel from '../SpeechPanel';
 import * as S from './Scene.styled';
 
 const DEFAULT_IDLE_SECONDS = 20;
@@ -127,70 +127,64 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
       });
   }, [pages, page, engine, player]);
 
+  const choicesBlock = isLast && hasChoices && (
+    <Menu>
+      {node.prompt && <MenuLabel>{tr(node.prompt, node.promptf, player)}</MenuLabel>}
+      {node.choices.map((c, i) => (
+        <MenuOption key={c.id} index={i} onClick={() => choose(c)}>
+          {tr(c.text, c.textf, player)}
+        </MenuOption>
+      ))}
+      {node.hidden && ghostVisible && (
+        <MenuOption ghost index={0} onClick={() => choose(node.hidden, true)}>
+          {tr(node.hidden.text, node.hidden.textf, player)}
+        </MenuOption>
+      )}
+    </Menu>
+  );
+
+  // Izgled "scene": slika mesta je pozadina (vidi SceneBackdrop), tekst je u panelu. Lik uz panel je govornik
+  // prve replike na strani; bez replike na početku strane nema portreta ni imena u zaglavlju.
+  const first = current.texts[0];
+  const head = first.who ? engine.getCharacter(first.who, player) : null;
   return (
     <S.Article>
-      <PageBox key={`${nodeId}-${page}`} ref={boxRef}>
-        {chapter && node.showChapter && page === 0 && (
-          <>
-            <ChapterMark>{chapter.mark}</ChapterMark>
-            <Heading>{chapter.name}</Heading>
-          </>
-        )}
+      <SpeechPanel
+        name={head ? head.name : null}
+        portrait={head && head.image ? head.image.src : null}
+        side={head && head.reader ? 'right' : 'left'}
+        resetKey={`${nodeId}-${page}`}
+      >
+        <PageBox compact key={`${nodeId}-${page}`} ref={boxRef}>
+          {chapter && node.showChapter && page === 0 && (
+            <>
+              <ChapterMark>{chapter.mark}</ChapterMark>
+              <Heading>{chapter.name}</Heading>
+            </>
+          )}
 
-        {current.place && <Figure image={engine.getImage(current.place)} variant="place" />}
-        {current.portrait && <Figure image={engine.getImage(current.portrait)} variant="portrait" />}
+          {current.texts.map(({ t, who, with: withNames }, i) => {
+            const speaker = who ? engine.getCharacter(who, player) : null;
+            const extras = (withNames || []).map((n) => engine.getCharacter(n, player));
+            // Ime iznad replike samo kad ga ne prikazuje zaglavlje panela.
+            const label = speaker && !(i === 0 && head) ? speaker.name : null;
+            return (
+              <React.Fragment key={i}>
+                {extras.length > 0 && <CharacterRow characters={extras} />}
+                <SceneLine label={label}>{t}</SceneLine>
+              </React.Fragment>
+            );
+          })}
 
-        {current.texts.map(({ t, who, with: withNames }, i) => {
-          const speaker = who ? engine.getCharacter(who, player) : null;
-          // Veliki portret istog lika na strani je dovoljan: tada ostaje samo red sa imenom.
-          const sameAsPortrait = (c) => Boolean(c.imageId) && c.imageId === current.portrait;
-          const extras = (withNames || []).map((n) => engine.getCharacter(n, player)).filter((c) => !sameAsPortrait(c));
-          // Isti lik govori ponovo (bez drugog govornika između): portret samo uz prvu repliku.
-          const earlier = current.texts.slice(0, i).filter((x) => x.who);
-          const repeated = Boolean(who) && earlier[earlier.length - 1]?.who === who;
-          const follow = earlier.length > 0;
-          return (
-            <React.Fragment key={i}>
-              {extras.length > 0 && <CharacterRow characters={extras} />}
-              <Paragraph
-                who={speaker ? speaker.name : null}
-                image={speaker && speaker.image}
-                reader={Boolean(speaker && speaker.reader)}
-                follow={follow}
-                nameOnly={Boolean(speaker && (sameAsPortrait(speaker) || repeated))}
-              >
-                {t}
-              </Paragraph>
-            </React.Fragment>
-          );
-        })}
+          {!isLast && <Hint onClick={() => turn(1)}>{nextLead || story.ui.next}</Hint>}
+          {choicesBlock}
+          {isLast && !hasChoices && (
+            <Hint onClick={proceed}>{node.end ? story.ui.finish : sceneLead || story.ui.next}</Hint>
+          )}
 
-        {!isLast && (
-          <Hint onClick={() => turn(1)}>
-            {nextLead || story.ui.next}
-          </Hint>
-        )}
-
-        {isLast && hasChoices && (
-          <Menu>
-            {node.prompt && <MenuLabel>{tr(node.prompt, node.promptf, player)}</MenuLabel>}
-            {node.choices.map((c, i) => (
-              <MenuOption key={c.id} index={i} onClick={() => choose(c)}>
-                {tr(c.text, c.textf, player)}
-              </MenuOption>
-            ))}
-            {node.hidden && ghostVisible && (
-              <MenuOption ghost index={0} onClick={() => choose(node.hidden, true)}>
-                {tr(node.hidden.text, node.hidden.textf, player)}
-              </MenuOption>
-            )}
-          </Menu>
-        )}
-
-        {isLast && !hasChoices && <Hint onClick={proceed}>{node.end ? story.ui.finish : sceneLead || story.ui.next}</Hint>}
-
-        {pages.length > 1 && <PageNumber page={page + 1} total={pages.length} />}
-      </PageBox>
+          {pages.length > 1 && <PageNumber page={page + 1} total={pages.length} />}
+        </PageBox>
+      </SpeechPanel>
     </S.Article>
   );
 }

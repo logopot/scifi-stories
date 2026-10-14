@@ -98,19 +98,27 @@ export const sizes = {
   cardNudge: '4px',
   avatarSm: '44px',
   avatarMd: '56px',
-  ratioPlace: '16 / 9',
   ratioPortrait: '3 / 4',
   titleFluid: 'clamp(2.6rem, 8vw, 4.2rem)',
-  portraitFluid: 'clamp(120px, 28%, 190px)',
   pageWidth: '46rem',
-  speakerPortrait: 'clamp(13.75rem, 30vw, 17.5rem)',
-  speakerPortraitMaxVh: '45vh',
-  speakerPortraitSm: 'clamp(8rem, 18vw, 10.5rem)',
-  speakerBannerFollowMaxVh: '20vh',
-  speakerBannerRatio: '16 / 10',
-  speakerBannerMaxVh: '30vh',
-  speakerBar: '3px',
-  speakerLine: '2.5rem',
+  sceneImageHeightFallback: '50vh',
+  sceneImageHeight: '50svh',
+  sceneFocusMobile: 'center 40%',
+  sceneFocusDesktop: 'center 55%',
+  scenePortrait: 'min(21vw, 36vh)',
+  scenePortraitMobile: '29%',
+  sceneOverlap: '35%',
+  sceneHeadSpacer: '25%',
+  scenePanelShare: 0.67,
+  scenePortraitRise: 0.33,
+  scenePanelMax: '70vh',
+  scenePanelWidth: '92%',
+  scenePanelMaxWidth: '72rem',
+  sceneTextMax: '58ch',
+  sceneBlur: '6px',
+  sceneTitleLift: '2.5rem',
+  startColumnGap: '3rem',
+  startFieldMin: '15rem',
 };
 
 export const fonts = {
@@ -134,6 +142,8 @@ export const motion = {
   hint: '1.4s',
   sky: '0.8s',
   speaker: '0.18s',
+  sceneFade: '0.9s',
+  sceneDrift: '30s',
 };
 
 // Prelivi preko slike kartice: pun do prve vrednosti, pa nestaje do druge (gore i dole).
@@ -148,6 +158,7 @@ export const zIndex = {
   sky: 0,
   page: 1,
   floating: 2,
+  sceneBack: -1,
 };
 
 export const breakpoints = {

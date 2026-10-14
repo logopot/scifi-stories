@@ -5,7 +5,7 @@ export const Root = styled.button`
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.space[70]};
-  border: 2px solid ${({ theme, $on }) => ($on ? theme.choiceBgSelected : theme.choiceBorder)};
+  border: 2px solid ${({ theme, $on }) => ($on ? theme.choiceBgSelected : `color-mix(in srgb, ${theme.text} 45%, transparent)`)};
   background: ${({ theme, $on }) => ($on ? theme.choiceBgSelected : theme.choiceBg)};
   color: ${({ theme, $on }) => ($on ? theme.choiceTextSelected : theme.text)};
   padding: ${({ theme }) => theme.space[65]} ${({ theme }) => theme.space[150]};

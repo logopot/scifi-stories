@@ -1,7 +1,9 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer, useRef } from 'react';
+import OnImage from '../../../../components/OnImage';
 import LogoLink from '../../../../components/LogoLink';
 import Mirror from '../../../../components/Mirror';
 import Scene from '../../../../components/Scene';
+import SceneBackdrop from '../../../../components/SceneBackdrop';
 import StartScreen from '../../../../components/StartScreen';
 import TextLink from '../../../../components/TextLink';
 import { useStory } from '../../../../engine/StoryContext';
@@ -11,7 +13,7 @@ import * as S from './ReaderSession.styled';
 
 // Tok čitanja jedne priče: početni ekran -> scene -> kraj.
 export default function ReaderSession({ resume }) {
-  const { engine } = useStory();
+  const { engine, story, cover } = useStory();
   const [state, dispatch] = useReducer(engine.reducer, null, () => {
     const saved = resume ? engine.loadSaved() : null;
     return saved ? { ...engine.initialState, ...saved, screen: 'play' } : engine.initialState;
@@ -28,12 +30,48 @@ export default function ReaderSession({ resume }) {
 
   const player = { gender: state.gender, name: state.name };
 
+  // Jedan trajni sloj pozadine služi početnom ekranu (naslovna slika), stranama priče (slika mesta scene; scena bez
+  // slike zadržava prethodnu, pa naslovnu) i završnom ekranu (poslednja slika). Menja se samo `src`, pa se slike preliju.
+  const lastScene = useRef(null);
+  if (state.screen === 'start') lastScene.current = null;
+  const nodeImage = state.screen === 'play' ? engine.getImage(story.nodes[state.node]?.img) : null;
+  if (nodeImage && nodeImage.src) lastScene.current = nodeImage.src;
+  const backdropSrc = state.screen === 'start' ? cover : lastScene.current || cover;
+
+  // Slike mogućih sledećih scena (na početnom ekranu: prve scene) učitavaju se unapred, van glavne niti.
+  useEffect(() => {
+    if (state.screen === 'mirror') return;
+    const node = story.nodes[state.node];
+    const ids =
+      state.screen === 'start'
+        ? [story.start]
+        : [
+            node.next,
+            ...(node.branch || []).map((b) => b.next),
+            ...(node.choices || []).map((c) => c.next),
+            node.hidden?.next,
+          ];
+    ids
+      .filter(Boolean)
+      .map((id) => engine.getImage(story.nodes[id]?.img))
+      .filter((img) => img && img.src)
+      .forEach((img) => {
+        const im = new Image();
+        im.decoding = 'async';
+        im.src = `${import.meta.env.BASE_URL}${img.src}`;
+        im.decode?.().catch(() => {});
+      });
+  }, [state.screen, state.node, engine, story]);
+
   return (
     <>
-      <S.BackBar>
-        <LogoLink size="xs" />
-        <TextLink to="/">← Sve priče</TextLink>
-      </S.BackBar>
+      <SceneBackdrop src={backdropSrc} />
+      <OnImage>
+        <S.BackBar>
+          <LogoLink size="xs" />
+          <TextLink to="/">← Sve priče</TextLink>
+        </S.BackBar>
+      </OnImage>
       {state.screen === 'start' && (
         <StartScreen
           prefs={loadReaderPrefs()}
@@ -49,7 +87,12 @@ export default function ReaderSession({ resume }) {
         <Scene key={state.node} nodeId={state.node} picks={state.picks} player={player} dispatch={dispatch} />
       )}
       {state.screen === 'mirror' && (
-        <Mirror picks={state.picks} ending={state.ending} player={player} onRestart={() => dispatch({ type: 'RESET' })} />
+        <Mirror
+          picks={state.picks}
+          ending={state.ending}
+          player={player}
+          onRestart={() => dispatch({ type: 'RESET' })}
+        />
       )}
     </>
   );

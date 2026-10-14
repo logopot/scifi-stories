@@ -161,12 +161,12 @@ Na vrhu `story.json` stoji mapa `characters`; ključ je tačno ime govornika kak
 ```
 "characters": {
   "Orsa": { "img": "orsa" },     // img = id iz "images" (kind: "portrait")
-  "Marta": { "img": null }       // bez portreta: krug sa prvim slovom imena
+  "Marta": { "img": null }       // bez portreta: prikazuje se samo ime
 }
 ```
 
 - Čitalac: unos `"__reader__": { "who": "Ti", "imgM": "citalac-m", "imgF": "citalac-z" }`. Pasusi sa `"who": "Ti"` (ili samo tokenom `{ime}`/`{IME}`) prikazuju ime koje je čitalac upisao (ili Lazar/Milica) i njegov portret prema rodu. Obična pripovedna proza nema lice, a dugmad izbora su samo tekst.
-- Pasus sa `"who": "Orsa"` ispisuje ime govornika sa okruglim licem pored njega (isto lice na svakoj strani). Ako strana već prikazuje veliki portret tog lika (`img` na pasusu), mala slika se ne dodaje.
+- Pasus sa `"who": "Orsa"` ispisuje ime govornika, a ako strana počinje tom replikom, i njegov veliki portret uz ploču sa tekstom (vidi docs/STORY_SCHEMA.md, „Izgled stranice“).
 - Pasus može imati `"with": ["Marta"]`: red lica ispod kojih piše ime, iznad pasusa. Koristi se samo kad strana uvodi lik po imenu, a lik ne govori.
 - Ako slika nedostaje ili se ne učita, prikazuje se slovo (nema ikone pokvarene slike i nema skakanja rasporeda).
 - Kad dobiješ sliku za lik: dodaj unos u `images` (`kind: "portrait"`), fajl u `public/img/<slug>/` i promeni `img` u `characters`.

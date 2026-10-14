@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-// Priča koja se trenutno čita: { slug, story, engine }.
+// Priča koja se trenutno čita: { slug, story, engine, cover }.
 export const StoryContext = createContext(null);
 
 export const useStory = () => {

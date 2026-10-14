@@ -1,5 +1,6 @@
 // Provera tema: isti skup tokena u svakoj temi i WCAG kontrast čitljivih parova boja.
 import { siteTheme, themes } from '../src/styles/themes.js';
+import { onImageTheme } from '../src/styles/onImageTheme.js';
 
 export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentStrong', 'onAccent',
@@ -77,6 +78,23 @@ for (const [key, t] of Object.entries(all)) {
     const ci = contrast(t.onImage, hex);
     console.log(`${ci >= 4.5 ? 'ok  ' : 'LOŠE'} ${key.padEnd(15)} onImage/scrim (preko bele): ${ci.toFixed(2)} (min 4.5)`);
     if (ci < 4.5) errors.push(`tema "${key}": kontrast onImage/scrim je ${ci.toFixed(2)}, a mora biti bar 4.5`);
+    // Izgled scene: na širokom ekranu tekst stoji na ploči od scrim boje. Boja teksta je text (tamne teme) ili onImage
+    // (svetle teme, vidi styles/onImageTheme.js); ime govornika (accent) i fokus moraju ostati čitljivi na toj ploči.
+    if (key !== 'site') {
+      const pt = onImageTheme(t); // boje kakve se stvarno crtaju na ploči
+      const panel = [
+        ['text', 4.5],
+        ['textMuted', 4.5],
+        ['accent', 4.5],
+        ['btnText', 4.5],
+        ['focusRing', 3],
+      ];
+      for (const [fg, min] of panel) {
+        const cp = contrast(pt[fg], hex);
+        console.log(`${cp >= min ? 'ok  ' : 'LOŠE'} ${key.padEnd(15)} ${fg}/scrim (ploča scene): ${cp.toFixed(2)} (min ${min})`);
+        if (cp < min) errors.push(`tema "${key}": kontrast ${fg}/scrim (ploča scene) je ${cp.toFixed(2)}, a mora biti bar ${min}`);
+      }
+    }
   }
   for (const [fg, bg, min] of SOFT_PAIRS) {
     const c = contrast(t[fg], t[bg]);

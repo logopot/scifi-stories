@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overscroll-behavior-x: none;
     scroll-behavior: auto !important;
     background: ${({ theme }) => theme.bg};
   }

@@ -82,7 +82,7 @@ Kraj se prikazuje kad čitalac stigne do scene sa `end: "<idOse>"`.
 | `paragraphs` | niz pasusa (bar 1) | Proza scene (vidi dole). |
 | `chapter` | id poglavlja | Poglavlje kome scena pripada. |
 | `showChapter` | boolean | Prikaži naslov poglavlja na prvoj strani. |
-| `img` | id slike | Široka „slika mesta“; prikazuje se na prvoj strani scene. |
+| `img` | id slike | Slika mesta: pozadina svih strana scene i narednih scena bez `img` (vidi „Izgled stranice“). |
 | `prompt` | tekst | Rečenica iznad opcija; OBAVEZNA u scenama sa `choices`. |
 | `promptf` | tekst | Ženska varijanta za `prompt`. |
 | `choices` | niz izbora | Opcije na poslednjoj strani (vidi dole). |
@@ -101,13 +101,13 @@ Svaka scena mora imati izlaz: `choices`, `next`, `branch` ili `end`. Sve scene m
 | `tf` | tekst | Ženska varijanta teksta. |
 | `lead` | tekst | Nagoveštaj ove strane: prikazuje se kao tekst dugmeta na PRETHODNOJ strani (umesto „Dalje“). Za prvu stranu scene prikazuje ga dugme na kraju prethodne scene. |
 | `leadf` | tekst | Ženska varijanta za `lead`. |
-| `who` | tekst | Ime govornika; prikazuje se iznad replike sa okruglim licem (vidi `characters`). `"Ti"` je čitalac. |
+| `who` | tekst | Ime govornika; prikazuje se uz repliku sa portretom govornika (vidi „Izgled stranice“ i `characters`). `"Ti"` je čitalac. |
 | `if` | uslov | Pasus se prikazuje samo ako uslov važi (vidi „Uslovi“). Računa se jednom, pri ulasku u scenu. |
-| `img` | id slike | Veliki portret lika (`kind: "portrait"`), uz desnu ivicu teksta. |
+| `img` | id slike | Portret lika vezan za pasus (`kind: "portrait"`); u izgledu scene se ne prikazuje, portret govornika dolazi iz `characters`. |
 | `solo` | boolean | Pasus uvek ima svoju stranu (ne lepi se na prethodnu). |
-| `with` | niz imena | Lica likova koji se pojavljuju bez replike; red avatara iznad pasusa. |
+| `with` | niz imena | Lica likova koji se pojavljuju bez replike; red malih lica iznad pasusa. |
 
-**Pravila strana.** Svaki vidljiv pasus je jedna strana, osim kratkih replika: pasus čiji je tekst (posle zamene tokena) kraći od 80 znakova lepi se na prethodnu stranu, osim ako on ili prethodna strana imaju `solo`, ili je to prvi vidljiv pasus scene. Pri lepljenju `img` kratkog pasusa postaje portret strane ako je strana još nema. `lead` strane je `lead` njenog prvog pasusa. Slika mesta (`node.img`) ide na prvu stranu. Ako strana već prikazuje veliki portret lika (`img`), mali avatar istog lika se ne prikazuje.
+**Pravila strana.** Svaki vidljiv pasus je jedna strana, osim kratkih replika: pasus čiji je tekst (posle zamene tokena) kraći od 80 znakova lepi se na prethodnu stranu, osim ako on ili prethodna strana imaju `solo`, ili je to prvi vidljiv pasus scene. `lead` strane je `lead` njenog prvog pasusa. Slika mesta (`node.img`) je pozadina svih strana scene.
 
 Dugme na dnu strane: na stranama koje nisu poslednje prikazuje `lead` sledeće strane (ili `ui.next`); na poslednjoj strani scene sa izborom prikazuju se `prompt` i opcije; na poslednjoj strani scene bez izbora dugme prikazuje `lead` prve strane sledeće scene (ili `ui.finish` kad je scena `end`, odnosno `ui.next`).
 
@@ -157,17 +157,28 @@ Svi id-evi moraju postojati, a `lead` mora biti deklarisana osa.
 `"<id>": { "src": "img/<slug>/ime.jpg", "alt": "...", "kind": "portrait" | "place", "caption": "..." }`
 
 - `src` je putanja u `public/` i počinje sa `img/<slug>/`; ako fajla nema, slika se jednostavno ne prikazuje (validator upozorava).
-- `kind: "portrait"` (3:4) za likove; `caption` se ispisuje ispod velikog portreta. `kind: "place"` (16:9) za mesta.
+- `kind: "portrait"` (3:4) za likove; `kind: "place"` (16:9) za mesta.
 - Slike mesta vezuju se poljem `img` na sceni, portreti poljem `img` na pasusu ili u `characters`.
 
 ## `characters`
 
 Mapa lica po imenu govornika (tačno kao u `who`): `"Orsa": { "img": "orsa" }`.
 
-- `img`: id portreta iz `images` (`kind: "portrait"`) ili `null` (prikazuje se krug sa prvim slovom imena). Ako slika nedostaje ili se ne učita, prikazuje se isto slovo.
+- `img`: id portreta iz `images` (`kind: "portrait"`) ili `null` (prikazuje se samo ime). Ako slika nedostaje ili se ne učita, prikazuje se isto samo ime.
 - Svaki `who` i svaki lik iz `with` mora imati unos.
 - Čitalac: `"__reader__": { "who": "Ti", "imgM": "citalac-m", "imgF": "citalac-z" }`. Pasusi čiji je `who` jednak `reader.who` (ili samo token `{ime}`/`{IME}`) prikazuju ime koje je čitalac upisao (ili Lazar/Milica) i portret prema rodu.
 - Imena iz `who` prolaze kroz tokene imena samo ako ih sadrže.
+
+## Izgled stranice
+
+Sve priče se čitaju u izgledu „scene“ (kao film ili vizuelni roman); nema drugog izgleda ni prekidača.
+
+- **Pozadina** svake strane je slika mesta trenutne scene (`img` na sceni, preko `images`). Scena bez `img` zadržava sliku prethodne scene; dok nijedna nije poznata koristi se naslovna slika (`cover` u registru), a ako nje nema ili se fajl ne učita, ostaje pozadina teme.
+- **Širok ekran:** slika je iza celog ekrana, tekst je u tamnoj ploči pri dnu (izbori su u istoj ploči). Govornik prve replike na strani stoji uz ploču: lik levo, čitalac (`__reader__`) desno. Lik bez portreta (`img: null`) ima samo ime.
+- **Telefon:** slika je gornja polovina ekrana, a tekst i dugmad su ispod nje na pozadini teme; portret govornika preklapa donju ivicu slike.
+- Portret i ime u zaglavlju ploče pojavljuju se samo kad strana počinje replikom (`who`). Ako replika dolazi posle naracije na istoj strani, ime se piše iznad replike. Pasus bez `who` nema portret ni ime. `img` na pasusu (veliki portret) i zasebna slika mesta na prvoj strani se ne prikazuju.
+- Tekst preko slike koristi `onImage` / `scrim` boje teme; `check-themes.mjs` proverava kontrast za svaku temu.
+- **Preporuka:** definiši 6–9 slika mesta (16:9, JPG) i postavi `img` na svaku scenu u kojoj se menja mesto; scene između njih nasleđuju prethodnu sliku.
 
 ## Rod i imena
 

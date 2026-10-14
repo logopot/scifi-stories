@@ -32,7 +32,10 @@ function ReaderLoader({ entry }) {
   const location = useLocation();
   const { story, status } = useStoryData(entry);
   const engine = useMemo(() => (story ? createEngine(story, entry.slug) : null), [story, entry.slug]);
-  const context = useMemo(() => (engine ? { slug: entry.slug, story, engine } : null), [engine, story, entry.slug]);
+  const context = useMemo(
+    () => (engine ? { slug: entry.slug, story, engine, cover: entry.cover || null } : null),
+    [engine, story, entry.slug, entry.cover]
+  );
 
   useDocumentMeta(`${entry.title} · ${SITE_NAME}`, entry.tagline);
 
