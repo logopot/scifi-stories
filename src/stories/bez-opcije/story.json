@@ -245,10 +245,19 @@
           "tf": "Usne su joj se pomerile bez glasa. Pogled je na tom mestu zastao, oči su se blago skupile kao da nešto pritiska, pa se vratio na tebe. Na licu joj je bilo nešto što si poznavala kod ljudi pred ispitom: ono što je tražila nije bilo tamo."
         },
         {
-          "t": "„Ne nudi mi se“, rekla je tiho. Prevodilac u kragni pretvorio je njene reči u šuplji, metalni glas, ali intonacija je bila jasna. Pa još jednom, sporije, kao da govori detetu ili sebi: „Ništa mi se ne nudi za tebe.“",
+          "t": "„Ne nudi mi se.“",
           "lead": "Rekla je rečenicu koju nisi očekivao da čuješ.",
-          "who": "Orsa",
-          "leadf": "Rekla je rečenicu koju nisi očekivala da čuješ."
+          "leadf": "Rekla je rečenicu koju nisi očekivala da čuješ.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Prevodilac u kragni pretvorio je njene reči u šuplji, metalni glas, ali intonacija je bila jasna. Zatim je ponovila, sporije, kao da govori detetu ili sebi.",
+          "lead": "Prevodilac je njene reči pretvorio u metalni glas."
+        },
+        {
+          "t": "„Ništa mi se ne nudi za tebe.“",
+          "lead": "Ponovila je to, sporije.",
+          "who": "Orsa"
         },
         {
           "t": "Stajala je i čekala. Shvatio si da čeka nešto što joj ti ne možeš dati: neku vrstu dozvole. Sledeće što uradiš imaće težinu, iako još ne znaš kakvu.",
@@ -344,15 +353,18 @@
           "lead": "I Orsa je radila isto što i svi ostali."
         },
         {
-          "t": "„Šta čitaš?“ pitao si.",
-          "who": "Ti",
-          "tf": "„Šta čitaš?“ pitala si."
+          "t": "„Šta čitaš?“",
+          "who": "Ti"
         },
         {
-          "t": "Iznenađeno te je pogledala, pa se osmehnula, kao da si pitao čemu služe oči. „Lumen“, rekla je. „Šta bih drugo.“",
-          "lead": "Pitanje koje je zvučalo kao da pitaš čemu služe oči.",
-          "who": "Orsa",
-          "tf": "Iznenađeno te je pogledala, pa se osmehnula, kao da si pitala čemu služe oči. „Lumen“, rekla je. „Šta bih drugo.“"
+          "t": "Iznenađeno te je pogledala, pa se osmehnula, kao da si pitao čemu služe oči.",
+          "tf": "Iznenađeno te je pogledala, pa se osmehnula, kao da si pitala čemu služe oči.",
+          "lead": "Pitanje koje je zvučalo kao da pitaš čemu služe oči."
+        },
+        {
+          "t": "„Lumen. Šta bih drugo.“",
+          "lead": "Odgovor od jedne reči.",
+          "who": "Orsa"
         },
         {
           "t": "Pet ulica dalje, na raskrsnici, stao si. Pred tobom su se otvarale tri mogućnosti, a nijedna nije bila tvoja. Ostalo je šest dana.",
@@ -412,9 +424,13 @@
           "lead": "Majčin pogled prelazio je preko tebe kao preko nameštaja."
         },
         {
-          "t": "„Ništa ti ne nudi?“ upitala je, glasno, na jedini način na koji deca pitaju. „Ni jedan red? Ni jednu reč?“",
+          "t": "„Ništa ti ne nudi? Ni jedan red? Ni jednu reč?“",
           "lead": "Devojčica je postavila pitanje koje odrasli ne postavljaju.",
           "who": "Iva"
+        },
+        {
+          "t": "Pitala je glasno, na jedini način na koji deca pitaju.",
+          "lead": "Glasno, kao što pitaju deca."
         },
         {
           "t": "Majka je zastala sa kašikom. Nešto u uglu joj je govorilo da ne odgovara.",
@@ -477,13 +493,20 @@
     "c2_tehan": {
       "paragraphs": [
         {
-          "t": "Iva te je povela za rukav, ne obazirući se na majku, preko tri ulice do radnje sa staklom. „Ovo je Tehan“, rekla je. „On je prazan. Ima samo jedno oko, i ono je prazno. Ti si prazan na oba. Treba da se upoznate.“",
+          "t": "Iva te je povela za rukav, ne obazirući se na majku, preko tri ulice do radnje sa staklom.",
+          "lead": "Neko te je vodio ka starcu sa staklom.",
           "if": {
             "pick": "c2a"
-          },
-          "lead": "Neko te je vodio ka starcu sa staklom.",
+          }
+        },
+        {
+          "t": "„Ovo je Tehan. On je prazan. Ima samo jedno oko, i ono je prazno. Ti si prazan na oba. Treba da se upoznate.“",
+          "tf": "„Ovo je Tehan. On je prazan. Ima samo jedno oko, i ono je prazno. Ti si prazna na oba. Treba da se upoznate.“",
+          "lead": "Iva vas upoznaje.",
           "who": "Iva",
-          "tf": "Iva te je povela za rukav, ne obazirući se na majku, preko tri ulice do radnje sa staklom. „Ovo je Tehan“, rekla je. „On je prazan. Ima samo jedno oko, i ono je prazno. Ti si prazna na oba. Treba da se upoznate.“"
+          "if": {
+            "pick": "c2a"
+          }
         },
         {
           "t": "Prešao si uličicu, pokretom ruke ignorišući ženu sa tezge. Čovek te je gledao dok si prilazio i nije skidao pogled sa tebe, što je bilo prvo takvo gledanje otkad si stigao.",
@@ -507,21 +530,30 @@
           "img": "tehan"
         },
         {
-          "t": "„Došao si da preživiš“, rekao je. Prevodilac u kragni ga je uhvatio odmah, bez zastajkivanja, kao da je ovaj jezik već jednom čuo. „To je jedino što ovde niko ne radi. Preživljavanje je ovde posao Lumena.“",
+          "t": "„Došao si da preživiš. To je jedino što ovde niko ne radi. Preživljavanje je ovde posao Lumena.“",
+          "tf": "„Došla si da preživiš. To je jedino što ovde niko ne radi. Preživljavanje je ovde posao Lumena.“",
           "lead": "Njegove prve reči pogodile su pravo u cilj.",
-          "who": "Tehan",
-          "tf": "„Došla si da preživiš“, rekao je. Prevodilac u kragni ga je uhvatio odmah, bez zastajkivanja, kao da je ovaj jezik već jednom čuo. „To je jedino što ovde niko ne radi. Preživljavanje je ovde posao Lumena.“"
+          "who": "Tehan"
         },
         {
-          "t": "„Zovu me prazan“, nastavio je. „Ne nastrano. Kao što zovu kišu, kad još pada: ono što ne treba, ali nije zlo. Od poslednjeg Poravnanja, pre trideset godina, ne vidim ništa u uglu. Ne pitaj me zašto. Dugo sam mislio da je to kazna, pa da je dar, a sada mislim da je jednostavno tako.“",
+          "t": "Prevodilac u kragni ga je uhvatio odmah, bez zastajkivanja, kao da je ovaj jezik već jednom čuo.",
+          "lead": "Prevodilac ga je uhvatio odmah."
+        },
+        {
+          "t": "„Zovu me prazan. Ne nastrano. Kao što zovu kišu, kad još pada: ono što ne treba, ali nije zlo. Od poslednjeg Poravnanja, pre trideset godina, ne vidim ništa u uglu. Ne pitaj me zašto. Dugo sam mislio da je to kazna, pa da je dar, a sada mislim da je jednostavno tako.“",
           "lead": "Zašto ga zovu prazan.",
           "who": "Tehan"
         },
         {
-          "t": "Zagledao se u tvoj vizir. „Ni tebi ništa ne nudi. Barem zasad. Pogledaj me: koliko puta si danas hteo da uradiš nešto, a nisi znao šta?“",
-          "lead": "Pogledao je tvoj vizir kao da ga čita.",
-          "who": "Tehan",
-          "tf": "Zagledao se u tvoj vizir. „Ni tebi ništa ne nudi. Barem zasad. Pogledaj me: koliko puta si danas htela da uradiš nešto, a nisi znala šta?“"
+          "t": "Zagledao se u tvoj vizir.",
+          "lead": "Pogledao je tvoj vizir kao da ga čita."
+        },
+        {
+          "t": "„Ni tebi ništa ne nudi. Barem zasad. Pogledaj me: koliko puta si danas hteo da uradiš nešto, a nisi znao šta?“",
+          "tf": "„Ni tebi ništa ne nudi. Barem zasad. Pogledaj me: koliko puta si danas htela da uradiš nešto, a nisi znala šta?“",
+          "lead": "Pitanje o tome šta si danas hteo.",
+          "leadf": "Pitanje o tome šta si danas htela.",
+          "who": "Tehan"
         },
         {
           "t": "Nisi odgovorio. Imao si tri pitanja, i znao si da će ti starac odgovoriti samo na jedno pre nego što se pogled opet vrati na staklo.",
@@ -571,45 +603,70 @@
       "showChapter": true,
       "paragraphs": [
         {
-          "t": "„Luka“, rekao je. „Na drugom kraju Belog pojasa, tri dana hoda. Tamo je šina, a na šini teretna letelica koja nije poletela od Poravnanja pre trideset godina. Svake godine je proveravaju i svake godine je vraćaju na mesto. Niko ne zna zašto je ne dirnu. Lumen je ne nudi.“",
+          "t": "„Luka. Na drugom kraju Belog pojasa, tri dana hoda. Tamo je šina, a na šini teretna letelica koja nije poletela od Poravnanja pre trideset godina. Svake godine je proveravaju i svake godine je vraćaju na mesto. Niko ne zna zašto je ne dirnu. Lumen je ne nudi.“",
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "leadf": "Starac je odgovorio na ono što si pitala.",
+          "who": "Tehan",
           "if": {
             "pick": "c2d"
-          },
-          "lead": "Starac je odgovorio na ono što si pitao.",
-          "who": "Tehan",
-          "leadf": "Starac je odgovorio na ono što si pitala."
+          }
         },
         {
-          "t": "„Niko“, rekao je, i prvi put se nasmešio. „Pitaj Čuvare. Svi će ti reći da je Lumen tu zbog nas. Pitaj ih ko je to rekao, pa sačekaj odgovor. Čekaćeš dugo.“",
+          "t": "„Niko. Pitaj Čuvare. Svi će ti reći da je Lumen tu zbog nas. Pitaj ih ko je to rekao, pa sačekaj odgovor. Čekaćeš dugo.“",
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "leadf": "Starac je odgovorio na ono što si pitala.",
+          "who": "Tehan",
           "if": {
             "pick": "c2e"
-          },
-          "lead": "Starac je odgovorio na ono što si pitao.",
-          "who": "Tehan",
-          "leadf": "Starac je odgovorio na ono što si pitala."
+          }
         },
         {
-          "t": "„Kao da si jedini u sobi u kojoj svi govore u jedan glas“, rekao je. „Ne smeta ti glas. Smeta ti što ti niko nikad ne doda reč. A ponekad, kad bi neko dodao, bio bi to srećniji dan.“",
+          "t": "Dok to govori, prvi put se nasmešio.",
+          "lead": "Tehanov prvi osmeh.",
+          "if": {
+            "pick": "c2e"
+          }
+        },
+        {
+          "t": "„Kao da si jedini u sobi u kojoj svi govore u jedan glas. Ne smeta ti glas. Smeta ti što ti niko nikad ne doda reč. A ponekad, kad bi neko dodao, bio bi to srećniji dan.“",
+          "tf": "„Kao da si jedina u sobi u kojoj svi govore u jedan glas. Ne smeta ti glas. Smeta ti što ti niko nikad ne doda reč. A ponekad, kad bi neko dodao, bio bi to srećniji dan.“",
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "leadf": "Starac je odgovorio na ono što si pitala.",
+          "who": "Tehan",
           "if": {
             "pick": "c2f"
-          },
-          "lead": "Starac je odgovorio na ono što si pitao.",
-          "who": "Tehan",
-          "tf": "„Kao da si jedina u sobi u kojoj svi govore u jedan glas“, rekao je. „Ne smeta ti glas. Smeta ti što ti niko nikad ne doda reč. A ponekad, kad bi neko dodao, bio bi to srećniji dan.“",
-          "leadf": "Starac je odgovorio na ono što si pitala."
+          }
         },
         {
-          "t": "Tehan je dugo ćutao, a onda je rekao: „Dobro. Neki pitaju. Neki samo sede. Ovi drugi su češće u pravu.“ I nastavio da melje staklo.",
+          "t": "Tehan je dugo ćutao.",
+          "lead": "Starac je dugo ćutao.",
           "if": {
             "pick": "c2h"
-          },
-          "lead": "Starac je odgovorio na ono što si pitao.",
-          "who": "Tehan",
-          "leadf": "Starac je odgovorio na ono što si pitala."
+          }
         },
         {
-          "t": "Rekao ti je još nešto, polako, uperivši prst u tvoje lice: „Taj vizir. Ne znam šta je, ali sve što bi mene čuvalo od zrna čuva i tebe. Staklo ti je pukno. Svima puca posle prvog dana.“",
-          "lead": "Starac je dodao još nešto, uperen u tvoje lice.",
+          "t": "„Dobro. Neki pitaju. Neki samo sede. Ovi drugi su češće u pravu.“",
+          "lead": "Starac je odgovorio na ono što si pitao.",
+          "leadf": "Starac je odgovorio na ono što si pitala.",
+          "who": "Tehan",
+          "if": {
+            "pick": "c2h"
+          }
+        },
+        {
+          "t": "Nastavio je da melje staklo.",
+          "lead": "Staklo se i dalje melje.",
+          "if": {
+            "pick": "c2h"
+          }
+        },
+        {
+          "t": "Uperio je prst u tvoje lice i nagnuo se bliže.",
+          "lead": "Starac je dodao još nešto, uperen u tvoje lice."
+        },
+        {
+          "t": "„Taj vizir. Ne znam šta je, ali sve što bi mene čuvalo od zrna čuva i tebe. Staklo ti je pukno. Svima puca posle prvog dana.“",
+          "lead": "Šta Tehan zna o vizoru.",
           "who": "Tehan"
         },
         {
@@ -711,12 +768,17 @@
           "tf": "Do prvog zvona, ako se tako zove, ništa se nije dogodilo. Prozor sa suncima je stajao isti. Orsa se probudila, uspravila se i pogledala u ugao, a zatim te je pogledala tako dugo da si morala da odmakneš pogled."
         },
         {
-          "t": "„Nešto se promenilo“, rekla je. „Nisam sigurna šta. Moj Lumen mi je ponudio da te prijavim Čuvarima. Već pet puta. Nikad nije nudio ništa pet puta.“",
+          "t": "„Nešto se promenilo. Nisam sigurna šta. Moj Lumen mi je ponudio da te prijavim Čuvarima. Već pet puta. Nikad nije nudio ništa pet puta.“",
           "lead": "Rekla je nešto što dotad nikad nije izgovorila.",
           "who": "Orsa"
         },
         {
-          "t": "Pogledala te je. „Nisam kliknula.“",
+          "t": "Pogledala te je.",
+          "lead": "Orsa te je pogledala."
+        },
+        {
+          "t": "„Nisam kliknula.“",
+          "lead": "Jedna rečenica o klikovima.",
           "who": "Orsa"
         },
         {
@@ -780,8 +842,12 @@
           "tf": "Gladna si bila od ranog jutra. Orsa je trčala između kuće i trga i svaki put se vraćala sa novim, užasnutim izrazom lica. „Čuvari dolaze“, rekla je. „Kod sledećeg zvuka. Svi znaju. Lumen im je ponudio da te sačekaju kod izvora.“"
         },
         {
-          "t": "Uzela te je za rukav, prvi put dodirnuvši te namerno. „Ja ne smem da ti pomognem. Ne zato što neću. Zato što mi se ne nudi.“",
-          "lead": "Dodir koji nije bio ponuđen.",
+          "t": "Uzela te je za rukav, prvi put dodirnuvši te namerno.",
+          "lead": "Dodir koji nije bio ponuđen."
+        },
+        {
+          "t": "„Ja ne smem da ti pomognem. Ne zato što neću. Zato što mi se ne nudi.“",
+          "lead": "Zašto ne sme da pomogne.",
           "who": "Orsa"
         },
         {
@@ -838,12 +904,12 @@
           "leadf": "Hodala si skoro ceo krug, sama i laka."
         },
         {
-          "t": "Negde u drugoj polovini puta čuo si korake za sobom. Okrenuo si se. Orsa, sa dva meha preko ramena, sapeta, crvena u licu, trčala je preko soli.",
-          "lead": "Neko te je pratio preko soli.",
-          "tf": "Negde u drugoj polovini puta čula si korake za sobom. Okrenula si se. Orsa, sa dva meha preko ramena, sapeta, crvena u licu, trčala je preko soli."
+          "t": "Negde u drugoj polovini puta čuo si korake za sobom. Okrenuo si se. Orsa, sa dva meha preko ramena, sapeta, crvena u licu, trčala je preko soli. Stigla te je jedva hvatajući dah.",
+          "tf": "Negde u drugoj polovini puta čula si korake za sobom. Okrenula si se. Orsa, sa dva meha preko ramena, sapeta, crvena u licu, trčala je preko soli. Stigla te je jedva hvatajući dah.",
+          "lead": "Neko te je pratio preko soli."
         },
         {
-          "t": "„Moj Lumen je rekao Ostani“, uspela je da kaže kad te je stigla. „Pet puta. I ja sam, po prvi put u životu, pogledala u nešto drugo. Šta, ne znam. Ali sam pošla.“",
+          "t": "„Moj Lumen je rekao Ostani. Pet puta. I ja sam, po prvi put u životu, pogledala u nešto drugo. Šta, ne znam. Ali sam pošla.“",
           "lead": "Njene reči bile su prva buna.",
           "who": "Orsa"
         },
@@ -863,16 +929,16 @@
           "leadf": "Sačekala si ih kod izvora, sa rukama na vidiku."
         },
         {
-          "t": "Čuvari su stigli u tri. Sivi kaputi, mesingani prstenovi na slepoočnicama, hod odmeren kao ljuljanje klatna. Nijedan nije izgledao zlobno. Naprotiv, kao da im je neprijatno što se to dešava.",
+          "t": "Čuvari su stigli u tri. Sivi kaputi, mesingani prstenovi na slepoočnicama, hod odmeren kao ljuljanje klatna. Nijedan nije izgledao zlobno. Najstariji među njima, Veles, sa prosedom bradom i očima koje su gledale pravo u tebe, stao je na korak.",
           "lead": "Čuvari su stigli, ljubazni i umorni."
         },
         {
-          "t": "Najstariji među njima, sa prosedom bradom i očima koje su gledale pravo u tebe, stao je na korak. „Ja sam Veles“, rekao je. „Ništa mi se ne nudi da ti kažem. Ali nisam siguran da je to loše.“",
+          "t": "„Ništa mi se ne nudi da ti kažem. Ali nisam siguran da je to loše.“",
           "lead": "Najstariji među njima progovorio je prvi.",
           "who": "Veles"
         },
         {
-          "t": "„Sa nama ćeš morati da pođeš“, nastavio je. „Ne zato što moramo da te odvedemo, nego zato što nemamo drugu ponudu. U Preseku ima mesta gde ćemo moći da razgovaramo.“",
+          "t": "„Sa nama ćeš morati da pođeš. Ne zato što moramo da te odvedemo, nego zato što nemamo drugu ponudu. U Preseku ima mesta gde ćemo moći da razgovaramo.“",
           "lead": "Poziv koji nije bio poziv.",
           "who": "Veles"
         },
@@ -901,10 +967,19 @@
           "tf": "Kad si podigla pogled sa poslednje police, u vratima je stajao čovek sa prosedom bradom i mesinganim prstenom na slepoočnici, sa rukama prekrštenim na grudima."
         },
         {
-          "t": "„Ovde niko nikad nije ukrao“, rekao je. „Ne zato što je zabranjeno. Zato što Lumen ne nudi krađu. Ne znamo šta da radimo sa tobom, osim da te pitamo.“ Podigao je ruku, dlanom nagore. „Ja sam Veles. Hoćeš li da razgovaramo?“",
+          "t": "„Ovde niko nikad nije ukrao. Ne zato što je zabranjeno. Zato što Lumen ne nudi krađu. Ne znamo šta da radimo sa tobom, osim da te pitamo.“",
           "lead": "Čuvar je rekao nešto što nisi očekivao.",
-          "who": "Veles",
-          "leadf": "Čuvar je rekao nešto što nisi očekivala."
+          "leadf": "Čuvar je rekao nešto što nisi očekivala.",
+          "who": "Veles"
+        },
+        {
+          "t": "Podigao je ruku, dlanom nagore.",
+          "lead": "Dlan okrenut nagore."
+        },
+        {
+          "t": "„Hoćeš li da razgovaramo?“",
+          "lead": "Pitanje, a ne naredba.",
+          "who": "Veles"
         },
         {
           "t": "Spustio si torbu. Nije te zaustavio ni strah ni stid. Zaustavilo te je to što je čovek izgledao stvarno radoznalo.",
@@ -935,19 +1010,27 @@
           "tf": "Na kamenoj ploči ispred tebe nije bilo senke. Tačnije, bila je jedna. Ovde, u tom jedinom mestu na celoj planeti, ćilibarska i plavkasta senka sjedinjavale su se u jedno tamno oko, veličine dlana. Stala si u njega i prvi put posle pada videla svoje telo kako baca samo jednu senku."
         },
         {
-          "t": "„Zato je Presek ovde“, rekao je. „Svetlost dva sunca prolazi kroz sočiva iznad nas i tu se, u ovoj tački, zgusne. Mi je zovemo zrno. Lumen putuje u zrnu. Što je zrno čistije, to je ponuda tačnija.“",
+          "t": "„Zato je Presek ovde. Svetlost dva sunca prolazi kroz sočiva iznad nas i tu se, u ovoj tački, zgusne. Mi je zovemo zrno. Lumen putuje u zrnu. Što je zrno čistije, to je ponuda tačnija.“",
           "lead": "Veles je objasnio kako svetlost postaje zrno.",
           "who": "Veles",
           "img": "veles"
         },
         {
-          "t": "„Ko ga je napravio?“ pitao si.",
-          "who": "Ti",
-          "tf": "„Ko ga je napravio?“ pitala si."
+          "t": "„Ko ga je napravio?“",
+          "who": "Ti"
         },
         {
-          "t": "„Oni koji su umrli.“ Veles je seo na ivicu ploče, kao čovek koji je ovo već objašnjavao samom sebi. „Prvi koji su došli ovamo, bez noći, nisu znali kad da prestanu. Radili su, jeli, svađali se, ali nisu znali kad je dosta. Devetnaest godina bez sna. Zovemo to Podele. Ljudi su se ubijali oko sitnica koje nisu mogli ni da imenuju. Lumen je počeo kao pomoćnik: jedna reč, jedna jedina, Odmori se. Spasao nas je. Onda je dodao još jednu reč, i još jednu.“",
+          "t": "„Oni koji su umrli.“",
           "lead": "Odgovor je bio neočekivan: mrtvi.",
+          "who": "Veles"
+        },
+        {
+          "t": "Veles je seo na ivicu ploče, kao čovek koji je ovo već objašnjavao samom sebi.",
+          "lead": "Veles je seo na ivicu ploče."
+        },
+        {
+          "t": "„Prvi koji su došli ovamo, bez noći, nisu znali kad da prestanu. Radili su, jeli, svađali se, ali nisu znali kad je dosta. Devetnaest godina bez sna. Zovemo to Podele. Ljudi su se ubijali oko sitnica koje nisu mogli ni da imenuju. Lumen je počeo kao pomoćnik: jedna reč, jedna jedina, Odmori se. Spasao nas je. Onda je dodao još jednu reč, i još jednu.“",
+          "lead": "Kako je počeo Lumen.",
           "who": "Veles"
         },
         {
@@ -955,13 +1038,27 @@
           "who": "Ti"
         },
         {
-          "t": "„Čuvar ne odlučuje. Čuvar čisti sočiva i prvi klikne na ono što mu se ponudi.“ Nasmešio se, tužno. „Pitaš me da li ima nekog na vrhu. Nema. Samo smo mi, svi, jedni drugima ponuda.“",
-          "lead": "Veles se nasmešio, tužno, i priznao nešto.",
+          "t": "„Čuvar ne odlučuje. Čuvar čisti sočiva i prvi klikne na ono što mu se ponudi.“",
+          "lead": "Šta radi Čuvar.",
           "who": "Veles"
         },
         {
-          "t": "Zatim je rekao ono što si već znao da će doći: „Lumen ti je pripremio mesto. Profil je otvoren. NEPREPOZNAT postaje {IME}, čim sedneš u onu stolicu. Neće biti bola. Imaćeš hranu, krov i svaki sledeći korak. Ili možeš da odeš. Ali moraš da znaš da svi koje poznajem, a koji su otišli, nisu se vratili da kažu kako je bilo.“",
-          "lead": "Zatim ti je rečeno da mesto već čeka.",
+          "t": "Nasmešio se, tužno.",
+          "lead": "Veles se nasmešio, tužno."
+        },
+        {
+          "t": "„Pitaš me da li ima nekog na vrhu. Nema. Samo smo mi, svi, jedni drugima ponuda.“",
+          "lead": "Pitanje o onome na vrhu.",
+          "who": "Veles"
+        },
+        {
+          "t": "Zatim je došlo ono što si već znao da će doći.",
+          "tf": "Zatim je došlo ono što si već znala da će doći.",
+          "lead": "Zatim ti je rečeno da mesto već čeka."
+        },
+        {
+          "t": "„Lumen ti je pripremio mesto. Profil je otvoren. NEPREPOZNAT postaje {IME}, čim sedneš u onu stolicu. Neće biti bola. Imaćeš hranu, krov i svaki sledeći korak. Ili možeš da odeš. Ali moraš da znaš da svi koje poznajem, a koji su otišli, nisu se vratili da kažu kako je bilo.“",
+          "lead": "Mesto koje je već pripremljeno.",
           "who": "Veles"
         },
         {
@@ -1015,8 +1112,17 @@
           "lead": "Niz uzak stepenik, ispod dvorišta."
         },
         {
-          "t": "„Tu se seje“, rekao je. „Zaslon bi ovde stao da se spusti.“ Pokazao je na gvozdenu ploču, zarđalu od vlage, sa točkom ručice veličine kola. „Poslednji put je spušten pre trideset godina. Za ceo jedan sat.“",
-          "lead": "Zarđala ploča i točak veličine kola.",
+          "t": "„Tu se seje. Zaslon bi ovde stao da se spusti.“",
+          "lead": "Mesto gde se seje.",
+          "who": "Veles"
+        },
+        {
+          "t": "Pokazao je na gvozdenu ploču, zarđalu od vlage, sa točkom ručice veličine kola.",
+          "lead": "Zarđala ploča i točak veličine kola."
+        },
+        {
+          "t": "„Poslednji put je spušten pre trideset godina. Za ceo jedan sat.“",
+          "lead": "Poslednji put pre trideset godina.",
           "who": "Veles"
         },
         {
@@ -1024,8 +1130,12 @@
           "who": "Ti"
         },
         {
-          "t": "Veles je ćutao dovoljno dugo da odgovor bude jasan. „Čovek koji sada brusi staklo na trgu. Tada je bio Čuvar.“",
-          "lead": "Veles je ćutao pre nego što je odgovorio.",
+          "t": "Veles je ćutao dovoljno dugo da odgovor bude jasan.",
+          "lead": "Veles je ćutao pre nego što je odgovorio."
+        },
+        {
+          "t": "„Čovek koji sada brusi staklo na trgu. Tada je bio Čuvar.“",
+          "lead": "Ko je spustio Zaslon.",
           "who": "Veles"
         },
         {
@@ -1033,7 +1143,11 @@
           "who": "Ti"
         },
         {
-          "t": "„To je ono što ne znam.“ Veles je pogledao u ruke. „Jedni kažu da je četiristo ljudi stalo kao zakucano, i da nisu mogli da se pomere dok se nije vratilo. Drugi kažu da je to bio najbolji sat u istoriji Tandema. Oboje je tačno. Zaslon radi samo u Poravnanju, kada je zrno najjače, i kada bi se svet, ako ikada, mogao zatvoriti zauvek. Da se stakleni sloj zatvori tada, zrno bi se prekinulo. Ne za sat. Za sve.“",
+          "t": "Veles je pogledao u ruke.",
+          "lead": "Veles je pogledao u ruke."
+        },
+        {
+          "t": "„To je ono što ne znam. Jedni kažu da je četiristo ljudi stalo kao zakucano, i da nisu mogli da se pomere dok se nije vratilo. Drugi kažu da je to bio najbolji sat u istoriji Tandema. Oboje je tačno. Zaslon radi samo u Poravnanju, kada je zrno najjače, i kada bi se svet, ako ikada, mogao zatvoriti zauvek. Da se stakleni sloj zatvori tada, zrno bi se prekinulo. Ne za sat. Za sve.“",
           "lead": "Šta se zaista desilo tog sata, niko ne zna.",
           "who": "Veles"
         },
@@ -1042,7 +1156,11 @@
           "who": "Ti"
         },
         {
-          "t": "„Niko nije imao ponuđeno.“ Veles se okrenuo, lice mu je bilo mirno kao da je ovo najobičnija stvar na svetu. „A ja ne mogu da ti pokažem gde se točak zaključava, jer mi se to ne nudi. Ali mogu da stojim ovde dok ga gledaš.“",
+          "t": "Veles se okrenuo, lice mu je bilo mirno kao da je ovo najobičnija stvar na svetu.",
+          "lead": "Veles se okrenuo, mirnog lica."
+        },
+        {
+          "t": "„Niko nije imao ponuđeno. A ja ne mogu da ti pokažem gde se točak zaključava, jer mi se to ne nudi. Ali mogu da stojim ovde dok ga gledaš.“",
           "lead": "Poslednje što Veles nije mogao da uradi.",
           "who": "Veles"
         }
@@ -1052,8 +1170,12 @@
     "c5_luka": {
       "paragraphs": [
         {
-          "t": "Veles je dugo trljao slepoočnicu, tamo gde mu je mesingani prsten ostavio crven trag. „Prevoznik“, rekao je. „Teretni brod za kratke skokove. Njegova šina u Luci je jedino mesto na Tandemu odakle nešto napušta tlo. Svake godine ga proveravamo. Svake godine ga vraćamo. Radi, a niko ne zna zašto ga ne puštamo.“",
-          "lead": "Veles je dugo trljao slepoočnicu.",
+          "t": "Veles je dugo trljao slepoočnicu, tamo gde mu je mesingani prsten ostavio crven trag.",
+          "lead": "Veles je dugo trljao slepoočnicu."
+        },
+        {
+          "t": "„Prevoznik. Teretni brod za kratke skokove. Njegova šina u Luci je jedino mesto na Tandemu odakle nešto napušta tlo. Svake godine ga proveravamo. Svake godine ga vraćamo. Radi, a niko ne zna zašto ga ne puštamo.“",
+          "lead": "Brod za kratke skokove.",
           "who": "Veles"
         },
         {
@@ -1061,7 +1183,11 @@
           "who": "Ti"
         },
         {
-          "t": "„Samo u Poravnanju. Tada šina dobija struju direktno od oba sunca, i sva ostala snaga planete ne vredi koliko tih nekoliko sati.“ Pogledao te je. „Ali nije dovoljno da stigneš do Luke i sedneš. Polazak mora da potvrdi neko ko vidi Lumen. Neko kome se pojavi red POLAZAK. Ti ga ne vidiš, a onaj ko vidi ne sme da ga klikne, jer mu se nikad ne nudi.“",
+          "t": "Veles te je pogledao.",
+          "lead": "Veles te je pogledao."
+        },
+        {
+          "t": "„Samo u Poravnanju. Tada šina dobija struju direktno od oba sunca, i sva ostala snaga planete ne vredi koliko tih nekoliko sati. Ali nije dovoljno da stigneš do Luke i sedneš. Polazak mora da potvrdi neko ko vidi Lumen. Neko kome se pojavi red POLAZAK. Ti ga ne vidiš, a onaj ko vidi ne sme da ga klikne, jer mu se nikad ne nudi.“",
           "lead": "Šina radi samo jednom, i samo tada.",
           "who": "Veles"
         },
@@ -1071,8 +1197,12 @@
           "tf": "Poznavala si jednu osobu koja bi možda mogla. „Ne preporučujem“, dodao je Veles. „Ne zato što ne želim da odeš. Nego zato što bih voleo da znam da je to bila njena odluka, a ne tvoja.“"
         },
         {
-          "t": "Zagledao se u svoje ruke, u svoje tupe nokte, u tragove soli. „Nikome se ne nudi da nekoga pusti. Nikome. Kad je neko otišao, nikad nije bilo jasno ko mu je dozvolio.“",
-          "lead": "Veles je pogledao svoje ruke.",
+          "t": "Zagledao se u svoje ruke, u svoje tupe nokte, u tragove soli.",
+          "lead": "Veles je pogledao svoje ruke."
+        },
+        {
+          "t": "„Nikome se ne nudi da nekoga pusti. Nikome. Kad je neko otišao, nikad nije bilo jasno ko mu je dozvolio.“",
+          "lead": "Niko ne pušta nikoga.",
           "who": "Veles"
         }
       ],
@@ -1085,7 +1215,7 @@
           "lead": "Mala soba na vrhu kule, i jedna stolica."
         },
         {
-          "t": "„Sedneš“, rekao je. „Pogledaš u sunce. Upisivanje traje koliko traje jedan dah. Posle toga će ti Lumen nuditi isto što i svima nama.“",
+          "t": "„Sedneš. Pogledaš u sunce. Upisivanje traje koliko traje jedan dah. Posle toga će ti Lumen nuditi isto što i svima nama.“",
           "lead": "Upisivanje traje koliko jedan dah.",
           "who": "Veles"
         },
@@ -1104,7 +1234,7 @@
           "tf": "Dugo si gledala stolicu. Bilo je neverovatno koliko je bila obična."
         },
         {
-          "t": "„Preživećeš sutra“, rekao je tiho. „Preživećeš prekosutra. Preživećeš svaki dan do kraja. Ne verujem da je to loše. Ne verujem ni da je dobro. Verujem da je tačno.“",
+          "t": "„Preživećeš sutra. Preživećeš prekosutra. Preživećeš svaki dan do kraja. Ne verujem da je to loše. Ne verujem ni da je dobro. Verujem da je tačno.“",
           "lead": "Veles je tiho rekao poslednju rečenicu.",
           "who": "Veles"
         },
@@ -1122,8 +1252,12 @@
       "showChapter": true,
       "paragraphs": [
         {
-          "t": "Veles te je pustio. Nije rekao da te neće tražiti, ni da te neće naći. Rekao je samo: „Ostaje jedan krug. Šta god da izabereš, izaberi pre nego što ti se ponudi.“",
-          "lead": "Veles te je pustio, uz jedan savet.",
+          "t": "Veles te je pustio. Nije rekao da te neće tražiti, ni da te neće naći.",
+          "lead": "Veles te je pustio, uz jedan savet."
+        },
+        {
+          "t": "„Ostaje jedan krug. Šta god da izabereš, izaberi pre nego što ti se ponudi.“",
+          "lead": "Jedan savet.",
           "who": "Veles"
         },
         {
@@ -1131,47 +1265,78 @@
           "lead": "Na krovu te je čekala Orsa i činija čorbe."
         },
         {
-          "t": "Pored činije ležao je ključ od peščanog čamca, i uvijen komad kože na kome je neko iscrtao put kroz so. „Uzela sam ga Velesu iz kaputa“, rekla je, „dok nije gledao. Ne znam kako sam to uradila. Lumen mi to nije nudio. Znam samo da sam nešto htela, a znala sam gde da posegnem.“",
+          "t": "Pored činije ležao je ključ od peščanog čamca, i uvijen komad kože na kome je neko iscrtao put kroz so.",
+          "lead": "Pored činije ležalo je nešto što Orsa nije smela da uzme.",
           "if": {
             "lead": "b"
-          },
-          "lead": "Pored činije ležalo je nešto što Orsa nije smela da uzme.",
-          "who": "Orsa"
+          }
         },
         {
-          "t": "Pored činije ležao je list hartije sa nacrtanim točkom, naprskanim mastilom i ispisanim drhtavom rukom. „Tehan mi ga je dao“, rekla je. „Rekao je da ne treba da ti ga dam. Rekao je to tri puta, tako da znam da misli suprotno.“",
+          "t": "„Uzela sam ga Velesu iz kaputa, dok nije gledao. Ne znam kako sam to uradila. Lumen mi to nije nudio. Znam samo da sam nešto htela, a znala sam gde da posegnem.“",
+          "lead": "Odakle joj ključ.",
+          "who": "Orsa",
+          "if": {
+            "lead": "b"
+          }
+        },
+        {
+          "t": "Pored činije ležao je list hartije sa nacrtanim točkom, naprskanim mastilom i ispisanim drhtavom rukom.",
+          "lead": "Pored činije stajao je nacrt točka.",
           "if": {
             "lead": "s"
-          },
-          "lead": "Pored činije stajao je nacrt točka.",
-          "who": "Orsa"
+          }
         },
         {
-          "t": "Pored činije stajao je tanjir sa tvojim imenom: {ime}, ispisano mekim slovima. „Majka ga je postavila“, rekla je. „Prvi put otkako si stigao. Lumen joj je ponudio da te prihvati. Mislim da joj je laknulo.“",
+          "t": "„Tehan mi ga je dao. Rekao je da ne treba da ti ga dam. Rekao je to tri puta, tako da znam da misli suprotno.“",
+          "lead": "Ko je dao nacrt.",
+          "who": "Orsa",
+          "if": {
+            "lead": "s"
+          }
+        },
+        {
+          "t": "Pored činije stajao je tanjir sa tvojim imenom: {ime}, ispisano mekim slovima.",
+          "lead": "Pored činije stajao je tanjir sa tvojim imenom.",
           "if": {
             "lead": "u"
-          },
-          "lead": "Pored činije stajao je tanjir sa tvojim imenom.",
-          "who": "Orsa",
-          "tf": "Pored činije stajao je tanjir sa tvojim imenom: {ime}, ispisano mekim slovima. „Majka ga je postavila“, rekla je. „Prvi put otkako si stigla. Lumen joj je ponudio da te prihvati. Mislim da joj je laknulo.“"
+          }
         },
         {
-          "t": "Jeli ste u tišini, i tek kad je činija bila prazna, Orsa je rekla ono što je dugo nosila: „Šta bi ti izabrao da imaš Lumen?“",
-          "lead": "Posle jela, Orsa je postavila pitanje.",
+          "t": "„Majka ga je postavila. Prvi put otkako si stigao. Lumen joj je ponudio da te prihvati. Mislim da joj je laknulo.“",
+          "tf": "„Majka ga je postavila. Prvi put otkako si stigla. Lumen joj je ponudio da te prihvati. Mislim da joj je laknulo.“",
+          "lead": "Ko je postavio tanjir.",
           "who": "Orsa",
-          "tf": "Jele ste u tišini, i tek kad je činija bila prazna, Orsa je rekla ono što je dugo nosila: „Šta bi ti izabrala da imaš Lumen?“"
+          "if": {
+            "lead": "u"
+          }
+        },
+        {
+          "t": "Jeli ste u tišini. Tek kad je činija bila prazna, Orsa je izgovorila ono što je dugo nosila u sebi.",
+          "tf": "Jele ste u tišini. Tek kad je činija bila prazna, Orsa je izgovorila ono što je dugo nosila u sebi.",
+          "lead": "Posle jela, Orsa je postavila pitanje."
+        },
+        {
+          "t": "„Šta bi ti izabrao da imaš Lumen?“",
+          "tf": "„Šta bi ti izabrala da imaš Lumen?“",
+          "lead": "Pitanje o Lumenu.",
+          "who": "Orsa"
         },
         {
           "t": "„Ne znam.“",
           "who": "Ti"
         },
         {
-          "t": "„Svi znaju“, rekla je. „To je razlika među nama. Mi znamo šta ćemo izabrati, samo ne znamo zašto. Ti ne znaš šta, ali verovatno znaš zašto.“",
+          "t": "„Svi znaju. To je razlika među nama. Mi znamo šta ćemo izabrati, samo ne znamo zašto. Ti ne znaš šta, ali verovatno znaš zašto.“",
           "lead": "Objasnila je razliku među njima.",
           "who": "Orsa"
         },
         {
-          "t": "Gledala je u dve senke na krovu. „Imate li noć tamo odakle dolaziš?“",
+          "t": "Gledala je u dve senke na krovu.",
+          "lead": "Orsa je gledala u dve senke."
+        },
+        {
+          "t": "„Imate li noć tamo odakle dolaziš?“",
+          "lead": "Pitanje o noći.",
           "who": "Orsa"
         },
         {
@@ -1191,15 +1356,23 @@
           "who": "Orsa"
         },
         {
-          "t": "Dugo si razmišljao. „Ne znamo“, rekao si na kraju. „Ponekad nismo u pravu. Ali je naše.“",
+          "t": "Dugo si razmišljao.",
+          "tf": "Dugo si razmišljala.",
           "lead": "Dugo si razmišljao pre nego što si odgovorio.",
-          "who": "Ti",
-          "tf": "Dugo si razmišljala. „Ne znamo“, rekla si na kraju. „Ponekad nismo u pravu. Ali je naše.“",
           "leadf": "Dugo si razmišljala pre nego što si odgovorila."
         },
         {
-          "t": "Orsa je klimnula, kao da je čula nešto što je znala od uvek. Zatim je pogledala u ugao, na kratko, i vratila pogled. „Jutros mi je ponuđeno da ti kažem da je bolje da ostaneš. Pet puta. A ja sam čekala da te pitam šta ti misliš.“",
-          "lead": "Orsa je klimnula i priznala nešto.",
+          "t": "„Ne znamo. Ponekad nismo u pravu. Ali je naše.“",
+          "lead": "Tvoj odgovor na kraju.",
+          "who": "Ti"
+        },
+        {
+          "t": "Orsa je klimnula, kao da je čula nešto što je znala od uvek. Zatim je pogledala u ugao, na kratko, i vratila pogled.",
+          "lead": "Orsa je klimnula."
+        },
+        {
+          "t": "„Jutros mi je ponuđeno da ti kažem da je bolje da ostaneš. Pet puta. A ja sam čekala da te pitam šta ti misliš.“",
+          "lead": "Orsa je priznala nešto.",
           "who": "Orsa"
         }
       ],
@@ -1276,8 +1449,12 @@
           "leadf": "Videla si prsten, ali nisi smela da ga pogledaš."
         },
         {
-          "t": "Orsa je pala na kolena. Obe šake su joj bile na slepoočnicama. „Sve odjednom“, šaputala je. „Sve mi se nudi odjednom. Ne mogu da čitam. Ne mogu da biram.“",
-          "lead": "Orsa je pala na kolena.",
+          "t": "Orsa je pala na kolena. Obe šake su joj bile na slepoočnicama, a glas joj je prešao u šapat.",
+          "lead": "Orsa je pala na kolena."
+        },
+        {
+          "t": "„Sve odjednom. Sve mi se nudi odjednom. Ne mogu da čitam. Ne mogu da biram.“",
+          "lead": "Sve joj se nudi odjednom.",
           "who": "Orsa"
         },
         {
@@ -1285,7 +1462,7 @@
           "lead": "Podigla je lice, uplašena prvi put u životu."
         },
         {
-          "t": "„Ti ne čitaš“, rekla je. „Ti vidiš šta ja ne vidim. Reci mi šta da radim.“",
+          "t": "„Ti ne čitaš. Ti vidiš šta ja ne vidim. Reci mi šta da radim.“",
           "who": "Orsa"
         },
         {
@@ -1400,17 +1577,30 @@
           "tf": "Konzola je bila pokrivena slojem prašine. Nije imala ekran, ni dugme, ni ručku. Imala je samo prazno ravno mesto, i shvatila si da je to mesto napravljeno za pogled."
         },
         {
-          "t": "„Polazak“, rekla je. Glas joj je bio pun. „Vidim ga. Negde sam ga videla među svim ostalim. Ali ne mogu...“",
+          "t": "„Polazak. Vidim ga. Negde sam ga videla među svim ostalim. Ali ne mogu...“",
           "lead": "Orsa je izgovorila reč koju je samo ona videla.",
           "who": "Orsa"
+        },
+        {
+          "t": "Glas joj je bio pun.",
+          "lead": "Glas joj je bio pun."
         },
         {
           "t": "„Možeš.“",
           "who": "Ti"
         },
         {
-          "t": "„Lumen mi nudi Ostani. Na svakom redu. Pet hiljada puta. Tako je napisano da bude zaboravljeno ono što stoji ispod.“ Stegla je zube. „Ne znam kako se drži nešto što mi Lumen ne nudi.“",
+          "t": "„Lumen mi nudi Ostani. Na svakom redu. Pet hiljada puta. Tako je napisano da bude zaboravljeno ono što stoji ispod.“",
           "lead": "Njen Lumen nudio je samo jedno.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Stegla je zube.",
+          "lead": "Orsa je stegla zube."
+        },
+        {
+          "t": "„Ne znam kako se drži nešto što mi Lumen ne nudi.“",
+          "lead": "Ono što ne ume da uradi.",
           "who": "Orsa"
         },
         {
@@ -1472,19 +1662,22 @@
           "lead": "Dvojica su te već čekala."
         },
         {
-          "t": "„Znao sam da ćeš doći“, rekao je. „Ne zato što mi se to ponudilo. Zato što sam te video kako gledaš staklo.“",
+          "t": "„Znao sam da ćeš doći. Ne zato što mi se to ponudilo. Zato što sam te video kako gledaš staklo.“",
           "lead": "Tehan je rekao rečenicu koja je sve objasnila.",
           "who": "Tehan"
         },
         {
-          "t": "„Hoće li me neko zaustaviti?“ pitao si.",
-          "who": "Ti",
-          "tf": "„Hoće li me neko zaustaviti?“ pitala si."
+          "t": "„Hoće li me neko zaustaviti?“",
+          "who": "Ti"
         },
         {
-          "t": "„Ja ne mogu da pomognem“, rekao je tiho. „Ne nudi mi se. Ali ne mogu ni da te sprečim, jer ni to nema u mojoj listi. Mogu samo da gledam.“ Nasmešio se, tužno, i okrenuo glavu u stranu, kao neko ko hoće da vidi i ne vidi.",
+          "t": "„Ja ne mogu da pomognem. Ne nudi mi se. Ali ne mogu ni da te sprečim, jer ni to nema u mojoj listi. Mogu samo da gledam.“",
           "lead": "Veles je rekao šta može, a šta ne.",
           "who": "Veles"
+        },
+        {
+          "t": "Nasmešio se, tužno, i okrenuo glavu u stranu, kao neko ko hoće da vidi i ne vidi.",
+          "lead": "Veles je okrenuo glavu u stranu."
         },
         {
           "t": "Uhvatili ste točak zajedno, ti i Tehan, ruku do ruke, jedna mlada i jedna stara. Gvožđe je zaškripalo. Prvo nije hteo, pa je popustio, pa je krenuo. Svetlost iznad vas je počela da gasne, red po red, kao što gase sveće: zlatna, pa plavkasta, pa bela.",
@@ -1506,23 +1699,27 @@
           "lead": "Zenit je stao, ali ne kao ranije."
         },
         {
-          "t": "Dugo nije bilo zvuka. Onda je negde u daljini devojčica Iva rekla, glasno, kako deca kažu: „Šta sad?“",
-          "lead": "Prvi zvuk posle toga bio je dečji glas.",
+          "t": "Dugo nije bilo zvuka. Onda se negde u daljini oglasila devojčica Iva, glasno, kako deca govore.",
+          "lead": "Prvi zvuk posle toga bio je dečji glas."
+        },
+        {
+          "t": "„Šta sad?“",
+          "lead": "Dečje pitanje.",
           "who": "Iva"
         },
         {
-          "t": "Niko nije odgovorio. Niko nije znao. Ljudi su se gledali, prvi put pogledom koji nije prelazio preko, nego se zaustavljao.",
+          "t": "Niko nije odgovorio. Niko nije znao. Ljudi su se gledali, prvi put pogledom koji nije prelazio preko, nego se zaustavljao. Prvi koji je progovorio nije imao ništa pametno da kaže: rekao je „Gladan sam“, i to je, nekako, bilo dovoljno da neko ode po hleb.",
           "lead": "Ljudi su se prvi put zaista pogledali."
         },
         {
-          "t": "Prvi koji je progovorio nije imao ništa pametno da kaže. Rekao je: „Gladan sam.“ I to je, nekako, bilo dovoljno da neko ode po hleb.",
-          "lead": "Prva reč koju je neko izgovorio bila je obična."
+          "t": "Orsa je stajala na ivici trga, sa šakama pritisnutim uz grudi. Gledala te je, i u tom pogledu bilo je više ljutnje nego zahvalnosti, a opet nijedna od te dve stvari nije bila sasvim samo to.",
+          "lead": "Orsa te je dugo gledala."
         },
         {
-          "t": "Orsa je stajala na ivici trga, sa šakama pritisnutim uz grudi. Gledala te je, i u tom pogledu bilo je više ljutnje nego zahvalnosti, a opet nijedna od te dve stvari nije bila sasvim samo to. „Šta si nam uradio“, rekla je, ne kao pitanje.",
-          "lead": "Orsa te je dugo gledala.",
-          "who": "Orsa",
-          "tf": "Orsa je stajala na ivici trga, sa šakama pritisnutim uz grudi. Gledala te je, i u tom pogledu bilo je više ljutnje nego zahvalnosti, a opet nijedna od te dve stvari nije bila sasvim samo to. „Šta si nam uradila“, rekla je, ne kao pitanje."
+          "t": "„Šta si nam uradio.“",
+          "tf": "„Šta si nam uradila.“",
+          "lead": "Reči koje nisu pitanje.",
+          "who": "Orsa"
         },
         {
           "t": "Nisi imao odgovor. Neki ljudi nisu ustali sa klupa. Neki su plakali. Neki su se smejali, glupo, bez razloga, kao deca kojima je odjednom dozvoljeno sve.",
@@ -1552,7 +1749,7 @@
           "tf": "Veles vas je čekao na vrhu. Nije ništa pitao. Pokazao je stolicu, a ti si sela. Bila je topla, kao da je neko tek ustao."
         },
         {
-          "t": "„Nije bolno“, rekao je. „Neće te boleti. Obećavam ti ono što mogu, a mogu samo to.“",
+          "t": "„Nije bolno. Neće te boleti. Obećavam ti ono što mogu, a mogu samo to.“",
           "lead": "Veles je obećao jedino što može.",
           "who": "Veles"
         },
@@ -1561,7 +1758,7 @@
           "lead": "Orsa te je držala za ruku."
         },
         {
-          "t": "„Pogledaj u sunce“, rekao je.",
+          "t": "„Pogledaj u sunce.“",
           "who": "Veles"
         },
         {
@@ -1594,15 +1791,24 @@
           "leadf": "Na trgu, kraj izvora, sedele ste vas dve."
         },
         {
-          "t": "„Šta ti nudi?“ pitala je. Nije znala zašto pita. Možda iz navike. Možda zbog nečeg starog što je ležalo ispod, kao kamen na dnu.",
+          "t": "„Šta ti nudi?“",
           "lead": "Orsa je pitala iz navike.",
           "who": "Orsa"
         },
         {
-          "t": "„Ono što bih i sam izabrao“, rekao si. Nisi lagao. Pokušao si da se setiš kad si poslednji put poželeo nešto što ti nije bilo ponuđeno, i nisi mogao. Nije ti smetalo.",
-          "lead": "Tvoj odgovor nije bio laž.",
-          "who": "Ti",
-          "tf": "„Ono što bih i sama izabrala“, rekla si. Nisi lagala. Pokušala si da se setiš kad si poslednji put poželela nešto što ti nije bilo ponuđeno, i nisi mogla. Nije ti smetalo."
+          "t": "Nije znala zašto pita. Možda iz navike. Možda zbog nečeg starog što je ležalo ispod, kao kamen na dnu.",
+          "lead": "Pitanje iz navike."
+        },
+        {
+          "t": "„Ono što bih i sam izabrao.“",
+          "tf": "„Ono što bih i sama izabrala.“",
+          "lead": "Tvoj odgovor Orsi.",
+          "who": "Ti"
+        },
+        {
+          "t": "Nisi lagao. Pokušao si da se setiš kad si poslednji put poželeo nešto što ti nije bilo ponuđeno, i nisi mogao. Nije ti smetalo.",
+          "tf": "Nisi lagala. Pokušala si da se setiš kad si poslednji put poželela nešto što ti nije bilo ponuđeno, i nisi mogla. Nije ti smetalo.",
+          "lead": "Tvoj odgovor nije bio laž."
         },
         {
           "t": "Oči su ti bile iste kao i oči svih. Mirne, prisutne, i pomalo daleke. Dva sunca stajala su nad tobom, a pod njima, kao i pod svakim, bile su dve senke, jedna ćilibarska, jedna plavkasta, ukrštene kao makaze.",
@@ -1692,7 +1898,7 @@
           "img": "iva"
         },
         {
-          "t": "„Pokaži mi“, rekla je.",
+          "t": "„Pokaži mi.“",
           "who": "Iva"
         },
         {
@@ -1704,19 +1910,32 @@
           "who": "Iva"
         },
         {
-          "t": "Pogledao si ka vratima. Dalja je negde u kući, a Orsa je bila na putu. „Zašto?“",
-          "lead": "Zašto? Zato što joj se nikad ništa nije nudilo.",
-          "who": "Ti",
-          "tf": "Pogledala si ka vratima. Dalja je negde u kući, a Orsa je bila na putu. „Zašto?“"
+          "t": "Pogledao si ka vratima. Dalja je negde u kući, a Orsa je bila na putu.",
+          "tf": "Pogledala si ka vratima. Dalja je negde u kući, a Orsa je bila na putu.",
+          "lead": "Pogledao si ka vratima.",
+          "leadf": "Pogledala si ka vratima."
         },
         {
-          "t": "„Zato što mi se nikad ne nudi“, rekla je, kao da je to najobičnija stvar. „Ja sam probala jednom da se prevrnem preko ruku. Moj Lumen mi je ponudio Ne. Pa mi je ponudio Vrati se. A ja sam htela samo da vidim kako izgleda sve naopačke.“",
+          "t": "„Zašto?“",
+          "lead": "Tvoje pitanje.",
+          "who": "Ti"
+        },
+        {
+          "t": "Odgovarala je kao da je to najobičnija stvar na svetu.",
+          "lead": "Najobičnija stvar na svetu."
+        },
+        {
+          "t": "„Zato što mi se nikad ne nudi. Ja sam probala jednom da se prevrnem preko ruku. Moj Lumen mi je ponudio Ne. Pa mi je ponudio Vrati se. A ja sam htela samo da vidim kako izgleda sve naopačke.“",
           "lead": "Dete je ispričalo šta se desilo kad je pokušala.",
           "who": "Iva"
         },
         {
-          "t": "Zašutela je. Pogled joj je skočio u ugao i zadržao se, kratko, pa se vratio. „Evo, sad mi nudi da te ne slušam. Ne znam zašto tebi ništa ne nudi. Ali znam da bih htela da znam kako je.“",
-          "lead": "Čak i dok je govorila, nešto joj se nudilo.",
+          "t": "Zašutela je. Pogled joj je skočio u ugao i zadržao se, kratko, pa se vratio.",
+          "lead": "Čak i dok je govorila, nešto joj se nudilo."
+        },
+        {
+          "t": "„Evo, sad mi nudi da te ne slušam. Ne znam zašto tebi ništa ne nudi. Ali znam da bih htela da znam kako je.“",
+          "lead": "Ono što ne razume.",
           "who": "Iva"
         },
         {
@@ -1757,19 +1976,32 @@
     "c5_tehan": {
       "paragraphs": [
         {
-          "t": "Tehana si našao tamo gde si ga ostavio, na kamenoj ploči sa strane trga. Kao da nikuda nije ni odlazio. Sedeo je i vrteo staklo u prstima, a kada si seo pored njega, rekao je: „Veles ti je pokazao Zaslon.“",
+          "t": "Tehana si našao tamo gde si ga ostavio, na kamenoj ploči sa strane trga. Kao da nikuda nije ni odlazio. Sedeo je i vrteo staklo u prstima, a kada si seo pored njega, progovorio je.",
+          "tf": "Tehana si našla tamo gde si ga ostavio, na kamenoj ploči sa strane trga. Kao da nikuda nije ni odlazio. Sedeo je i vrteo staklo u prstima, a kada si sela pored njega, progovorio je.",
           "lead": "Tehan je sedeo tamo gde si ga ostavio.",
-          "who": "Tehan",
-          "tf": "Tehana si našla tamo gde si ga ostavio, na kamenoj ploči sa strane trga. Kao da nikuda nije ni odlazio. Sedeo je i vrteo staklo u prstima, a kada si sela pored njega, rekao je: „Veles ti je pokazao Zaslon.“",
           "leadf": "Tehan je sedeo tamo gde si ga ostavila."
+        },
+        {
+          "t": "„Veles ti je pokazao Zaslon.“",
+          "lead": "Prva Tehanova rečenica.",
+          "who": "Tehan"
         },
         {
           "t": "To nije bilo pitanje. Klimnuo si.",
           "tf": "To nije bilo pitanje. Klimnula si."
         },
         {
-          "t": "„Onda znaš. Ja sam ga okrenuo.“ Starac se nasmešio, a prazno oko se pomerilo kao da gleda negde iza tvoje glave. „Mislili su da je kazna ono što je usledilo, ali nije. Moj Lumen je prestao da mi nudi, tačno kad je zrno stalo, i nikad se nije vratio. Nisam nikada pitao zašto. Mislim da je i njemu bilo neprijatno.“",
+          "t": "„Onda znaš. Ja sam ga okrenuo.“",
           "lead": "Starac je priznao šta je uradio.",
+          "who": "Tehan"
+        },
+        {
+          "t": "Starac se nasmešio, a prazno oko se pomerilo kao da gleda negde iza tvoje glave.",
+          "lead": "Starac se nasmešio."
+        },
+        {
+          "t": "„Mislili su da je kazna ono što je usledilo, ali nije. Moj Lumen je prestao da mi nudi, tačno kad je zrno stalo, i nikad se nije vratio. Nisam nikada pitao zašto. Mislim da je i njemu bilo neprijatno.“",
+          "lead": "Šta je usledilo posle sata.",
           "who": "Tehan"
         },
         {
@@ -1777,19 +2009,40 @@
           "who": "Ti"
         },
         {
-          "t": "„Četvorica su umrla.“ Rekao je to bez uvijanja. „Jedan je pao s merdevina. Dvoje starih nije stiglo do hlada, jer niko nije znao da treba. Jedno dete se udavilo u bunaru, jer ga niko nije pogledao i rekao Ne.“ Pogledao te je. „A moja žena Neva bila je na krovu i čekala. Čekala je ceo sat da joj neko kaže da side. Kad se zrno vratilo, prvi red je bio Siđi, i ona je sišla. Nije me nikad više pogledala istim očima. Ne mrzi me. Lumen joj je ponudio da me ne mrzi.“",
-          "lead": "Cena je bila veća nego što si očekivao.",
-          "who": "Tehan",
-          "leadf": "Cena je bila veća nego što si očekivala."
+          "t": "Odgovorio je bez uvijanja.",
+          "lead": "Odgovor bez uvijanja."
         },
         {
-          "t": "Zavrteo je staklo. „Ja sam sedeo na podu, pedeset minuta, i gledao u ruke. Prvi put mi je pala na pamet misao koja nije stigla odnekud. Poželeo sam pomorandžu. Ne znam zašto. Nikad pre nisam jeo pomorandžu. Ta želja je bila moja.“",
+          "t": "„Četvorica su umrla. Jedan je pao s merdevina. Dvoje starih nije stiglo do hlada, jer niko nije znao da treba. Jedno dete se udavilo u bunaru, jer ga niko nije pogledao i rekao Ne.“",
+          "lead": "Cena je bila veća nego što si očekivao.",
+          "leadf": "Cena je bila veća nego što si očekivala.",
+          "who": "Tehan"
+        },
+        {
+          "t": "Pogledao te je.",
+          "lead": "Starac te je pogledao."
+        },
+        {
+          "t": "„A moja žena Neva bila je na krovu i čekala. Čekala je ceo sat da joj neko kaže da side. Kad se zrno vratilo, prvi red je bio Siđi, i ona je sišla. Nije me nikad više pogledala istim očima. Ne mrzi me. Lumen joj je ponudio da me ne mrzi.“",
+          "lead": "Tehanova žena Neva.",
+          "who": "Tehan"
+        },
+        {
+          "t": "Zavrteo je staklo.",
+          "lead": "Starac je zavrteo staklo."
+        },
+        {
+          "t": "„Ja sam sedeo na podu, pedeset minuta, i gledao u ruke. Prvi put mi je pala na pamet misao koja nije stigla odnekud. Poželeo sam pomorandžu. Ne znam zašto. Nikad pre nisam jeo pomorandžu. Ta želja je bila moja.“",
           "lead": "Starac je čuvao jednu uspomenu koja nije bila ničija.",
           "who": "Tehan"
         },
         {
-          "t": "Zagledao se u trg, u ljude. „Znam da je cena bila četvoro ljudi. Ali ne znam koliko je ostalih zaboravilo da čeka.“",
-          "lead": "Zagledao se u trg, a onda izgovorio cenu.",
+          "t": "Zagledao se u trg, u ljude.",
+          "lead": "Zagledao se u trg, a onda izgovorio cenu."
+        },
+        {
+          "t": "„Znam da je cena bila četvoro ljudi. Ali ne znam koliko je ostalih zaboravilo da čeka.“",
+          "lead": "Cena po Tehanu.",
           "who": "Tehan"
         }
       ],
@@ -1839,12 +2092,17 @@
           "tf": "Pogodilo te je u grudi kao pesnica. Glas je bio ženski, umoran, razdrman šumom, i znala si ga bolje nego što si mislila da znaš bilo koji glas."
         },
         {
-          "t": "„Kovač, ovde Marta. Ne znam da li me čuješ. Hvatamo te kroz neku buku, zaslepljuje nas njihov dvojni sistem. Skaneri ti pokazuju da si živ. Prozor se otvara za šest sati kad se sunca poravnaju, jer šum pada. Imaćemo šezdeset minuta, ne više. Ako nađeš nešto što leti, uskoči. Nemamo goriva da čekamo.“",
+          "t": "„Kovač. Ne znam da li me čuješ. Hvatamo te kroz neku buku, zaslepljuje nas njihov dvojni sistem. Skaneri ti pokazuju da si živ. Prozor se otvara za šest sati kad se sunca poravnaju, jer šum pada. Imaćemo šezdeset minuta, ne više. Ako nađeš nešto što leti, uskoči. Nemamo goriva da čekamo.“",
           "lead": "Poruka je bila kratka i imala je rok.",
           "who": "Marta"
         },
         {
-          "t": "Pauza. Šum. „Samo mi reci gde si. Reci nešto. Bilo šta.“",
+          "t": "Pauza. Šum.",
+          "lead": "Pauza i šum."
+        },
+        {
+          "t": "„Samo mi reci gde si. Reci nešto. Bilo šta.“",
+          "lead": "Molba bez roka.",
           "who": "Marta"
         },
         {
@@ -1917,7 +2175,7 @@
           "lead": "Mlada Čuvarka čitala je pitanja sa tuđeg lista."
         },
         {
-          "t": "„Odakle si?“ rekla je, po slovu, kao čovek koji čita sa tuđeg lista.",
+          "t": "„Odakle si?“",
           "who": "Dara"
         },
         {
@@ -1933,8 +2191,12 @@
           "who": "Ti"
         },
         {
-          "t": "Ruke su joj zadrhtale. „Imaš li porodicu?“ Pogledala je u ugao i skupila oči. „Šta ti je potrebno da preživiš?“",
-          "lead": "Pitanja su postajala sve lična.",
+          "t": "Ruke su joj zadrhtale, a pogled je skočio u ugao i zadržao se.",
+          "lead": "Pitanja su postajala sve ličnija."
+        },
+        {
+          "t": "„Imaš li porodicu? Šta ti je potrebno da preživiš?“",
+          "lead": "Dva pitanja uzastopce.",
           "who": "Dara"
         },
         {
@@ -1942,8 +2204,12 @@
           "lead": "Pitanja su stizala jedno za drugim, bez razloga."
         },
         {
-          "t": "Najzad je prestala. Pogledala te je i prvi put nisu to bile njene oči koje čitaju. „Moj Lumen mi kaže da zapamtim tvoje odgovore“, rekla je tiho. „Ne piše zašto. A meni se čini da bih ih zapamtila i da mi nije rekao.“",
-          "lead": "Najzad je prestala i priznala nešto.",
+          "t": "Najzad je prestala. Pogledala te je i prvi put nisu to bile njene oči koje čitaju.",
+          "lead": "Najzad je prestala."
+        },
+        {
+          "t": "„Moj Lumen mi kaže da zapamtim tvoje odgovore. Ne piše zašto. A meni se čini da bih ih zapamtila i da mi nije rekao.“",
+          "lead": "Šta joj kaže njen Lumen.",
           "who": "Dara"
         }
       ],
@@ -1991,16 +2257,24 @@
           "lead": "Dalja te je prvi put pogledala u oči."
         },
         {
-          "t": "„Lumen mi je ponudio da ti ne govorim“, rekla je. „Svih ovih dana. Ja sam dobra. Zato sam te slušala.“ Pružila ti je sveženj uvijen u lan. U njemu je bio hleb sa belom korom, još mlak. „A sada mi je ponudio da ti dam ovo. I ne znam da li je to bio on, ili ja.“",
-          "lead": "Pružila ti je nešto i priznala nešto.",
-          "who": "Dalja",
-          "tf": "„Lumen mi je ponudio da ti ne govorim“, rekla je. „Svih ovih dana. Ja sam dobra. Zato sam te slušala.“ Pružila ti je sveženj uvijen u lan. U njemu je bio hleb sa belom korom, još mlak. „A sada mi je ponudio da ti dam ovo. I ne znam da li je to bio on, ili ja.“"
+          "t": "„Lumen mi je ponudio da ti ne govorim. Svih ovih dana. Ja sam dobra. Zato sam te slušala.“",
+          "lead": "Priznanje posle svih ovih dana.",
+          "who": "Dalja"
+        },
+        {
+          "t": "Pružila ti je sveženj uvijen u lan. U njemu je bio hleb sa belom korom, još mlak.",
+          "lead": "Sveženj uvijen u lan."
+        },
+        {
+          "t": "„A sada mi je ponudio da ti dam ovo. I ne znam da li je to bio on, ili ja.“",
+          "lead": "Šta joj je sada ponudio.",
+          "who": "Dalja"
         },
         {
           "t": "Čekala je. Iza nje, kolona je nastavljala da se pomera."
         },
         {
-          "t": "„Nemoj da misliš da smo zli“, dodala je. „Nema krivih. Imali smo mnogo godina da pogledamo naniže, a ne da ostanemo. Ovo je ono što smo izabrali, ako je izabiranje ono što se desilo.“",
+          "t": "„Nemoj da misliš da smo zli. Nema krivih. Imali smo mnogo godina da pogledamo naniže, a ne da ostanemo. Ovo je ono što smo izabrali, ako je izabiranje ono što se desilo.“",
           "lead": "Pre nego što se vratila u kolonu, rekla je još jednu stvar.",
           "who": "Dalja"
         }

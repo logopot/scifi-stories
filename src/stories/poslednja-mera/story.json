@@ -157,16 +157,24 @@
           "lead": "Zid sa tri reda zakovica."
         },
         {
-          "t": "„Pečat.“ Pruža dlan, i ne pita ko si.",
-          "lead": "Dlan koji ne čeka objašnjenje.",
+          "t": "„Pečat.“",
+          "lead": "Jedna reč od straže.",
           "who": "Teja"
+        },
+        {
+          "t": "Pruža dlan, i ne pita ko si.",
+          "lead": "Dlan bez pitanja."
         },
         {
           "t": "Prinosiš pečat njenom skeneru. Skener zacvili, ona čita ekran i na trenutak joj se vilica stegne. Odbor ne šalje nikoga bez razloga, a poslednji koga je poslao nije ostao.",
           "lead": "Zašto joj se vilica stegla?"
         },
         {
-          "t": "„Teja. Straža brane.“ Spušta ruku. „Imaš tri dana, ne više. Kapije se zatvaraju kad Odbor kaže, a Odbor kaže u petak.“",
+          "t": "Spušta ruku.",
+          "lead": "Teja spušta ruku."
+        },
+        {
+          "t": "„Straža brane. Imaš tri dana, ne više. Kapije se zatvaraju kad Odbor kaže, a Odbor kaže u petak.“",
           "lead": "Tri dana do petka.",
           "who": "Teja"
         },
@@ -179,14 +187,22 @@
           "lead": "Deca sa malim kantama."
         },
         {
-          "t": "„Tri pravila gosta“, kaže, i odbrojava ih prstima. „Ne ulaziš u tuđe kuće bez poziva. Ne piješ iz tuđe slavine. I ne pitaš nikoga koliko mu je određeno. To je kao pitati nekoga koliko ima godina, samo što su ovde odgovori teži.“",
+          "t": "„Tri pravila gosta. Ne ulaziš u tuđe kuće bez poziva. Ne piješ iz tuđe slavine. I ne pitaš nikoga koliko mu je određeno. To je kao pitati nekoga koliko ima godina, samo što su ovde odgovori teži.“",
           "lead": "Tri pravila gosta.",
           "who": "Teja"
         },
         {
-          "t": "„Poslednji koji je došao iz Odbora ostao je dva dana“, kaže, ne sklanjajući pogled. „Otišao je istim putem kojim je došao, ne osvrćući se, i niko nije saznao zašto. Ne govorim ti to da te uplašim. Govorim ti da znaš gde stojiš.“",
+          "t": "Pravila odbrojava prstima, jedno po jedno.",
+          "lead": "Prsti koji broje pravila."
+        },
+        {
+          "t": "„Poslednji koji je došao iz Odbora ostao je dva dana. Otišao je istim putem kojim je došao, ne osvrćući se, i niko nije saznao zašto. Ne govorim ti to da te uplašim. Govorim ti da znaš gde stojiš.“",
           "lead": "Poslednji poslanik je otišao ne osvrćući se.",
           "who": "Teja"
+        },
+        {
+          "t": "Ni dok to govori ne sklanja pogled sa tebe.",
+          "lead": "Pogled koji ne popušta."
         },
         {
           "t": "„Hoćeš da vidiš grad ili hoćeš da vidiš knjigu? To nije isto.“",
@@ -237,8 +253,12 @@
           "img": "ilarion"
         },
         {
-          "t": "„Vreme vode ide sporije od običnog“, kaže, ne pozdravljajući te. „Ali kad stane, stane odjednom.“ Pokazuje ti mernu letvu uklesanu u beton i oznaku do koje je voda nekad dosezala. Sadašnji nivo je ispod najniže oznake.",
-          "lead": "Letva uklesana u beton.",
+          "t": "Ne pozdravlja te, nego odmah pokazuje mernu letvu uklesanu u beton i oznaku do koje je voda nekad dosezala. Sadašnji nivo je ispod najniže oznake.",
+          "lead": "Letva uklesana u beton."
+        },
+        {
+          "t": "„Vreme vode ide sporije od običnog. Ali kad stane, stane odjednom.“",
+          "lead": "Vreme koje stane odjednom.",
           "who": "Ilarion"
         },
         {
@@ -254,7 +274,7 @@
           "lead": "Stub koji izranja iz vode."
         },
         {
-          "t": "„Moj račun se ne slaže“, priznaje. „Gubimo više nego što ispari i više nego što isteče kroz zapornice. Razlika je mala, četiri odsto, ali stalna. Voda ne nestaje sama od sebe. Ona ide negde.“",
+          "t": "„Moj račun se ne slaže. Gubimo više nego što ispari i više nego što isteče kroz zapornice. Razlika je mala, četiri odsto, ali stalna. Voda ne nestaje sama od sebe. Ona ide negde.“",
           "lead": "Četiri odsto koja idu negde.",
           "who": "Ilarion"
         },
@@ -267,8 +287,12 @@
           "lead": "Grad kao nedovršen crtež."
         },
         {
-          "t": "„Jedan sat meri dane“, objašnjava, i kuca po prvom. „Drugi meri ono što nam je ostalo, prema današnjoj potrošnji.“ Kuca po drugom. „Prvi ide napred, drugi nazad. Uskoro će se sresti. Ne znam šta se tada dešava sa vremenom.“",
-          "lead": "Dva ručna sata koja idu jedan prema drugom.",
+          "t": "Kuca prstom po jednom satu, pa po drugom.",
+          "lead": "Dva ručna sata koja idu jedan prema drugom."
+        },
+        {
+          "t": "„Jedan sat meri dane. Drugi meri ono što nam je ostalo, prema današnjoj potrošnji. Prvi ide napred, drugi nazad. Uskoro će se sresti. Ne znam šta se tada dešava sa vremenom.“",
+          "lead": "Jedan sat napred, drugi nazad.",
           "who": "Ilarion"
         },
         {
@@ -323,8 +347,8 @@
           "img": "oliva"
         },
         {
-          "t": "„Ako si došao zbog vode, stao si u pogrešan red“, kaže. „Ali uđi, ovde je makar hladovina.“",
-          "tf": "„Ako si došla zbog vode, stala si u pogrešan red“, kaže. „Ali uđi, ovde je makar hladovina.“",
+          "t": "„Ako si došao zbog vode, stao si u pogrešan red. Ali uđi, ovde je makar hladovina.“",
+          "tf": "„Ako si došla zbog vode, stala si u pogrešan red. Ali uđi, ovde je makar hladovina.“",
           "lead": "Hladovina i pogrešan red.",
           "who": "Oliva"
         },
@@ -341,9 +365,13 @@
           "lead": "Dečak koji otvara jedno oko."
         },
         {
-          "t": "„Kad sam počinjala, imali smo osam lekova za istu stvar. Sad imamo jedan, i svi zavisimo od toga da li bakterija ima loš dan.“ Pokušava da se nasmeje, pa odustaje.",
+          "t": "„Kad sam počinjala, imali smo osam lekova za istu stvar. Sad imamo jedan, i svi zavisimo od toga da li bakterija ima loš dan.“",
           "lead": "Osam lekova, sad samo jedan.",
           "who": "Oliva"
+        },
+        {
+          "t": "Pokušava da se nasmeje, pa odustaje.",
+          "lead": "Osmeh koji ne uspeva."
         },
         {
           "t": "„Imamo jedan lek koji još deluje. Pravi se u pogonu u Zanatskoj četvrti, a za svaku seriju treba više čiste vode nego što ceo ovaj sprat popije za dan. Merač mi dodeljuje određenu meru. Mera se smanjuje.“",
@@ -406,7 +434,16 @@
           "img": "vuk"
         },
         {
-          "t": "„Merač radi tačno ono što su mu rekli. To je i problem i lepota.“ Okreće se ekranu: „Meraču, imamo posetu iz Odbora.“",
+          "t": "„Merač radi tačno ono što su mu rekli. To je i problem i lepota.“",
+          "lead": "Šta je Merač.",
+          "who": "Vuk"
+        },
+        {
+          "t": "Okreće se ekranu.",
+          "lead": "Vuk se okreće ekranu."
+        },
+        {
+          "t": "„Meraču, imamo posetu iz Odbora.“",
           "lead": "Ekran koji se pali na ime.",
           "who": "Vuk"
         },
@@ -432,7 +469,11 @@
           "lead": "Litar više za dete sa temperaturom."
         },
         {
-          "t": "„Ne laže“, šapuće Vuk. „Ali ne nudi. To je ključna razlika. Moraš znati šta da pitaš.“",
+          "t": "Vuk se naginje ka tebi i šapuće.",
+          "lead": "Vuk šapuće."
+        },
+        {
+          "t": "„Ne laže. Ali ne nudi. To je ključna razlika. Moraš znati šta da pitaš.“",
           "lead": "Ne laže, ali ne nudi.",
           "who": "Vuk"
         }
@@ -485,8 +526,12 @@
           "lead": "Radnici sa kamenčićima na tabli."
         },
         {
-          "t": "„Četrdeset doza“, kaže Oliva, koja je stigla pre tebe, jer je lek njena briga, pa svakog podneva dolazi da proveri seriju. „Četrdeset života, ako imamo sreće i ako stignu na vreme.“",
-          "lead": "Lekarka koja dolazi svakog podneva.",
+          "t": "Pre tebe je stigla Oliva: lek je njena briga, pa svakog podneva dolazi da proveri seriju.",
+          "lead": "Lekarka koja dolazi svakog podneva."
+        },
+        {
+          "t": "„Četrdeset doza. Četrdeset života, ako imamo sreće i ako stignu na vreme.“",
+          "lead": "Doze koje se broje kao životi.",
           "who": "Oliva"
         },
         {
@@ -580,7 +625,11 @@
           "who": "Merač"
         },
         {
-          "t": "„Piše u knjizi“, šapuće Vuk, pobledeo. „Glava dvadeset osma, poslednji red. Svi su mislili da je to deo isparavanja. Nikad niko nije pitao.“",
+          "t": "Vuku bledi lice, a glas mu pada na šapat.",
+          "lead": "Vuk bledi."
+        },
+        {
+          "t": "„Piše u knjizi. Glava dvadeset osma, poslednji red. Svi su mislili da je to deo isparavanja. Nikad niko nije pitao.“",
           "lead": "Poslednji red dvadeset osme glave.",
           "who": "Vuk"
         },
@@ -649,7 +698,7 @@
           "lead": "Uredan šator sa mesinganom slavinom."
         },
         {
-          "t": "„Dalibor, izaslanik Planinskog saveza“, predstavlja se. „Nudim ti čašu vode i molim te da razumeš šta to ovde znači. U Utočištu je to i uvreda i čast.“",
+          "t": "„Izaslanik sam Planinskog saveza. Nudim ti čašu vode i molim te da razumeš šta to ovde znači. U Utočištu je to i uvreda i čast.“",
           "lead": "Čaša vode kao uvreda i kao čast.",
           "who": "Dalibor"
         },
@@ -667,12 +716,16 @@
           "who": "Dalibor"
         },
         {
-          "t": "„Nemoj misliti da dolazim iz obilja“, kaže. „Moje terase su suve od proleća. Naš sneg je nestao pre nego što je stigao do reke. Ne dolazim da vas spasem. Dolazim da ne presušimo svako u svom koritu.“",
+          "t": "„Nemoj misliti da dolazim iz obilja. Moje terase su suve od proleća. Naš sneg je nestao pre nego što je stigao do reke. Ne dolazim da vas spasem. Dolazim da ne presušimo svako u svom koritu.“",
           "lead": "Terase koje su suve od proleća.",
           "who": "Dalibor"
         },
         {
-          "t": "„Znamo da Utočište gubi više vode nego što ispari“, dodaje tiho. „Računamo to već mesecima, sa planine. Ne tražimo da to objasniš. Tražimo da znaš da je neko spolja već izračunao ono što Utočište još ne ume da izgovori.“",
+          "t": "Dalibor spušta glas.",
+          "lead": "Dalibor spušta glas."
+        },
+        {
+          "t": "„Znamo da Utočište gubi više vode nego što ispari. Računamo to već mesecima, sa planine. Ne tražimo da to objasniš. Tražimo da znaš da je neko spolja već izračunao ono što Utočište još ne ume da izgovori.“",
           "lead": "Neko spolja je izračunao ono što Utočište ćuti.",
           "who": "Dalibor"
         },
@@ -743,13 +796,26 @@
           "lead": "Voda koja ne zadrhti."
         },
         {
-          "t": "„Moj račun se najzad slaže“, kaže, i prvi put mu se u glasu čuje nešto nalik olakšanju. „Ovo je jedina voda u Utočištu koju niko nije podelio. Zato je jedina koja je cela.“",
+          "t": "„Moj račun se najzad slaže. Ovo je jedina voda u Utočištu koju niko nije podelio. Zato je jedina koja je cela.“",
           "lead": "Jedina voda koju niko nije podelio.",
           "who": "Ilarion"
         },
         {
-          "t": "„Znaš šta je najčudnije?“ pita, gledajući vodu. „To što je ona tu. Mirna. Ne zna da je delimo, ne zna da je brojimo. Samo čeka da neko odluči kome pripada.“ Okreće se prema tebi sa lampom. „Ne tražim savet. Samo ne želim da ostanem sam sa tim.“",
+          "t": "Prvi put mu se u glasu čuje nešto nalik olakšanju.",
+          "lead": "Olakšanje u njegovom glasu."
+        },
+        {
+          "t": "„Znaš šta je najčudnije? To što je ona tu. Mirna. Ne zna da je delimo, ne zna da je brojimo. Samo čeka da neko odluči kome pripada.“",
           "lead": "Voda koja čeka da neko odluči.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "Dok govori, gleda vodu. Tek na kraju se okreće prema tebi sa lampom.",
+          "lead": "Ilarion se okreće sa lampom."
+        },
+        {
+          "t": "„Ne tražim savet. Samo ne želim da ostanem sam sa tim.“",
+          "lead": "Šta traži od tebe.",
           "who": "Ilarion"
         },
         {
@@ -762,7 +828,7 @@
           "lead": "Ključ na starčevom dlanu."
         },
         {
-          "t": "„Ko drži ključ, odlučuje šta voda jeste“, kaže. „Zalihu, ili dar, ili pravo. Prestar sam da bih birao.“",
+          "t": "„Ko drži ključ, odlučuje šta voda jeste. Zalihu, ili dar, ili pravo. Prestar sam da bih birao.“",
           "lead": "Ko drži ključ, odlučuje šta voda jeste.",
           "who": "Ilarion"
         }
@@ -804,11 +870,11 @@
           "lead": "Kapetanka na niskom zidu."
         },
         {
-          "t": "Na zidu iznad nje visi lampa sa zatvorenim staklom, a oko plamena skuplja se roj sitnih insekata. Teja ih ne tera. Ni oni ni ona, čini se, ne traže ništa osim da prežive noć.",
+          "t": "Na zidu iznad nje visi lampa sa zatvorenim staklom, a oko plamena skuplja se roj sitnih insekata. Teja ih ne tera. Ni oni ni ona, čini se, ne traže ništa osim da prežive noć. Pomera se na zidu da ti napravi mesta.",
           "lead": "Lampa i roj insekata."
         },
         {
-          "t": "„Sedi, {voc}.“ Pomera se na zidu. „Gledaš kao neko ko je nešto našao. Ne pitam šta. Samo mi reci da li moram da se pripremim.“",
+          "t": "„Sedi, {voc}. Gledaš kao neko ko je nešto našao. Ne pitam šta. Samo mi reci da li moram da se pripremim.“",
           "lead": "Pitanje bez pitanja.",
           "who": "Teja"
         },
@@ -817,9 +883,13 @@
           "lead": "Četrnaest sela nizvodno."
         },
         {
-          "t": "„Moja sestra je tamo. Pere veš u kanti i govori deci da je to igra.“ Prevrće ključ na gajtanu oko vrata. „Kad Odbor kaže da zatvorim, zatvaram zapornicu. Osim ako mi neko ko preuzima odgovornost kaže drugačije.“",
+          "t": "„Moja sestra je tamo. Pere veš u kanti i govori deci da je to igra. Kad Odbor kaže da zatvorim, zatvaram zapornicu. Osim ako mi neko ko preuzima odgovornost kaže drugačije.“",
           "lead": "Ključ oko vrata, sestra nizvodno.",
           "who": "Teja"
+        },
+        {
+          "t": "Dok govori, prevrće ključ na gajtanu oko vrata.",
+          "lead": "Ključ na gajtanu."
         },
         {
           "t": "Teja ti objašnjava da se zatvaranje zapornice čuje u celoj dolini: tri duga signala sirene, pa tišina, pa tri kratka. „Ljudi dole znaju šta znači“, kaže. „Čim čuju, napune sve što imaju. Posle toga nema više šta da se napuni.“",
@@ -886,8 +956,17 @@
           "lead": "Papirno cveće pod zvučnikom."
         },
         {
-          "t": "„{voc}, izvestite.“ Pauza dovoljno duga da se čuje pumpa. „Recite šta piše u knjizi.“",
+          "t": "„{voc}, izvestite.“",
           "lead": "Pet glasova traži izveštaj.",
+          "who": "Odbor"
+        },
+        {
+          "t": "Pauza je dovoljno duga da se čuje pumpa.",
+          "lead": "Pauza u kojoj se čuje pumpa."
+        },
+        {
+          "t": "„Recite šta piše u knjizi.“",
+          "lead": "Šta piše u knjizi.",
           "who": "Odbor"
         },
         {

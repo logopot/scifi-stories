@@ -111,6 +111,16 @@ Svaka scena mora imati izlaz: `choices`, `next`, `branch` ili `end`. Sve scene m
 
 Dugme na dnu strane: na stranama koje nisu poslednje prikazuje `lead` sledeće strane (ili `ui.next`); na poslednjoj strani scene sa izborom prikazuju se `prompt` i opcije; na poslednjoj strani scene bez izbora dugme prikazuje `lead` prve strane sledeće scene (ili `ui.finish` kad je scena `end`, odnosno `ui.next`).
 
+### Replike
+
+Pasus sa `who` je replika: iznad njega se prikazuje ime i lice govornika, pa u njemu stoji samo ono što lik govori.
+
+1. Pasus sa `who` sadrži SAMO ono što taj lik izgovara naglas, pod srpskim navodnicima „…“, jedan govornik po pasusu (i za `__reader__`/`Ti`). Bez naracije, bez radnji i gestova, bez „kaže“, „rekla je“, „pitao si“.
+2. Sve ostalo (gest, reakcija, opis, „Dok govori…“, „Zastaje, pa dodaje:“) ide u poseban pasus BEZ `who`, pre ili posle replike. Ako gest prekida repliku usred, deli se na repliku → naracija → replika samo kad druga replika stvarno nešto dodaje; inače se gest pomera pre ili posle. Pri deljenju `if` i ostala uslovna polja kopiraju se na svaki novi pasus, a muška i ženska varijanta (`t`/`tf`, `lead`/`leadf`) ostaju usklađene. Svaki novi pasus koji dolazi posle druge strane dobija kratak `lead` u drugom licu koji ne otkriva šta sledi i opisuje upravo taj pasus.
+3. Replika ne počinje imenom govornika ni sa „Ja sam X“ / „Zovem se X“, jer ime već piše u zaglavlju. Ako govornik kaže ulogu, ostaje uloga bez imena („Vodim noćnu smenu.“). Ime ostaje samo kad se njime imenuje neko drugi.
+4. Pasus koji je čista naracija o liku nema `who`. Ako lice treba da se prikaže uz lik koji samo biva predstavljen, a ne govori, koristi se `with`.
+5. Lik se pre prve replike po potrebi predstavi u naraciji (izgled, uloga, šta radi), najviše jednom po imenu, a naracija ne sme dati tri ili više strana zaredom samo zato što je replika odvojena (susedne opise iste scene spoj u jedan pasus od 1–4 rečenice).
+
 ### Izbori (`choices[]`)
 
 | Polje | Tip | Značenje |
