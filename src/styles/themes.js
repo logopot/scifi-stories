@@ -2,9 +2,33 @@
 // Nova priča = nova tema u `themes` (ključ je slug priče). Brisanje teme = brisanje reda.
 import { fonts, tokens } from './tokens.js';
 
+// Boje znaka sajta prema svetlini pozadine teme (relativna luminansa bg, ne ime teme): svetla pozadina = tamniji znak,
+// tamna pozadina = svetliji znak. Varijanta "OnImage" je za znak preko slike (tamni gornji rub), uvek svetla.
+const channel = (v) => {
+  const c = v / 255;
+  return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+};
+const luminance = (hex) => {
+  const n = parseInt(hex.replace('#', ''), 16);
+  return 0.2126 * channel((n >> 16) & 255) + 0.7152 * channel((n >> 8) & 255) + 0.0722 * channel(n & 255);
+};
+const LOGO_ON_IMAGE = { body: '#dbe6ff', accent: '#f2c14e' };
+const withLogo = (theme, darkAccent = '#f2c14e') => {
+  const dark = luminance(theme.bg) < 0.18; // granica između "svetle" i "tamne" pozadine
+  return {
+    ...theme,
+    logoBody: dark ? '#dbe6ff' : '#1b2d4f',
+    logoAccent: dark ? darkAccent : '#b86f10',
+    logoGap: theme.bg, // razmak oko male planete boje pozadine
+    logoBodyOnImage: LOGO_ON_IMAGE.body,
+    logoAccentOnImage: LOGO_ON_IMAGE.accent,
+    logoGapOnImage: theme.scrim,
+  };
+};
+
 // Tema sveta Tandem: večni dan, dva sunca (ćilibarsko i plavkasto-belo), dve senke.
 // Ovo je tačan izgled "Bez opcije" pre uvođenja tema; ne menjati.
-export const bezOpcije = {
+const bezOpcije = {
   name: 'bez-opcije',
   mode: 'light',
   sky: 'twin-suns',
@@ -25,7 +49,6 @@ export const bezOpcije = {
   selection: 'rgba(217, 137, 43, 0.35)',
   focusRing: '#4f7ea6',
   shadow: 'rgba(60, 40, 20, 0.5)',
-  logoBackdrop: 'transparent',
   scrim: 'rgba(20, 30, 48, 0.9)',
   onImage: '#faf4e6',
   btnBg: 'transparent',
@@ -51,7 +74,7 @@ export const bezOpcije = {
 };
 
 // Neutralna tema za početnu stranu i stranicu "nema takve priče".
-export const siteTheme = {
+const siteBase = {
   name: 'site',
   mode: 'light',
   sky: 'twin-suns',
@@ -72,7 +95,6 @@ export const siteTheme = {
   selection: 'rgba(70, 96, 126, 0.3)',
   focusRing: '#46607e',
   shadow: 'rgba(34, 38, 43, 0.4)',
-  logoBackdrop: 'transparent',
   scrim: 'rgba(22, 28, 38, 0.9)',
   onImage: '#ffffff',
   btnBg: 'transparent',
@@ -98,7 +120,7 @@ export const siteTheme = {
 };
 
 // Rezervisano mesto za buduću priču: tamna tema, zvezdano nebo.
-export const tihiSat = {
+const tihiSat = {
   name: 'tihi-sat',
   mode: 'dark',
   sky: 'stars',
@@ -119,7 +141,6 @@ export const tihiSat = {
   selection: 'rgba(127, 180, 232, 0.35)',
   focusRing: '#7fb4e8',
   shadow: 'rgba(0, 0, 0, 0.6)',
-  logoBackdrop: 'rgba(255, 255, 255, 0.9)',
   scrim: 'rgba(4, 7, 14, 0.9)',
   onImage: '#eef2f9',
   btnBg: 'transparent',
@@ -145,7 +166,7 @@ export const tihiSat = {
 };
 
 // Rezervisano mesto za buduću priču: svetla zelenkasta tema.
-export const zelenaGranica = {
+const zelenaGranica = {
   name: 'zelena-granica',
   mode: 'light',
   sky: 'twin-suns',
@@ -166,7 +187,6 @@ export const zelenaGranica = {
   selection: 'rgba(45, 117, 86, 0.3)',
   focusRing: '#2d7556',
   shadow: 'rgba(27, 42, 33, 0.4)',
-  logoBackdrop: 'transparent',
   scrim: 'rgba(14, 30, 22, 0.9)',
   onImage: '#ffffff',
   btnBg: 'transparent',
@@ -192,7 +212,7 @@ export const zelenaGranica = {
 };
 
 // Poslednja mera: presušeno jezero, tamna petrolej-zelena sa bakarnim odsjajem.
-export const poslednjaMera = {
+const poslednjaMera = {
   name: 'poslednja-mera',
   mode: 'dark',
   sky: 'twin-suns',
@@ -213,7 +233,6 @@ export const poslednjaMera = {
   selection: 'rgba(95, 182, 176, 0.35)',
   focusRing: '#5fb6b0',
   shadow: 'rgba(0, 0, 0, 0.6)',
-  logoBackdrop: 'rgba(255, 255, 255, 0.9)',
   scrim: 'rgba(6, 18, 22, 0.9)',
   onImage: '#eef4f1',
   btnBg: 'transparent',
@@ -239,7 +258,7 @@ export const poslednjaMera = {
 };
 
 // Tema priče "Tri i deset": noćni planinski toranj, tamna ljubičasto-grafitna podloga, akcenat boje natrijumske lampe.
-export const triIDeset = {
+const triIDeset = {
   name: 'tri-i-deset',
   mode: 'dark',
   sky: 'stars',
@@ -260,7 +279,6 @@ export const triIDeset = {
   selection: 'rgba(227, 185, 78, 0.35)',
   focusRing: '#e3b94e',
   shadow: 'rgba(0, 0, 0, 0.6)',
-  logoBackdrop: 'rgba(255, 255, 255, 0.9)',
   scrim: 'rgba(12, 10, 20, 0.9)',
   onImage: '#f3f0f7',
   btnBg: 'transparent',
@@ -285,13 +303,15 @@ export const triIDeset = {
   fontHeading: fonts.serif,
 };
 
+export const siteTheme = withLogo(siteBase);
+
 // slug priče -> tema
 export const themes = {
-  'bez-opcije': bezOpcije,
-  'poslednja-mera': poslednjaMera,
-  'tri-i-deset': triIDeset,
-  'tihi-sat': tihiSat,
-  'zelena-granica': zelenaGranica,
+  'bez-opcije': withLogo(bezOpcije),
+  'poslednja-mera': withLogo(poslednjaMera),
+  'tri-i-deset': withLogo(triIDeset, '#e3b94e'), // sodium-žuti akcent ove teme
+  'tihi-sat': withLogo(tihiSat),
+  'zelena-granica': withLogo(zelenaGranica),
 };
 
 export const hasTheme = (slug) => Object.prototype.hasOwnProperty.call(themes, slug);

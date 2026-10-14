@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <style>
+    .body { fill: #1b2d4f; }
+    .accent { fill: #b86f10; }
+    .orbit { fill: none; stroke: #b86f10; stroke-width: 7; stroke-linecap: round; }
+    .planet { fill: #b86f10; stroke: #ffffff; stroke-width: 12; paint-order: stroke; }
+    @media (prefers-color-scheme: dark) {
+      .body { fill: #dbe6ff; }
+      .orbit { stroke: #f2c14e; }
+      .planet { fill: #f2c14e; stroke: #15131f; }
+    }
+  </style>
+  <g transform="translate(256 250) rotate(-15)">
+    <path class="orbit" d="M -245 0 A 245 72 0 0 1 245 0"/>
+  </g>
+  <circle class="body" cx="257" cy="260" r="139"/>
+  <g transform="translate(256 250) rotate(-15)">
+    <path class="orbit" d="M 245 0 A 245 72 0 0 1 -245 0"/>
+  </g>
+  <circle class="planet" cx="363" cy="177" r="63"/>
+</svg>

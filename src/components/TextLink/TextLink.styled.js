@@ -14,7 +14,6 @@ export const Root = styled(Link)`
 
   &:hover {
     color: ${({ theme }) => theme.text};
-    text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.accent};
+    text-decoration: none;
   }
 `;

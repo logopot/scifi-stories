@@ -6,7 +6,18 @@ const SIZES = {
   xs: { desktop: 'logoXs', mobile: 'logoXs' },
 };
 
-// Okrugla pozadina (theme.logoBackdrop) čini logo vidljivim i na tamnim temama.
+const defaultColors = (theme) => css`
+  --logo-body: ${theme.logoBody};
+  --logo-accent: ${theme.logoAccent};
+  --logo-gap: ${theme.logoGap};
+`;
+const onImageColors = (theme) => css`
+  --logo-body: ${theme.logoBodyOnImage};
+  --logo-accent: ${theme.logoAccentOnImage};
+  --logo-gap: ${theme.logoGapOnImage};
+`;
+
+// Boje znaka (CSS promenljive za LogoMark) dolaze iz teme; `onImage` je svetla varijanta za znak preko slike.
 export const Root = styled.span`
   display: inline-flex;
   flex: none;
@@ -14,11 +25,10 @@ export const Root = styled.span`
   justify-content: center;
   padding: ${({ theme }) => theme.sizes.logoPad};
   border-radius: 50%;
-  background: ${({ theme }) => theme.logoBackdrop};
+  ${({ $onImage, theme }) => ($onImage ? onImageColors(theme) : defaultColors(theme))}
 
-  img {
+  svg {
     display: block;
-    object-fit: contain;
     ${({ $size, theme }) => css`
       width: ${theme.sizes[SIZES[$size].mobile]};
       height: ${theme.sizes[SIZES[$size].mobile]};

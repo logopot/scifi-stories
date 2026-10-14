@@ -67,7 +67,7 @@ export default function ReaderSession() {
       <SceneBackdrop src={backdropSrc} />
       <OnImage>
         <S.BackBar>
-          <LogoLink size="xs" />
+          <LogoLink size="xs" variant="onImage" />
           <TextLink to="/">← Sve priče</TextLink>
         </S.BackBar>
       </OnImage>

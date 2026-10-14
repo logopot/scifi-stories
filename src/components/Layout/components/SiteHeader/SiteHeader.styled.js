@@ -8,24 +8,30 @@ export const Bar = styled.header`
   padding: ${({ theme }) => theme.space[150]} 0 0;
 `;
 
+export const BrandName = styled.span`
+  font-family: ${({ theme }) => theme.fontHeading};
+  transition: opacity ${({ theme }) => theme.transitions.base};
+`;
+
 export const Brand = styled(Link)`
   display: inline-flex;
   align-items: center;
-  gap: ${({ theme }) => theme.space[90]};
+  gap: ${({ theme }) => theme.space[100]};
   font-family: ${({ theme }) => theme.fontHeading};
   font-size: ${({ theme }) => theme.fs[110]};
   letter-spacing: ${({ theme }) => theme.tracking[4]};
   text-decoration: none;
   color: ${({ theme }) => theme.text};
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: ${({ theme }) => theme.text};
-    text-decoration: underline;
+    text-decoration: none; /* bez podvlačenja; obris fokusa je globalni */
   }
-`;
 
-export const BrandName = styled.span`
-  font-family: ${({ theme }) => theme.fontHeading};
+  &:hover ${BrandName} {
+    opacity: 0.85;
+  }
 `;
 
 export const Skip = styled.a`

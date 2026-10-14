@@ -89,7 +89,8 @@ Sve boje žive u `src/styles/themes.js` i samo tamo. Svaka tema je običan objek
 | `choiceBg`, `choiceBorder`, `choiceBgSelected`, `choiceTextSelected`, `choiceDot` | birljive opcije: dugmad za rod (neizabrano / izabrano) i marker opcija u čitaču |
 | `btnDisabledBg`, `btnDisabledText` | onemogućeno dugme |
 | `scrim`, `onImage` | preliv (rgba) preko slike na kartici i boja teksta preko njega; kontrast `onImage` naspram `scrim` (preko bele slike) mora biti bar 4.5:1 |
-| `logoBackdrop` | pozadina kruga iza logoa (`transparent` na svetlim, svetao krug na tamnim temama) |
+| `logoBody`, `logoAccent`, `logoGap` | boje znaka sajta (velika planeta, mala planeta i orbita, razmak oko male planete). Biraju se prema luminansi `bg`: svetla pozadina = tamniji znak, tamna = svetliji (kontrast prema `bg` bar 3:1) |
+| `logoBodyOnImage`, `logoAccentOnImage`, `logoGapOnImage` | isti znak preko slike (povratak u čitaču): uvek svetle boje, kontrast prema `scrim` bar 3:1 |
 | `fontBody`, `fontHeading` | font teksta i naslova |
 
 `tokens.js` sadrži sve što nije boja (razmaci `space`, veličine slova `fs`, `tracking`, `radii`, `breakpoints`, `transitions`, `zIndex`, `fonts`, ...) i spaja se sa temom u `getTheme(slug)`. Ključevi razmaka su stotinke jedinice: `theme.space[150]` = 1.5rem, `theme.fs[98]` = 0.98rem.

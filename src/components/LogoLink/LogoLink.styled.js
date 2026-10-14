@@ -5,4 +5,10 @@ export const Root = styled(Link)`
   display: inline-flex;
   line-height: 0;
   border-radius: 50%;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+  }
 `;

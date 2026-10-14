@@ -4,7 +4,7 @@ import { onImageTheme } from '../src/styles/onImageTheme.js';
 
 export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentStrong', 'onAccent',
-  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBackdrop', 'scrim', 'onImage', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
+  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBody', 'logoAccent', 'logoGap', 'logoBodyOnImage', 'logoAccentOnImage', 'logoGapOnImage', 'scrim', 'onImage', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
   'btnQuietText', 'btnQuietBorder', 'btnQuietBgHover', 'btnQuietTextHover', 'choiceBg', 'choiceBorder', 'choiceBgSelected',
   'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fontBody', 'fontHeading',
 ];
@@ -23,6 +23,8 @@ const PAIRS = [
   ['choiceTextSelected', 'choiceBgSelected', 4.5],
   ['btnBorder', 'bg', 3],
   ['focusRing', 'bg', 3],
+  ['logoBody', 'bg', 3], // znak sajta u zaglavlju
+  ['logoAccent', 'bg', 3],
 ];
 // Samo upozorenje: sitni dekorativni tekst (broj strane, oznake).
 const SOFT_PAIRS = [['textFaint', 'bg', 3]];
@@ -76,6 +78,11 @@ for (const [key, t] of Object.entries(all)) {
     const over = [m[1], m[2], m[3]].map((v) => Math.round(Number(v) * a + 255 * (1 - a)));
     const hex = `#${over.map((v) => v.toString(16).padStart(2, '0')).join('')}`;
     const ci = contrast(t.onImage, hex);
+    for (const fg of ['logoBodyOnImage', 'logoAccentOnImage']) {
+      const cl = contrast(t[fg], hex); // znak preko slike (tamni gornji rub)
+      console.log(`${cl >= 3 ? 'ok  ' : 'LOŠE'} ${key.padEnd(15)} ${fg}/scrim: ${cl.toFixed(2)} (min 3)`);
+      if (cl < 3) errors.push(`tema "${key}": kontrast ${fg}/scrim je ${cl.toFixed(2)}, a mora biti bar 3`);
+    }
     console.log(`${ci >= 4.5 ? 'ok  ' : 'LOŠE'} ${key.padEnd(15)} onImage/scrim (preko bele): ${ci.toFixed(2)} (min 4.5)`);
     if (ci < 4.5) errors.push(`tema "${key}": kontrast onImage/scrim je ${ci.toFixed(2)}, a mora biti bar 4.5`);
     // Izgled scene: na širokom ekranu tekst stoji na ploči od scrim boje. Boja teksta je text (tamne teme) ili onImage
