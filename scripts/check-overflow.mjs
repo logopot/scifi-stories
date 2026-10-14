@@ -120,9 +120,7 @@ for (const w of WIDTHS) {
     const story = JSON.parse(fs.readFileSync(path.join(root, 'src/stories', slug, 'story.json'), 'utf8'));
     t = await newPage();
     await t.page.goto(`${base}/${slug}`);
-    await check(t.page, `/${slug}`, w);
-    await t.page.goto(`${base}/${slug}/citaj`);
-    await check(t.page, `/${slug}/citaj (početni ekran)`, w);
+    await check(t.page, `/${slug} (početni ekran)`, w);
     await t.ctx.close();
     for (const node of pickNodes(story)) {
       for (const gender of ['m', 'f']) {
@@ -130,12 +128,12 @@ for (const w of WIDTHS) {
         for (let attempt = 0; attempt < 2; attempt++) {
           try {
             t = await newPage({ fn: ([s, n, g]) => localStorage.setItem(`scifi-${s}-v1`, JSON.stringify({ node: n, picks: [], gender: g, name: '' })), arg: [slug, node, gender] });
-            await t.page.goto(`${base}/${slug}/citaj`);
+            await t.page.goto(`${base}/${slug}`);
             await t.page.getByRole('button', { name: /nastavi/i }).first().click();
             // sve strane scene: prva se meri za vreme animacije, ostale posle okretanja
             let last = '';
             for (let i = 0; i < 14; i++) {
-              await check(t.page, `/${slug}/citaj scena ${node} strana ${i + 1}`, w);
+              await check(t.page, `/${slug} scena ${node} strana ${i + 1}`, w);
               const text = await t.page.evaluate(() => document.querySelector('section')?.innerText.slice(0, 80) || '');
               if (text === last) break;
               last = text;

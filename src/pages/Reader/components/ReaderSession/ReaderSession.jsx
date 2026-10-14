@@ -12,11 +12,10 @@ import { loadReaderPrefs, saveReaderPrefs } from '../../../../engine/storage';
 import * as S from './ReaderSession.styled';
 
 // Tok čitanja jedne priče: početni ekran -> scene -> kraj.
-export default function ReaderSession({ resume }) {
+export default function ReaderSession() {
   const { engine, story, cover } = useStory();
   const [state, dispatch] = useReducer(engine.reducer, null, () => {
-    const saved = resume ? engine.loadSaved() : null;
-    return saved ? { ...engine.initialState, ...saved, screen: 'play' } : engine.initialState;
+    return engine.initialState; // uvek počinje početnim ekranom; sačuvan napredak nudi dugme „Nastavi“
   });
   // Sačuvan progres se čita svaki put kad se prikaže početni ekran (posle "Počni ispočetka" ga više nema).
   const saved = state.screen === 'start' ? engine.loadSaved() : null;

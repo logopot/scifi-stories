@@ -20,18 +20,18 @@ npm run check-story -- bez-opcije   # samo jedna priča (teme i struktura se i d
 | Ruta | Strana |
 | --- | --- |
 | `/` | Početna: kartice svih priča |
-| `/:slug` | Stranica priče: naslovna slika, opis, dugme „Počni priču“ / „Nastavi priču“ |
-| `/:slug/citaj` | Čitač: početni ekran → scene → kraj |
+| `/:slug` | Čitač priče: početni ekran (ime, rod, „Nastavi“ za sačuvan napredak) → scene → kraj |
+| `/:slug/citaj` | Stara adresa čitača; preusmerava na `/:slug` |
 | ostalo | „Nema takve priče“ |
 
-`public/_redirects` (`/* /index.html 200`) omogućava direktne linkove na Cloudflare Pages. Vite `base` je `'/'`.
+`public/_redirects` omogućava direktne linkove na Cloudflare Pages (SPA pravilo `/* /index.html 200`) i 301 sa stare adrese `/:slug/citaj` na `/:slug`. Vite `base` je `'/'`.
 
 ## Struktura fajlova
 
 ```
 src/
   components/      zajedničke komponente (Button, Sky, Heading, Figure, Scene, StartScreen, Mirror, StoryCard, Layout, ...)
-  pages/           Landing, StoryPage, Reader, NotFound
+  pages/           Landing, Reader, NotFound
   engine/          motor priče (engine.js), čuvanje (storage.js), reč i rod (player.js), StoryContext.js
   hooks/           useDocumentMeta, useStoryData
   stories/         index.js (registar), format.js, <slug>/story.json

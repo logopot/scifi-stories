@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Navigate, useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import Page from '../../components/Page';
 import Sky from '../../components/Sky';
@@ -24,12 +24,17 @@ export default function Reader() {
       </Layout>
     );
   }
-  if (entry.status === 'soon') return <Navigate to={`/${slug}`} replace />;
+  if (entry.status === 'soon') {
+    return (
+      <Layout>
+        <NotFound />
+      </Layout>
+    );
+  }
   return <ReaderLoader entry={entry} />;
 }
 
 function ReaderLoader({ entry }) {
-  const location = useLocation();
   const { story, status } = useStoryData(entry);
   const engine = useMemo(() => (story ? createEngine(story, entry.slug) : null), [story, entry.slug]);
   const context = useMemo(
@@ -45,7 +50,7 @@ function ReaderLoader({ entry }) {
       <Page variant="reader">
         {status === 'ready' && context && (
           <StoryContext.Provider value={context}>
-            <ReaderSession key={entry.slug} resume={Boolean(location.state?.resume)} />
+            <ReaderSession key={entry.slug} />
           </StoryContext.Provider>
         )}
         {status === 'loading' && <S.Status>Učitavam priču…</S.Status>}
