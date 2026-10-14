@@ -103,6 +103,14 @@ export const sizes = {
   titleFluid: 'clamp(2.6rem, 8vw, 4.2rem)',
   portraitFluid: 'clamp(120px, 28%, 190px)',
   pageWidth: '46rem',
+  speakerPortrait: 'clamp(13.75rem, 30vw, 17.5rem)',
+  speakerPortraitMaxVh: '45vh',
+  speakerPortraitSm: 'clamp(8rem, 18vw, 10.5rem)',
+  speakerBannerFollowMaxVh: '20vh',
+  speakerBannerRatio: '16 / 10',
+  speakerBannerMaxVh: '30vh',
+  speakerBar: '3px',
+  speakerLine: '2.5rem',
 };
 
 export const fonts = {
@@ -125,6 +133,7 @@ export const motion = {
   figure: '1.2s',
   hint: '1.4s',
   sky: '0.8s',
+  speaker: '0.18s',
 };
 
 // Prelivi preko slike kartice: pun do prve vrednosti, pa nestaje do druge (gore i dole).

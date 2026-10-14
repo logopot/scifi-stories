@@ -1,13 +1,19 @@
 import React from 'react';
-import SpeakerHeader from '../SpeakerHeader';
+import Speaker from '../Speaker';
 import * as S from './Paragraph.styled';
 
-// Pasus proze; `who` je ime govornika (sa licem `image`) koje se prikazuje iznad replike.
-export default function Paragraph({ who, image, showAvatar = true, children }) {
+// Pasus proze; `who` je ime govornika (sa licem `image`) koji se prikazuje uz repliku.
+// `nameOnly`: samo red sa imenom (strana već ima veliki portret tog lika ili isti lik govori uzastopno).
+export default function Paragraph({ who, image, reader = false, follow = false, nameOnly = false, children }) {
   return (
     <S.Root>
-      {who && <SpeakerHeader name={who} image={image} showAvatar={showAvatar} />}
-      {children}
+      {who ? (
+        <Speaker name={who} image={image} reader={reader} follow={follow} nameOnly={nameOnly}>
+          <S.Text>{children}</S.Text>
+        </Speaker>
+      ) : (
+        <S.Text>{children}</S.Text>
+      )}
     </S.Root>
   );
 }

@@ -114,6 +114,19 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
 
   const current = pages[page];
 
+  // Portreti sledeće strane se učitavaju unapred, da se pojave bez kašnjenja.
+  useEffect(() => {
+    const next = pages[page + 1];
+    if (!next) return;
+    next.texts
+      .map((x) => (x.who ? engine.getCharacter(x.who, player).image : null))
+      .concat(next.portrait ? [engine.getImage(next.portrait)] : [])
+      .filter((img) => img && img.src)
+      .forEach((img) => {
+        new Image().src = `${import.meta.env.BASE_URL}${img.src}`;
+      });
+  }, [pages, page, engine, player]);
+
   return (
     <S.Article>
       <PageBox key={`${nodeId}-${page}`} ref={boxRef}>
@@ -129,16 +142,22 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
 
         {current.texts.map(({ t, who, with: withNames }, i) => {
           const speaker = who ? engine.getCharacter(who, player) : null;
-          // Veliki portret istog lika na strani je dovoljan: tada nema malog lica.
+          // Veliki portret istog lika na strani je dovoljan: tada ostaje samo red sa imenom.
           const sameAsPortrait = (c) => Boolean(c.imageId) && c.imageId === current.portrait;
           const extras = (withNames || []).map((n) => engine.getCharacter(n, player)).filter((c) => !sameAsPortrait(c));
+          // Isti lik govori ponovo (bez drugog govornika između): portret samo uz prvu repliku.
+          const earlier = current.texts.slice(0, i).filter((x) => x.who);
+          const repeated = Boolean(who) && earlier[earlier.length - 1]?.who === who;
+          const follow = earlier.length > 0;
           return (
             <React.Fragment key={i}>
               {extras.length > 0 && <CharacterRow characters={extras} />}
               <Paragraph
                 who={speaker ? speaker.name : null}
                 image={speaker && speaker.image}
-                showAvatar={!(speaker && sameAsPortrait(speaker))}
+                reader={Boolean(speaker && speaker.reader)}
+                follow={follow}
+                nameOnly={Boolean(speaker && (sameAsPortrait(speaker) || repeated))}
               >
                 {t}
               </Paragraph>
