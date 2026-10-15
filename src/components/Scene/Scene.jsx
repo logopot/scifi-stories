@@ -144,9 +144,9 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
   );
 
   // Izgled "scene": slika mesta je pozadina (vidi SceneBackdrop), tekst je u panelu. Lik uz panel je govornik
-  // prve replike na strani; bez replike na početku strane nema portreta ni imena u zaglavlju.
-  const first = current.texts[0];
-  const head = first.who ? engine.getCharacter(first.who, player) : null;
+  // prve replike (pasusa sa "who") na strani, makar joj prethodi naracija; strana bez replika nema portreta ni imena.
+  const headIndex = current.texts.findIndex((x) => x.who);
+  const head = headIndex >= 0 ? engine.getCharacter(current.texts[headIndex].who, player) : null;
   return (
     <S.Article>
       <SpeechPanel
@@ -167,7 +167,7 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
             const speaker = who ? engine.getCharacter(who, player) : null;
             const extras = (withNames || []).map((n) => engine.getCharacter(n, player));
             // Ime iznad replike samo kad ga ne prikazuje zaglavlje panela.
-            const label = speaker && !(i === 0 && head) ? speaker.name : null;
+            const label = speaker && !(i === headIndex && head) ? speaker.name : null;
             return (
               <React.Fragment key={i}>
                 {extras.length > 0 && <CharacterRow characters={extras} />}
