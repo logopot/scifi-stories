@@ -4,7 +4,7 @@ import { onImageTheme } from '../src/styles/onImageTheme.js';
 
 export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentStrong', 'onAccent',
-  'secondary', 'secondarySoft', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBody', 'logoAccent', 'logoGap', 'logoBodyOnImage', 'logoAccentOnImage', 'logoGapOnImage', 'scrim', 'onImage', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
+  'secondary', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBody', 'logoAccent', 'logoGap', 'logoBodyOnImage', 'logoAccentOnImage', 'logoGapOnImage', 'scrim', 'onImage', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
   'btnQuietText', 'btnQuietBorder', 'btnQuietBgHover', 'btnQuietTextHover', 'choiceBg', 'choiceBorder', 'choiceBgSelected',
   'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fontBody', 'fontHeading',
 ];

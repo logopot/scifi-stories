@@ -1,10 +1,8 @@
 import styled, { css } from 'styled-components';
-import { doubleShadow } from '../../styles/mixins';
 
 export const Root = styled.h1`
   font-family: ${({ theme }) => theme.fontHeading};
   font-weight: 500;
-  ${doubleShadow}
   ${({ $variant, theme }) =>
     $variant === 'title'
       ? css`

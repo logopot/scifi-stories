@@ -66,7 +66,7 @@ export const lineHeights = {
   tight: 1.1,
   heading: 1.2,
   text: 1.5,
-  prose: 1.85,
+  prose: 1.7,
 };
 
 export const radii = {
@@ -122,8 +122,8 @@ export const sizes = {
 };
 
 export const fonts = {
-  serif: "'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif",
-  ui: "'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif",
+  serif: "'Literata', Georgia, 'Times New Roman', serif",
+  ui: "'Space Grotesk', 'Segoe UI', system-ui, sans-serif",
   menu: "'Cascadia Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace",
 };
 

@@ -57,11 +57,11 @@ export const Layer = styled.div`
 export const Shade = styled.div`
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.scrim}, transparent 22%),
+  background: linear-gradient(to bottom, ${({ theme }) => theme.scrim} 8%, transparent 32%),
     linear-gradient(to bottom, transparent 45%, ${({ theme }) => theme.bg} 100%);
 
   ${md} {
-    background: linear-gradient(to bottom, ${({ theme }) => theme.scrim}, transparent 18%),
+    background: linear-gradient(to bottom, ${({ theme }) => theme.scrim} 6%, transparent 24%),
       linear-gradient(to top, ${({ theme }) => theme.scrim}, transparent 55%),
       radial-gradient(ellipse at center, transparent 55%, ${({ theme }) => theme.scrim} 135%);
   }

@@ -134,7 +134,6 @@ export const Top = styled.div`
   gap: ${({ theme }) => theme.space[60]};
   padding: ${({ theme }) => theme.space[140]} ${({ $badge, theme }) => ($badge ? theme.space[600] : theme.space[140])}
     0 ${({ theme }) => theme.space[140]};
-  text-shadow: 0 1px 8px ${({ theme }) => theme.scrim};
 `;
 
 export const Title = styled.h2`
@@ -180,5 +179,4 @@ export const Meta = styled.p`
   text-transform: uppercase;
   line-height: ${({ theme }) => theme.lineHeights.text};
   color: ${({ theme }) => theme.onImage};
-  text-shadow: 0 1px 6px ${({ theme }) => theme.scrim};
 `;

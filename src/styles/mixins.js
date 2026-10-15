@@ -1,11 +1,5 @@
 import { css } from 'styled-components';
 
-// Dvostruka senka naslova: jedna u boji akcenta, druga u sekundarnoj boji teme.
-export const doubleShadow = css`
-  text-shadow: 2px 2px 0 ${({ theme }) => theme.selection},
-    -2px 2px 0 ${({ theme }) => theme.secondarySoft};
-`;
-
 // Dugme: sva stanja dolaze iz btn* tokena teme (promena boje, bez promene dimenzija).
 export const buttonLook = css`
   display: inline-block;

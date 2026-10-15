@@ -42,7 +42,6 @@ const bezOpcije = {
   accentStrong: '#b0600a',
   onAccent: '#ffffff',
   secondary: '#4f7ea6',
-  secondarySoft: 'rgba(79, 126, 166, 0.35)',
   glowA: 'rgba(236, 160, 60, 0.55)',
   glowB: 'rgba(130, 175, 215, 0.55)',
   border: 'rgba(43, 34, 25, 0.18)',
@@ -70,7 +69,7 @@ const bezOpcije = {
   btnDisabledBg: '#e6dcc3',
   btnDisabledText: '#7c6e5a',
   fontBody: fonts.serif,
-  fontHeading: fonts.serif,
+  fontHeading: fonts.ui,
 };
 
 // Neutralna tema za početnu stranu i stranicu "nema takve priče".
@@ -88,7 +87,6 @@ const siteBase = {
   accentStrong: '#46607e',
   onAccent: '#ffffff',
   secondary: '#8a6f4a',
-  secondarySoft: 'rgba(138, 111, 74, 0.3)',
   glowA: 'rgba(120, 150, 190, 0.45)',
   glowB: 'rgba(220, 180, 120, 0.4)',
   border: 'rgba(34, 38, 43, 0.18)',
@@ -116,7 +114,7 @@ const siteBase = {
   btnDisabledBg: '#e2dfd6',
   btnDisabledText: '#6f747c',
   fontBody: fonts.serif,
-  fontHeading: fonts.serif,
+  fontHeading: fonts.ui,
 };
 
 // Rezervisano mesto za buduću priču: tamna tema, zvezdano nebo.
@@ -134,7 +132,6 @@ const tihiSat = {
   accentStrong: '#2f6db0',
   onAccent: '#ffffff',
   secondary: '#c4a3f5',
-  secondarySoft: 'rgba(196, 163, 245, 0.3)',
   glowA: 'rgba(80, 110, 220, 0.35)',
   glowB: 'rgba(160, 110, 230, 0.28)',
   border: 'rgba(230, 233, 240, 0.2)',
@@ -180,7 +177,6 @@ const zelenaGranica = {
   accentStrong: '#2d7556',
   onAccent: '#ffffff',
   secondary: '#b2742b',
-  secondarySoft: 'rgba(178, 116, 43, 0.3)',
   glowA: 'rgba(90, 190, 140, 0.45)',
   glowB: 'rgba(240, 200, 110, 0.5)',
   border: 'rgba(27, 42, 33, 0.2)',
@@ -208,7 +204,7 @@ const zelenaGranica = {
   btnDisabledBg: '#d3e0cf',
   btnDisabledText: '#5a6f63',
   fontBody: fonts.serif,
-  fontHeading: fonts.serif,
+  fontHeading: fonts.ui,
 };
 
 // Poslednja mera: presušeno jezero, tamna petrolej-zelena sa bakarnim odsjajem.
@@ -226,7 +222,6 @@ const poslednjaMera = {
   accentStrong: '#1d7773',
   onAccent: '#ffffff',
   secondary: '#d9915d',
-  secondarySoft: 'rgba(217, 145, 93, 0.3)',
   glowA: 'rgba(70, 160, 160, 0.3)',
   glowB: 'rgba(210, 120, 70, 0.22)',
   border: 'rgba(230, 238, 234, 0.2)',
@@ -254,7 +249,7 @@ const poslednjaMera = {
   btnDisabledBg: '#1d3238',
   btnDisabledText: '#7f9a95',
   fontBody: fonts.serif,
-  fontHeading: fonts.serif,
+  fontHeading: fonts.ui,
 };
 
 // Tema priče "Tri i deset": noćni planinski toranj, tamna ljubičasto-grafitna podloga, akcenat boje natrijumske lampe.
@@ -272,7 +267,6 @@ const triIDeset = {
   accentStrong: '#8a5f08',
   onAccent: '#ffffff',
   secondary: '#c98aa3',
-  secondarySoft: 'rgba(201, 138, 163, 0.3)',
   glowA: 'rgba(227, 185, 78, 0.22)',
   glowB: 'rgba(150, 110, 200, 0.26)',
   border: 'rgba(236, 232, 242, 0.2)',
@@ -300,7 +294,7 @@ const triIDeset = {
   btnDisabledBg: '#2a2640',
   btnDisabledText: '#8d86a2',
   fontBody: fonts.serif,
-  fontHeading: fonts.serif,
+  fontHeading: fonts.ui,
 };
 
 export const siteTheme = withLogo(siteBase);
