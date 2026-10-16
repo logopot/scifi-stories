@@ -7,7 +7,9 @@ import { getTheme } from './themes';
 // Tema se bira iz prvog segmenta URL-a, bez čekanja na JSON priče, pa nema treptaja pogrešne teme.
 export default function ThemeController({ children }) {
   const { pathname } = useLocation();
-  const slug = pathname.split('/')[1] || '';
+  const parts = pathname.split('/');
+  // razvojna ruta /dev/scene/:slug/... koristi temu svoje priče
+  const slug = (parts[1] === 'dev' && parts[2] === 'scene' ? parts[3] : parts[1]) || '';
   const theme = useMemo(() => getTheme(slug), [slug]);
 
   useEffect(() => {

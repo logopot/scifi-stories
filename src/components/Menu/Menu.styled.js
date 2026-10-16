@@ -7,4 +7,10 @@ export const Root = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space[35]};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) and (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
+    margin-top: ${({ theme }) => theme.space[120]};
+    padding-top: ${({ theme }) => theme.space[90]};
+    gap: 0;
+  }
 `;

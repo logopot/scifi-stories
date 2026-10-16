@@ -114,6 +114,10 @@ export const sizes = {
   scenePanelShare: 0.67,
   scenePortraitRise: 0.33,
   scenePanelMax: '70vh',
+  sceneShortScreen: '800px', // laptop prozori ove visine i niži dobijaju gušću ploču
+  scenePanelMaxShort: 'calc(100vh - 5.5rem)', // gornja traka i donji razmak; oduzima se i deo portreta koji viri iznad ploče (vidi SpeechPanel)
+  scenePortraitShort: 'min(clamp(110px, 11vw, 170px), 20vh)', // manji portreti na niskim prozorima
+  sceneTextMaxShort: '78ch',
   scenePanelWidth: '92%',
   scenePanelMaxWidth: '1152px',
   sceneTextMax: '58ch',

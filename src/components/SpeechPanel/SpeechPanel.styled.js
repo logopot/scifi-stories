@@ -40,6 +40,11 @@ export const Root = styled.div`
         /* ploča je visoka bar dve trećine portreta, pa on viri iznad nje za otprilike trećinu svoje visine */
         min-height: calc(var(--scene-pw) * 4 / 3 * ${theme.sizes.scenePanelShare} + ${theme.space[150]});
       `}
+
+    @media (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
+      --scene-pw: ${({ theme }) => theme.sizes.scenePortraitShort};
+      bottom: max(${({ theme }) => theme.space[100]}, env(safe-area-inset-bottom));
+    }
   }
 `;
 
@@ -98,6 +103,15 @@ export const Scroll = styled.div`
           padding: calc(var(--scene-pw) * 4 / 3 * ${theme.sizes.scenePanelShare} + ${theme.space[150]}) ${theme.space[250]} ${theme.space[200]};
         }
       `}
+
+    /* niski laptop prozori: viša ploča (portret viri iznad nje, pa se njegov deo oduzima), manji razmaci i tekst */
+    @media (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
+      max-height: max(${({ theme }) => theme.sizes.scenePanelMax}, calc(${({ theme }) => theme.sizes.scenePanelMaxShort} - var(--scene-pw) * 4 / 3 * ${({ theme }) => theme.sizes.scenePortraitRise}));
+      padding-top: ${({ theme }) => theme.space[120]};
+      padding-bottom: ${({ theme }) => theme.space[100]};
+      font-size: 1.08rem;
+      line-height: 1.55;
+    }
   }
 `;
 
@@ -117,6 +131,10 @@ export const Inner = styled.div`
         : css`
             max-width: ${theme.sizes.sceneTextMax};
             min-width: min(34ch, 100%);
+
+            @media (max-height: ${theme.sizes.sceneShortScreen}) {
+              max-width: ${theme.sizes.sceneTextMaxShort};
+            }
           `}
   }
 `;

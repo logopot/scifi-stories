@@ -32,6 +32,11 @@ export const Root = styled.button`
     min-height: ${({ theme }) => theme.sizes.touchMin};
   }
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) and (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
+    padding-top: ${({ theme }) => theme.space[40]};
+    padding-bottom: ${({ theme }) => theme.space[40]};
+  }
+
   &:hover,
   &:focus-visible {
     padding-left: ${({ theme }) => theme.space[70]};

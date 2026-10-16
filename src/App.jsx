@@ -6,6 +6,9 @@ import NotFound from './pages/NotFound';
 import Reader from './pages/Reader';
 import ThemeController from './styles/ThemeController';
 
+// Razvojna ruta za proveru izgleda strana (scripts/check-layout.mjs); u produkcijskom build-u je nema.
+const DevScene = import.meta.env.DEV ? React.lazy(() => import('./pages/DevScene')) : null;
+
 // Stara adresa čitača (/:slug/citaj) preusmerava na /:slug, da stari linkovi rade.
 function LegacyReaderRedirect() {
   const { slug } = useParams();
@@ -17,6 +20,16 @@ export default function App() {
     <BrowserRouter>
       <ThemeController>
         <Routes>
+          {DevScene && (
+            <Route
+              path="/dev/scene/:slug/:node/:page"
+              element={
+                <React.Suspense fallback={null}>
+                  <DevScene />
+                </React.Suspense>
+              }
+            />
+          )}
           <Route path="/:slug" element={<Reader />} />
           <Route path="/:slug/citaj" element={<LegacyReaderRedirect />} />
           <Route element={<Layout />}>

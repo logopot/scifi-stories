@@ -28,6 +28,11 @@ export const Root = styled.button`
     color: ${({ theme }) => theme.text};
   }
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) and (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
+    margin-top: ${({ theme }) => theme.space[100]};
+    padding: ${({ theme }) => theme.space[30]} 0;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     min-height: ${({ theme }) => theme.sizes.touchMin};
   }

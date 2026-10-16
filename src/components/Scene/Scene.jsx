@@ -19,12 +19,12 @@ const DEFAULT_IDLE_SECONDS = 20;
 const CLICK_GUARD_MS = 350; // sprečava da dupli klik preskoči stranu
 const TYPING_TAGS = ['INPUT', 'TEXTAREA', 'SELECT'];
 
-export default function Scene({ nodeId, picks, player, dispatch }) {
+export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0 }) {
   const { story, engine } = useStory();
   const node = engine.getNode(nodeId);
   // Strane se računaju jednom po sceni (uslovni pasusi zavise od ranijih izbora).
   const pages = useMemo(() => engine.buildPages(node, picks, player), [nodeId]); // eslint-disable-line react-hooks/exhaustive-deps
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(initialPage);
   const [ghostVisible, setGhostVisible] = useState(false);
   const lastTurn = useRef(0);
 

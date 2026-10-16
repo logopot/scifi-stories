@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const Root = styled.div`
   margin: 0 0 ${({ theme }) => theme.space[135]};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) and (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
+    margin-bottom: ${({ theme }) => theme.space[90]};
+  }
 `;
 
 export const Label = styled.span`
