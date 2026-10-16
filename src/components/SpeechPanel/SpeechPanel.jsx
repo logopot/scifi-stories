@@ -39,7 +39,7 @@ export default function SpeechPanel({ name, nameSide = 'left', speakers = [], re
             />
           </S.Portrait>
         ))}
-        <S.Scroll ref={scroll} $left={left} $right={right}>
+        <S.Scroll ref={scroll} $left={left} $right={right} $both={both}>
           <S.Inner $columns={columns}>
             {title && (
               <OnImage>

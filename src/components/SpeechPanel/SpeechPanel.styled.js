@@ -90,6 +90,14 @@ export const Scroll = styled.div`
       const clear = `calc(var(--scene-pw) + ${theme.space[200]} + ${theme.space[250]})`;
       return `${$left ? `padding-left: ${clear};` : ''}${$right ? `padding-right: ${clear};` : ''}`;
     }}
+    /* uski prozori (tableti): oba portreta ne ostavljaju dovoljno mesta za tekst, pa stoje iznad teksta, jedan pored drugog */
+    ${({ $both, theme }) =>
+      $both &&
+      css`
+        @media (max-width: 899px) {
+          padding: calc(var(--scene-pw) * 4 / 3 * ${theme.sizes.scenePanelShare} + ${theme.space[150]}) ${theme.space[250]} ${theme.space[200]};
+        }
+      `}
   }
 `;
 
@@ -108,6 +116,7 @@ export const Inner = styled.div`
           `
         : css`
             max-width: ${theme.sizes.sceneTextMax};
+            min-width: min(34ch, 100%);
           `}
   }
 `;

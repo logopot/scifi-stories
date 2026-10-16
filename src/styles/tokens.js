@@ -105,7 +105,7 @@ export const sizes = {
   sceneImageHeight: '50svh',
   sceneFocusMobile: 'center 40%',
   sceneFocusDesktop: 'center 55%',
-  scenePortrait: 'min(21vw, 36vh)',
+  scenePortrait: 'min(clamp(140px, 15vw, 220px), 25.5vh)', // širina; visina (3:4) je najviše 34vh
   scenePortraitMobile: '29%',
   scenePortraitMobileBoth: '40%', // kad su na strani oba portreta (lik i čitalac)
   sceneOverlap: '35%',
@@ -115,7 +115,7 @@ export const sizes = {
   scenePortraitRise: 0.33,
   scenePanelMax: '70vh',
   scenePanelWidth: '92%',
-  scenePanelMaxWidth: '72rem',
+  scenePanelMaxWidth: '1152px',
   sceneTextMax: '58ch',
   sceneBlur: '6px',
   sceneTitleLift: '2.5rem',
