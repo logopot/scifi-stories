@@ -107,8 +107,10 @@ export const sizes = {
   sceneFocusDesktop: 'center 55%',
   scenePortrait: 'min(21vw, 36vh)',
   scenePortraitMobile: '29%',
+  scenePortraitMobileBoth: '40%', // kad su na strani oba portreta (lik i čitalac)
   sceneOverlap: '35%',
   sceneHeadSpacer: '25%',
+  sceneHeadSpacerBoth: '35%',
   scenePanelShare: 0.67,
   scenePortraitRise: 0.33,
   scenePanelMax: '70vh',

@@ -143,16 +143,28 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
     </Menu>
   );
 
-  // Izgled "scene": slika mesta je pozadina (vidi SceneBackdrop), tekst je u panelu. Lik uz panel je govornik
-  // prve replike (pasusa sa "who") na strani, makar joj prethodi naracija; strana bez replika nema portreta ni imena.
-  const headIndex = current.texts.findIndex((x) => x.who);
-  const head = headIndex >= 0 ? engine.getCharacter(current.texts[headIndex].who, player) : null;
+  // Izgled "scene": slika mesta je pozadina (vidi SceneBackdrop), tekst je u panelu. Uz panel stoje portreti govornika
+  // strane: lik koji nije čitalac levo (sa imenom u zaglavlju), čitalac desno. Strana ima najviše ta dva govornika (vidi
+  // buildPages). Strana bez replika nema portreta ni imena u zaglavlju.
+  const lines = current.texts.map((x) => (x.who ? engine.getCharacter(x.who, player) : null));
+  const otherIndex = lines.findIndex((c) => c && !c.reader);
+  const readerIndex = lines.findIndex((c) => c && c.reader);
+  const other = otherIndex >= 0 ? lines[otherIndex] : null;
+  const readerLine = readerIndex >= 0 ? lines[readerIndex] : null;
+  // Zaglavlje (ime) nosi lik koji nije čitalac; kad govori samo čitalac, ime čitaoca stoji u zaglavlju kao i ranije.
+  const headIndex = other ? otherIndex : readerIndex;
+  const head = other || readerLine;
+  const portraitOf = (c) => (c && c.image ? c.image.src : null);
+  const speakers = [
+    other && { side: 'left', portrait: portraitOf(other) },
+    readerLine && { side: 'right', portrait: portraitOf(readerLine) },
+  ].filter(Boolean);
   return (
     <S.Article>
       <SpeechPanel
         name={head ? head.name : null}
-        portrait={head && head.image ? head.image.src : null}
-        side={head && head.reader ? 'right' : 'left'}
+        nameSide={head && head.reader ? 'right' : 'left'}
+        speakers={speakers}
         resetKey={`${nodeId}-${page}`}
       >
         <PageBox compact key={`${nodeId}-${page}`} ref={boxRef}>
@@ -163,8 +175,8 @@ export default function Scene({ nodeId, picks, player, dispatch }) {
             </>
           )}
 
-          {current.texts.map(({ t, who, with: withNames }, i) => {
-            const speaker = who ? engine.getCharacter(who, player) : null;
+          {current.texts.map(({ t, with: withNames }, i) => {
+            const speaker = lines[i];
             const extras = (withNames || []).map((n) => engine.getCharacter(n, player));
             // Ime iznad replike samo kad ga ne prikazuje zaglavlje panela.
             const label = speaker && !(i === headIndex && head) ? speaker.name : null;

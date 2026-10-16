@@ -74,14 +74,20 @@ export const resolveNext = (node, picks, axes) => {
 // Strane scene: svaki pasus je nova strana, osim kratkih replika koje se lepe na prethodnu.
 // Svaka strana nosi "lead": rečenicu koja nagoveštava šta na njoj sledi.
 // Replike nose "who" (ime govornika koje se prikazuje iznad teksta).
-export const buildPages = (node, picks, player = DEFAULT_PLAYER, axes = []) => {
+// Na jednoj strani najviše jedan lik koji nije čitalac, plus (opciono) čitalac: replika koja bi to prekršila počinje novu stranu.
+const breaksSpeakers = (page, who, isReader) => {
+  if (!who || isReader(who)) return false;
+  return page.texts.some((x) => x.who && !isReader(x.who) && x.who !== who);
+};
+
+export const buildPages = (node, picks, player = DEFAULT_PLAYER, axes = [], isReader = () => false) => {
   const pages = [];
   visibleParagraphs(node, picks, axes).forEach((p, i) => {
     const last = pages[pages.length - 1];
     const text = tr(p.t, p.tf, player);
     const lead = tr(p.lead, p.leadf, player);
     const line = { t: text, who: p.who || null, with: p.with || [] };
-    if (i > 0 && !p.solo && !last.solo && text.length < SHORT_PARAGRAPH) {
+    if (i > 0 && !p.solo && !last.solo && text.length < SHORT_PARAGRAPH && !breaksSpeakers(last, p.who, isReader)) {
       last.texts.push(line);
       if (p.img && !last.portrait) last.portrait = p.img;
     } else {
@@ -119,7 +125,6 @@ const makeReducer = (initialState) => (state, action) => {
 // Motor vezan za jednu priču (story.json) i njen slug (ključ za čuvanje napretka).
 export const createEngine = (story, slug) => {
   const axes = getAxes(story);
-  const pagesOf = (node, picks, player = DEFAULT_PLAYER) => buildPages(node, picks, player, axes);
   const nextOf = (node, picks) => resolveNext(node, picks, axes);
   const getNode = (id) => story.nodes[id];
   const getImage = (id) => (id && story.images ? story.images[id] || null : null);
@@ -129,6 +134,7 @@ export const createEngine = (story, slug) => {
   const reader = (story.characters && story.characters.__reader__) || null;
   const isReader = (name) =>
     Boolean(reader) && (name === (reader.who || 'Ti') || /^{(ime|IME)}$/.test(name));
+  const pagesOf = (node, picks, player = DEFAULT_PLAYER) => buildPages(node, picks, player, axes, isReader);
   const getCharacter = (name, player = DEFAULT_PLAYER) => {
     if (isReader(name)) {
       const imageId = (player.gender === 'f' ? reader.imgF : reader.imgM) || null;

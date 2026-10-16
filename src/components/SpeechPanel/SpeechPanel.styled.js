@@ -48,7 +48,7 @@ export const Portrait = styled.div`
   top: ${imageEdge};
   top: ${imageEdgeDvh};
   ${({ $right }) => ($right ? 'right: 0;' : 'left: 0;')}
-  width: ${({ theme }) => theme.sizes.scenePortraitMobile};
+  width: ${({ $both, theme }) => ($both ? theme.sizes.scenePortraitMobileBoth : theme.sizes.scenePortraitMobile)};
   aspect-ratio: ${({ theme }) => theme.sizes.ratioPortrait};
   translate: 0 -${({ theme }) => theme.sizes.sceneOverlap}; /* posebno svojstvo: animacija pojave koristi transform */
   overflow: hidden;
@@ -86,10 +86,9 @@ export const Scroll = styled.div`
     max-height: ${({ theme }) => theme.sizes.scenePanelMax};
     overflow-y: auto;
     padding: ${({ theme }) => theme.space[200]} ${({ theme }) => theme.space[250]};
-    ${({ $portrait, $right, theme }) => {
-      if (!$portrait) return '';
+    ${({ $left, $right, theme }) => {
       const clear = `calc(var(--scene-pw) + ${theme.space[200]} + ${theme.space[250]})`;
-      return $right ? `padding-right: ${clear};` : `padding-left: ${clear};`;
+      return `${$left ? `padding-left: ${clear};` : ''}${$right ? `padding-right: ${clear};` : ''}`;
     }}
   }
 `;
@@ -157,12 +156,12 @@ export const Title = styled.div`
 
 // Telefon: zaglavlje rezerviše mesto za deo portreta ispod ivice slike (procenat širine), a ime stoji pored portreta.
 export const Head = styled.div`
-  ${({ $portrait, $right, theme }) =>
+  ${({ $portrait, $right, $both, theme }) =>
     $portrait
       ? css`
           position: relative;
           margin-top: ${theme.space[40]};
-          padding-bottom: ${theme.sizes.sceneHeadSpacer};
+          padding-bottom: ${$both ? theme.sizes.sceneHeadSpacerBoth : theme.sizes.sceneHeadSpacer};
           text-align: ${$right ? 'right' : 'left'};
         `
       : css`
@@ -187,12 +186,12 @@ export const Name = styled.span`
   /* btnText: akcenat koji je proveren na pozadini teme (check-themes) */
   color: ${({ theme }) => theme.btnText};
 
-  ${({ $portrait, $right, theme }) =>
+  ${({ $portrait, $right, $both, theme }) =>
     $portrait &&
     css`
       position: absolute;
       top: ${theme.space[10]};
-      ${$right ? 'right' : 'left'}: calc(${theme.sizes.scenePortraitMobile} + ${theme.space[100]});
+      ${$right ? 'right' : 'left'}: calc(${$both ? theme.sizes.scenePortraitMobileBoth : theme.sizes.scenePortraitMobile} + ${theme.space[100]});
     `}
 
   ${md} {
