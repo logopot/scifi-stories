@@ -1,0 +1,1850 @@
+{
+  "meta": {
+    "title": "Tamni sat",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Na grebenu između Svetlih polja i grada Lantara stoji stanica Greben, a u njoj tabla sa tri linije. Struje ima više nego što vod može da primi, a grad ipak gasi četvrt po četvrt.",
+      "Večeras je tvoja prva smena. Radio u Kuli traži odgovor, vrućina steže žicu, a niko ne ume da ti objasni zašto je prethodni dežurni otišao usred nedelje.",
+      "Pred tobom su ljudi koji govore ono što znaju, mašina koja radi po pravilima i jedna poluga ispod stanice koju devet godina niko nije dotakao."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "etika / briga o ljudima"
+      },
+      {
+        "id": "t",
+        "name": "tehnološki napredak"
+      },
+      {
+        "id": "o",
+        "name": "opstanak / red i granica"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "Greben je prekidačka stanica na grebenu između Svetlih polja i grada Lantara. Večeras ti je prva smena, vrućina steže vod, a u Kuli već čekaju da se javiš."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi čitanje",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 20 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Napredak se čuva samo u tvom pregledaču.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Tamni sat"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Dugi vod"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Granica"
+    }
+  },
+  "start": "smena",
+  "endings": {
+    "e": {
+      "title": "Zelena linija",
+      "closing": [
+        "Stari vod radi još nekoliko noći pre nego što ga neko stigne da zabrani. U Lantaru se o tome govori tiho, na stepeništima i uz slavine, kao o nečemu što se ne zna da li je počelo ili je već završeno."
+      ]
+    },
+    "t": {
+      "title": "Četvrta linija",
+      "closing": [
+        "Hale rade bez prekida, a u Lantaru se prvi put posle mnogo godina pominje reč „zalihe“. Na stanici Greben kamion sa teretom čeka da neko ode po ključeve."
+      ]
+    },
+    "o": {
+      "title": "Tri linije",
+      "closing": [
+        "Vod je ostao u granici, a polja su i dalje bacala ono što niko nije mogao da primi. Tamni sat se i narednih noći vraćao istim redom, četvrt po četvrt."
+      ]
+    }
+  },
+  "nodes": {
+    "smena": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "Prvi alarm zazvoni dok još nisi skinuo jaknu. Stanica Greben je jedna prostorija sa tablom, jedna lampa koja treperi i prozor okrenut ka zapadu, gde se poslednja svetlost dana gasi nad Svetlim poljima. Ti si novi dežurni. Prethodni je otišao u sredu i niko nije rekao zašto.",
+          "tf": "Prvi alarm zazvoni dok još nisi skinula jaknu. Stanica Greben je jedna prostorija sa tablom, jedna lampa koja treperi i prozor okrenut ka zapadu, gde se poslednja svetlost dana gasi nad Svetlim poljima. Ti si nova dežurna. Prethodni je otišao u sredu i niko nije rekao zašto."
+        },
+        {
+          "t": "Na tabli stoje tri žute linije. Dugi vod, onaj što donosi struju sa polja, žari se narandžasto: vrućina ga rasteže i on više ne sme da nosi koliko je nosio juče. Brzi vod, pravo ka Halama, miruje u plavom. Gradski vod, ka Lantaru, nervozno treperi.",
+          "lead": "Tri linije na tabli."
+        },
+        {
+          "t": "Pored table, na zidu, visi crna kutija sa brojčanikom koji se zove „bačeno“. Kazaljka mu se pomera sporo, ali uvek u istom smeru. To je struja koju polja proizvedu, a vod ne može da primi.",
+          "lead": "Kazaljka koja beleži ono što se baca."
+        },
+        {
+          "t": "Iza vrata, na klinu, visi tuđa jakna, sivozelena, sa izlizanim laktovima. U džepu nešto šušti. Ne vadiš ništa, pa ipak vadiš: presavijen papir sa jednom rečenicom, rukom: ne veruj brojčaniku, veruj zvuku.",
+          "lead": "Jakna prethodnog dežurnog."
+        },
+        {
+          "t": "Zvuk. Zastaješ i slušaš. Vod ispod stanice peva jednim tankim tonom, kao žica violine koju je neko dotegao za pola stepena više nego što treba.",
+          "lead": "Ton ispod poda."
+        },
+        {
+          "t": "Radio na zidu krcne. Neda, dispečerka noćne smene u Kuli, svaku noć počinje istim pitanjem.",
+          "lead": "Radio koji krcka."
+        },
+        {
+          "t": "„Greben, ovde Kula. Čuješ li me, {voc}?“",
+          "who": "Neda"
+        },
+        {
+          "t": "„Večeras Brzi vod radi do pet ujutru, bez prekida. Savet je tako odlučio. Šta ostane, ide gradu, ako ostane.“",
+          "who": "Neda",
+          "lead": "Naredba bez ostatka."
+        },
+        {
+          "t": "„A šta je sa Tamnim satom? Ko ostaje bez svetla?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Pojaviće se na tabli kad dođe vreme. Ne pitaj mene, pitaj raspored. Ja samo čitam.“",
+          "who": "Neda",
+          "lead": "Raspored koji niko ne piše."
+        },
+        {
+          "t": "Tamni sat je stari običaj: kad struje nema dovoljno, grad gasi svoje četvrti redom, po jedan sat, da svaka dobije podjednako mraka. Deca u Lantaru uče vreme po tome koja je četvrt na redu. Tvoje ime nije u rasporedu, ti si samo onaj koji ga sprovodi.",
+          "lead": "Običaj starog grada."
+        },
+        {
+          "t": "U prostoriji miriše na usijanu prašinu. Napolju vetar zviždi kroz stubove, a odnekud sa krova dopire kucanje, ritmično, kao da neko pokušava da ti javi nešto bez reči.",
+          "lead": "Kucanje sa krova."
+        }
+      ],
+      "prompt": "Do ponoći stižeš da obiđeš samo jedno mesto.",
+      "choices": [
+        {
+          "id": "s_krov",
+          "text": "Penješ se na krov da vidiš vod sopstvenim očima.",
+          "next": "krov",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "s_kula",
+          "text": "Ostaješ za tablom i tražiš od Kule da ti pročita sve naredbe.",
+          "next": "kula",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "krov": {
+      "img": "krov",
+      "paragraphs": [
+        {
+          "t": "Gvozdene stepenice se tresu pod čizmama. Na krovu te vetar zapljusne vrelim peskom, a kad otvoriš oči, vidiš vod: tri debele žice razapete od stuba do stuba preko tamnih polja, i sve su niže nego što bi trebalo."
+        },
+        {
+          "t": "Pored ograde stoji starac sa slušalicom u uvetu i termosom pod miškom. Bora je na Grebenu duže nego što stanica ima tablu. Ne okreće se kad čuje da dolaziš, kao da te je čuo još sa dna stepenica.",
+          "lead": "Starac na ogradi."
+        },
+        {
+          "t": "Lice mu je izbrazdano i suvo, kao da ga je vetar dugo klesao, a bore prate smer peska. Na slušalici mu je lepljivom trakom zalepljen komadić hartije sa brojem koji ne možeš da pročitaš.",
+          "lead": "Lice od vetra."
+        },
+        {
+          "t": "„Peti stub sa leve strane. Vidiš kako treperi? Ne ljulja ga vetar.“",
+          "who": "Bora"
+        },
+        {
+          "t": "Na vrhu petog stuba svetli sitna plavičasta tačka, kao zvezda koja se pokvarila. Čuješ i tiho pucketanje, kao kad neko daleko lomi suve grančice.",
+          "lead": "Plava tačka na petom stubu."
+        },
+        {
+          "t": "„Vruć spoj. Do jutra drži, ako ga niko ne pritera. Ako ga pritera, ne drži.“",
+          "who": "Bora",
+          "lead": "Spoj koji drži do jutra."
+        },
+        {
+          "t": "Preko polja, na zapadu, sunce je spalo na crvenu liniju. Redovi panela se pale i gase kao krljušti, pa ostaju tamni red po red. Neko tamo gasi ono što je dan napravio.",
+          "lead": "Polja koja se gase."
+        },
+        {
+          "t": "„Koliko se baca?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dovoljno za jedno malo selo, svake noći. Brojač to pamti. Ja pamtim sela.“",
+          "who": "Bora",
+          "lead": "Selo koje se baca."
+        },
+        {
+          "t": "Odavde se sve vidi odjednom: polja na zapadu, grad na istoku, a između njih stanica na kojoj stojiš, kao zavrtanj koji drži dve daske. Ako popusti, daske se razmaknu i niko neće znati zašto.",
+          "lead": "Zavrtanj između polja i grada."
+        },
+        {
+          "t": "„Dvadeset godina gledam kako struja prolazi kroz ovu kuću. Nijednom nije bila moja.“",
+          "who": "Bora",
+          "lead": "Struja koja prolazi."
+        },
+        {
+          "t": "Bora ćuti. Vetar prevrće papir koji mu viri iz džepa, a ti vidiš samo naslov: zahtev za ponovno uključenje voda. Devetnaest zahteva, svaki sa pečatom, nijedan sa odgovorom.",
+          "lead": "Papir u Borinom džepu."
+        },
+        {
+          "t": "„Pisao sam ih devetnaest puta. Poslednji put samo ime stanice.“",
+          "who": "Bora"
+        },
+        {
+          "t": "Bora pokazuje termosom prema jugu. Ispod brda, u senci, leži red zarđalih stubova bez ijedne žice na vrhu. Stari vod. Devet godina je mrtav, ali spojevi ispod stanice nikad nisu odsečeni.",
+          "lead": "Stubovi bez žice."
+        },
+        {
+          "t": "„Papira za njega nema, ali žice ima. Kad bi ga neko ukopčao, grad bi imao struje i posle ponoći.“",
+          "who": "Bora",
+          "lead": "Šta bi bilo da neko ukopča."
+        },
+        {
+          "t": "„Zašto ga niko nije ukopčao?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Jer bi onaj ko ga ukopča morao da potpiše.“",
+          "who": "Bora"
+        },
+        {
+          "t": "Bora ti pruža termos kao da ti pruža ključ. Kafa je gorka i topla kao zemlja posle kiše, a ti shvataš da je on stajao ovde i čekao nekoga ko će pitati.",
+          "lead": "Termos, topao od ruke."
+        }
+      ],
+      "prompt": "Vetar nosi miris pregrejane gume.",
+      "choices": [
+        {
+          "id": "k_stari",
+          "text": "Pitaš Boru kako se Stari vod ukopčava.",
+          "next": "trafo",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_spoj",
+          "text": "Zapisuješ vruć spoj u dnevnik i silaziš.",
+          "next": "trafo",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_hale",
+          "text": "Ćutiš i gledaš ka Halama, čija se plava svetlost vidi sa grebena.",
+          "next": "trafo",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "kula": {
+      "paragraphs": [
+        {
+          "t": "Pritiskaš dugme i tražiš od Kule da ti čita naredbe jednu po jednu. Na drugom kraju veze neko dugo diše pre nego što počne."
+        },
+        {
+          "t": "„Prva: Brzi vod do pet ujutru. Druga: Tamni sat po redu. Brdo u deset, Pijaca u jedanaest, Padina u ponoć.“",
+          "who": "Neda",
+          "lead": "Redosled tame."
+        },
+        {
+          "t": "Redosled tame stoji na papiru u njenoj ruci, a ti ga ne vidiš, ali ga čuješ: svaka reč ima svoju težinu, kao da Neda čita imena ljudi koji još ne znaju da su na spisku.",
+          "lead": "Imena na spisku."
+        },
+        {
+          "t": "„Padina je bolnička četvrt.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Znam šta je Padina. Izuzetaka nema. U naredbi piše bez izuzetaka, crno na belom, sa pečatom Saveta mreže.“",
+          "who": "Neda",
+          "lead": "Pečat Saveta mreže."
+        },
+        {
+          "t": "Iza njenog glasa čuje se drugi telefon u Kuli. Neko ga podiže, sluša, spušta. Treći put večeras zove isti broj, onaj sa Svodovog spiska.",
+          "lead": "Telefon koji ne prestaje."
+        },
+        {
+          "t": "„Svod kaže da im veliki račun ne sme da se prekine. Ako stane, počinje od početka, a to je nedelja dana.“",
+          "who": "Neda",
+          "lead": "Veliki račun."
+        },
+        {
+          "t": "Veliki račun je ono što rade Hale: računske hale kompanije Svod, koje rade noću, jer je tada hladnije i struje ima više. Ili bi je imalo, da je Dugi vod stigao da je nosi.",
+          "lead": "Šta se računa u Halama."
+        },
+        {
+          "t": "„Ko je napisao ugovor sa Svodom?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Savet, pre pet godina. Svod je platio novu zgradu Kule i novu žicu do polja, a Savet je potpisao da Brzi vod ima prvenstvo kad god zatreba.“",
+          "who": "Neda",
+          "lead": "Ugovor od pre pet godina."
+        },
+        {
+          "t": "To zvuči kao nešto što je tada bilo pametno potpisati, a sada glupo čitati. Prva ti je misao da pitaš ko je potpisao. Druga je da je odgovor već negde zapisan, u papirima Kule, među stranicama koje niko ne otvara.",
+          "lead": "Papiri koji se ne otvaraju."
+        },
+        {
+          "t": "Neda zakašlje, pa se izvini. U Kuli je suvo, kaže, jer hladnjaci rade samo za mašine, a ljudi nisu bitni za toplotu. Smeje se prvi put, sasvim kratko, kao kad neko proveri da li još ume.",
+          "lead": "Kratak smeh u Kuli."
+        },
+        {
+          "t": "Dok sluša sebe kako govori, Neda zastaje. U pozadini čuješ kako neko okreće stranice debele knjige, jer Kula i dalje vodi dnevnik na hartiji, onako kako su vodili pre nego što je ijedna mašina naučila da broji.",
+          "lead": "Papirni dnevnik u Kuli."
+        },
+        {
+          "t": "„Ne tražim da ti se sviđa. Tražim da me čuješ.“",
+          "who": "Neda"
+        }
+      ],
+      "prompt": "Neda čeka da potvrdiš.",
+      "choices": [
+        {
+          "id": "ku_potvrda",
+          "text": "Potvrđuješ naredbu onako kako je izdata.",
+          "next": "trafo",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "ku_pismeno",
+          "text": "Tražiš da ti naredbu pošalje pisano, sa potpisom.",
+          "next": "trafo",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "ku_pitas",
+          "text": "Pitaš je šta bi ona radila na tvom mestu.",
+          "next": "trafo",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "trafo": {
+      "chapter": "c1",
+      "img": "trafo",
+      "paragraphs": [
+        {
+          "t": "Hala sa transformatorima je niska i topla kao grlo. Šest crnih kutija zuji na tri različita tona, a između njih visi lampa koja baca narandžastu svetlost na uljane mrlje na podu."
+        },
+        {
+          "t": "Na zidu je rešetka zvučnika, a pored nje pločica sa jednom rečju: Automat. On čuva Dugi vod: kad žica pregreje, on je otvori, bez pitanja, bez čekanja.",
+          "lead": "Pločica na zidu."
+        },
+        {
+          "t": "Automat nema lice, ali ima naviku: pre svake rečenice čuje se tiho škljocanje, kao kad neko otvara usta da progovori. Slušaš ga i shvataš da te čeka, kao što čeka svakoga ko se kod njega zadrži duže od minuta.",
+          "lead": "Škljocanje pre rečenice."
+        },
+        {
+          "t": "Pod rešetkom na zidu vidiš izbledeli natpis STARI VOD, sa strelicom koja pokazuje u pod, a ti si ga ranije prošao ne primetivši.",
+          "lead": "Natpis pod rešetkom.",
+          "if": {
+            "pick": "k_stari"
+          },
+          "tf": "Pod rešetkom na zidu vidiš izbledeli natpis STARI VOD, sa strelicom koja pokazuje u pod, a ti si ga ranije prošla ne primetivši."
+        },
+        {
+          "t": "Na zidu, pod staklom, stoji dnevnik kvarova. Jedan red je upisan nedavno, tvojom rukom, a Automat ga potvrđuje tihim škljocanjem: spoj broj pet, vruć.",
+          "lead": "Dnevnik kvarova.",
+          "if": {
+            "pick": "k_spoj"
+          }
+        },
+        {
+          "t": "Među šest tonova transformatora sad čuješ i sedmi: nizak, ravnomeran, koji pripada Brzom vodu. Čuješ ga jer si ga malopre gledao, plavog, iz daljine.",
+          "lead": "Treći ton.",
+          "if": {
+            "pick": "k_hale"
+          },
+          "tf": "Među šest tonova transformatora sad čuješ i sedmi: nizak, ravnomeran, koji pripada Brzom vodu. Čuješ ga jer si ga malopre gledala, plavog, iz daljine."
+        },
+        {
+          "t": "Automat je već zabeležio tvoju potvrdu: „Naredba Brzog voda primljena od dežurnog u dvadeset i dvanaest.“ Slova se pojavljuju na malom ekranu bez i jedne emocije.",
+          "lead": "Potvrda na ekranu.",
+          "if": {
+            "pick": "ku_potvrda"
+          }
+        },
+        {
+          "t": "Pored rešetke štampač je ispisao hartiju: pisana naredba Saveta, još topla, sa pečatom na dnu. Savet traži da se Brzi vod ne dira, i potpisuje se rukom, onim žurnim, nečitkim.",
+          "lead": "Pisana naredba iz štampača.",
+          "if": {
+            "pick": "ku_pismeno"
+          }
+        },
+        {
+          "t": "„Ja bih pogledala Stari vod. Nisam ti to rekla. Samo da znaš da sam to pomislila.“",
+          "who": "Neda",
+          "lead": "Neda iz zvučnika.",
+          "if": {
+            "pick": "ku_pitas"
+          }
+        },
+        {
+          "t": "„Granica Dugog voda: devedeset jedan stepen. Trenutno: osamdeset šest.“",
+          "who": "Automat"
+        },
+        {
+          "t": "„Pri dostizanju granice otvaram vod. Ključ dežurnog pomera granicu za dvadeset minuta. Svako pomeranje se upisuje.“",
+          "who": "Automat",
+          "lead": "Šta radi ključ."
+        },
+        {
+          "t": "U ladici ispod rešetke leži ključ na crnoj vrpci, a pored njega dnevnik pun upisa istim rukopisom, sve do srede. Poslednji red nije dovršen. Neko je počeo rečenicu i ostavio je tako.",
+          "lead": "Ključ u ladici."
+        },
+        {
+          "t": "„Šta piše u poslednjem redu?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Poslednji upis: pomeranje granice nije izvršeno. Razlog: dežurni je napustio stanicu.“",
+          "who": "Automat",
+          "lead": "Poslednji upis."
+        },
+        {
+          "t": "Prethodni dežurni, dakle, nije samo otišao. Ostavio je ključ u ladici i rečenicu koju niko nije dovršio. Negde iznad tebe, u zidu, zaškripi cev: hladi se, a hladna cev škripi kad zna da će se opet zagrejati.",
+          "lead": "Škripa u zidu."
+        },
+        {
+          "t": "Šest transformatora, a jedan od njih ima crvenu pločicu: ne radi, ali ga niko ne sme isključiti, jer bi Automat javio kvar, a kvar bi trebalo upisati, a upis potpisati. U Grebenu se ništa ne popravlja, jer popravke ostavljaju potpis.",
+          "lead": "Transformator sa crvenom pločicom."
+        },
+        {
+          "t": "„Zašto ga niko ne popravi?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zahtev za popravku nije podnet.“",
+          "who": "Automat"
+        },
+        {
+          "t": "„Nastavljam da radim po pravilima.“",
+          "who": "Automat"
+        }
+      ],
+      "prompt": "Zujanje ti se uvlači u kosti.",
+      "choices": [
+        {
+          "id": "t_kljuc",
+          "text": "Uzimaš ključ i stavljaš ga oko vrata.",
+          "next": "poziv",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "t_ostavi",
+          "text": "Ostavljaš ključ u ladici i zatvaraš je.",
+          "next": "poziv",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "t_pitas",
+          "text": "Pitaš Automat koliko vod može da nosi pre nego što stigne do granice.",
+          "next": "poziv",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "poziv": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "Do deset sati vetar se okreće, a telefon na stanici, onaj sa kablom i brojčanikom koji niko ne koristi, počinje da zvoni. Dok se penješ stepenicama iz hale, zvoni sedmi put."
+        },
+        {
+          "t": "Ključ ti poskakuje na grudima dok trčiš. Hladan metal na koži, kao svedok koji ništa ne govori.",
+          "lead": "Ključ na grudima.",
+          "if": {
+            "pick": "t_kljuc"
+          }
+        },
+        {
+          "t": "Ruka ti odlazi ka džepu, onamo gde bi bio ključ, pa se vraća. Ostavio si ga u ladici, kao i prethodnik.",
+          "lead": "Ruka u praznom džepu.",
+          "if": {
+            "pick": "t_ostavi"
+          },
+          "tf": "Ruka ti odlazi ka džepu, onamo gde bi bio ključ, pa se vraća. Ostavila si ga u ladici, kao i prethodnik."
+        },
+        {
+          "t": "„Do ponoći granica pada na devedeset. Pri istom opterećenju, to je za pedeset minuta.“",
+          "who": "Automat",
+          "lead": "Automat još jednom.",
+          "if": {
+            "pick": "t_pitas"
+          }
+        },
+        {
+          "t": "Na drugom kraju je Ruža, noćna sestra na bolničkoj četvrti Padina. Broj stanice joj je dao neko ko ga je zapisao ispod stakla na stolu u Kuli.",
+          "lead": "Telefon sa brojčanikom.",
+          "if": {
+            "notPick": "s_kula"
+          }
+        },
+        {
+          "t": "Na drugom kraju je Ruža, noćna sestra na Padini. Neda joj je dala broj stanice kad je čula da se u Kuli pitaš za bolnicu.",
+          "lead": "Telefon sa brojčanikom.",
+          "if": {
+            "pick": "s_kula"
+          }
+        },
+        {
+          "t": "„Generator ima goriva za trideset pet minuta. Cisterna nije stigla, a nafta je poskupela toliko da je niko ne šalje bez ugovora.“",
+          "who": "Ruža",
+          "lead": "Trideset pet minuta."
+        },
+        {
+          "t": "„Tri aparata za disanje rade na struju. Je li istina da Padina gasne u ponoć?“",
+          "who": "Ruža"
+        },
+        {
+          "t": "„Ko je na aparatima?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Žena od sedamdeset godina, dečak od deset i čovek koji nema ime. Našli su ga na Pijaci. Niko ne dolazi po njega.“",
+          "who": "Ruža",
+          "lead": "Troje na aparatima."
+        },
+        {
+          "t": "Dečak od deset spava u sobi do prozora. Ruža mu je rekla da je svetlo na ulici lampa koju neko drži da mu ne bude hladno, i on svake večeri proveri da li je još tu.",
+          "lead": "Dečak i lampa."
+        },
+        {
+          "t": "Ruža ne moli. To je ono što te pogađa. Govori kao neko ko je već izračunao koliko je trideset pet minuta, koliko udisaja, koliko ruku, i sad čeka da vidi da li ti znaš računicu drugačije od nje.",
+          "lead": "Račun koji je već izračunala."
+        },
+        {
+          "t": "Čuješ je kako diše, mirno, kao neko ko je naučio da govori u hodniku sa uspavanim bolesnicima. U pozadini zapišti nešto, pa zaćuti: monitor koji je neko utišao rukom.",
+          "lead": "Dah sa druge strane žice."
+        },
+        {
+          "t": "Iza tvog ramena Hale svetle u prozoru kao ogromna, mirna riba. Prvi put večeras shvataš da isti sat koji prolazi ovde, na stanici, prolazi i tamo, na Padini, ali sa potpuno drugačijom težinom.",
+          "lead": "Hale u prozoru."
+        }
+      ],
+      "prompt": "Šta ćeš da kažeš Ruži?",
+      "choices": [
+        {
+          "id": "p_obecanje",
+          "text": "Obećavaš Ruži da ćeš učiniti što možeš i prekidaš vezu da odeš do Bore.",
+          "next": "stari",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "p_istina",
+          "text": "Kažeš Ruži istinu o ponoći i tražiš da pripremi odeljenje.",
+          "next": "dario",
+          "w": {
+            "o": 2
+          }
+        },
+        {
+          "id": "p_skratio",
+          "text": "Skraćuješ razgovor, jer na kapiji stanice čeka čovek iz Svoda.",
+          "next": "dario",
+          "w": {
+            "t": 2
+          }
+        }
+      ]
+    },
+    "dario": {
+      "img": "greben",
+      "paragraphs": [
+        {
+          "t": "Ruža je odmah posle razgovora poslala poruku: samo broj sobe i dva slova, hvala. Prva ti je zahvalila večeras, a ti još ništa nisi uradio.",
+          "lead": "Poruka od Ruže.",
+          "if": {
+            "pick": "p_istina"
+          },
+          "tf": "Ruža je odmah posle razgovora poslala poruku: samo broj sobe i dva slova, hvala. Prva ti je zahvalila večeras, a ti još ništa nisi uradila."
+        },
+        {
+          "t": "Na kapiji stanice stoji mlad čovek u izlizanom džemperu, sa laptopom pod miškom i tragovima neprospavane noći ispod očiju. Iza njega, na stazi, tiho radi motor automobila sa upaljenim farovima. Prašina mu je do kolena, kao nekome ko je stigao peške deo puta.",
+          "lead": "Čovek na kapiji."
+        },
+        {
+          "t": "Čeka već dugo. Farovi su mu se u međuvremenu nekoliko puta gasili i palili, kao kad neko ne zna da li sme da zakuca.",
+          "lead": "Farovi koji se pale i gase.",
+          "if": {
+            "pick": "p_skratio"
+          }
+        },
+        {
+          "t": "Zove se Dario i inženjer je u Svodu. Posao mu je da veže Hale za mrežu, što večeras znači da veže Hale za tebe. Izvinjava se pre nego što progovori, ne zato što mora, nego zato što ne zna drugačije.",
+          "lead": "Čovek iz Svoda, sa izvinjenjem."
+        },
+        {
+          "t": "„Znam da je kasno i da nisam tražen. Doneo sam odgovor na pitanje koje će ti Kula postaviti tek sutra.“",
+          "who": "Dario",
+          "lead": "Odgovor pre pitanja."
+        },
+        {
+          "t": "„Veliki račun ne sme da stane. Tri stotine ljudi u Halama živi od njega, a grad od onoga što Hale plaćaju za struju. Ako stane, ne nastavlja se: počinje iz početka, nedelju dana kasnije.“",
+          "who": "Dario",
+          "lead": "Tri stotine ljudi i jedna nedelja."
+        },
+        {
+          "t": "Iza njega, u dolini, Hale svetle plavo, kao akvarijum veličine grada. Hladnjaci na krovovima dišu belu paru, a ispod nje, u dugim redovima, rade stotine hiljada ormara za koje niko ne zna šta zapravo misle.",
+          "lead": "Plavi akvarijum u dolini."
+        },
+        {
+          "t": "„Šta uopšte računaju?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ne znam. Znam samo da kad stanu, svi pitaju mene.“",
+          "who": "Dario",
+          "lead": "Dario priznaje."
+        },
+        {
+          "t": "„A ako odbijem?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Onda ću se vratiti i javiti da si odbio. I da nisam znao šta da kažem.“",
+          "who": "Dario",
+          "lead": "Šta bi bilo da odbiješ.",
+          "tf": "„Onda ću se vratiti i javiti da si odbila. I da nisam znao šta da kažem.“"
+        },
+        {
+          "t": "Dario se ne trudi da zvuči snažnije nego što jeste. Pogledaš mu cipele: kožne, prašnjave, sa pertlom koja se odvezala i koju nije primetio. Ne izgleda kao neko ko vlada svetom. Izgleda kao neko ko pokušava da ga ne ispusti.",
+          "lead": "Pertla koja se odvezala."
+        },
+        {
+          "t": "Na zadnjem sedištu automobila vidiš dve kutije hrane i termos. Doneo je i večeru, za sebe i za tebe, i ta sitnica te smeta više nego sve što je rekao.",
+          "lead": "Večera na zadnjem sedištu."
+        },
+        {
+          "t": "„Nudim ti dve stvari. Cisternu goriva za bolnicu pre ponoći, i novi transformator za Dugi vod, da vrućina više ne određuje koliko možeš da nosiš.“",
+          "who": "Dario",
+          "lead": "Dve stvari koje se nude."
+        },
+        {
+          "t": "„Zauzvrat mi treba jedna rečenica u dnevniku: bez smetnji.“",
+          "who": "Dario",
+          "lead": "Jedna rečenica."
+        },
+        {
+          "t": "Ne laže. To ti je jasno po tome kako stoji, sa rukama koje ne zna gde da stavi. To je upravo ono što te nervira.",
+          "lead": "Čovek koji ne laže."
+        }
+      ],
+      "prompt": "Farovi osvetljavaju kapiju, a Dario čeka.",
+      "choices": [
+        {
+          "id": "d_prihvata",
+          "text": "Prihvataš ponudu i upisuješ u dnevnik: bez smetnji.",
+          "next": "polja",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "d_odbija",
+          "text": "Odbijaš ponudu i vraćaš se unutra, ka tabli.",
+          "next": "polja",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "d_trazi",
+          "text": "Tražiš da cisterna stigne na Padinu pre nego što išta upišeš.",
+          "next": "polja",
+          "w": {
+            "t": 1,
+            "o": 1
+          }
+        }
+      ]
+    },
+    "stari": {
+      "img": "stari",
+      "paragraphs": [
+        {
+          "t": "Staza do Starog voda vodi niz brdo, kroz suvo žbunje koje ti zapinje za pantalone. Mesec je izašao, a pod njim stoji stara razvodna stanica kao groblje spomenika: red zarđalih stubova, gvozdena kutija sa ravnom ručkom i izolatori sa travom u zubima."
+        },
+        {
+          "t": "Bora je stigao pre tebe, iako je trebalo da ide sporije. Pored vrata na zemlji leže dva alata, a on se pravi da ih nije pripremao.",
+          "lead": "Bora koji je stigao pre tebe.",
+          "if": {
+            "pick": "k_stari"
+          }
+        },
+        {
+          "t": "Bora je stigao pre tebe. Traži alat po džepovima i nalazi samo odvijač, koji gleda kao da ga vidi prvi put.",
+          "lead": "Bora koji je stigao pre tebe.",
+          "if": {
+            "notPick": "k_stari"
+          }
+        },
+        {
+          "t": "„Poluga je tu. Rukom, kao u stara vremena. Povučeš je i vod je živ. Ne povučeš, ostaje mrtav i priča o njemu.“",
+          "who": "Bora",
+          "lead": "Poluga na kutiji."
+        },
+        {
+          "t": "Hvataš polugu obema rukama. Ne miče se. Bora te gleda sa strane, pa se naslanja i povlači s tobom: metal škripi kao da se budi, popušta jedan prst, pa još jedan, pa staje.",
+          "lead": "Metal koji se budi."
+        },
+        {
+          "t": "„Izolatori su stari. Devet godina vetra. Ne bih ga držao punim duže od sat vremena.“",
+          "who": "Bora"
+        },
+        {
+          "t": "„Šta je posle sat vremena?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Posle sat vremena imaš vatru u travi ili hladan vod. Nikad nisam saznao koje.“",
+          "who": "Bora",
+          "lead": "Sat vremena."
+        },
+        {
+          "t": "Bora dodiruje izolator vrhom prsta, onako kako se dira konj. Ispod prašine glazura je još cela, tamnozelena, sa sitnim pukotinama kao na starom tanjiru.",
+          "lead": "Glazura na izolatoru."
+        },
+        {
+          "t": "Silazite do kutije sa polugom. Bora podiže fenjer ispod nje, i vidiš da je ručka izlizana na jednom jedinom mestu, tamo gde se poslednji put zatvorio neki dlan: širok, sa kratkim prstima, sličan Borinom.",
+          "lead": "Ručka izlizana od jednog dlana."
+        },
+        {
+          "t": "„Ja sam ga isključio. Naredili su mi. Zato ga ne pominjem dok me niko ne pita.“",
+          "who": "Bora",
+          "lead": "Ko je isključio Stari vod."
+        },
+        {
+          "t": "„Pravili su ih ljudi koji su verovali da će neko doći. Nisu pisali uputstva, jer su mislili da će doći neko ko zna.“",
+          "who": "Bora",
+          "lead": "Ljudi koji su verovali."
+        },
+        {
+          "t": "„Ja ne znam.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Znaš više nego što misliš. Stigao si ovamo.“",
+          "who": "Bora",
+          "tf": "„Znaš više nego što misliš. Stigla si ovamo.“"
+        },
+        {
+          "t": "Dok govori, gleda u stubove, i ti prvi put vidiš na njima sitne bele tragove, kao kod ljudi koji su plakali i otrli lice rukavom. Na svakom izolatoru neko je nekada ispisao broj, kredom, a vetar ga nije izbrisao.",
+          "lead": "Brojevi na izolatorima."
+        },
+        {
+          "t": "U džepu ti zavibrira telefon. Poruka je od Ruže, jedna reč: „Čekam.“ Nema ni znaka pitanja, kao da se podrazumeva.",
+          "lead": "Poruka u džepu.",
+          "if": {
+            "pick": "p_obecanje"
+          }
+        }
+      ],
+      "prompt": "Poluga i lanac leže jedno pored drugog.",
+      "choices": [
+        {
+          "id": "st_polugu",
+          "text": "Oslobađaš polugu da bude spremna, ali je ne povlačiš.",
+          "next": "polja",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "st_lanac",
+          "text": "Zaključavaš polugu lancem i uzimaš ključ.",
+          "next": "polja",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "st_zapis",
+          "text": "Ostavljaš sve kako jeste i zapisuješ šta si video.",
+          "next": "polja",
+          "w": {
+            "t": 1
+          },
+          "textf": "Ostavljaš sve kako jeste i zapisuješ šta si videla."
+        }
+      ]
+    },
+    "polja": {
+      "chapter": "c2",
+      "img": "polja",
+      "paragraphs": [
+        {
+          "t": "Radio sa polja prima kroz šum, kao da neko govori kroz ćebe. Pre nego što čuješ glas, čuješ vetar, i drugi zvuk ispod njega: tiho škljocanje, red za redom, kao da neko zatvara hiljadu prozora."
+        },
+        {
+          "t": "Kosta je tehničar na Svetlim poljima, već petnaest godina. Hoda među redovima panela sa fenjerom, jer je dnevna svetlost odavno otišla, a stari običaji ostaju. Zvuči kao neko ko je prestao da se uzbuđuje pre mnogo godina.",
+          "lead": "Tehničar sa fenjerom."
+        },
+        {
+          "t": "„Greben, polja. Nemoj da pitaš kako je. Gasimo ih po dvadeset redova, da vod ne bi pukao.“",
+          "who": "Kosta",
+          "lead": "Gašenje red po red."
+        },
+        {
+          "t": "„Čuo sam da su ti Svodovci dolazili. Taj momak izgleda kao da je plakao. Zato mu verujem i ne verujem istovremeno.“",
+          "who": "Kosta",
+          "lead": "Kosta o Svodu.",
+          "if": {
+            "pick": "d_prihvata"
+          }
+        },
+        {
+          "t": "„Čuo sam da si im rekao ne. Hvala ti, ali da znaš, nisam siguran šta mi je teže: da te hvalim ili da te žalim.“",
+          "who": "Kosta",
+          "lead": "Kosta o Svodu.",
+          "if": {
+            "pick": "d_odbija"
+          },
+          "tf": "„Čuo sam da si im rekla ne. Hvala ti, ali da znaš, nisam siguran šta mi je teže: da te hvalim ili da te žalim.“"
+        },
+        {
+          "t": "„Čuo sam da si tražio cisternu pre potpisa. Ima ljudi koji tako govore, i ima ljudi koji tako i rade. Videćemo.“",
+          "who": "Kosta",
+          "lead": "Kosta o Svodu.",
+          "if": {
+            "pick": "d_trazi"
+          },
+          "tf": "„Čuo sam da si tražila cisternu pre potpisa. Ima ljudi koji tako govore, i ima ljudi koji tako i rade. Videćemo.“"
+        },
+        {
+          "t": "„Bora mi je javio da je poluga otključana. To je lepa reč za ljude koji znaju šta ona znači.“",
+          "who": "Kosta",
+          "lead": "Kosta o poluzi.",
+          "if": {
+            "pick": "st_polugu"
+          }
+        },
+        {
+          "t": "„Bora mi je javio da si polugu stavio u lanac. Pametno je da neko drži ključ. Pametno je i da ga neko ne drži predugo.“",
+          "who": "Kosta",
+          "lead": "Kosta o poluzi.",
+          "if": {
+            "pick": "st_lanac"
+          },
+          "tf": "„Bora mi je javio da si polugu stavila u lanac. Pametno je da neko drži ključ. Pametno je i da ga neko ne drži predugo.“"
+        },
+        {
+          "t": "„Bora kaže da si sve zapisao. Neko mora da zna šta je ostalo od onoga što nije.“",
+          "who": "Kosta",
+          "lead": "Kosta o poluzi.",
+          "if": {
+            "pick": "st_zapis"
+          },
+          "tf": "„Bora kaže da si sve zapisala. Neko mora da zna šta je ostalo od onoga što nije.“"
+        },
+        {
+          "t": "„Sunce je danas napravilo više nego što vod može da primi. Viška baciš, a manjak naknadiš dizelom u gradu. Tako to sada ide.“",
+          "who": "Kosta",
+          "lead": "Sunce koje nema kuda."
+        },
+        {
+          "t": "Brojač „bačeno“ na tvojoj tabli skače dok on govori. Svaki skok je jedno selo kome je do jutra bilo dovoljno svetlosti, i koje je nikad neće videti.",
+          "lead": "Brojač koji skače."
+        },
+        {
+          "t": "„Baterije su pune od podne. Nema kuda da stane. Zato samo gasimo.“",
+          "who": "Kosta"
+        },
+        {
+          "t": "Čuješ kako spušta fenjer na zemlju i kako se u pozadini nešto lomi pod njegovom čizmom: osušena kora zemlje, koja se pod pločama nikad nije ohladila.",
+          "lead": "Zemlja pod pločama."
+        },
+        {
+          "t": "„Ja ti ne govorim šta da radiš. Ja ti kažem šta mogu: što god kažeš, ja to prosledim.“",
+          "who": "Kosta",
+          "lead": "Šta Kosta može."
+        },
+        {
+          "t": "Čuješ kako Kosta sedi na prevrnutoj kutiji. Iz fenjera dopire tanak miris petroleja, a iza njega, u daljini, red panela koji se upravo gasi pucketa kao staklo na hladnoći.",
+          "lead": "Fenjer i petrolej."
+        },
+        {
+          "t": "Negde na redovima koji još rade, jedan panel pukne od toplote. Zvuk je kratak, kao da neko pljesne dlanovima. Kosta uzdahne i nešto zapiše na poleđini ruke olovkom koju nosi iza uveta.",
+          "lead": "Panel koji puca."
+        },
+        {
+          "t": "„Šta bi ti uradio na mom mestu?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ja sam tehničar, ne dežurni. Mene niko ne pita. Ali bih ostao budan, i to je sve što znam da posavetujem.“",
+          "who": "Kosta",
+          "lead": "Savet tehničara."
+        }
+      ],
+      "prompt": "Kosta čeka tvoju reč.",
+      "choices": [
+        {
+          "id": "po_pola",
+          "text": "Tražiš da polja smanje izlaz na pola, da se vod ohladi.",
+          "next": "ponoc",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "po_sve",
+          "text": "Tražiš da šalju sve što imaju, a Automat neka odluči.",
+          "next": "ponoc",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "po_stari",
+          "text": "Tražiš da ostanu spremni da sve prebace na Stari vod, na tvoju reč.",
+          "next": "ponoc",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "ponoc": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "U jedanaest i pedeset kazaljka na tabli prelazi u crveno. Prostorija miriše na vrelu prašinu i na termos kafu koju je neko zaboravio na klupi."
+        },
+        {
+          "t": "„Dugi vod: osamdeset devet. Granica: devedeset jedan.“",
+          "who": "Automat"
+        },
+        {
+          "t": "Kroz istočni prozor vidiš Lantar. Brdo je već crno. Pijaca svetli tek u nekoliko prozora, kao tragovi sveća, a Padina, na kraju, još drži svoje svetlo, uskom zlatnom šakom u tami.",
+          "lead": "Grad koji se gasi četvrt po četvrt."
+        },
+        {
+          "t": "Kosta javlja: polja su spustila izlaz na pola i vod se hladi, ali Gradski vod dobija manje, a tama na Pijaci raste brže nego što je bilo planirano.",
+          "lead": "Poruka sa polja.",
+          "if": {
+            "pick": "po_pola"
+          }
+        },
+        {
+          "t": "Kosta javlja: polja šalju sve što imaju, i vod se žari, i Automat broji svaki stepen.",
+          "lead": "Poruka sa polja.",
+          "if": {
+            "pick": "po_sve"
+          }
+        },
+        {
+          "t": "Kosta javlja da hiljadu redova panela čeka tvoju reč, kao hor pred prvim tonom.",
+          "lead": "Poruka sa polja.",
+          "if": {
+            "pick": "po_stari"
+          }
+        },
+        {
+          "t": "Na zidu kraj table tiho zvoni sat. Jedanaest i pedeset i dva. Prvi put večeras shvataš da je vreme postalo nešto što može da se čuje.",
+          "lead": "Sat na zidu."
+        },
+        {
+          "t": "„Greben, ovde Kula. Javi mi vod.“",
+          "who": "Neda",
+          "lead": "Kula traži vod."
+        },
+        {
+          "t": "Tri puta si je čuo da to kaže večeras. Svaki put glas joj je bio sve tiši i sve brži, kao kad neko trči uz stepenice a ne želi da ga čuju.",
+          "lead": "Neda ubrzava.",
+          "tf": "Tri puta si je čula da to kaže večeras. Svaki put glas joj je bio sve tiši i sve brži, kao kad neko trči uz stepenice a ne želi da ga čuju."
+        },
+        {
+          "t": "Prostorija odjednom izgleda manja. Tabla, radio, ladica sa ključem, prozor, telefon sa brojčanikom: svaka stvar ima svoj glas, svi govore odjednom, a ti si jedini koji ih čuje.",
+          "lead": "Prostorija koja govori."
+        },
+        {
+          "t": "U ladici stola leži sveska sa spiskom brojeva: Dario, Kosta, Ruža, Neda i jedan bez imena, preko koga je neko povukao crtu. Pokušavaš da pročitaš broj ispod crte i ne uspevaš.",
+          "lead": "Broj pod crtom."
+        },
+        {
+          "t": "Prozor se stalno malo ljulja u okviru. Nije vetar, vetra nema. Nešto u zgradi, u zidovima, u cevima i u kablu, pomera se pod teretom koji je prevelik, i čeka da se odluči.",
+          "lead": "Prozor koji se ljulja."
+        },
+        {
+          "t": "„Koliko ti treba da otvoriš vod kad dođe granica?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dve sekunde. Odluka je već doneta. Jedino što čekam je ključ.“",
+          "who": "Automat",
+          "lead": "Dve sekunde."
+        }
+      ],
+      "prompt": "Do ponoći ostaje još samo nekoliko minuta.",
+      "choices": [
+        {
+          "id": "pn_javi",
+          "text": "Javljaš Nedi da je vod na osamdeset devet.",
+          "next": "vrelina",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "pn_ceka",
+          "text": "Čekaš da vidiš šta će Automat.",
+          "next": "vrelina",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "pn_bora",
+          "text": "Šalješ Boru na krov da pogleda peti stub.",
+          "next": "vrelina",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "vrelina": {
+      "paragraphs": [
+        {
+          "t": "Vod ide uz granicu, pa se trese, pa se opet smiruje, kao bolesnik koji se budi i ponovo tone."
+        },
+        {
+          "t": "„Hvala. Savet je upravo potvrdio da neće menjati naredbu.“",
+          "who": "Neda",
+          "lead": "Neda odgovara.",
+          "if": {
+            "pick": "pn_javi"
+          }
+        },
+        {
+          "t": "„Dugi vod: devedeset. Granica pri sadašnjem opterećenju za dvadeset pet minuta.“",
+          "who": "Automat",
+          "lead": "Automat broji.",
+          "if": {
+            "pick": "pn_ceka"
+          }
+        },
+        {
+          "t": "„Peti stub je gori. Tačka je veća, pucketa i sija. Ako ostane tako, topi se do pola sata.“",
+          "who": "Bora",
+          "lead": "Bora javlja sa krova.",
+          "if": {
+            "pick": "pn_bora"
+          }
+        },
+        {
+          "t": "„Dugi vod: devedeset. Granica pri sadašnjem opterećenju za dvadeset pet minuta.“",
+          "who": "Automat",
+          "lead": "Automat broji.",
+          "if": {
+            "notPick": "pn_ceka"
+          }
+        },
+        {
+          "t": "„Greben, Savet pita još jednom: Brzi vod ostaje netaknut? Treba mi tvoje da, {voc}.“",
+          "who": "Neda",
+          "lead": "Savet traži da."
+        },
+        {
+          "t": "Bora ulazi bez kucanja, sa fenjerom koji još nije ugasio. Kroz prozor se vidi peti stub, a tačka na njemu je veća nego pre pola sata.",
+          "lead": "Bora na vratima."
+        },
+        {
+          "t": "Telefon na stolu zazvoni dvaput i utihne. Pogledaš: nijedna lampica ne svetli, nijedan poziv nije stigao. Telefon je zvonio sam, od vrućine, kao kad se staro gvožđe samo oglasi.",
+          "lead": "Telefon koji zvoni sam."
+        },
+        {
+          "t": "Znoj ti se sliva niz leđa, a košulja se lepi za stolicu. Nijedna lampica na tabli ne treperi uzalud. Tako izgleda noć u kojoj sve svetli, a ništa ne ide.",
+          "lead": "Znoj i lampice."
+        },
+        {
+          "t": "„Ako ga Automat ne otvori, spoj će da se otopi. A onda gori ona suva trava ispod. Ako ga otvori, grad ostaje bez Dugog voda, pa pitaju tebe.“",
+          "who": "Bora",
+          "lead": "Dve vatre."
+        },
+        {
+          "t": "„Koliko ljudi ima večeras u Halama?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tridesetak, noćna smena. Kuvaju kafu i gledaju ekrane. Ne znaju šta gledaju.“",
+          "who": "Bora",
+          "lead": "Noćna smena Hala."
+        },
+        {
+          "t": "Spuštaš pogled na tablu i gledaš ih kao tačke: tridesetak ljudi koji ne znaju da je jedan spoj na petom stubu veći od njihovog računa. A ispod njih, četvrt grada koja ne zna da je njen mrak zapisan u tvom dnevniku.",
+          "lead": "Tridesetak tačaka na tabli."
+        },
+        {
+          "t": "Zapisao si taj spoj u dnevnik pre nekoliko sati. Sad ga vidiš i golim okom, i znaš da stranica koju si ispisao više nije samo hartija.",
+          "lead": "Spoj iz dnevnika.",
+          "if": {
+            "pick": "k_spoj"
+          },
+          "tf": "Zapisala si taj spoj u dnevnik pre nekoliko sati. Sad ga vidiš i golim okom, i znaš da stranica koju si ispisala više nije samo hartija."
+        },
+        {
+          "t": "Ključ ti visi oko vrata, topao od kože. Poželiš da ga skineš, pa da ga stegneš u šaci, pa da ga sakriješ u džep.",
+          "lead": "Ključ na vrpci.",
+          "if": {
+            "pick": "t_kljuc"
+          }
+        },
+        {
+          "t": "Ključ spava u ladici ispod rešetke Automata. Do njega su tri koraka i jedna misao.",
+          "lead": "Ključ u ladici.",
+          "if": {
+            "notPick": "t_kljuc"
+          }
+        }
+      ],
+      "prompt": "Neda čeka, Automat broji, a Bora ćuti.",
+      "choices": [
+        {
+          "id": "v_dario",
+          "text": "Zoveš Darija i tražiš da Hale smanje potrošnju.",
+          "next": "grad",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "v_kosta",
+          "text": "Zoveš Kostu i tražiš da polja spreme sve što imaju.",
+          "next": "grad",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "v_niko",
+          "text": "Ne zoveš nikoga i čekaš da vidiš šta će Automat.",
+          "next": "grad",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "grad": {
+      "img": "lantar",
+      "paragraphs": [
+        {
+          "t": "Plava svetlost Hala slabi do pola, kao kad neko spusti fitilj. Dario se javio, i znaš da će ga to koštati.",
+          "lead": "Svetlost koja slabi.",
+          "if": {
+            "pick": "v_dario"
+          }
+        },
+        {
+          "t": "Daleko na zapadu polja bljesnu jednom, svi redovi odjednom, kao oko koje se otvara. Kosta se javio, i spremno čeka.",
+          "lead": "Bljesak na zapadu.",
+          "if": {
+            "pick": "v_kosta"
+          }
+        },
+        {
+          "t": "Nikoga nisi zvao, pa na istoku sve ostaje isto: Hale plave, Padina zlatna, tama oko njih netaknuta.",
+          "lead": "Isti horizont.",
+          "if": {
+            "pick": "v_niko"
+          },
+          "tf": "Nikoga nisi zvala, pa na istoku sve ostaje isto: Hale plave, Padina zlatna, tama oko njih netaknuta."
+        },
+        {
+          "t": "Izlaziš na terasu. Lantar leži ispod grebena u tami, a na njegovoj ivici Hale svetle plavo, kao da su jedine koje znaju koliko je sati. Vetar je potpuno stao.",
+          "lead": "Terasa iznad grada."
+        },
+        {
+          "t": "U ponoć svetlo na Padini zadrhti. Za trenutak je tama. Pa se pali jedno slabo, žuto: generator, a za njim, jedan po jedan, prozori bolnice.",
+          "lead": "Padina u ponoć."
+        },
+        {
+          "t": "Telefon u džepu zvoni. Ruža govori kratko, bez uvoda, onako kako govore ljudi koji broje.",
+          "lead": "Telefon na terasi."
+        },
+        {
+          "t": "Odozgo se čuje i šum grada, iako je ponoć prošla: tiho pijukanje cevi, zveket poklopca, glas žene koja doziva dete sa prozora. Ljudi u Lantaru ne spavaju za vreme Tamnog sata, nego stoje i čekaju da se vrati svetlo, kao ptice kad prođe oblak.",
+          "lead": "Šum grada u mraku."
+        },
+        {
+          "t": "Dole, na trgu Pijace, neko pali vatru u buretu. Ljudi se okupljaju oko nje, pružaju prste ka plamenu, a plamen im osvetljava lica žuto. Odavde izgledaju kao ikone.",
+          "lead": "Vatra na Pijaci."
+        },
+        {
+          "t": "„Rekao si da ćeš pokušati. Pokušavaj. Generator radi, trideset pet minuta. Javljam na petnaest.“",
+          "who": "Ruža",
+          "lead": "Ruža javlja.",
+          "if": {
+            "pick": "p_obecanje"
+          },
+          "tf": "„Rekla si da ćeš pokušati. Pokušavaj. Generator radi, trideset pet minuta. Javljam na petnaest.“"
+        },
+        {
+          "t": "„Odeljenje je spremno, kao što si rekao. Generator radi, trideset pet minuta. Javljam na petnaest.“",
+          "who": "Ruža",
+          "lead": "Ruža javlja.",
+          "if": {
+            "pick": "p_istina"
+          },
+          "tf": "„Odeljenje je spremno, kao što si rekla. Generator radi, trideset pet minuta. Javljam na petnaest.“"
+        },
+        {
+          "t": "„Nisam stigla da ti kažem sve. Generator radi, trideset pet minuta. Javljam na petnaest.“",
+          "who": "Ruža",
+          "lead": "Ruža javlja.",
+          "if": {
+            "pick": "p_skratio"
+          }
+        },
+        {
+          "t": "Gledaš kako generator tera bolničku svetlost. Ispod nje se jedva razaznaje dvorište, a u dvorištu, na klupi, neko je ostavio kolica. Neko je ovde sedeo pre sat vremena.",
+          "lead": "Bolnički dvor u daljini."
+        },
+        {
+          "t": "Vetar se vraća, a sa njim zvuk koji nisi očekivao: zvonce sa bolničke kapije, koje neko drži u ruci i zvoni u jednakim razmacima, da se zna da je tu. Do grebena stiže tanko, kao nit.",
+          "lead": "Zvonce sa Padine.",
+          "tf": "Vetar se vraća, a sa njim zvuk koji nisi očekivala: zvonce sa bolničke kapije, koje neko drži u ruci i zvoni u jednakim razmacima, da se zna da je tu. Do grebena stiže tanko, kao nit."
+        },
+        {
+          "t": "„To je zvonce za kola. Zvonimo da znaju gde smo, ako dođu.“",
+          "who": "Ruža",
+          "lead": "Zvonce za kola."
+        },
+        {
+          "t": "Iza tebe, u prostoriji, Automat nastavlja da broji. Ne čuješ ga, ali znaš da je tu, kao što znaš da je sat u džepu.",
+          "lead": "Automat iza leđa."
+        }
+      ],
+      "prompt": "Ruža će zvati kad ostane petnaest minuta.",
+      "choices": [
+        {
+          "id": "g_ruza",
+          "text": "Ostaješ na vezi sa Ružom i brojiš minute zajedno sa njom.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "g_neda",
+          "text": "Zoveš Nedu i tražiš da Savet čuje za generator.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "g_tisina",
+          "text": "Ostaješ na terasi i gledaš, bez poziva.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "U dvanaest i trideset Dugi vod je na devedeset. Granica je blizu, a jutro daleko. Ruža je javila na petnaest minuta, pa na deset. Sledeći poziv biće na pet. Tabla ti pokazuje sve tri linije odjednom, kao da traži da ih pogledaš jednim pogledom."
+        },
+        {
+          "t": "Ključ oko vrata ti je postao težak kao medalja. Svaki put kad ga dodirneš, Automat zapisuje da si ga dodirnuo.",
+          "lead": "Ključ koji se upisuje.",
+          "if": {
+            "pick": "t_kljuc"
+          },
+          "tf": "Ključ oko vrata ti je postao težak kao medalja. Svaki put kad ga dodirneš, Automat zapisuje da si ga dodirnula."
+        },
+        {
+          "t": "Na tabli stiže pisana naredba Saveta, sa pečatom, baš kako si tražio: Brzi vod bez izuzetaka do pet. Pod njom je potpis, nečitak, ispisan žurno.",
+          "lead": "Pisana naredba.",
+          "if": {
+            "pick": "ku_pismeno"
+          },
+          "tf": "Na tabli stiže pisana naredba Saveta, sa pečatom, baš kako si tražila: Brzi vod bez izuzetaka do pet. Pod njom je potpis, nečitak, ispisan žurno."
+        },
+        {
+          "t": "Dnevnik leži otvoren pred tobom, na stranici gde stoji tvoj rukopis. Pod njim je ostalo prazno mesto, taman za dve reči.",
+          "lead": "Prazna stranica dnevnika.",
+          "if": {
+            "pick": "d_prihvata"
+          }
+        },
+        {
+          "t": "Dario je ostavio vizit-kartu pod kamenom pred kapijom. Znaš da ga možeš pozvati i da će doći.",
+          "lead": "Kartica pod kamenom.",
+          "if": {
+            "pick": "d_odbija"
+          }
+        },
+        {
+          "t": "Cisterna čeka ispred kapije Padine, motor joj radi, i neće proći dok ne stigne tvoj upis u dnevnik.",
+          "lead": "Cisterna na kapiji.",
+          "if": {
+            "pick": "d_trazi"
+          }
+        },
+        {
+          "t": "Poluga ispod stanice čeka otključana i podmazana. Ako je povučeš, Stari vod oživljava.",
+          "lead": "Poluga koja čeka.",
+          "if": {
+            "pick": "st_polugu"
+          }
+        },
+        {
+          "t": "Poluga ispod stanice leži u lancu, a ključ od lanca ti pritiska džep. Treba ti pola minuta da ga otključaš.",
+          "lead": "Poluga u lancu.",
+          "if": {
+            "pick": "st_lanac"
+          }
+        },
+        {
+          "t": "Stari vod si zapisao u dnevniku kao „zatečeno stanje“. Poluga ispod stanice stoji kako je stajala, hladna, neotključana.",
+          "lead": "Zatečeno stanje.",
+          "if": {
+            "pick": "st_zapis"
+          },
+          "tf": "Stari vod si zapisala u dnevniku kao „zatečeno stanje“. Poluga ispod stanice stoji kako je stajala, hladna, neotključana."
+        },
+        {
+          "t": "Dario ti je javio da Hale mogu da spuste potrošnju na polovinu, ali ne duže od pola sata, i da će to izgledati kao greška, a ne kao ustupak.",
+          "lead": "Poruka iz Hala.",
+          "if": {
+            "pick": "v_dario"
+          }
+        },
+        {
+          "t": "Kosta javlja da hiljadu redova čeka, spremno da sve pošalje čim izgovoriš reč.",
+          "lead": "Poruka sa polja.",
+          "if": {
+            "pick": "v_kosta"
+          }
+        },
+        {
+          "t": "Niko se nije javio, jer nisi zvao. Tišina u slušalici ima svoju težinu.",
+          "lead": "Tišina na vezi.",
+          "if": {
+            "pick": "v_niko"
+          },
+          "tf": "Niko se nije javio, jer nisi zvala. Tišina u slušalici ima svoju težinu."
+        },
+        {
+          "t": "„Greben, Savet traži odgovor sada. Brzi vod ostaje ili ne ostaje.“",
+          "who": "Neda",
+          "lead": "Savet traži odgovor."
+        },
+        {
+          "t": "Bora stoji u uglu sa termosom i ne govori ništa. Gleda te kao što se gleda dete koje prvi put drži nešto vruće.",
+          "lead": "Bora u uglu."
+        },
+        {
+          "t": "Vrućina je počela da popušta. Ne zato što ju je neko savladao, nego zato što se sunce, na drugom kraju sveta, upravo spušta u noć. Ali vod se ne hladi odmah: čuva toplotu kao što ljudi čuvaju ljutnju.",
+          "lead": "Vod koji čuva toplotu."
+        },
+        {
+          "t": "„Ne govorim ti šta da radiš. Pričam ti šta bih ja radio, a ja sam star i umoran.“",
+          "who": "Bora",
+          "lead": "Bora konačno govori."
+        },
+        {
+          "t": "„A šta bi radio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ono što bih radio ne važi. Ja nisam ovde ujutro.“",
+          "who": "Bora"
+        },
+        {
+          "t": "Ispred tebe su tri stvari: poluga ispod stanice, dnevnik sa jednom rečenicom koju još niko nije napisao, i tabla koja ne traži ništa osim da je pustiš.",
+          "lead": "Tri stvari pred tobom."
+        },
+        {
+          "t": "Pomisliš na dečaka od deset, na Darija sa odvezanom pertlom, na Kostu koji gasi redove, na Nedu koja pije kafu umesto večere, na Boru koji devetnaest puta piše isto pismo. Svi oni stoje pred tobom kao ljudi na peronu, a voz ima samo jedan prozor.",
+          "lead": "Ljudi na peronu."
+        },
+        {
+          "t": "Na zidu iznad table visi stari sat sa gvozdenom kazaljkom. Ne radi, stoji na dvanaest i trideset, ali večeras je prvi put pogodio vreme.",
+          "lead": "Sat koji stoji."
+        }
+      ],
+      "prompt": "Savet traži odgovor sada.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "Ukopčavaš Stari vod i otvaraš granicu ključem.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "Upisuješ u dnevnik: bez smetnji, i primaš Svodov transformator.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "Držiš vod u granici, puštaš Tamni sat po redu i ne diraš ništa više.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_slusas",
+        "text": "Gasiš lampu i slušaš kako vod peva.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "img": "stari",
+      "paragraphs": [
+        {
+          "t": "Silazite do Starog voda zajedno, ti i Bora. Staza je tamna, a mesec se skrio iza oblaka koji nije bio tu sat ranije. Bora hoda ispred, sa fenjerom, i ne okreće se."
+        },
+        {
+          "t": "Poluga se pomera kad je povučete obojica, svako jednom rukom, dok metal ne popusti i ne škljocne. Iz zemlje pod nogama kreće dubok, spor ton, kao kad neko u kući pali peć posle duge zime.",
+          "lead": "Poluga koja popušta."
+        },
+        {
+          "t": "Stubovi iznad vas, jedan po jedan, počinju da zuje, i svaki izolator na kojem je neko nekada kredom ispisao broj sada drhti pod strujom.",
+          "lead": "Stubovi koji zuje."
+        },
+        {
+          "t": "Pod prašinom, na kutiji, nailaziš na pločicu koju do sad nije video niko: potpis majstora, godina, i rečenica ispisana pedantno, sitnim slovima: neka drži dok je potrebno.",
+          "lead": "Pločica na kutiji."
+        },
+        {
+          "t": "„Kad si me pitao na krovu, znao sam da ćeš sići.“",
+          "who": "Bora",
+          "lead": "Bora se smeje.",
+          "if": {
+            "pick": "k_stari"
+          },
+          "tf": "„Kad si me pitala na krovu, znao sam da ćeš sići.“"
+        },
+        {
+          "t": "„Nisam mislio da ću doživeti da je povučem.“",
+          "who": "Bora",
+          "lead": "Bora se smeje.",
+          "if": {
+            "notPick": "k_stari"
+          }
+        },
+        {
+          "t": "Gradski vod je prvi put večeras zelen. Na Padini se pale prozori, jedan po jedan, i dok generator još ima pet minuta goriva, Ruža javlja da ga više ne mora da sluša.",
+          "lead": "Zelena linija na tabli."
+        },
+        {
+          "t": "Brojač „bačeno“ na zidu, prvi put večeras, kreće unazad. Kazaljka klizi ulevo kao ptica koja sleće na žicu, i shvataš da se struja koja se bacala sada nalazi negde, u nečijem svetlu.",
+          "lead": "Brojač koji ide unazad."
+        },
+        {
+          "t": "„Greben, ko je ovo ukopčao?“",
+          "who": "Neda",
+          "lead": "Neda pita."
+        },
+        {
+          "t": "„Ja.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Onda ćeš ovo da potpišeš. A ja ću da stojim pored tebe kad ti budu čitali.“",
+          "who": "Neda",
+          "lead": "Neda ne spušta slušalicu."
+        },
+        {
+          "t": "Dok čekaš da ti odgovori, osluškuješ zemlju. Stari vod je živ kao stara životinja: njuši, proverava, ispruža se, pa se vraća, i ti ne možeš da znaš da li će izdržati ili samo zvuči snažno.",
+          "lead": "Stari vod diše."
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "img": "lantar",
+      "paragraphs": [
+        {
+          "t": "Oko tri ujutru jedan izolator na Starom vodu puca. Zvuk je kratak i suv, kao kad neko slomi grančicu. Bora i dvojica ljudi sa Padine zamenjuju ga pod mesečinom, sa lestvama koje je neko doneo iz bolnice."
+        },
+        {
+          "t": "Hale tiho prigušuju svetlo oko četiri. Veliki račun za njih počinje iz početka, i niko ne zove da se žali. Samo na tabli, kod linije Brzog voda, ostaje mala narandžasta zvezdica, kao beleška na margini.",
+          "lead": "Prigušene Hale."
+        },
+        {
+          "t": "Na Padini niko ne zna da si ti to uradio. Znaju samo da je u noći, kad je trebalo da bude mrak, svetlo ostalo, i da su aparati disali bez prekida do jutra.",
+          "lead": "Grad koji ne zna.",
+          "tf": "Na Padini niko ne zna da si ti to uradila. Znaju samo da je u noći, kad je trebalo da bude mrak, svetlo ostalo, i da su aparati disali bez prekida do jutra."
+        },
+        {
+          "t": "Dečak od deset otvara oči u šest, kad lampa na ulici ugasi svoj žuti krug. Pita da li je cele noći gorela. Ruža mu kaže da jeste.",
+          "lead": "Dečak i lampa na ulici."
+        },
+        {
+          "t": "Bora sedi na stepeništu ispred stanice i gleda u vrh petog stuba. Plave tačke više nema. Priča sam sa sobom, tiho, kao čovek koji upisuje nešto u nevidljiv dnevnik.",
+          "lead": "Bora na stepeništu."
+        },
+        {
+          "t": "Do osam ujutru u Kuli se ređaju pozivi: Savet traži objašnjenje, Svod traži odštetu, a Padina traži da zna ko je uključio svetlo. Neda drži sve slušalice u dve ruke i jednu spušta preda te: ova je tvoja.",
+          "lead": "Kula zove."
+        },
+        {
+          "t": "Svitanje se diže nad Svetlim poljima, i redovi panela se pale jedan za drugim, kao da neko prelistava knjigu. Prvi koji stiže na stanicu je glasnik Saveta, sa koricama pod miškom. Pruža ti ih bez reči, a ti ih otvaraš.",
+          "lead": "Glasnik na kapiji."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "img": "hale",
+      "paragraphs": [
+        {
+          "t": "Upisuješ dve reči u dnevnik, rukopisom koji ti se čini tuđim. Dario klimne, bez osmeha, kao neko ko je očekivao da mora. Olovka ostavlja na hartiji tanak, ravan trag, i stranica se zatvara sama."
+        },
+        {
+          "t": "„Rekao sam ti da cisterna dolazi pre potpisa. Ne držim uvek reč, ali ovaj put sam je držao.“",
+          "who": "Dario",
+          "lead": "Dario i cisterna.",
+          "if": {
+            "pick": "d_trazi"
+          }
+        },
+        {
+          "t": "„Cisterna je već na putu. Hvala. Ne znam kako da ti kažem koliko.“",
+          "who": "Dario",
+          "lead": "Dario i cisterna.",
+          "if": {
+            "notPick": "d_trazi"
+          }
+        },
+        {
+          "t": "Cisterna prelazi kapiju Padine u dvanaest i trideset i tri, dve minute pre nego što generator zakašlje. Ruža javlja da generator guta gorivo kao žedan konj, ali da guta, i da se tama u njenom odeljenju ne zove više tama, nego samo noć.",
+          "lead": "Cisterna na kapiji bolnice."
+        },
+        {
+          "t": "Iza Darija, na stazi, vidiš automobil kako se okreće. Vozač ne ide ka Halama nego ka gradu, jer cisterna ima prednost, a prednost je upravo ono što si joj dao. Farovi klize po kamenju kao prsti po dirkama.",
+          "lead": "Farovi na putu.",
+          "tf": "Iza Darija, na stazi, vidiš automobil kako se okreće. Vozač ne ide ka Halama nego ka gradu, jer cisterna ima prednost, a prednost je upravo ono što si joj dala. Farovi klize po kamenju kao prsti po dirkama."
+        },
+        {
+          "t": "Dario ostaje još trenutak na kapiji, kao neko ko nije navikao da dobije ono po šta je došao. Izvinjava se još jednom, i ovog puta to zvuči kao nešto drugo: kao zahvalnost koja ne ume da se kaže naglas.",
+          "lead": "Dario ostaje na kapiji."
+        },
+        {
+          "t": "Hale zuje do pet ujutru, ravnomerno, kao jedna dugačka rečenica koja se ne završava. Plava svetlost u dolini nikad ne zatreperi. Dugi vod, iz tvoje ruke, poslednji put je otvoren u dvadeset do dva, na deset sekundi.",
+          "lead": "Hale koje ne staju."
+        },
+        {
+          "t": "U prostoriji, Automat tiho beleži: opterećenje Brzog voda bez prekida do pet, bez upisa dežurnog. Zvuči kao uzdah olakšanja, ali znaš da je to samo njegov način da kaže da je sve po pravilima.",
+          "lead": "Automat beleži."
+        },
+        {
+          "t": "Bora ništa ne govori. Napuni dve šolje iz termosa i ne pruži ti nijednu.",
+          "lead": "Bora ćuti."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "img": "polja",
+      "paragraphs": [
+        {
+          "t": "Kamion sa transformatorom stiže na Greben u šest, dok se sunce još ne vidi. Na prikolici, vezan lancima, stoji komad crnog gvožđa veći od stanice. Dva čoveka u svetlim kombinezonima već mere teren."
+        },
+        {
+          "t": "Dario ti pruža ruku. Ti je prihvataš. Njegova je hladna i suva, kao ruka nekoga ko previše dugo drži laptop.",
+          "lead": "Dario pruža ruku."
+        },
+        {
+          "t": "Bora izlazi pred stanicu i gleda kamion duže nego što je potrebno. Ne gleda u tovar. Gleda prazno mesto pored petog stuba, na kojem će se uskoro uzdići nešto novo.",
+          "lead": "Bora gleda kamion."
+        },
+        {
+          "t": "„Dvadeset godina nisam video da neko donese nešto novo. Evo ga. Ne znam šta da osećam.“",
+          "who": "Bora",
+          "lead": "Bora ne zna šta oseća."
+        },
+        {
+          "t": "Kamion se pomera unazad, uz škripu, i metal dodiruje zemlju kao gost koji prvi put prelazi prag. Tlo zadrhti pod nogama pa utihne, i stojite oko novog komada gvožđa kao oko životinje koja se tek smestila.",
+          "lead": "Gvožđe dodiruje zemlju."
+        },
+        {
+          "t": "Šesti stub će se podići do ponedeljka, kažu. Peti, onaj sa vrućim spojem, biće zamenjen još pre toga. Na tabli, uz tvoje oči, linije miruju kao uspavane zmije.",
+          "lead": "Novi stub."
+        },
+        {
+          "t": "Dario sedi na sanduku pored kamiona i jede sendvič koji je doneo za obojicu. Pruža ti polovinu, ti prihvataš, i žvaćete u tišini, kao dvojica koji su preživeli istu noć iz različitih razloga.",
+          "lead": "Sendvič na sanduku."
+        },
+        {
+          "t": "Kasnije, kad ostaneš sam u prostoriji, na tabli pored Brzog i Dugog voda zasvetli i četvrta linija, tanka, bela, bez imena. Neko u Svodu je upravo uneo prvi red nečega što još ne postoji.",
+          "lead": "Četvrta linija."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "img": "lantar",
+      "paragraphs": [
+        {
+          "t": "Ne diraš ništa. Automat otvara Dugi vod u dvadeset do jedan, na deset sekundi, i zatvara ga ponovo, kao uzdah. Spoj na petom stubu ostaje u svom plavom sjaju, ali ne otopi se."
+        },
+        {
+          "t": "Tamni sat ide po redu. Padina je u mraku do jedan, a u bolnici radi generator, i brojiš minute.",
+          "lead": "Padina u mraku."
+        },
+        {
+          "t": "Za to vreme Brdo spava u mraku, a Pijaca čuva sveće u prozorima. Ljudi stoje kod vrata i čekaju, onako kako se u Lantaru čeka Tamni sat: bez pitanja, sa kafom, po običaju.",
+          "lead": "Ljudi čekaju mrak."
+        },
+        {
+          "t": "Ostao si na vezi sa Ružom. Brojite zajedno do kraja goriva, ona glasno, ti tiho, kao dvoje ljudi koji se drže istog užeta.",
+          "lead": "Dvoje na istoj žici.",
+          "if": {
+            "pick": "g_ruza"
+          },
+          "tf": "Ostala si na vezi sa Ružom. Brojite zajedno do kraja goriva, ona glasno, ti tiho, kao dvoje ljudi koji se drže istog užeta."
+        },
+        {
+          "t": "U dvanaest i trideset pet generator zakašlje i utihne. Telefon ostaje nem. Tek kasnije ćeš saznati da su dvadeset pet minuta tri sestre rukom stiskale mehove, dah za dahom, a dečak od deset držao lampu.",
+          "lead": "Generator koji kašlje."
+        },
+        {
+          "t": "U jedan i deset svetlo na Padini se vraća, svi prozori odjednom, kao kad neko otvori oči. Ruža ne javlja ništa, i znaš da je zauzeta.",
+          "lead": "Svetlo na Padini."
+        },
+        {
+          "t": "Znaš da je u Kuli neko kredom prekrižio Padinu u rasporedu: odrađeno. Jednom linijom, lako, kao što se prekriži dan u kalendaru.",
+          "lead": "Linija kredom u Kuli."
+        },
+        {
+          "t": "Automat još jednom otvara Dugi vod, u dva ujutru, na pet sekundi, pa ga ponovo zatvara. Zapisuje: izvršeno po pravilima. O tebi ne piše ništa, jer tebe u njegovim pravilima nema.",
+          "lead": "Automat se oglašava."
+        },
+        {
+          "t": "„Greben, hvala na redu. Savet će da zabeleži da je vod ostao u granici.“",
+          "who": "Neda",
+          "lead": "Neda javlja."
+        },
+        {
+          "t": "Beleška u dnevniku, tvojom rukom, ostaje kratka: red je držan, vod je držan. Ispod, sitnije, neko drugi je dopisao olovkom: i niko nije pitao zašto.",
+          "lead": "Beleška u dnevniku."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "img": "svitanje",
+      "paragraphs": [
+        {
+          "t": "Do pet ujutru Dugi vod se hladi, sat po sat. Polja šalju svoj višak u prazan vazduh, kao i svake noći, i brojač „bačeno“ stane na broju koji nikad nećeš zaboraviti."
+        },
+        {
+          "t": "Bora ulazi sa dve šolje iz termosa i jednu stavlja pred tebe, bez reči. Ti je držiš obema rukama, i dok se para diže, prvi zraci nad Svetlim poljima dodiruju prvi red panela.",
+          "lead": "Termos u zoru."
+        },
+        {
+          "t": "Napolju je vetar konačno popustio. Žice više ne pevaju, samo tiho škrguću, kao stari zubi. Peti stub ima još tragove opaljenog gvožđa, ali drži.",
+          "lead": "Vetar je popustio."
+        },
+        {
+          "t": "Polja se bude jedno po jedno, kao ljudi u velikom, tihom domu. Kosta javlja da je prvi red počeo da šalje. Brojač „bačeno“ stane i zadrhti, pa krene ponovo, jer sunce ne pita da li je vod spreman.",
+          "lead": "Polja se bude."
+        },
+        {
+          "t": "„Greben, Kula. Smena je gotova. Zamena ti stiže u devet.“",
+          "who": "Neda",
+          "lead": "Kula se javlja u zoru."
+        },
+        {
+          "t": "„A ti?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ja imam još jednu noć.“",
+          "who": "Neda"
+        },
+        {
+          "t": "Pre nego što odeš kući, još jednom proveravaš tablu. Tri linije miruju. Samo zvuk je isti kao i uvek: tihi, ravnomerni ton žice u vetru.",
+          "lead": "Tri linije u miru."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "komandna": {
+      "src": "img/tamni-sat/komandna.jpg",
+      "alt": "Komandna soba stanice Greben: tabla sa tri svetleće linije",
+      "kind": "place"
+    },
+    "krov": {
+      "src": "img/tamni-sat/krov.jpg",
+      "alt": "Krov stanice Greben u sumrak, žice i stubovi preko tamnih polja",
+      "kind": "place"
+    },
+    "trafo": {
+      "src": "img/tamni-sat/trafo.jpg",
+      "alt": "Hala sa transformatorima, narandžasta lampa i zujanje",
+      "kind": "place"
+    },
+    "greben": {
+      "src": "img/tamni-sat/greben.jpg",
+      "alt": "Kapija stanice Greben, farovi automobila i plava svetlost Hala u dolini",
+      "kind": "place"
+    },
+    "polja": {
+      "src": "img/tamni-sat/polja.jpg",
+      "alt": "Svetla polja noću: redovi panela, deo ugašen",
+      "kind": "place"
+    },
+    "stari": {
+      "src": "img/tamni-sat/stari.jpg",
+      "alt": "Zapušteno razvodno postrojenje Starog voda pod mesecom",
+      "kind": "place"
+    },
+    "lantar": {
+      "src": "img/tamni-sat/lantar.jpg",
+      "alt": "Grad Lantar noću, delovi grada u mraku",
+      "kind": "place"
+    },
+    "hale": {
+      "src": "img/tamni-sat/hale.jpg",
+      "alt": "Hale: velike računske hale koje svetle plavo u dolini",
+      "kind": "place"
+    },
+    "svitanje": {
+      "src": "img/tamni-sat/svitanje.jpg",
+      "alt": "Svitanje nad Svetlim poljima, viđeno sa krova stanice",
+      "kind": "place"
+    },
+    "neda": {
+      "src": "img/tamni-sat/neda.jpg",
+      "alt": "Neda, dispečerka noćne smene",
+      "kind": "portrait"
+    },
+    "bora": {
+      "src": "img/tamni-sat/bora.jpg",
+      "alt": "Bora, stari mehaničar sa Grebena",
+      "kind": "portrait"
+    },
+    "ruza": {
+      "src": "img/tamni-sat/ruza.jpg",
+      "alt": "Ruža, noćna sestra",
+      "kind": "portrait"
+    },
+    "dario": {
+      "src": "img/tamni-sat/dario.jpg",
+      "alt": "Dario, inženjer iz Svoda",
+      "kind": "portrait"
+    },
+    "kosta": {
+      "src": "img/tamni-sat/kosta.jpg",
+      "alt": "Kosta, tehničar Svetlih polja",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/tamni-sat/citalac-m.jpg",
+      "alt": "Dežurni sa Grebena",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/tamni-sat/citalac-z.jpg",
+      "alt": "Dežurna sa Grebena",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Neda": {
+      "img": "neda"
+    },
+    "Bora": {
+      "img": "bora"
+    },
+    "Ruža": {
+      "img": "ruza"
+    },
+    "Dario": {
+      "img": "dario"
+    },
+    "Kosta": {
+      "img": "kosta"
+    },
+    "Automat": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

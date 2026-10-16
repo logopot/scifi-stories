@@ -39,6 +39,18 @@ export const stories = [
     status: "ready",
     load: () => import("./tri-i-deset/story.json"),
   },
+  {
+    slug: "tamni-sat",
+    title: "Tamni sat",
+    tagline:
+      "Na grebenu između polja i grada jedna stanica odlučuje čije će svetlo večeras ostati.",
+    genre: "Naučna fantastika",
+    minutes: 20,
+    cover: "img/tamni-sat/cover.jpg",
+    coverAlt: "Stanica Greben na grebenu u sumrak, Svetla polja levo i grad Lantar desno",
+    status: "ready",
+    load: () => import("./tamni-sat/story.json"),
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];
 
