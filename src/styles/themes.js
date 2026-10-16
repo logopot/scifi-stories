@@ -297,6 +297,51 @@ const triIDeset = {
   fontHeading: fonts.ui,
 };
 
+// Tamni sat: noć na prekidačkoj stanici, ugljenasta podloga sa crvenkasto-bakarnim akcentom i hladnim čeličnim plavetnilom.
+const tamniSat = {
+  name: 'tamni-sat',
+  mode: 'dark',
+  sky: 'stars',
+  bg: '#181214',
+  bgSoft: '#241a1d',
+  surface: '#2b1f23',
+  text: '#f0e6e2',
+  textMuted: '#c4b1ab',
+  textFaint: '#9a8782',
+  accent: '#ee7b57',
+  accentStrong: '#a8431f',
+  onAccent: '#ffffff',
+  secondary: '#6c93b8',
+  glowA: 'rgba(238, 123, 87, 0.28)',
+  glowB: 'rgba(108, 147, 184, 0.22)',
+  border: 'rgba(240, 230, 226, 0.2)',
+  selection: 'rgba(238, 123, 87, 0.35)',
+  focusRing: '#ee7b57',
+  shadow: 'rgba(0, 0, 0, 0.6)',
+  scrim: 'rgba(24, 14, 16, 0.88)',
+  onImage: '#f6eeea',
+  btnBg: 'transparent',
+  btnText: '#f59a7a',
+  btnBorder: '#ee7b57',
+  btnBgHover: '#a8431f',
+  btnTextHover: '#ffffff',
+  btnBorderHover: '#a8431f',
+  btnBgActive: '#8a3517',
+  btnQuietText: '#9dbad6',
+  btnQuietBorder: '#6c93b8',
+  btnQuietBgHover: '#9dbad6',
+  btnQuietTextHover: '#181214',
+  choiceBg: 'transparent',
+  choiceBorder: 'rgba(240, 230, 226, 0.2)',
+  choiceBgSelected: '#ee7b57',
+  choiceTextSelected: '#181214',
+  choiceDot: '#ee7b57',
+  btnDisabledBg: '#33252a',
+  btnDisabledText: '#9a8782',
+  fontBody: fonts.serif,
+  fontHeading: fonts.ui,
+};
+
 export const siteTheme = withLogo(siteBase);
 
 // slug priče -> tema
@@ -304,6 +349,7 @@ export const themes = {
   'bez-opcije': withLogo(bezOpcije),
   'poslednja-mera': withLogo(poslednjaMera),
   'tri-i-deset': withLogo(triIDeset, '#e3b94e'), // sodium-žuti akcent ove teme
+  'tamni-sat': withLogo(tamniSat),
   'tihi-sat': withLogo(tihiSat),
   'zelena-granica': withLogo(zelenaGranica),
 };
