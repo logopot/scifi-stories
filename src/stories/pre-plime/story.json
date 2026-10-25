@@ -379,6 +379,38 @@
           "if": {
             "pick": "p_pita"
           }
+        }
+      ],
+      "prompt": "Anka čeka da kažeš zašto si došao.",
+      "choices": [
+        {
+          "id": "zr_lista",
+          "text": "Pokazuješ joj listu parcela.",
+          "next": "zrnara1",
+          "w": {}
+        },
+        {
+          "id": "zr_ceka",
+          "text": "Čekaš da Anka prva progovori.",
+          "next": "zrnara1",
+          "w": {}
+        }
+      ]
+    },
+    "zrnara1": {
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "Pružaš joj ploču sa listom, a Anka je prima obema rukama, kao nešto što može da se prospe.",
+          "if": {
+            "pick": "zr_lista"
+          }
+        },
+        {
+          "t": "Čekaš, a Anka ne žuri: tišina u podrumu ima težinu, kao vlažan vosak, i ona to zna.",
+          "if": {
+            "pick": "zr_ceka"
+          }
         },
         {
           "t": "Anka konačno ustaje, teško, prvo na jednu nogu pa na drugu, i vodi te između polica. Vreće se prorede, pa se pojavljuje niz praznih mesta, svako sa krugom prašine na kamenu. Četrdeset krugova za četrdeset vreća, a ostali, dalje, još su puni. Na njenom licu nema ni ljutnje ni dobrodošlice, samo pažnja onoga ko mnogo čeka.",
@@ -410,6 +442,38 @@
           "t": "„Znaju. Zato su im ugovori tako kratki i tako tihi. Kad se kaže četrdeset vreća, to je jedna rečenica, a kad se pečat slomi, to su stranice.“",
           "lead": "Kratki ugovori.",
           "who": "Anka"
+        }
+      ],
+      "prompt": "Anka gleda ka policama i čeka pitanje.",
+      "choices": [
+        {
+          "id": "zr_pecat",
+          "text": "Pitaš za pečat.",
+          "next": "zrnara2",
+          "w": {}
+        },
+        {
+          "id": "zr_prazna",
+          "text": "Pitaš za prazna mesta na policama.",
+          "next": "zrnara2",
+          "w": {}
+        }
+      ]
+    },
+    "zrnara2": {
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "Pogled ti ostaje na pečatu na najbližoj vreći, zelenom kao mahovina.",
+          "if": {
+            "pick": "zr_pecat"
+          }
+        },
+        {
+          "t": "Pogled ti ostaje na krugovima prašine na kamenu, praznim i savršeno okruglim.",
+          "if": {
+            "pick": "zr_prazna"
+          }
         },
         {
           "t": "„Prvi put sam videla pečat posle Velikog suvog, kad je staro žito pocrnelo na korenu. Došli su čamci sa Terasa i dali nam seme koje preživi so. Tražili su samo jedno: da se nikad ne seje ono što nije njihovo.“",
@@ -435,15 +499,6 @@
         {
           "t": "„Mašina u podrumu Merne kuće. Svaku Tokovu prognozu poredi sa sondama u vodi, pa javi ako se ne slažu. Javljao je skoro svake nedelje.“",
           "lead": "Odgovor čuvarke.",
-          "who": "Anka"
-        },
-        {
-          "t": "„Ko ga je isključio?“",
-          "who": "Ti"
-        },
-        {
-          "t": "„Rekao je samo da nema potrebe. Nisam pitala drugo, a trebalo je. Ruke su mi bile pune ključeva i računa, pa sam ostavila pitanje za kasnije.“",
-          "lead": "Pitanje za kasnije.",
           "who": "Anka"
         },
         {

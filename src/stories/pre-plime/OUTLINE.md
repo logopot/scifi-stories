@@ -1,6 +1,6 @@
 # Plan strukture: „Pre plime“
 
-18 čvorova: otvaranje (2), tri kruga (raskrsnica + srednja scena + podrum Čuvara; tri paralelne scene pred ponoć), pauza, odluka (hub), šest završnih čvorova (dva po kraju). Jedan igrač prolazi kroz 10 čvorova (8 pre kraja + 2 završna), oko 70 strana i oko 3.230 reči (min 2.970, max 3.570).
+20 čvorova: otvaranje (2), tri kruga (raskrsnica + srednja scena, u Zrnari razbijena na tri čvora + podrum Čuvara; tri paralelne scene pred ponoć), pauza, odluka (hub), šest završnih čvorova (dva po kraju). Jedan igrač prolazi kroz 10 čvorova (8 pre kraja + 2 završna), oko 75 strana i oko 3.235 reči (min 2.976, max 3.573).
 
 Ose: `e` briga o ljudima, `t` poverenje u mašinu i napredak, `o` oprez i čuvanje zalihe. Težine: mali izbori 1, veliki izbori 2 (p_, c_), hub 4, skrivena opcija o:2 + e:1.
 
@@ -8,7 +8,7 @@ Ose: `e` briga o ljudima, `t` poverenje u mašinu i napredak, `o` oprez i čuvan
 
 ```
 kanal ── pristan ──┬─ (p_daj / p_plan / p_pita, isti sledeći čvor)
-                   └─ raskrsnica ──┬─ zrnara ──┐
+                   └─ raskrsnica ──┬─ zrnara ─ zrnara1 ─ zrnara2 ──┐
                                    ├─ merna ───┼─ cuvar ──┬─ vece ────┐
                                    └─ splav ───┘          ├─ parcela ─┼─ sat ── odluka ──┬─ kraj_e1 ─ kraj_e2 (e)
                                                            └─ ventil ──┘                  ├─ kraj_t1 ─ kraj_t2 (t)
@@ -27,7 +27,9 @@ Stranica = pasus od 80 i više znakova (kraći pasusi se lepe na prethodnu). Bro
 | kanal | 2 | mala: stati / signal / uže (isti sledeći čvor `pristan`) | (početak: već u kanalu, plima, fenjer) |
 | pristan | 2 | velika: dati vreću / pokazati listu / pozvati u čamac | tri verzije dolaska devojke |
 | raskrsnica | 8 | velika: tri kanala (`zrnara` / `merna` / `splav`) | tri verzije uvoda (vreća fali / fenjer iza / Jela u čamcu) |
-| zrnara | 14 | mala: ključ / knjiga / pitanje (`cuvar`) | Anka i vreća, Anka i Jela |
+| zrnara | 3 | mala: pokazati listu / čekati (`zrnara1`) | Anka i vreća, Anka i Jela |
+| zrnara1 | 6 | mala: pitati za pečat / za prazna mesta (`zrnara2`) | rečenica o ploči sa listom ili o tišini |
+| zrnara2 | 7 | mala: ključ / knjiga / pitanje (`cuvar`) | rečenica o pečatu ili o krugovima prašine |
 | merna | 11 | mala: pitati Tok / ugovor / ćutati (`cuvar`) | Emilova rečenica o vreći, listi ili devojci |
 | splav | 9 | mala: čitati listu / pokazati pečat / pitati za so (`cuvar`) | Pavle i narod |
 | cuvar | 9 | velika: upaliti Čuvara / parcela / ventil | devet verzija ulaska u podrum |
@@ -39,11 +41,11 @@ Stranica = pasus od 80 i više znakova (kraći pasusi se lepe na prethodnu). Bro
 | kraj_x1 | 6–7 | — | callback na izbore |
 | kraj_x2 | 4–6 | — | završni pasus |
 
-Prvi klik je na 2. strani (`kanal`), prvi pravi izbor na 4. strani (`pristan`). Prosečan razmak između klikova je oko 7 strana, najduži oko 14 (`zrnara`). Pravilo „bar svaka druga strana“ nije ostvarivo u zadatom okviru (14–18 čvorova, oko 3.200–3.800 reči); izbori su svi na kraju čvora, a jedan čvor ima najviše jedan skup opcija. Pasusi su zato sastavljeni tako da nikad ne idu tri strane naracije zaredom: strane se smenjuju sa replikama i sa kratkim replikama koje se lepe na naraciju.
+Prvi klik je na 2. strani (`kanal`), prvi pravi izbor na 4. strani (`pristan`). Prosečan razmak između klikova je oko 7 strana, najduži oko 12 (`sat`; `zrnara` je razbijena na tri čvora od 3, 6 i 7 strana, prosek razmaka pao sa 7,9 na 7,3). Pravilo „bar svaka druga strana“ nije ostvarivo u zadatom okviru (14–18 čvorova, oko 3.200–3.800 reči); izbori su svi na kraju čvora, a jedan čvor ima najviše jedan skup opcija. Pasusi su zato sastavljeni tako da nikad ne idu tri strane naracije zaredom: strane se smenjuju sa replikama i sa kratkim replikama koje se lepe na naraciju.
 
 ## Mala interakcija
 
-Osam skupova opcija vodi u isti sledeći čvor, a razlika je u konkretnom detalju u narednoj sceni (`if` uslovi): `kanal` (dolazak devojke), `zrnara` / `merna` / `splav` (devet uvoda u podrum), `vece` / `parcela` / `ventil` (devet odjeka u `sat`), `sat` (prva replika u `odluka`).
+Deset skupova opcija vodi u isti sledeći čvor, a razlika je u konkretnom detalju u narednoj sceni (`if` uslovi): `kanal` (dolazak devojke), `zrnara` / `merna` / `splav` (devet uvoda u podrum), `vece` / `parcela` / `ventil` (devet odjeka u `sat`), `sat` (prva replika u `odluka`).
 
 ## Callback-ovi (bar šest, tri u krajevima)
 
@@ -65,7 +67,7 @@ Osam skupova opcija vodi u isti sledeći čvor, a razlika je u konkretnom detalj
 | kanal | kanal | prva scena |
 | pristan | niska | dolazak na pristan |
 | raskrsnica | kanal | više prethodnika, povratak u kanal |
-| zrnara | zrnara | |
+| zrnara, zrnara1, zrnara2 | zrnara | isto mesto, nasleđuje |
 | merna | merna | |
 | splav | splav | |
 | cuvar | cuvar | |
