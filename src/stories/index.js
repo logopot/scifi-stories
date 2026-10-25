@@ -51,6 +51,18 @@ export const stories = [
     status: "ready",
     load: () => import("./tamni-sat/story.json"),
   },
+  {
+    slug: "pre-plime",
+    title: "Pre plime",
+    tagline:
+      "U delti gde svako zrno ima pečat, jedna prognoza odlučuje šta će se posejati.",
+    genre: "Naučna fantastika",
+    minutes: 20,
+    cover: "img/pre-plime/cover.jpg",
+    coverAlt: "Nasip: grad na nasipu iznad belih plićaka u sumrak",
+    status: "ready",
+    load: () => import("./pre-plime/story.json"),
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];
 

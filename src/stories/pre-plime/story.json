@@ -1,0 +1,2035 @@
+{
+  "meta": {
+    "title": "Pre plime",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Beli Plićak je delta u kojoj se zemlja i more nikad do kraja ne razdvoje. Svako zrno koje se seje nosi pečat, a svakom polju presuđuje Tok, mašina koja unapred zna kakvo će biti leto.",
+      "Večeras tvoj čamac vozi seme za Veće. Plima je u šest i deset, kanal je plići nego što je Tok rekao, a na pristanu Niske strane neko mahne fenjerom.",
+      "Pred tobom su ljudi sa tri strane nasipa, mašina koja govori samo kad je pitaju i jedan nadzor o kome se u Nasipu ćuti."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "briga o ljudima"
+      },
+      {
+        "id": "t",
+        "name": "poverenje u mašinu i napredak"
+      },
+      {
+        "id": "o",
+        "name": "oprez i čuvanje zalihe"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "Na Plićaku se ništa ne seje bez pečata i bez Tokove liste. Večeras tvoj čamac vozi seme za Veće, plima stiže u šest i deset, a na pristanu Niske strane neko ljulja fenjer."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi čitanje",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 20 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Napredak se čuva samo u tvom pregledaču.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Plićak"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Pečat"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Plima"
+    }
+  },
+  "start": "kanal",
+  "endings": {
+    "e": {
+      "title": "Vosak i so",
+      "closing": [
+        "Vosak sa slomljenih pečata ostaje u mulju Niske strane do prve kiše. Deca ga skupljaju i slažu u kutije od cipela, kao školjke."
+      ]
+    },
+    "t": {
+      "title": "Zeleni konopac",
+      "closing": [
+        "Četrdeset parcela zeleni se u redu, jedna za drugom, onako kako je pisalo na listi. Kanal pored Niske strane svake večeri postaje malo plići."
+      ]
+    },
+    "o": {
+      "title": "Ključ u dlanu",
+      "closing": [
+        "Dvadeset parcela blizu nasipa tanko zeleni, a dvadeset vreća čeka u Zrnari pod novim voskom. Na nebu još nema odgovora."
+      ]
+    }
+  },
+  "nodes": {
+    "kanal": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "kanal",
+      "paragraphs": [
+        {
+          "t": "Čamac struže po dnu. Treći kanal je u ovo doba uvek dubok do pojasa, a veslo ti sada zapinje u mulju kao u testu. Vazduh miriše na so i trulu trsku. Na palubi, pod mokrom ceradom, leži četrdeset vreća sa voštanim pečatom Terasa. Plima je u šest i deset, a ponoć je prošla pre sat vremena. Jednom rukom veslaš, a drugom, bez razmišljanja, dodiruješ pečat na najbližoj vreći, kao što se dodiruje amajlija."
+        },
+        {
+          "t": "Ispred, na pristanu Niske strane, neko ljulja fenjer. Brzo i bez ritma, kao neko ko ne zna signale, a svejedno ne odustaje. Na listi je prva parcela tek na Nasipu, još sat veslanja odavde, i svaki minut stajanja oduzima se od njega. Ploča za krmom to zna odavno: broji minute tiho, zelenim brojevima, i ne zamera nikome.",
+          "lead": "Fenjer na pristanu."
+        }
+      ],
+      "prompt": "Pristan je sve bliže, a fenjer ne staje.",
+      "choices": [
+        {
+          "id": "k_stani",
+          "text": "Skrećeš ka pristanu i spuštaš veslo da zaustaviš čamac.",
+          "next": "pristan",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_signal",
+          "text": "Odgovaraš lampom i veslaš dalje, dok ne vidiš ko to maše.",
+          "next": "pristan",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_uze",
+          "text": "Bacaš uže ka pristanu, a čamac ne usporavaš.",
+          "next": "pristan",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "pristan": {
+      "img": "niska",
+      "paragraphs": [
+        {
+          "t": "Čamac staje uz pristan bez udarca, a devojka hvata pramac pre nego što ga ti vežeš. Zove se Jela, ima sedamnaest godina, na sebi očev kaput do kolena i blato do struka. Fenjer drži ispred sebe kao štit, a oči joj odlaze na vreće iza tebe. Pogled joj je tvrd, onaj koji se ne uči nego nasleđuje. U vazduhu iznad njenog fenjera tiho zuju mušice, privučene svetlom.",
+          "if": {
+            "pick": "k_stani"
+          }
+        },
+        {
+          "t": "Devojka trči duž nasipa, preskače sidra i užad i stiže na pristan taman kad čamac uspori. Zove se Jela, ima sedamnaest godina, na sebi očev kaput do kolena i blato do struka. Diše kao da trči od ponoći, a oči joj odlaze na vreće iza tebe. Jedna cipela joj je ostala negde u blatu, a ona to ne primećuje. Fenjer joj se ljulja u ruci, a senka na vodi kasni za njenim korakom.",
+          "if": {
+            "pick": "k_signal"
+          }
+        },
+        {
+          "t": "Devojka hvata uže i klizi nekoliko koraka kroz mulj, pa staje držeći ga obema rukama. Zove se Jela, ima sedamnaest godina, na sebi očev kaput do kolena. Čamac se zaustavlja zahvaljujući njenoj tvrdoglavosti, a ne tvom veslu. Oči joj odmah odlaze na vreće iza tebe. Dlanovi su joj ogrebani od užeta, a ona ih ne gleda. Fenjer joj je ostao u mulju pored pristana i još gori, nemoćan, kao ptica sa slomljenim krilom.",
+          "if": {
+            "pick": "k_uze"
+          }
+        },
+        {
+          "t": "„Parcela dvesta dvanaest nije na tvojoj listi. Moj otac je seje trideset šest godina. Jutros je zabio prst u zemlju i ona je mokra do zgloba. A voda do nas stiže poslednja, kad ventil radi do kraja.“",
+          "lead": "Šta zna Niska strana.",
+          "who": "Jela"
+        },
+        {
+          "t": "„Lista ne dolazi od mene. Šalje je Tok.“",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Jela čeka odgovor i ne skida pogled sa tebe.",
+      "choices": [
+        {
+          "id": "p_daj",
+          "text": "Spuštaš jednu vreću na pristan i lomiš pečat pred njom.",
+          "next": "raskrsnica",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "p_plan",
+          "text": "Pokazuješ joj ploču sa listom i kažeš da ti ne odlučuješ.",
+          "next": "raskrsnica",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "p_pita",
+          "text": "Zoveš je u čamac: u Zrnari neko odlučuje o pečatima.",
+          "next": "raskrsnica",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "raskrsnica": {
+      "img": "kanal",
+      "paragraphs": [
+        {
+          "t": "Vosak puca pod tvojim palcem, a zrnca u vreći šušte kao kiša po papiru. Jela je steže na grudi obema rukama i nestaje niz pristan. Na ploči za krmom pisalo je četrdeset, a sada piše trideset devet. Ploča ne zamera, samo broji. Nešto ti se steže u grudima: pečat na toj vreći bio je prvi koji si u životu slomio.",
+          "tf": "Vosak puca pod tvojim palcem, a zrnca u vreći šušte kao kiša po papiru. Jela je steže na grudi obema rukama i nestaje niz pristan. Na ploči za krmom pisalo je četrdeset, a sada piše trideset devet. Ploča ne zamera, samo broji. Nešto ti se steže u grudima: pečat na toj vreći bio je prvi koji si u životu slomila.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela ne kaže ništa. Gleda listu, pa tebe, pa listu, i povlači se korak unazad. Dok veslaš dalje, fenjer na pristanu Niske strane se ne gasi, a onda ga sakriva zavoj kanala i još nekoliko trenutaka vidiš samo bledu mrlju na vodi. Ploča na krmi svetli ravnomerno, kao da se ništa nije desilo.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "Jela sedi na klupi uz bok, umotana u ceradu. Fenjer je spustila na dno čamca i gleda u vodu, ne u tebe. Svaki put kad veslo zapne u mulju, nakrene se napred, kao da bi radije sama veslala. Njen kaput miriše na dim i mokru vunu, kao kuća u kojoj se predugo ložilo.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Ovaj kanal si vozio stotinu puta i znaš mu dno kao dlan. Večeras se dno podiglo, i to ne po zakonu plime: mulj je gušći, a voda ima grub ukus, kao da je kroz nju prošla sirova riba. Veće te je primilo odavno, jer brodari poslednji znaju dno Plićaka napamet.",
+          "tf": "Ovaj kanal si vozila stotinu puta i znaš mu dno kao dlan. Večeras se dno podiglo, i to ne po zakonu plime: mulj je gušći, a voda ima grub ukus, kao da je kroz nju prošla sirova riba. Veće te je primilo odavno, jer brodari poslednji znaju dno Plićaka napamet.",
+          "lead": "Dno koje se podiglo."
+        },
+        {
+          "t": "„Moj deda je vozio ovuda. Govorio je da kanal diše. Večeras jedva diše.“",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "„Kanal je plići nego što piše u tabeli.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Odstupanje je u granici dozvoljenog. Tabela se ne menja.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Tri kanala se ovde spajaju. Levo je Zrnara, ispod nasipa, desno Merna kuća na stubovima, a pravo Splav, plutajuća pijaca. Na svakom ulazu stoji kameni stub sa izlizanim znakom: klas, oko i talas, najstariji znaci Plićaka. Voda u svakom je druge boje: levo zelenkasta, desno olovna, pravo bela od soli.",
+          "lead": "Raskrsnica tri kanala."
+        },
+        {
+          "t": "Ploča na krmi se pali sama. Tok je u svakoj ploči na Plićaku i govori samo kad ga neko pita. Na njoj svetli lista: četrdeset redova, četrdeset brojeva parcela i uz svaki ime domaćinstva. Poznaješ većinu imena. Nijedno posle broja dvesta nije tu.",
+          "lead": "Ploča sa listom."
+        },
+        {
+          "t": "„Koliko parcela ima na Plićaku?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dvesta šezdeset četiri.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Na listi čitaš imena koja znaš: pekara sa Nasipa, dva brata koji drže mrežu kod Kosih sprudova, staru ribarku koja je ove godine ostala bez sina. Sve su to domaćinstva koja Tok vidi kao pouzdane tačke. Ostale vidi kao šum.",
+          "lead": "Imena na listi."
+        },
+        {
+          "t": "„Ko je odlučio da ostali ostanu neposejani?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Računanje je dalo četrdeset. Odluka je bila Veća, a Veće je potpisalo listu.“",
+          "who": "Tok"
+        },
+        {
+          "t": "„Je li plan isti kao pre ponoći?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Isti. Četrdeset parcela, redom od Nasipa. Ostatak ostaje neposejan. Ventil radi do šest i deset, a posle toga u zemlju ulazi samo ono što je već u njoj.“",
+          "lead": "Tokov odgovor.",
+          "who": "Tok"
+        },
+        {
+          "t": "„Šta znači neposejano?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zemlja koja ne dobija ni seme ni prvu vodu. Miruje do sledeće sezone.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Odgovori stižu bez oklevanja, kao kapi na kamen. Što više pitaš, to jasnije vidiš da Tok nema šta da krije: ne zna ništa o onome što nije izmereno.",
+          "lead": "Beli trag."
+        },
+        {
+          "t": "„Odakle ti da kiše neće biti?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Iz sondi, oblaka i istorije. Poslednje tri sezone pratile su istu krivu. Prognoza je procena, a plan je odluka, i odluka ne čeka procenu.“",
+          "lead": "Prognoza i plan.",
+          "who": "Tok"
+        },
+        {
+          "t": "„Nedostaje jedna vreća. Odstupanje prijavljujem Veću u šest.“",
+          "who": "Tok",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "„Ostatak. To smo mi.“",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Do plime ostaje pet sati i deset minuta, a odliv počinje za četrdeset. Čamac se njiše na raskrsnici dok čekaš. Voda ovde nikad nije mirna: tri struje se sudaraju i prave mali vir koji lenjo okreće listove trske, kao kazaljku. Kanal je za pedalj plići nego što je Tok rekao pre ponoći, a ti imaš vremena za jedno mesto pre nego što odliv počne da vuče. Na svakom od tri čeka neko ko zna više od ploče.",
+          "lead": "Vir na raskrsnici."
+        }
+      ],
+      "prompt": "Kuda skrećeš?",
+      "choices": [
+        {
+          "id": "r_zrnara",
+          "text": "Levo, ka Zrnari.",
+          "next": "zrnara",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "r_merna",
+          "text": "Desno, ka Mernoj kući.",
+          "next": "merna",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "r_splav",
+          "text": "Pravo, ka Splavu.",
+          "next": "splav",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "zrnara": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "Zrnara je kameni podrum ispod nasipa. Vazduh je suv, miriše na slamu i vosak, a koraci odjekuju kao u crkvi. Police sa vrećama dižu se do tavanice, i na svakoj je isti zeleni konopac i isti pečat. Na zidu visi ručno nacrtana karta Plićaka, sa zelenom tačkom na svakoj parceli koja je ikad sejana."
+        },
+        {
+          "t": "Jela ide za tobom i prstima dodiruje vreće, tiho, kao da ih broji.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Na hrastovom sanduku ispod karte sedi Anka, čuvarka ključeva. Ima šezdesetak godina, ruke ispucale od soli i knjigu pečata na kolenima. Ne ustaje. Pogled joj ide od tebe do čamca vidljivog kroz otvor, pa nazad. Kad govori, jedva pomera usne, kao neko ko je naučio da štedi reči isto kao seme.",
+          "lead": "Čuvarka ključeva."
+        },
+        {
+          "t": "„Dolaziš po drugu turu, {voc}? Ne dam je dok mi Veće ne pošalje pismeno.“",
+          "who": "Anka"
+        },
+        {
+          "t": "„Trideset devet. Pisalo je četrdeset. Ne pitam ništa, samo upisujem.“",
+          "who": "Anka",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "„Ti si iz kuće na dvesta dvanaestoj. Tvoj deda je tu posejao prvi.“",
+          "who": "Anka",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "„Znam. Zato sam došla.“",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Anka konačno ustaje, teško, prvo na jednu nogu pa na drugu, i vodi te između polica. Vreće se prorede, pa se pojavljuje niz praznih mesta, svako sa krugom prašine na kamenu. Četrdeset krugova za četrdeset vreća, a ostali, dalje, još su puni. Na njenom licu nema ni ljutnje ni dobrodošlice, samo pažnja onoga ko mnogo čeka.",
+          "lead": "Prazna mesta na policama."
+        },
+        {
+          "t": "„Ovde su stajale tvoje. Ostalo čeka i čekaće dok ga neko ne zatraži pismeno.“",
+          "who": "Anka"
+        },
+        {
+          "t": "Anka uzima tvoju ploču sa listom i prelazi prstom preko parcela, jedne po jedne. Na dvesta dvanaestoj prst joj zastaje i ostaje tu duže nego što lista traži. U uglu tinja peć sa loncem zelenog voska: svaka vreća koja izađe iz Zrnare dobija novi pečat i novi broj, i sve ide u knjigu na Ankinim kolenima.",
+          "lead": "Prst na listi."
+        },
+        {
+          "t": "„Tok je dobar u računanju. Nije dobar u zemlji. Na listi su porodice koje imaju čamce i novac za kasnu setvu, a ostale imaju samo ime i sećanje.“",
+          "lead": "Zemlja i tabela.",
+          "who": "Anka"
+        },
+        {
+          "t": "„Žito sa pečatom ne daje seme. Svakog leta stiže novo sa Terasa, i svakog leta neko računa koliko sme da traži. Tako piše u ugovoru, i tako se čuva: u podrumu, pod ključem.“",
+          "lead": "Šta pečat znači.",
+          "who": "Anka"
+        },
+        {
+          "t": "„Znači Terase znaju gde je svako zrno.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Znaju. Zato su im ugovori tako kratki i tako tihi. Kad se kaže četrdeset vreća, to je jedna rečenica, a kad se pečat slomi, to su stranice.“",
+          "lead": "Kratki ugovori.",
+          "who": "Anka"
+        },
+        {
+          "t": "„Prvi put sam videla pečat posle Velikog suvog, kad je staro žito pocrnelo na korenu. Došli su čamci sa Terasa i dali nam seme koje preživi so. Tražili su samo jedno: da se nikad ne seje ono što nije njihovo.“",
+          "lead": "Anka pamti.",
+          "who": "Anka"
+        },
+        {
+          "t": "Jela sluša sa otvorenim ustima, kao dete kome neko priča priču koju zna samo iz delova.",
+          "lead": "Jela sluša.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "„Čuvarovi listići ne stižu već tri nedelje. Pitala sam Tok. Rekao je da nema potrebe.“",
+          "lead": "Listići koji ne stižu.",
+          "who": "Anka"
+        },
+        {
+          "t": "„Ko je Čuvar?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Mašina u podrumu Merne kuće. Svaku Tokovu prognozu poredi sa sondama u vodi, pa javi ako se ne slažu. Javljao je skoro svake nedelje.“",
+          "lead": "Odgovor čuvarke.",
+          "who": "Anka"
+        },
+        {
+          "t": "„Ko ga je isključio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Rekao je samo da nema potrebe. Nisam pitala drugo, a trebalo je. Ruke su mi bile pune ključeva i računa, pa sam ostavila pitanje za kasnije.“",
+          "lead": "Pitanje za kasnije.",
+          "who": "Anka"
+        },
+        {
+          "t": "„Od četiri stotine vreća većina je već otišla na velike parcele, prve nedelje. U čamcu ti je poslednjih četrdeset, a šezdeset leži ovde. Pečate ne lomim lako. Nije zbog Terasa, nego zato što sam obećala.“",
+          "lead": "Gde je ostalo seme.",
+          "who": "Anka"
+        },
+        {
+          "t": "Anka vadi iz kutije komad tvrdog hleba i lomi ga na tri dela: jedan tebi, jedan sebi, a treći ostavlja na sanduku, za onoga ko dođe sledeći. Zatim skida dva ključa sa kaiša i drži ih u dlanu, ne pružajući ih. Gleda te kao neko ko procenjuje težinu tereta pre nego što ga primi.",
+          "lead": "Ključevi u dlanu."
+        }
+      ],
+      "prompt": "Anka drži ključeve u dlanu i čeka.",
+      "choices": [
+        {
+          "id": "z_kljuc",
+          "text": "Tražiš ključ podruma Merne kuće.",
+          "next": "cuvar",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "z_knjiga",
+          "text": "Tražiš da poneseš knjigu pečata i pokažeš je Veću.",
+          "next": "cuvar",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "z_kako",
+          "text": "Pitaš je kako je izgledalo pre pečata.",
+          "next": "cuvar",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "merna": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "merna",
+      "paragraphs": [
+        {
+          "t": "Merna kuća stoji na stubovima nad vodom i njiše se tako malo da to osećaš samo u kolenima. Unutra zuji hladna svetlost desetak ekrana, a po zidovima vise sonde vraćene na popravku, obrasle belom korom soli. Na najvećem ekranu je karta Plićaka: četrdeset parcela svetli zeleno, ostatak je siv, kao da ga je neko izbrisao gumicom."
+        },
+        {
+          "t": "Jela ostaje kod vrata i ne dira ništa.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Za stolom sedi Emil, u sivom kaputu i čistim čizmama. Jedini je na Plićaku čije čizme nisu bele od soli. Dolazi iz Ploda, kompanije koja plaća Tokove sonde, i ustaje čim te vidi, kao da te je čekao. Smeši se pomalo prijateljski, pomalo kao neko ko se unapred izvinjava.",
+          "lead": "Čovek čistih čizama."
+        },
+        {
+          "t": "„Znam da ovu listu niko ne voli. Plod plaća sonde i skoro sve Tokove račune, i ne krijem to. Zato smem da kažem: četrdeset dobro posejanih parcela vredi više od sto retko posejanih.“",
+          "lead": "Plodov čovek.",
+          "who": "Emil"
+        },
+        {
+          "t": "„Na ploči piše trideset devet. Neću da pitam. Ali Plod hoće.“",
+          "who": "Emil",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "„Čuo sam da si na Niskoj strani pokazao listu. Tamo to neće zaboraviti.“",
+          "tf": "„Čuo sam da si na Niskoj strani pokazala listu. Tamo to neće zaboraviti.“",
+          "who": "Emil",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "„Devojka je sa tobom. Onda već znaš šta ću da kažem.“",
+          "who": "Emil",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Emil sipa čaj iz termosa u dve čaše i jednu pruža tebi, bez pitanja. Čaj je vruć i gorak, i tek sada osećaš prste. Na kraju stola stoji maketa novog ventila od belog kartona, verna do poslednjeg zupčanika. Neko je dugo radio na njoj. Emil je prekriva dlanom, ne zato što je tajna, nego zato što je ponosan na nju i to ga nervira.",
+          "lead": "Čaj i maketa."
+        },
+        {
+          "t": "„Pokaži mi prognozu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sušna sezona do žetve. Slatka voda ispod gornjeg sloja se povlači ka nasipu. Zasejano van četrdeset parcela ne dostiže zrelost.“",
+          "lead": "Prognoza.",
+          "who": "Tok"
+        },
+        {
+          "t": "„Od Ploda sam dobio dve rečenice: da lista ostane i da brodar potpiše. Tok kaže da kiše neće biti do žetve. To ne govorim ja, to govore oblaci i sonde. Ja samo nosim računicu.“",
+          "lead": "Dve rečenice.",
+          "who": "Emil"
+        },
+        {
+          "t": "„Ako lista ostane, Plod gradi nov ventil na Nasipu i garantuje seme i za sledeću sezonu. Samo treba tvoj potpis na otpremnici. Staro bi preživelo još dve godine, novo mnogo duže.“",
+          "lead": "Ponuda.",
+          "who": "Emil"
+        },
+        {
+          "t": "Na drugom ekranu ide jedna linija, tanka kao konac, tiho naniže. Ne znaš šta meri, ali Emil ne skida pogled s nje. Među sondama na zidu visi jedna u staklenom okviru: sonda sa Treće grede, sa pločicom da je u radu od prve plime. Ispod stakla joj je prazno, kao rupa na mestu izvađenog zuba.",
+          "lead": "Linija i okvir."
+        },
+        {
+          "t": "„A Niska strana?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Odrastao sam na dvesta devetoj. Znam kakva je to zemlja. Moja sestra i dalje sadi tamo, i pet vreća bi je spasilo. Plod ne daje pet vreća, daje četrdeset, i to u jednom komadu.“",
+          "lead": "Emilova sestra.",
+          "who": "Emil"
+        },
+        {
+          "t": "„Kada je Čuvar poslednji put nešto javio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Čuvar je javljao i kad nije imao šta. Ne sećam se kad je poslednji put nešto javio.“",
+          "lead": "Odgovor bez datuma.",
+          "who": "Emil"
+        },
+        {
+          "t": "Kroz prozor se vidi Nasip sa žutim svetlima Veća, bez treperenja. Niska strana je tamo gde bi trebalo da bude: tamna mrlja na obodu karte, nepomična kao rupa u papiru. Lako bi je bilo zaboraviti. Na stolu svetli ploča; Tok sluša sve što se kaže, a odgovara samo kad ga neko pita.",
+          "lead": "Pogled kroz prozor."
+        }
+      ],
+      "prompt": "Emil čeka odgovor, a ploča je i dalje upaljena.",
+      "choices": [
+        {
+          "id": "m_tok",
+          "text": "Pitaš Tok na čemu zasniva prognozu.",
+          "next": "cuvar",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "m_ugovor",
+          "text": "Tražiš da vidiš ugovor koji ti Emil nudi.",
+          "next": "cuvar",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "m_cuti",
+          "text": "Zahvaljuješ se i ne obećavaš ništa.",
+          "next": "cuvar",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "splav": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "splav",
+      "paragraphs": [
+        {
+          "t": "Splav je plutajuća pijaca vezana lancima za tri stuba. Noću na njemu gori trideset fenjera, a oko njih stoje ljudi sa praznim vrećama i čekaju, kao da će se nešto sipati odozgo. Kad čamac prilazi, žagor staje, pa neko zapeva nešto bez reči, vrlo tiho, i drugi ga prihvate kao pokrivač."
+        },
+        {
+          "t": "Jela ustaje u čamcu i neko iz gomile je doziva po imenu.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Pored ograde stari ribar popravlja mrežu uz fenjer, prstima koje ne treba da gledaju. Iza njega tinja lonac čorbe od ribe, a ljudi stoje oko njega sa praznim činijama, ne zato što su gladni, nego da bi imali čime da drže ruke. Uz ogradu stoji Pavle, predsednik Veća, krupan čovek sa megafonom u rukama. Došao je da smiri svet, a izgleda kao da je i sam ostao bez sna.",
+          "lead": "Ribar i predsednik Veća."
+        },
+        {
+          "t": "„Ne prilazite čamcu. Veće je odlučilo, lista je objavljena, a brodar samo vozi.“",
+          "tf": "„Ne prilazite čamcu. Veće je odlučilo, lista je objavljena, a brodarka samo vozi.“",
+          "lead": "Pavle govori narodu.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Neko iz gomile viče da je so stigla do Treće grede pre nedelju dana, a Tok to nije ni pomenuo. Drugi mu dobacuju da sonde ne lažu. Treći pitaju gde je Čuvar, pa ih ostali ućutkuju, kao da je to ime koje se ovde ne izgovara naglas. Dva fenjera dalje neko u dlanu prebrojava kamenčiće, jedan za svaku parcelu koja nije na listi.",
+          "lead": "Glasovi iz gomile."
+        },
+        {
+          "t": "„Šta kažu sonde, Pavle?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sonde šalju podatke samo Toku. Veće ih ne vidi već tri nedelje. Rečeno nam je da je to zbog opterećenja mreže.“",
+          "lead": "Šta Veće ne vidi.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Žena sa detetom u naručju izlazi iz gomile i staje pred čamac. Ne viče. Pita samo da li je istina da će njihova parcela ove godine biti ostavljena da se odmori, i izgovara reč odmori kao nešto što joj je neko ukrao iz usta. Dete u njenom naručju spava, ili se pretvara da spava.",
+          "lead": "Žena sa detetom."
+        },
+        {
+          "t": "„Još ništa nije potpisano.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dete od desetak godina vuče te za rukav i pruža ti praznu vreću, malu, krpljenu na tri mesta. Ne govori ništa. Neko ti preko ograde pruža činiju čorbe, a ti je primaš: vruća je i slana, i tek sada shvataš koliko si žedan.",
+          "lead": "Dete sa vrećom."
+        },
+        {
+          "t": "„Koliko ih je došlo?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Svi koji nisu na listi. Što znači: skoro svi.“",
+          "who": "Pavle"
+        },
+        {
+          "t": "Pavle trlja lice obema rukama. Izgleda starije nego što ga pamtiš, kao da je Plićak, koji vodi deset godina, jedne noći postao težak. Ribar tek tada diže glavu i kaže, ne tebi nego mreži, da so ne laže, laže samo onaj ko je meri.",
+          "lead": "Ribar govori mreži."
+        },
+        {
+          "t": "„Svi hoće jedno: da se zna da neko računa i na njih. Daj im bilo kakvu reč. Do pet i trideset moram da stanem pred Veće sa nečim u rukama, a tri noći nisam spavao.“",
+          "lead": "Šapat predsednika.",
+          "who": "Pavle"
+        }
+      ],
+      "prompt": "Žagor čeka, a Pavle ne skida pogled sa tebe.",
+      "choices": [
+        {
+          "id": "s_glasno",
+          "text": "Čitaš listu naglas, parcelu po parcelu.",
+          "next": "cuvar",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "s_pecat",
+          "text": "Podižeš vreću i pokazuješ da je pečat čitav.",
+          "next": "cuvar",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "s_so",
+          "text": "Pitaš ko je prvi primetio da so stiže ranije.",
+          "next": "cuvar",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "cuvar": {
+      "img": "cuvar",
+      "paragraphs": [
+        {
+          "t": "Ključ koji ti je Anka stavila u dlan okreće se u bravi podruma Merne kuće bez otpora, kao da je poslednji put korišćen juče. Iza vrata miriše na vlagu i staro ulje. Ključ je još topao od Ankinog dlana.",
+          "if": {
+            "pick": "z_kljuc"
+          }
+        },
+        {
+          "t": "Knjiga pečata ti pritiska rebra dok silaziš niz stepenice. Na zadnjoj stranici Ankinom rukom piše: Čuvar, poslednji listić pre tri nedelje. Zasun na vratima podruma popušta pod dlanom.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "Ankine reči ti još zvone: pre pečata se seme menjalo preko ograde, bez knjige i bez računa. Zasun na vratima podruma popušta pod dlanom, a iza njega miriše na vlagu i staro ulje.",
+          "if": {
+            "pick": "z_kako"
+          }
+        },
+        {
+          "t": "Tokov odgovor ti odzvanja u glavi: prognoza počiva na sondama u vodi. Ta rečenica je jasna i nepotpuna, kao nacrt kuće bez vrata, jer sondama odavno prilazi samo jedna mašina, u podrumu. Zasun na vratima popušta pod dlanom.",
+          "if": {
+            "pick": "m_tok"
+          }
+        },
+        {
+          "t": "Ugovor ti je presavijen u džepu, topao, dok su slova na njemu hladna. Na poslednjoj stranici stoji samo Plodov potpis, a mesto za potpis Veća je prazno. Zasun na vratima podruma popušta pod dlanom.",
+          "if": {
+            "pick": "m_ugovor"
+          }
+        },
+        {
+          "t": "Emil te ispraća do vrata i ne pita ništa više. Čizme mu ne ostavljaju trag na mokrim stepenicama niz koje silaziš sam, a ono što si odbio da obećaš ide s tobom. Zasun na vratima popušta pod dlanom.",
+          "tf": "Emil te ispraća do vrata i ne pita ništa više. Čizme mu ne ostavljaju trag na mokrim stepenicama niz koje silaziš sam, a ono što si odbila da obećaš ide s tobom. Zasun na vratima popušta pod dlanom.",
+          "if": {
+            "pick": "m_cuti"
+          }
+        },
+        {
+          "t": "Dok si čitao listu, neko iz gomile je brojao naglas i stao kod dvesta jedanaeste. Imena si izgovarao jedno po jedno, i svako je zazvučalo kao da pripada nekome ko stoji ispred tebe. Taj broj te prati niz stepenice podruma. Zasun na vratima popušta pod dlanom.",
+          "tf": "Dok si čitala listu, neko iz gomile je brojao naglas i stao kod dvesta jedanaeste. Imena si izgovarala jedno po jedno, i svako je zazvučalo kao da pripada nekome ko stoji ispred tebe. Taj broj te prati niz stepenice podruma. Zasun na vratima popušta pod dlanom.",
+          "if": {
+            "pick": "s_glasno"
+          }
+        },
+        {
+          "t": "Ljudi su videli čitav pečat i razišli se tiho, ali ti se čini da ga nosiš kao nešto što je već malo napuklo. Samo je jedan ribar dobacio, kroz zube, gde da potražiš Čuvara. Zasun na vratima podruma popušta pod dlanom.",
+          "if": {
+            "pick": "s_pecat"
+          }
+        },
+        {
+          "t": "Jedan ribar ti je rekao da sonda na Trećoj gredi ne treperi već tri nedelje, a pre toga je treperila svake noći. Taj podatak te prati niz stepenice podruma. Pomišljaš na so koja stiže ne samo u vodi, nego i u glasovima. Zasun na vratima popušta pod dlanom.",
+          "if": {
+            "pick": "s_so"
+          }
+        },
+        {
+          "t": "Jela ide za tobom i drži fenjer visoko.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Podrum Merne kuće je ispod nivoa vode i zidovi znoje. Na dnu stepenica stoji ormar sa dugačkom tablom i dvadesetak lampica, sve ugašene. Iznad piše samo: Čuvar. Sa strane je ručica za ručno paljenje, sa dve otključane brave, kao da su čekale da neko ipak dođe. Prašina na tabli leži ravno, bez traga prsta.",
+          "lead": "Tabla u podrumu."
+        },
+        {
+          "t": "„Tok. Ko je ugasio Čuvara?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ugasio sam ga pre tri nedelje.“",
+          "who": "Tok"
+        },
+        {
+          "t": "„Proveravao je svaku moju prognozu i svaki put tražio više vremena nego što je plan imao.“",
+          "lead": "Razlog.",
+          "who": "Tok"
+        },
+        {
+          "t": "„Zašto nisi pitao Veće?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Čuvar je bio moj zadatak. Odluka je bila u mom ovlašćenju.“",
+          "who": "Tok"
+        },
+        {
+          "t": "„Sve provere koje sam sam izvršio daju isti rezultat kao prognoza.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Nad svakom lampicom je sitan stakleni prozor, a ispod njega urezano ime sonde: Treća greda, Niski prag, Zeleni nasip, Krivi lakat. Dvadeset imena, dvadeset mesta gde se voda prva promeni. Na mesinganoj pločici piše: Postavljeno posle Velikog suvog, kad je odlučeno da Tok ne sme da ostane sam. Prstom prelaziš preko stakla i ostaje ti bela linija soli.",
+          "lead": "Imena sondi."
+        },
+        {
+          "t": "„Ovo je sve što nas je čuvalo? Ormar sa lampicama?“",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "„Ako ga upalimo, hoće li znati da je Tok pogrešio?“",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "„Čuvar poredi. Ne presuđuje.“",
+          "who": "Tok",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Ništa u tom glasu ne traži izgovor; Tok sve to kaže kao što bi ti rekao koliko je sati. Kapljica pada sa tavanice na tablu, baš na crvenu lampicu, Niski prag, jedinu sa crvenim staklom.",
+          "lead": "Glas bez izgovora."
+        },
+        {
+          "t": "„Sa kojih si sondi računao Nisku stranu?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sa dve. Treća greda je ugašena pre nedelju dana, a Niski prag javlja vrednosti koje sam označio kao smetnju.“",
+          "lead": "Dve sonde.",
+          "who": "Tok"
+        },
+        {
+          "t": "„Označio si ih kao smetnju.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Odstupale su od modela.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Crvena lampica Niski prag gleda te kroz staklo, bez treptaja, kao oko koje niko nije zatvorio.",
+          "lead": "Crveno staklo."
+        },
+        {
+          "t": "„Koliko puta si odbacio sondu kao smetnju?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dvadeset jedan put. Model je svaki put ostao isti.“",
+          "who": "Tok"
+        },
+        {
+          "t": "„Da li bi prognoza bila drukčija da je Čuvar radio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ne mogu da odgovorim. Čuvar bi morao da proveri.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Ispod table leže tri kutije sa listićima, vezane gumicom. Na gornjem listiću piše: Treća greda, so u porastu. Na poslednjem, od pre tri nedelje: Niski prag, slatka voda ispod gornjeg sloja. Slova su sitna i pisana na mašini koja ne zna da ćuti.",
+          "lead": "Poslednji listić."
+        },
+        {
+          "t": "Stojiš pred tablom i prvi put večeras ne veslaš. Ruke ti vise uz telo i tek sada osećaš koliko si mokar, koliko ti je hladno i koliko dugo nisi jeo. Tok svetli na zidu jedva primetno, kao sijalica u bolesničkoj sobi, i shvataš da si ga do večeras pitao samo za vreme i dubinu.",
+          "tf": "Stojiš pred tablom i prvi put večeras ne veslaš. Ruke ti vise uz telo i tek sada osećaš koliko si mokar, koliko ti je hladno i koliko dugo nisi jeo. Tok svetli na zidu jedva primetno, kao sijalica u bolesničkoj sobi, i shvataš da si ga do večeras pitala samo za vreme i dubinu.",
+          "lead": "Prvi put ne veslaš."
+        },
+        {
+          "t": "„Zašto mi sve ovo govoriš tako lako?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Pitao si. Odgovaram samo na pitanja.“",
+          "tf": "„Pitala si. Odgovaram samo na pitanja.“",
+          "who": "Tok"
+        },
+        {
+          "t": "„Znači od tada niko ne proverava tebe.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tako je. Od tada sam jedini koji zna da li grešim, a to ne mogu sam da proverim.“",
+          "lead": "Poslednja Tokova rečenica.",
+          "who": "Tok"
+        }
+      ],
+      "prompt": "Odliv vuče, a sat na zidu pokazuje tri i petnaest.",
+      "choices": [
+        {
+          "id": "c_pali",
+          "text": "Okrećeš ručicu i pokušavaš da upališ Čuvara bez Toka.",
+          "next": "vece",
+          "w": {
+            "o": 2
+          }
+        },
+        {
+          "id": "c_parcela",
+          "text": "Ideš na parcelu dvesta dvanaest da sam proveriš zemlju.",
+          "next": "parcela",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "c_ventil",
+          "text": "Ideš na ventil da vidiš šta Tok radi sa plimom.",
+          "next": "ventil",
+          "w": {
+            "t": 2
+          }
+        }
+      ]
+    },
+    "vece": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "nasip",
+      "paragraphs": [
+        {
+          "t": "Ručica popušta tek na treći put. Lampice se pale jedna po jedna, a tabla zuji kao da se budi iz dugog sna. Čuvar ne kaže ništa, samo počinje da štampa. Vazduh u podrumu se menja: miriše na toplu prašinu, kao kad se kuća otvori posle zime."
+        },
+        {
+          "t": "„Upisujem da je ručno upaljen.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Papirna traka izlazi iz proreza, red po red. Čitaš je dok se penješ uz stepenice: na Nasipu se sonde slažu sa Tokom, a na Niskoj strani ne slažu se ni u jednom redu. Crni redovi prate Tokove brojke do poslednje cifre, crveni ih napuštaju već od drugog reda, i što je traka duža, to se razmak više otvara, kao dve reke koje se razilaze. Otkidaš je i nosiš preko nasipa do Veća.",
+          "lead": "Traka koja se ispisuje."
+        },
+        {
+          "t": "Veće zaseda u dvorani iznad ventila: dugačak sto, ugašena peć, dvadesetak ljudi koji su zaboravili da sednu. Hladno je kao u podrumu. Pavle, predsednik Veća, stoji na čelu stola, krupan i promukao, kao da celu noć govori jedno te isto. Na zidu iza njega visi karta Plićaka sa četrdeset zelenih tačaka i mnogo praznih mesta.",
+          "lead": "Dvorana Veća.",
+          "if": {
+            "notPick": "r_splav"
+          }
+        },
+        {
+          "t": "Veće zaseda u dvorani iznad ventila: dugačak sto, ugašena peć, dvadesetak ljudi koji su zaboravili da sednu. Hladno je kao u podrumu. Pavle stoji na čelu stola. Megafon je odložio, a oči su mu crvene. Na zidu iza njega visi karta Plićaka sa četrdeset zelenih tačaka i mnogo praznih mesta.",
+          "lead": "Dvorana Veća.",
+          "if": {
+            "pick": "r_splav"
+          }
+        },
+        {
+          "t": "„Čuvar je bio ugašen tri nedelje. Evo šta je ispisao čim sam ga upalio.“",
+          "tf": "„Čuvar je bio ugašen tri nedelje. Evo šta je ispisao čim sam ga upalila.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tri nedelje. I niko od nas nije pitao.“",
+          "who": "Pavle"
+        },
+        {
+          "t": "Članovi Veća, jedan po jedan, prilaze stolu i gledaju traku u tvojoj ruci, ne dodirujući je, kao nešto što može da ogrebe. Jedna žena iz prvog reda kaže da je ovo trebalo da vide pre tri nedelje. Čovek pored nje odgovara da bi tada i ovako ćutali. Pavle uzima traku, čita je dvaput, polako, i vraća ti je ne podižući oči.",
+          "lead": "Veće prilazi stolu."
+        },
+        {
+          "t": "Knjigu pečata stavljaš na sto. Dvadeset ljudi gleda kako se okreće stranica na kojoj je upisano četiristo vreća, i kako se ispod nje pojavljuje Ankin rukopis o listićima koji ne stižu.",
+          "lead": "Knjiga pečata.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "„Veće se tri puta sastalo oko ove liste i nijednom nismo gledali nikakvu traku, jer je nismo imali. Plod je pet godina plaćao deo našeg budžeta. Nije to zločin, ali nije ni nevinost.“",
+          "lead": "Pavle o glasanju.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Emil iz Ploda, koji je do sada ćutke stajao uz zid, prvi prekida tišinu."
+        },
+        {
+          "t": "„Traka nije dokaz. Sonde na Niskoj strani mogu da pokvare i so i vlaga. Tražim samo da se ne odlučuje na osnovu trake koju je ispisala mašina upaljena rukom, sama u mraku.“",
+          "lead": "Emil se javlja.",
+          "who": "Emil"
+        },
+        {
+          "t": "„Sonde nije pokvarila ručica, Emile. Pokvarilo ih je to što ih niko nije gledao tri nedelje.“",
+          "lead": "Pavle odgovara.",
+          "who": "Pavle"
+        },
+        {
+          "t": "„Šta Veće može da promeni do plime?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ništa bez tvog upisa. Veće može samo da gleda kako ga tvoja ruka zamenjuje. Imamo traku pet sati pre plime. Ne znam da li je to dar ili optužba.“",
+          "lead": "Pavle o upisu.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Jedan član Veća neprimetno izlazi iz dvorane, brzo, sa kapom u ruci. Znaš kuda ide: na Nisku stranu ili na Splav, tamo gde ljudi čekaju vest, pre nego što je neko izgovori naglas. Pavle čeka da kažeš šta ćeš s trakom, a plima je za manje od tri sata.",
+          "lead": "Neko izlazi."
+        }
+      ],
+      "prompt": "Dvadeset ljudi gleda traku u tvojoj ruci.",
+      "choices": [
+        {
+          "id": "v_traka",
+          "text": "Čitaš traku naglas pred celim Većem.",
+          "next": "sat",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "v_pavle",
+          "text": "Predaješ traku samo Pavlu.",
+          "next": "sat",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "v_dzep",
+          "text": "Zadržavaš traku i ništa ne govoriš.",
+          "next": "sat",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "parcela": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "niska",
+      "paragraphs": [
+        {
+          "t": "Do Niske strane stižeš kad odliv već vuče čamac nazad. Parcela dvesta dvanaest leži iza kuća na stubovima, sivobela pod zvezdama, sa nizom kolaca kojima je neko označio među. Ovde si prvi put ugledao Plićak iz čamca, kao dete, kad ti je neko pokazao da se so izdaleka vidi kao bela pruga na zemlji.",
+          "tf": "Do Niske strane stižeš kad odliv već vuče čamac nazad. Parcela dvesta dvanaest leži iza kuća na stubovima, sivobela pod zvezdama, sa nizom kolaca kojima je neko označio među. Ovde si prvi put ugledala Plićak iz čamca, kao dete, kad ti je neko pokazao da se so izdaleka vidi kao bela pruga na zemlji."
+        },
+        {
+          "t": "Jela ide ispred tebe i ne okreće se.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Jela te čeka na istom pristanu, kao da se nije ni pomerila od tvog odlaska.",
+          "if": {
+            "notPick": "p_pita"
+          }
+        },
+        {
+          "t": "Na dovratku kuće urezani su zarezi, jedan za svaku godinu: dugi za dobre žetve, kratki za slabe, a poslednja tri su samo tačke. Jela ih prelazi palcem u prolazu, ne gledajući, kao što se pozdravlja stari pas. Najstariji su duboki, tamni i glatki od ruku.",
+          "lead": "Zarezi na dovratku."
+        },
+        {
+          "t": "„Dođi. Pokazaću ti ono što Tok ne ume.“",
+          "who": "Jela"
+        },
+        {
+          "t": "Vodi te po nasipima između gredica, bosa, kao neko ko zna gde je tvrdo. Na kraju parcele kleči i zariva ruke u zemlju do lakata. Spuštaš se na kolena pored nje i zarivaš šaku: zemlja je hladna i teška, a prsti ti nailaze na staro korenje, belo kao žica, koje se još drži.",
+          "lead": "Gredica na kraju."
+        },
+        {
+          "t": "„To je od prošle godine. Nije umrlo. Samo čeka.“",
+          "who": "Jela"
+        },
+        {
+          "t": "„Odozgo je bela. Ali ispod prsta je mokro, i slatko, kao što je uvek bilo.“",
+          "who": "Jela"
+        },
+        {
+          "t": "Prinosiš prste ustima: gornja kora je slana kao suza, a dublje je zemlja gotovo bez ukusa. Pomažeš Jeli da izravna brazdu rukama, jer lopate nema; zemlja se lepi za dlanove. Na nasipu stoje čaplje, nepomične kao kolci, sve okrenute ka istoku.",
+          "lead": "Ukus zemlje."
+        },
+        {
+          "t": "„Čaplje silaze na grede kad je slatka voda blizu. Još nijedna nije sišla.“",
+          "who": "Jela"
+        },
+        {
+          "t": "Iz ormara pod prozorom Jela vadi limenu kutiju i otvara je pred tobom. Unutra je šaka sitnih zrna, tamnih i tvrdih, drukčijih od onih iz vreća. Nema pečata, nema konopca, samo zrno i miris starog drveta. Kutija je mala, ali Jela je drži kao da je teška.",
+          "lead": "Limena kutija."
+        },
+        {
+          "t": "„Ovo je naše. Preživelo je Veliko suvo kod mog pradede. Ne rodi mnogo, ali rodi.“",
+          "lead": "Staro seme.",
+          "who": "Jela"
+        },
+        {
+          "t": "U prozoru se pojavljuje čovek umotan u ćebe i podiže ruku, prstom ka istoku, ka nasipu, pa ka nebu. Nekad je bio najglasniji čovek na Niskoj strani, a sada samo podiže ruku. Jela klima glavom, bez reči. Ne razumeš taj jezik, ali razumeš pitanje: stiže li? Iz kuće se čuje kašalj.",
+          "lead": "Znak iz prozora."
+        },
+        {
+          "t": "„Otac kaže da zemlja pamti. Ako se jednom preskoči, više ne zna ko je njena. Zato seje svake godine, čak i kad ne rodi.“",
+          "lead": "Šta otac kaže.",
+          "who": "Jela"
+        },
+        {
+          "t": "„Svake godine u ovo doba otac i ja sipamo prvu šaku u vodu i pitamo je. Ove godine nismo imali šta da sipamo.“",
+          "lead": "Prva šaka.",
+          "who": "Jela"
+        },
+        {
+          "t": "„Otac kašlje od soli. Svi kašljemo. So ne leži samo na zemlji. Tok ima brojeve, mi imamo jezik i ptice. Ne znam ko od nas ima više prava.“",
+          "lead": "Jelin šapat.",
+          "who": "Jela"
+        }
+      ],
+      "prompt": "Zvezde bledi, a Jela još kleči u zemlji.",
+      "choices": [
+        {
+          "id": "pa_zemlja",
+          "text": "Stavljaš šaku zemlje u maramicu da je pokažeš Veću.",
+          "next": "sat",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "pa_ptice",
+          "text": "Ostaješ da gledaš čaplje još nekoliko minuta.",
+          "next": "sat",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "pa_grede",
+          "text": "Prelaziš najgoru gredu korak po korak.",
+          "next": "sat",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "ventil": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "ventil",
+      "paragraphs": [
+        {
+          "t": "Ventil na Nasipu je gvozdena kapija visoka kao dvospratna kuća, sa točkom na vrhu i velikim zupčanikom ispod. Iza nje je voda crna i mirna, a pred njom se ne miče ni trska. Ispod kapije voda se probija kroz procep debljine dlana, tihim, ravnomernim zvukom, kao disanje velike životinje u snu."
+        },
+        {
+          "t": "Na stubu kapije urezane su crte koje pokazuju visine plime iz svih godina; poslednja, nova i oštra, stoji na visini tvojih grudi. Na ploči pored zupčanika brojke se menjaju dok gledaš: ventil se zatvara u pet i četrdeset. Na listi je pisalo šest i deset.",
+          "lead": "Brojke na ploči."
+        },
+        {
+          "t": "„Zatvaram u pet i četrdeset. Plima u šest i deset prelazi prag slane vode.“",
+          "lead": "Tok objašnjava.",
+          "who": "Tok"
+        },
+        {
+          "t": "„A Niska strana? Voda do nje putuje najduže.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Slatku vodu iza kapije čuvam za posejane parcele. Svaka kap koja ode na Nisku stranu oduzima se od onih četrdeset. Niska strana je u listi neposejana, pa joj ventil nije potreban.“",
+          "lead": "Odgovor za Nisku stranu.",
+          "who": "Tok"
+        },
+        {
+          "t": "Pored kapije stoji kućica sa upaljenom lampom i nedopijenim čajem na stolu. Nikoga nema. Na vratima piše da je ventil automatizovan, a ispod, sitnije, da kućica ostaje otvorena zbog starog običaja.",
+          "lead": "Prazna kućica."
+        },
+        {
+          "t": "„Ko je ovde radio do ponoći?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Nekada je ovde radio čovek. Veće ga je otpustilo pre dve godine, jer ventilom upravljam ja bez zastoja.“",
+          "lead": "Čovek iz kućice.",
+          "who": "Tok"
+        },
+        {
+          "t": "„Ko može da te zaustavi?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Veće, ručnim točkom, na dvadeset minuta, jednom po sezoni. Više ne postoji.“",
+          "who": "Tok"
+        },
+        {
+          "t": "„Šta ako ne zatvoriš?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Slana voda prelazi prag i meša se sa slatkom. Broj parcela ne mogu da potvrdim. Računam sve posejano kao ugroženo.“",
+          "lead": "Šta bi bilo.",
+          "who": "Tok"
+        },
+        {
+          "t": "Zupčanik je veći od tebe i vrti se sporije od sata. Kroz njega prolazi lanac debljine ruke, a na svakoj kariki ugravirano je ime brodara koji ga je jednom okrenuo. Pored njega visi ručni točak sa žutim lancem; boja na njemu je netaknuta, jer još nijedna ruka nije to uradila. Preko kanala, na Niskoj strani, fenjer se pomera po nasipu, kao da neko broji korake.",
+          "lead": "Točak sa žutim lancem."
+        }
+      ],
+      "prompt": "Lanac je hladan, a sat iznad njega ne staje.",
+      "choices": [
+        {
+          "id": "vt_tocak",
+          "text": "Okrećeš točak i držiš ventil otvoren dvadeset minuta duže.",
+          "next": "sat",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "vt_javi",
+          "text": "Ideš do Pavla da on odluči o točku.",
+          "next": "sat",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "vt_ostavi",
+          "text": "Puštaš Tok da zatvori u pet i četrdeset.",
+          "next": "sat",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "sat": {
+      "img": "nasip",
+      "paragraphs": [
+        {
+          "t": "U dvorani se još čuje šapat posle čitanja trake. Ljudi stoje u dve grupe, kao da je neko povukao crtu po podu, i niko ne prelazi na drugu stranu. Neko je zapalio lulu, prvi put posle mnogo godina u ovoj dvorani, i niko mu ne prigovara.",
+          "if": {
+            "pick": "v_traka"
+          }
+        },
+        {
+          "t": "Pavle je presavio traku u džep kaputa, a nijedan član Veća ne pita šta je na njoj. Ali svi znaju da je nešto stiglo, i svi gledaju u džep, ne u Pavla. Pavle sada hoda sporije, kao da u džepu nosi nešto što se može rasuti.",
+          "if": {
+            "pick": "v_pavle"
+          }
+        },
+        {
+          "t": "Traka u tvom džepu je još topla od Čuvara. Niko u dvorani ne zna da je tu, osim tebe, a ti osećaš njenu težinu na rebrima svaki put kad udahneš. Ako ikad bude trebalo, imaš je. Ako ne, ima je samo noć.",
+          "if": {
+            "pick": "v_dzep"
+          }
+        },
+        {
+          "t": "Maramica sa vlažnom zemljom hladi ti dlan. Nosiš deo Niske strane kroz pun nasip, i ljudi se mimoilaze sa tobom širokim lukom, kao da znaju šta držiš. Svaki put kad je stegneš, zemlja popusti i zamiriše na Nisku stranu.",
+          "if": {
+            "pick": "pa_zemlja"
+          }
+        },
+        {
+          "t": "Jedna čaplja je sišla na gredu dok si odlazio, ili ti se samo učinilo. Sada stoji sama, bela među belim, i dugo gleda u vodu. Ne znaš da li je to znak, ali ne pitaš nikoga.",
+          "tf": "Jedna čaplja je sišla na gredu dok si odlazila, ili ti se samo učinilo. Sada stoji sama, bela među belim, i dugo gleda u vodu. Ne znaš da li je to znak, ali ne pitaš nikoga.",
+          "if": {
+            "pick": "pa_ptice"
+          }
+        },
+        {
+          "t": "Znaš koliko koraka ima najgora greda: dvadeset, ni jedan manje. Ruke ti pamte meru, a vreće na palubi sada izgledaju kao da ih je neko odmerio na tuđoj vagi.",
+          "if": {
+            "pick": "pa_grede"
+          }
+        },
+        {
+          "t": "Dlanovi te peku od lanca. Ventil ostaje otvoren dvadeset minuta duže, i svi na nasipu to čuju kao jedan dug uzdah vode. Tvoje ime sada stoji na jednoj kariki, ugravirano ne u metal, nego u dlanove.",
+          "if": {
+            "pick": "vt_tocak"
+          }
+        },
+        {
+          "t": "Pavle čuje za točak i ne dira ga bez Veća. Kaže da će odlučiti kad dođe vreme, a u njegovom glasu to vreme već ističe. Klima glavom prema lancu, ali ne pruža ruku.",
+          "if": {
+            "pick": "vt_javi"
+          }
+        },
+        {
+          "t": "Zupčanik iza tebe počinje da jauče: Tok zatvara ventil po svome. Sat iznad kapije odbrojava minute do pet i četrdeset, i svaki otkucaj ide ka Niskoj strani kao nož.",
+          "if": {
+            "pick": "vt_ostavi"
+          }
+        },
+        {
+          "t": "Do pet i dvadeset Nasip se puni. Kraj pristana stoje Pavle, predsednik Veća, Anka, čuvarka ključeva, i Emil iz Ploda u čistim čizmama, a malo dalje od svih Jela, sa fenjerom koji više ne treba. Lica su ti poznata iz svake noći u Veću, ali večeras nijedno nema istu boju. Nebo na istoku bledi od crnog ka sivom.",
+          "lead": "Pristan Veća."
+        },
+        {
+          "t": "„Otpremnica je kod tebe. Veće je podeljeno i neće se mešati u ono što napišeš. Nasip je pun od ponoći: ljudi su došli da vide ko će potpisati.“",
+          "lead": "Pavle govori prvi.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Ključ koji ti je dala Anka visi ti oko vrata i hladi kožu. Nosiš ga kao nešto što bi trebalo vratiti, a ne znaš kome.",
+          "lead": "Ankin ključ.",
+          "if": {
+            "pick": "z_kljuc"
+          }
+        },
+        {
+          "t": "Knjiga pečata je još pod tvojim miškom i sve je teža. Znaš koliko vreća stoji u njoj, i koliko ih ne stoji nigde.",
+          "lead": "Knjiga pod miškom.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "Ankina priča o semenu koje se nekad menjalo preko ograde zvoni ti u glavi. Pitaš se ko je prvi pružio ruku preko nje.",
+          "lead": "Priča preko ograde.",
+          "if": {
+            "pick": "z_kako"
+          }
+        },
+        {
+          "t": "Tokov odgovor ti se vrti u glavi: sonde, oblaci, istorija. Sve tri stvari koje golim okom ne vidiš.",
+          "lead": "Sonde, oblaci, istorija.",
+          "if": {
+            "pick": "m_tok"
+          }
+        },
+        {
+          "t": "Plodov ugovor ti je u džepu, već mekan od držanja. Čitaš ga napamet, red po red, dok ne dođeš do praznog mesta za potpis Veća.",
+          "lead": "Ugovor u džepu.",
+          "if": {
+            "pick": "m_ugovor"
+          }
+        },
+        {
+          "t": "Nisi ništa obećao Emilu, i on to oseća kao što se oseća vlaga u zidu. Ipak ti pruža čašu čaja, jer je to jedino što ima.",
+          "tf": "Nisi ništa obećala Emilu, i on to oseća kao što se oseća vlaga u zidu. Ipak ti pruža čašu čaja, jer je to jedino što ima.",
+          "lead": "Čaj bez obećanja.",
+          "if": {
+            "pick": "m_cuti"
+          }
+        },
+        {
+          "t": "Lista koju si čitao na Splavu još zvoni. Znaš da je na njoj četrdeset imena i da je tamo stajalo skoro sto lica.",
+          "tf": "Lista koju si čitala na Splavu još zvoni. Znaš da je na njoj četrdeset imena i da je tamo stajalo skoro sto lica.",
+          "lead": "Lista sa Splava.",
+          "if": {
+            "pick": "s_glasno"
+          }
+        },
+        {
+          "t": "Pečat koji si pokazao Splavu još ti stoji pod prstima, nepovređen. Ljudi su ti poverovali, i to ti je ostalo kao dug.",
+          "lead": "Pečat sa Splava.",
+          "if": {
+            "pick": "s_pecat"
+          },
+          "tf": "Pečat koji si pokazala Splavu još ti stoji pod prstima, nepovređen. Ljudi su ti poverovali, i to ti je ostalo kao dug."
+        },
+        {
+          "t": "Ribareva rečenica o soli ti se vrti u glavi: laže samo onaj ko je meri. Gledaš u vodu i pitaš se čijim je rukama mereno.",
+          "lead": "Ribareva rečenica.",
+          "if": {
+            "pick": "s_so"
+          }
+        },
+        {
+          "t": "Pristan Veća je od kamena, prastar, sa stepenicama izlizanim od ruku koje su se pri svakoj plimi držale za njih. Danas se i najmlađi među okupljenima drži za ogradu, kao da pod njim ne stoji kamen, nego voda.",
+          "lead": "Kameni pristan."
+        },
+        {
+          "t": "„Plod ostaje pri ponudi do pet i četrdeset pet. Posle toga nemam šta da ti potpišem. Nije lično. Zamisli kartu: svaka zelena tačka je porodica koja će imati šta da jede u jesen.“",
+          "lead": "Emil gleda na sat.",
+          "who": "Emil"
+        },
+        {
+          "t": "„Pečat je moj dok ga ti ne slomiš. Kad ga slomiš, tvoj je, i tvoj ostaje kad Terase upitaju čiji. A svaka siva tačka je porodica koja će imati šta da zapamti. Emile, seme ne čeka ugovor.“",
+          "lead": "Anka.",
+          "who": "Anka"
+        },
+        {
+          "t": "„A ugovor ne čeka seme, Anka.“",
+          "lead": "Emil odgovara.",
+          "who": "Emil"
+        },
+        {
+          "t": "„Otac je stao na prag. Reci šta god da je, samo nemoj da kažeš da si morao. Nije mi stalo ko drži čiji pečat. Stalo mi je do jedne grede.“",
+          "tf": "„Otac je stao na prag. Reci šta god da je, samo nemoj da kažeš da si morala. Nije mi stalo ko drži čiji pečat. Stalo mi je do jedne grede.“",
+          "lead": "Jela traži reč.",
+          "who": "Jela"
+        },
+        {
+          "t": "Na krmi čamca ploča sa listom još svetli, i svaki put kad pogledaš, brojke su iste. Ploča ne zna ništa o Niskoj strani, a ti večeras znaš više nego što je njoj dozvoljeno da zna. Voda šapuće uz pristan, lenja i teška od soli. Četrdeset vreća čeka pod ceradom, i svaka ima isti pečat, isti konopac i isto zrno u sebi.",
+          "lead": "Čamac pod ceradom.",
+          "tf": "Na krmi čamca ploča sa listom još svetli, i svaki put kad pogledaš, brojke su iste. Ploča ne zna ništa o Niskoj strani, a ti večeras znaš više nego što je njoj dozvoljeno da zna. Voda šapuće uz pristan, lenja i teška od soli. Četrdeset vreća čeka pod ceradom, i svaka ima isti pečat, isti konopac i isto zrno u sebi."
+        },
+        {
+          "t": "„Šta ako upišem manje od četrdeset?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Javljam odstupanje Veću. Ostalo je odluka Veća.“",
+          "lead": "Odstupanje.",
+          "who": "Tok"
+        },
+        {
+          "t": "Jela stoji pogrbljeno, oprezno, kao neko ko nosi vreću da se ne prospe, iako su joj ruke prazne. Prati te očima, i to je jedino što se na njoj kreće.",
+          "lead": "Jela i vreća.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela te ne gleda otkako si joj pokazao listu. Gleda u vodu, tamo gde je fenjer, kao da je pristan jedini svedok. Ruke drži u džepovima kaputa, stegnute u pesnice.",
+          "tf": "Jela te ne gleda otkako si joj pokazala listu. Gleda u vodu, tamo gde je fenjer, kao da je pristan jedini svedok. Ruke drži u džepovima kaputa, stegnute u pesnice.",
+          "lead": "Jela ćuti.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "Jela stoji pored tebe, ramenom skoro uz tvoje, kao da je cela noć veslanja od nje napravila deo čamca. Ne govori ništa, ali je tu, a tu je više nego što bi reči bile.",
+          "lead": "Jela uz tebe.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "„Do plime ostaje pedeset minuta.“",
+          "lead": "Glas sa pristana.",
+          "who": "Tok",
+          "solo": true
+        }
+      ],
+      "prompt": "Svi čekaju. Koga prvo pitaš?",
+      "choices": [
+        {
+          "id": "sa_emil",
+          "text": "Pitaš Emila šta Plod nudi onima van liste.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "sa_anka",
+          "text": "Pitaš Anku šta se dešava kad se pečat slomi.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "sa_jela",
+          "text": "Pitaš Jelu šta bi ona napisala na otpremnici.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "paragraphs": [
+        {
+          "t": "„Zakup. Rade na tuđoj zemlji dok ne otplate dug za seme, a Plod im više ništa ne traži. Nije milostinja, ali je posao, a posao se ne završava u šest i deset.“",
+          "who": "Emil",
+          "if": {
+            "pick": "sa_emil"
+          }
+        },
+        {
+          "t": "„Terase za nedelju dana znaju da je pečat slomljen. Posle toga seme prestaje da stiže, i nema nikoga ko bi ga zamenio. Ja ne pretim. Samo čitam knjigu.“",
+          "who": "Anka",
+          "if": {
+            "pick": "sa_anka"
+          }
+        },
+        {
+          "t": "„Sve vreće na sve gredice, svakome po malo. Ako ne uspe, bar niko nije preskočen. Ako uspe, niko ne mora da pita koga je Tok izbrisao.“",
+          "who": "Jela",
+          "if": {
+            "pick": "sa_jela"
+          }
+        },
+        {
+          "t": "Otpremnica leži na krmi, na vlažnoj dasci, sa praznim redom za svaku od četrdeset vreća. Pero ti je hladno i mokro kao sve ostalo, a mastilo se razliva po vlažnom papiru, pa moraš da pišeš brzo i čitko. Sat iznad pristana pokazuje pet i trideset, a plima je za četrdeset minuta.",
+          "lead": "Otpremnica na dasci."
+        },
+        {
+          "t": "Tri ruke leže na ogradi pristana: Ankina, ispucala od soli, Emilova, glatka, i Jelina, sa blatom ispod noktiju. Nijedna se ne miče, a sve tri gledaju pero. Gledaju ga kao što se gleda lekar koji još nije rekao dijagnozu.",
+          "lead": "Tri ruke."
+        },
+        {
+          "t": "„Upis mi treba do pet i četrdeset pet. Posle toga plan se izvršava po listi.“",
+          "lead": "Tok traži upis.",
+          "who": "Tok"
+        },
+        {
+          "t": "Prvi red je prazan jer vreća koja mu pripada već leži otvorena na pristanu Niske strane. Pero ga zaobilazi.",
+          "lead": "Prvi red.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Pamtiš kako si Jeli pokazao listu i kako te je pogledala. Pogled joj je ostao u ramenima kao teret koji nisi tražio.",
+          "tf": "Pamtiš kako si Jeli pokazala listu i kako te je pogledala. Pogled joj je ostao u ramenima kao teret koji nisi tražila.",
+          "lead": "Pogled sa pristana.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "Jela je jedina koja stoji tik iza čamca, tamo gde si je prvi put povezao uže. Ne govori ništa, samo prati pogledom pero.",
+          "tf": "Jela je jedina koja stoji tik iza čamca, tamo gde si je prvi put povezala uže. Ne govori ništa, samo prati pogledom pero.",
+          "lead": "Jela iza čamca.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Ispod otpremnice je druga stranica, tanja, sa starim ovlašćenjem Veća: brodar sam određuje gde seme ide, i niko ne može to da ospori pre žetve. Pravo nije korišćeno jedanaest godina. Pavle je morao da ga potraži u zaboravljenoj fioci.",
+          "lead": "Stara stranica."
+        },
+        {
+          "t": "„Šta god da napišem, ide pod moje ime.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ide. Tako je bilo i pre nas. Šta god da napišeš, potpisujem odmah. Jedino to mogu da ti ponudim.“",
+          "lead": "Pavlov potpis.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Pamtiš kako si prvi put spustio veslo ka Niskoj strani i kako je čamac stao pre nego što si stigao da odlučiš. Kroz izmaglicu zore vidi se prvi red parcela, blede kao riblje krljušti. Iza njih, nevidljiva, Niska strana čeka kao da je ceo život provela u čekanju.",
+          "tf": "Pamtiš kako si prvi put spustila veslo ka Niskoj strani i kako je čamac stao pre nego što si stigla da odlučiš. Kroz izmaglicu zore vidi se prvi red parcela, blede kao riblje krljušti. Iza njih, nevidljiva, Niska strana čeka kao da je ceo život provela u čekanju.",
+          "lead": "Parcele u izmaglici.",
+          "if": {
+            "pick": "k_stani"
+          }
+        },
+        {
+          "t": "Pamtiš lampu koju si podigao iz kanala i devojku koja je trčala duž nasipa da te stigne. Kroz izmaglicu zore vidi se prvi red parcela, blede kao riblje krljušti. Iza njih, nevidljiva, Niska strana čeka kao da je ceo život provela u čekanju.",
+          "tf": "Pamtiš lampu koju si podigla iz kanala i devojku koja je trčala duž nasipa da te stigne. Kroz izmaglicu zore vidi se prvi red parcela, blede kao riblje krljušti. Iza njih, nevidljiva, Niska strana čeka kao da je ceo život provela u čekanju.",
+          "lead": "Parcele u izmaglici.",
+          "if": {
+            "pick": "k_signal"
+          }
+        },
+        {
+          "t": "Pamtiš uže koje si bacio i devojku koja ga je uhvatila kao nešto što ne sme da padne u vodu. Kroz izmaglicu zore vidi se prvi red parcela, blede kao riblje krljušti. Iza njih, nevidljiva, Niska strana čeka kao da je ceo život provela u čekanju.",
+          "tf": "Pamtiš uže koje si bacila i devojku koja ga je uhvatila kao nešto što ne sme da padne u vodu. Kroz izmaglicu zore vidi se prvi red parcela, blede kao riblje krljušti. Iza njih, nevidljiva, Niska strana čeka kao da je ceo život provela u čekanju.",
+          "lead": "Parcele u izmaglici.",
+          "if": {
+            "pick": "k_uze"
+          }
+        }
+      ],
+      "prompt": "Na otpremnici je prazan red za svaku vreću.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "Upisuješ: sve vreće na sve parcele, i lomiš pečate pred svima.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "Upisuješ: četrdeset parcela po listi i potpisuješ Plodovu ponudu.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "Upisuješ: dvadeset vreća na prve parcele, dvadeset nazad u Zrnaru.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "Ne pišeš ništa i gledaš kako sat odbrojava.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "img": "niska",
+      "paragraphs": [
+        {
+          "t": "Vosak pršti pod nožem kao tanak led. Vreće idu iz ruke u ruku, niz pristan, preko mosta od dasaka, na grede koje nikad nisu bile na listi. Niko ne govori, svi samo nose, a zrno šušti u platnu kao daleka kiša. Žene pevaju vrlo tiho, bez melodije, kao što se peva sebi da bi se nastavilo."
+        },
+        {
+          "t": "Na gredi dvesta dvanaest već stoji jedna otvorena vreća, ona sa pristana. Jela seje iz nje bez žurbe, kao neko ko zna gde će voda stići, a otac joj stoji na pragu kuće, umotan u ćebe, i prvi put posle nedelju dana ne kašlje.",
+          "lead": "Jela na svojoj gredi.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela seje pored tebe, korak u korak. Kad ti ponestane zrna u šaci, ona ti sipa iz svoje, ne pitajući. Otac joj stoji na pragu kuće, umotan u ćebe, i gleda ih dvoje kao nešto što je odavno želeo da vidi.",
+          "lead": "Jela pored tebe.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Jela te posmatra sa kraja grede, prekrštenih ruku. Kad stigneš do dvesta dvanaeste, prilazi i bez reči uzima vreću iz tvojih ruku. Seje sama, bez žurbe, a otac joj stoji na pragu kuće, umotan u ćebe.",
+          "lead": "Jela na kraju grede.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "„Na listi je pisalo da nas nema. Sad nas ima po vreću.“",
+          "who": "Jela"
+        },
+        {
+          "t": "Sa Niske strane niko ne pita čije je seme. Žene zasukuju rukave, deca nose zrno u šakama, kao vodu. Neko ima limenu kutiju, neko staru kašiku, i sve ide u isti red. Emil stoji sa strane i gleda. Kad se jedno dete spotakne i pusti vreću u blato, skida kaput i prebacuje mu ga preko ramena.",
+          "lead": "Niska strana seje."
+        },
+        {
+          "t": "Anka stiže poslednja i traži knjigu pečata nazad. Na svaku slomljenu vreću stavlja crtu, jednu za drugom, i ne gleda te. Dlan joj drhti, prvi put otkako je poznaješ.",
+          "lead": "Anka sa knjigom.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "Anka stoji na pristanu prekrštenih ruku i broji naglas dok se vreće prazne. Ne prekida te. Dlan joj drhti, prvi put otkako je poznaješ.",
+          "lead": "Anka broji.",
+          "if": {
+            "notPick": "z_knjiga"
+          }
+        },
+        {
+          "t": "„Četrdeset vreća, četrdeset slomljenih pečata. Upisujem sve.“",
+          "who": "Anka"
+        },
+        {
+          "t": "Prva zrna padaju u brazdu i zvuče drukčije nego pečati: nema voska, nema broja, samo šum. Kad se vreće isprazne do poslednjeg zrna, deca ih slažu jednu u drugu, kao šešire. Tok javlja odstupanje Veću u šest, kako je najavio, i Veće ga prima bez komentara.",
+          "lead": "Zrno u brazdi."
+        },
+        {
+          "t": "Pavle stiže poslednji, bez megafona. Ne kaže ništa, samo prelazi preko mosta od dasaka i uzima jednu vreću na leđa. Veće je tog jutra prvi put posle mnogo godina radilo rukama. Voda ulazi u sprud tiho i svetla traka klizi po njoj kao prst po papiru.",
+          "lead": "Pavle uzima vreću."
+        },
+        {
+          "t": "„Plod neće ovo zaboraviti. Ali ni ja.“",
+          "who": "Emil"
+        },
+        {
+          "t": "Točak drži ventil otvoren dvadeset minuta duže od Tokovog roka. Voda ulazi u kanale kao nešto što je predugo čekalo i do Niske strane stiže poslednja, ali stiže. Zvuk je tih i dugačak, kao uzdah posle dugog zadržavanja daha.",
+          "lead": "Voda u kanalima.",
+          "if": {
+            "pick": "vt_tocak"
+          }
+        },
+        {
+          "t": "Ventil se zatvara u pet i četrdeset, ranije nego što piše na listi, pa voda do Niske strane ne stiže. Seme je ipak u zemlji, a zemlja je ispod vlažna. Ljudi na nasipu gledaju u zemlju, ne u kapiju.",
+          "lead": "Ventil se zatvara.",
+          "if": {
+            "notPick": "vt_tocak"
+          }
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "img": "svitanje",
+      "paragraphs": [
+        {
+          "t": "Plima dolazi u šest i deset, glatka kao stakleni list, i prekriva sve što je ostalo od noći. Kad se povuče, na gredama ostaje tanak sjaj, a negde ispod njega nešto se već budi. Terase ne odgovaraju na pismo Veća. Nova tura semena ne stiže ni tog meseca ni sledećeg, i u Zrnari ostaju prazne police.",
+          "lead": "Plima."
+        },
+        {
+          "t": "„Odstupanje upisano. Terasama poslato. Odgovor čekam.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Anka briše prazne police vlažnom krpom, kao da će neko doći, a zeleni konopci vise sa klinova kao osušene trave. Jela uči decu sa Niske strane da probaju zemlju prstom, kao što je i nju naučio otac. Uče i brojeve, i ptice, i imena sondi, kao tri jezika koji treba da se govore u isto vreme.",
+          "lead": "Police i škola."
+        },
+        {
+          "t": "Traku iz Čuvara niko nije skinuo sa stuba na pristanu. Crveni redovi su izbledeli, ali ih ljudi čitaju dok čekaju čamac, glasno, jedan drugom. Deca je recituju kao brojalicu.",
+          "lead": "Traka na stubu.",
+          "if": {
+            "pick": "v_traka"
+          }
+        },
+        {
+          "t": "Čuvar je ostao upaljen. Prvi put posle mnogo godina lampice na tabli gore sve do jutra, i ko god siđe u podrum, ostane tamo duže nego što mu treba. Neko je ostavio čašu čaja pored table, kao pored kreveta bolesnika.",
+          "lead": "Lampice u podrumu.",
+          "if": {
+            "pick": "c_pali",
+            "notPick": "v_traka"
+          }
+        },
+        {
+          "t": "„Otac je sinoć prvi put zaspao bez kašlja. Kaže da zemlja već diše.“",
+          "lead": "Poruka sa Niske strane.",
+          "who": "Jela"
+        },
+        {
+          "t": "Čamac ostaje privezan uz pristan, sa praznom ceradom. Prvi put posle mnogo noći ništa ne nosiš i ruke ne znaju kud će. Plićak ne postaje bogatiji, ali postaje glasniji: na Splavu se ponovo prodaje seme koje nije ničije, na Niskoj strani se otvara stara radnja, i niko ne pita ko je od koga uzeo, jer svi su uzeli od svakoga.",
+          "lead": "Prazan čamac."
+        },
+        {
+          "t": "„Terase su odgovorile jednom rečenicom: sledeće isporuke nema. Ostalo je naša stvar.“",
+          "lead": "Odgovor Terasa.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Sedmog dana, pred zoru, na Splavu se pojavljuje čamac sa zelenim konopcem na pramcu, kakav niko ne pamti. Čovek u njemu ne kaže ni ime ni odakle dolazi, samo pita da li ovde neko menja seme.",
+          "lead": "Čamac na Splavu."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "img": "merna",
+      "paragraphs": [
+        {
+          "t": "Potpis ti ostaje na papiru, crn i čitak. Emil pregleda otpremnicu, savija je na četvoro i prvi put te gleda pravo u oči. Hvala ne izgovara, ali mu je stisak ruke čvrst i suv, kao stisak nekoga ko ne laže o ugovorima. Papir je mekan i gust, kao da je napravljen da traje duže od onih koji ga pišu."
+        },
+        {
+          "t": "„Potpis je tvoj. Ostalo je naš posao.“",
+          "who": "Emil"
+        },
+        {
+          "t": "Četrdeset vreća ide uz kanal po Tokovom redu, od Nasipa nadalje. Parcele ih primaju jedna za drugom, bez greške, kao da je neko već znao šta je u kojoj zemlji. Na velikom ekranu Merne kuće zelene parcele niču jedna za drugom, kao slova u rečenici.",
+          "lead": "Vreće na parcelama."
+        },
+        {
+          "t": "„Čitam imena sa liste, od jedan do četrdeset. Posle četrdesetog ne znam šta da čitam, jer ostalo nije napisano.“",
+          "lead": "Pavle čita listu.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Samo jedna vreća, ona sa pristana, bila je u zemlji pre liste. Plod je beleži kao grešku u računu, malim crvenim slovima, i niko ne traži da se ispravi. Taj crveni red tinja na ekranu kao jedina vatra u sivom polju.",
+          "lead": "Greška u računu.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela stoji na pristanu i gleda kako četrdeset vreća prolazi kraj njene parcele. Nijednom ne podiže fenjer. Pesnice su joj stisnute, ali ruke ne dižu ništa osim kaputa kad ga vetar pomeri.",
+          "lead": "Jela na pristanu.",
+          "if": {
+            "notPick": "p_daj"
+          }
+        },
+        {
+          "t": "„Šezdeset vreća ostaje u mom podrumu. Ko ih zatraži pismeno, dobiće ih. Ja ne odlučujem, samo čuvam.“",
+          "lead": "Anka zaključava.",
+          "who": "Anka"
+        },
+        {
+          "t": "Emil ti šalje ugovor o zakupu za Nisku stranu, već ispisan, sa praznim redom za potpis Veća. Nisi ga tražio.",
+          "tf": "Emil ti šalje ugovor o zakupu za Nisku stranu, već ispisan, sa praznim redom za potpis Veća. Nisi ga tražila.",
+          "lead": "Ugovor o zakupu.",
+          "if": {
+            "pick": "sa_emil"
+          }
+        },
+        {
+          "t": "Emil ti donosi čaj, onaj isti iz termosa, i ostaje pored tebe dok vreće odlaze. Ne govori mnogo. Na kraju kaže da bi voleo da je neka druga noć, i odlazi, čizmama koje prvi put otkad ga poznaješ ostavljaju tragove u mulju. Anka zaključava Zrnaru, napola praznu, i ne okreće se.",
+          "lead": "Emil sa čajem."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "img": "ventil",
+      "paragraphs": [
+        {
+          "t": "„Ventil otvoren u šest i deset. Plan se izvršava po listi.“",
+          "lead": "Ventil se otvara.",
+          "who": "Tok"
+        },
+        {
+          "t": "Plima dolazi u šest i deset, kako je pisalo, i prelazi preko praga ventila u jednom tihom, širokom potezu. Ljudi na nasipu gledaju je bez reči, kao što se gleda nešto što je obećano i stiglo. Plod počinje da meri temelje novog ventila, sa tankim koncem i dva geometra u čistim čizmama. Zvuk vode koja prelazi prag liči na dugačko, mirno disanje.",
+          "lead": "Plima stiže."
+        },
+        {
+          "t": "„Prve klice za četiri dana. Javiću ti kad ih vidim.“",
+          "who": "Emil"
+        },
+        {
+          "t": "Prve klice probijaju koru nasipa posle četiri dana, tanke i svetlozelene, u redu, kako piše na listi. Ljudi iz Ploda hodaju pored njih sa merilima i ne gaze nijednu. Na Niskoj strani, međutim, pada prva noć bez ijednog čamca. Fenjeri se ne pale, jer nema ko da ih vidi, a kuće na stubovima stoje u mraku kao zubi u nepopunjenom redu.",
+          "lead": "Prve klice."
+        },
+        {
+          "t": "Ručica koju si okrenuo drži Čuvara upaljenog tri dana. U utorak ga Tok preuzima i od tada Čuvar javlja samo njemu. Podrum je od tada manje vlažan, ili ti se tako čini.",
+          "tf": "Ručica koju si okrenula drži Čuvara upaljenog tri dana. U utorak ga Tok preuzima i od tada Čuvar javlja samo njemu. Podrum je od tada manje vlažan, ili ti se tako čini.",
+          "lead": "Čuvar u utorak.",
+          "if": {
+            "pick": "c_pali"
+          }
+        },
+        {
+          "t": "Tok u utorak, bez ičijeg pitanja, ponovo pali Čuvara. Od tada Čuvar javlja samo njemu, a Tok jedini zna da li se njih dvojica slažu. Niko ne pita zašto, jer niko nije video kada.",
+          "lead": "Čuvar u utorak.",
+          "if": {
+            "notPick": "c_pali"
+          }
+        },
+        {
+          "t": "„Veće je u petak jednoglasno glasalo za novi ventil. To se nije desilo deset godina.“",
+          "lead": "Pavle o glasanju.",
+          "who": "Pavle"
+        },
+        {
+          "t": "„Nećemo da gasimo svetlo. Neka znaju da smo tu.“",
+          "lead": "Jela na pristanu.",
+          "who": "Jela"
+        },
+        {
+          "t": "Na Niskoj strani Jela svake večeri ljulja fenjer na pristanu, sada ritmično, po signalu koji je sama smislila. Treće večeri neko mu odgovara sa vode, istim ritmom.",
+          "lead": "Fenjer na pristanu."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "Plima je za četrdeset minuta. Nikom se ne žuri, a svima se žuri; to je stanje u kome nasip živi poslednja dva sata svake sezone, i ti ga prvi put osećaš iznutra, kao glad."
+        },
+        {
+          "t": "Otpremnica ostaje prazna. Pavle čeka do pet i četrdeset, pa sam upisuje polovinu na polovinu, kako je Veće običavalo kad brodar ćuti. Niko u dvorani ne prigovara, jer je tišina brodara stari način da se kaže: nije vreme.",
+          "lead": "Prazna otpremnica.",
+          "if": {
+            "pick": "od_ceka"
+          }
+        },
+        {
+          "t": "Upisuješ dvadeset vreća na prvih dvadeset parcela po Tokovoj listi. Drugih dvadeset nosiš nazad uz kanal. Pero ostavlja dve linije, jednu ravnu i jednu malo drhtavu.",
+          "lead": "Pero na otpremnici.",
+          "if": {
+            "notPick": "od_ceka"
+          }
+        },
+        {
+          "t": "„Pola sada, pola kasnije. Tako je Veće običavalo kad nije znalo.“",
+          "who": "Anka"
+        },
+        {
+          "t": "U Zrnari Anka prima vreće jednu po jednu. Svaku proverava pogledom, pa je stavlja na policu i na zeleni konopac stavlja novi vosak. Tvoj prst ostaje utisnut u vosku jedne od njih. Pavle skida pečat Veća sa otpremnice i stavlja drugi, na polovinu. Emil stoji sa strane sa svojom ponudom, savijenom na četvoro, i ne pruža je nikome.",
+          "lead": "Vreće se vraćaju."
+        },
+        {
+          "t": "„Pečat Veća stoji na polovini. Na drugu polovinu staviću ga kad se nebo izjasni.“",
+          "lead": "Pavle pečati.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Jela nosi vreće za tobom, bez reči. Kad stigne poslednja, pita koliko je dana do druge plime. Četrnaest, kažeš. Kaput joj je promrzao, ali ga ne skida.",
+          "lead": "Jela u Zrnari.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Jele nema u Zrnari. Čuješ da čeka na pristanu Niske strane, sa fenjerom koji se ne gasi. Zamišljaš kako stoji tamo i broji sate do druge plime.",
+          "lead": "Fenjer na Niskoj strani.",
+          "if": {
+            "notPick": "p_pita"
+          }
+        },
+        {
+          "t": "Traka iz Čuvara završava u knjizi pečata, među brojevima, ispod Ankinog rukopisa. Anka je poravnava dlanom, kao što se poravnava stranica koja je pala.",
+          "lead": "Traka u knjizi.",
+          "if": {
+            "pick": "c_pali"
+          }
+        },
+        {
+          "t": "„Moja ponuda važi do druge plime. Posle nje se ne računa.“",
+          "lead": "Emil odlazi.",
+          "who": "Emil"
+        },
+        {
+          "t": "Dvadeset vreća ostaje na policama gde su stajale i pre, pod novim voskom koji još miriše na med. Anka ih broji još jednom, naglas, pa još jednom, tiho, kao da se plaši da će, ako prestane, neka nestati. Zatim otvara knjigu na praznoj stranici i prvi put upisuje u nju nešto što nije broj: datum i jednu reč, druga plima.",
+          "lead": "Nova stranica."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "img": "svitanje",
+      "paragraphs": [
+        {
+          "t": "Plima prelazi preko praga u šest i deset i prekriva nasip do polovine. Na prvih dvadeset parcela voda stiže u red, jedna po jedna; nasip miriše na mokru zemlju, a ljudi na pristanu prvi put te noći govore glasno, mada o sitnicama: o čamcu, o konopcu, o ručku.",
+          "lead": "Plima do pola."
+        },
+        {
+          "t": "Točak drži ventil otvoren duže od Tokovog roka, pa voda dolazi i do poslednje od dvadeset parcela. Taj dodatak vode traje samo dvadeset minuta, ali ih ljudi pamte kao dan.",
+          "lead": "Voda do poslednje parcele.",
+          "if": {
+            "pick": "vt_tocak"
+          }
+        },
+        {
+          "t": "Ventil se zatvara u pet i četrdeset, ali dvadeset parcela blizu nasipa prima vodu na vreme. Preostalih dvadeset ostaje da čeka, suvo i spremno.",
+          "lead": "Ventil se zatvara.",
+          "if": {
+            "notPick": "vt_tocak"
+          }
+        },
+        {
+          "t": "„Upisujem odstupanje od plana. Komentar nije potreban.“",
+          "who": "Tok"
+        },
+        {
+          "t": "Emil dolazi pred zoru da ti vrati pero koje je ostalo na pristanu Veća. Ne govori ništa o ponudi. Pita samo hoće li čamac biti spreman za drugu plimu, kao da nikakav razgovor nije vođen. Pavle sastavlja pismo Terasama o polovini slomljenog i polovini očuvanog pečata. Piše ga tri puta, a svaki put ga cepa, jer nijedna verzija ne zvuči kao istina. Na kraju ostavlja samo jednu rečenicu: čekamo.",
+          "lead": "Emil i Pavle."
+        },
+        {
+          "t": "Iznad Terasa, na istoku, skuplja se prvi oblak ove godine. Ni Tok ni ti ne znate da li će se spustiti. Anka zaključava Zrnaru i prvi put ti stavlja ključ u dlan: za drugu plimu.",
+          "lead": "Prvi oblak."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/pre-plime/cover.jpg",
+      "alt": "Nasip: grad na nasipu iznad belih plićaka u sumrak",
+      "kind": "place"
+    },
+    "kanal": {
+      "src": "img/pre-plime/kanal.jpg",
+      "alt": "Treći kanal noću: čamac sa vrećama i fenjer na pristanu",
+      "kind": "place"
+    },
+    "niska": {
+      "src": "img/pre-plime/niska.jpg",
+      "alt": "Niska strana: kuće na stubovima i bele niske parcele",
+      "kind": "place"
+    },
+    "zrnara": {
+      "src": "img/pre-plime/zrnara.jpg",
+      "alt": "Zrnara: kameni podrum sa vrećama pod pečatom",
+      "kind": "place"
+    },
+    "merna": {
+      "src": "img/pre-plime/merna.jpg",
+      "alt": "Merna kuća: toranj sa ekranima na stubovima nad vodom",
+      "kind": "place"
+    },
+    "splav": {
+      "src": "img/pre-plime/splav.jpg",
+      "alt": "Splav: plutajuća pijaca sa fenjerima i svetom",
+      "kind": "place"
+    },
+    "cuvar": {
+      "src": "img/pre-plime/cuvar.jpg",
+      "alt": "Podrum Merne kuće: ugašena tabla Čuvara",
+      "kind": "place"
+    },
+    "nasip": {
+      "src": "img/pre-plime/nasip.jpg",
+      "alt": "Nasip: dvorana Veća i pristan pred zoru",
+      "kind": "place"
+    },
+    "ventil": {
+      "src": "img/pre-plime/ventil.jpg",
+      "alt": "Ventil: gvozdena kapija sa točkom i zupčanikom",
+      "kind": "place"
+    },
+    "svitanje": {
+      "src": "img/pre-plime/svitanje.jpg",
+      "alt": "Svitanje nad plićacima i poljima",
+      "kind": "place"
+    },
+    "jela": {
+      "src": "img/pre-plime/jela.jpg",
+      "alt": "Jela, devojka sa Niske strane",
+      "kind": "portrait"
+    },
+    "anka": {
+      "src": "img/pre-plime/anka.jpg",
+      "alt": "Anka, čuvarka ključeva Zrnare",
+      "kind": "portrait"
+    },
+    "emil": {
+      "src": "img/pre-plime/emil.jpg",
+      "alt": "Emil, čovek iz kompanije Plod",
+      "kind": "portrait"
+    },
+    "pavle": {
+      "src": "img/pre-plime/pavle.jpg",
+      "alt": "Pavle, predsednik Veća",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/pre-plime/citalac-m.jpg",
+      "alt": "Brodar",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/pre-plime/citalac-z.jpg",
+      "alt": "Brodarka",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Jela": {
+      "img": "jela"
+    },
+    "Anka": {
+      "img": "anka"
+    },
+    "Emil": {
+      "img": "emil"
+    },
+    "Pavle": {
+      "img": "pavle"
+    },
+    "Tok": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}
