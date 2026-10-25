@@ -357,7 +357,9 @@
         },
         {
           "t": "„Dolaziš po drugu turu, {voc}? Ne dam je dok mi Veće ne pošalje pismeno.“",
-          "who": "Anka"
+          "who": "Anka",
+          "solo": true,
+          "lead": "Prva reč čuvarke."
         },
         {
           "t": "„Trideset devet. Pisalo je četrdeset. Ne pitam ništa, samo upisujem.“",
@@ -1985,82 +1987,82 @@
   },
   "images": {
     "cover": {
-      "src": "img/pre-plime/cover.jpg",
+      "src": "img/pre-plime/cover.webp",
       "alt": "Nasip: grad na nasipu iznad belih plićaka u sumrak",
       "kind": "place"
     },
     "kanal": {
-      "src": "img/pre-plime/kanal.jpg",
+      "src": "img/pre-plime/kanal.webp",
       "alt": "Treći kanal noću: čamac sa vrećama i fenjer na pristanu",
       "kind": "place"
     },
     "niska": {
-      "src": "img/pre-plime/niska.jpg",
+      "src": "img/pre-plime/niska.webp",
       "alt": "Niska strana: kuće na stubovima i bele niske parcele",
       "kind": "place"
     },
     "zrnara": {
-      "src": "img/pre-plime/zrnara.jpg",
+      "src": "img/pre-plime/zrnara.webp",
       "alt": "Zrnara: kameni podrum sa vrećama pod pečatom",
       "kind": "place"
     },
     "merna": {
-      "src": "img/pre-plime/merna.jpg",
+      "src": "img/pre-plime/merna.webp",
       "alt": "Merna kuća: toranj sa ekranima na stubovima nad vodom",
       "kind": "place"
     },
     "splav": {
-      "src": "img/pre-plime/splav.jpg",
+      "src": "img/pre-plime/splav.webp",
       "alt": "Splav: plutajuća pijaca sa fenjerima i svetom",
       "kind": "place"
     },
     "cuvar": {
-      "src": "img/pre-plime/cuvar.jpg",
+      "src": "img/pre-plime/cuvar.webp",
       "alt": "Podrum Merne kuće: ugašena tabla Čuvara",
       "kind": "place"
     },
     "nasip": {
-      "src": "img/pre-plime/nasip.jpg",
+      "src": "img/pre-plime/nasip.webp",
       "alt": "Nasip: dvorana Veća i pristan pred zoru",
       "kind": "place"
     },
     "ventil": {
-      "src": "img/pre-plime/ventil.jpg",
+      "src": "img/pre-plime/ventil.webp",
       "alt": "Ventil: gvozdena kapija sa točkom i zupčanikom",
       "kind": "place"
     },
     "svitanje": {
-      "src": "img/pre-plime/svitanje.jpg",
+      "src": "img/pre-plime/svitanje.webp",
       "alt": "Svitanje nad plićacima i poljima",
       "kind": "place"
     },
     "jela": {
-      "src": "img/pre-plime/jela.jpg",
+      "src": "img/pre-plime/jela.webp",
       "alt": "Jela, devojka sa Niske strane",
       "kind": "portrait"
     },
     "anka": {
-      "src": "img/pre-plime/anka.jpg",
+      "src": "img/pre-plime/anka.webp",
       "alt": "Anka, čuvarka ključeva Zrnare",
       "kind": "portrait"
     },
     "emil": {
-      "src": "img/pre-plime/emil.jpg",
+      "src": "img/pre-plime/emil.webp",
       "alt": "Emil, čovek iz kompanije Plod",
       "kind": "portrait"
     },
     "pavle": {
-      "src": "img/pre-plime/pavle.jpg",
+      "src": "img/pre-plime/pavle.webp",
       "alt": "Pavle, predsednik Veća",
       "kind": "portrait"
     },
     "citalac-m": {
-      "src": "img/pre-plime/citalac-m.jpg",
+      "src": "img/pre-plime/citalac-m.webp",
       "alt": "Brodar",
       "kind": "portrait"
     },
     "citalac-z": {
-      "src": "img/pre-plime/citalac-z.jpg",
+      "src": "img/pre-plime/citalac-z.webp",
       "alt": "Brodarka",
       "kind": "portrait"
     }

@@ -1337,69 +1337,69 @@
   },
   "images": {
     "stana": {
-      "src": "img/tri-i-deset/stana.jpg",
+      "src": "img/tri-i-deset/stana.webp",
       "alt": "Stana",
       "kind": "portrait",
       "caption": "Stana"
     },
     "jovo": {
-      "src": "img/tri-i-deset/jovo.jpg",
+      "src": "img/tri-i-deset/jovo.webp",
       "alt": "Jovo",
       "kind": "portrait",
       "caption": "Jovo"
     },
     "lena": {
-      "src": "img/tri-i-deset/lena.jpg",
+      "src": "img/tri-i-deset/lena.webp",
       "alt": "Lena",
       "kind": "portrait",
       "caption": "Lena"
     },
     "ognjen": {
-      "src": "img/tri-i-deset/ognjen.jpg",
+      "src": "img/tri-i-deset/ognjen.webp",
       "alt": "Ognjen",
       "kind": "portrait",
       "caption": "Ognjen"
     },
     "zora": {
-      "src": "img/tri-i-deset/zora.jpg",
+      "src": "img/tri-i-deset/zora.webp",
       "alt": "Zora",
       "kind": "portrait",
       "caption": "Zora"
     },
     "citalac-m": {
-      "src": "img/tri-i-deset/citalac-m.jpg",
+      "src": "img/tri-i-deset/citalac-m.webp",
       "alt": "Ti",
       "kind": "portrait",
       "caption": "Ti"
     },
     "citalac-z": {
-      "src": "img/tri-i-deset/citalac-z.jpg",
+      "src": "img/tri-i-deset/citalac-z.webp",
       "alt": "Ti",
       "kind": "portrait",
       "caption": "Ti"
     },
     "stub": {
-      "src": "img/tri-i-deset/stub.jpg",
+      "src": "img/tri-i-deset/stub.webp",
       "alt": "Stub: toranj sa antenama iznad planinskog grada",
       "kind": "place"
     },
     "sala": {
-      "src": "img/tri-i-deset/sala.jpg",
+      "src": "img/tri-i-deset/sala.webp",
       "alt": "Sala sa velikim zidnim ekranom i pultom noćne smene",
       "kind": "place"
     },
     "terasa": {
-      "src": "img/tri-i-deset/terasa.jpg",
+      "src": "img/tri-i-deset/terasa.webp",
       "alt": "Terasa tornja iznad grada i Obruča",
       "kind": "place"
     },
     "hodnik": {
-      "src": "img/tri-i-deset/hodnik.jpg",
+      "src": "img/tri-i-deset/hodnik.webp",
       "alt": "Hodnik tornja sa pokvarenim aparatom za kafu",
       "kind": "place"
     },
     "pult": {
-      "src": "img/tri-i-deset/pult.jpg",
+      "src": "img/tri-i-deset/pult.webp",
       "alt": "Ručni pult noćne smene sa osam ekrana",
       "kind": "place"
     }

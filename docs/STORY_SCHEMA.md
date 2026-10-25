@@ -154,7 +154,7 @@ Svi id-evi moraju postojati, a `lead` mora biti deklarisana osa.
 
 ## `images`
 
-`"<id>": { "src": "img/<slug>/ime.jpg", "alt": "...", "kind": "portrait" | "place", "caption": "..." }`
+`"<id>": { "src": "img/<slug>/ime.webp", "alt": "...", "kind": "portrait" | "place", "caption": "..." }`
 
 - `src` je putanja u `public/` i počinje sa `img/<slug>/`; ako fajla nema, slika se jednostavno ne prikazuje (validator upozorava).
 - `kind: "portrait"` (3:4) za likove; `kind: "place"` (16:9) za mesta.
@@ -178,7 +178,7 @@ Sve priče se čitaju u izgledu „scene“ (kao film ili vizuelni roman); nema 
 - **Telefon:** slika je gornja polovina ekrana, a tekst i dugmad su ispod nje na pozadini teme; portret govornika preklapa donju ivicu slike.
 - Portret i ime u zaglavlju ploče pojavljuju se samo kad strana počinje replikom (`who`). Ako replika dolazi posle naracije na istoj strani, ime se piše iznad replike. Pasus bez `who` nema portret ni ime. `img` na pasusu (veliki portret) i zasebna slika mesta na prvoj strani se ne prikazuju.
 - Tekst preko slike koristi `onImage` / `scrim` boje teme; `check-themes.mjs` proverava kontrast za svaku temu.
-- **Preporuka:** definiši 6–9 slika mesta (16:9, JPG) i postavi `img` na svaku scenu u kojoj se menja mesto; scene između njih nasleđuju prethodnu sliku.
+- **Preporuka:** definiši 6–9 slika mesta (16:9, WebP) i postavi `img` na svaku scenu u kojoj se menja mesto; scene između njih nasleđuju prethodnu sliku.
 
 ## Rod i imena
 

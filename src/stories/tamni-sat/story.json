@@ -1742,82 +1742,82 @@
   },
   "images": {
     "komandna": {
-      "src": "img/tamni-sat/komandna.jpg",
+      "src": "img/tamni-sat/komandna.webp",
       "alt": "Komandna soba stanice Greben: tabla sa tri svetleće linije",
       "kind": "place"
     },
     "krov": {
-      "src": "img/tamni-sat/krov.jpg",
+      "src": "img/tamni-sat/krov.webp",
       "alt": "Krov stanice Greben u sumrak, žice i stubovi preko tamnih polja",
       "kind": "place"
     },
     "trafo": {
-      "src": "img/tamni-sat/trafo.jpg",
+      "src": "img/tamni-sat/trafo.webp",
       "alt": "Hala sa transformatorima, narandžasta lampa i zujanje",
       "kind": "place"
     },
     "greben": {
-      "src": "img/tamni-sat/greben.jpg",
+      "src": "img/tamni-sat/greben.webp",
       "alt": "Kapija stanice Greben, farovi automobila i plava svetlost Hala u dolini",
       "kind": "place"
     },
     "polja": {
-      "src": "img/tamni-sat/polja.jpg",
+      "src": "img/tamni-sat/polja.webp",
       "alt": "Svetla polja noću: redovi panela, deo ugašen",
       "kind": "place"
     },
     "stari": {
-      "src": "img/tamni-sat/stari.jpg",
+      "src": "img/tamni-sat/stari.webp",
       "alt": "Zapušteno razvodno postrojenje Starog voda pod mesecom",
       "kind": "place"
     },
     "lantar": {
-      "src": "img/tamni-sat/lantar.jpg",
+      "src": "img/tamni-sat/lantar.webp",
       "alt": "Grad Lantar noću, delovi grada u mraku",
       "kind": "place"
     },
     "hale": {
-      "src": "img/tamni-sat/hale.jpg",
+      "src": "img/tamni-sat/hale.webp",
       "alt": "Hale: velike računske hale koje svetle plavo u dolini",
       "kind": "place"
     },
     "svitanje": {
-      "src": "img/tamni-sat/svitanje.jpg",
+      "src": "img/tamni-sat/svitanje.webp",
       "alt": "Svitanje nad Svetlim poljima, viđeno sa krova stanice",
       "kind": "place"
     },
     "neda": {
-      "src": "img/tamni-sat/neda.jpg",
+      "src": "img/tamni-sat/neda.webp",
       "alt": "Neda, dispečerka noćne smene",
       "kind": "portrait"
     },
     "bora": {
-      "src": "img/tamni-sat/bora.jpg",
+      "src": "img/tamni-sat/bora.webp",
       "alt": "Bora, stari mehaničar sa Grebena",
       "kind": "portrait"
     },
     "ruza": {
-      "src": "img/tamni-sat/ruza.jpg",
+      "src": "img/tamni-sat/ruza.webp",
       "alt": "Ruža, noćna sestra",
       "kind": "portrait"
     },
     "dario": {
-      "src": "img/tamni-sat/dario.jpg",
+      "src": "img/tamni-sat/dario.webp",
       "alt": "Dario, inženjer iz Svoda",
       "kind": "portrait"
     },
     "kosta": {
-      "src": "img/tamni-sat/kosta.jpg",
+      "src": "img/tamni-sat/kosta.webp",
       "alt": "Kosta, tehničar Svetlih polja",
       "kind": "portrait"
     },
     "citalac-m": {
-      "src": "img/tamni-sat/citalac-m.jpg",
+      "src": "img/tamni-sat/citalac-m.webp",
       "alt": "Dežurni sa Grebena",
       "kind": "portrait"
     },
     "citalac-z": {
-      "src": "img/tamni-sat/citalac-z.jpg",
+      "src": "img/tamni-sat/citalac-z.webp",
       "alt": "Dežurna sa Grebena",
       "kind": "portrait"
     }

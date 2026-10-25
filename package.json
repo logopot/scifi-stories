@@ -11,7 +11,8 @@
     "check-story": "node scripts/check-story.mjs",
     "check-overflow": "node scripts/check-overflow.mjs",
     "check-portraits": "node scripts/check-portraits.mjs",
-    "check-layout": "node scripts/check-layout.mjs"
+    "check-layout": "node scripts/check-layout.mjs",
+    "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",

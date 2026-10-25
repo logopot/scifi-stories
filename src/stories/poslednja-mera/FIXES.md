@@ -1,13 +1,13 @@
 # Jezička korektura i nova imena
 
-Zaglavlje svake tabele: staro → novo, gde, zašto. Radnja, izbori, težine i struktura nisu menjani. Id-evi izbora (`k_razd`, `rz_*`) ostali su isti jer se ne prikazuju; id scene `razdelnik` je preimenovan u `merac`, a id slika `zaklon` i `nadan` u `utociste` i `vuk` (fajlovi `utociste.jpg`, `vuk.jpg`).
+Zaglavlje svake tabele: staro → novo, gde, zašto. Radnja, izbori, težine i struktura nisu menjani. Id-evi izbora (`k_razd`, `rz_*`) ostali su isti jer se ne prikazuju; id scene `razdelnik` je preimenovan u `merac`, a id slika `zaklon` i `nadan` u `utociste` i `vuk` (fajlovi `utociste.webp`, `vuk.webp`).
 
 ## Imena
 
 | Staro → novo | Gde | Zašto |
 | --- | --- | --- |
 | Razdelnik → **Merač** (Merača, Meraču, Meračem; vokativ „Meraču“) | `story.json` (tekst, `who`, `characters`, alt/opis slike, id scene), CONCEPT, OUTLINE, IMAGE_PROMPTS | Zvuči kao titula, kratko je, vezano za „Odbor mere“ i „meru“ koju sistem izračunava. Druga dva kandidata: Dodeljivač (predugo), Brojač (gubi vezu sa merom). |
-| Nadan → **Vuk** (Vuka, Vuku, Vukom) | isto + `images`, `characters`, `vuk.jpg` | Kratko, uobičajeno ime, nije u koliziji sa Teja/Ilarion/Oliva/Dalibor, ni sa Lazar/Milica. |
+| Nadan → **Vuk** (Vuka, Vuku, Vukom) | isto + `images`, `characters`, `vuk.webp` | Kratko, uobičajeno ime, nije u koliziji sa Teja/Ilarion/Oliva/Dalibor, ni sa Lazar/Milica. |
 | Zaklon → **Utočište** (Utočišta, Utočištu, Utočištem; srednji rod) | naslov poglavlja, `meta`, uvod, tekst, alt slike, `index.js` (coverAlt), id slike | Grad pod branom je mesto gde se čeka, a iza kapija ostaje „samo za sebe“; ime je jasno i nosi ironiju. Glagoli uz ime prilagođeni srednjem rodu („Utočište pamti da je preživelo“, „celo Utočište se okuplja“). |
 | Visočje → **Planinski savez** (paralela sa „Obalni sabor“) | tekst, izbori, CONCEPT | Traženo od autora (retka reč). Oblici: iz Planinskog saveza, sa Planinskim savezom. |
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './Cover.styled';
 
-// src je putanja unutar public/ (npr. 'img/bez-opcije/cover.jpg'); children se slažu preko slike (npr. oznaka).
+// src je putanja unutar public/ (npr. 'img/bez-opcije/cover.webp'); children se slažu preko slike (npr. oznaka).
 export default function Cover({ src, alt = '', rounded = false, children }) {
   const [failed, setFailed] = useState(false);
   const showImage = src && !failed;

@@ -1368,74 +1368,74 @@
   },
   "images": {
     "teja": {
-      "src": "img/poslednja-mera/teja.jpg",
+      "src": "img/poslednja-mera/teja.webp",
       "alt": "Teja",
       "kind": "portrait",
       "caption": "Teja"
     },
     "ilarion": {
-      "src": "img/poslednja-mera/ilarion.jpg",
+      "src": "img/poslednja-mera/ilarion.webp",
       "alt": "Ilarion",
       "kind": "portrait",
       "caption": "Ilarion"
     },
     "vuk": {
-      "src": "img/poslednja-mera/vuk.jpg",
+      "src": "img/poslednja-mera/vuk.webp",
       "alt": "Vuk",
       "kind": "portrait",
       "caption": "Vuk"
     },
     "oliva": {
-      "src": "img/poslednja-mera/oliva.jpg",
+      "src": "img/poslednja-mera/oliva.webp",
       "alt": "Oliva",
       "kind": "portrait",
       "caption": "Oliva"
     },
     "dalibor": {
-      "src": "img/poslednja-mera/dalibor.jpg",
+      "src": "img/poslednja-mera/dalibor.webp",
       "alt": "Dalibor",
       "kind": "portrait",
       "caption": "Dalibor"
     },
     "citalac-m": {
-      "src": "img/poslednja-mera/citalac-m.jpg",
+      "src": "img/poslednja-mera/citalac-m.webp",
       "alt": "Ti",
       "kind": "portrait",
       "caption": "Ti"
     },
     "citalac-z": {
-      "src": "img/poslednja-mera/citalac-z.jpg",
+      "src": "img/poslednja-mera/citalac-z.webp",
       "alt": "Ti",
       "kind": "portrait",
       "caption": "Ti"
     },
     "utociste": {
-      "src": "img/poslednja-mera/utociste.jpg",
+      "src": "img/poslednja-mera/utociste.webp",
       "alt": "Utočište: grad ispod Visoke brane i suvo dno jezera",
       "kind": "place"
     },
     "brana": {
-      "src": "img/poslednja-mera/brana.jpg",
+      "src": "img/poslednja-mera/brana.webp",
       "alt": "Kruna Visoke brane iznad Sabirnika",
       "kind": "place"
     },
     "revir": {
-      "src": "img/poslednja-mera/revir.jpg",
+      "src": "img/poslednja-mera/revir.webp",
       "alt": "Revir: niska kuća sa belim krstom",
       "kind": "place"
     },
     "kontrola": {
-      "src": "img/poslednja-mera/kontrola.jpg",
+      "src": "img/poslednja-mera/kontrola.webp",
       "alt": "Staklena kocka u kojoj radi Merač",
       "kind": "place"
     },
     "prolaz": {
-      "src": "img/poslednja-mera/prolaz.jpg",
+      "src": "img/poslednja-mera/prolaz.webp",
       "alt": "Gornji prolaz i šator izaslanika",
       "kind": "place"
     },
     "rezerva": {
-      "src": "img/poslednja-mera/rezerva.jpg",
+      "src": "img/poslednja-mera/rezerva.webp",
       "alt": "Rezerva: crna voda u kamenoj cisterni",
       "kind": "place"
     }

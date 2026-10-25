@@ -121,7 +121,7 @@ Tema „Bez opcije“ je tačan izgled priče pre uvođenja tema; ne menja se.
 ## Kako se dodaje nova priča
 
 1. Napravi `src/stories/<slug>/story.json` (format ispod); u `meta` dodaj `description` (2–3 kratka pasusa bez otkrivanja zapleta ili kraja).
-2. Slike stavi u `public/img/<slug>/` (putanje u `images` počinju sa `img/<slug>/`); naslovna slika za karticu je `public/img/<slug>/cover.jpg` (16:9). Ako je nema, kartica dobija gradijent iz teme.
+2. Slike stavi u `public/img/<slug>/` (putanje u `images` počinju sa `img/<slug>/`); naslovna slika za karticu je `public/img/<slug>/cover.webp` (16:9). Ako je nema, kartica dobija gradijent iz teme.
 3. Dodaj jedan unos u `src/stories/index.js`:
    `{ slug, title, tagline, genre, minutes, cover, coverAlt, status: 'ready', load: () => import('./<slug>/story.json') }`
 4. Dodaj temu u `src/styles/themes.js` (ključ u `themes` je isti slug).
@@ -180,12 +180,12 @@ Na vrhu `story.json` stoji mapa `characters`; ključ je tačno ime govornika kak
 
 ## Slike
 
-Slike nisu deo koda: stavi ih u `public/img/<slug>/` (JPG). Za „Bez opcije“:
+Slike nisu deo koda: stavi ih u `public/img/<slug>/` (WebP; izvorne JPG/PNG pretvori sa `npm run images -- <slug>`). Za „Bez opcije“:
 
-- Likovi (portret, 3:4): `orsa.jpg`, `tehan.jpg`, `veles.jpg`, `dalja.jpg`, `iva.jpg`, `dara.jpg`
-- Mesta (široke, 16:9): `beli-pojas.jpg`, `zenit.jpg`, `presek.jpg`, `luka.jpg`, `poravnanje.jpg`
-- Ostali portreti (3:4): `marta.jpg`, `citalac-m.jpg`, `citalac-z.jpg` (lice čitaoca za muški i ženski rod)
-- Naslovna slika kartice: `cover.jpg`
+- Likovi (portret, 3:4): `orsa.webp`, `tehan.webp`, `veles.webp`, `dalja.webp`, `iva.webp`, `dara.webp`
+- Mesta (široke, 16:9): `beli-pojas.webp`, `zenit.webp`, `presek.webp`, `luka.webp`, `poravnanje.webp`
+- Ostali portreti (3:4): `marta.webp`, `citalac-m.webp`, `citalac-z.webp` (lice čitaoca za muški i ženski rod)
+- Naslovna slika kartice: `cover.webp`
 
 Spisak je u `story.json` pod `images`. Slika mesta se vezuje poljem `img` na sceni (prikazuje se na njenoj prvoj strani), slika lika poljem `img` na pasusu (prikazuje se uz taj pasus). Ako fajla nema, strana izgleda kao bez slike. `npm run check-story` upozorava na fajlove koji nedostaju.
 
