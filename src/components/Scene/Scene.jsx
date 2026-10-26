@@ -3,6 +3,7 @@ import { tr } from '../../engine/engine';
 import { useStory } from '../../engine/StoryContext';
 import useScrollReset from '../../hooks/useScrollReset';
 import ChapterMark from '../ChapterMark';
+import ChapterProgress from '../ChapterProgress';
 import CharacterRow from '../CharacterRow';
 import Heading from '../Heading';
 import Hint from '../Hint';
@@ -161,6 +162,7 @@ export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0
   ].filter(Boolean);
   return (
     <S.Article>
+      <ChapterProgress nodeId={nodeId} picks={picks} player={player} page={page} pagesCount={pages.length} />
       <SpeechPanel
         name={head ? head.name : null}
         nameSide={head && head.reader ? 'right' : 'left'}

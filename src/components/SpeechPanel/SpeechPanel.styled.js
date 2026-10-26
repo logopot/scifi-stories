@@ -15,7 +15,7 @@ export const Root = styled.div`
   padding-top: ${imageEdgeDvh};
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 2.2rem); /* mesto za liniju napretka (ChapterProgress) */
 
   ${md} {
     --scene-pw: ${({ theme }) => theme.sizes.scenePortrait};
@@ -43,7 +43,7 @@ export const Root = styled.div`
 
     @media (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
       --scene-pw: ${({ theme }) => theme.sizes.scenePortraitShort};
-      bottom: max(${({ theme }) => theme.space[100]}, env(safe-area-inset-bottom));
+      bottom: max(22px, env(safe-area-inset-bottom)); /* najmanje 22px slobodno ispod ploče (linija napretka) */
     }
   }
 `;
@@ -106,7 +106,7 @@ export const Scroll = styled.div`
 
     /* niski laptop prozori: viša ploča (portret viri iznad nje, pa se njegov deo oduzima), manji razmaci i tekst */
     @media (max-height: ${({ theme }) => theme.sizes.sceneShortScreen}) {
-      max-height: max(${({ theme }) => theme.sizes.scenePanelMax}, calc(${({ theme }) => theme.sizes.scenePanelMaxShort} - var(--scene-pw) * 4 / 3 * ${({ theme }) => theme.sizes.scenePortraitRise}));
+      max-height: max(${({ theme }) => theme.sizes.scenePanelMax}, calc(${({ theme }) => theme.sizes.scenePanelMaxShort} - var(--scene-pw) * 4 / 3 * ${({ theme }) => theme.sizes.scenePortraitRise} - 6px)); /* 6px = 22px - 1rem: ukupna visina ploče ostaje ista */
       padding-top: ${({ theme }) => theme.space[120]};
       padding-bottom: ${({ theme }) => theme.space[100]};
       font-size: 1.08rem;

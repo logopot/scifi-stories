@@ -6,6 +6,7 @@ import Button from '../Button';
 import Heading from '../Heading';
 import PageBox from '../PageBox';
 import Paragraph from '../Paragraph';
+import ChapterProgress from '../ChapterProgress';
 import SpeechPanel from '../SpeechPanel';
 import * as S from './Mirror.styled';
 
@@ -18,7 +19,9 @@ export default function Mirror({ ending, player, onRestart }) {
   useScrollReset([]);
 
   return (
-    <SpeechPanel
+    <>
+      <ChapterProgress done />
+      <SpeechPanel
       resetKey="mirror"
       title={
         <>
@@ -37,5 +40,6 @@ export default function Mirror({ ending, player, onRestart }) {
         </S.Actions>
       </PageBox>
     </SpeechPanel>
+    </>
   );
 }
