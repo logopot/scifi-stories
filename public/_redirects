@@ -1,4 +1,8 @@
 # Generisano: npm run redirects (ne menjaj ručno)
 /:slug/citaj  /:slug  301
 /en/:slug/citaj  /en/:slug  301
+/en/tamni-sat  /en/dark-hour  301
+/en/tamni-sat/citaj  /en/dark-hour  301
+/dark-hour  /tamni-sat  301
+/dark-hour/citaj  /tamni-sat  301
 /*  /index.html  200

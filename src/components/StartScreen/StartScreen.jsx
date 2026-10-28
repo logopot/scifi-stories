@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useStory } from '../../engine/StoryContext';
 import { cleanName, detectGender, MAX_NAME } from '../../engine/player';
 import Button from '../Button';
@@ -9,14 +10,20 @@ import Paragraph from '../Paragraph';
 import SpeechPanel from '../SpeechPanel';
 import Subtitle from '../Subtitle';
 import TextInput from '../TextInput';
+import PortraitPicker from './components/PortraitPicker';
 import * as S from './StartScreen.styled';
 
 // `prefs` ({ name, gender } ili null) unapred popunjava ime i rod koje je čitalac ranije upisao.
 // Izgled je isti kao stranice priče (SpeechPanel): naslov i podnaslov su `title` panela.
 export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
   const { story, engine } = useStory();
-  // Engleska verzija nema rodne varijante teksta: rod se ne pita (podrazumevano 'm'), samo ime.
+  const { t } = useTranslation();
+  // Engleska verzija nema rodne varijante teksta: rod se ne pita, nego se bira portret čitaoca (Portrait 1 = 'm', 2 = 'f';
+  // isti ključ koji engine već koristi za imgM/imgF). Bez dva različita portreta u priči izbor se preskače (podrazumevano 'm').
   const askGender = engine.lang !== 'en';
+  const reader = story.characters?.__reader__;
+  const portraits = [['m', reader?.imgM], ['f', reader?.imgF]].map(([value, id]) => ({ value, id, src: engine.getImage(id)?.src }));
+  const askPortrait = !askGender && portraits.every((p) => p.id && p.src) && portraits[0].id !== portraits[1].id;
   const { meta, ui } = story;
   const s = ui.start;
   const [raw, setRaw] = useState(prefs?.name || '');
@@ -62,7 +69,7 @@ export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
             autoComplete="off"
             onChange={(e) => {
               setRaw(e.target.value);
-              setPicked(null); // novo ime: rod se ponovo pogađa sa spiska
+              if (askGender) setPicked(null); // novo ime: rod se ponovo pogađa sa spiska (portret ostaje izabran)
             }}
             onKeyDown={(e) => {
               if (e.key === 'Enter' && gender) onBegin(gender, name);
@@ -81,6 +88,21 @@ export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
                   </ChoiceButton>
                 ))}
               </ChoiceGroup>
+            </>
+          )}
+
+          {askPortrait && (
+            <>
+              <S.FieldLabel tag="p" id="portrait-label">
+                {t('start.portraitTitle')}
+              </S.FieldLabel>
+              <PortraitPicker
+                options={portraits}
+                value={gender}
+                onChange={setPicked}
+                labelledBy="portrait-label"
+                label={(n) => t('start.portrait', { n })}
+              />
             </>
           )}
 

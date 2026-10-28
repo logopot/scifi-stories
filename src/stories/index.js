@@ -58,6 +58,16 @@ export const stories = [
     coverAlt: "Stanica Greben na grebenu u sumrak, Svetla polja levo i grad Lantar desno",
     status: "ready",
     load: () => import("./tamni-sat/story.json"),
+    en: {
+      path: "dark-hour",
+      title: "The Dark Hour",
+      tagline:
+        "On a ridge between the fields and the city, one station decides whose light stays on tonight.",
+      genre: "Science fiction",
+      coverAlt:
+        "Greben Station on the ridge at dusk, the Bright Fields on the left and the city of Lantar on the right",
+      load: () => import("./tamni-sat/story.en.json"),
+    },
   },
   {
     slug: "pre-plime",

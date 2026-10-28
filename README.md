@@ -1,6 +1,6 @@
-# Drugi svet
+# Other World Stories
 
-Drugi svet je mali sajt sa interaktivnim naučnofantastičnim pričama (React 18 + Vite 5, styled-components 6, Bootstrap 5 grid).
+Other World Stories je mali sajt sa interaktivnim naučnofantastičnim pričama (React 18 + Vite 5, styled-components 6, Bootstrap 5 grid).
 Početna strana ima karticu za svaku priču, svaka priča ima svoju stranicu i čitač, a sve priče koriste isti motor.
 Prva priča je „Bez opcije“. Čitalac bira među ponuđenim odgovorima posle svakog dela proze; kraj određuje obrazac svih izbora, ne poslednji klik. Sajt nikad ne ocenjuje i ne boduje izbore čitaoca.
 

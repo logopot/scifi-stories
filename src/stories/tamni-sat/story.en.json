@@ -1,0 +1,1824 @@
+{
+  "meta": {
+    "title": "The Dark Hour",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "On the ridge between the Bright Fields and the city of Lantar stands Greben Station, and in it a board with three lines. There is more power than the line can take, and yet the city switches off district after district.",
+      "Tonight is your first shift. The radio in the Tower wants an answer, the heat is stretching the wire, and nobody can explain why the previous operator left in the middle of the week.",
+      "Before you are people who say what they know, a machine that works by the rules, and a lever under the station that nobody has touched in nine years."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "ethics / care for people"
+      },
+      {
+        "id": "t",
+        "name": "technological progress"
+      },
+      {
+        "id": "o",
+        "name": "survival / order and limits"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "Greben is a switching station on the ridge between the Bright Fields and the city of Lantar. Tonight is your first shift, the heat is straining the line, and the Tower is already waiting for you to answer."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "Your progress is saved only in your browser.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "The Dark Hour"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "The Long Line"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "The Limit"
+    }
+  },
+  "start": "smena",
+  "endings": {
+    "e": {
+      "title": "The Green Line",
+      "closing": [
+        "The Old Line runs for a few more nights before anyone gets around to forbidding it. In Lantar people speak of it quietly, on staircases and by the taps, as of something that nobody knows has begun or is already over."
+      ]
+    },
+    "t": {
+      "title": "The Fourth Line",
+      "closing": [
+        "The Halls run without a break, and in Lantar the word “reserves” is mentioned for the first time in many years. At Greben Station a truck with cargo waits for someone to go and fetch the keys."
+      ]
+    },
+    "o": {
+      "title": "Three Lines",
+      "closing": [
+        "The line stayed within its limit, and the fields went on throwing away what nobody could take. The Dark Hour came back on the following nights in the same order, district by district."
+      ]
+    }
+  },
+  "nodes": {
+    "smena": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "The first alarm goes off before you have taken off your jacket. Greben Station is one room with a board, a flickering lamp and a window facing west, where the last daylight is dying over the Bright Fields. You are the new duty operator. The last one left on Wednesday and nobody said why."
+        },
+        {
+          "t": "The board shows three yellow lines. The Long Line, which carries power in from the fields, glows orange: the heat has stretched it, and it can no longer carry what it carried yesterday. The Fast Line, straight to the Halls, sits quiet and blue. The City Line, toward Lantar, flickers nervously.",
+          "lead": "Three lines on the board."
+        },
+        {
+          "t": "Next to the board, on the wall, hangs a black box with a dial marked “wasted”. Its needle moves slowly, but always in the same direction. That is the power the fields make and the line cannot take.",
+          "lead": "The needle that counts what goes to waste."
+        },
+        {
+          "t": "Behind the door, on a peg, hangs someone else’s jacket, grey-green, elbows worn through. Something rustles in the pocket. You don’t mean to look, but you do: a folded paper, one handwritten line: don’t trust the dial, trust the sound.",
+          "lead": "The last operator’s jacket."
+        },
+        {
+          "t": "The sound. You stop and listen. The line under the station sings one thin note, like a violin string someone has tuned a half step higher than it should be.",
+          "lead": "A note under the floor."
+        },
+        {
+          "t": "The radio crackles. Neda, the night dispatcher in the Tower, opens every shift with the same question.",
+          "lead": "The crackling radio."
+        },
+        {
+          "t": "“Greben, this is the Tower. Do you read me, {ime}?”",
+          "who": "Neda"
+        },
+        {
+          "t": "“Tonight the Fast Line runs until five, no breaks. The Council decided. Whatever is left goes to the city, if any is.”",
+          "who": "Neda",
+          "lead": "An order that leaves nothing over."
+        },
+        {
+          "t": "“And the Dark Hour? Who loses their light?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“It will show up on the board when the time comes. Don’t ask me, ask the schedule. I only read.”",
+          "who": "Neda",
+          "lead": "A schedule nobody writes."
+        },
+        {
+          "t": "The Dark Hour is an old custom: when there is not enough power, the city switches off its districts one by one, an hour each, so everyone gets an equal share of darkness. Children in Lantar tell time by which district is next. Your name is not on the schedule; you only carry it out.",
+          "lead": "A custom of the old city."
+        },
+        {
+          "t": "The room smells of scorched dust. Outside, the wind whistles through the pylons, and from somewhere on the roof comes a knocking, steady, as if someone were trying to tell you something without words.",
+          "lead": "Knocking from the roof."
+        }
+      ],
+      "prompt": "You only have time to visit one place before midnight.",
+      "choices": [
+        {
+          "id": "s_krov",
+          "text": "You climb to the roof to see the line with your own eyes.",
+          "next": "krov",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "s_kula",
+          "text": "You stay at the board and ask the Tower to read you every order.",
+          "next": "kula",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "krov": {
+      "img": "krov",
+      "paragraphs": [
+        {
+          "t": "The iron steps shake under your boots. On the roof the wind lashes you with hot sand, and when you open your eyes you see the line: three thick wires strung from pylon to pylon across the dark fields, all of them hanging lower than they should."
+        },
+        {
+          "t": "By the railing stands an old man with an earpiece and a thermos under his arm. Bora has been at Greben longer than the station has had a board. He doesn’t turn when you arrive, as if he heard you from the foot of the steps.",
+          "lead": "An old man at the railing."
+        },
+        {
+          "t": "His face is lined and dry, as if the wind had carved it over many years, the wrinkles following the way the sand blows. A scrap of paper with a number you cannot make out is taped to his earpiece.",
+          "lead": "A face made by wind."
+        },
+        {
+          "t": "“Fifth pylon from the left. See how it flickers? That’s not the wind.”",
+          "who": "Bora"
+        },
+        {
+          "t": "At the top of the fifth pylon a tiny bluish dot glows, like a star that has gone wrong. You hear a faint crackling too, like someone far away snapping dry twigs.",
+          "lead": "A blue dot on the fifth pylon."
+        },
+        {
+          "t": "“Hot joint. Holds till morning, if nobody pushes it. If somebody does, it won’t.”",
+          "who": "Bora",
+          "lead": "A joint that holds till morning."
+        },
+        {
+          "t": "Across the fields to the west, the sun has dropped onto a red line. The rows of panels flare and fade like scales, then stay dark, row by row. Somebody out there is switching off what the day made.",
+          "lead": "The fields going dark."
+        },
+        {
+          "t": "“How much is wasted?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Enough for a small village, every night. The counter remembers it. I remember villages.”",
+          "who": "Bora",
+          "lead": "A village going to waste."
+        },
+        {
+          "t": "From here you see everything at once: fields to the west, city to the east, and between them the station where you stand, a screw holding two boards together. If it gives, the boards part and nobody knows why.",
+          "lead": "A screw between the fields and the city."
+        },
+        {
+          "t": "“Twenty years I’ve watched power run through this house. Not once was it mine.”",
+          "who": "Bora",
+          "lead": "Power passing through."
+        },
+        {
+          "t": "Bora falls silent. The wind turns over a paper sticking out of his pocket, and all you can read is the heading: request to reconnect the lines. Nineteen requests, each with a stamp, none with an answer.",
+          "lead": "The paper in Bora’s pocket."
+        },
+        {
+          "t": "“I wrote nineteen times. The last time, only the name of the station.”",
+          "who": "Bora"
+        },
+        {
+          "t": "Bora points his thermos to the south. Below the hill, in shadow, stands a row of rusted pylons without a single wire on top. The Old Line. It has been dead for nine years, but the joints under the station were never cut.",
+          "lead": "Pylons without wire."
+        },
+        {
+          "t": "“There’s no paper for it, but there is wire. If somebody connected it, the city would have power after midnight.”",
+          "who": "Bora",
+          "lead": "What if somebody connected it."
+        },
+        {
+          "t": "“Why hasn’t anybody connected it?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Because whoever connects it would have to sign.”",
+          "who": "Bora"
+        },
+        {
+          "t": "Bora hands you the thermos as if handing you a key. The coffee is bitter and warm like earth after rain, and you realize he has been standing here waiting for someone to ask.",
+          "lead": "A thermos, warm from his hand."
+        }
+      ],
+      "prompt": "The wind carries the smell of overheated rubber.",
+      "choices": [
+        {
+          "id": "k_stari",
+          "text": "You ask Bora how the Old Line gets connected.",
+          "next": "trafo",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_spoj",
+          "text": "You note the hot joint in the logbook and climb down.",
+          "next": "trafo",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_hale",
+          "text": "You say nothing and look toward the Halls, whose blue light shows from the ridge.",
+          "next": "trafo",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "kula": {
+      "paragraphs": [
+        {
+          "t": "You press the button and ask the Tower to read you the orders one by one. At the other end someone breathes for a long while before starting."
+        },
+        {
+          "t": "“First: the Fast Line until five. Second: the Dark Hour in order. Hill at ten, Market at eleven, Slope at midnight.”",
+          "who": "Neda",
+          "lead": "The order of darkness."
+        },
+        {
+          "t": "The order of darkness is on a paper in her hand. You can’t see it, but you hear it: every word has its weight, as if Neda were reading out the names of people who don’t yet know they are on a list.",
+          "lead": "Names on a list."
+        },
+        {
+          "t": "“The Slope is the hospital district.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I know what the Slope is. No exceptions. The order says without exceptions, black on white, with the seal of the Grid Council.”",
+          "who": "Neda",
+          "lead": "The Grid Council’s seal."
+        },
+        {
+          "t": "Behind her voice another phone rings in the Tower. Someone picks up, listens, puts it down. For the third time tonight it is the same number, the one on Svod’s list.",
+          "lead": "The phone that won’t stop."
+        },
+        {
+          "t": "“Svod says their big computation can’t be interrupted. If it stops, it starts over, and that is a week.”",
+          "who": "Neda",
+          "lead": "The big computation."
+        },
+        {
+          "t": "The big computation is what the Halls do: the computing halls of the Svod company, which work at night because it is cooler and there is more power. Or there would be, if the Long Line could carry it.",
+          "lead": "What the Halls compute."
+        },
+        {
+          "t": "“Who wrote the contract with Svod?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Council, five years ago. Svod paid for the Tower’s new building and new wire to the fields, and the Council signed that the Fast Line has priority whenever needed.”",
+          "who": "Neda",
+          "lead": "A contract from five years ago."
+        },
+        {
+          "t": "It sounds like something that was smart to sign back then and is foolish to read now. Your first thought is to ask who signed it. Your second is that the answer is already written down somewhere in the Tower’s papers, among pages nobody opens.",
+          "lead": "Papers nobody opens."
+        },
+        {
+          "t": "Neda coughs, then apologizes. It’s dry in the Tower, she says; the coolers run only for the machines, people don’t count when it comes to heat. She laughs for the first time, briefly, as if testing whether she still can.",
+          "lead": "A short laugh in the Tower."
+        },
+        {
+          "t": "While she listens to herself speak, Neda stops. In the background you hear someone turning the pages of a thick book, because the Tower still keeps its log on paper, the way it was done before any machine learned to count.",
+          "lead": "The paper log in the Tower."
+        },
+        {
+          "t": "“I’m not asking you to like it. I’m asking you to hear me.”",
+          "who": "Neda"
+        }
+      ],
+      "prompt": "Neda waits for you to confirm.",
+      "choices": [
+        {
+          "id": "ku_potvrda",
+          "text": "You confirm the order as it was issued.",
+          "next": "trafo",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "ku_pismeno",
+          "text": "You ask her to send the order in writing, signed.",
+          "next": "trafo",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "ku_pitas",
+          "text": "You ask her what she would do in your place.",
+          "next": "trafo",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "trafo": {
+      "chapter": "c1",
+      "img": "trafo",
+      "paragraphs": [
+        {
+          "t": "The transformer hall is low and warm like a throat. Six black boxes hum on three different notes, and between them hangs a lamp that throws orange light on the oil stains on the floor."
+        },
+        {
+          "t": "On the wall is a speaker grille, and beside it a small plate with one word: Automat. It guards the Long Line: when the wire overheats, it trips the line, no questions, no waiting.",
+          "lead": "A plate on the wall."
+        },
+        {
+          "t": "Automat has no face, but it has a habit: before every sentence you hear a soft click, like someone opening their mouth to speak. You listen to it and realize it is waiting for you, as it waits for everyone who lingers more than a minute.",
+          "lead": "A click before the sentence."
+        },
+        {
+          "t": "Under the grille on the wall you see a faded sign, OLD LINE, with an arrow pointing at the floor. You walked past it earlier without noticing.",
+          "lead": "A sign under the grille.",
+          "if": {
+            "pick": "k_stari"
+          }
+        },
+        {
+          "t": "On the wall, under glass, hangs the fault log. One line was entered recently, in your own hand, and Automat confirms it with a soft click: joint number five, hot.",
+          "lead": "The fault log.",
+          "if": {
+            "pick": "k_spoj"
+          }
+        },
+        {
+          "t": "Among the six notes of the transformers you now hear a seventh: low, even, the Fast Line’s. You hear it because you were just watching it, blue, from afar.",
+          "lead": "The third note.",
+          "if": {
+            "pick": "k_hale"
+          }
+        },
+        {
+          "t": "Automat has already logged your confirmation: “Fast Line order received from the duty operator at 20:12.” The letters appear on a small screen without a trace of emotion.",
+          "lead": "The confirmation on the screen.",
+          "if": {
+            "pick": "ku_potvrda"
+          }
+        },
+        {
+          "t": "Next to the grille the printer has spat out a sheet: a written Council order, still warm, sealed at the bottom. The Council demands the Fast Line be left alone, and signs by hand, hurried and illegible.",
+          "lead": "The written order from the printer.",
+          "if": {
+            "pick": "ku_pismeno"
+          }
+        },
+        {
+          "t": "“I would look at the Old Line. I didn’t tell you that. Just so you know I thought it.”",
+          "who": "Neda",
+          "lead": "Neda from the speaker.",
+          "if": {
+            "pick": "ku_pitas"
+          }
+        },
+        {
+          "t": "“Long Line limit: ninety-one degrees. Currently: eighty-six.”",
+          "who": "Automat"
+        },
+        {
+          "t": "“At the limit I open the line. The operator’s key moves the limit by twenty minutes. Every move is logged.”",
+          "who": "Automat",
+          "lead": "What the key does."
+        },
+        {
+          "t": "In the drawer under the grille lies a key on a black ribbon, and beside it a log full of entries in one handwriting, up to Wednesday. The last line is unfinished. Someone began a sentence and left it.",
+          "lead": "The key in the drawer."
+        },
+        {
+          "t": "“What does the last line say?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Last entry: limit move not carried out. Reason: operator left the station.”",
+          "who": "Automat",
+          "lead": "The last entry."
+        },
+        {
+          "t": "So the previous operator didn’t simply leave. They left a key in a drawer and a sentence no one finished. Somewhere above you, in the wall, a pipe creaks: it is cooling, and a cooling pipe creaks when it knows it will be heated again.",
+          "lead": "A creak in the wall."
+        },
+        {
+          "t": "Six transformers, and one of them has a red plate: it doesn’t work, but nobody may switch it off, because Automat would report a fault, and a fault would have to be logged, and a log entry signed. At Greben nothing gets repaired, because repairs leave a signature.",
+          "lead": "The transformer with the red plate."
+        },
+        {
+          "t": "“Why doesn’t anyone fix it?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“No repair request has been submitted.”",
+          "who": "Automat"
+        },
+        {
+          "t": "“I continue to operate according to the rules.”",
+          "who": "Automat"
+        }
+      ],
+      "prompt": "The humming works its way into your bones.",
+      "choices": [
+        {
+          "id": "t_kljuc",
+          "text": "You take the key and hang it around your neck.",
+          "next": "poziv",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "t_ostavi",
+          "text": "You leave the key in the drawer and close it.",
+          "next": "poziv",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "t_pitas",
+          "text": "You ask Automat how much the line can carry before it reaches the limit.",
+          "next": "poziv",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "poziv": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "By ten the wind turns, and the telephone in the station, the one with the cord and the rotary dial that nobody uses, starts to ring. As you climb the stairs out of the hall, it rings for the seventh time."
+        },
+        {
+          "t": "The key bounces on your chest as you run. Cold metal against your skin, like a witness that says nothing.",
+          "lead": "The key on your chest.",
+          "if": {
+            "pick": "t_kljuc"
+          }
+        },
+        {
+          "t": "Your hand goes to your pocket, where the key would be, then comes back. You left it in the drawer, like your predecessor.",
+          "lead": "A hand in an empty pocket.",
+          "if": {
+            "pick": "t_ostavi"
+          }
+        },
+        {
+          "t": "“By midnight the limit drops to ninety. At the same load, that is fifty minutes.”",
+          "who": "Automat",
+          "lead": "Automat once more.",
+          "if": {
+            "pick": "t_pitas"
+          }
+        },
+        {
+          "t": "On the other end is Ruža, the night nurse in the Slope hospital district. She got the station’s number from a note under the glass on the desk in the Tower.",
+          "lead": "A telephone with a dial.",
+          "if": {
+            "notPick": "s_kula"
+          }
+        },
+        {
+          "t": "On the other end is Ruža, the night nurse on the Slope. Neda gave her the station’s number when she heard you ask about the hospital.",
+          "lead": "A telephone with a dial.",
+          "if": {
+            "pick": "s_kula"
+          }
+        },
+        {
+          "t": "“The generator has fuel for thirty-five minutes. The tanker never arrived, and diesel has gone up so much that nobody sends it without a contract.”",
+          "who": "Ruža",
+          "lead": "Thirty-five minutes."
+        },
+        {
+          "t": "“Three ventilators run on electricity. Is it true the Slope goes dark at midnight?”",
+          "who": "Ruža"
+        },
+        {
+          "t": "“Who is on them?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A woman of seventy, a boy of ten, and a man with no name. They found him at the Market. Nobody comes for him.”",
+          "who": "Ruža",
+          "lead": "Three on the machines."
+        },
+        {
+          "t": "The ten-year-old boy sleeps in the room by the window. Ruža told him the light in the street is a lamp someone keeps burning so he won’t be cold, and every evening he checks that it is still there.",
+          "lead": "The boy and the lamp."
+        },
+        {
+          "t": "Ruža doesn’t beg. That is what hits you. She speaks like someone who has already worked out what thirty-five minutes comes to, how many breaths, how many hands, and now waits to see whether you do the sums differently.",
+          "lead": "A sum already done."
+        },
+        {
+          "t": "You can hear her breathing, calm, like someone who learned to talk in a hallway of sleeping patients. In the background something beeps, then goes quiet: a monitor that someone has muted by hand.",
+          "lead": "Breath at the other end of the wire."
+        },
+        {
+          "t": "Behind your shoulder the Halls glow in the window like an enormous, calm fish. For the first time tonight you realize that the hour passing here at the station is passing on the Slope too, with a completely different weight.",
+          "lead": "The Halls in the window."
+        }
+      ],
+      "prompt": "What will you say to Ruža?",
+      "choices": [
+        {
+          "id": "p_obecanje",
+          "text": "You promise Ruža you will do what you can and hang up to go see Bora.",
+          "next": "stari",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "p_istina",
+          "text": "You tell Ruža the truth about midnight and ask her to prepare the ward.",
+          "next": "dario",
+          "w": {
+            "o": 2
+          }
+        },
+        {
+          "id": "p_skratio",
+          "text": "You cut the call short, because a man from Svod is waiting at the station gate.",
+          "next": "dario",
+          "w": {
+            "t": 2
+          }
+        }
+      ]
+    },
+    "dario": {
+      "img": "greben",
+      "paragraphs": [
+        {
+          "t": "Right after the call Ruža sent a message: just a room number and a thank you. She is the first to thank you tonight, and you haven’t done anything yet.",
+          "lead": "A message from Ruža.",
+          "if": {
+            "pick": "p_istina"
+          }
+        },
+        {
+          "t": "At the station gate stands a young man in a worn sweater, a laptop under his arm and the marks of a sleepless night under his eyes. Behind him on the track a car idles quietly with its headlights on. Dust covers him to the knees, like someone who walked part of the way.",
+          "lead": "A man at the gate."
+        },
+        {
+          "t": "He has been waiting a long time. His headlights have switched off and on several times in the meantime, like someone unsure whether to knock.",
+          "lead": "Headlights going on and off.",
+          "if": {
+            "pick": "p_skratio"
+          }
+        },
+        {
+          "t": "His name is Dario and he is an engineer at Svod. His job is to tie the Halls to the grid, which tonight means tying the Halls to you. He apologizes before he speaks, not because he has to, but because he doesn’t know any other way.",
+          "lead": "A man from Svod, apologizing."
+        },
+        {
+          "t": "“I know it’s late and nobody asked for me. I brought the answer to the question the Tower will only ask you tomorrow.”",
+          "who": "Dario",
+          "lead": "An answer before the question."
+        },
+        {
+          "t": "“The big computation can’t stop. Three hundred people in the Halls live off it, and the city lives off what the Halls pay for power. If it stops, it doesn’t resume: it starts over, a week later.”",
+          "who": "Dario",
+          "lead": "Three hundred people and one week."
+        },
+        {
+          "t": "Behind him, in the valley, the Halls glow blue, like an aquarium the size of a city. The coolers on the roofs breathe out white steam, and under it, in long rows, hundreds of thousands of cabinets hum, and nobody knows what they are really thinking.",
+          "lead": "A blue aquarium in the valley."
+        },
+        {
+          "t": "“What are they even computing?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I don’t know. I only know that when they stop, everyone asks me.”",
+          "who": "Dario",
+          "lead": "Dario admits it."
+        },
+        {
+          "t": "“And if I refuse?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then I’ll go back and report that you refused. And that I didn’t know what to say.”",
+          "who": "Dario",
+          "lead": "What if you refuse."
+        },
+        {
+          "t": "Dario doesn’t try to sound stronger than he is. You look at his shoes: leather, dusty, with a lace that has come undone and that he hasn’t noticed. He doesn’t look like someone who rules the world. He looks like someone trying not to drop it.",
+          "lead": "The untied lace."
+        },
+        {
+          "t": "On the back seat of the car you see two boxes of food and a thermos. He brought dinner too, for himself and for you, and that small thing bothers you more than anything he has said.",
+          "lead": "Dinner on the back seat."
+        },
+        {
+          "t": "“I’m offering you two things. A tanker of fuel for the hospital before midnight, and a new transformer for the Long Line, so the heat no longer decides how much you can carry.”",
+          "who": "Dario",
+          "lead": "Two things on offer."
+        },
+        {
+          "t": "“In return I need one sentence in the log: no disruptions.”",
+          "who": "Dario",
+          "lead": "One sentence."
+        },
+        {
+          "t": "He is not lying. You can tell by the way he stands, with hands he doesn’t know where to put. That is exactly what irritates you.",
+          "lead": "A man who isn’t lying."
+        }
+      ],
+      "prompt": "The headlights light up the gate, and Dario waits.",
+      "choices": [
+        {
+          "id": "d_prihvata",
+          "text": "You accept the offer and write in the log: no disruptions.",
+          "next": "polja",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "d_odbija",
+          "text": "You refuse the offer and go back inside, toward the board.",
+          "next": "polja",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "d_trazi",
+          "text": "You demand that the tanker reach the Slope before you write anything.",
+          "next": "polja",
+          "w": {
+            "t": 1,
+            "o": 1
+          }
+        }
+      ]
+    },
+    "stari": {
+      "img": "stari",
+      "paragraphs": [
+        {
+          "t": "The path to the Old Line runs down the hill, through dry brush that snags your trousers. The moon is up, and beneath it the old switchyard stands like a graveyard of monuments: a row of rusted pylons, an iron box with a flat handle, and insulators with grass in their teeth."
+        },
+        {
+          "t": "Bora got here before you, though he should have been slower. Two tools lie on the ground by the door, and he pretends he did not set them out.",
+          "lead": "Bora, who arrived first.",
+          "if": {
+            "pick": "k_stari"
+          }
+        },
+        {
+          "t": "Bora got here before you. Searching his pockets for a tool, he finds only a screwdriver and studies it as if he’d never seen one.",
+          "lead": "Bora, who arrived first.",
+          "if": {
+            "notPick": "k_stari"
+          }
+        },
+        {
+          "t": "“The lever’s there. By hand, like the old days. Pull it and the line is alive. Don’t, and it stays dead, and so does the story.”",
+          "who": "Bora",
+          "lead": "The lever on the box."
+        },
+        {
+          "t": "You grip the lever with both hands. It doesn’t move. Bora watches you from the side, then leans in and pulls with you: the metal screeches as if waking, gives a finger’s width, then another, then stops.",
+          "lead": "Metal waking up."
+        },
+        {
+          "t": "“The insulators are old. Nine years of wind. I wouldn’t run it at full load for more than an hour.”",
+          "who": "Bora"
+        },
+        {
+          "t": "“What happens after an hour?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“After an hour you have a grass fire or a cold line. I never found out which.”",
+          "who": "Bora",
+          "lead": "One hour."
+        },
+        {
+          "t": "Bora touches an insulator with the tip of one finger, the way you touch a horse. Under the dust the glaze is still whole, dark green, with fine cracks like an old plate.",
+          "lead": "The glaze on the insulator."
+        },
+        {
+          "t": "The two of you go down to the box with the lever. Bora raises a lantern under it, and you see the handle is worn smooth in just one place, where some palm once closed on it for the last time: broad, with short fingers, much like Bora’s.",
+          "lead": "A handle worn by a single palm."
+        },
+        {
+          "t": "“I switched it off. They ordered me to. That’s why I don’t mention it unless somebody asks.”",
+          "who": "Bora",
+          "lead": "Who switched off the Old Line."
+        },
+        {
+          "t": "“They were built by people who believed someone would come. They wrote no instructions, thinking whoever came would know.”",
+          "who": "Bora",
+          "lead": "People who believed."
+        },
+        {
+          "t": "“I don’t know.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“You know more than you think. You got here.”",
+          "who": "Bora"
+        },
+        {
+          "t": "As he speaks he looks at the pylons, and for the first time you see small white marks on them, like on people who have cried and wiped their faces on a sleeve. On every insulator someone once wrote a number in chalk, and the wind has not erased it.",
+          "lead": "Numbers on the insulators."
+        },
+        {
+          "t": "Your phone buzzes in your pocket. A message from Ruža, one word: “Waiting.” No question mark, as if it goes without saying.",
+          "lead": "A message in your pocket.",
+          "if": {
+            "pick": "p_obecanje"
+          }
+        }
+      ],
+      "prompt": "The lever and the chain lie side by side.",
+      "choices": [
+        {
+          "id": "st_polugu",
+          "text": "You free the lever so it is ready, but you do not pull it.",
+          "next": "polja",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "st_lanac",
+          "text": "You lock the lever with the chain and take the key.",
+          "next": "polja",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "st_zapis",
+          "text": "You leave everything as it is and write down what you saw.",
+          "next": "polja",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "polja": {
+      "chapter": "c2",
+      "img": "polja",
+      "paragraphs": [
+        {
+          "t": "The radio from the fields comes through static, as if someone were speaking through a blanket. First the wind, then a sound beneath it: soft clicking, row after row, as if someone were closing a thousand windows."
+        },
+        {
+          "t": "Kosta is a technician at the Bright Fields, fifteen years now. He walks among the rows of panels with a lantern, because daylight left long ago and old habits stay. He sounds like someone who stopped getting excited many years ago.",
+          "lead": "A technician with a lantern."
+        },
+        {
+          "t": "“Greben, fields. Don’t ask how it’s going. We’re switching off twenty rows at a time, so the line doesn’t snap.”",
+          "who": "Kosta",
+          "lead": "Switching off, row by row."
+        },
+        {
+          "t": "“I heard the Svod people came by. That young man looks like he’s been crying. So I trust him and I don’t, both at once.”",
+          "who": "Kosta",
+          "lead": "Kosta on Svod.",
+          "if": {
+            "pick": "d_prihvata"
+          }
+        },
+        {
+          "t": "“I heard you told them no. Thank you, but I’ll be honest, I’m not sure what’s harder: to praise you or to pity you.”",
+          "who": "Kosta",
+          "lead": "Kosta on Svod.",
+          "if": {
+            "pick": "d_odbija"
+          }
+        },
+        {
+          "t": "“I heard you asked for the tanker before signing. Some people talk like that, and some people actually do it. We’ll see.”",
+          "who": "Kosta",
+          "lead": "Kosta on Svod.",
+          "if": {
+            "pick": "d_trazi"
+          }
+        },
+        {
+          "t": "“Bora told me the lever’s been freed. That’s a nice word for people who know what it means.”",
+          "who": "Kosta",
+          "lead": "Kosta on the lever.",
+          "if": {
+            "pick": "st_polugu"
+          }
+        },
+        {
+          "t": "“Bora told me you put the lever in a chain. It’s smart that somebody holds the key. It’s smart, too, that nobody holds it too long.”",
+          "who": "Kosta",
+          "lead": "Kosta on the lever.",
+          "if": {
+            "pick": "st_lanac"
+          }
+        },
+        {
+          "t": "“Bora says you wrote everything down. Somebody has to know what’s left of what isn’t.”",
+          "who": "Kosta",
+          "lead": "Kosta on the lever.",
+          "if": {
+            "pick": "st_zapis"
+          }
+        },
+        {
+          "t": "“The sun made more today than the line can take. The excess is thrown away, the shortfall made up with diesel in the city. That’s how it goes now.”",
+          "who": "Kosta",
+          "lead": "Sun with nowhere to go."
+        },
+        {
+          "t": "The “wasted” counter on your board jumps while he speaks. Every jump is one village that would have had enough light until morning, and will never see it.",
+          "lead": "The counter that jumps."
+        },
+        {
+          "t": "“Batteries full since noon. Nowhere for it to go. So we just switch off.”",
+          "who": "Kosta"
+        },
+        {
+          "t": "You hear him set the lantern on the ground, and something cracks under his boot in the background: a dried crust of earth that has never cooled beneath the panels.",
+          "lead": "The ground under the panels."
+        },
+        {
+          "t": "“I’m not telling you what to do. I’m telling you what I can do: whatever you say, I pass it on.”",
+          "who": "Kosta",
+          "lead": "What Kosta can do."
+        },
+        {
+          "t": "You hear Kosta sit down on an overturned crate. A thin smell of kerosene comes from the lantern, and behind it, in the distance, a row of panels going dark crackles like glass in the cold.",
+          "lead": "Lantern and kerosene."
+        },
+        {
+          "t": "Somewhere in the rows still running, a panel cracks from the heat. The sound is short, like a clap. Kosta sighs and writes something on the back of his hand with a pencil he keeps behind his ear.",
+          "lead": "A panel cracking."
+        },
+        {
+          "t": "“What would you do in my place?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I’m a technician, not the duty operator. Nobody asks me. But I’d stay awake, and that is all the advice I know how to give.”",
+          "who": "Kosta",
+          "lead": "A technician’s advice."
+        }
+      ],
+      "prompt": "Kosta waits for your word.",
+      "choices": [
+        {
+          "id": "po_pola",
+          "text": "You ask the fields to cut their output by half, so the line can cool.",
+          "next": "ponoc",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "po_sve",
+          "text": "You ask them to send everything they have and let Automat decide.",
+          "next": "ponoc",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "po_stari",
+          "text": "You ask them to stay ready to switch everything to the Old Line on your word.",
+          "next": "ponoc",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "ponoc": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "At ten to midnight the needle on the board turns red. The room smells of hot dust and of thermos coffee someone forgot on the bench."
+        },
+        {
+          "t": "“Long Line: eighty-nine. Limit: ninety-one.”",
+          "who": "Automat"
+        },
+        {
+          "t": "Through the east window you see Lantar. The Hill is already black. The Market glows in a few windows only, like candle traces, and the Slope, last of all, still holds its light, a narrow golden fist in the dark.",
+          "lead": "A city going dark, district by district."
+        },
+        {
+          "t": "Kosta reports: the fields have cut output by half and the line is cooling, but the City Line is getting less, and the darkness in the Market is spreading faster than planned.",
+          "lead": "A message from the fields.",
+          "if": {
+            "pick": "po_pola"
+          }
+        },
+        {
+          "t": "Kosta reports: the fields are sending everything, the line is glowing, and Automat counts every degree.",
+          "lead": "A message from the fields.",
+          "if": {
+            "pick": "po_sve"
+          }
+        },
+        {
+          "t": "Kosta reports a thousand rows of panels waiting for your word, like a choir before the first note.",
+          "lead": "A message from the fields.",
+          "if": {
+            "pick": "po_stari"
+          }
+        },
+        {
+          "t": "On the wall by the board a clock chimes softly. Eleven fifty-two. For the first time tonight you realize that time has become something you can hear.",
+          "lead": "The clock on the wall."
+        },
+        {
+          "t": "“Greben, this is the Tower. Report the line.”",
+          "who": "Neda",
+          "lead": "The Tower asks for the line."
+        },
+        {
+          "t": "Three times tonight you have heard her say it. Each time her voice was quieter and faster, like someone running up stairs who doesn’t want to be heard.",
+          "lead": "Neda speeds up."
+        },
+        {
+          "t": "The room suddenly seems smaller. The board, the radio, the drawer with the key, the window, the dial telephone: each thing has its own voice, they all speak at once, and you are the only one who hears.",
+          "lead": "The room that speaks."
+        },
+        {
+          "t": "In the desk drawer lies a notebook with a list of numbers: Dario, Kosta, Ruža, Neda, and one with no name, struck through with a line. You try to read the number under the line and can’t.",
+          "lead": "The number under the line."
+        },
+        {
+          "t": "The window keeps rocking slightly in its frame. It isn’t the wind; there is none. Something in the building, in the walls, in the pipes and the cable, shifts under a load too great, waiting to be decided.",
+          "lead": "The rocking window."
+        },
+        {
+          "t": "“How long do you need to open the line when it reaches the limit?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Two seconds. The decision is already made. All I wait for is the key.”",
+          "who": "Automat",
+          "lead": "Two seconds."
+        }
+      ],
+      "prompt": "Only a few minutes remain until midnight.",
+      "choices": [
+        {
+          "id": "pn_javi",
+          "text": "You report to Neda that the line is at eighty-nine.",
+          "next": "vrelina",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "pn_ceka",
+          "text": "You wait to see what Automat will do.",
+          "next": "vrelina",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "pn_bora",
+          "text": "You send Bora to the roof to check the fifth pylon.",
+          "next": "vrelina",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "vrelina": {
+      "paragraphs": [
+        {
+          "t": "The line creeps up to the limit, shakes, settles again, like a patient who wakes and sinks back."
+        },
+        {
+          "t": "“Thank you. The Council has just confirmed it will not change the order.”",
+          "who": "Neda",
+          "lead": "Neda answers.",
+          "if": {
+            "pick": "pn_javi"
+          }
+        },
+        {
+          "t": "“Long Line: ninety. At the present load, the limit in twenty-five minutes.”",
+          "who": "Automat",
+          "lead": "Automat counts.",
+          "if": {
+            "pick": "pn_ceka"
+          }
+        },
+        {
+          "t": "“The fifth pylon is worse. The dot is bigger, it crackles and shines. Like that, it melts within half an hour.”",
+          "who": "Bora",
+          "lead": "Bora reports from the roof.",
+          "if": {
+            "pick": "pn_bora"
+          }
+        },
+        {
+          "t": "“Long Line: ninety. At the present load, the limit in twenty-five minutes.”",
+          "who": "Automat",
+          "lead": "Automat counts.",
+          "if": {
+            "notPick": "pn_ceka"
+          }
+        },
+        {
+          "t": "“Greben, the Council asks once more: does the Fast Line stay untouched? I need your yes, {ime}.”",
+          "who": "Neda",
+          "lead": "The Council wants a yes."
+        },
+        {
+          "t": "Bora comes in without knocking, his lantern still lit. Through the window you can see the fifth pylon, and the dot on it is bigger than it was half an hour ago.",
+          "lead": "Bora at the door."
+        },
+        {
+          "t": "The telephone on the desk rings twice and goes quiet. You look: no light is on, no call has come in. The phone rang by itself, from the heat, the way old iron sometimes speaks up.",
+          "lead": "The phone that rings by itself."
+        },
+        {
+          "t": "Sweat runs down your back, your shirt sticks to the chair. Not one lamp on the board flickers for nothing. This is a night when everything lights up and nothing works.",
+          "lead": "Sweat and lamps."
+        },
+        {
+          "t": "“If Automat doesn’t open it, the joint will melt. And then the dry grass underneath burns. If it opens it, the city loses the Long Line, and they ask you.”",
+          "who": "Bora",
+          "lead": "Two fires."
+        },
+        {
+          "t": "“How many people are in the Halls tonight?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Thirty or so on night shift. Coffee and screens. They don’t know what they’re watching.”",
+          "who": "Bora",
+          "lead": "The Halls’ night shift."
+        },
+        {
+          "t": "You look down at the board and see them as dots: thirty-some people who don’t know that one joint on the fifth pylon outweighs their computation. And beneath them, a quarter of a city that doesn’t know its darkness is written in your log.",
+          "lead": "Thirty-odd dots on the board."
+        },
+        {
+          "t": "You wrote that joint in the log a few hours ago. Now you can see it with the naked eye, and you know that the page you filled is no longer just paper.",
+          "lead": "The joint in the log.",
+          "if": {
+            "pick": "k_spoj"
+          }
+        },
+        {
+          "t": "The key hangs around your neck, warm from your skin. You want to take it off, then close your fist around it, then hide it in a pocket.",
+          "lead": "The key on its ribbon.",
+          "if": {
+            "pick": "t_kljuc"
+          }
+        },
+        {
+          "t": "The key sleeps in the drawer under Automat’s grille. It is three steps and one thought away.",
+          "lead": "The key in the drawer.",
+          "if": {
+            "notPick": "t_kljuc"
+          }
+        }
+      ],
+      "prompt": "Neda waits, Automat counts, and Bora says nothing.",
+      "choices": [
+        {
+          "id": "v_dario",
+          "text": "You call Dario and ask the Halls to cut their consumption.",
+          "next": "grad",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "v_kosta",
+          "text": "You call Kosta and ask the fields to get everything they have ready.",
+          "next": "grad",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "v_niko",
+          "text": "You call no one and wait to see what Automat will do.",
+          "next": "grad",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "grad": {
+      "img": "lantar",
+      "paragraphs": [
+        {
+          "t": "The blue light of the Halls fades to half, like someone turning down a wick. Dario answered, and you know it will cost him.",
+          "lead": "A light that fades.",
+          "if": {
+            "pick": "v_dario"
+          }
+        },
+        {
+          "t": "Far to the west the fields flash once, all the rows at the same moment, like an eye opening. Kosta answered, and waits, ready.",
+          "lead": "A flash in the west.",
+          "if": {
+            "pick": "v_kosta"
+          }
+        },
+        {
+          "t": "You called no one, so in the east nothing changes: the Halls blue, the Slope gold, the darkness around them untouched.",
+          "lead": "The same horizon.",
+          "if": {
+            "pick": "v_niko"
+          }
+        },
+        {
+          "t": "You step out onto the terrace. Lantar lies below the ridge in darkness, and at its edge the Halls glow blue, as if they alone knew what time it is. The wind has stopped completely.",
+          "lead": "The terrace above the city."
+        },
+        {
+          "t": "At midnight the light on the Slope trembles. A moment of darkness. Then one weak yellow light: the generator, and after it, one by one, the hospital windows.",
+          "lead": "The Slope at midnight."
+        },
+        {
+          "t": "Your phone rings. Ruža speaks briefly, without preamble, the way people speak when they are counting.",
+          "lead": "A phone on the terrace."
+        },
+        {
+          "t": "From up here you can hear the city, though midnight has passed: the soft chirping of pipes, the clang of a lid, the voice of a woman calling a child from a window. People in Lantar don’t sleep during the Dark Hour; they stand and wait for the light to return, like birds when a cloud passes.",
+          "lead": "The sound of a city in the dark."
+        },
+        {
+          "t": "Down in the Market square somebody lights a fire in a barrel. People gather round it, stretch their fingers toward the flame, and the flame lights their faces yellow. From here they look like icons.",
+          "lead": "A fire in the Market."
+        },
+        {
+          "t": "“You said you’d try. Keep trying. The generator is running, thirty-five minutes. I’ll call at fifteen.”",
+          "who": "Ruža",
+          "lead": "Ruža reports.",
+          "if": {
+            "pick": "p_obecanje"
+          }
+        },
+        {
+          "t": "“The ward is ready, as you said. The generator is running, thirty-five minutes. I’ll call at fifteen.”",
+          "who": "Ruža",
+          "lead": "Ruža reports.",
+          "if": {
+            "pick": "p_istina"
+          }
+        },
+        {
+          "t": "“I didn’t get to tell you everything. The generator is running, thirty-five minutes. I’ll call at fifteen.”",
+          "who": "Ruža",
+          "lead": "Ruža reports.",
+          "if": {
+            "pick": "p_skratio"
+          }
+        },
+        {
+          "t": "You watch the generator drive the hospital light. Beneath it you can barely make out the yard, and in the yard, on a bench, someone has left a wheelchair. Someone was sitting here an hour ago.",
+          "lead": "The hospital yard in the distance."
+        },
+        {
+          "t": "The wind returns, and with it a sound you did not expect: a small bell from the hospital gate, held in someone’s hand and rung at even intervals, so that people know it is there. It reaches the ridge thin, like a thread.",
+          "lead": "A bell from the Slope."
+        },
+        {
+          "t": "“That’s the cart bell. We ring it so they know where we are, if they come.”",
+          "who": "Ruža",
+          "lead": "The cart bell."
+        },
+        {
+          "t": "Behind you, in the room, Automat goes on counting. You can’t hear it, but you know it is there, like a watch in your pocket.",
+          "lead": "Automat at your back."
+        }
+      ],
+      "prompt": "Ruža will call when fifteen minutes remain.",
+      "choices": [
+        {
+          "id": "g_ruza",
+          "text": "You stay on the line with Ruža and count the minutes with her.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "g_neda",
+          "text": "You call Neda and ask that the Council hear about the generator.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "g_tisina",
+          "text": "You stay on the terrace and watch, without calling anyone.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "img": "komandna",
+      "paragraphs": [
+        {
+          "t": "At half past twelve the Long Line is at ninety. The limit is near, and morning far away. Ruža called at fifteen minutes, then at ten. The next call will come at five. The board shows you all three lines at once, as if asking you to take them in with a single look."
+        },
+        {
+          "t": "The key around your neck has become heavy as a medal. Every time you touch it, Automat logs that you touched it.",
+          "lead": "The key that gets logged.",
+          "if": {
+            "pick": "t_kljuc"
+          }
+        },
+        {
+          "t": "The Council’s written order arrives on the board, sealed, as you asked: the Fast Line without exceptions until five. Beneath it, an illegible signature, written in haste.",
+          "lead": "The written order.",
+          "if": {
+            "pick": "ku_pismeno"
+          }
+        },
+        {
+          "t": "The log lies open before you, at the page with your handwriting. Beneath it an empty space is left, just right for two words.",
+          "lead": "An empty log page.",
+          "if": {
+            "pick": "d_prihvata"
+          }
+        },
+        {
+          "t": "Dario left a business card under a stone in front of the gate. You know you can call him and that he will come.",
+          "lead": "A card under a stone.",
+          "if": {
+            "pick": "d_odbija"
+          }
+        },
+        {
+          "t": "The tanker waits in front of the Slope gate, engine running, and won’t move until your log entry arrives.",
+          "lead": "The tanker at the gate.",
+          "if": {
+            "pick": "d_trazi"
+          }
+        },
+        {
+          "t": "The lever under the station waits, freed and oiled. If you pull it, the Old Line comes alive.",
+          "lead": "The waiting lever.",
+          "if": {
+            "pick": "st_polugu"
+          }
+        },
+        {
+          "t": "The lever under the station lies in its chain, and the key to the chain presses at your pocket. Half a minute to unlock it.",
+          "lead": "The lever in chains.",
+          "if": {
+            "pick": "st_lanac"
+          }
+        },
+        {
+          "t": "You recorded the Old Line in the log as “found condition”. The lever under the station stands as it stood, cold, untouched.",
+          "lead": "Found condition.",
+          "if": {
+            "pick": "st_zapis"
+          }
+        },
+        {
+          "t": "Dario let you know that the Halls can cut consumption by half, but for no more than half an hour, and that it will look like a fault, not a concession.",
+          "lead": "A message from the Halls.",
+          "if": {
+            "pick": "v_dario"
+          }
+        },
+        {
+          "t": "Kosta reports a thousand rows waiting, ready to send everything the moment you say the word.",
+          "lead": "A message from the fields.",
+          "if": {
+            "pick": "v_kosta"
+          }
+        },
+        {
+          "t": "Nobody checked in, because you called no one. The silence in the receiver has weight.",
+          "lead": "Silence on the line.",
+          "if": {
+            "pick": "v_niko"
+          }
+        },
+        {
+          "t": "“Greben, the Council wants an answer now. The Fast Line stays or it doesn’t.”",
+          "who": "Neda",
+          "lead": "The Council wants an answer."
+        },
+        {
+          "t": "Bora stands in the corner with his thermos, silent, watching you as one watches a child holding something hot for the first time.",
+          "lead": "Bora in the corner."
+        },
+        {
+          "t": "The heat has started to ease. Not because anyone has beaten it, but because the sun, on the other side of the world, is sinking into night. But the line doesn’t cool at once: it keeps its heat the way people keep their anger.",
+          "lead": "A line that keeps its heat."
+        },
+        {
+          "t": "“I’m not telling you what to do. I’m telling you what I would do, and I’m old and tired.”",
+          "who": "Bora",
+          "lead": "Bora finally speaks."
+        },
+        {
+          "t": "“And what would you do?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“What I would do doesn’t count. I won’t be here in the morning.”",
+          "who": "Bora"
+        },
+        {
+          "t": "In front of you are three things: the lever under the station, a log with one sentence nobody has yet written, and a board that asks for nothing but to be let run.",
+          "lead": "Three things before you."
+        },
+        {
+          "t": "You think of the ten-year-old boy, of Dario with his untied lace, of Kosta switching off rows, of Neda drinking coffee instead of dinner, of Bora who writes the same letter nineteen times. They all stand before you like people on a platform, and the train has only one window.",
+          "lead": "People on a platform."
+        },
+        {
+          "t": "On the wall above the board hangs an old clock with an iron hand. It doesn’t run; it stands at half past twelve, yet tonight, for once, it has the time right.",
+          "lead": "The clock that stands still."
+        }
+      ],
+      "prompt": "The Council wants an answer now.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "You connect the Old Line and open the limit with the key.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "You write in the log: no disruptions, and accept Svod’s transformer.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "You keep the line within its limit, let the Dark Hour run in order, and touch nothing more.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_slusas",
+        "text": "You turn off the lamp and listen to the line sing.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "img": "stari",
+      "paragraphs": [
+        {
+          "t": "You and Bora go down to the Old Line together. The path is dark, the moon hidden behind a cloud that wasn’t there an hour ago. Bora walks ahead with the lantern and doesn’t turn."
+        },
+        {
+          "t": "The lever moves when you both pull, one hand each, until the metal gives and clicks. From the ground beneath your feet rises a deep, slow tone, like someone in a house lighting the stove after a long winter.",
+          "lead": "The lever gives."
+        },
+        {
+          "t": "The pylons above you begin to hum one by one, and every insulator on which someone once wrote a number in chalk now trembles with current.",
+          "lead": "Pylons that hum."
+        },
+        {
+          "t": "Under the dust, on the box, you find a small plate that nobody has seen before: the maker’s signature, a year, and a sentence neatly etched in tiny letters: let it hold as long as it is needed.",
+          "lead": "A plate on the box."
+        },
+        {
+          "t": "“When you asked me up on the roof, I knew you would come down.”",
+          "who": "Bora",
+          "lead": "Bora laughs.",
+          "if": {
+            "pick": "k_stari"
+          }
+        },
+        {
+          "t": "“I never thought I’d live to pull it.”",
+          "who": "Bora",
+          "lead": "Bora laughs.",
+          "if": {
+            "notPick": "k_stari"
+          }
+        },
+        {
+          "t": "For the first time tonight the City Line is green. Windows light up on the Slope, one by one, and while the generator still has five minutes of fuel, Ruža reports she no longer has to listen to it.",
+          "lead": "The green line on the board."
+        },
+        {
+          "t": "The “wasted” counter on the wall starts running backward for the first time tonight. The needle slides left like a bird landing on a wire: the power that was thrown away is now somewhere, in somebody’s light.",
+          "lead": "The counter running backward."
+        },
+        {
+          "t": "“Greben, who connected this?”",
+          "who": "Neda",
+          "lead": "Neda asks."
+        },
+        {
+          "t": "“I did.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then you’ll sign for it. And I’ll stand next to you when they read it out.”",
+          "who": "Neda",
+          "lead": "Neda doesn’t hang up."
+        },
+        {
+          "t": "While you wait for her to reply, you listen to the ground. The Old Line is alive like an old animal: it sniffs, tests, stretches, then pulls back, and you cannot tell whether it will hold or only sounds strong.",
+          "lead": "The Old Line breathes."
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "img": "lantar",
+      "paragraphs": [
+        {
+          "t": "Around three in the morning an insulator on the Old Line cracks. The sound is short and dry, like someone snapping a twig. Bora and two people from the Slope replace it by moonlight, with a ladder somebody brought from the hospital."
+        },
+        {
+          "t": "The Halls quietly dim their lights around four. For them the big computation starts over, and nobody calls to complain. Only on the board, by the Fast Line, a small orange asterisk remains, like a note in the margin.",
+          "lead": "The Halls, dimmed."
+        },
+        {
+          "t": "On the Slope nobody knows you did this. They only know that in a night that should have been dark, the light stayed on, and the machines kept breathing until morning.",
+          "lead": "A city that doesn’t know."
+        },
+        {
+          "t": "The ten-year-old boy opens his eyes at six, when the street lamp puts out its yellow circle. He asks whether it burned all night. Ruža tells him it did.",
+          "lead": "The boy and the street lamp."
+        },
+        {
+          "t": "Bora sits on the steps in front of the station looking at the top of the fifth pylon. The blue dot is gone. He talks to himself, quietly, like a man writing in an invisible log.",
+          "lead": "Bora on the steps."
+        },
+        {
+          "t": "By eight the calls pile up in the Tower: the Council wants an explanation, Svod wants compensation, the Slope wants to know who turned the lights on. Neda gathers the receivers in both hands and sets one down before you: this one is yours.",
+          "lead": "The Tower calling."
+        },
+        {
+          "t": "Dawn rises over the Bright Fields, and the rows of panels switch on one after another, like pages being turned. The first to reach the station is a messenger from the Council, a folder under one arm. They hand it over without a word, and you open it.",
+          "lead": "A messenger at the gate."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "img": "hale",
+      "paragraphs": [
+        {
+          "t": "You write two words in the log, in a hand that seems someone else’s. Dario nods, without smiling, like someone who expected it. The pencil leaves a thin, flat line on the paper, and the page closes by itself."
+        },
+        {
+          "t": "“I told you the tanker comes before the signature. I don’t always keep my word, but this time I did.”",
+          "who": "Dario",
+          "lead": "Dario and the tanker.",
+          "if": {
+            "pick": "d_trazi"
+          }
+        },
+        {
+          "t": "“The tanker’s already on its way. Thank you. I can’t say how much.”",
+          "who": "Dario",
+          "lead": "Dario and the tanker.",
+          "if": {
+            "notPick": "d_trazi"
+          }
+        },
+        {
+          "t": "The tanker crosses the Slope gate at 12:33, two minutes before the generator coughs. Ruža reports that the generator swallows fuel like a thirsty horse, but it swallows, and that the dark in her ward is no longer called dark, only night.",
+          "lead": "The tanker at the hospital gate."
+        },
+        {
+          "t": "Behind Dario, on the track, you see the car turn around. The driver is not heading to the Halls but to the city, because the tanker has priority, and priority is exactly what you gave it. The headlights slide over the stones like fingers over keys.",
+          "lead": "Headlights on the road."
+        },
+        {
+          "t": "Dario lingers at the gate a moment longer, like someone unused to getting what he came for. He apologizes once more, and this time it sounds like something else: like gratitude that doesn’t know how to be said aloud.",
+          "lead": "Dario lingers at the gate."
+        },
+        {
+          "t": "The Halls hum until five in the morning, evenly, like one long sentence that never ends. The blue light in the valley never flickers. The Long Line, by your hand, was opened for the last time at 1:40, for ten seconds.",
+          "lead": "The Halls that never stop."
+        },
+        {
+          "t": "In the room, Automat quietly records: Fast Line load uninterrupted until five, no operator entry. It sounds like a sigh of relief, but you know it is only its way of saying everything went by the rules.",
+          "lead": "Automat logs."
+        },
+        {
+          "t": "Bora says nothing. He fills two cups from the thermos and hands you neither.",
+          "lead": "Bora is silent."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "img": "polja",
+      "paragraphs": [
+        {
+          "t": "The truck with the transformer arrives at Greben at six, before the sun is up. On the trailer, tied down with chains, sits a piece of black iron bigger than the station. Two people in bright overalls are already measuring the ground."
+        },
+        {
+          "t": "Dario offers you his hand. You take it. His is cold and dry, like the hand of someone who has held a laptop for too long.",
+          "lead": "Dario offers his hand."
+        },
+        {
+          "t": "Bora steps out in front of the station and looks at the truck longer than needed. Not at the load. At the empty place beside the fifth pylon, where something new will soon rise.",
+          "lead": "Bora looks at the truck."
+        },
+        {
+          "t": "“Twenty years and I’d never seen anyone bring anything new. Here it is. I don’t know what to feel.”",
+          "who": "Bora",
+          "lead": "Bora doesn’t know what he feels."
+        },
+        {
+          "t": "The truck backs up with a screech, and the metal touches the ground like a guest crossing a threshold for the first time. The earth shudders and goes still, and you stand around the new iron as around an animal that has just settled in.",
+          "lead": "Iron touches the ground."
+        },
+        {
+          "t": "The sixth pylon will go up by Monday, they say. The fifth, the one with the hot joint, will be replaced even sooner. On the board, under your eyes, the lines lie quiet like sleeping snakes.",
+          "lead": "A new pylon."
+        },
+        {
+          "t": "Dario sits on a crate by the truck eating a sandwich he brought for both of you. He hands you half, you accept, and you chew in silence, like two people who survived the same night for different reasons.",
+          "lead": "A sandwich on a crate."
+        },
+        {
+          "t": "Later, when you are alone in the room, a fourth line lights up on the board beside the Fast and the Long Line, thin, white, without a name. Somebody at Svod has just entered the first line of something that doesn’t exist yet.",
+          "lead": "The fourth line."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "img": "lantar",
+      "paragraphs": [
+        {
+          "t": "You touch nothing. Automat opens the Long Line at 12:40, for ten seconds, and closes it again, like a sigh. The joint on the fifth pylon stays in its blue glow, but it does not melt."
+        },
+        {
+          "t": "The Dark Hour runs in order. The Slope is dark until one, the hospital runs on the generator, and you count minutes.",
+          "lead": "The Slope in darkness."
+        },
+        {
+          "t": "Meanwhile the Hill sleeps in darkness, and the Market keeps candles in its windows. People stand by their doors and wait, the way Lantar waits out the Dark Hour: without questions, with coffee, by custom.",
+          "lead": "People waiting for the dark."
+        },
+        {
+          "t": "You stayed on the line with Ruža. You count together until the fuel runs out, she aloud, you quietly, like two people holding the same rope.",
+          "lead": "Two on the same wire.",
+          "if": {
+            "pick": "g_ruza"
+          }
+        },
+        {
+          "t": "At 12:35 the generator coughs and goes quiet. The phone stays mute. Only later will you learn that for twenty-five minutes three nurses squeezed the bellows by hand, breath after breath, while a ten-year-old boy held the lamp.",
+          "lead": "The generator coughing."
+        },
+        {
+          "t": "At ten past one the light on the Slope returns, every window at once, like someone opening their eyes. Ruža reports nothing, and you know she is busy.",
+          "lead": "Light on the Slope."
+        },
+        {
+          "t": "You know that in the Tower someone has crossed the Slope off the schedule in chalk: done. With one line, lightly, the way you cross off a day on a calendar.",
+          "lead": "A chalk line in the Tower."
+        },
+        {
+          "t": "Automat opens the Long Line once more, at two in the morning, for five seconds, then closes it again. It logs: carried out according to the rules. About you it writes nothing, because you are not in its rules.",
+          "lead": "Automat speaks up."
+        },
+        {
+          "t": "“Greben, thanks for keeping order. The Council will note the line held its limit.”",
+          "who": "Neda",
+          "lead": "Neda reports."
+        },
+        {
+          "t": "The note in the log, in your handwriting, stays short: schedule kept, line kept. Below it, smaller, somebody else has added in pencil: and nobody asked why.",
+          "lead": "A note in the log."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "img": "svitanje",
+      "paragraphs": [
+        {
+          "t": "By five in the morning the Long Line is cooling, hour by hour. The fields send their surplus into empty air, as every night, and the “wasted” counter stops at a number you will never forget."
+        },
+        {
+          "t": "Bora comes in with two cups from the thermos and sets one in front of you without a word. You hold it in both hands, and as the steam rises, the first rays over the Bright Fields touch the first row of panels.",
+          "lead": "Thermos at dawn."
+        },
+        {
+          "t": "Outside the wind has finally eased. The wires no longer sing, they only grind softly, like old teeth. The fifth pylon still bears scorch marks on its iron, but it holds.",
+          "lead": "The wind has eased."
+        },
+        {
+          "t": "The fields wake one by one, like people in a big, quiet house. Kosta reports the first row has started to send. The “wasted” counter stops and shivers, then moves again, because the sun doesn’t ask whether the line is ready.",
+          "lead": "The fields wake."
+        },
+        {
+          "t": "“Greben, Tower. The shift is over. Your replacement arrives at nine.”",
+          "who": "Neda",
+          "lead": "The Tower at dawn."
+        },
+        {
+          "t": "“And you?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I have one more night.”",
+          "who": "Neda"
+        },
+        {
+          "t": "Before you head home, you check the board once more. Three lines at rest. Only the sound is the same as always: the soft, even note of a wire in the wind.",
+          "lead": "Three lines at rest."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "komandna": {
+      "src": "img/tamni-sat/komandna.webp",
+      "alt": "The control room of Greben Station: a board with three glowing lines",
+      "kind": "place"
+    },
+    "krov": {
+      "src": "img/tamni-sat/krov.webp",
+      "alt": "The roof of Greben Station at dusk, wires and pylons over the dark fields",
+      "kind": "place"
+    },
+    "trafo": {
+      "src": "img/tamni-sat/trafo.webp",
+      "alt": "The transformer hall, an orange lamp and a hum",
+      "kind": "place"
+    },
+    "greben": {
+      "src": "img/tamni-sat/greben.webp",
+      "alt": "The gate of Greben Station, car headlights and the blue glow of the Halls in the valley",
+      "kind": "place"
+    },
+    "polja": {
+      "src": "img/tamni-sat/polja.webp",
+      "alt": "The Bright Fields at night: rows of panels, part of them dark",
+      "kind": "place"
+    },
+    "stari": {
+      "src": "img/tamni-sat/stari.webp",
+      "alt": "The derelict switchyard of the Old Line under the moon",
+      "kind": "place"
+    },
+    "lantar": {
+      "src": "img/tamni-sat/lantar.webp",
+      "alt": "The city of Lantar at night, parts of it in darkness",
+      "kind": "place"
+    },
+    "hale": {
+      "src": "img/tamni-sat/hale.webp",
+      "alt": "The Halls: huge computing halls glowing blue in the valley",
+      "kind": "place"
+    },
+    "svitanje": {
+      "src": "img/tamni-sat/svitanje.webp",
+      "alt": "Dawn over the Bright Fields, seen from the station roof",
+      "kind": "place"
+    },
+    "neda": {
+      "src": "img/tamni-sat/neda.webp",
+      "alt": "Neda, the night-shift dispatcher",
+      "kind": "portrait"
+    },
+    "bora": {
+      "src": "img/tamni-sat/bora.webp",
+      "alt": "Bora, the old mechanic of Greben",
+      "kind": "portrait"
+    },
+    "ruza": {
+      "src": "img/tamni-sat/ruza.webp",
+      "alt": "Ruža, the night nurse",
+      "kind": "portrait"
+    },
+    "dario": {
+      "src": "img/tamni-sat/dario.webp",
+      "alt": "Dario, an engineer from Svod",
+      "kind": "portrait"
+    },
+    "kosta": {
+      "src": "img/tamni-sat/kosta.webp",
+      "alt": "Kosta, a technician at the Bright Fields",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/tamni-sat/citalac-m.webp",
+      "alt": "The duty operator of Greben",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/tamni-sat/citalac-z.webp",
+      "alt": "The duty operator of Greben",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Neda": {
+      "img": "neda"
+    },
+    "Bora": {
+      "img": "bora"
+    },
+    "Ruža": {
+      "img": "ruza"
+    },
+    "Dario": {
+      "img": "dario"
+    },
+    "Kosta": {
+      "img": "kosta"
+    },
+    "Automat": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

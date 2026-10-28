@@ -1,6 +1,7 @@
 {
   "site": {
-    "name": "Other World",
+    "name": "Other World Stories",
+    "shortName": "Other World",
     "skip": "Skip to content",
     "home": "{{name}}, home",
     "footer": "Your progress is saved only in your browser",
@@ -29,6 +30,10 @@
     "soon": "Soon",
     "minutes": "about {{minutes}} min",
     "interactive": "interactive"
+  },
+  "start": {
+    "portraitTitle": "Choose your portrait",
+    "portrait": "Portrait {{n}}"
   },
   "progress": {
     "label": "Story progress, chapter {{index}} of {{total}}"

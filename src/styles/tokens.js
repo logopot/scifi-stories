@@ -96,6 +96,7 @@ export const sizes = {
   cardIcon: '24px',
   cardZoom: 1.04,
   cardNudge: '4px',
+  portraitChoice: '5.5rem',
   avatarSm: '44px',
   avatarMd: '56px',
   ratioPortrait: '3 / 4',
@@ -172,6 +173,8 @@ export const breakpoints = {
   md: '768px',
   lg: '992px',
   xl: '1200px',
+  nameFull: '380px',
+  nameShort: '300px',
 };
 
 // Pozadina "Sky": veličine i položaji mrlja i zvezda (dekor, ne raspored sadržaja).
