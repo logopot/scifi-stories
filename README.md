@@ -195,6 +195,10 @@ Na početku čitalac upiše svoje ime (može i da ga ostavi praznim; tada je Laz
 
 Tekst je napisan u muškom rodu, a ženska varijanta je u dodatnim poljima: `tf` (pasus), `leadf` (nagoveštaj), `textf` (tekst izbora), `closingf` (završetak). Ime se ubacuje tokenima `{ime}`, `{voc}` (zvanje: Lazare, Milice, Petre) i `{IME}`. Zvanje pravi `src/engine/player.js` po pravilima srpskog jezika; za neobična imena ostaje nepromenjeno. Kad menjaš muški tekst pasusa, izmeni i `tf` tog pasusa. Ime i rod se čuvaju uz napredak, a poslednje upisano ime i rod unapred popunjavaju početni ekran sledeće priče.
 
+## Domen
+
+Glavni domen je `otherworldstories.com`. Stara adresa `scifi-stories.pages.dev` (kao i `www.otherworldstories.com`) preusmerava na njega trajnim (301) preusmeravanjem funkcijom iz `functions/_middleware.js`, uz zadržanu putanju i upit. Probne adrese grana (preview, npr. `<grana>.scifi-stories.pages.dev`) ostaju bez preusmeravanja. Provera: `npm run check-redirects`.
+
 ## Objavljivanje
 
 Sajt se hostuje na Cloudflare Pages iz grane `main` (build komanda `npm run build`, izlaz `dist`). Push na `main` pokreće automatski build i objavu. Radi na grani (npr. `landing-page`) i spoji u `main` tek kad je spremno.
