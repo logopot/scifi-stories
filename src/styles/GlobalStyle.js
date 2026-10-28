@@ -1,8 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
+import { fontFaces } from './fonts';
 
 // Jedino mesto za globalna pravila. Bootstrap (reboot + grid) se uvozi jednom u main.jsx,
 // a ovde se dopunjuje tako da boje, fontovi i linkovi uvek dolaze iz aktivne teme.
 const GlobalStyle = createGlobalStyle`
+  ${fontFaces}
+
   *, *::before, *::after {
     box-sizing: border-box;
   }

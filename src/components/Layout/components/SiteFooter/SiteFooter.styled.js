@@ -11,3 +11,14 @@ export const Bar = styled.footer`
   line-height: ${({ theme }) => theme.lineHeights.text};
   color: ${({ theme }) => theme.textMuted};
 `;
+
+export const Line = styled.p`
+  margin: 0;
+`;
+
+export const Links = styled.nav`
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${({ theme }) => theme.space[50]} ${({ theme }) => theme.space[150]};
+  margin-top: ${({ theme }) => theme.space[70]};
+`;

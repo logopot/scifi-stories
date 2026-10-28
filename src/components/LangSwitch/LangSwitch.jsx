@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { saveLangPref } from '../../engine/storage';
+import { findLegalByPath, legalPath } from '../../legalPages';
 import { getStoryEntry, hasLang, homePath, keyFromPathname, LANGS, storyPath } from '../../stories';
 import * as S from './LangSwitch.styled';
 
@@ -14,7 +15,14 @@ export default function LangSwitch() {
   const key = keyFromPathname(pathname);
   const entry = key ? getStoryEntry(key) : null;
 
-  const target = (lang) => (entry && hasLang(entry, lang) ? storyPath(lang, entry) : homePath(lang));
+  // pravna stranica (na bilo kom jeziku adrese) → ista stranica na drugom jeziku
+  const first = pathname.split('/').filter(Boolean)[current === 'en' ? 1 : 0];
+  const legal = first ? findLegalByPath(current, first) || findLegalByPath(current === 'en' ? 'sr' : 'en', first) : null;
+
+  const target = (lang) => {
+    if (legal) return legalPath(lang, legal);
+    return entry && hasLang(entry, lang) ? storyPath(lang, entry) : homePath(lang);
+  };
 
   return (
     <S.Root role="group" aria-label={t('lang.label')}>

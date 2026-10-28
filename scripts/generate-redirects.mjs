@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { legalPages } from '../src/legalPages.js';
 import { stories } from '../src/stories/index.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -25,6 +26,11 @@ export const buildRedirects = (list = stories) => {
     lines.push(`/en/${sr}/citaj  /en/${en}  301`);
     lines.push(`/${en}  /${sr}  301`);
     lines.push(`/${en}/citaj  /${sr}  301`);
+  }
+  // pravne stranice: adresa pogrešnog jezika vodi na ispravnu
+  for (const p of legalPages) {
+    lines.push(`/en/${p.path.sr}  /en/${p.path.en}  301`);
+    lines.push(`/${p.path.en}  /${p.path.sr}  301`);
   }
   lines.push('/*  /index.html  200');
   return `${lines.join('\n')}\n`;

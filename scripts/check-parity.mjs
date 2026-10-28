@@ -5,6 +5,9 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import contentEn from '../src/i18n/legal/en.js';
+import contentSr from '../src/i18n/legal/sr.js';
+import { legalPages } from '../src/legalPages.js';
 import { RESERVED_PATHS, stories } from '../src/stories/index.js';
 import { isRedirectsCurrent } from './generate-redirects.mjs';
 
@@ -188,7 +191,54 @@ const checkPaths = () => {
     if (typeof s.en.load !== 'function') err(`${s.slug}: en.load mora biti funkcija`);
     if (!existsSync(join(storiesDir, s.slug, 'story.en.json'))) err(`${s.slug}: nedostaje src/stories/${s.slug}/story.en.json`);
   }
+  // pravne stranice: adrese neispravne ili u sukobu sa pričama
+  const legalSeen = new Map();
+  for (const p of legalPages) {
+    for (const lang of ['sr', 'en']) {
+      const a = p.path[lang];
+      if (!a || !EN_PATH.test(a) || a.length > MAX_PATH) err(`pravna stranica ${p.key}: adresa ${lang} "${a}" nije ispravna`);
+      if (RESERVED_PATHS.includes(a)) err(`pravna stranica ${p.key}: adresa "${a}" je rezervisana`);
+      const k = `${lang}:${a}`;
+      if (legalSeen.has(k)) err(`pravna stranica ${p.key}: adresa ${lang} "${a}" već koristi ${legalSeen.get(k)}`);
+      legalSeen.set(k, p.key);
+    }
+    for (const s of stories) {
+      for (const [lang, a] of [['sr', s.path?.sr || s.slug], ['en', s.en?.path]]) {
+        if (a && (a === p.path.sr || a === p.path.en)) err(`adresa priče ${s.slug} (${lang}) "${a}" se poklapa sa pravnom stranicom ${p.key}`);
+      }
+    }
+  }
   if (!isRedirectsCurrent()) err('public/_redirects je zastareo u odnosu na registar; pokreni npm run redirects');
+};
+
+// Pravne stranice: isti sadržaj i raspored na oba jezika (broj odeljaka, vrsta i broj blokova, isti tokeni).
+const checkLegal = () => {
+  scope = 'pravne stranice';
+  const tokens = (t) => (String(t).match(/{w+}|](https?:[^)]+)/g) || []).sort().join(',');
+  for (const p of legalPages) {
+    const a = contentSr[p.key];
+    const b = contentEn[p.key];
+    if (!a || !b) {
+      err(`${p.key}: nema teksta na oba jezika`);
+      continue;
+    }
+    if (a.sections.length !== b.sections.length) err(`${p.key}: broj odeljaka ${a.sections.length} ≠ ${b.sections.length}`);
+    a.sections.forEach((s, i) => {
+      const t = b.sections[i];
+      if (!t) return;
+      if (s.blocks.length !== t.blocks.length) err(`${p.key}/${i + 1}: broj blokova se razlikuje`);
+      s.blocks.forEach((x, j) => {
+        const y = t.blocks[j];
+        if (!y) return;
+        if (Boolean(x.ul) !== Boolean(y.ul)) err(`${p.key}/${i + 1}.${j + 1}: različita vrsta bloka (pasus/lista)`);
+        else if (x.ul) {
+          if (x.ul.length !== y.ul.length) err(`${p.key}/${i + 1}.${j + 1}: lista ima ${x.ul.length} ≠ ${y.ul.length} stavki`);
+          x.ul.forEach((v, k) => { if (y.ul[k] !== undefined && tokens(v) !== tokens(y.ul[k])) err(`${p.key}/${i + 1}.${j + 1}.${k + 1}: tokeni ili linkovi se razlikuju`); });
+        } else if (tokens(x.p) !== tokens(y.p)) err(`${p.key}/${i + 1}.${j + 1}: tokeni ili linkovi se razlikuju`);
+      });
+    });
+    if (SERBIAN_LETTERS.test(JSON.stringify(b))) warn(`${p.key} (en): srpska slova u engleskom tekstu`);
+  }
 };
 
 // --- glavni tok ---
@@ -216,6 +266,7 @@ if (arg) {
 }
 
 checkPaths();
+checkLegal();
 for (const slug of pairs) {
   const en = join(storiesDir, slug, 'story.en.json');
   if (!existsSync(en)) {

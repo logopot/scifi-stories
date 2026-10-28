@@ -4,8 +4,10 @@ import Layout from './components/Layout';
 import LanguageProvider from './i18n/LanguageProvider';
 import useLocalePath, { useLang } from './i18n/useLocalePath';
 import Landing from './pages/Landing';
+import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
 import Reader from './pages/Reader';
+import { findLegalByPath, legalPath } from './legalPages';
 import { findByPath } from './stories';
 import ThemeController from './styles/ThemeController';
 
@@ -20,6 +22,23 @@ function LegacyReaderRedirect() {
   const entry = findByPath(lang, path);
   // Nepoznata adresa ostaje na istoj putanji (bez /citaj), pa je dočeka 404 na jeziku adrese.
   return <Navigate to={entry ? localePath(entry.slug) : `${lang === 'en' ? '/en' : ''}/${path}`} replace />;
+}
+
+// Jedan segment adrese: pravna stranica (na jeziku adrese), pravna stranica drugog jezika (preusmerava na ispravnu adresu) ili priča.
+function PathPage() {
+  const { path } = useParams();
+  const lang = useLang();
+  const page = findLegalByPath(lang, path);
+  if (page) {
+    return (
+      <Layout>
+        <Legal pageKey={page.key} />
+      </Layout>
+    );
+  }
+  const other = findLegalByPath(lang === 'en' ? 'sr' : 'en', path);
+  if (other) return <Navigate to={legalPath(lang, other)} replace />;
+  return <Reader />;
 }
 
 // Srpski je na korenu (/, /:path), engleski pod /en (/en, /en/:path); jezik se čita iz adrese (LanguageProvider).
@@ -39,9 +58,9 @@ export default function App() {
                 }
               />
             )}
-            <Route path="/en/:path" element={<Reader />} />
+            <Route path="/en/:path" element={<PathPage />} />
             <Route path="/en/:path/citaj" element={<LegacyReaderRedirect />} />
-            <Route path="/:path" element={<Reader />} />
+            <Route path="/:path" element={<PathPage />} />
             <Route path="/:path/citaj" element={<LegacyReaderRedirect />} />
             <Route element={<Layout />}>
               <Route path="/" element={<Landing />} />

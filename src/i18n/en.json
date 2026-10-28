@@ -6,6 +6,12 @@
     "footer": "Your progress is saved only in your browser",
     "allStories": "← All stories"
   },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "disclaimer": "Disclaimer",
+    "label": "Legal information",
+    "updated": "Updated: {{date}}"
+  },
   "lang": {
     "label": "Jezik / Language"
   },

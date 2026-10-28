@@ -6,6 +6,12 @@
     "footer": "Napredak se čuva samo u tvom pregledaču",
     "allStories": "← Sve priče"
   },
+  "legal": {
+    "privacy": "Politika privatnosti",
+    "disclaimer": "Odricanje odgovornosti",
+    "label": "Pravne informacije",
+    "updated": "Ažurirano: {{date}}"
+  },
   "lang": {
     "label": "Jezik / Language"
   },

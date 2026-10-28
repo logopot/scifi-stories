@@ -204,6 +204,10 @@ Tekst je napisan u muškom rodu, a ženska varijanta je u dodatnim poljima: `tf`
 
 Glavni domen je `otherworldstories.com`. Stara adresa `scifi-stories.pages.dev` (kao i `www.otherworldstories.com`) preusmerava na njega trajnim (301) preusmeravanjem funkcijom iz `functions/_middleware.js`, uz zadržanu putanju i upit. Probne adrese grana (preview, npr. `<grana>.scifi-stories.pages.dev`) ostaju bez preusmeravanja. Provera: `npm run check-redirects`.
 
+## Pravne stranice i fontovi
+
+Stranice „Politika privatnosti“ (`/privatnost`, `/en/privacy`) i „Odricanje odgovornosti“ (`/odricanje-odgovornosti`, `/en/disclaimer`) su u `src/pages/Legal`; tekstovi su u `src/i18n/legal/sr.js` i `en.js`, adrese u `src/legalPages.js`, a podaci odgovorne osobe u `LEGAL` u `src/config.js` (popuni polja u uglastim zagradama; `npm run check-legal` upozorava, a na Cloudflare Pages build puca dok ih ima). Fontovi (Literata, Space Grotesk) služe se sa našeg domena iz paketa `@fontsource-variable` (`src/styles/fonts.js`, samo latin i latin-ext); `npm run check-third-party` proverava da nijedan zahtev ne ide ka tuđem hostu.
+
 ## Objavljivanje
 
 Sajt se hostuje na Cloudflare Pages iz grane `main` (build komanda `npm run build`, izlaz `dist`). Push na `main` pokreće automatski build i objavu. Radi na grani (npr. `landing-page`) i spoji u `main` tek kad je spremno.

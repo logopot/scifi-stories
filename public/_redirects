@@ -5,4 +5,8 @@
 /en/tamni-sat/citaj  /en/dark-hour  301
 /dark-hour  /tamni-sat  301
 /dark-hour/citaj  /tamni-sat  301
+/en/privatnost  /en/privacy  301
+/privacy  /privatnost  301
+/en/odricanje-odgovornosti  /en/disclaimer  301
+/disclaimer  /odricanje-odgovornosti  301
 /*  /index.html  200

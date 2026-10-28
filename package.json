@@ -6,10 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/check-legal.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "check-story": "node scripts/check-story.mjs",
     "check-redirects": "node scripts/check-redirects.mjs",
+    "check-legal": "node scripts/check-legal.mjs",
+    "check-third-party": "node scripts/check-third-party.mjs",
     "check-parity": "node scripts/check-parity.mjs",
     "redirects": "node scripts/generate-redirects.mjs",
     "check-overflow": "node scripts/check-overflow.mjs",
@@ -18,6 +21,8 @@
     "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/literata": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
     "bootstrap": "^5.3.3",
     "i18next": "^26.5.11",
     "react": "^18.3.1",

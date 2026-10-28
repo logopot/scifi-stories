@@ -129,8 +129,8 @@ export const sizes = {
 };
 
 export const fonts = {
-  serif: "'Literata', Georgia, 'Times New Roman', serif",
-  ui: "'Space Grotesk', 'Segoe UI', system-ui, sans-serif",
+  serif: "'Literata Variable', 'Literata', Georgia, 'Times New Roman', serif",
+  ui: "'Space Grotesk Variable', 'Space Grotesk', 'Segoe UI', system-ui, sans-serif",
   menu: "'Cascadia Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace",
 };
 

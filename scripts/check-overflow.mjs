@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { chromium } from 'playwright-core';
+import { legalPages } from '../src/legalPages.js';
 
 const args = process.argv.slice(2);
 const base = (args.find((a) => /^https?:/.test(a)) || 'http://localhost:5173').replace(/\/$/, '');
@@ -113,6 +114,11 @@ for (const w of WIDTHS) {
   let t = await newPage();
   await t.page.goto(`${base}/`);
   await check(t.page, '/', w);
+  // početna na engleskom i pravne stranice na oba jezika
+  for (const extra of ['/en', ...legalPages.flatMap((p) => [`/${p.path.sr}`, `/en/${p.path.en}`])]) {
+    await t.page.goto(`${base}${extra}`);
+    await check(t.page, extra, w);
+  }
   await t.ctx.close();
   for (const slug of slugs) {
     await browser.close();
