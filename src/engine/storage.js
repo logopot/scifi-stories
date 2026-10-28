@@ -71,3 +71,14 @@ export const loadReaderPrefs = () => {
 };
 
 export const saveReaderPrefs = ({ name, gender }) => write(READER_KEY, JSON.stringify({ name, gender }));
+
+// Poslednji izabrani jezik (samo za isticanje u prekidaču jezika); nikad ne menja adresu pri sledećoj poseti.
+const LANG_KEY = 'scifi-lang-v1';
+export const loadLangPref = () => {
+  const v = read(LANG_KEY);
+  return v === 'sr' || v === 'en' ? v : null;
+};
+export const saveLangPref = (lang) => write(LANG_KEY, lang);
+
+// Ključ čuvanja napretka: srpska verzija koristi slug, ostali jezici slug + jezik (napredak se ne prenosi između jezika).
+export const saveId = (slug, lang = 'sr') => (lang === 'sr' ? slug : `${slug}-${lang}`);

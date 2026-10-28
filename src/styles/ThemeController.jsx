@@ -2,14 +2,15 @@ import React, { useEffect, useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle';
+import { keyFromPathname } from '../stories';
 import { getTheme } from './themes';
 
-// Tema se bira iz prvog segmenta URL-a, bez čekanja na JSON priče, pa nema treptaja pogrešne teme.
+// Tema se bira iz adrese (javna adresa priče → interni ključ, na oba jezika), bez čekanja na JSON priče, pa nema treptaja pogrešne teme.
 export default function ThemeController({ children }) {
   const { pathname } = useLocation();
   const parts = pathname.split('/');
   // razvojna ruta /dev/scene/:slug/... koristi temu svoje priče
-  const slug = (parts[1] === 'dev' && parts[2] === 'scene' ? parts[3] : parts[1]) || '';
+  const slug = (parts[1] === 'dev' && parts[2] === 'scene' ? parts[3] : keyFromPathname(pathname, { strict: true })) || '';
   const theme = useMemo(() => getTheme(slug), [slug]);
 
   useEffect(() => {

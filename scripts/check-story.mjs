@@ -17,8 +17,11 @@ const MAX_SHARE = 0.55; // ... i u najviše 55%
 let failed = false;
 
 // entry: { slug, status?, cover? }; template: true za foldere "_*" (bez provere teme i naslovne slike)
-const checkStory = (entry, { template = false } = {}) => {
-  const story = JSON.parse(readFileSync(join(storiesDir, entry.slug, 'story.json'), 'utf8'));
+// lang 'en': ista provera nad story.en.json (isti pragovi raspodele krajeva kao za srpsku verziju: struktura je istovetna).
+const checkStory = (entry, { template = false, lang = 'sr' } = {}) => {
+  const file = lang === 'en' ? 'story.en.json' : 'story.json';
+  const label = lang === 'en' ? `${entry.slug} (en)` : entry.slug;
+  const story = JSON.parse(readFileSync(join(storiesDir, entry.slug, file), 'utf8'));
   const { nodes } = story;
   const errors = [];
   const err = (m) => errors.push(m);
@@ -191,7 +194,7 @@ const checkStory = (entry, { template = false } = {}) => {
   // --- simulacija (isti algoritam kao u engine.js, ali sa osama iz meta.axes) ---
   // Preskače se ako struktura nije ispravna (inače bi pucala na pokvarenim referencama).
   if (errors.length) {
-    console.error(`\nGREŠKE u "${entry.slug}" (${errors.length}):\n- ${errors.join('\n- ')}\n(simulacija preskočena dok se strukturne greške ne isprave)`);
+    console.error(`\nGREŠKE u "${label}" (${errors.length}):\n- ${errors.join('\n- ')}\n(simulacija preskočena dok se strukturne greške ne isprave)`);
     return false;
   }
 
@@ -297,10 +300,10 @@ const checkStory = (entry, { template = false } = {}) => {
   console.log('Namerne putanje (ka osi):', forced, '| uvek prva:', alwaysFirst, '| uvek poslednja:', alwaysLast);
 
   if (errors.length) {
-    console.error(`\nGREŠKE u "${entry.slug}" (${errors.length}):\n- ${errors.join('\n- ')}`);
+    console.error(`\nGREŠKE u "${label}" (${errors.length}):\n- ${errors.join('\n- ')}`);
     return false;
   }
-  console.log(`\n"${entry.slug}": sve provere prošle.`);
+  console.log(`\n"${label}": sve provere prošle.`);
   return true;
 };
 
@@ -334,19 +337,27 @@ for (const entry of targets) {
   console.log(`\n=== ${entry.slug} ===`);
   if (entry.status === 'soon') {
     console.log('status "soon": nema story.json za proveru.');
-  } else if (!checkStory(entry)) {
-    failed = true;
+  } else {
+    if (!checkStory(entry)) failed = true;
+    if (entry.en && existsSync(join(storiesDir, entry.slug, 'story.en.json'))) {
+      console.log(`\n=== ${entry.slug} (en) ===`);
+      if (!checkStory(entry, { lang: 'en' })) failed = true;
+    }
   }
 }
 for (const name of templates) {
   console.log(`\n=== ${name} (šablon, nije u registru) ===`);
   if (!checkStory({ slug: name }, { template: true })) failed = true;
+  if (existsSync(join(storiesDir, name, 'story.en.json'))) {
+    console.log(`\n=== ${name} (en) ===`);
+    if (!checkStory({ slug: name }, { template: true, lang: 'en' })) failed = true;
+  }
 }
 // Registar: svaka priča ima temu.
 stories.forEach((s) => { if (!themes[s.slug]) { console.error(`Registar: nema teme za "${s.slug}"`); failed = true; } });
 
 // Teme (kontrast) i struktura komponenti.
-for (const script of ['check-themes.mjs', 'check-structure.mjs']) {
+for (const script of ['check-themes.mjs', 'check-parity.mjs', 'check-structure.mjs']) {
   console.log(`\n=== ${script} ===`);
   const r = spawnSync(process.execPath, [join(here, script)], { stdio: 'inherit' });
   if (r.status !== 0) failed = true;

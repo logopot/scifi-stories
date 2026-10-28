@@ -8,6 +8,13 @@ export const Bar = styled.header`
   padding: ${({ theme }) => theme.space[150]} 0 0;
 `;
 
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.space[100]};
+`;
+
 export const BrandName = styled.span`
   font-family: ${({ theme }) => theme.fontHeading};
   transition: opacity ${({ theme }) => theme.transitions.base};

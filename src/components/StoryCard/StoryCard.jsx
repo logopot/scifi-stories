@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { hasSave } from '../../engine/storage';
+import { hasSave, saveId } from '../../engine/storage';
+import useLocalePath, { useLang } from '../../i18n/useLocalePath';
 import { metaLine } from '../../stories/format';
 import { getTheme } from '../../styles/themes';
 import Badge from '../Badge';
@@ -11,14 +13,17 @@ import * as S from './StoryCard.styled';
 // Plakat-kartica: slika preko cele kartice, naslov gore, podaci i krug sa strelicom dole, sve u temi te priče
 // (ugnježdeni ThemeProvider). Cela kartica je link; priče sa status 'soon' su prigušene i nisu otvorive.
 export default function StoryCard({ entry }) {
+  const { t } = useTranslation();
+  const lang = useLang();
+  const localePath = useLocalePath();
   const theme = useMemo(() => getTheme(entry.slug), [entry.slug]);
   const soon = entry.status === 'soon';
-  const saved = !soon && hasSave(entry.slug);
+  const saved = !soon && hasSave(saveId(entry.slug, lang));
   const badge = soon || saved;
 
   const linkProps = soon
     ? { as: 'div', 'aria-disabled': 'true' }
-    : { as: Link, to: `/${entry.slug}`, 'aria-label': `Otvori priču: ${entry.title}` };
+    : { as: Link, to: localePath(entry.slug), 'aria-label': t('card.open', { title: entry.title }) };
 
   return (
     <ThemeProvider theme={theme}>
@@ -32,11 +37,11 @@ export default function StoryCard({ entry }) {
         </S.Top>
         {badge && (
           <S.BadgeSlot>
-            <Badge variant={soon ? 'muted' : 'accent'}>{soon ? 'Uskoro' : 'Nastavi'}</Badge>
+            <Badge variant={soon ? 'muted' : 'accent'}>{soon ? t('card.soon') : t('card.continue')}</Badge>
           </S.BadgeSlot>
         )}
         <S.Bottom>
-          <S.Meta>{metaLine(entry)}</S.Meta>
+          <S.Meta>{metaLine(entry, t)}</S.Meta>
           {!soon && (
             <S.Circle aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

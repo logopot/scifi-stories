@@ -6,6 +6,7 @@ export const BackBar = styled.div`
   z-index: ${({ theme }) => theme.zIndex.floating};
   top: ${({ theme }) => theme.space[100]};
   left: ${({ theme }) => theme.space[100]};
+  right: ${({ theme }) => theme.space[100]};
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.space[70]};

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 const cache = new Map();
 
-// Lenjo učitava JSON priče iz registra. Vraća { story, status: 'loading' | 'ready' | 'error' }.
-export default function useStoryData(entry) {
-  const slug = entry?.slug;
+// Lenjo učitava JSON priče iz registra (entry je već lokalizovan: njegov load učitava fajl jezika). Vraća { story, status: 'loading' | 'ready' | 'error' }.
+export default function useStoryData(entry, lang = 'sr') {
+  const slug = entry ? `${entry.slug}:${lang}` : undefined;
   const [state, setState] = useState(() =>
     cache.has(slug) ? { story: cache.get(slug), status: 'ready' } : { story: null, status: entry?.load ? 'loading' : 'error' }
   );

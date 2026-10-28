@@ -5,8 +5,11 @@ import Mirror from '../../../../components/Mirror';
 import Scene from '../../../../components/Scene';
 import SceneBackdrop from '../../../../components/SceneBackdrop';
 import StartScreen from '../../../../components/StartScreen';
+import LangSwitch from '../../../../components/LangSwitch';
 import TextLink from '../../../../components/TextLink';
+import { useTranslation } from 'react-i18next';
 import { useStory } from '../../../../engine/StoryContext';
+import useLocalePath from '../../../../i18n/useLocalePath';
 import useScrollReset from '../../../../hooks/useScrollReset';
 import { loadReaderPrefs, saveReaderPrefs } from '../../../../engine/storage';
 import * as S from './ReaderSession.styled';
@@ -14,6 +17,8 @@ import * as S from './ReaderSession.styled';
 // Tok čitanja jedne priče: početni ekran -> scene -> kraj.
 export default function ReaderSession() {
   const { engine, story, cover } = useStory();
+  const { t } = useTranslation();
+  const localePath = useLocalePath();
   const [state, dispatch] = useReducer(engine.reducer, null, () => {
     return engine.initialState; // uvek počinje početnim ekranom; sačuvan napredak nudi dugme „Nastavi“
   });
@@ -27,7 +32,7 @@ export default function ReaderSession() {
   // Prelaz između ekrana (početni, priča, kraj) uvek počinje na vrhu.
   useScrollReset([state.screen]);
 
-  const player = { gender: state.gender, name: state.name };
+  const player = { gender: state.gender, name: state.name, lang: engine.lang };
 
   // Jedan trajni sloj pozadine služi početnom ekranu (naslovna slika), stranama priče (slika mesta scene; scena bez
   // slike zadržava prethodnu, pa naslovnu) i završnom ekranu (poslednja slika). Menja se samo `src`, pa se slike preliju.
@@ -68,7 +73,8 @@ export default function ReaderSession() {
       <OnImage>
         <S.BackBar>
           <LogoLink size="xs" variant="onImage" />
-          <TextLink to="/">← Sve priče</TextLink>
+          <TextLink to={localePath()}>{t('site.allStories')}</TextLink>
+          <LangSwitch />
         </S.BackBar>
       </OnImage>
       {state.screen === 'start' && (

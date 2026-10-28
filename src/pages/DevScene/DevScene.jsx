@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useParams, useSearchParams } from 'react-router-dom';
+import LangSwitch from '../../components/LangSwitch';
 import LogoLink from '../../components/LogoLink';
 import OnImage from '../../components/OnImage';
 import Page from '../../components/Page';
@@ -10,18 +12,27 @@ import TextLink from '../../components/TextLink';
 import { createEngine } from '../../engine/engine';
 import { StoryContext } from '../../engine/StoryContext';
 import useStoryData from '../../hooks/useStoryData';
-import { getStoryEntry } from '../../stories';
+import useLocalePath from '../../i18n/useLocalePath';
+import { getStoryEntry, localizeEntry } from '../../stories';
 import * as S from '../Reader/components/ReaderSession/ReaderSession.styled';
 
 // SAMO ZA RAZVOJ (ruta postoji samo uz import.meta.env.DEV, vidi App.jsx): jedna strana jedne scene, bez početnog ekrana.
 // /dev/scene/:slug/:node/:page?g=m|f&name=Ime&picks=id1,id2   (page je od 1; picks su id-evi izbora koji su "napravljeni")
 // Koristi ga scripts/check-layout.mjs da bi stigao do svake strane svake priče.
+// Za probu engleske verzije šablona: /dev/scene/_template/pocetak/1?lang=en (učitava _template/story.en.json; šablon nije u registru).
 export default function DevScene() {
   const { slug, node, page } = useParams();
   const [params] = useSearchParams();
-  const entry = getStoryEntry(slug);
-  const { story, status } = useStoryData(entry);
-  const engine = useMemo(() => (story ? createEngine(story, slug) : null), [story, slug]);
+  const { t } = useTranslation();
+  const localePath = useLocalePath();
+  const lang = params.get('lang') === 'en' ? 'en' : 'sr';
+  const entry = useMemo(() => {
+    if (slug === '_template') return { slug, load: lang === 'en' ? () => import('../../stories/_template/story.en.json') : () => import('../../stories/_template/story.json') };
+    const e = getStoryEntry(slug);
+    return e ? localizeEntry(e, lang) : null;
+  }, [slug, lang]);
+  const { story, status } = useStoryData(entry, lang);
+  const engine = useMemo(() => (story ? createEngine(story, slug, lang) : null), [story, slug, lang]);
   const context = useMemo(
     () => (engine ? { slug, story, engine, cover: (entry && entry.cover) || null } : null),
     [engine, story, slug, entry]
@@ -34,7 +45,7 @@ export default function DevScene() {
         .map((id) => ({ id, node: '', w: {}, hidden: false })),
     [params]
   );
-  const player = { gender: params.get('g') === 'f' ? 'f' : 'm', name: params.get('name') || '' };
+  const player = { gender: params.get('g') === 'f' ? 'f' : 'm', name: params.get('name') || '', lang };
 
   if (status !== 'ready' || !context || !story.nodes[node]) return <p data-dev-status={status}>…</p>;
   const nodeImage = engine.getImage(story.nodes[node].img);
@@ -49,7 +60,8 @@ export default function DevScene() {
           <OnImage>
             <S.BackBar>
               <LogoLink size="xs" variant="onImage" />
-              <TextLink to="/">← Sve priče</TextLink>
+              <TextLink to={localePath()}>{t('site.allStories')}</TextLink>
+              <LangSwitch />
             </S.BackBar>
           </OnImage>
           <Scene

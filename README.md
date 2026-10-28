@@ -20,11 +20,16 @@ npm run check-story -- bez-opcije   # samo jedna priča (teme i struktura se i d
 | Ruta | Strana |
 | --- | --- |
 | `/` | Početna: kartice svih priča |
-| `/:slug` | Čitač priče: početni ekran (ime, rod, „Nastavi“ za sačuvan napredak) → scene → kraj |
-| `/:slug/citaj` | Stara adresa čitača; preusmerava na `/:slug` |
-| ostalo | „Nema takve priče“ |
+| `/:path` | Čitač priče: početni ekran (ime, rod, „Nastavi“ za sačuvan napredak) → scene → kraj |
+| `/:path/citaj` | Stara adresa čitača; preusmerava na `/:path` |
+| `/en`, `/en/:path`, `/en/:path/citaj` | Isto na engleskom |
+| ostalo | „Nema takve priče“ (na jeziku adrese) |
 
-`public/_redirects` omogućava direktne linkove na Cloudflare Pages (SPA pravilo `/* /index.html 200`) i 301 sa stare adrese `/:slug/citaj` na `/:slug`. Vite `base` je `'/'`.
+`public/_redirects` se generiše iz registra (`npm run redirects`, ne menjaj ga ručno): SPA pravilo `/* /index.html 200`, 301 sa `/:slug/citaj` na `/:slug` i, za svaku priču sa engleskim blokom, 301 sa adrese pogrešnog jezika na ispravnu. Vite `base` je `'/'`.
+
+## Jezici (sr / en)
+
+Jezik se određuje samo iz adrese: `/en/...` je engleski, sve ostalo srpski (bez otkrivanja jezika pregledača). UI tekstovi su u `src/i18n/sr.json` i `src/i18n/en.json`; tekstovi priče ostaju u `story.json` (srpski) i `story.en.json` (engleski). `slug` iz registra je interni ključ (folder priče i slika, tema, čuvanje napretka), a javne adrese su `path.sr` i `en.path`. Interne linkove pravi `useLocalePath()` (`src/i18n/useLocalePath.js`). Engleska verzija priče se dodaje en blokom u registru (`en: { path, title, tagline, genre, coverAlt, load }`) i fajlom `story.en.json`; zatim `npm run redirects` i `npm run check-parity`. Engleska verzija nema `tf`, `leadf`, `textf`, a `{voc}` je isto što i `{ime}`. Napredak se čuva posebno po jeziku.
 
 ## Struktura fajlova
 

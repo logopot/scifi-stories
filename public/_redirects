@@ -1,2 +1,4 @@
+# Generisano: npm run redirects (ne menjaj ručno)
 /:slug/citaj  /:slug  301
+/en/:slug/citaj  /en/:slug  301
 /*  /index.html  200

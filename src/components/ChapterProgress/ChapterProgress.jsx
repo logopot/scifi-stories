@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components';
 import { useStory } from '../../engine/StoryContext';
 import { chapterIds, createTracker } from '../../engine/chapterProgress';
@@ -12,7 +13,9 @@ import * as S from './ChapterProgress.styled';
 const trackers = new Map(); // po priči, da popuna ne opada pri prelasku među scenama
 
 export default function ChapterProgress({ nodeId, picks = [], player, page = 0, pagesCount = 1, done = false }) {
-  const { story, engine, slug } = useStory();
+  const { story, engine } = useStory();
+  const slug = engine.saveId; // po jeziku, da se popuna srpske i engleske verzije ne mešaju
+  const { t } = useTranslation();
   const theme = useTheme();
   const onPanel = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
   const ids = chapterIds(story);
@@ -35,7 +38,7 @@ export default function ChapterProgress({ nodeId, picks = [], player, page = 0, 
           aria-valuemin={1}
           aria-valuemax={info.total}
           aria-valuenow={info.index}
-          aria-label={`Napredak kroz priču, poglavlje ${info.index} od ${info.total}`}
+          aria-label={t('progress.label', { index: info.index, total: info.total })}
         >
           {ids.map((id, i) => {
             const fill = info.done || i + 1 < info.index ? 1 : i + 1 === info.index ? info.value : 0;

@@ -14,18 +14,21 @@ import * as S from './StartScreen.styled';
 // `prefs` ({ name, gender } ili null) unapred popunjava ime i rod koje je čitalac ranije upisao.
 // Izgled je isti kao stranice priče (SpeechPanel): naslov i podnaslov su `title` panela.
 export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
-  const { story } = useStory();
+  const { story, engine } = useStory();
+  // Engleska verzija nema rodne varijante teksta: rod se ne pita (podrazumevano 'm'), samo ime.
+  const askGender = engine.lang !== 'en';
   const { meta, ui } = story;
   const s = ui.start;
   const [raw, setRaw] = useState(prefs?.name || '');
   const [picked, setPicked] = useState(prefs?.gender || null); // rod koji je čitalac sam izabrao
   const name = useMemo(() => cleanName(raw), [raw]);
   const guessed = useMemo(() => detectGender(name), [name]);
-  const gender = picked || guessed; // izbor čitaoca ima prednost nad spiskom imena
+  const gender = askGender ? picked || guessed : picked || 'm'; // izbor čitaoca ima prednost nad spiskom imena
   const shownName = name || (gender ? s.defaults[gender] : '');
 
   let hint = s.hintNeed;
-  if (name && guessed && !picked) hint = s.hintFound;
+  if (!askGender) hint = '';
+  else if (name && guessed && !picked) hint = s.hintFound;
   else if (name && !guessed && !picked) hint = s.hintUnknown;
   else if (gender) hint = '';
 
@@ -66,16 +69,20 @@ export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
             }}
           />
 
-          <S.FieldLabel tag="p" id="gender-label">
-            {s.genderLabel}
-          </S.FieldLabel>
-          <ChoiceGroup labelledBy="gender-label">
-            {Object.entries(s.genders).map(([key, label]) => (
-              <ChoiceButton key={key} selected={gender === key} onClick={() => setPicked(key)}>
-                {label}
-              </ChoiceButton>
-            ))}
-          </ChoiceGroup>
+          {askGender && (
+            <>
+              <S.FieldLabel tag="p" id="gender-label">
+                {s.genderLabel}
+              </S.FieldLabel>
+              <ChoiceGroup labelledBy="gender-label">
+                {Object.entries(s.genders).map(([key, label]) => (
+                  <ChoiceButton key={key} selected={gender === key} onClick={() => setPicked(key)}>
+                    {label}
+                  </ChoiceButton>
+                ))}
+              </ChoiceGroup>
+            </>
+          )}
 
           <S.Status>
             {gender ? (

@@ -1,0 +1,36 @@
+{
+  "site": {
+    "name": "Other World",
+    "skip": "Skip to content",
+    "home": "{{name}}, home",
+    "footer": "Your progress is saved only in your browser",
+    "allStories": "← All stories"
+  },
+  "lang": {
+    "label": "Jezik / Language"
+  },
+  "landing": {
+    "subtitle": "Short interactive science fiction stories. You are the main character.",
+    "empty": "English versions are coming soon."
+  },
+  "notFound": {
+    "title": "No such story",
+    "text": "This address leads nowhere. The story may have moved, or the link may have been typed wrong.",
+    "metaTitle": "No such story · {{name}}",
+    "metaDescription": "The page you asked for does not exist."
+  },
+  "reader": {
+    "loading": "Loading the story…",
+    "error": "The story failed to load. Check your connection and try again."
+  },
+  "card": {
+    "open": "Open story: {{title}}",
+    "continue": "Continue",
+    "soon": "Soon",
+    "minutes": "about {{minutes}} min",
+    "interactive": "interactive"
+  },
+  "progress": {
+    "label": "Story progress, chapter {{index}} of {{total}}"
+  }
+}

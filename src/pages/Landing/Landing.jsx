@@ -1,26 +1,29 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Heading from '../../components/Heading';
 import Page from '../../components/Page';
 import StoryCard from '../../components/StoryCard';
 import Subtitle from '../../components/Subtitle';
-import { SITE_NAME } from '../../config';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
-import { stories } from '../../stories';
+import { useLang } from '../../i18n/useLocalePath';
+import { storiesFor } from '../../stories';
 import * as S from './Landing.styled';
 
-const SUBTITLE = 'Kratke interaktivne naučnofantastične priče. Ti si glavni lik.';
-
 export default function Landing() {
-  useDocumentMeta(SITE_NAME, SUBTITLE);
+  const { t } = useTranslation();
+  const lang = useLang();
+  const list = storiesFor(lang);
+  useDocumentMeta(t('site.name'), t('landing.subtitle'));
 
   return (
     <Page variant="wide">
       <S.Intro>
-        <Heading variant="title">{SITE_NAME}</Heading>
-        <Subtitle>{SUBTITLE}</Subtitle>
+        <Heading variant="title">{t('site.name')}</Heading>
+        <Subtitle>{t('landing.subtitle')}</Subtitle>
       </S.Intro>
+      {list.length === 0 && <Subtitle>{t('landing.empty')}</Subtitle>}
       <div className="row g-4">
-        {stories.map((entry) => (
+        {list.map((entry) => (
           <div key={entry.slug} className="col-12 col-md-6 col-lg-4">
             <S.Slot>
               <StoryCard entry={entry} />

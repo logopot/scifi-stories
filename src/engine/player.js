@@ -65,12 +65,17 @@ export const vocative = (name, gender) => {
   return `${name}e`; // Lazar -> Lazare, Goran -> Gorane
 };
 
-// Imena po zadatku kad čitalac ništa ne upiše.
+// Imena po zadatku kad čitalac ništa ne upiše (engleski nema roda: isto ime).
 export const DEFAULT_NAMES = { m: 'Lazar', f: 'Milica' };
+export const DEFAULT_NAMES_EN = { m: 'Alex', f: 'Alex' };
 
-// Gotov niz zamena za tokene {ime} {voc} {IME}.
-export const nameTokens = (gender, name) => {
+// Gotov niz zamena za tokene {ime} {voc} {IME}. Za 'en' nema padeža: {voc} i {ime} daju isto ime.
+export const nameTokens = (gender, name, lang = 'sr') => {
   const g = gender === 'f' ? 'f' : 'm';
+  if (lang === 'en') {
+    const en = name || DEFAULT_NAMES_EN[g];
+    return { ime: en, voc: en, IME: en.toLocaleUpperCase('en') };
+  }
   const ime = name || DEFAULT_NAMES[g];
   return { ime, voc: vocative(ime, g), IME: ime.toLocaleUpperCase('sr') };
 };

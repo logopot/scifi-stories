@@ -1,48 +1,51 @@
 import React, { useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Navigate, useParams } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import Page from '../../components/Page';
 import Sky from '../../components/Sky';
 import TextLink from '../../components/TextLink';
 import { createEngine } from '../../engine/engine';
 import { StoryContext } from '../../engine/StoryContext';
-import { SITE_NAME } from '../../config';
 import useDocumentMeta from '../../hooks/useDocumentMeta';
 import useStoryData from '../../hooks/useStoryData';
-import { getStoryEntry } from '../../stories';
+import useLocalePath, { useLang } from '../../i18n/useLocalePath';
+import { findByPath, hasLang, localizeEntry, storyPath } from '../../stories';
 import NotFound from '../NotFound';
 import ReaderSession from './components/ReaderSession';
 import * as S from './Reader.styled';
 
+// Čitač traži priču po javnoj adresi jezika; interno radi sa ključem (slug). Adresa drugog jezika vodi na ispravnu
+// adresu ovog jezika (replace), ako priča na njemu postoji; inače je 404 na jeziku adrese.
 export default function Reader() {
-  const { slug } = useParams();
-  const entry = getStoryEntry(slug);
-  if (!entry) {
+  const { path } = useParams();
+  const lang = useLang();
+  const found = findByPath(lang, path);
+  if (!found || found.status === 'soon') {
+    const other = findByPath(lang === 'en' ? 'sr' : 'en', path);
+    if (other && other.status !== 'soon' && hasLang(other, lang)) {
+      return <Navigate to={storyPath(lang, other)} replace />;
+    }
     return (
       <Layout>
         <NotFound />
       </Layout>
     );
   }
-  if (entry.status === 'soon') {
-    return (
-      <Layout>
-        <NotFound />
-      </Layout>
-    );
-  }
-  return <ReaderLoader entry={entry} />;
+  return <ReaderLoader entry={localizeEntry(found, lang)} lang={lang} />;
 }
 
-function ReaderLoader({ entry }) {
-  const { story, status } = useStoryData(entry);
-  const engine = useMemo(() => (story ? createEngine(story, entry.slug) : null), [story, entry.slug]);
+function ReaderLoader({ entry, lang }) {
+  const { t } = useTranslation();
+  const localePath = useLocalePath();
+  const { story, status } = useStoryData(entry, lang);
+  const engine = useMemo(() => (story ? createEngine(story, entry.slug, lang) : null), [story, entry.slug, lang]);
   const context = useMemo(
     () => (engine ? { slug: entry.slug, story, engine, cover: entry.cover || null } : null),
     [engine, story, entry.slug, entry.cover]
   );
 
-  useDocumentMeta(`${entry.title} · ${SITE_NAME}`, entry.tagline);
+  useDocumentMeta(`${entry.title} · ${t('site.name')}`, entry.tagline);
 
   return (
     <>
@@ -50,14 +53,14 @@ function ReaderLoader({ entry }) {
       <Page variant="reader">
         {status === 'ready' && context && (
           <StoryContext.Provider value={context}>
-            <ReaderSession key={entry.slug} />
+            <ReaderSession key={`${entry.slug}-${lang}`} />
           </StoryContext.Provider>
         )}
-        {status === 'loading' && <S.Status>Učitavam priču…</S.Status>}
+        {status === 'loading' && <S.Status>{t('reader.loading')}</S.Status>}
         {status === 'error' && (
           <>
-            <S.Status>Priča se nije učitala. Proveri vezu i pokušaj ponovo.</S.Status>
-            <TextLink to="/">← Sve priče</TextLink>
+            <S.Status>{t('reader.error')}</S.Status>
+            <TextLink to={localePath()}>{t('site.allStories')}</TextLink>
           </>
         )}
       </Page>

@@ -1,5 +1,5 @@
 import { cleanName, nameTokens } from './player';
-import { clearSave, readSave, writeSave } from './storage';
+import { clearSave, readSave, saveId, writeSave } from './storage';
 
 /*
   Ose (skriveni brojači) definiše svaka priča u meta.axes: [{ id, name }]; čitaocu se nikad ne prikazuju.
@@ -20,13 +20,14 @@ const SHORT_PARAGRAPH = 80;
 export const DEFAULT_GENDER = 'm';
 const NAME_TOKENS = /\{(ime|voc|IME)\}/g;
 
-// Igrač: { gender: 'm' | 'f', name: string }. Uzima žensku varijantu kad postoji i menja imena.
-export const DEFAULT_PLAYER = { gender: DEFAULT_GENDER, name: '' };
+// Igrač: { gender: 'm' | 'f', name: string, lang?: 'sr' | 'en' }. Uzima žensku varijantu kad postoji i menja imena.
+// Za jezik 'en' nema rodnih varijanti ni padeža: uvek se uzima osnovni tekst, a {voc} je isto što i {ime}.
+export const DEFAULT_PLAYER = { gender: DEFAULT_GENDER, name: '', lang: 'sr' };
 
 export const tr = (base, fem, player = DEFAULT_PLAYER) => {
-  const text = player.gender === 'f' && fem ? fem : base;
+  const text = player.lang !== 'en' && player.gender === 'f' && fem ? fem : base;
   if (typeof text !== 'string') return text;
-  const names = nameTokens(player.gender, player.name);
+  const names = nameTokens(player.gender, player.name, player.lang);
   return text.replace(NAME_TOKENS, (_, k) => names[k]);
 };
 
@@ -122,8 +123,10 @@ const makeReducer = (initialState) => (state, action) => {
   }
 };
 
-// Motor vezan za jednu priču (story.json) i njen slug (ključ za čuvanje napretka).
-export const createEngine = (story, slug) => {
+// Motor vezan za jednu priču (story.json ili story.en.json), njen slug (interni ključ) i jezik.
+// Napredak se čuva po jeziku (saveId), pa se ne prenosi između srpske i engleske verzije.
+export const createEngine = (story, slug, lang = 'sr') => {
+  const sid = saveId(slug, lang);
   const axes = getAxes(story);
   const nextOf = (node, picks) => resolveNext(node, picks, axes);
   const getNode = (id) => story.nodes[id];
@@ -163,7 +166,7 @@ export const createEngine = (story, slug) => {
   };
 
   const loadSaved = () => {
-    const saved = readSave(slug);
+    const saved = readSave(sid);
     if (!saved || !story.nodes[saved.node] || !Array.isArray(saved.picks)) return null;
     if (saved.gender !== 'f') saved.gender = DEFAULT_GENDER;
     saved.name = cleanName(saved.name);
@@ -172,15 +175,17 @@ export const createEngine = (story, slug) => {
 
   const persist = (state) => {
     if (state.screen === 'play') {
-      writeSave(slug, { node: state.node, picks: state.picks, gender: state.gender, name: state.name });
+      writeSave(sid, { node: state.node, picks: state.picks, gender: state.gender, name: state.name });
     } else if (state.screen === 'mirror') {
-      clearSave(slug);
+      clearSave(sid);
     }
   };
 
   return {
     story,
     slug,
+    lang,
+    saveId: sid,
     getNode,
     getImage,
     getCharacter,

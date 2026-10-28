@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Story title",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "One to three short paragraphs about the opening situation, without giving away the plot or the endings."
+    ],
+    "axes": [
+      { "id": "a", "name": "first axis (authors only)" },
+      { "id": "b", "name": "second axis (authors only)" }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": ["Opening text on the start screen."],
+      "begin": "Begin",
+      "continue": "Pick up where you left off",
+      "tip": "Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself.",
+      "genders": { "m": "Masculine", "f": "Feminine" },
+      "note": "The ending does not depend on your last click.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": { "m": "Alex", "f": "Alex" }
+    },
+    "mirror": { "kicker": "The end", "restart": "Start over" }
+  },
+  "chapters": {},
+  "start": "pocetak",
+  "endings": {
+    "a": {
+      "title": "Ending A",
+      "closing": ["Closing paragraph of ending A."]
+    },
+    "b": {
+      "title": "Ending B",
+      "closing": ["Closing paragraph of ending B."]
+    }
+  },
+  "nodes": {
+    "pocetak": {
+      "paragraphs": [
+        {
+          "t": "You stand at a crossroads, {ime}. Two roads lie before you.",
+          "lead": "Two roads, and you stand between them."
+        }
+      ],
+      "prompt": "Which way will you go?",
+      "choices": [
+        { "id": "levo", "text": "Left.", "next": "kraj_a", "w": { "a": 1 } },
+        { "id": "desno", "text": "Right.", "next": "kraj_b", "w": { "b": 1 } }
+      ]
+    },
+    "kraj_a": {
+      "paragraphs": [
+        { "t": "The road to the left leads to ending A.", "lead": "The road that led to the left." }
+      ],
+      "end": "a"
+    },
+    "kraj_b": {
+      "paragraphs": [
+        { "t": "The road to the right leads to ending B.", "lead": "The road that led to the right." }
+      ],
+      "end": "b"
+    }
+  },
+  "images": {},
+  "characters": {}
+}

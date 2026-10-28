@@ -1,0 +1,36 @@
+{
+  "site": {
+    "name": "Drugi svet",
+    "skip": "Idi na sadržaj",
+    "home": "{{name}}, početna",
+    "footer": "Napredak se čuva samo u tvom pregledaču",
+    "allStories": "← Sve priče"
+  },
+  "lang": {
+    "label": "Jezik / Language"
+  },
+  "landing": {
+    "subtitle": "Kratke interaktivne naučnofantastične priče. Ti si glavni lik.",
+    "empty": "Priče na srpskom stižu uskoro."
+  },
+  "notFound": {
+    "title": "Nema takve priče",
+    "text": "Ova adresa ne vodi nigde. Možda je priča premeštena, ili je link pogrešno ukucan.",
+    "metaTitle": "Nema takve priče · {{name}}",
+    "metaDescription": "Tražena stranica ne postoji."
+  },
+  "reader": {
+    "loading": "Učitavam priču…",
+    "error": "Priča se nije učitala. Proveri vezu i pokušaj ponovo."
+  },
+  "card": {
+    "open": "Otvori priču: {{title}}",
+    "continue": "Nastavi",
+    "soon": "Uskoro",
+    "minutes": "oko {{minutes}} min",
+    "interactive": "interaktivna"
+  },
+  "progress": {
+    "label": "Napredak kroz priču, poglavlje {{index}} od {{total}}"
+  }
+}
