@@ -1,25 +1,17 @@
 // Tekstovi pravnih stranica (srpski). Isti sadržaj i isti raspored kao u en.js (proverava scripts/check-parity.mjs).
-// Tokeni: {site} naziv sajta, {operator} {email} {country} {year} iz LEGAL u src/config.js; [tekst](https://adresa) je link.
+// Tokeni: {site} naziv sajta, {year} godina iz LEGAL u src/config.js; [tekst](https://adresa) je link.
 export default {
   privacy: {
     title: 'Politika privatnosti',
-    description: 'Koje podatke sajt obrađuje, a koje ne, i kako možete ostvariti svoja prava.',
+    description: 'Koje podatke sajt koristi, a koje ne, i vaša prava.',
     sections: [
       {
-        h: 'Ko smo',
+        h: 'Koje podatke koristimo',
         blocks: [
-          { p: 'Sajt „{site}“ (otherworldstories.com) vodi {operator}, {country}. Za sva pitanja o privatnosti možete nam pisati na {email}.' },
-        ],
-      },
-      {
-        h: 'Koje podatke obrađujemo',
-        blocks: [
-          { p: 'Sajt je napravljen tako da o vama zna što je moguće manje. Obrađujemo samo sledeće:' },
           {
             ul: [
-              'Podaci u vašem pregledaču. Ime koje upišete, izabrani lik, napredak u priči (posebno za svaki jezik) i izbor jezika čuvaju se u lokalnoj memoriji vašeg pregledača (localStorage). Ti podaci ostaju na vašem uređaju i ne šaljemo ih nigde. Brišete ih brisanjem podataka sajta u podešavanjima pregledača.',
-              'Tehnički podaci pri poseti. Kad otvorite sajt, vaš pregledač šalje IP adresu, tip pregledača, vreme i adresu koju tražite. Te podatke obrađuje Cloudflare, naš pružalac hostinga i mrežne zaštite, radi isporuke i bezbednosti sajta.',
-              'Poruke koje nam pošaljete. Ako nam pišete e-poštom, imamo vašu adresu i sadržaj poruke.',
+              'Podaci u vašem pregledaču. Ime koje upišete, izabrani lik, napredak u priči (posebno za svaki jezik) i izbor jezika čuvaju se u lokalnoj memoriji pregledača (localStorage). Ostaju na vašem uređaju i ne šaljemo ih nigde. Brišete ih brisanjem podataka sajta u podešavanjima pregledača.',
+              'Tehnički podaci pri poseti. Kad otvorite sajt, vaš pregledač šalje IP adresu, tip pregledača, vreme i adresu koju tražite. Te podatke obrađuje Cloudflare, pružalac hostinga i mrežne zaštite, radi rada i bezbednosti sajta (naš legitimni interes).',
             ],
           },
         ],
@@ -36,13 +28,8 @@ export default {
               'Ne učitavamo fontove ni skripte sa tuđih servera.',
             ],
           },
-          { p: 'Cloudflare, kao infrastruktura sajta, može koristiti tehničke mehanizme zaštite od zloupotrebe. Ako u budućnosti uvedemo nešto od navedenog, prvo ćemo ažurirati ovu politiku.' },
-        ],
-      },
-      {
-        h: 'Zašto i na osnovu čega',
-        blocks: [
-          { p: 'Tehničke podatke obrađujemo zbog rada i bezbednosti sajta; to je naš legitimni interes. Poruke koje nam pošaljete koristimo da vam odgovorimo, na osnovu vaše saglasnosti, koju dajete samim slanjem poruke. Podatke u pregledaču koristi samo sajt, da bi radio onako kako ste ga podesili.' },
+          { p: 'Cloudflare, kao infrastruktura sajta, može koristiti tehničke mehanizme zaštite od zloupotrebe.' },
+          { p: 'Ako u budućnosti uvedemo nešto od navedenog, prvo ćemo ažurirati ovu politiku.' },
         ],
       },
       {
@@ -52,34 +39,12 @@ export default {
         ],
       },
       {
-        h: 'Koliko dugo čuvamo podatke',
-        blocks: [
-          {
-            ul: [
-              'Podaci u pregledaču: dok ih ne obrišete.',
-              'Tehnički dnevnici: prema pravilima Cloudflare-a.',
-              'E-pošta: dok je potrebna da odgovorimo na vašu poruku.',
-            ],
-          },
-        ],
-      },
-      {
         h: 'Vaša prava',
         blocks: [
-          { p: 'Prema Zakonu o zaštiti podataka o ličnosti Srbije i, za posetioce iz EU, prema GDPR-u, imate pravo na:' },
-          {
-            ul: ['pristup svojim podacima', 'ispravku', 'brisanje', 'ograničenje obrade', 'prigovor', 'prenosivost podataka'],
-          },
-          { p: 'Za ostvarivanje prava pišite nam na {email}. Imate i pravo na pritužbu nadležnom organu: u Srbiji to je Poverenik za informacije od javnog značaja i zaštitu podataka o ličnosti, a u EU nadzorni organ vaše države.' },
+          { p: 'Prema Zakonu o zaštiti podataka o ličnosti Srbije i, za posetioce iz EU, prema GDPR-u, imate pravo na pristup, ispravku, brisanje, ograničenje obrade, prigovor i prenosivost podataka.' },
+          { p: 'Mi sami ne čuvamo vaše podatke na serveru, a podaci u pregledaču su pod vašom kontrolom. Za tehničke podatke koje obrađuje Cloudflare, prava ostvarujete preko Cloudflare-a.' },
+          { p: 'Imate i pravo na pritužbu nadležnom organu: u Srbiji to je Poverenik za informacije od javnog značaja i zaštitu podataka o ličnosti, a u EU nadzorni organ vaše države.' },
         ],
-      },
-      {
-        h: 'Deca',
-        blocks: [{ p: 'Sajt nije namenjen osobama mlađim od 16 godina.' }],
-      },
-      {
-        h: 'Izmene politike',
-        blocks: [{ p: 'Ovu politiku možemo menjati. Datum poslednje izmene stoji na vrhu strane.' }],
       },
     ],
   },
@@ -91,13 +56,14 @@ export default {
         h: 'Fikcija',
         blocks: [
           { p: 'Sve priče, likovi, mesta, ustanove, mašine i događaji su izmišljeni. Svaka sličnost sa stvarnim osobama, firmama ili događajima je slučajna. Priče mogu biti inspirisane opštim temama iz javnih vesti, ali su potpuno prilagođene izmišljenom svetu.' },
-          { p: 'Sajt je namenjen odraslima i mladima od 16 godina naviše.' },
+          { p: 'Sajt je namenjen osobama od 16 godina naviše.' },
         ],
       },
       {
-        h: 'Nije savet',
+        h: 'Nije savet i bez garancije',
         blocks: [
           { p: 'Sadržaj je zabava. Nije politička, medicinska, pravna, finansijska ni bilo koja druga stručna preporuka. Izbori u pričama nisu ocenjivanje čitaoca.' },
+          { p: 'Sajt i priče nude se onakvi kakvi jesu, bez garancije tačnosti, dostupnosti ili odsustva grešaka. U meri dozvoljenoj zakonom ne odgovaramo za štetu nastalu korišćenjem sajta. Linkovi ka tuđim sajtovima su van naše kontrole.' },
         ],
       },
       {
@@ -105,20 +71,10 @@ export default {
         blocks: [{ p: 'Tekstovi i slike nastaju uz pomoć alata veštačke inteligencije, uz ljudski izbor, uređivanje i odobrenje.' }],
       },
       {
-        h: 'Sadržaj „kakav jeste“',
-        blocks: [
-          { p: 'Sajt i priče nude se onakvi kakvi jesu, bez garancije tačnosti, dostupnosti ili odsustva grešaka. U meri dozvoljenoj zakonom ne odgovaramo za štetu nastalu korišćenjem sajta. Linkovi ka tuđim sajtovima su van naše kontrole.' },
-        ],
-      },
-      {
         h: 'Autorska prava',
         blocks: [
-          { p: '© {year} {operator}. Sadržaj sajta nije dozvoljeno kopirati, objavljivati ni koristiti za obuku modela bez pisane dozvole. Kratki citati sa jasnim navođenjem izvora i linkom ka sajtu su dozvoljeni.' },
+          { p: '© {year} {site}. Sadržaj sajta nije dozvoljeno kopirati, objavljivati ni koristiti za obuku modela bez pisane dozvole. Kratki citati sa jasnim navođenjem izvora i linkom ka sajtu su dozvoljeni.' },
         ],
-      },
-      {
-        h: 'Kontakt',
-        blocks: [{ p: 'Za prijave i pitanja pišite na {email}.' }],
       },
     ],
   },

@@ -12,9 +12,9 @@ import useLocalePath, { useLang } from '../../i18n/useLocalePath';
 import * as S from './Legal.styled';
 
 const CONTENT = { sr: contentSr, en: contentEn };
-const TOKEN = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|\{(site|operator|email|country|year)\}/g;
+const TOKEN = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|\{(site|year)\}/g;
 
-// Tekst sa tokenima: {operator}, {email}... iz LEGAL (src/config.js), [tekst](adresa) kao link. E-pošta je mailto link.
+// Tekst sa tokenima: {site} (naziv sajta) i {year} (iz LEGAL u src/config.js); [tekst](adresa) je link.
 const inline = (text, values) => {
   const out = [];
   let last = 0;
@@ -25,12 +25,6 @@ const inline = (text, values) => {
       out.push(
         <a key={i++} href={m[2]} rel="noopener noreferrer">
           {m[1]}
-        </a>
-      );
-    } else if (m[3] === 'email' && !values.email.startsWith('[')) {
-      out.push(
-        <a key={i++} href={`mailto:${values.email}`}>
-          {values.email}
         </a>
       );
     } else {
@@ -56,7 +50,7 @@ export default function Legal({ pageKey }) {
   const lang = useLang();
   const localePath = useLocalePath();
   const page = CONTENT[lang][pageKey];
-  const values = { site: t('site.name'), operator: LEGAL.operator, email: LEGAL.email, country: LEGAL.country, year: String(LEGAL.year) };
+  const values = { site: t('site.name'), year: String(LEGAL.year) };
   useDocumentMeta(`${page.title} · ${t('site.name')}`, page.description);
 
   return (
