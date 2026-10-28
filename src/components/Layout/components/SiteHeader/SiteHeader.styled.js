@@ -15,17 +15,21 @@ export const Row = styled.div`
   gap: ${({ theme }) => theme.space[100]};
 `;
 
+// Pun naziv na svim širinama: tečna veličina, a na uskim ekranima sme u dva reda (bez seckanja).
 export const BrandName = styled.span`
+  min-width: 0;
   font-family: ${({ theme }) => theme.fontHeading};
+  font-size: clamp(0.95rem, 3.6vw, 1.25rem);
+  line-height: 1.15;
   transition: opacity ${({ theme }) => theme.transitions.base};
 `;
 
 export const Brand = styled(Link)`
   display: inline-flex;
   align-items: center;
+  min-width: 0;
   gap: ${({ theme }) => theme.space[100]};
   font-family: ${({ theme }) => theme.fontHeading};
-  font-size: ${({ theme }) => theme.fs[110]};
   letter-spacing: ${({ theme }) => theme.tracking[4]};
   text-decoration: none;
   color: ${({ theme }) => theme.text};

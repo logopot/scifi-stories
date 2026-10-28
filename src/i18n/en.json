@@ -1,7 +1,6 @@
 {
   "site": {
     "name": "Other World Stories",
-    "shortName": "Other World",
     "skip": "Skip to content",
     "home": "{{name}}, home",
     "footer": "Your progress is saved only in your browser",

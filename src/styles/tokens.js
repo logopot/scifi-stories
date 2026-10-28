@@ -173,8 +173,6 @@ export const breakpoints = {
   md: '768px',
   lg: '992px',
   xl: '1200px',
-  nameFull: '380px',
-  nameShort: '300px',
 };
 
 // Pozadina "Sky": veličine i položaji mrlja i zvezda (dekor, ne raspored sadržaja).

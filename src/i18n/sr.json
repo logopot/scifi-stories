@@ -1,7 +1,6 @@
 {
   "site": {
     "name": "Priče drugog sveta",
-    "shortName": "Drugi svet",
     "skip": "Idi na sadržaj",
     "home": "{{name}}, početna",
     "footer": "Napredak se čuva samo u tvom pregledaču",
