@@ -18,12 +18,13 @@ import * as S from './StartScreen.styled';
 export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
   const { story, engine } = useStory();
   const { t } = useTranslation();
-  // Engleska verzija nema rodne varijante teksta: rod se ne pita, nego se bira portret čitaoca (Portrait 1 = 'm', 2 = 'f';
-  // isti ključ koji engine već koristi za imgM/imgF). Bez dva različita portreta u priči izbor se preskače (podrazumevano 'm').
-  const askGender = engine.lang !== 'en';
+  // Rod se bira portretom čitaoca (prvi = 'm', drugi = 'f': isti ključevi koje engine koristi za imgM/imgF i varijante tf/leadf/textf).
+  // Bez dva različita portreta u priči: srpska verzija pita rod kao ranije, a engleska ga ne pita (podrazumevano 'm').
+  const isEn = engine.lang === 'en';
   const reader = story.characters?.__reader__;
   const portraits = [['m', reader?.imgM], ['f', reader?.imgF]].map(([value, id]) => ({ value, id, src: engine.getImage(id)?.src }));
-  const askPortrait = !askGender && portraits.every((p) => p.id && p.src) && portraits[0].id !== portraits[1].id;
+  const askPortrait = portraits.every((p) => p.id && p.src) && portraits[0].id !== portraits[1].id;
+  const askGender = !isEn && !askPortrait;
   const { meta, ui } = story;
   const s = ui.start;
   const [raw, setRaw] = useState(prefs?.name || '');
@@ -103,6 +104,7 @@ export default function StartScreen({ prefs, hasSave, onBegin, onContinue }) {
                 labelledBy="portrait-label"
                 label={(n) => t('start.portrait', { n })}
               />
+              {!isEn && <S.PortraitHint>{t('start.portraitHint')}</S.PortraitHint>}
             </>
           )}
 

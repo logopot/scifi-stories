@@ -96,7 +96,7 @@ export const sizes = {
   cardIcon: '24px',
   cardZoom: 1.04,
   cardNudge: '4px',
-  portraitChoice: '5.5rem',
+  portraitChoice: '6rem',
   avatarSm: '44px',
   avatarMd: '56px',
   ratioPortrait: '3 / 4',

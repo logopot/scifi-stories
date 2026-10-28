@@ -45,6 +45,12 @@ export const Status = styled.p`
   min-height: 1.4em;
 `;
 
+export const PortraitHint = styled.p`
+  margin: 0 0 ${({ theme }) => theme.space[40]};
+  font-size: ${({ theme }) => theme.fs[86]};
+  color: ${({ theme }) => theme.textMuted};
+`;
+
 export const Muted = styled.span`
   opacity: ${({ theme }) => theme.opacity.muted};
 `;

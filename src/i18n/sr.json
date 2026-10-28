@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "Other World Stories",
-    "shortName": "Other World",
+    "name": "Priče drugog sveta",
+    "shortName": "Drugi svet",
     "skip": "Idi na sadržaj",
     "home": "{{name}}, početna",
     "footer": "Napredak se čuva samo u tvom pregledaču",
@@ -32,8 +32,9 @@
     "interactive": "interaktivna"
   },
   "start": {
-    "portraitTitle": "Izaberi portret",
-    "portrait": "Portret {{n}}"
+    "portraitTitle": "Izaberi lik",
+    "portrait": "Lik {{n}}",
+    "portraitHint": "Priča će ti se obraćati u skladu sa izabranim likom."
   },
   "progress": {
     "label": "Napredak kroz priču, poglavlje {{index}} od {{total}}"
