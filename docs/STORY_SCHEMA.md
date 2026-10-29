@@ -167,7 +167,7 @@ Slika `kind: "place"` može imati `fx`: niz do 6 efekata (treperenje lampi, vatr
 | Tip | Polja |
 | --- | --- |
 | `glow` | `x`, `y`, `r` (poluprečnik u % širine slike), `color?`, `flicker?` (0–1, podrazumevano 0.3) |
-| `fire` | `x`, `y`, `r`, `color?` (jače treperenje, „disanje“ oblika, iskre) |
+| `fire` | `x`, `y`, `r`, `color?`, `w?`, `h?`, `source?` (`painted` podrazumevano: animira SAM naslikani plamen — iseče područje slike oko plamena (`w`/`h` u % širine/visine slike, podrazumevano iz `r`) i talasa ga; `drawn`: nacrtani jezičci, za peći bez naslikane vatre). Uz oba: bazen svetla, iskre i tanak dim |
 | `sun` | `x`, `y`, `r`, `color?`, `rays?` (blagi zraci) |
 | `smoke` | `x`, `y`, `w` (širina izvora u %), `color?` |
 | `twinkle` | `points: [[x, y], ...]` (do 40), `r?` (prečnik tačke u %), `color?` |

@@ -26,12 +26,17 @@ export function createFxEngine(opts) {
   const matterItems = []; // u koordinatama slike (dim, magla)
   const screenItems = []; // u koordinatama ekrana (sneg, kiša)
   const sources = [];
+  let hasPainted = false;
   for (const e of fx) {
     const pal = palFor(e);
     if (e.type === 'glow') sources.push(lights[lights.push(makeGlow(e, pal)) - 1]);
     else if (e.type === 'fire') {
       const fire = makeFire(e, pal);
       sources.push(lights[lights.push(fire) - 1]);
+      if (fire.drawPainted && (e.source || 'painted') === 'painted') {
+        matterItems.push({ draw: fire.drawPainted });
+        hasPainted = true;
+      }
       matterItems.push({ draw: fire.drawSmoke });
     }
     else if (e.type === 'sun') sources.push(lights[lights.push(makeSun(e, pal)) - 1]);
@@ -84,7 +89,7 @@ export function createFxEngine(opts) {
     light.width = Math.max(1, Math.round(cw * ls));
     light.height = Math.max(1, Math.round(ch * ls));
     // dim i magla su mekani: bez snega/kiše (oštre čestice) sloj materije ide u nižoj rezoluciji
-    mScale = screenItems.length ? dpr : S.softScale;
+    mScale = screenItems.length || hasPainted ? dpr : S.softScale;
     matter.width = Math.max(1, Math.round(cw * mScale));
     matter.height = Math.max(1, Math.round(ch * mScale));
     if (imgSize && cw && ch) rect = coverRect(cw, ch, imgSize.w, imgSize.h, parseFocus(focus));
@@ -110,7 +115,7 @@ export function createFxEngine(opts) {
   let grainAt = 0;
 
   const env = {
-    L: lctx, M: mctx, t: 0, dt: 0.016, u: 1, still: false, w: 0, h: 0, rect, wind: { base: 0, gust: 0, push: 0 },
+    L: lctx, M: mctx, img, imgSize, phone, t: 0, dt: 0.016, u: 1, still: false, w: 0, h: 0, rect, wind: { base: 0, gust: 0, push: 0 },
     px: (x) => rect.left + (x / 100) * rect.width,
     py: (y) => rect.top + (y / 100) * rect.height,
   };

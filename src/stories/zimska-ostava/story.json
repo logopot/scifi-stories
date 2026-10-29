@@ -1839,7 +1839,8 @@
           "type": "fire",
           "x": 22.9,
           "y": 60.4,
-          "r": 4.5
+          "r": 4.5,
+          "source": "painted"
         },
         {
           "type": "twinkle",
@@ -1894,7 +1895,8 @@
           "type": "fire",
           "x": 56.5,
           "y": 63.6,
-          "r": 4
+          "r": 4,
+          "source": "painted"
         },
         {
           "type": "glow",

@@ -10,7 +10,7 @@ import * as S from './DevFx.styled';
 // parametre, "Kopiraj JSON" kopira niz `fx` za tu sliku (zalepi ga u images[id].fx u story.json i story.en.json).
 const COORD_TYPES = ['glow', 'fire', 'sun', 'smoke', 'twinkle'];
 const GLOBAL_TYPES = ['snow', 'dust', 'rain', 'mist'];
-const NUMBER_FIELDS = { glow: ['r', 'flicker'], fire: ['r'], sun: ['r'], smoke: ['w'], twinkle: ['r'], snow: ['density', 'speed'], dust: ['density', 'speed'], rain: ['density', 'speed'], mist: [] };
+const NUMBER_FIELDS = { glow: ['r', 'flicker'], fire: ['r', 'w', 'h'], sun: ['r'], smoke: ['w'], twinkle: ['r'], snow: ['density', 'speed'], dust: ['density', 'speed'], rain: ['density', 'speed'], mist: [] };
 const STEP = { r: 0.1, w: 0.1, flicker: 0.05, density: 0.05, speed: 0.1 };
 const DEFAULTS = { glow: { r: 4 }, fire: { r: 5 }, sun: { r: 12 }, smoke: { w: 4 }, twinkle: { r: 1.4 } };
 const round = (v) => Math.round(v * 10) / 10;
@@ -209,6 +209,12 @@ export default function DevFx() {
             <label>
               <input type="checkbox" checked={Boolean(cur.rays)} onChange={(e) => update(sel, { rays: e.target.checked || undefined })} /> rays
             </label>
+          )}
+          {cur.type === 'fire' && (
+            <select value={cur.source || 'painted'} onChange={(e) => update(sel, { source: e.target.value === 'painted' ? undefined : e.target.value })} aria-label="Izvor plamena">
+              <option value="painted">painted (naslikan)</option>
+              <option value="drawn">drawn (nacrtan)</option>
+            </select>
           )}
           <select value={cur.color || ''} onChange={(e) => update(sel, { color: e.target.value || undefined })} aria-label="Boja">
             <option value="">(podrazumevana)</option>

@@ -59,8 +59,28 @@ export const fxStyle = {
     bloomAlpha: 0.09,
     flicker: 0.55,
     breath: 0.2, // nepravilno "disanje" visine
+    painted: {
+      // animacija NAslikanog plamena (source: 'painted'): iseče se područje iz slike i talasa se red po red
+      defaultW: 1.25, // podrazumevana širina područja (× r, % širine slike): otvor peći, ne cela peć
+      defaultH: 1.3, // podrazumevana visina (× širina u pikselima, pa u % visine slike)
+      feather: 0.18, // širina mekog ruba maske gore/dole (udeo visine)
+      featherX: 0.26, // levo/desno (šire, da okvir peći ne talasa)
+      featherPower: 1.15,
+      waveAmp: 0.055, // najveći vodoravni pomak (× širina područja) pri vrhu
+      baseWave: 0.12, // koliko talasanja ostaje pri dnu (udeo)
+      topBias: 1.3,
+      hz: [1.1, 2.7, 4.3], // vremenske učestalosti tri talasa
+      stretch: 0.08, // ±8% visine, sidro na dnu
+      stretchHz: [0.8, 1.9],
+      rowHeight: 2, // visina reda u pikselima slike
+      peakTint: 0.3, // jezgro belje na vrhuncu treperenja
+      dipTint: 0.3, // toplije pri padu
+      darkAmount: 0.6, // potamnjenje kopije ispod komada
+      darkAlpha: 0.6,
+      haloScale: 0.8, // blaži halo (slika već ima naslikan sjaj)
+    },
     smoke: { alpha: 0.055, puffs: 2 }, // tanak tamni dim iznad vrha
-    sparks: { max: 3, every: [1.4, 5], life: [0.9, 1.8], rise: [1.1, 2.3], size: 0.2, alpha: 0.9, tail: 3, tailStep: 0.05 },
+    sparks: { max: 3, maxPhone: 1, every: [1.4, 5], life: [0.9, 1.8], rise: [1.1, 2.3], size: 0.2, alpha: 0.9, tail: 3, tailStep: 0.05 },
   },
 
   sun: {
@@ -79,12 +99,12 @@ export const fxStyle = {
   twinkle: { haloRadius: 2.3, coreRadius: 0.55, haloAlpha: 0.24, coreAlpha: 0.55, flicker: 0.4, hzScale: [0.5, 1.7] },
 
   smoke: {
-    puffs: 6, // po izvoru (desktop); na telefonu manje
-    life: [9, 14],
-    rise: [0.55, 0.9], // % širine slike u sekundi
-    grow: [1.2, 5], // × w (početna → krajnja veličina)
-    alpha: 0.075,
-    windPx: 0.9, // koliko vetar nosi dim (× w po sekundi)
+    puffs: 8, // po izvoru (desktop); na telefonu manje
+    life: [7, 11],
+    rise: [0.9, 1.5], // % širine slike u sekundi (viši, tanji stubovi)
+    grow: [1.3, 3.6], // × w (krajnja veličina; uži stub umesto širokog oblaka)
+    alpha: 0.27,
+    windPx: 0.5, // koliko vetar nosi dim (× w po sekundi)
     warmEnd: 0.4, // do kog dela života je dim topao
     spin: 0.08,
   },

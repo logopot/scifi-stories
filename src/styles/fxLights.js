@@ -4,6 +4,7 @@
 import { fxStyle } from './fxStyle';
 import * as sprites from './fxSprites';
 import { intensity, makeFlicker, pick, rand } from './fxSignals';
+import { makePainted } from './fxPainted';
 
 const S = fxStyle;
 const TAU = Math.PI * 2;
@@ -73,6 +74,8 @@ const blob2 = (ctx, img, x, y, halfW, len, alpha) => {
 // --- fire: peć / vatra od izduženih mekih jezička ---
 export const makeFire = (e, pal) => {
   const f = S.fire;
+  const painted = (e.source || 'painted') === 'painted';
+  const flame = painted ? makePainted(e, pal) : null;
   const sig = makeFlicker(1);
   const breathPh = rand(0, TAU);
   const tongues = Array.from({ length: f.tongues }, (_, i) => ({
@@ -100,11 +103,13 @@ export const makeFire = (e, pal) => {
       const breath = env.still ? 1 : 1 + f.breath * (0.5 * Math.sin(TAU * 0.31 * env.t + breathPh) + 0.5 * s.v);
       const L = env.L;
       const k = S.intensity;
-      blob(L, sprites.soft(pal), x, y - R * 0.5, R * 3.4, f.bloomAlpha * I * k, 0.9);
-      blob(L, sprites.soft(pal), x, y - R * 0.4, R * 1.5, f.haloAlpha * I * k * (0.55 + 0.45 * s.peak), 1.05);
-      blob(L, sprites.deep(pal), x, y - R * 0.3, R * 1.6, f.haloAlpha * 0.8 * I * k * (0.5 + 0.5 * (1 - s.peak)), 1.05);
-      // jezičci: dižu se, uvijaju i nestaju
-      for (const tg of tongues) {
+      const hs = painted ? f.painted.haloScale : 1;
+      inst.sig = s;
+      blob(L, sprites.soft(pal), x, y - R * 0.5, R * 3.4, f.bloomAlpha * I * k * hs, 0.9);
+      blob(L, sprites.soft(pal), x, y - R * 0.4, R * 1.5, f.haloAlpha * I * k * hs * (0.55 + 0.45 * s.peak), 1.05);
+      blob(L, sprites.deep(pal), x, y - R * 0.3, R * 1.6, f.haloAlpha * 0.8 * I * k * hs * (0.5 + 0.5 * (1 - s.peak)), 1.05);
+      // nacrtani jezičci (samo source: 'drawn'): dižu se, uvijaju i nestaju
+      for (const tg of painted ? [] : tongues) {
         const a = env.still ? 0.45 : (env.t / tg.period + tg.ph) % 1;
         const rise = a * f.height * R * 0.62 * tg.hm * breath;
         const h = f.height * R * tg.hm * breath * (1 - 0.45 * a);
@@ -124,8 +129,8 @@ export const makeFire = (e, pal) => {
       // povremene iskre sa kratkim repom
       const sp = f.sparks;
       if (env.t > nextSpark) {
-        nextSpark = env.t + pick(sp.every);
-        if (sparkList.length < sp.max)
+        nextSpark = env.t + pick(sp.every) * (env.phone ? 1.6 : 1);
+        if (sparkList.length < (env.phone ? sp.maxPhone : sp.max))
           sparkList.push({ t0: env.t, life: pick(sp.life), x0: (Math.random() - 0.5) * R * 0.6, vx: rand(-0.5, 0.5) * R * 0.5, vy: -pick(sp.rise) * R, amp: rand(0.15, 0.45) * R, fr: rand(2, 4.2), ph: rand(0, TAU), size: rand(0.7, 1.2) });
       }
       for (let i = sparkList.length - 1; i >= 0; i--) {
@@ -145,6 +150,10 @@ export const makeFire = (e, pal) => {
         }
       }
       inst.at = { x, y, R };
+    },
+    // naslikani plamen: talasanje izrezanog područja slike (sloj materije)
+    drawPainted(env) {
+      if (flame && inst.sig) flame.draw(env, inst.sig);
     },
     // tanak tamni dim iznad vrha plamena (crta se u sloju materije)
     drawSmoke(env) {

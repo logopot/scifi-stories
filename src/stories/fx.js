@@ -7,7 +7,7 @@ export const FX_COLORS = ['accent', 'fxWarm', 'fxCold', 'fxSun', 'fxGreen']; // 
 export const MAX_POINTS = 40;
 export const FX_TYPES = {
   glow: { required: ['x', 'y', 'r'], optional: ['color', 'flicker'] },
-  fire: { required: ['x', 'y', 'r'], optional: ['color'] },
+  fire: { required: ['x', 'y', 'r'], optional: ['color', 'w', 'h', 'source'] },
   sun: { required: ['x', 'y', 'r'], optional: ['color', 'rays'] },
   smoke: { required: ['x', 'y', 'w'], optional: ['color'] },
   twinkle: { required: ['points'], optional: ['color', 'r'] },
@@ -17,7 +17,8 @@ export const FX_TYPES = {
   mist: { required: [], optional: ['color'] },
 };
 
-const RANGES = { x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
+export const FIRE_SOURCES = ['painted', 'drawn'];
+const RANGES = { x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], h: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
 
 // Vraća niz poruka o greškama (prazan niz = ispravno).
 export const validateFx = (fx) => {
@@ -37,6 +38,7 @@ export const validateFx = (fx) => {
       if (typeof e[k] !== 'number' || !Number.isFinite(e[k]) || e[k] < lo || e[k] > hi) errs.push(`${where} (${e.type}): "${k}" mora biti broj ${lo}–${hi}`);
     }
     if (e.color !== undefined && !FX_COLORS.includes(e.color)) errs.push(`${where} (${e.type}): nepoznata boja "${e.color}" (dozvoljeno: ${FX_COLORS.join(', ')})`);
+    if (e.source !== undefined && !FIRE_SOURCES.includes(e.source)) errs.push(`${where} (${e.type}): "source" mora biti ${FIRE_SOURCES.join(' ili ')}`);
     if (e.rays !== undefined && typeof e.rays !== 'boolean') errs.push(`${where} (${e.type}): "rays" mora biti true/false`);
     if (e.points !== undefined) {
       const ok = Array.isArray(e.points) && e.points.length > 0 && e.points.length <= MAX_POINTS &&

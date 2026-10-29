@@ -200,7 +200,7 @@ export const fbm = (x, y, seed, octaves, period = 0) => {
 export const SMOKE_VARIANTS = 3;
 export const smokeSprite = (tint, color, variant) =>
   once(`smoke:${tint}:${color.join(',')}:${variant}`, () => {
-    const rgb = tint === 'dark' ? [34, 33, 38] : tint === 'warm' ? mix(color, [150, 140, 132], 0.45) : mix(color, [122, 132, 148], 0.45);
+    const rgb = tint === 'dark' ? [34, 33, 38] : tint === 'warm' ? mix(color, [150, 140, 132], 0.45) : mix(color, [84, 94, 112], 0.6);
     return paint(128, 128, (u, v, o) => {
       const d = Math.hypot(u - 0.5, v - 0.5) * 2;
       if (d >= 1) return;
