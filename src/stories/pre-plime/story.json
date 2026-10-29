@@ -1989,52 +1989,359 @@
     "cover": {
       "src": "img/pre-plime/cover.webp",
       "alt": "Nasip: grad na nasipu iznad belih plićaka u sumrak",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 48.3,
+          "y": 42.1,
+          "r": 3,
+          "flicker": 0.15
+        },
+        {
+          "type": "glow",
+          "x": 24,
+          "y": 62.8,
+          "r": 1.8,
+          "flicker": 0.3
+        },
+        {
+          "type": "glow",
+          "x": 55.2,
+          "y": 76.3,
+          "r": 2,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "kanal": {
       "src": "img/pre-plime/kanal.webp",
       "alt": "Treći kanal noću: čamac sa vrećama i fenjer na pristanu",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 60.8,
+          "y": 25.7,
+          "r": 3,
+          "flicker": 0.3
+        },
+        {
+          "type": "glow",
+          "x": 59.9,
+          "y": 57.9,
+          "r": 1.2,
+          "flicker": 0.2
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "niska": {
       "src": "img/pre-plime/niska.webp",
       "alt": "Niska strana: kuće na stubovima i bele niske parcele",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 59.7,
+          "y": 38.3,
+          "r": 3,
+          "flicker": 0.15
+        },
+        {
+          "type": "glow",
+          "x": 48.6,
+          "y": 41.3,
+          "r": 2.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "zrnara": {
       "src": "img/pre-plime/zrnara.webp",
       "alt": "Zrnara: kameni podrum sa vrećama pod pečatom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 48.9,
+          "y": 6.7,
+          "r": 8,
+          "color": "fxCold",
+          "flicker": 0
+        },
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 29.8,
+          "r": 2.5,
+          "flicker": 0.25
+        },
+        {
+          "type": "glow",
+          "x": 69.4,
+          "y": 63.6,
+          "r": 2.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "dust",
+          "density": 0.5
+        }
+      ]
     },
     "merna": {
       "src": "img/pre-plime/merna.webp",
       "alt": "Merna kuća: toranj sa ekranima na stubovima nad vodom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 53.2,
+          "y": 14.8,
+          "r": 1.5,
+          "color": "fxGreen",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 50.6,
+          "y": 35.6,
+          "r": 5,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              76.4,
+              45.5
+            ],
+            [
+              86.9,
+              45.8
+            ]
+          ],
+          "r": 1.2
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "splav": {
       "src": "img/pre-plime/splav.webp",
       "alt": "Splav: plutajuća pijaca sa fenjerima i svetom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              31.1,
+              36.6
+            ],
+            [
+              35.8,
+              32.6
+            ],
+            [
+              39.8,
+              29.6
+            ],
+            [
+              44,
+              27.7
+            ],
+            [
+              48.3,
+              25.3
+            ],
+            [
+              53.3,
+              24.7
+            ],
+            [
+              58.9,
+              26.7
+            ],
+            [
+              63.3,
+              29.6
+            ],
+            [
+              68.3,
+              31.6
+            ],
+            [
+              72.8,
+              34.6
+            ],
+            [
+              78.3,
+              36.6
+            ],
+            [
+              83.3,
+              34.6
+            ],
+            [
+              87.8,
+              36.6
+            ],
+            [
+              37.8,
+              39.5
+            ],
+            [
+              44.4,
+              37.5
+            ],
+            [
+              70,
+              38.5
+            ],
+            [
+              75.6,
+              39.5
+            ]
+          ],
+          "r": 1.2
+        },
+        {
+          "type": "glow",
+          "x": 53.9,
+          "y": 42.5,
+          "r": 3,
+          "flicker": 0.4
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "cuvar": {
       "src": "img/pre-plime/cuvar.webp",
       "alt": "Podrum Merne kuće: ugašena tabla Čuvara",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 51,
+          "y": 37.7,
+          "r": 1.8,
+          "flicker": 0.1
+        }
+      ]
     },
     "nasip": {
       "src": "img/pre-plime/nasip.webp",
       "alt": "Nasip: dvorana Veća i pristan pred zoru",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              29.2,
+              63.4
+            ],
+            [
+              42,
+              64
+            ],
+            [
+              77.9,
+              32.8
+            ],
+            [
+              28.9,
+              38.3
+            ],
+            [
+              53.3,
+              35
+            ],
+            [
+              55.6,
+              35
+            ],
+            [
+              58.9,
+              35
+            ],
+            [
+              61.7,
+              35
+            ],
+            [
+              64.4,
+              35
+            ]
+          ],
+          "r": 1.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "ventil": {
       "src": "img/pre-plime/ventil.webp",
       "alt": "Ventil: gvozdena kapija sa točkom i zupčanikom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 67,
+          "y": 40.5,
+          "r": 3,
+          "flicker": 0.3
+        },
+        {
+          "type": "glow",
+          "x": 19.1,
+          "y": 56.3,
+          "r": 1.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "svitanje": {
       "src": "img/pre-plime/svitanje.webp",
       "alt": "Svitanje nad plićacima i poljima",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 51.1,
+          "y": 50.4,
+          "r": 5,
+          "color": "fxSun"
+        },
+        {
+          "type": "glow",
+          "x": 18.9,
+          "y": 51,
+          "r": 1.8,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "jela": {
       "src": "img/pre-plime/jela.webp",
