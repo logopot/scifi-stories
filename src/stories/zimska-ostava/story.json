@@ -80,11 +80,15 @@
   "endings": {
     "e": {
       "title": "Svi dimnjaci",
-      "closing": ["Te noći u Tihovu ne spava niko, a nijedna peć se ne gasi."]
+      "closing": [
+        "Te noći u Tihovu ne spava niko, a nijedna peć se ne gasi."
+      ]
     },
     "t": {
       "title": "Nedeljni listić",
-      "closing": ["Sanke su otišle, a Mreža počinje da broji dane."]
+      "closing": [
+        "Sanke su otišle, a Mreža počinje da broji dane."
+      ]
     },
     "o": {
       "title": "Ključ na ekseru",
@@ -1746,47 +1750,335 @@
     "cover": {
       "src": "img/zimska-ostava/cover.webp",
       "alt": "Tihovo u kotlini i uspon do Ostave pod snežnim nebom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              35.5,
+              67.8
+            ],
+            [
+              39.3,
+              65.9
+            ],
+            [
+              43.5,
+              63.3
+            ],
+            [
+              47.3,
+              61.2
+            ],
+            [
+              50.6,
+              58.8
+            ],
+            [
+              53.9,
+              55.6
+            ],
+            [
+              56.8,
+              51.9
+            ],
+            [
+              59.5,
+              48.2
+            ],
+            [
+              61.9,
+              44.5
+            ],
+            [
+              63.7,
+              41.8
+            ],
+            [
+              64.8,
+              39.7
+            ]
+          ],
+          "r": 1.3
+        },
+        {
+          "type": "glow",
+          "x": 64.6,
+          "y": 38.7,
+          "r": 3.5,
+          "flicker": 0.2
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              83.3,
+              73.1
+            ],
+            [
+              85.5,
+              73.6
+            ]
+          ],
+          "r": 1,
+          "color": "fxWarm"
+        },
+        {
+          "type": "snow",
+          "density": 0.5
+        }
+      ]
     },
     "kapija": {
       "src": "img/zimska-ostava/kapija.webp",
       "alt": "Kapija Ostave noću: red sa fenjerima i peć u prolazu",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "fire",
+          "x": 22.9,
+          "y": 60.4,
+          "r": 4.5
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              38.4,
+              43.4
+            ],
+            [
+              56.4,
+              46.6
+            ],
+            [
+              62.2,
+              47.1
+            ],
+            [
+              65.7,
+              48.2
+            ],
+            [
+              68.8,
+              48.7
+            ],
+            [
+              71.4,
+              49.3
+            ],
+            [
+              75,
+              49.3
+            ],
+            [
+              78,
+              49.6
+            ]
+          ],
+          "r": 1.6
+        },
+        {
+          "type": "snow",
+          "density": 0.5
+        }
+      ]
     },
     "brojnica": {
       "src": "img/zimska-ostava/brojnica.webp",
       "alt": "Brojnica: mala soba sa pećicom i mesinganom mašinom Popis",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "fire",
+          "x": 56.5,
+          "y": 63.6,
+          "r": 4
+        },
+        {
+          "type": "glow",
+          "x": 45.8,
+          "y": 24.6,
+          "r": 2.2,
+          "color": "fxGreen",
+          "flicker": 0.08
+        }
+      ]
     },
     "uljara": {
       "src": "img/zimska-ostava/uljara.webp",
       "alt": "Uljara: redovi bačava u hladnoj hali",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 52.7,
+          "y": 30.5,
+          "r": 5,
+          "flicker": 0.25
+        },
+        {
+          "type": "dust",
+          "density": 0.5
+        }
+      ]
     },
     "zitnica": {
       "src": "img/zimska-ostava/zitnica.webp",
       "alt": "Žitnica: vreće pod injem",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 49.5,
+          "y": 9.5,
+          "r": 8,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 82.6,
+          "y": 60.4,
+          "r": 4,
+          "flicker": 0.25
+        },
+        {
+          "type": "dust",
+          "density": 0.5
+        }
+      ]
     },
     "dno": {
       "src": "img/zimska-ostava/dno.webp",
       "alt": "Spust i Dno: ledeni hodnik niz stenu i niska vrata sa starom plombom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 43.3,
+          "y": 50.8,
+          "r": 4,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "kancelarija": {
       "src": "img/zimska-ostava/kancelarija.webp",
       "alt": "Kancelarija iznad Kapije, sa prozorom u mećavi",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 22.2,
+          "y": 43.4,
+          "r": 5,
+          "flicker": 0.25
+        },
+        {
+          "type": "glow",
+          "x": 60.7,
+          "y": 25.4,
+          "r": 9,
+          "color": "fxCold",
+          "flicker": 0.12
+        }
+      ]
     },
     "dvoriste": {
       "src": "img/zimska-ostava/dvoriste.webp",
       "alt": "Dvorište: sanke i traktori pod farovima u vejavici",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 11.5,
+          "y": 56,
+          "r": 3.5,
+          "flicker": 0,
+          "color": "fxSun"
+        },
+        {
+          "type": "glow",
+          "x": 29,
+          "y": 57.2,
+          "r": 3.5,
+          "flicker": 0,
+          "color": "fxSun"
+        },
+        {
+          "type": "glow",
+          "x": 45,
+          "y": 57,
+          "r": 3.5,
+          "flicker": 0,
+          "color": "fxSun"
+        },
+        {
+          "type": "glow",
+          "x": 61.3,
+          "y": 57,
+          "r": 3.5,
+          "flicker": 0,
+          "color": "fxSun"
+        },
+        {
+          "type": "glow",
+          "x": 79.3,
+          "y": 57,
+          "r": 3.5,
+          "flicker": 0,
+          "color": "fxSun"
+        },
+        {
+          "type": "snow",
+          "density": 0.6
+        }
+      ]
     },
     "jutro": {
       "src": "img/zimska-ostava/jutro.webp",
       "alt": "Tihovo u svitanje posle vejavice, dim iz dimnjaka",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "smoke",
+          "x": 39.6,
+          "y": 55.1,
+          "w": 2.5
+        },
+        {
+          "type": "smoke",
+          "x": 49.3,
+          "y": 55.6,
+          "w": 2.5
+        },
+        {
+          "type": "smoke",
+          "x": 60.6,
+          "y": 53.5,
+          "w": 2.5
+        },
+        {
+          "type": "smoke",
+          "x": 76.2,
+          "y": 45.5,
+          "w": 2.5
+        },
+        {
+          "type": "sun",
+          "x": 76.8,
+          "y": 33.9,
+          "r": 7
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "rade": {
       "src": "img/zimska-ostava/rade.webp",

@@ -23,6 +23,11 @@ const withLogo = (theme, darkAccent = '#f2c14e') => {
     logoBodyOnImage: LOGO_ON_IMAGE.body,
     logoAccentOnImage: LOGO_ON_IMAGE.accent,
     logoGapOnImage: theme.scrim,
+    // boje efekata preko slika mesta (fx u images): podrazumevano neutralne, tema ih može preglasati
+    fxWarm: theme.fxWarm || '#f2b25e',
+    fxCold: theme.fxCold || '#b9dcf0',
+    fxSun: theme.fxSun || '#ffd98a',
+    fxGreen: theme.fxGreen || '#7fd69a',
   };
 };
 
@@ -402,6 +407,10 @@ const zimskaOstava = {
   accentStrong: '#2b6f8a',
   onAccent: '#ffffff',
   secondary: '#e0a45c',
+  fxWarm: '#e0a45c',
+  fxCold: '#8fcbe0',
+  fxSun: '#f2c88a',
+  fxGreen: '#7fd69a',
   glowA: 'rgba(143, 203, 224, 0.2)',
   glowB: 'rgba(224, 164, 92, 0.2)',
   border: 'rgba(233, 239, 242, 0.2)',

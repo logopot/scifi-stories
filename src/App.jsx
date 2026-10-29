@@ -14,6 +14,8 @@ import ThemeController from './styles/ThemeController';
 
 // Razvojna ruta za proveru izgleda strana (scripts/check-layout.mjs); u produkcijskom build-u je nema.
 const DevScene = import.meta.env.DEV ? React.lazy(() => import('./pages/DevScene')) : null;
+// Alat za postavljanje efekata preko slika (/dev/fx); isto samo u razvoju.
+const DevFx = import.meta.env.DEV ? React.lazy(() => import('./pages/DevFx')) : null;
 
 // Stara adresa čitača (/:path/citaj, /en/:path/citaj) preusmerava na adresu priče, da stari linkovi rade.
 function LegacyReaderRedirect() {
@@ -62,6 +64,16 @@ export default function App() {
                 element={
                   <React.Suspense fallback={null}>
                     <DevScene />
+                  </React.Suspense>
+                }
+              />
+            )}
+            {DevFx && (
+              <Route
+                path="/dev/fx"
+                element={
+                  <React.Suspense fallback={null}>
+                    <DevFx />
                   </React.Suspense>
                 }
               />

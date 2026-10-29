@@ -50,6 +50,7 @@ const checkStoryPair = (sr, en, label) => {
     const b = (en.images || {})[id];
     if (!b) continue;
     for (const f of ['src', 'kind']) if (a[f] !== b[f]) err(`images.${id}.${f}: "${a[f]}" ≠ "${b[f]}"`);
+    if (JSON.stringify(a.fx ?? null) !== JSON.stringify(b.fx ?? null)) err(`images.${id}.fx: efekti moraju biti isti u srpskoj i engleskoj verziji`);
   }
   sameKeys('characters (ključevi)', sr.characters, en.characters);
   for (const k of keys(sr.characters)) {
