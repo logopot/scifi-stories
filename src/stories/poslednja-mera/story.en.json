@@ -1410,22 +1410,102 @@
     "utociste": {
       "src": "img/poslednja-mera/utociste.webp",
       "alt": "Refuge: a city beneath the High Dam and the dry lake bed",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 73.9,
+          "y": 48.4,
+          "r": 6,
+          "color": "fxSun",
+          "flicker": 0
+        },
+        {
+          "type": "glow",
+          "x": 34.2,
+          "y": 52.4,
+          "r": 1.6,
+          "flicker": 0.1
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
     },
     "brana": {
       "src": "img/poslednja-mera/brana.webp",
       "alt": "The crown of the High Dam above the Catchment",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 66,
+          "y": 68,
+          "w": 34,
+          "h": 32,
+          "ripple": 0.3,
+          "glints": 8,
+          "exclude": [
+            [
+              75,
+              66,
+              6,
+              28
+            ]
+          ]
+        }
+      ]
     },
     "revir": {
       "src": "img/poslednja-mera/revir.webp",
       "alt": "The Infirmary: a low house with a white cross",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 91.7,
+          "y": 48.6,
+          "r": 3,
+          "flicker": 0.2
+        }
+      ]
     },
     "kontrola": {
       "src": "img/poslednja-mera/kontrola.webp",
       "alt": "The glass cube where Merač works",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "screen",
+          "quad": [
+            [
+              52.2,
+              50.3
+            ],
+            [
+              55.4,
+              50.3
+            ],
+            [
+              55.4,
+              55.4
+            ],
+            [
+              52.2,
+              55.4
+            ]
+          ],
+          "style": "data",
+          "color": "fxCold",
+          "intensity": 0.6,
+          "speed": 0.9,
+          "spill": 0.5
+        }
+      ]
     },
     "prolaz": {
       "src": "img/poslednja-mera/prolaz.webp",
@@ -1435,7 +1515,43 @@
     "rezerva": {
       "src": "img/poslednja-mera/rezerva.webp",
       "alt": "The Reserve: black water in a stone cistern",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 80.8,
+          "y": 58.8,
+          "r": 3.5,
+          "flicker": 0.35
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 0,
+          "y": 56,
+          "w": 100,
+          "h": 44,
+          "ripple": 0.2,
+          "glints": 8,
+          "columns": [
+            [
+              80.8,
+              0.5,
+              "fxWarm"
+            ]
+          ],
+          "exclude": [
+            [
+              76,
+              57,
+              18,
+              9
+            ]
+          ]
+        }
+      ]
     }
   },
   "characters": {

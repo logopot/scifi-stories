@@ -2256,27 +2256,105 @@
     "beli-pojas": {
       "src": "img/bez-opcije/beli-pojas.webp",
       "alt": "The White Belt: a salt plain under two suns",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 25.8,
+          "y": 20.6,
+          "r": 5.8,
+          "color": "fxSun"
+        },
+        {
+          "type": "sun",
+          "x": 64.2,
+          "y": 30.4,
+          "r": 2.2,
+          "color": "fxCold"
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
     },
     "zenit": {
       "src": "img/bez-opcije/zenit.webp",
       "alt": "Zenit: a city of stone",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 34.8,
+          "y": 14.4,
+          "r": 4.9,
+          "color": "fxSun"
+        },
+        {
+          "type": "sun",
+          "x": 68.9,
+          "y": 15.8,
+          "r": 1.8,
+          "color": "fxCold"
+        }
+      ]
     },
     "presek": {
       "src": "img/bez-opcije/presek.webp",
       "alt": "The Intersection: a tower on a ridge",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 21.9,
+          "y": 32.8,
+          "r": 6.3,
+          "color": "fxSun"
+        },
+        {
+          "type": "sun",
+          "x": 86.9,
+          "y": 37.9,
+          "r": 1.8,
+          "color": "fxCold"
+        }
+      ]
     },
     "luka": {
       "src": "img/bez-opcije/luka.webp",
       "alt": "The Port: a rail and the Carrier",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 18.8,
+          "y": 13.2,
+          "r": 5.5,
+          "color": "fxSun"
+        },
+        {
+          "type": "sun",
+          "x": 31.4,
+          "y": 16.4,
+          "r": 1.8,
+          "color": "fxCold"
+        }
+      ]
     },
     "poravnanje": {
       "src": "img/bez-opcije/poravnanje.webp",
       "alt": "The Alignment: the two suns merging",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 50.2,
+          "y": 28.7,
+          "r": 4.5,
+          "color": "fxSun",
+          "rays": true
+        }
+      ]
     }
   }
 }

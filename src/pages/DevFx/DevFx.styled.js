@@ -72,6 +72,39 @@ export const Marker = styled.button`
   touch-action: none;
 `;
 
+// Pravougaonik vode (isprekidan) ili izuzetka (tačkast), i vertikalna linija stuba odsjaja.
+export const Box = styled.div`
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px ${({ $exclude }) => ($exclude ? 'dotted' : 'dashed')} ${({ theme, $selected, $exclude }) => ($exclude ? theme.text : $selected ? theme.accent : theme.text)};
+  opacity: 0.8;
+  pointer-events: none;
+`;
+
+// SVG sloj za prikaz ekrana (pravougaonik ili quad)
+export const Overlay = styled.svg`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  polygon {
+    fill: none;
+    stroke: ${({ theme }) => theme.accent};
+    stroke-width: 1.5px;
+    opacity: 0.9;
+  }
+`;
+
+export const Line = styled.div`
+  position: absolute;
+  width: 0;
+  border-left: 1px dashed ${({ theme }) => theme.accent};
+  opacity: 0.8;
+  pointer-events: none;
+`;
+
 export const Ring = styled.div`
   position: absolute;
   border-radius: 50%;

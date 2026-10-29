@@ -1989,52 +1989,615 @@
     "cover": {
       "src": "img/pre-plime/cover.webp",
       "alt": "Nasip: grad na nasipu iznad belih plićaka u sumrak",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 48.3,
+          "y": 42.1,
+          "r": 3,
+          "flicker": 0.15
+        },
+        {
+          "type": "glow",
+          "x": 24,
+          "y": 62.8,
+          "r": 1.8,
+          "flicker": 0.3
+        },
+        {
+          "type": "glow",
+          "x": 55.2,
+          "y": 76.3,
+          "r": 2,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 0,
+          "y": 63,
+          "w": 38,
+          "h": 27,
+          "ripple": 0.4,
+          "glints": 10,
+          "columns": [
+            [
+              24,
+              0.7,
+              "fxWarm"
+            ]
+          ],
+          "exclude": [
+            [
+              13,
+              63,
+              15,
+              8
+            ],
+            [
+              26,
+              71,
+              12,
+              19
+            ]
+          ]
+        }
+      ]
     },
     "kanal": {
       "src": "img/pre-plime/kanal.webp",
       "alt": "Treći kanal noću: čamac sa vrećama i fenjer na pristanu",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 60.8,
+          "y": 25.7,
+          "r": 3,
+          "flicker": 0.3
+        },
+        {
+          "type": "glow",
+          "x": 59.9,
+          "y": 57.9,
+          "r": 1.2,
+          "flicker": 0.2
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 12,
+          "y": 60,
+          "w": 76,
+          "h": 40,
+          "ripple": 0.35,
+          "glints": 10,
+          "exclude": [
+            [
+              24,
+              60,
+              38,
+              22
+            ]
+          ]
+        }
+      ]
     },
     "niska": {
       "src": "img/pre-plime/niska.webp",
       "alt": "Niska strana: kuće na stubovima i bele niske parcele",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 59.7,
+          "y": 38.3,
+          "r": 3,
+          "flicker": 0.15
+        },
+        {
+          "type": "glow",
+          "x": 48.6,
+          "y": 41.3,
+          "r": 2.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "zrnara": {
       "src": "img/pre-plime/zrnara.webp",
       "alt": "Zrnara: kameni podrum sa vrećama pod pečatom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 48.9,
+          "y": 6.7,
+          "r": 8,
+          "color": "fxCold",
+          "flicker": 0
+        },
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 29.8,
+          "r": 2.5,
+          "flicker": 0.25
+        },
+        {
+          "type": "glow",
+          "x": 69.4,
+          "y": 63.6,
+          "r": 2.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "dust",
+          "density": 0.5
+        }
+      ]
     },
     "merna": {
       "src": "img/pre-plime/merna.webp",
       "alt": "Merna kuća: toranj sa ekranima na stubovima nad vodom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 53.2,
+          "y": 14.8,
+          "r": 1.5,
+          "color": "fxGreen",
+          "flicker": 0.1
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              76.4,
+              45.5
+            ],
+            [
+              86.9,
+              45.8
+            ]
+          ],
+          "r": 1.2
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 0,
+          "y": 66,
+          "w": 100,
+          "h": 34,
+          "ripple": 0.4,
+          "glints": 12,
+          "columns": [
+            [
+              50.5,
+              0.6,
+              "fxCold"
+            ],
+            [
+              76.4,
+              0.3,
+              "fxWarm"
+            ],
+            [
+              86.9,
+              0.3,
+              "fxWarm"
+            ]
+          ],
+          "exclude": [
+            [
+              31,
+              64,
+              38,
+              8
+            ]
+          ]
+        },
+        {
+          "type": "screens",
+          "screens": [
+            {
+              "x": 37.3,
+              "y": 37.6,
+              "w": 2.3,
+              "h": 4.4,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 0.9,
+              "spill": 0.4
+            },
+            {
+              "x": 40,
+              "y": 37.3,
+              "w": 2.3,
+              "h": 4.5,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 1.2,
+              "spill": 0.4
+            },
+            {
+              "x": 42.7,
+              "y": 37.1,
+              "w": 2.2,
+              "h": 4.5,
+              "style": "pulse",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 0.8,
+              "spill": 0.4
+            },
+            {
+              "x": 49.6,
+              "y": 34.6,
+              "w": 2.8,
+              "h": 3.1,
+              "style": "scan",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 1,
+              "spill": 0.4
+            },
+            {
+              "x": 53.5,
+              "y": 35.5,
+              "w": 2.2,
+              "h": 3.8,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 1.1,
+              "spill": 0.4
+            },
+            {
+              "x": 50.4,
+              "y": 24.5,
+              "w": 2.2,
+              "h": 4.2,
+              "style": "pulse",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 0.7,
+              "spill": 0.4
+            },
+            {
+              "x": 48.1,
+              "y": 25.2,
+              "w": 1.5,
+              "h": 3.7,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.4,
+              "speed": 1,
+              "spill": 0.3
+            }
+          ]
+        }
+      ]
     },
     "splav": {
       "src": "img/pre-plime/splav.webp",
       "alt": "Splav: plutajuća pijaca sa fenjerima i svetom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              31.1,
+              36.6
+            ],
+            [
+              35.8,
+              32.6
+            ],
+            [
+              39.8,
+              29.6
+            ],
+            [
+              44,
+              27.7
+            ],
+            [
+              48.3,
+              25.3
+            ],
+            [
+              53.3,
+              24.7
+            ],
+            [
+              58.9,
+              26.7
+            ],
+            [
+              63.3,
+              29.6
+            ],
+            [
+              68.3,
+              31.6
+            ],
+            [
+              72.8,
+              34.6
+            ],
+            [
+              78.3,
+              36.6
+            ],
+            [
+              83.3,
+              34.6
+            ],
+            [
+              87.8,
+              36.6
+            ],
+            [
+              37.8,
+              39.5
+            ],
+            [
+              44.4,
+              37.5
+            ],
+            [
+              70,
+              38.5
+            ],
+            [
+              75.6,
+              39.5
+            ]
+          ],
+          "r": 1.2
+        },
+        {
+          "type": "glow",
+          "x": 53.9,
+          "y": 42.5,
+          "r": 3,
+          "flicker": 0.4
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 12,
+          "y": 59.5,
+          "w": 78,
+          "h": 4,
+          "ripple": 0.4,
+          "glints": 12,
+          "columns": [
+            [
+              37,
+              0.3,
+              "fxWarm"
+            ],
+            [
+              54,
+              0.5,
+              "fxWarm"
+            ],
+            [
+              72,
+              0.35,
+              "fxWarm"
+            ]
+          ]
+        }
+      ]
     },
     "cuvar": {
       "src": "img/pre-plime/cuvar.webp",
       "alt": "Podrum Merne kuće: ugašena tabla Čuvara",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 51,
+          "y": 37.7,
+          "r": 1.8,
+          "flicker": 0.1
+        },
+        {
+          "type": "water",
+          "x": 0,
+          "y": 78,
+          "w": 100,
+          "h": 22,
+          "ripple": 0.3,
+          "glints": 8
+        }
+      ]
     },
     "nasip": {
       "src": "img/pre-plime/nasip.webp",
       "alt": "Nasip: dvorana Veća i pristan pred zoru",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              29.2,
+              63.4
+            ],
+            [
+              42,
+              64
+            ],
+            [
+              77.9,
+              32.8
+            ],
+            [
+              28.9,
+              38.3
+            ],
+            [
+              53.3,
+              35
+            ],
+            [
+              55.6,
+              35
+            ],
+            [
+              58.9,
+              35
+            ],
+            [
+              61.7,
+              35
+            ],
+            [
+              64.4,
+              35
+            ]
+          ],
+          "r": 1.3
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 0,
+          "y": 78,
+          "w": 100,
+          "h": 22,
+          "ripple": 0.4,
+          "glints": 12,
+          "columns": [
+            [
+              29.2,
+              0.5,
+              "fxWarm"
+            ],
+            [
+              42,
+              0.45,
+              "fxWarm"
+            ]
+          ]
+        }
+      ]
     },
     "ventil": {
       "src": "img/pre-plime/ventil.webp",
       "alt": "Ventil: gvozdena kapija sa točkom i zupčanikom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 67,
+          "y": 40.5,
+          "r": 3,
+          "flicker": 0.3
+        },
+        {
+          "type": "glow",
+          "x": 19.1,
+          "y": 56.3,
+          "r": 1.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 8,
+          "y": 70,
+          "w": 90,
+          "h": 30,
+          "ripple": 0.4,
+          "glints": 10,
+          "columns": [
+            [
+              67.2,
+              0.55,
+              "fxWarm"
+            ],
+            [
+              19.1,
+              0.45,
+              "fxWarm"
+            ]
+          ],
+          "exclude": [
+            [
+              0,
+              70,
+              24,
+              22
+            ]
+          ]
+        }
+      ]
     },
     "svitanje": {
       "src": "img/pre-plime/svitanje.webp",
       "alt": "Svitanje nad plićacima i poljima",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 51.1,
+          "y": 50.4,
+          "r": 5,
+          "color": "fxSun"
+        },
+        {
+          "type": "glow",
+          "x": 18.9,
+          "y": 51,
+          "r": 1.8,
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        },
+        {
+          "type": "water",
+          "x": 52,
+          "y": 56,
+          "w": 48,
+          "h": 17,
+          "ripple": 0.4,
+          "glints": 14,
+          "columns": [
+            [
+              51.1,
+              0.8,
+              "fxSun"
+            ]
+          ]
+        }
+      ]
     },
     "jela": {
       "src": "img/pre-plime/jela.webp",

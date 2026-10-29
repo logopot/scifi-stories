@@ -269,3 +269,61 @@ export const grainTile = () =>
       o[3] = 1 - strength * Math.random();
     }, 0);
   });
+
+// --- ekrani (screen): nečitljiv tok podataka (samo crtice i blokovi, bez slova), mek pojas skeniranja, scanline šum ---
+export const DATA_ROWS = 32;
+export const DATA_VARIANTS = 3;
+export const dataTexture = (pal, variant) =>
+  once(`data:${pal.key}:${variant}`, () => {
+    const w = 96;
+    const rowPx = 6;
+    const c = canvas(w, DATA_ROWS * rowPx);
+    const ctx = c.getContext('2d');
+    for (let r = 0; r < DATA_ROWS; r++) {
+      const base = 0.35 + Math.random() * 0.65;
+      let x = Math.random() * 10;
+      const indent = Math.random() < 0.3 ? 8 + Math.random() * 14 : 0;
+      x += indent;
+      while (x < w) {
+        const len = Math.random() < 0.12 ? 3 + Math.random() * 5 : 5 + Math.random() * 26;
+        const a = base * (0.45 + Math.random() * 0.55);
+        const col = mix(pal.mid, pal.core, Math.random() < 0.18 ? 0.7 : 0.15);
+        ctx.fillStyle = css(col, a);
+        // povremeno mali blok umesto tanke crtice
+        const block = Math.random() < 0.08;
+        ctx.fillRect(x, r * rowPx + (block ? 1 : 2), Math.min(len, w - x), block ? 4 : 2);
+        x += len + 3 + Math.random() * 12;
+      }
+    }
+    return c;
+  });
+
+const canvas = (w, h) => {
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  return c;
+};
+
+// Vodoravni mek pojas (gausov profil po visini)
+export const band = (pal) =>
+  once(`band:${pal.key}`, () =>
+    paint(8, 64, (u, v, o) => {
+      const d = (v - 0.5) * 2;
+      const c = mix(pal.mid, pal.core, Math.exp(-6 * d * d));
+      o[0] = c[0]; o[1] = c[1]; o[2] = c[2];
+      o[3] = Math.exp(-4.5 * d * d);
+    }, 1)
+  );
+
+// Scanline tekstura: tanki vodoravni redovi (tileable), jedva primetna
+export const scanlines = () =>
+  once('scanlines', () => {
+    const c = canvas(4, 4);
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = 'rgba(255,255,255,0.9)';
+    ctx.fillRect(0, 0, 4, 1);
+    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+    ctx.fillRect(0, 2, 4, 1);
+    return c;
+  });
