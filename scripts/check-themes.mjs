@@ -6,7 +6,7 @@ export const REQUIRED = [
   'name', 'mode', 'sky', 'bg', 'bgSoft', 'surface', 'text', 'textMuted', 'textFaint', 'accent', 'accentStrong', 'onAccent',
   'secondary', 'glowA', 'glowB', 'border', 'selection', 'focusRing', 'shadow', 'logoBody', 'logoAccent', 'logoGap', 'logoBodyOnImage', 'logoAccentOnImage', 'logoGapOnImage', 'scrim', 'onImage', 'btnBg', 'btnText', 'btnBorder', 'btnBgHover', 'btnTextHover', 'btnBorderHover', 'btnBgActive',
   'btnQuietText', 'btnQuietBorder', 'btnQuietBgHover', 'btnQuietTextHover', 'choiceBg', 'choiceBorder', 'choiceBgSelected',
-  'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fontBody', 'fontHeading',
+  'choiceTextSelected', 'choiceDot', 'btnDisabledBg', 'btnDisabledText', 'fxWarm', 'fxCold', 'fxSun', 'fxGreen', 'fontBody', 'fontHeading',
 ];
 const SKIES = ['twin-suns', 'stars', 'plain'];
 const MODES = ['light', 'dark'];

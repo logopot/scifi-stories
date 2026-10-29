@@ -56,7 +56,7 @@ export default function DevScene() {
       <Sky />
       <Page variant="reader">
         <StoryContext.Provider value={context}>
-          <SceneBackdrop src={backdropSrc} />
+          <SceneBackdrop src={backdropSrc} fx={nodeImage && nodeImage.fx} />
           <OnImage>
             <S.BackBar>
               <LogoLink size="xs" variant="onImage" />

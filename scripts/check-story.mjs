@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { getStoryEntry, stories } from '../src/stories/index.js';
 import { themes } from '../src/styles/themes.js';
+import { validateFx } from '../src/stories/fx.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const storiesDir = join(here, '../src/stories');
@@ -70,6 +71,11 @@ const checkStory = (entry, { template = false, lang = 'sr' } = {}) => {
     if (!im.src) err(`slika ${k}: nema src`);
     else if (!template && !im.src.startsWith(`img/${entry.slug}/`)) err(`slika ${k}: src mora počinjati sa img/${entry.slug}/ (je: ${im.src})`);
     else if (!existsSync(join(here, '../public', im.src))) console.warn(`UPOZORENJE: nedostaje fajl public/${im.src} (slika "${k}")`);
+    // efekti preko slike (opciono polje fx, samo kind "place"; šema u src/stories/fx.js)
+    if (im.fx !== undefined) {
+      if (im.kind !== 'place') err(`slika ${k}: fx je dozvoljen samo na slikama kind "place"`);
+      for (const m of validateFx(im.fx)) err(`slika ${k}: fx ${m}`);
+    }
   }
   for (const [id, n] of Object.entries(nodes)) {
     if (n.img && !images[n.img]) err(`${id}: nepoznata slika ${n.img}`);

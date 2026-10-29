@@ -41,6 +41,8 @@ export default function ReaderSession() {
   const nodeImage = state.screen === 'play' ? engine.getImage(story.nodes[state.node]?.img) : null;
   if (nodeImage && nodeImage.src) lastScene.current = nodeImage.src;
   const backdropSrc = state.screen === 'start' ? cover : lastScene.current || cover;
+  // efekti (images[id].fx) slike koja je trenutno iza strane; naslovna slika ima svoj unos u images (id cover) ako je dobila efekte
+  const backdropFx = Object.values(story.images || {}).find((im) => im.src === backdropSrc)?.fx;
 
   // Slike mogućih sledećih scena (na početnom ekranu: prve scene) učitavaju se unapred, van glavne niti.
   useEffect(() => {
@@ -69,7 +71,7 @@ export default function ReaderSession() {
 
   return (
     <>
-      <SceneBackdrop src={backdropSrc} />
+      <SceneBackdrop src={backdropSrc} fx={backdropFx} />
       <OnImage>
         <S.BackBar>
           <LogoLink size="xs" variant="onImage" />

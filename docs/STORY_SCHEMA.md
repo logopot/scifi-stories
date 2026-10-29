@@ -160,6 +160,22 @@ Svi id-evi moraju postojati, a `lead` mora biti deklarisana osa.
 - `kind: "portrait"` (3:4) za likove; `kind: "place"` (16:9) za mesta.
 - Slike mesta vezuju se poljem `img` na sceni, portreti poljem `img` na pasusu ili u `characters`.
 
+### Efekti preko slike (`fx`, opciono)
+
+Slika `kind: "place"` može imati `fx`: niz do 6 efekata (treperenje lampi, vatra, sunce, dim, sneg...) koji se crtaju preko slike i prate njeno sporo pomeranje i isecanje. Koordinate su u PROCENTIMA SLIKE (0–100, ne ekrana). Polje je zajedničko za oba jezika (isto u `story.json` i `story.en.json`; `check-parity` proverava), a šemu proverava `check-story` (`src/stories/fx.js`).
+
+| Tip | Polja |
+| --- | --- |
+| `glow` | `x`, `y`, `r` (poluprečnik u % širine slike), `color?`, `flicker?` (0–1, podrazumevano 0.3) |
+| `fire` | `x`, `y`, `r`, `color?`, `w?`, `h?`, `source?` (`painted` podrazumevano: animira SAM naslikani plamen — iseče područje slike oko plamena (`w`/`h` u % širine/visine slike, podrazumevano iz `r`) i talasa ga; `drawn`: nacrtani jezičci, za peći bez naslikane vatre). Uz oba: bazen svetla, iskre i tanak dim |
+| `sun` | `x`, `y`, `r`, `color?`, `rays?` (blagi zraci) |
+| `smoke` | `x`, `y`, `w` (širina izvora u %), `color?` |
+| `twinkle` | `points: [[x, y], ...]` (do 40), `r?` (prečnik tačke u %), `color?` |
+| `snow`, `dust`, `rain` | bez koordinata; `density?` (0–1), `speed?`, `color?` (čestice na canvasu: najviše ~70 na računaru, ~35 na telefonu) |
+| `mist` | bez koordinata; spori pramenovi magle u donjoj polovini; `color?` |
+
+`color` je ime tokena teme: `accent`, `fxWarm`, `fxCold`, `fxSun` ili `fxGreen` (nikad hex). Uz `prefers-reduced-motion` nema treperenja ni čestica (svetla ostaju kao blag mirni sjaj). Postavljanje: `npm run dev`, pa `/dev/fx?story=<slug>&image=<id>` (klik dodaje efekat, prevlačenje pomera, „Kopiraj JSON“ kopira niz `fx`).
+
 ## `characters`
 
 Mapa lica po imenu govornika (tačno kao u `who`): `"Orsa": { "img": "orsa" }`.
