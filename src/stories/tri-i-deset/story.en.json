@@ -1380,27 +1380,171 @@
     "stub": {
       "src": "img/tri-i-deset/stub.webp",
       "alt": "The Spire: a tower of antennas above a mountain city",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 83.6,
+          "y": 30.2,
+          "r": 4,
+          "flicker": 0.3
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              52.4,
+              25.7
+            ],
+            [
+              58,
+              25.7
+            ],
+            [
+              63.7,
+              25.7
+            ],
+            [
+              70.2,
+              25.7
+            ],
+            [
+              75.8,
+              25.7
+            ]
+          ],
+          "r": 1.4
+        },
+        {
+          "type": "mist"
+        }
+      ]
     },
     "sala": {
       "src": "img/tri-i-deset/sala.webp",
       "alt": "The hall with the big wall screen and the night-shift console",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 93.6,
+          "y": 39.5,
+          "r": 3.5,
+          "flicker": 0.25
+        }
+      ]
     },
     "terasa": {
       "src": "img/tri-i-deset/terasa.webp",
       "alt": "The tower terrace above the city and the Ring",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 23.6,
+          "y": 39.3,
+          "r": 3.5,
+          "flicker": 0.3
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              53.3,
+              66
+            ],
+            [
+              62.2,
+              68
+            ],
+            [
+              71.1,
+              68
+            ],
+            [
+              77.8,
+              66.6
+            ],
+            [
+              62.2,
+              71.5
+            ],
+            [
+              70,
+              72.9
+            ],
+            [
+              57.8,
+              70.4
+            ],
+            [
+              83.3,
+              71.9
+            ],
+            [
+              66.7,
+              74.9
+            ],
+            [
+              52.2,
+              19.2
+            ],
+            [
+              62.2,
+              15.2
+            ],
+            [
+              72.2,
+              11.7
+            ],
+            [
+              82.2,
+              7.3
+            ],
+            [
+              91.1,
+              1.8
+            ]
+          ],
+          "r": 0.7
+        }
+      ]
     },
     "hodnik": {
       "src": "img/tri-i-deset/hodnik.webp",
       "alt": "The tower corridor with a broken coffee machine",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 48.9,
+          "y": 35,
+          "r": 6,
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 68.6,
+          "y": 42.3,
+          "r": 2.5,
+          "color": "fxCold",
+          "flicker": 0.1
+        }
+      ]
     },
     "pult": {
       "src": "img/tri-i-deset/pult.webp",
       "alt": "The manual night-shift console with eight screens",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 85.8,
+          "y": 19.8,
+          "r": 4.5,
+          "flicker": 0.2
+        }
+      ]
     }
   },
   "characters": {
