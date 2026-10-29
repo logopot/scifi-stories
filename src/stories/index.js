@@ -32,6 +32,15 @@ export const stories = [
     coverAlt: "Utočište: grad ispod Visoke brane i suvo dno jezera",
     status: "ready",
     load: () => import("./poslednja-mera/story.json"),
+    en: {
+      path: "last-measure",
+      title: "The Last Measure",
+      tagline:
+        "A city at the foot of a dam shares its water by rules nobody writes anymore.",
+      genre: "Science fiction",
+      coverAlt: "Refuge: a city beneath the High Dam and the dry lake bed",
+      load: () => import("./poslednja-mera/story.en.json"),
+    },
   },
   {
     slug: "tri-i-deset",
@@ -45,6 +54,16 @@ export const stories = [
     coverAlt: "Stub: toranj sa antenama iznad planinskog grada i Obruča u noći",
     status: "ready",
     load: () => import("./tri-i-deset/story.json"),
+    en: {
+      path: "three-and-ten",
+      title: "Three and Ten",
+      tagline:
+        "In a mountain city the night shift waits for a cloud of debris, and the machine already has a plan.",
+      genre: "Science fiction",
+      coverAlt:
+        "The Spire: a tower of antennas above a mountain city and the Ring in the night",
+      load: () => import("./tri-i-deset/story.en.json"),
+    },
   },
   {
     slug: "tamni-sat",
@@ -81,6 +100,16 @@ export const stories = [
     coverAlt: "Nasip: grad na nasipu iznad belih plićaka u sumrak",
     status: "ready",
     load: () => import("./pre-plime/story.json"),
+    en: {
+      path: "before-the-tide",
+      title: "Before the Tide",
+      tagline:
+        "In a delta where every grain carries a seal, one forecast decides what gets sown.",
+      genre: "Science fiction",
+      coverAlt:
+        "The Levee: a city on an embankment above white shoals at dusk",
+      load: () => import("./pre-plime/story.en.json"),
+    },
   },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];

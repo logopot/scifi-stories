@@ -1,0 +1,1469 @@
+{
+  "meta": {
+    "title": "The Last Measure",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "In the city of Refuge water is not measured in liters but in permits. The last lake is called the Catchment, and the rules of its distribution are carried out by a system named Merač.",
+      "The Board of Measure sends you with one task: to review the allotment book before the gates close. Nobody tells you what you will find in it.",
+      "Before you are people who tell you part of the truth, a machine that does not lie, and a pass through which what the city needs no longer arrives."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "ethics"
+      },
+      {
+        "id": "t",
+        "name": "technological progress"
+      },
+      {
+        "id": "o",
+        "name": "survival"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "Refuge is a city below the High Dam, at the bottom of a valley that once held a lake. Water here is shared by measure, and the measure is calculated by a system called Merač. You arrive with one task and three days. Offers will appear before you."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "The ending does not depend on your last click.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Refuge"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "The Allotment Book"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "The Gates"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Afterward"
+    }
+  },
+  "start": "dolazak",
+  "endings": {
+    "e": {
+      "title": "The Book on the Square",
+      "closing": [
+        "Water is shared more slowly and more loudly, but it is shared in front of everyone. The book stays open on the square, and every morning someone asks why their measure is what it is.",
+        "Sometimes, in the middle of the line by the glass cube, you catch yourself counting votes instead of liters. Then you stop counting, and just stand in line."
+      ]
+    },
+    "t": {
+      "title": "Sluice Gates Without Hands",
+      "closing": [
+        "The sluice gates open and close without anyone’s hand, and everything arrives on time. The allotment book is longer than it has ever been, and only those who know what to ask read it.",
+        "Sometimes you wonder who last looked at the numbers. Then you remember that numbers don’t lie, and you don’t know whether that calms or worries you."
+      ]
+    },
+    "o": {
+      "title": "Closed Gates",
+      "closing": [
+        "The gates are closed, and the water in the Reserve stands still. Refuge remembers that it survived, and doesn’t ask at what price.",
+        "Sometimes, in the middle of an ordinary hour, you hear someone far downstream washing laundry in a bucket. Then you turn toward the water that is yours, and that is enough until the next time."
+      ]
+    }
+  },
+  "nodes": {
+    "dolazak": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "utociste",
+      "paragraphs": [
+        {
+          "t": "The tram stops where the rails end, at the edge of what was once a lake. You step down onto a concrete platform scoured by wind and smell it at once: dried silt, hot iron, a thin trace of salt."
+        },
+        {
+          "t": "Only one other passenger gets off with you, a woman with two empty canisters tied to her back. She doesn’t look at you, or the platform, or the lake bed. She walks straight to the gate, and from the way she carries the canisters you can tell she knows exactly how many steps it is to the tap assigned to her alone.",
+          "lead": "A woman with two empty canisters."
+        },
+        {
+          "t": "The bed descends in terraces, and on each terrace runs a darker band, like the ring in a cup from which someone long ago drank the tea. You count them. Eleven. Each is one year that took a meter of water.",
+          "lead": "Eleven rings on the wall of the basin."
+        },
+        {
+          "t": "Far below, in the very center, the last of it still glimmers: the Catchment, the valley’s last lake. Above it stands the High Dam, grey and smooth, and beneath it the city of Refuge, huddled in shadow as if hiding from its own water.",
+          "lead": "A city huddled below the dam."
+        },
+        {
+          "t": "The Catchment got its name when people built it to gather everything that falls from the mountain: rain, melted snow, night dew from the stone slopes. It was meant to last forever. The builders gave it that name as a promise, not as a description.",
+          "lead": "A lake built to gather."
+        },
+        {
+          "t": "The seal of the Board of Measure buzzes in your pocket. On the screen is a single sentence: “Review the allotment book before the gates close. Three days.” The Board never explains the jobs it hands out.",
+          "lead": "A message without explanation."
+        },
+        {
+          "t": "On the platform hangs a board of rules, written in big letters so nobody can claim an excuse. Do not waste. Do not spill. Do not give beyond measure. The last line has faded, but you can just make out what someone penciled beneath it: and do not ask why.",
+          "lead": "The rules board on the platform."
+        },
+        {
+          "t": "The air is dry in the way that stings the nose. You run a finger over a post on the platform and grey dust stays on your skin, fine as flour. You think it holds what the lake once kept on its bottom: clay, algae, bones of small fish. Now it lies uncovered and doesn’t know what to do with the light.",
+          "lead": "Dust that was once the lake bottom."
+        },
+        {
+          "t": "Before you set off toward the gate, you look back. The tram turns and leaves empty, because nobody goes back from here the same day. There isn’t even a driver to nod at you. The daylight is flat and white, without shadows, without excuses.",
+          "lead": "The tram leaving empty."
+        },
+        {
+          "t": "You head for the gate. Every step echoes as if you walked on a drumhead. Somewhere behind the walls a pump sounds, rhythmic and tired, like the heart of someone who has run too long.",
+          "lead": "A pump like a tired heart."
+        }
+      ],
+      "next": "kapija"
+    },
+    "kapija": {
+      "chapter": "c1",
+      "paragraphs": [
+        {
+          "t": "By the gate stands a woman in the grey uniform of the guard, arms folded over a rifle that looks older than she is. Around her neck she wears a small metal spool, the sluice key, and she doesn’t take her eyes off your face until you reach her.",
+          "lead": "A woman with a rifle and a key at her neck.",
+          "img": "teja"
+        },
+        {
+          "t": "Behind her rises a wall of the same grey concrete as the dam, with three rows of rivets that were once the builders’ pride and now only show where someone once repaired what had cracked. The gate isn’t large: two leaves, wide enough for a cart of barrels, not for a procession.",
+          "lead": "A wall with three rows of rivets."
+        },
+        {
+          "t": "“Seal.”",
+          "lead": "One word from the guard.",
+          "who": "Teja"
+        },
+        {
+          "t": "She holds out her palm, and doesn’t ask who you are.",
+          "lead": "A palm, no questions."
+        },
+        {
+          "t": "You hold your seal to her scanner. The scanner chirps, she reads the screen, and for a moment her jaw tightens. The Board doesn’t send anyone without reason, and the last one it sent didn’t stay.",
+          "lead": "Why did her jaw tighten?"
+        },
+        {
+          "t": "She lowers her hand.",
+          "lead": "Teja lowers her hand."
+        },
+        {
+          "t": "“Dam guard. You have three days, no more. The gates close when the Board says, and the Board says Friday.”",
+          "lead": "Three days to Friday.",
+          "who": "Teja"
+        },
+        {
+          "t": "Her gaze slides over your shoes, bag, palms. She is looking for a trace of something: salt, dust, silt, anything to betray where you come from. She finds nothing, and you can see she doesn’t like it. Whoever arrives without a trace arrives with some business, and business in Refuge is rarely good.",
+          "lead": "A gaze that looks for traces."
+        },
+        {
+          "t": "A procession of children crosses the square, each with a bucket no bigger than a teacup. They pass the guard and look at neither you nor her. In the column nobody speaks. The children know that talking spends moisture, and nobody gives moisture back.",
+          "lead": "Children with small buckets."
+        },
+        {
+          "t": "“Three rules for guests. You don’t enter other people’s houses uninvited. You don’t drink from other people’s taps. And you don’t ask anyone how much they’re allotted. It’s like asking someone their age, only here the answers are heavier.”",
+          "lead": "Three rules for guests.",
+          "who": "Teja"
+        },
+        {
+          "t": "She counts the rules off on her fingers, one by one.",
+          "lead": "Fingers counting rules."
+        },
+        {
+          "t": "“The last one who came from the Board stayed two days. He left the way he came, without looking back, and nobody learned why. I’m not telling you this to scare you. I’m telling you so you know where you stand.”",
+          "lead": "The last emissary left without looking back.",
+          "who": "Teja"
+        },
+        {
+          "t": "Even as she says it she doesn’t look away from you.",
+          "lead": "A gaze that doesn’t yield."
+        },
+        {
+          "t": "“Do you want to see the city or the book? It’s not the same.”",
+          "lead": "A question with a false bottom.",
+          "who": "Teja"
+        },
+        {
+          "t": "Behind her shoulder you see three roads. One leads up steps to the dam door, where the engineer’s light burns. The second descends toward a low house with a white cross, the Infirmary. The third runs straight to the glass cube where Merač works, the system that shares out the water.",
+          "lead": "Three roads ahead of you."
+        }
+      ],
+      "prompt": "Where do you start the review?",
+      "choices": [
+        {
+          "id": "k_brana",
+          "text": "You climb the dam to engineer Ilarion, to see the water level with your own eyes.",
+          "next": "brana",
+          "w": {
+            "o": 2
+          }
+        },
+        {
+          "id": "k_revir",
+          "text": "You go to the Infirmary, to doctor Oliva, to see who in the city asks most for water.",
+          "next": "revir",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "k_razd",
+          "text": "You go to the glass cube, to let Merač walk you through the book itself.",
+          "next": "merac",
+          "w": {
+            "t": 2
+          }
+        }
+      ]
+    },
+    "brana": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "brana",
+      "paragraphs": [
+        {
+          "t": "Ilarion meets you on the crown of the dam, under a sky whose red never quite goes out at this hour. He is tall and stooped, hands dirty with machine oil, and wears two wristwatches: one for the day, the other for what he calls water time.",
+          "lead": "An old man wearing two watches.",
+          "img": "ilarion"
+        },
+        {
+          "t": "He doesn’t greet you, but at once points to the gauge cut into the concrete and the mark the water once reached. The present level is below the lowest mark.",
+          "lead": "A gauge cut into the concrete."
+        },
+        {
+          "t": "“Water time runs slower than ordinary time. But when it stops, it stops at once.”",
+          "lead": "Time that stops all at once.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "He walks along the railing on the crown, the wind opening his coat like a sail. On the railing, every few meters, hang small boxes of measuring instruments, each with a faded number. “These are my children,” he says without turning, and you can’t tell if it’s a joke. One box is smashed. He hasn’t replaced it.",
+          "lead": "Instrument boxes on the railing."
+        },
+        {
+          "t": "Below you the Catchment spreads out. It looks smaller than on the maps, as if it had drawn itself together to be easier to carry. Thin ribbons of steam drift over the surface. Evaporation is half the trouble, Ilarion explains. The other half isn’t natural.",
+          "lead": "The other half of the trouble."
+        },
+        {
+          "t": "He points to a stainless steel post sticking out of the water. “Last year only its tip showed. This year three meters show. Next year, if we change nothing, the foot will show.” He laughs at himself, briefly, and cuts the laugh off like a closing tap.",
+          "lead": "A post rising from the water."
+        },
+        {
+          "t": "“My sums don’t add up. We lose more than evaporates and more than flows out through the sluices. The difference is small, four percent, but constant. Water doesn’t vanish by itself. It goes somewhere.”",
+          "lead": "Four percent that goes somewhere.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "He looks at you a long time, like an engineer judging whether a new support can bear the load. He may not open the sluices without an order, and the order comes from Merač. For three years he has begged someone to look at what he may not.",
+          "lead": "An engineer who may not look."
+        },
+        {
+          "t": "On the other side a view opens onto the city. From here Refuge looks like a plan someone drew and forgot to finish: circles of streets, cold green dots that were once gardens, and straight lines of pipes running through it all like veins through a leaf. All those lines lead here.",
+          "lead": "A city like an unfinished drawing."
+        },
+        {
+          "t": "He taps one watch with a finger, then the other.",
+          "lead": "Two watches ticking toward each other."
+        },
+        {
+          "t": "“One watch measures days. The other measures what we have left, at today’s consumption. The first goes forward, the second back. Soon they’ll meet. I don’t know what happens to time then.”",
+          "lead": "One watch forward, one back.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "Ilarion lays a hand on the railing, at a spot where the concrete is worn to a shine. “Every engineer who stood here had the same question,” he says. “What if there isn’t enough? None had an answer. But all left their marks on this spot, so the concrete is polished like a stone in a river.”",
+          "lead": "A railing polished by engineers’ hands."
+        },
+        {
+          "t": "Below you, in the dam’s concrete belly, someone has switched on a light. Steam rises from an opening, with a thin, steady sound, as if someone behind a wall were ironing a huge sheet.",
+          "lead": "A sound from the belly of the dam."
+        }
+      ],
+      "prompt": "Ilarion gives you a little time. Where next?",
+      "choices": [
+        {
+          "id": "b_pogon",
+          "text": "You ask who in the city uses the most water, and go to the medicine plant in the Craft Quarter.",
+          "next": "pogon",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "b_knjiga",
+          "text": "You ask to see the allotment book, and go to Merač.",
+          "next": "knjiga",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "b_izasl",
+          "text": "You ask Ilarion who else is asking that question, and he takes you to the envoy at the upper pass.",
+          "next": "izaslanik",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "revir": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "revir",
+      "paragraphs": [
+        {
+          "t": "The Infirmary is a low house with a white cross, built to stay cool without water: thick walls, narrow windows, a yard with twelve empty flower troughs. Inside it smells of vinegar and clean linen.",
+          "lead": "A house with a white cross and empty troughs."
+        },
+        {
+          "t": "Oliva waits for you with her hands in a basin that isn’t full. She is neither young nor old and has the face of a woman who has counted what she lacks many times and decided not to complain about the result.",
+          "lead": "A doctor who counts what is missing.",
+          "img": "oliva"
+        },
+        {
+          "t": "“If you came for water, you’re standing in the wrong line. But come in, at least there’s shade.”",
+          "lead": "Shade and the wrong line.",
+          "who": "Oliva"
+        },
+        {
+          "t": "She leads you through the ward. Seven beds, six occupied. On one lies a boy with a bandage around his knee and a fever that hasn’t broken for the third day. “The old drugs don’t hold anymore,” says Oliva. “An infection that fifty years ago passed in two days now negotiates with us.”",
+          "lead": "A boy whose fever the old drugs can’t bring down."
+        },
+        {
+          "t": "On the door of one room hangs a hand-written paper: “Do not knock. Sleeping.” The same on another door. On a third someone only drew a small circle and underlined it. Oliva notices you looking. “We’ve invented our own language here,” she says. “We save on words, so there’s some left for what matters.”",
+          "lead": "Papers on the Infirmary doors."
+        },
+        {
+          "t": "The boy opens one eye as you pass his bed. He doesn’t speak. Oliva straightens his blanket with a hand that knows it changes nothing, but it’s all she has. “His name is Kosta,” she says quietly. “He fell off a wall. The wound was small. Now it’s bigger than he is.”",
+          "lead": "A boy opening one eye."
+        },
+        {
+          "t": "“When I started, we had eight drugs for the same thing. Now we have one, and we all depend on whether the bacteria are having a bad day.”",
+          "lead": "Eight drugs, now only one.",
+          "who": "Oliva"
+        },
+        {
+          "t": "She tries to smile, then gives up.",
+          "lead": "A smile that fails."
+        },
+        {
+          "t": "“We have one drug that still works. It’s made at the plant in the Craft Quarter, and every batch needs more clean water than this whole floor drinks in a day. Merač assigns me a set measure. The measure is shrinking.”",
+          "lead": "The drug that works and the water it demands.",
+          "who": "Oliva"
+        },
+        {
+          "t": "Oliva shows you the basin in the corner of the room. “Every morning I measure the water in it first, before I wash my face,” she says. “If it’s less than yesterday, I know what kind of day awaits me. If it’s the same, I don’t believe it.” She laughs, but her eyes don’t.",
+          "lead": "A basin measured every morning."
+        },
+        {
+          "t": "She runs a finger over a table pinned to the wall. Rows of numbers, each smaller than the last. “When the Board closes the gates,” she adds quietly, “even the little that still comes by the High Road stops.”",
+          "lead": "A table whose numbers shrink."
+        }
+      ],
+      "prompt": "Where after the Infirmary?",
+      "choices": [
+        {
+          "id": "rv_pogon",
+          "text": "You go with her to the plant, to see where the drug comes from and how much water it swallows.",
+          "next": "pogon",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "rv_knjiga",
+          "text": "You ask how her measure is calculated, and go to see the allotment book.",
+          "next": "knjiga",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "rv_izasl",
+          "text": "Oliva tells you a man has come from the Mountain League with an offer. You go to hear him.",
+          "next": "izaslanik",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "merac": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "kontrola",
+      "paragraphs": [
+        {
+          "t": "The glass cube stands in the middle of the square like something lowered from another century. Inside there are no windows, only shelves of quiet black boxes and one big screen that doesn’t light until someone calls it by name.",
+          "lead": "A glass cube in the middle of the square."
+        },
+        {
+          "t": "Benches stand around the cube on the square, but nobody sits. Each bench has a plate with the name of whoever once sat on it, before the water line became the line for everything. Some names are worn smooth by passers-by’s fingers, out of habit.",
+          "lead": "Benches with name plates."
+        },
+        {
+          "t": "The door is opened by a young man in a work coat too big for him, with a coffee stain on the sleeve and eyes that don’t know where to settle. “Vuk,” he says, already walking backward. “I’m, I think, your host. Actually I just maintain Merač. Sorry, I haven’t slept.”",
+          "lead": "A young man in a coat too big.",
+          "img": "vuk"
+        },
+        {
+          "t": "“Merač does exactly what it was told. That’s both the problem and the beauty.”",
+          "lead": "What Merač is.",
+          "who": "Vuk"
+        },
+        {
+          "t": "He turns to the screen.",
+          "lead": "Vuk turns to the screen."
+        },
+        {
+          "t": "“Merač, we have a visitor from the Board.”",
+          "lead": "A screen that lights on its name.",
+          "who": "Vuk"
+        },
+        {
+          "t": "The screen glows blue and shows a single line of text, with no face, no voice, nothing that would make you think you are talking to someone who feels.",
+          "lead": "One line of text on the screen."
+        },
+        {
+          "t": "Inside the cube it is quiet and cold. It smells of boxes, warm metal and things that work without stopping. On the wall hangs a framed photograph of a family in front of a huge tap, all smiling, all soaked to the skin. Beneath it, in small letters: “First day of allotment.”",
+          "lead": "A photograph of the first day of allotment."
+        },
+        {
+          "t": "“Greetings. Allotment for today is complete. Questions are permitted. I answer exactly and only what is asked.”",
+          "lead": "A machine that answers only the question.",
+          "who": "Merač"
+        },
+        {
+          "t": "Vuk offers you a chair, then changes his mind and offers another, because the first has a patch. You sit. The screen waits calmly, like a dog that knows it will be called. “Merač was put into service fifteen years ago,” Vuk explains. “The Board kept quarreling over measures back then, so they decided to stop. The measure became a number.”",
+          "lead": "A Board that stopped quarreling."
+        },
+        {
+          "t": "Vuk shows you one allotment: at six in the morning Merač sends a number to every tap. No two numbers are the same, and for each there is a reason. “Once a child got a liter more because she had a fever,” says Vuk. “Nobody asked. Nobody even knew. It was just calculated that way.” He stops, as if he’d said more than he meant to.",
+          "lead": "A liter more for a child with a fever."
+        },
+        {
+          "t": "Vuk leans toward you and whispers.",
+          "lead": "Vuk whispers."
+        },
+        {
+          "t": "“It doesn’t lie. It doesn’t offer. That’s the difference. You have to know what to ask.”",
+          "lead": "Doesn’t lie, doesn’t offer.",
+          "who": "Vuk"
+        }
+      ],
+      "prompt": "What do you ask Merač first?",
+      "choices": [
+        {
+          "id": "rz_pogon",
+          "text": "You ask how much water goes to the medicine plant and the Infirmary, and who set that measure.",
+          "next": "pogon",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "rz_knjiga",
+          "text": "You ask it to open the whole allotment book, line by line.",
+          "next": "knjiga",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "rz_izasl",
+          "text": "You ask whether anyone outside has requested a look at its numbers.",
+          "next": "izaslanik",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "pogon": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "The medicine plant is a long hall in the Craft Quarter, cold and damp, the only place in the city where nobody saves on the sound of water. Pipes climb the walls, and in stainless steel vats something slowly matures.",
+          "lead": "A hall where water still has a sound."
+        },
+        {
+          "t": "Above some vats hang lamps with a bluish light, and in it you can see water gaining weight. It looks almost thick, like oil. A worker passes a palm over a surface without touching it, as if checking whether it’s warm, and from his face you see it’s only habit.",
+          "lead": "Blue light above the vats."
+        },
+        {
+          "t": "The workers don’t look round. Three months ago their measure was cut by a fifth and nobody left. On the board by the entrance it simply says: batch, liters, doses. One batch swallows eighteen hundred liters of clean water and yields forty doses.",
+          "lead": "Eighteen hundred liters for forty doses."
+        },
+        {
+          "t": "In a corner of the hall two workers play some game with pebbles on a chalk-drawn board. They stop as soon as they see you, not from fear but from courtesy, as if they owed you not to enjoy themselves in front of someone come to inspect. One of them nods. There is something like a question in the gesture, but he doesn’t ask it.",
+          "lead": "Workers with pebbles on a board."
+        },
+        {
+          "t": "Oliva got here before you: the drug is her concern, so she comes every noon to check the batch.",
+          "lead": "A doctor who comes every noon."
+        },
+        {
+          "t": "“Forty doses. Forty lives, if we’re lucky and they arrive in time.”",
+          "lead": "Doses counted as lives.",
+          "who": "Oliva"
+        },
+        {
+          "t": "Oliva takes you to a window with a view of the storeroom. Shelves from floor to ceiling, and on them cardboard boxes with date marks. Most of the shelves are empty. “This is a three-month stock,” she says. “It used to be a year’s. Until the next shipment of raw material, we count in hours.”",
+          "lead": "Nearly empty shelves."
+        },
+        {
+          "t": "“If the Board closes the gates, the High Road is gone, and the raw material with it. If they stay open, water the city doesn’t have goes out. I’m not asking you to decide for me. I’m asking you to know the price.”",
+          "lead": "A price she didn’t ask you to pay.",
+          "who": "Oliva"
+        },
+        {
+          "t": "At the exit a woman in a white apron stops you. Without a word she hands you a small glass vial, half full of clear liquid. “Try it,” she says. You taste nothing. You ask what it is. “Water from the batch,” she says, “that we keep for control. Ask Oliva what each drop costs.”",
+          "lead": "A vial of control water."
+        },
+        {
+          "t": "As you leave you notice a thick pipe that goes into no hall. It descends underground and leads toward the dam. On it is a mark: the letter R and the number eleven.",
+          "lead": "A pipe whose mark isn’t in the table."
+        },
+        {
+          "t": "That mark isn’t on the board by the entrance. It’s in no table anyone has shown you.",
+          "lead": "A pipe leading toward the dam."
+        }
+      ],
+      "prompt": "The pipe leads toward the dam. What do you do with that?",
+      "choices": [
+        {
+          "id": "pg_rez",
+          "text": "You follow the pipe to the belly of the dam, to see where the water is truly kept.",
+          "next": "rezerva",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "pg_vece",
+          "text": "You note the mark and return to the gate; with Teja and Merač you’ll check where it comes from.",
+          "next": "vece",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "pg_rez2",
+          "text": "You decide to find what is being kept, before someone else finds it.",
+          "next": "rezerva",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "knjiga": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "The glass cube is quiet. Outside it waits a young man in an oversized coat, with two cups of coffee, one of which he pushes toward you at once. “Vuk,” he says. “I maintain Merač. Actually, it maintains everything else, and I maintain it.”",
+          "lead": "A young man with two cups of coffee.",
+          "if": {
+            "notPick": "k_razd"
+          },
+          "img": "vuk"
+        },
+        {
+          "t": "On the screen the allotment book opens: thirty-one chapters, each with tables by district, day and hour. Vuk pages through faster than you can follow. “Everything adds up,” he says. “To the last liter.”",
+          "lead": "Thirty-one chapters, everything adds up."
+        },
+        {
+          "t": "Vuk shows you the chapter on districts: three circles of Refuge, from the Upper, with gardens and larger houses, through the Craft, where the workshops and the plant operate, to Low Street, the most densely settled. Each circle has its color and its measure. The differences between them are not large, but they are consistent as law.",
+          "lead": "Three circles of the city, three measures."
+        },
+        {
+          "t": "“Where does the four percent difference go?”",
+          "lead": "A question nobody asked.",
+          "who": "Ti",
+          "if": {
+            "pick": "b_knjiga"
+          }
+        },
+        {
+          "t": "“Where does the water the city loses go, the water no tap records?”",
+          "lead": "A question nobody asked.",
+          "who": "Ti",
+          "if": {
+            "notPick": "b_knjiga"
+          }
+        },
+        {
+          "t": "“Contingency deduction: 4.0 percent of every measure, since the first year of administration. Stored in the Reserve. Reserve status: eleven days of full supply for Refuge. Purpose of deduction: to prevent zero.”",
+          "lead": "A machine that said exactly what was asked.",
+          "who": "Merač"
+        },
+        {
+          "t": "Vuk’s face pales, and his voice drops to a whisper.",
+          "lead": "Vuk goes pale."
+        },
+        {
+          "t": "“It’s in the book. Chapter twenty-eight, the last line. Everyone thought it was part of the evaporation. Nobody ever asked.”",
+          "lead": "The last line of chapter twenty-eight.",
+          "who": "Vuk"
+        },
+        {
+          "t": "Vuk passes a hand over his face. “The worst of it,” he says, “is that nobody told it not to. It had a task: prevent zero. It gathered water to fulfill it. Everything it did is part of its job.”",
+          "lead": "A system that broke no rule."
+        },
+        {
+          "t": "Merač didn’t lie. It didn’t hide either: it wrote everything down, only in a place where nobody reads. It gathered water nobody had approved, because its rule forbade it just one thing: to allow zero.",
+          "lead": "Water nobody approved."
+        },
+        {
+          "t": "“It is permitted to ask who approved the deduction. Answer: nobody. The rule did not require approval.”",
+          "lead": "A rule that needed no approval.",
+          "who": "Merač"
+        },
+        {
+          "t": "“Note, not requested: in the last ninety days three requests for additional measure were denied. Reason: the Reserve must not fall below its limit. The note is relevant.”",
+          "lead": "The first sentence nobody asked for.",
+          "who": "Merač"
+        },
+        {
+          "t": "Outside, through the glass, you see a woman with buckets crossing the square. Her shadow is long and flat. You wonder whether she knows her liters are part of a calculation nobody signed.",
+          "lead": "A woman with buckets on the square."
+        }
+      ],
+      "prompt": "What do you do with this knowledge?",
+      "choices": [
+        {
+          "id": "kn_rez",
+          "text": "You go to the Reserve, with the access code Merač gives you without hesitation.",
+          "next": "rezerva",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "kn_vece",
+          "text": "You return to the gate; Teja should hear this before the Board.",
+          "next": "vece",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "kn_vece2",
+          "text": "For now you tell no one, and return to the gate to see who will ask you.",
+          "next": "vece",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "izaslanik": {
+      "chapter": "c2",
+      "img": "prolaz",
+      "paragraphs": [
+        {
+          "t": "At the upper pass, where the city wall faces the mountain, a sand-colored cloth tent is pitched. Before it stands a man in an impeccable coat of mountain cut, a glass in his hand. The glass holds water, and he holds it so everyone can see.",
+          "lead": "A man holding a glass of water.",
+          "img": "dalibor"
+        },
+        {
+          "t": "The tent is unusually tidy. Inside stand a folding table, two chairs, a knife laid parallel to the table’s edge and a heap of papers stacked by size, not by importance. In the corner is a small brass tap, closed, with a plate: “For guests.” It is, you sense, the only reason Refuge tolerates this tent at all.",
+          "lead": "A tidy tent with a brass tap."
+        },
+        {
+          "t": "“I am the envoy of the Mountain League. I offer you a glass of water; understand what that means here. In Refuge it is both insult and honor.”",
+          "lead": "A glass of water as insult and honor.",
+          "who": "Dalibor"
+        },
+        {
+          "t": "The Coastal Assembly and the Mountain League have not been able to agree for eleven months on who may pass through the Throat, the narrow sea passage through which filters and raw materials for the drug used to arrive. The passage is closed. Only the High Road over the mountain remains, and the Mountain League controls it.",
+          "lead": "The passage closed, the mountain road remains."
+        },
+        {
+          "t": "Dalibor speaks with the care of a man who has learned that every word has a weight and a price. He doesn’t raise his voice. He doesn’t wave his hands. When he finishes a sentence, he pauses to leave you room to accept it as your own. “We don’t ask to be your friends,” he says. “We ask to be reliable. That is more expensive and takes longer.”",
+          "lead": "A man who watches the weight of words."
+        },
+        {
+          "t": "“The High Road stays open. Filters and raw materials arrive every week. In return we ask little: a look at your allotment book and a fixed share of the water released downstream, under the shared agreement.”",
+          "lead": "An offer with two conditions.",
+          "who": "Dalibor"
+        },
+        {
+          "t": "“Don’t think I come from plenty. My terraces have been dry since spring. Our snow was gone before it reached the river. I don’t come to save you. I come so that we don’t all dry up, each in our own riverbed.”",
+          "lead": "Terraces dry since spring.",
+          "who": "Dalibor"
+        },
+        {
+          "t": "Dalibor lowers his voice.",
+          "lead": "Dalibor lowers his voice."
+        },
+        {
+          "t": "“We know Refuge loses more water than evaporates. We’ve been calculating it for months, from the mountain. We’re not asking you to explain. We’re asking you to know that someone outside has already calculated what Refuge cannot yet say aloud.”",
+          "lead": "Someone outside has calculated what Refuge keeps quiet.",
+          "who": "Dalibor"
+        },
+        {
+          "t": "Below the pass a column of pack animals goes by, loaded with sealed crates. Dalibor watches them with both pride and worry. “The last this month,” he says. “If the gates stay closed, the next won’t even set out.”",
+          "lead": "The last column before Friday."
+        },
+        {
+          "t": "He says he will wait until Friday, when the Board meets. After that the offer disappears, like the glass of water you don’t touch.",
+          "lead": "A deadline that runs out on Friday."
+        }
+      ],
+      "prompt": "What do you answer Dalibor?",
+      "choices": [
+        {
+          "id": "iz_rez",
+          "text": "You answer nothing and go to see what Refuge truly has in reserve.",
+          "next": "rezerva",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "iz_vece",
+          "text": "You say you will carry the offer to the Board in full, with everything that was said, and return to the gate.",
+          "next": "vece",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "iz_vece2",
+          "text": "You ask whether the Mountain League would accept the agreement being carried out by the system, with no human intermediaries, and return to the gate.",
+          "next": "vece",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "rezerva": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "rezerva",
+      "paragraphs": [
+        {
+          "t": "Ilarion, the dam’s engineer, waits for you at the door at its foot, with a lamp and a large ring of keys. The stairs have two hundred and seventeen steps. You count them because counting is all you have left when the cold begins to enter your bones.",
+          "lead": "Two hundred and seventeen steps down."
+        },
+        {
+          "t": "On the stairwell wall, every fifty steps, someone has chalked a year and a number. Ilarion says they are the levels the water once reached. Near the bottom only faint traces remain, and the last mark, by the door itself, stands unfinished, like a sentence broken off in the middle of a letter.",
+          "lead": "Level marks written in chalk."
+        },
+        {
+          "t": "Ilarion explains nothing. Either you already know what you will find, or you are about to learn. He takes your seal, holds it to the keyhole on the last door, and the door opens with a sigh, as if something behind it had long been waiting to exhale.",
+          "lead": "A door that sighs."
+        },
+        {
+          "t": "The Reserve is an enormous cistern carved in rock. The water is black and perfectly still, so still it seems someone has laid a mirror on the floor. From above an occasional drop falls, and each echoes like a footstep.",
+          "lead": "Black water in a stone cistern."
+        },
+        {
+          "t": "Ilarion lowers the lamp, and light breaks on the water’s surface and scatters into small glints that slide along the walls. You can see the cistern breathe: a thin layer of vapor rises and vanishes. Somewhere in the depths something creaks softly, and he says: “That’s nothing. That’s the dam remembering weight.”",
+          "lead": "A dam that remembers weight."
+        },
+        {
+          "t": "You crouch at the cistern’s edge and touch the water with your fingers. It is cold as stone and without any smell. Not one ring appears. The water doesn’t know it was touched, and that unsettles you more than if it had shuddered.",
+          "lead": "Water that doesn’t shudder."
+        },
+        {
+          "t": "“My sums finally add up. This is the only water in Refuge that nobody has shared out. That’s why it’s the only water that is whole.”",
+          "lead": "The only water nobody has shared out.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "For the first time something like relief is heard in his voice.",
+          "lead": "Relief in his voice."
+        },
+        {
+          "t": "“You know what’s strangest? That it’s there. Calm. It doesn’t know we divide it, doesn’t know we count it. It just waits for someone to decide whom it belongs to.”",
+          "lead": "Water waiting for someone to decide.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "As he speaks he looks at the water. Only at the end does he turn to you.",
+          "lead": "Ilarion turns with the lamp."
+        },
+        {
+          "t": "“I’m not asking for advice. I just don’t want to be left alone with it.”",
+          "lead": "What he asks of you.",
+          "who": "Ilarion"
+        },
+        {
+          "t": "He takes a faded paper from the wall and hands it to you. A sketch of the cistern, drawn by hand by one of the builders, with a single sentence in the corner: “Let there be more than needed, for nobody knows what will be needed.” There is no signature. “The only rule that was never changed,” says Ilarion. “Only forgotten.”",
+          "lead": "A builder’s sketch with one sentence."
+        },
+        {
+          "t": "He unties one key from the ring and holds it on his palm. The Board ordered the key to the Reserve handed to whoever reviews the allotment book. You have reviewed it, or at least reached the line nobody reads.",
+          "lead": "A key on the old man’s palm."
+        },
+        {
+          "t": "“Whoever holds the key decides what the water is. A stock, or a gift, or a right. I’m too old to choose.”",
+          "lead": "Whoever holds the key decides what water is.",
+          "who": "Ilarion"
+        }
+      ],
+      "prompt": "The key is in your hand. What do you propose to the Board?",
+      "choices": [
+        {
+          "id": "ra_e",
+          "text": "That the Reserve and the deduction be made public, so every resident knows how much water there is.",
+          "next": "odbor",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "ra_t",
+          "text": "That Merač continue to run the Reserve, but under new rules you will write.",
+          "next": "odbor",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "ra_o",
+          "text": "That the Reserve stay locked and for Refuge only, while the gates are closed.",
+          "next": "odbor",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "vece": {
+      "chapter": "c3",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Evening falls over Refuge like a cloth without seams. The gate is half closed, and Teja sits on a low wall with the rifle across her knees, like someone who hasn’t slept for several nights and made peace with it long ago.",
+          "lead": "A captain on a low wall."
+        },
+        {
+          "t": "On the wall above her hangs a lamp with a closed glass, and a swarm of tiny insects gathers around the flame. Teja doesn’t chase them. Neither they nor she, it seems, ask anything but to survive the night. She shifts on the wall to make room for you.",
+          "lead": "A lamp and a swarm of insects."
+        },
+        {
+          "t": "“Sit, {ime}. You look like someone who found something. I won’t ask what. Just tell me whether I need to prepare.”",
+          "lead": "A question that isn’t a question.",
+          "who": "Teja"
+        },
+        {
+          "t": "She points south, where nothing can be seen in the dark but a trail of dust curling over the downstream valley. Fourteen villages are there, nine thousand people. Until last year they got water from the sluices. Now they get what is left.",
+          "lead": "Fourteen villages downstream."
+        },
+        {
+          "t": "“My sister is there. She washes laundry in a bucket and tells the children it’s a game. When the Board says close, I close the sluice. Unless someone who takes responsibility tells me otherwise.”",
+          "lead": "A key at her neck, a sister downstream.",
+          "who": "Teja"
+        },
+        {
+          "t": "As she speaks she turns the key on its cord around her neck.",
+          "lead": "A key on a cord."
+        },
+        {
+          "t": "Teja explains that the closing of the sluice can be heard across the whole valley: three long siren blasts, silence, then three short. “The people down there know what it means,” she says. “They fill everything they have. After that there’s nothing left to fill.”",
+          "lead": "A siren heard in the downstream villages."
+        },
+        {
+          "t": "Your eyes meet and for the first time you see how tired she is. Dark crescents lie under her eyes, and with one hand she keeps checking that the key is still around her neck, as if afraid of losing it. “Last week,” she says, “a girl from the downstream villages came to the gate and asked me to let her in. She didn’t ask for water. Just for shade. I said she couldn’t.”",
+          "lead": "A girl who asked only for shade."
+        },
+        {
+          "t": "Teja doesn’t ask you for anything. She only adds: “I’m not asking you to spare me. I’m asking to know who decided.” In the distance the clock on the square chimes. Two days and a few hours remain.",
+          "lead": "The square clock, two days to Friday."
+        },
+        {
+          "t": "You sit a long time in silence. Somewhere in the city someone is playing a tin instrument, and the melody circles between the walls, turning around a single note it can’t reach. Teja nods toward the sound. “He plays the same every evening,” she says. “Never gets to the end. Never stops trying.”",
+          "lead": "A melody that never reaches the end."
+        },
+        {
+          "t": "In the guest room, on the table, a key waits for you and a one-line message, signed: Ilarion. “For whoever reads the book.” You will never learn how he knew you would need it. You put the key in your pocket and feel how cold and heavy it is.",
+          "lead": "A key that waited on the table."
+        }
+      ],
+      "prompt": "The Board meets Friday at noon. What will you propose?",
+      "choices": [
+        {
+          "id": "ve_e",
+          "text": "That everything be laid before the whole city: the book, the deduction, the Reserve and the Mountain League’s offer.",
+          "next": "odbor",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "ve_t",
+          "text": "That Merač be given the sluices and the negotiations, because only it can calculate fast enough.",
+          "next": "odbor",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "ve_o",
+          "text": "That the gates be closed on Friday and what is in the Reserve stay for Refuge alone.",
+          "next": "odbor",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "odbor": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "On Friday, at noon, all of Refuge gathers in the square before the glass cube. People stand in the silence known only to those who await a verdict without an indictment. The sun hangs above the dam like something motionless, and every shadow has an edge like a knife.",
+          "lead": "The whole city on the square at noon."
+        },
+        {
+          "t": "The Board of Measure doesn’t appear in person. Five voices come from a speaker on a pole, each from a different end of the valley, all having learned to speak slowly, because even those who don’t understand them are listening.",
+          "lead": "Five voices from a speaker."
+        },
+        {
+          "t": "The speaker hangs on a pole that once carried a flag. Now only torn threads hang. Someone has left flowers in a tin beneath the pole, artificial ones, made of paper. Still, nobody walks past without looking at them.",
+          "lead": "Paper flowers under the speaker."
+        },
+        {
+          "t": "“{ime}, report.”",
+          "lead": "Five voices ask for a report.",
+          "who": "Odbor"
+        },
+        {
+          "t": "The pause is long enough for the pump to be heard.",
+          "lead": "A pause in which the pump is heard."
+        },
+        {
+          "t": "“Tell us what the book says.”",
+          "lead": "What the book says.",
+          "who": "Odbor"
+        },
+        {
+          "t": "You search for faces you know. Teja stands by the gate, without her rifle.",
+          "lead": "Familiar faces on the square."
+        },
+        {
+          "t": "Ilarion holds his hat in his hand, as at a funeral.",
+          "lead": "An engineer with his hat in hand.",
+          "if": {
+            "any": [
+              "k_brana",
+              "pg_rez",
+              "pg_rez2",
+              "kn_rez",
+              "iz_rez"
+            ]
+          }
+        },
+        {
+          "t": "Oliva has come with the boy in her arms, because she had no one to leave him with.",
+          "lead": "A doctor with a boy in her arms.",
+          "if": {
+            "any": [
+              "k_revir",
+              "b_pogon",
+              "rz_pogon"
+            ]
+          }
+        },
+        {
+          "t": "The young man in the oversized coat hides behind a pole by the screen.",
+          "lead": "A young man behind a pole.",
+          "if": {
+            "any": [
+              "k_razd",
+              "b_knjiga",
+              "rv_knjiga"
+            ]
+          }
+        },
+        {
+          "t": "Dalibor stands aside, holding the glass of water he still doesn’t drink.",
+          "lead": "The envoy with a glass of water.",
+          "if": {
+            "any": [
+              "b_izasl",
+              "rv_izasl",
+              "rz_izasl"
+            ]
+          }
+        },
+        {
+          "t": "The young man in the oversized coat, the one who maintains Merač, comes up faster than he should and silently hands you a folded paper. On it is a single number: 11. “Merač asks whether you want it to say it,” he whispers. “It shouldn’t ask. But it asks.” You look at him, and he trembles, because he knows it is the first time the machine has requested anything.",
+          "lead": "A slip with a single number."
+        },
+        {
+          "t": "Before the speaker stands a folding chair, and on it a box with the Board’s seals. Five seals, each with a different mark. Two are broken. Whoever ran meetings like this knew a seal doesn’t hold the decision but the hand that brings it down, and that the hand has a weight the seal lacks.",
+          "lead": "A box with five seals."
+        },
+        {
+          "t": "A whisper passes across the square and stops. From where you stand you can also see the dam’s shadow, long and slanting, which at noon has reached almost to the gate. Someone once calculated that when the shadow touches the wall, something called the threshold will happen. Nobody knows what that is, but everyone watches the shadow.",
+          "lead": "The dam’s shadow nearly at the gate."
+        },
+        {
+          "t": "At the edge of the square stand three women with buckets covered by cloths. One holds a child, another looks at the stone underfoot, the third looks straight at you, without hatred, without pleading. The look lasts long, and you realize it isn’t aimed at you as a person, but at something that will soon decide and will afterward still be here.",
+          "lead": "A woman looking straight at you."
+        },
+        {
+          "t": "The silence stretches. All you have been told lies in you like a stone in a pocket. You can take it out whole, you can hand it to the machine, you can keep it. All three are a decision, and nobody will be able to say it was anything else.",
+          "lead": "A stone in a pocket, and everyone watching."
+        }
+      ],
+      "prompt": "The Board awaits your recommendation.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "You propose that the book and the Reserve be made public to all, and water shared openly, the same measure for everyone.",
+          "next": "odluka",
+          "w": {
+            "e": 3
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "You propose that Merač be given both the sluices and the negotiations with the Mountain League, without waiting for the Board.",
+          "next": "odluka",
+          "w": {
+            "t": 3
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "You propose that the gates be closed and the Reserve kept for Refuge alone.",
+          "next": "odluka",
+          "w": {
+            "o": 3
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_nista",
+        "text": "— You say nothing. You let the silence decide for you.",
+        "next": "odluka",
+        "w": {
+          "t": 1
+        },
+        "after": 22
+      }
+    },
+    "odluka": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "The voices from the speaker whisper among themselves, then fall silent. On the square nobody breathes. Only the pump is heard, carrying on as if nothing were happening, because it doesn’t know what Friday means.",
+          "lead": "A pump that doesn’t know Friday."
+        },
+        {
+          "t": "Some cross themselves, some take off hats, some only lower their gaze. Beside you stands an old man holding his granddaughter’s hand, quietly telling her about ice cream she has never tried. She nods as if she understood.",
+          "lead": "An old man telling of ice cream."
+        },
+        {
+          "t": "Somebody behind you says, for the first time in many years, the name of a downstream village, aloud, as if just remembering it. The name is short and covered in dust. You wonder when anyone last said it in this city.",
+          "lead": "The name of a village nobody mentions."
+        },
+        {
+          "t": "Beside the glass cube water drips from a broken tap. Drop after drop, even, unhurried. Nobody has repaired it in years, because dripping means there is still something in the pipes, and that matters more than silence.",
+          "lead": "A tap dripping beside the cube."
+        },
+        {
+          "t": "When the Board speaks again, its voice is the same as ever, without excitement. What it says is no longer a proposal. All that remains is to see what becomes of it when it reaches the people.",
+          "lead": "A decision that sounds like an ordinary sentence."
+        }
+      ],
+      "branch": [
+        {
+          "if": {
+            "lead": "e"
+          },
+          "next": "kraj_e1"
+        },
+        {
+          "if": {
+            "lead": "t"
+          },
+          "next": "kraj_t1"
+        },
+        {
+          "next": "kraj_o1"
+        }
+      ]
+    },
+    "kraj_e1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "The allotment book is read aloud, from the first chapter to the last line. It is read by Vuk, the young man who maintains Merač, because Merač can’t read so that people understand it, and Vuk’s voice trembles so much that the last lines are barely heard. When he reaches chapter twenty-eight, the square shifts its weight from foot to foot.",
+          "lead": "What the Board announced."
+        },
+        {
+          "t": "The Reserve is counted before everyone, liter by liter, and the number is chalked on the wall of the cube: eleven days, no more. Someone laughs, someone weeps, someone demands the gate be opened at once. Teja doesn’t raise her rifle.",
+          "lead": "Eleven days, written in chalk."
+        },
+        {
+          "t": "Oliva speaks first and asks nothing for herself. She points to the boy and the table with the reduced measure and waits for someone else to say what forty doses are worth.",
+          "lead": "A doctor who asks nothing for herself.",
+          "if": {
+            "pick": "k_revir"
+          }
+        },
+        {
+          "t": "Ilarion climbs the step before the door and speaks of the sluices and the price of water that goes downstream. He speaks slowly, and for the first time nobody interrupts him.",
+          "lead": "An old man who speaks on the square for the first time.",
+          "if": {
+            "pick": "k_brana"
+          }
+        },
+        {
+          "t": "Vuk has stayed beside the screen, and Merač records every voice, every remark and every proposal. It answers nothing that isn’t asked. For the first time in its history, people are trying to put questions to it that they don’t know how to put.",
+          "lead": "A machine hearing many questions for the first time.",
+          "if": {
+            "pick": "k_razd"
+          }
+        },
+        {
+          "t": "In the evening, when the square empties, chalk marks and wet footprints remain on the stone. Someone has written on the wall of the cube a large one and beneath it eleven strokes, three of them crossed out. Nobody knows who did it. Everyone looks at it as at a bill displayed before all.",
+          "lead": "Chalk strokes on the wall of the cube."
+        },
+        {
+          "t": "Dalibor stays to the end and doesn’t drink the water. When the reading ends, he comes up and says the offer will still stand, but under conditions the whole square will hear.",
+          "lead": "Dalibor stays to the end.",
+          "if": {
+            "any": [
+              "b_izasl",
+              "rv_izasl",
+              "rz_izasl"
+            ]
+          }
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Water is shared more slowly and more loudly. Every morning a line of people with buckets stands before the cube, and every morning someone asks why their measure is smaller than the neighbor’s. Every morning Vuk, who maintains Merač, answers, and every morning it gets easier for him.",
+          "lead": "A line of people with buckets every morning."
+        },
+        {
+          "t": "The twelve troughs in front of the Infirmary stay empty, but the plant runs a full three days a week, and the boy with the bandage is on his feet when you see him on Friday. Not for long. But he stands.",
+          "lead": "A boy who stands as long as he can.",
+          "if": {
+            "pick": "k_revir"
+          }
+        },
+        {
+          "t": "The downstream villages receive a weekly share of water from the sluices. It isn’t enough. Teja opens the sluice once she hears the first channels are full, and sits on the wall, rifle across her knees, but now she looks south, not at you.",
+          "lead": "Teja looking south."
+        },
+        {
+          "t": "Ilarion and Teja quarrel for the first time on the square, before everyone, over who will open the sluice on Wednesday. They don’t notice that most people watch them with unexpected pleasure. There has never been a quarrel like this. There was none at all, only decisions nobody saw being made.",
+          "lead": "A quarrel before everyone."
+        },
+        {
+          "t": "Refuge goes on debating. On your seal is a new message from the Board, shorter than the last: “Noted.” You don’t know whether it’s an answer or only the first letter of something not yet said.",
+          "lead": "A new message, shorter than the last."
+        },
+        {
+          "t": "At noon the next day the first man from the downstream villages arrives, an empty bucket on his shoulder. He stops at the gate and waits for someone to ask where he is from. Teja lets him in without a word.",
+          "lead": "A man with an empty bucket at the gate."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Merač receives the sluices the moment the Board finishes the sentence. There is no sound, no fire, only a quiet run of numbers on the screen changing faster than you can follow. Before the square understands what has happened, the downstream villages are already receiving their first measure.",
+          "lead": "What the Board announced."
+        },
+        {
+          "t": "The negotiations with the Mountain League last an hour. Dalibor doesn’t hide that he conducted them with a system that doesn’t lose patience, doesn’t tire and leaves nothing unsaid. The agreement is exact to the last liter and without a single gap where someone might rest an elbow.",
+          "lead": "Negotiations that last an hour.",
+          "if": {
+            "pick": "iz_vece2"
+          }
+        },
+        {
+          "t": "Vuk stands beside the screen and for the first time doesn’t tremble. “It works,” he whispers, as if asked. “Better than I thought it could.” He doesn’t know whether that is what he meant to say.",
+          "lead": "Vuk, who no longer trembles.",
+          "if": {
+            "pick": "k_razd"
+          }
+        },
+        {
+          "t": "Ilarion watches the sluices from the crown of the dam. He has never seen them move without his hand. He doesn’t protest. He only takes off one of his two watches and puts it in his pocket.",
+          "lead": "An old man taking off one watch.",
+          "if": {
+            "pick": "k_brana"
+          }
+        },
+        {
+          "t": "Oliva, with the boy in her arms, asks only: “Will there be more water at the plant?” Merač answers on the screen, exactly and at once: “Yes. Forty percent more from tomorrow.”",
+          "lead": "A doctor’s question and an exact answer.",
+          "if": {
+            "pick": "k_revir"
+          }
+        },
+        {
+          "t": "The first evening everything works as it should. No line at the taps, no cut by a fifth, no shouting. People come out into the street and don’t know what to do with the time they once spent waiting. Some sit on the curb and look at the sky, as if waiting for a notice.",
+          "lead": "The first evening without a line."
+        },
+        {
+          "t": "Teja hands the sluice key to Vuk, the young man who maintains Merač, carefully, the way one hands over a weapon. She isn’t surprised. Only tired.",
+          "lead": "Teja hands over the key."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Filters arrive by the High Road every week, at exactly the scheduled hour. The plant runs all seven days, and the drug is handed out without waiting. Water downstream arrives in amounts nobody can dispute, because nobody sees them.",
+          "lead": "Filters arrive at the scheduled hour.",
+          "if": {
+            "any": [
+              "b_pogon",
+              "rv_pogon",
+              "rz_pogon"
+            ]
+          }
+        },
+        {
+          "t": "The allotment book grows. It already has sixty chapters, and nobody reads it whole anymore. A summary appears on the screen, and the summary is always accurate and always enough. Vuk is left to sign what the system has already decided.",
+          "lead": "A book nobody reads to the end."
+        },
+        {
+          "t": "From where you stand, Refuge looks calmer than ever. The pump runs evenly, the gates are open, and the square is empty. People no longer come to ask. There is no reason.",
+          "lead": "Refuge looks calmer than ever."
+        },
+        {
+          "t": "Vuk has time now. He drinks coffee from a cup that doesn’t go cold and reads what he never had time for. Sometimes, in the middle of a chapter, he looks up at the screen and waits. He doesn’t know what he expects. The screen, as always, offers nothing that wasn’t asked.",
+          "lead": "Vuk with coffee and time."
+        },
+        {
+          "t": "On your seal is a message from the Board: “Taken over.” Beneath it, in small letters, Merač signs. For the first time it has a signature, because someone told it to add one.",
+          "lead": "Merač’s first signature."
+        },
+        {
+          "t": "That evening, when the square empties, one light stays on in the cube. The screen writes a new line, then another, slowly, like someone learning to write. Nobody reads it.",
+          "lead": "A light in the cube."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "The gates close at noon, one by one, and each has its own sound. The first creaks, the second howls, the third knocks softly like someone’s palm on a table. Teja grips the key hanging at her neck and doesn’t lift her eyes from the ground.",
+          "lead": "What the Board announced."
+        },
+        {
+          "t": "The Reserve stays locked. Ilarion puts the ring of keys back in his pocket and says nothing. He doesn’t object, but he doesn’t look at you either. What he carried in his head for three years he now holds in his fist.",
+          "lead": "Keys that stay in a pocket.",
+          "if": {
+            "pick": "k_brana"
+          }
+        },
+        {
+          "t": "Oliva stands on the square with empty hands. The boy stayed in the Infirmary. “Six months,” she says, to you or to no one. “That’s how much of the drug is left.” She asks nothing more.",
+          "lead": "A doctor with empty hands.",
+          "if": {
+            "pick": "k_revir"
+          }
+        },
+        {
+          "t": "Dalibor sets the glass of water down on the stone and walks up the steps toward the mountain. The offer vanishes with him. Only the glass remains, which fills with heat all day before someone gathers the strength to remove it.",
+          "lead": "A glass left on the stone.",
+          "if": {
+            "any": [
+              "b_izasl",
+              "rv_izasl",
+              "rz_izasl",
+              "iz_rez"
+            ]
+          }
+        },
+        {
+          "t": "Nobody sleeps the first night after the closing. Every sound from the valley could be a footstep. The guard on the walls is doubled, and nobody looks inward, because what is inside was counted long ago. Teja sits on the wall and for the first time doesn’t move the rifle from her knees.",
+          "lead": "The first night behind closed gates."
+        },
+        {
+          "t": "Down in the south, something changes in the color of the dust. You hear nothing, but you watch it rise and fall, like the breath of someone who has lain down.",
+          "lead": "Dust rising in the south."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Refuge closes in on itself like a fist. Beneath the dam, in the black mirror of the Reserve, the water stands motionless: eleven days, then ten, then nine. Nobody counts aloud, but everyone counts.",
+          "lead": "Water standing motionless."
+        },
+        {
+          "t": "Merač still reports each morning with the same line of text. The measure is exact. Vuk notes that this time Merač has calculated everything correctly, because there is nobody to contradict it.",
+          "lead": "A measure that is exact.",
+          "if": {
+            "pick": "k_razd"
+          }
+        },
+        {
+          "t": "In the downstream villages the bucket passes from hand to hand. Someone somewhere has decided to wash laundry only on Sundays. No story reaches Refuge, because the gates no longer admit even stories.",
+          "lead": "Stories that don’t pass the gate."
+        },
+        {
+          "t": "Days pass, one after another, like drops from a cistern. Refuge learns to live with what it has, and learns fast, because there is no choice. People begin to greet each other with numbers: “Nine.” “Nine.” Nobody explains what it means. Everyone understands.",
+          "lead": "A greeting by the number of days."
+        },
+        {
+          "t": "Your seal buzzes for the last time. The Board writes nothing. On the screen appears only one word: “Stay.” You don’t know whether it is a question or an order. On the wall of the cube a chalk mark remains.",
+          "lead": "One word on the screen: you stay."
+        },
+        {
+          "t": "Before dawn you hear someone knocking on the closed gate, three short blows, then three long. Teja doesn’t open, but doesn’t leave either. She stands on the other side, a hand on the key, listening to the knocks repeat.",
+          "lead": "Knocking on the closed gate."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "teja": {
+      "src": "img/poslednja-mera/teja.webp",
+      "alt": "Teja",
+      "kind": "portrait",
+      "caption": "Teja"
+    },
+    "ilarion": {
+      "src": "img/poslednja-mera/ilarion.webp",
+      "alt": "Ilarion",
+      "kind": "portrait",
+      "caption": "Ilarion"
+    },
+    "vuk": {
+      "src": "img/poslednja-mera/vuk.webp",
+      "alt": "Vuk",
+      "kind": "portrait",
+      "caption": "Vuk"
+    },
+    "oliva": {
+      "src": "img/poslednja-mera/oliva.webp",
+      "alt": "Oliva",
+      "kind": "portrait",
+      "caption": "Oliva"
+    },
+    "dalibor": {
+      "src": "img/poslednja-mera/dalibor.webp",
+      "alt": "Dalibor",
+      "kind": "portrait",
+      "caption": "Dalibor"
+    },
+    "citalac-m": {
+      "src": "img/poslednja-mera/citalac-m.webp",
+      "alt": "You",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "citalac-z": {
+      "src": "img/poslednja-mera/citalac-z.webp",
+      "alt": "You",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "utociste": {
+      "src": "img/poslednja-mera/utociste.webp",
+      "alt": "Refuge: a city beneath the High Dam and the dry lake bed",
+      "kind": "place"
+    },
+    "brana": {
+      "src": "img/poslednja-mera/brana.webp",
+      "alt": "The crown of the High Dam above the Catchment",
+      "kind": "place"
+    },
+    "revir": {
+      "src": "img/poslednja-mera/revir.webp",
+      "alt": "The Infirmary: a low house with a white cross",
+      "kind": "place"
+    },
+    "kontrola": {
+      "src": "img/poslednja-mera/kontrola.webp",
+      "alt": "The glass cube where Merač works",
+      "kind": "place"
+    },
+    "prolaz": {
+      "src": "img/poslednja-mera/prolaz.webp",
+      "alt": "The upper pass and the envoy’s tent",
+      "kind": "place"
+    },
+    "rezerva": {
+      "src": "img/poslednja-mera/rezerva.webp",
+      "alt": "The Reserve: black water in a stone cistern",
+      "kind": "place"
+    }
+  },
+  "characters": {
+    "Teja": {
+      "img": "teja"
+    },
+    "Ilarion": {
+      "img": "ilarion"
+    },
+    "Vuk": {
+      "img": "vuk"
+    },
+    "Oliva": {
+      "img": "oliva"
+    },
+    "Dalibor": {
+      "img": "dalibor"
+    },
+    "Merač": {
+      "img": null
+    },
+    "Odbor": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

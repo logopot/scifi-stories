@@ -1,0 +1,1431 @@
+{
+  "meta": {
+    "title": "Three and Ten",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "Prevoj is a mountain city above which you can see nothing but sky. From above it is held by the Spire, a tower of antennas, and the sky over it is run by the Ring: thousands of machines that carry mail, power, orders and news.",
+      "Tonight you are on the Spire, with the Administration’s seal and one night until morning. A cloud of debris from a broken station arrives at ten past three, and the human shift and a machine named Sova have different plans.",
+      "Before you are people who work, people who wait and one machine that does not sleep. The story takes about twenty minutes and has three endings."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "ethics"
+      },
+      {
+        "id": "t",
+        "name": "technological progress"
+      },
+      {
+        "id": "o",
+        "name": "survival"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "Prevoj is a mountain city, and above it stands the Spire, a tower of antennas. At its top the last human shift is working. You arrive at 22:40 with the Administration’s seal and one task, and a cloud of debris crosses the sky above the city at ten past three."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "The story has three endings.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "The Spire"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Night"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Three and Ten"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Morning"
+    }
+  },
+  "start": "kapija",
+  "endings": {
+    "e": {
+      "title": "Hands on the Console",
+      "closing": [
+        "The city wakes more slowly than usual, and everyone walks carefully, as on a freshly washed floor.",
+        "On the tower, beside the eight screens, someone has set a ninth chair."
+      ]
+    },
+    "t": {
+      "title": "The Machine That Doesn’t Sleep",
+      "closing": [
+        "The city sleeps calmly, and nobody knows whether it is peace or habit.",
+        "On the tower only one screen glows, and the chairs around the console stand side by side, leaning at an angle."
+      ]
+    },
+    "o": {
+      "title": "Sky Without the Ring",
+      "closing": [
+        "The sky above the city is empty and deep, such as nobody in the city has seen in a long time.",
+        "The stars show clearly, children count them aloud, make mistakes and start over."
+      ]
+    }
+  },
+  "nodes": {
+    "kapija": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "stub",
+      "paragraphs": [
+        {
+          "t": "The siren on the Spire is wailing for the third time as you reach the gate. Wind carries dust down from the pass, and below the tower the windows of the whole city glow, as if someone forgot to switch them off. The guard takes your seal, holds it to the scanner and doesn’t look at you until the screen lights green. Above the gate hangs a board with the shift list: seven names in the last row, each in a different hand, all written over older, erased names. Your shoes ring on the iron floor of the lobby, the only sound not muffled by wool or by fear. On the wall beside you, in large letters: “Guard the sky.” Beneath it someone has added in smaller handwriting: “The sky guards no one.”",
+          "lead": "The siren above the gate."
+        },
+        {
+          "t": "A woman in a wool vest, with a grey braid and glasses on a cord around her neck, comes down the iron stairs to meet you. She doesn’t offer her hand. She offers you a helmet with a headset, and as you take it she is already walking ahead of you, fast, like someone counting every second backward. From the loudspeaker in the corridor comes the same sentence, in a voice without a face: “Alert level: elevated.” On her cuff is a small stitched letter S, faded by washing. There is no trace of excitement in her walk, only the haste of someone afraid of being late. You wonder whether she is even speaking to you, or just saying aloud what she has been repeating to herself for days.",
+          "lead": "A woman with a braid on the stairs.",
+          "img": "stana"
+        },
+        {
+          "t": "“I run the night shift. The debris cloud from the broken station crosses our part of the sky at ten past three, and it’s almost eleven now. The machine Sova has its plan, I have mine, and you have the Administration’s seal and the right to say whose will count. Don’t answer me yet. First see what I see.”",
+          "lead": "Two plans in one sentence.",
+          "who": "Stana"
+        },
+        {
+          "t": "As she speaks she doesn’t look at you, but traces a line on the screen by the door with her finger, as if it were the only thing she can lean on.",
+          "lead": "You watch her trace the line."
+        }
+      ],
+      "prompt": "Stana leads you down the corridor, and on the big screen behind the glass the Swarm already flickers like a white ring. Where first?",
+      "choices": [
+        {
+          "id": "k_pult",
+          "text": "You go with Stana to the manual console, where the night shift sits.",
+          "next": "sala",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_sova",
+          "text": "You ask to see Sova’s plan first.",
+          "next": "sala",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "k_baterije",
+          "text": "You ask where the backup batteries and exits are, before anything else.",
+          "next": "sala",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "sala": {
+      "chapter": "c1",
+      "img": "sala",
+      "paragraphs": [
+        {
+          "t": "The night-shift console is a long desk with eight small screens and more cold cups than people. Young people sit hunched, headsets around their necks, and nobody looks up when you enter. They all hold a finger above a key without touching it, as if waiting for permission to press. Someone in the corner eats bread out of paper, slowly, to make no noise. Under the screens a green light blinks, and nobody knows what it is for.",
+          "lead": "A console with eight screens.",
+          "if": {
+            "pick": "k_pult"
+          }
+        },
+        {
+          "t": "Stana says nothing and leads you to the hall with the big wall screen, since you asked for Sova’s plan first. On the screen the debris cloud looks like a pale star of dots, with green lines of trajectories growing around it, neat as a drawing in a school notebook. It all looks so calm that you feel something has already been finished and you are only watching. In the corner of the screen, in small letters, is the time to first contact: two hours and twenty minutes.",
+          "lead": "The wall where the Swarm is computed.",
+          "if": {
+            "pick": "k_sova"
+          }
+        },
+        {
+          "t": "You ask for the backup batteries, so Stana takes you down a narrow stair into the tower’s basement. The batteries stand in long rows, each with a plate and a date, and the air smells of warm plastic and oil. Between the rows a man with a shaved head and a burn on his forearm crouches, counting something on his fingers and muttering. When he sees you he stands, wipes his hands on his overalls and walks you out, because the hall is upstairs. Behind you in the corridor someone keeps repeating a single word, “reserve”, like a prayer.",
+          "lead": "A basement full of batteries.",
+          "if": {
+            "pick": "k_baterije"
+          }
+        },
+        {
+          "t": "On the wall above the console hangs a big screen: the Swarm slides across it like a dark stain, wide as two cities. Every machine of the Ring on its path has to move. The machines can do it themselves, but they need a chiller for that, and the chiller drinks water from the same reservoir the city drinks from. Water that goes to cooling doesn’t end up in homes. On the board beside it someone has written in chalk: “Touch nothing you don’t understand.” Beneath it someone else has added: “Not even Sova.” A small red number in the lower corner changes every second, and everyone in the room has stopped looking at it, because it hurts.",
+          "lead": "The Swarm on the big screen."
+        },
+        {
+          "t": "A young man in a grey fleece jacket, with a pin on his lapel and an earpiece in his ear, twirls a thin headset cable around his finger like a child bored in class, though he is anything but bored. In the glass behind him the whole console is reflected, and a girl watching him as something she would rather not see.",
+          "lead": "A young man with a company pin."
+        },
+        {
+          "t": "“I’m from the company. Sova will do it all by itself, in forty seconds. It needs the chiller and the whole city’s power until morning, and the reservoir will fall to a third. I call that the price of the night. I have the shift memo on me, but nothing has to be signed tonight.”",
+          "lead": "What Sova asks of the city.",
+          "who": "Ognjen",
+          "img": "ognjen"
+        }
+      ],
+      "prompt": "The Swarm is on the screen, Ognjen waits, Stana waits. Where do you go while there is still time?",
+      "choices": [
+        {
+          "id": "s_pult",
+          "text": "You go down to the console to see what the shift can do by hand.",
+          "next": "noc1",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "s_predlog",
+          "text": "You stay with Ognjen to read Sova’s plan to the end.",
+          "next": "noc1",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "s_pumpa",
+          "text": "You go to the city’s pump station to see what the city would be left without.",
+          "next": "noc1",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "noc1": {
+      "chapter": "c2",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "A girl with a headset around her neck jumps off her chair as soon as you come near. She has short fair hair with dark roots, a silver stud in her nose and nails bitten to the skin. Behind her, on eight small screens, eight small Swarms glow, each from a different angle, and the shift watches them like eight windows onto the same storm. Nobody breathes loudly. Beside her cup lies a puzzle of metal pieces, which she turns in her fingers when her hands shake.",
+          "lead": "The girl who jumps off her chair.",
+          "if": {
+            "pick": "s_pult"
+          },
+          "img": "lena"
+        },
+        {
+          "t": "Ognjen takes you to a glass room above the hall, where Sova has a screen and a chair nobody uses, as if the place were held for someone yet to come. On the wall hangs a framed company memo on closing the night shift, with an empty place for a seal. Ognjen looks at it, then at you, then at the memo again, and for the first time he looks like someone who hasn’t slept since Tuesday. Through the glass you can see the whole hall, and everyone in it looks small, like figures on a model someone left unfinished.",
+          "lead": "The glass room above the hall.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "The pump station stands at the edge of the city and booms like a big, calm stomach. In a concrete trough icy mountain water circulates before it goes into the city’s pipes, and part of it goes up the tower to the chiller through a thick pipe with a red mark. The air is damp, the only damp air in the city, and smells of wet stone. A worker at the entrance mutters into a headset and asks you nothing. On the wall hangs a sheet of paper with ten or so signatures and one circle drawn in, with which someone marked something they told no one.",
+          "lead": "The pump at the edge of the city.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "“I’m an intern, it says so on the board, though I’ve been here a month. Sova is perfect at everything except surprises. We’re not perfect, but we guess. Give me twelve machines and the cloud won’t touch a single one. I’m not asking you to trust me, {ime}. I’m asking you to let me show you.”",
+          "lead": "The girl who asks for twelve machines.",
+          "who": "Lena",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "As she talks she forgets to breathe, so her last sentence comes out like a sigh.",
+          "lead": "You watch her run out of breath.",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "“It’s nothing personal. Sova is just much faster. It doesn’t tire, doesn’t fear, doesn’t ask for a raise. And these young people down there are good people nobody hires anywhere. I like that they’re here. I don’t like that it’s the only place they found.”",
+          "lead": "Ognjen and the memo on the wall.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "He points toward the memo, and his hand shakes a little, as if those lines were heavy for someone else too.",
+          "lead": "You watch Ognjen’s hand.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "A woman in a white apron and floury hands stands by the water meter, watching the needle. Zora runs the city’s only bakery and comes here when she can’t sleep. The needle sits low, lower than she is used to, and she touches it with a fingernail, as if that would move it. Beside her, on the concrete edge, stands a whole row of empty jars, arranged by size, because, she explains, it’s easier for her to think that way.",
+          "lead": "The woman watching the needle.",
+          "if": {
+            "pick": "s_pumpa"
+          },
+          "img": "zora"
+        },
+        {
+          "t": "“Lena doesn’t promise for nothing. But twelve machines is a lot for one pair of hands. If we work together, it can be more, it’s just that nobody’s used to asking us. These people haven’t slept since Monday. And Sova doesn’t know what Monday is.”",
+          "lead": "Jovo and the burn on his forearm.",
+          "who": "Jovo",
+          "img": "jovo",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "When he finishes, the man with the shaved head and the burn on his forearm slaps his palm on the desk, not hard, but enough to rattle the cups. Nobody flinches.",
+          "lead": "A palm on the desk.",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "“Good evening. Proposal: I take over all machines in the Swarm’s path. Required: chiller, city power, reservoir down to one third. Execution time: forty seconds. Note: the human shift is not required for execution. The question awaits confirmation.”",
+          "lead": "The machine awaiting confirmation.",
+          "who": "Sova",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "The screen beneath the sentences stays clean. Sova adds nothing nobody asked.",
+          "lead": "The screen stays clean.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "“Sova says it’s only one night. I heard that last winter too, when they expanded the chiller. The water went for a night and came back only after a week. My dough understands neither. It just asks for water, or it doesn’t rise. Don’t look at me as if I had an answer. All I have is yeast.”",
+          "lead": "Water gone for a night.",
+          "who": "Zora",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "She takes a sip of water from the jar in her hand and at once makes a face, as if drinking someone else’s water.",
+          "lead": "A sip from the jar.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        }
+      ],
+      "prompt": "The people around you wait for your word, and the Swarm slides toward the city. What do you say?",
+      "choices": [
+        {
+          "id": "a_e",
+          "text": "You tell everyone what you know about the Swarm and the water, and ask what they suggest.",
+          "next": "poruka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "a_t",
+          "text": "You entrust the computing to Sova and leave the people to follow it.",
+          "next": "poruka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "a_o",
+          "text": "You ask that what the city already has be secured first: batteries, water, shelter.",
+          "next": "poruka",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "poruka": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "The seal in your pocket buzzes three times, briefly, as if someone were tapping your shoulder. On the screen is a message from the Administration, with no greeting: “The Ring closes the maneuver window at 02:45. After that, machines on the Swarm’s path cannot be moved, manually or automatically. Confirm receipt.” Somewhere below you doors close, one after another, as if the tower too had read the message. The Administration’s screen doesn’t blink, doesn’t apologize and doesn’t ask if you can. It only counts down beneath the message, minute by minute, as if that were its only duty.",
+          "lead": "The seal buzzes three times."
+        },
+        {
+          "t": "Stana reads the message over your shoulder. She doesn’t swear or raise her voice. She just takes the glasses off their cord and wipes them on her sleeve, which, you realize, is her way of losing her temper. “Two hours less,” she says. “My people won’t be able to learn on the go. They have to know in advance.” Then she turns to the console and starts waking them, one by one. As she walks away you hear her whispering names down the corridor, like someone counting children before departure.",
+          "lead": "Stana wipes her glasses.",
+          "if": {
+            "pick": "a_e"
+          }
+        },
+        {
+          "t": "Ognjen reads the message on his screen and nods, like someone who expected it. “The decision has to be made before two forty-five,” he says. “Sova would like to know already now. Not because it’s afraid. Because it computes more easily that way.” He doesn’t look at you as he says it, because he knows it would shake him. Under his arm he holds the company clipboard with the list, and you can see he crossed one line out in pencil, then copied it again.",
+          "lead": "Ognjen and the message on the screen.",
+          "if": {
+            "pick": "a_t"
+          }
+        },
+        {
+          "t": "Jovo, the man with the burn on his forearm, reads the message and slowly closes the door of the locker beside him. “If the window closes and we’re left on the path, we’ll have nothing but batteries,” he says. “That’s why I’ve been counting them since seven in the evening. I’m not superstitious. I just like to know where the reserve is.” He points to a number chalked on the wall. Then he laughs briefly, like a man who knows a joke changes nothing but hopes it might.",
+          "lead": "Jovo and the number on the wall.",
+          "if": {
+            "pick": "a_o"
+          }
+        },
+        {
+          "t": "“The Administration is waiting for an answer. Tell me what to write them.”",
+          "lead": "The Administration is waiting.",
+          "who": "Stana"
+        },
+        {
+          "t": "For the first time it doesn’t sound like an order, but like a plea for someone else to take over. Behind her someone in the hall drops a cup, then catches it before it breaks.",
+          "lead": "A cup in the hall."
+        }
+      ],
+      "prompt": "The Administration’s message is on the screen. What do you answer?",
+      "choices": [
+        {
+          "id": "u_e",
+          "text": "You write that the shift will run the machines by hand, and ask for the window to be extended.",
+          "next": "terasa",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "u_t",
+          "text": "You confirm the window and leave the planning to Sova.",
+          "next": "terasa",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "u_o",
+          "text": "You ask the Administration to prepare shutting down the Ring above the city.",
+          "next": "terasa",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "terasa": {
+      "chapter": "c2",
+      "img": "terasa",
+      "paragraphs": [
+        {
+          "t": "After midnight you step out onto the tower terrace. The city below shines like a fallen starry cap, one yellow window on every street, and above it the Ring is a thin, quiet line moving across the sky. It is cold, and the wind carries a smell of metal. From here you can also see the bakery roof, its smoke rising straight, as if it had never heard of wind. Below the railing hangs a chain with a yellow plate: “No exit without a helmet.” Nobody wears one. Down on the bakery roof someone has left a chair facing the sky, as if the whole street had come to witness something that hasn’t happened yet.",
+          "lead": "The terrace at the top of the tower."
+        },
+        {
+          "t": "Lena comes out after you, without a jacket, headset around her neck. She looks at the sky as at a screen that owes her an answer. “See that dot above the ridge?” she asks. “That’s the Swarm. You can’t see it yet, and I already have it in my hands.” Then, quieter, as if to herself: “Three companies turned me down. None said why.” The smell of overheated boards and cold coffee still clings to her, and her eyes shine from lack of sleep.",
+          "lead": "Lena in the night, no jacket.",
+          "if": {
+            "pick": "s_pult"
+          }
+        },
+        {
+          "t": "Ognjen comes out after you with two cups of tea and hands you one. He drinks his in three gulps, like someone who doesn’t drink for the taste. “The last time I slept was Tuesday,” he says. “We build a world where nobody has to stay awake. And look, we’re awake.” He asks you something about the reservoir, then gives up mid-sentence. His gaze rests on your seal, then turns toward the city below, as if comparing two values that aren’t written on the same scale.",
+          "lead": "Ognjen with two cups of tea.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "Zora climbs up after you with a sack of yeast in her arms and stops at the terrace railing, small beside the tower. She points at the roofs below. “Every house has one window lit,” she says, “everything else is off to save power. Sova can’t see that. Sova sees only numbers.” Her shadow stretches to the end of the terrace and beyond. She holds the bag of yeast like a baby, and doesn’t let go even when the wind sings through the railing.",
+          "lead": "Zora at the terrace railing.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "“The Administration extended the window by ten minutes. Ten. I’ll take it. If the city gets no warning, in the morning it will ask why not. If it does, we won’t be able to calm it. The siren is in my hand, the screens in the houses are in Sova’s, and switching off the lights is up to you, if you want it.”",
+          "lead": "Stana and the siren.",
+          "who": "Stana",
+          "if": {
+            "pick": "u_e"
+          }
+        },
+        {
+          "t": "All this time she stands with her back to you. Only now she turns, and you see she is tired to the bone but still holds her back straight.",
+          "lead": "Stana turns around.",
+          "if": {
+            "pick": "u_e"
+          }
+        },
+        {
+          "t": "“The window is confirmed. Sova is already computing. If the city gets no warning, in the morning it will ask why not. If it does, we won’t be able to calm it. The siren is in my hand, the screens in the houses are in Sova’s, and switching off the lights is up to you, if you want it.”",
+          "lead": "Stana and the siren.",
+          "who": "Stana",
+          "if": {
+            "pick": "u_t"
+          }
+        },
+        {
+          "t": "All this time she stands with her back to you. Only now she turns, and you see she is tired to the bone but still holds her back straight.",
+          "lead": "Stana turns around.",
+          "if": {
+            "pick": "u_t"
+          }
+        },
+        {
+          "t": "“The Administration is preparing the shutdown. They need time, and time is what we lack. If the city gets no warning, in the morning it will ask why not. If it does, we won’t be able to calm it. The siren is in my hand, the screens in the houses are in Sova’s, and switching off the lights is up to you, if you want it.”",
+          "lead": "Stana and the siren.",
+          "who": "Stana",
+          "if": {
+            "pick": "u_o"
+          }
+        },
+        {
+          "t": "All this time she stands with her back to you. Only now she turns, and you see she is tired to the bone but still holds her back straight.",
+          "lead": "Stana turns around.",
+          "if": {
+            "pick": "u_o"
+          }
+        }
+      ],
+      "prompt": "The city sleeps and the Swarm draws near. What do you do about the city?",
+      "choices": [
+        {
+          "id": "t_budis",
+          "text": "You sound the siren and wake the city, so people know what is happening.",
+          "next": "noc2",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "t_ekran",
+          "text": "You let Sova send everyone a message on the screen at home.",
+          "next": "noc2",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "t_tamno",
+          "text": "You order the lights in the city switched off, and people to stay indoors.",
+          "next": "noc2",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "noc2": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "The siren spills over the city, three long, three short, and people pour into the streets: in coats over pajamas, with children on their shoulders, someone with a tin can in hand because it was the first thing they grabbed. Within minutes the square is full. Nobody shouts. Everyone looks at the tower, and the tower looks back with its red light. Someone in the crowd pulls out a phone, then puts it back in a pocket, because there is no one to tell.",
+          "lead": "The city in pajamas on the square.",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "The message Sova sends the city lands on every screen in every kitchen: short, no exclamation marks. You stand on the tower roof, flat and full of antennas, like a forest without leaves, and below you the first windows light up one by one, as if someone were lighting candles. The wind whistles through the wires, and you feel a hum underfoot. The air is so cold that a taste of metal rises in your throat, and you can barely feel your fingers.",
+          "lead": "A roof full of antennas.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "The lights go out in order, street by street, until only the moon is left over the square. Shutters creak, doors close, somewhere a baby cries, then falls silent. The square is empty as if it had never been used, and the cold air smells of chimney smoke. Going down the tower stairs, you hear your own steps as someone else’s. The moon casts the tower’s shadow across the square, long and sharp, covering almost half the pavement.",
+          "lead": "The city in darkness.",
+          "if": {
+            "pick": "t_tamno"
+          }
+        },
+        {
+          "t": "A woman floury to the elbows steps out and stops before you; the crowd around her goes quiet.",
+          "lead": "A woman with flour steps out of the crowd.",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "“Tell us just one thing, {ime}. Will there be water in the morning, or won’t there? We’re not afraid of the Swarm. We’ve learned to be afraid when someone pours silence on us instead of an answer.”",
+          "lead": "Zora’s question.",
+          "who": "Zora",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "Behind her someone quietly says “yes”, then another, then another voice, until the silence turns into a whisper.",
+          "lead": "Voices from the crowd.",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "The man with the shaved head crouches by an open switchboard, his arm in the cables up to the elbow and a lamp between his teeth.",
+          "lead": "A man at the switchboard.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "“The link to the Ring is no small thing. Sova holds it in its head. We hold it in our fingers. When heavy traffic starts, I can run only what I see. The rest falls to it. So be it, if it can.”",
+          "lead": "Jovo and the link in his fingers.",
+          "who": "Jovo",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "He wipes his forehead with the back of his hand, leaving a smear of oil. He doesn’t notice.",
+          "lead": "A smear of oil.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "One window is lit after all, yellow and narrow, in the bakery on the corner. Zora the baker stands on the threshold with a lamp in her hand and doesn’t move. “I couldn’t close,” she says. “The dough has started to breathe.” Your eyes meet across the empty street. She doesn’t lower the lamp, and you don’t ask her to. The dark around her seems thicker than anywhere else in the city. Behind her, through the narrow door, you can see a tray of the first loaves under a clean cloth, like people covered so they won’t be cold.",
+          "lead": "A window in the bakery.",
+          "if": {
+            "pick": "t_tamno"
+          }
+        },
+        {
+          "t": "From here, on the square, you see two roads. One leads up the tower steps, where the shift is getting ready, the other down the street to the houses where people wait for news. The Swarm hasn’t arrived yet, but you feel time slipping through your fingers, cold and thin, like water from a broken tap. In the distance, above the ridge, the sky is darker than it should be, as if someone had drawn the first pencil line there.",
+          "lead": "Two roads from the square.",
+          "if": {
+            "any": [
+              "t_budis",
+              "t_tamno"
+            ]
+          }
+        },
+        {
+          "t": "Lena sits beside Jovo, head bowed, palms on the test board. The test signal goes through the Ring and comes back at once, without error. She smiles, for the first time that night, and you can tell she is uneasy about smiling. Jovo notices and turns his head, as if looking at a cable. A fan hums above them, and with every turn of its blades the shadow from the board moves across her face.",
+          "lead": "Lena and the test signal.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        }
+      ],
+      "prompt": "People and machines wait around you. What do you do?",
+      "choices": [
+        {
+          "id": "n_e",
+          "text": "You speak openly with those who are here: what you know and what you don’t.",
+          "next": "ponuda",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "n_t",
+          "text": "You leave Sova to answer the questions while you follow the messages.",
+          "next": "ponuda",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "n_o",
+          "text": "You close everything that can be closed and protect what the city has.",
+          "next": "ponuda",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "ponuda": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "hodnik",
+      "paragraphs": [
+        {
+          "t": "At half past one Ognjen calls you from the corridor. He stands by the coffee machine that no longer works, two empty cups in his hands, like someone who has decided to say what he’s carried since arriving. The corridor smells of cold tea and warm plastic. From above comes the soft, even sound of the hall, like breathing in sleep. He shuts the hall door with his knee to keep the sound in, then leans against the wall as if it had held him up all night. On the machine’s glass someone has written “late” with a finger, and beneath it drawn a small, careless smile. He looks at his shoes, then at yours, and for the first time doesn’t know how to begin.",
+          "lead": "Ognjen in the corridor."
+        },
+        {
+          "t": "“I heard what you told the people. No hard feelings. Just so you know: the company would hire the whole shift, and the girl with the silver stud, Lena, if the Spire hands the running to Sova tonight. Sova would learn from them. That’s no lie. The pay is good, it’s always good. Only nobody would call them in at night anymore.”",
+          "lead": "Ognjen’s offer.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "n_e"
+          }
+        },
+        {
+          "t": "All this time he shifts from foot to foot, not looking at you, and raises his eyes only when he finishes.",
+          "lead": "Ognjen looks up.",
+          "if": {
+            "pick": "n_e"
+          }
+        },
+        {
+          "t": "“The messages went out fine. Sova is satisfied, as far as it can be. So I’ll say it in advance: the company would hire the whole shift, and the girl with the silver stud, Lena, if the Spire hands the running to Sova tonight. Sova would learn from them. That’s no lie. The pay is good, it’s always good. Only nobody would call them in at night anymore.”",
+          "lead": "Ognjen’s offer.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "n_t"
+          }
+        },
+        {
+          "t": "All this time he shifts from foot to foot, not looking at you, and raises his eyes only when he finishes.",
+          "lead": "Ognjen looks up.",
+          "if": {
+            "pick": "n_t"
+          }
+        },
+        {
+          "t": "“We saw you closing everything that can be closed. I understand. So here is an alternative before you close this too: the company would hire the whole shift, and the girl with the silver stud, Lena, if the Spire hands the running to Sova tonight. Sova would learn from them. That’s no lie. The pay is good, it’s always good. Only nobody would call them in at night anymore.”",
+          "lead": "Ognjen’s offer.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "n_o"
+          }
+        },
+        {
+          "t": "All this time he shifts from foot to foot, not looking at you, and raises his eyes only when he finishes.",
+          "lead": "Ognjen looks up.",
+          "if": {
+            "pick": "n_o"
+          }
+        },
+        {
+          "t": "Stana stands in the doorway; she missed the beginning but hears the end. She doesn’t step into the corridor, like someone taught not to enter where she isn’t invited, even in her own tower.",
+          "lead": "Stana in the doorway."
+        },
+        {
+          "t": "“A salary is not a place. I’m not asking you to answer now. Only to remember that when they say it’s easier for people, someone still ends up without work.”",
+          "lead": "What Stana says about pay.",
+          "who": "Stana"
+        },
+        {
+          "t": "She speaks quietly and looks at neither Ognjen nor you. Her gaze rests on the cup in Ognjen’s hand, on something entirely ordinary, as if she too were holding on to it.",
+          "lead": "The cup in Ognjen’s hand."
+        }
+      ],
+      "prompt": "Ognjen waits for an answer, and Stana listens from the doorway. What do you say?",
+      "choices": [
+        {
+          "id": "o_e",
+          "text": "You ask that the offer be read aloud to the whole shift.",
+          "next": "jedan",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "o_t",
+          "text": "You accept the offer in principle: the shift teaches Sova, Sova runs tonight.",
+          "next": "jedan",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "o_o",
+          "text": "You refuse until the cloud has passed.",
+          "next": "jedan",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "jedan": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "At twenty to two the screen on the wall turns yellow. The Swarm breaks into two clouds, and the second arrives earlier than calculated. Everyone floods into the hall: the girl with the silver stud in her nose, Lena, the man with the burn on his forearm, Jovo, the rest of the shift, Ognjen with his earpiece, even the guard from the gate. Stana stands in the doorway counting them with her eyes. The chiller under the floor starts a second motor for the first time that night, and the whole tower shudders as if waking. The guard takes off his helmet and holds it to his chest, as at a ceremony whose name he doesn’t know. Someone in the crush drops a thermos, and the sound of it rolling across the floor doesn’t stop until someone’s boot does.",
+          "lead": "The yellow screen."
+        },
+        {
+          "t": "“The offer has been read aloud, everyone heard. Nobody said yes or no. But now we need both the chiller and the power. Not in the morning, now. If the city loses its water, it will recover. If we lose the machines, the world will be late with mail, medicine and money for a whole week.”",
+          "lead": "Ognjen and two prices.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "o_e"
+          }
+        },
+        {
+          "t": "He speaks quietly, like someone apologizing. He points at the screen but doesn’t touch the glass, as if afraid of moving the numbers.",
+          "lead": "A finger that doesn’t touch.",
+          "if": {
+            "pick": "o_e"
+          }
+        },
+        {
+          "t": "“The shift teaches Sova, as we said. But now we need both the chiller and the power. Not in the morning, now. If the city loses its water, it will recover. If we lose the machines, the world will be late with mail, medicine and money for a whole week.”",
+          "lead": "Ognjen and two prices.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "o_t"
+          }
+        },
+        {
+          "t": "He speaks quietly, like someone apologizing. He points at the screen but doesn’t touch the glass, as if afraid of moving the numbers.",
+          "lead": "A finger that doesn’t touch.",
+          "if": {
+            "pick": "o_t"
+          }
+        },
+        {
+          "t": "“The offer stands until the end of the night, as agreed. But now we need both the chiller and the power. Not in the morning, now. If the city loses its water, it will recover. If we lose the machines, the world will be late with mail, medicine and money for a whole week.”",
+          "lead": "Ognjen and two prices.",
+          "who": "Ognjen",
+          "if": {
+            "pick": "o_o"
+          }
+        },
+        {
+          "t": "He speaks quietly, like someone apologizing. He points at the screen but doesn’t touch the glass, as if afraid of moving the numbers.",
+          "lead": "A finger that doesn’t touch.",
+          "if": {
+            "pick": "o_o"
+          }
+        },
+        {
+          "t": "“My people didn’t interest anyone until they became needed. Now they’re needed, and already people ask who will pay them tomorrow. I’m asking nothing for myself. I’m asking that at least one place remain where young people learn something with their hands.”",
+          "lead": "Stana and the shift that is needed.",
+          "who": "Stana"
+        },
+        {
+          "t": "Around her the hall is utterly silent: only the breathing of nine people and the hum of the chiller. Nobody interrupts her. Not even Ognjen, who has already opened his mouth, then closes it.",
+          "lead": "The silent hall."
+        }
+      ],
+      "prompt": "Two clouds, one chiller and one shift. What do you do?",
+      "choices": [
+        {
+          "id": "j_podela",
+          "text": "You split the work: the shift runs the nearer group of machines, Sova the other.",
+          "next": "test",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "j_hladnjaca",
+          "text": "You give Sova the chiller and half the city’s power, and leave the shift with oversight.",
+          "next": "test",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "j_zatamnjenje",
+          "text": "You order the machines in the Swarm’s path shut down and left to the trajectory.",
+          "next": "test",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "test": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "The shift is already split into two groups, each holding its own machines. Sova whispers numbers into the headsets, and fingers fly over the keys. Lena stands beside you, still without a task, arms crossed on her chest, waiting for something to free up. The smell of stale coffee and something burnt hangs over the desks, and behind you someone drops a headset on the floor.",
+          "lead": "Lena, waiting for something to free up.",
+          "if": {
+            "pick": "j_podela"
+          }
+        },
+        {
+          "t": "The chiller roars under the floor, the lights dim and return, and the pump under the city whispers. Lena stands in the middle of the hall with her hands in her pockets, and the shift around her doesn’t know what to do with its fingers. The trajectory lines on the wall move by themselves, faster than you can follow. From the walls comes a thin, almost musical sound, like a finger drawn around the rim of a glass.",
+          "lead": "Lena in the middle of the hall.",
+          "if": {
+            "pick": "j_hladnjaca"
+          }
+        },
+        {
+          "t": "The screens on the wall go out one by one, like windows in a building being emptied. The hall smells of dust from cold machines. Lena stands in the middle of the room and looks at the dead dots as at abandoned rooms, and Sova whispers that this is not in its plan, but carries it out. Someone sets a cup on the desk, and that small sound echoes as if a stone slab had fallen.",
+          "lead": "Lena among the dark screens.",
+          "if": {
+            "pick": "j_zatamnjenje"
+          }
+        },
+        {
+          "t": "“I know what they say about me. Intern, no contract, no experience. But I ran machines by hand for thirty nights, and Sova has run them here for none. Allow me one test. One machine, one trajectory. If I fail, I ask for nothing more.”",
+          "lead": "Lena asks for one test.",
+          "who": "Lena"
+        },
+        {
+          "t": "She lowers her eyes to her nails, bitten to the skin, and hides them in her fists. Then she lifts her head and looks straight at you, and that look isn’t a plea but a question that lasts.",
+          "lead": "A look that lasts."
+        },
+        {
+          "t": "“I stand behind her. Not because she’s young, but because that’s the only way to know what we know. Sova never tried to get it wrong. We have, and it taught us. My wife thinks I’m mad to stay here.”",
+          "lead": "Jovo steps behind her.",
+          "who": "Jovo"
+        },
+        {
+          "t": "He adds the last sentence as something he hadn’t meant to say, looking at the floor. Lena doesn’t look at him, but her shoulders shift, as if someone had lifted a stone off them. Jovo doesn’t see it; he keeps looking at the floor, as if reading there what he can’t say aloud.",
+          "lead": "Lena’s shoulders."
+        }
+      ],
+      "prompt": "Lena asks for one test. What do you tell her?",
+      "choices": [
+        {
+          "id": "l_e",
+          "text": "You allow a test on one machine, with the whole shift beside her.",
+          "next": "dva",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "l_t",
+          "text": "You refuse the test: Sova has the whole plan.",
+          "next": "dva",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "l_o",
+          "text": "You allow the test only on the cheapest machine.",
+          "next": "dva",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "dva": {
+      "chapter": "c3",
+      "img": "pult",
+      "paragraphs": [
+        {
+          "t": "Lena sits at the console, and the shift gathers around her in a half circle, as around a fire. The machine moves under her fingers and returns to the line, almost without delay. Someone whistles softly. For the first time tonight Jovo takes off his cap and holds it in his hands. Someone brings another chair, someone else a cup of coffee, and for the first time tonight the room sounds as if it is breathing.",
+          "lead": "The shift around Lena.",
+          "if": {
+            "pick": "l_e"
+          }
+        },
+        {
+          "t": "Lena remains standing, hands in her pockets. She says nothing, only looks at the wall where Sova runs the machines without error. Jovo goes to her, puts a hand on her shoulder and walks her back to the console to sit. She sits, but doesn’t touch the keys. In her walk back to the chair you can see how much she has kept inside.",
+          "lead": "Lena, not touching the keys.",
+          "if": {
+            "pick": "l_t"
+          }
+        },
+        {
+          "t": "Lena gets a single machine, the cheapest, the one used for signal tests. She moves it where needed, then moves it again, and once more, like a little girl who was given only one doll but knows every patch on it. Nobody speaks. Jovo follows the trajectory on the screen with a finger. When she finishes, she doesn’t celebrate, she only folds her palms and looks at them, as if checking they are hers.",
+          "lead": "Lena and one machine.",
+          "if": {
+            "pick": "l_o"
+          }
+        },
+        {
+          "t": "Two machines break away from the rest and glide toward the cloud, slow and stubborn, like sheep that can’t hear the shepherd. Nobody knows why. Stana grips the edge of the desk, Jovo swears under his breath, and Lena is already dictating new commands, a fingernail between her teeth. The clock on the wall counts down to contact, and nobody looks at the number, because everyone knows how much is left. The chiller under the floor sighs and speeds up, and the lights in the hall flicker like a running heart: white, then yellow, then white, the breathing of someone who has just escaped.",
+          "lead": "Two machines veer toward the Swarm."
+        },
+        {
+          "t": "“I can save them. Required: eleven more minutes of the chiller and additional draining of the reservoir. Alternative: let them go. Note: water that is used does not return before the next rain. The question awaits an answer.”",
+          "lead": "Sova offers eleven more minutes.",
+          "who": "Sova"
+        },
+        {
+          "t": "Beside the text a small, thin line glows on the screen, showing how much reservoir is left in the city. The line is short. Stana is the first to break the silence.",
+          "lead": "The line on the screen."
+        },
+        {
+          "t": "“Don’t answer at once. But don’t take too long, either.”",
+          "lead": "Stana breaks the silence.",
+          "who": "Stana"
+        }
+      ],
+      "prompt": "Two machines, eleven minutes and water that doesn’t come back. What do you answer?",
+      "choices": [
+        {
+          "id": "d_ruke",
+          "text": "You ask Lena and Jovo whether they can save them by hand, with no extra water.",
+          "next": "odbor",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "d_jedanaest",
+          "text": "You give Sova eleven more minutes of the chiller.",
+          "next": "odbor",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "d_pusti",
+          "text": "You let both machines go and save the water for the city.",
+          "next": "odbor",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "odbor": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "Sova carries it out. The two machines veer, the trajectory lines straighten, and the screen turns green. The city’s reservoir drops by half a finger, visible only on one screen, in the pump station, which nobody watches. Ognjen exhales. Stana doesn’t. Jovo runs a palm over his face and leaves a trace of oil on his cheek, like a warrior. Under the skin of the tower a thin, deep tone passes, as if the whole Spire had sighed at once.",
+          "lead": "Sova carries it out.",
+          "if": {
+            "pick": "d_jedanaest"
+          }
+        },
+        {
+          "t": "Lena and Jovo take the machines, she with her left hand, he with his right, and between them Stana calls out the time every ten seconds. One machine returns to the line. The other doesn’t. It goes out quietly, without an explosion, like a candle in a draft. Lena takes off her headset and says nothing, and Jovo puts a hand on her shoulder and leaves it there. The chiller is silent, the pump is silent, and only the soft tapping of keys is heard, like rain on tin.",
+          "lead": "Two machines in their hands.",
+          "if": {
+            "pick": "d_ruke"
+          }
+        },
+        {
+          "t": "The two machines vanish into the cloud without a sound. Two pale flashes remain on the screen, then nothing. Sova reports the loss in a single line, without a word of regret. The reservoir stays where it was. Ognjen stands by the screen looking at the floor, and Lena presses a palm to her mouth. Through the window of the hall you can see the city, serene, with one yellow window on every street.",
+          "lead": "Two pale flashes.",
+          "if": {
+            "pick": "d_pusti"
+          }
+        },
+        {
+          "t": "Five to three. The Swarm descends like a black ring over the sky, and the Spire trembles, for the first time tonight, like an animal sensing a storm. Everyone in the hall turns toward you. Stana doesn’t speak. Ognjen doesn’t speak. Jovo doesn’t speak. Even Sova waits, its cursor blinking on the screen like a heartbeat drawing near. Nobody takes their eyes off you, not even the guard from the gate, who stands in the corner with his helmet in his hands. Stana slowly lowers her hand from the strap of her headset, as if she no longer needs it.",
+          "lead": "Five to three."
+        },
+        {
+          "t": "“Say what happens at ten past three. The seal is with you. Say it aloud, {ime}. Even those who don’t understand can hear us here.”",
+          "lead": "Stana and the seal.",
+          "who": "Stana"
+        },
+        {
+          "t": "Her voice is quiet, but every word reaches the last row of the hall. She looks at you calmly, without pleading, with the look of a woman who has seen many nights before this one.",
+          "lead": "Her calm gaze."
+        }
+      ],
+      "prompt": "The Swarm is above the city. Who runs the machines?",
+      "choices": [
+        {
+          "id": "od_smena",
+          "text": "You hand the running to the people: the shift leads, Sova assists.",
+          "next": "odluka",
+          "w": {
+            "e": 3
+          }
+        },
+        {
+          "id": "od_sova",
+          "text": "You hand the running to Sova: it leads, the shift follows.",
+          "next": "odluka",
+          "w": {
+            "t": 3
+          }
+        },
+        {
+          "id": "od_tama",
+          "text": "You close the pass: the Ring above the city goes dark until morning, with no running.",
+          "next": "odluka",
+          "w": {
+            "o": 3
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_cutanje",
+        "text": "— You say nothing. The hall waits.",
+        "next": "odluka",
+        "w": {
+          "t": 1
+        },
+        "after": 22
+      }
+    },
+    "odluka": {
+      "chapter": "c3",
+      "paragraphs": [
+        {
+          "t": "At ten past three the screen turns into a white rain of dots. The sound coming from the hall is not the sound of machines, but of nine people holding their breath at once. The Spire stops trembling, as if it too had decided not to move. Somewhere in the hall someone prays softly, without words, only with breath. Everyone sitting stays seated, and everyone standing stays standing. Not even Ognjen breathes loudly.",
+          "lead": "Three and ten."
+        },
+        {
+          "t": "After that nothing is heard but the wind on the pass and the first blows against the terrace railing: tiny pieces, hard as pebbles. Then they stop. The screen returns to darkness, and in that darkness, slowly, dot by dot, appears the sky that still exists. The Spire creaks once, briefly, and as that sound fades, for the first time tonight you feel your shoulders drop. Yet nobody stands, nobody speaks. They wait for a sound that has no name, and it comes only after the first minute passes.",
+          "lead": "A rustle above the tower."
+        }
+      ],
+      "branch": [
+        {
+          "if": {
+            "lead": "e"
+          },
+          "next": "kraj_e1"
+        },
+        {
+          "if": {
+            "lead": "t"
+          },
+          "next": "kraj_t1"
+        },
+        {
+          "next": "kraj_o1"
+        }
+      ]
+    },
+    "kraj_e1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Dawn begins without victory and without a victor. The machines above the city pass one after another, showing green on the screen, then yellow, then green again. The shift sits slumped, not believing it, and Stana for the first time tonight takes off her headset and sets it on the table as if it were glass. From the corridor comes a smell of tea, because someone, in the middle of everything, found time to brew it. Under the window, on the steps, someone stacks empty cups one inside another, because there is nothing else to do with their hands. Stana stands by the window and looks like someone who finally has time to look outside.",
+          "lead": "The Swarm passes."
+        },
+        {
+          "t": "“We’ll be counting them until noon. For now I only know that not one fell on the city. That’s no small difference, it’s just hard to say aloud.”",
+          "lead": "Jovo counts the machines.",
+          "who": "Jovo"
+        },
+        {
+          "t": "Jovo rubs his eyes. Lena looks at him, then at you, then at the screen, as if wanting to say something she can’t. Then she laughs briefly, and it is the first sound after the night that resembles life.",
+          "lead": "Lena’s laugh."
+        },
+        {
+          "t": "Down on the square the people don’t leave. They wait for morning as in a waiting room, with tea from thermoses and bread from someone’s bag. Someone brought an accordion, then put it down, not knowing what to play after a night like this. Children sleep on shoulders. Someone has left a red jacket under a pole, and nobody picks it up. At the edge of the square an old woman with a cane looks at the tower, the sky, the tower again, as if comparing them.",
+          "lead": "The square waiting for morning.",
+          "if": {
+            "pick": "t_budis"
+          }
+        },
+        {
+          "t": "Lena sleeps on the console, headset around her neck. On her screen a single machine, the one she brought back by hand, still blinks green, like someone’s pulse. Jovo covers her with his jacket, then pretends he just happened to forget to take it off there. Under her elbows lies a paper covered with the names of machines, one under another, like a list of survivors.",
+          "lead": "Lena on the console.",
+          "if": {
+            "pick": "d_ruke"
+          }
+        },
+        {
+          "t": "Zora hands out bread on the steps of the tower. She made it with less water and says it’s dense as brick, but everyone takes a piece, and nobody leaves a crumb. The shift has eaten for the first time tonight. Jovo takes a piece, smells it and says it’s the first bread of his life that tastes of night.",
+          "lead": "Zora and the dense bread.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "On the console lies a folded paper in Lena’s handwriting: a list of the machines run by hand that night, with the time and the name of the one who ran each. No name is the same. At the bottom someone has added in small letters: “If needed, again.”",
+          "lead": "A paper on the console.",
+          "if": {
+            "pick": "l_e"
+          }
+        },
+        {
+          "t": "Stana stands in the doorway with an empty cup.",
+          "lead": "Stana in the doorway."
+        },
+        {
+          "t": "“The shift works tomorrow too. That’s all I have to say. Write the report however you like.”",
+          "lead": "What Stana has to say.",
+          "who": "Stana"
+        },
+        {
+          "t": "She doesn’t wait for an answer. Behind her linger a wool vest and cold tea. On the threshold she pauses, as if reconsidering.",
+          "lead": "Stana pauses at the threshold."
+        },
+        {
+          "t": "“And you come for tea, when you’re passing by.”",
+          "lead": "One more sentence.",
+          "who": "Stana"
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Morning light descends the mountain in long, yellow stripes, and for the first time in a long while the city looks like a city, not a reservoir. People come out onto the streets with buckets and cups, unsure, as after a long sleep. The bakeries open their doors, and the chiller is silent. In the distance, at the edge of the valley, the first truck can be heard leaving its garage. On the tower terrace, where the wind blew last night, a gull now sits, or something like it, not knowing what it is doing so high up.",
+          "lead": "The city steps outside."
+        },
+        {
+          "t": "Ognjen sits on the bottom step of the tower, the company pin in his fist, turning it between his fingers. He looks at no one. “I’ll send the report,” he says. “I don’t know what it will say.” Then, quieter: “Sova doesn’t know either, and it knows everything.” The wind moves a lock of hair across his forehead, and he doesn’t brush it away. His phone rings in his pocket, and he doesn’t take it out. He lets it ring until it stops.",
+          "lead": "Ognjen with the pin."
+        },
+        {
+          "t": "On the square the line of questions from last night still holds. Someone claims to know how much water the reservoir has, someone who made the decisions, and a woman with a basket stays silent and hands out bread. The answers differ, but everyone stands in the same line. Someone has chalked the first item of a list on the wall, with room beneath it for more.",
+          "lead": "A line of questions on the square.",
+          "if": {
+            "pick": "n_e"
+          }
+        },
+        {
+          "t": "The night-shift console now has nine chairs. Someone dragged them in from the hall at dawn, and nobody knows who. Lena’s jacket hangs on one. One of them is small, a child’s, and nobody can say where it came from.",
+          "lead": "Nine chairs.",
+          "if": {
+            "pick": "a_e"
+          }
+        },
+        {
+          "t": "Around nine, down the switchback from the valley comes a truck marked with the Administration’s sign, and the driver honks twice. It brings a new shift schedule, with more empty places than names. Stana reads it standing, and her gaze stops on one line, the one at the bottom, where there is nothing but the line for a signature.",
+          "lead": "A truck down the switchback."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Sova doesn’t stop for a moment. The chiller roars beneath the tower, the lights in the hall stay on, and the trajectory lines on the wall straighten one after another, without a single error. At fifteen past three the Swarm is behind the ridge, and no machine has touched another. Sova reports one line: “Executed.” It reports nothing more. In the hall nothing is heard but the hum of the chiller, which doesn’t break. Nobody in the hall touches the keys. The shift’s fingers lie on their knees, quiet and useless, like gloves left on a bench.",
+          "lead": "The Swarm behind the ridge."
+        },
+        {
+          "t": "Nobody applauds. The shift sits with hands on knees, like pupils whose exam has been cancelled. Lena is the first to stand, takes her jacket from the chair and stops in the doorway. “If anyone is looking for me, I’ll be outside,” she says, without turning. Jovo looks after her, then bends and unscrews some bolt that nobody needs. Stana stays at the console, looking at the wall where Sova logs every maneuver in small green letters, and doesn’t break the silence.",
+          "lead": "Lena takes her jacket."
+        },
+        {
+          "t": "Ognjen plays the recording from the glass room: Sova has been preparing the plan since evening, machine by machine. “That’s why it went so smoothly,” he says quietly, watching the screen as if the recording were a prayer.",
+          "lead": "The recording from the glass room.",
+          "if": {
+            "pick": "s_predlog"
+          }
+        },
+        {
+          "t": "The city’s reservoir drops by a third, as announced. The pipes under the streets whisper all morning, and the bakeries stay shut until noon, with nothing to knead with. Through the window a line of people with buckets stands before the pump station, patient and quiet, like a waiting room.",
+          "lead": "Pipes that whisper.",
+          "if": {
+            "pick": "j_hladnjaca"
+          }
+        },
+        {
+          "t": "On the screens in the houses is the message Sova sent at midnight: short, with a number of liters and the name of every street. People read it standing, then go back to bed. Nobody asks who wrote the message. From one kitchen comes the smell of frying onions, which bothers no one.",
+          "lead": "A message on kitchen screens.",
+          "if": {
+            "pick": "n_t"
+          }
+        },
+        {
+          "t": "Ognjen takes the framed memo off the hall wall, the one with the empty place for a seal, and folds it in four. He puts it in his jacket pocket. Stana watches him go, without a word, with the same look she greeted you with last night on the stairs. Where the memo hung a lighter rectangle remains on the wall, like the shadow of something that stood there a long time. Then he walks out into the corridor, and you hear him pause by the coffee machine, then move on.",
+          "lead": "The memo leaves the wall."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "In the following weeks, as the shift comes less and less, Sova sends the city a report on water and power every evening. The messages are short, with numbers nobody checks, because nobody is left to understand them. People read them on kitchen screens, over coffee, like a weather forecast. In the first days someone still tries to reply, then gives up, because there is no answer. The city learns to live with that voice that speaks every evening at the same time, like a neighbor nobody chose.",
+          "lead": "Sova writes to the city."
+        },
+        {
+          "t": "The pump station runs quieter at night than before, and the bakers no longer ask about the level. The reservoir returns to its old height only in spring, and nobody celebrates. The worker at the entrance, who used to mutter into a headset, now just sits, hands on his knees.",
+          "lead": "The pump that whispers.",
+          "if": {
+            "pick": "d_jedanaest"
+          }
+        },
+        {
+          "t": "Jovo stays on the roof the longest. Sometimes he unscrews some old, faulty contact, just to have something to do with his hands, then screws it back. Sova doesn’t interrupt. Sova doesn’t know whether it is work. In the cabinet, beside the cables, still stands the cup he left that night.",
+          "lead": "Jovo on the roof.",
+          "if": {
+            "pick": "t_ekran"
+          }
+        },
+        {
+          "t": "Lena gets an offer from the company: to lead a test group of machines in another tower, with pay and a contract. The offer has not a word about the shift. The letter lies on the console, open, for days, and nobody touches it. Beside the letter lie the puzzle of metal pieces and a headset, which nobody touches.",
+          "lead": "The letter on the console.",
+          "if": {
+            "pick": "o_t"
+          }
+        },
+        {
+          "t": "One ordinary morning a young man with a bag comes down the switchback with a question: is there work here for someone who can run machines by hand. The guard at the gate looks at him and doesn’t know what to answer. On the tower above them, Sova is silent.",
+          "lead": "A young man with a bag at the gate."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "The Ring above the city goes dark by dawn, machine by machine, like windows in a building being emptied, and the sky becomes just sky. The Swarm passes and vanishes, leaving nothing but one sound, dry and short, like someone snapping a twig underfoot. The hall is quiet as a library. Everyone waits for morning. On the screen the last green dots go out, and in their place remains only dark glass with your reflection. Stana sits on the floor, back against the side of the console.",
+          "lead": "Sky without the Ring."
+        },
+        {
+          "t": "The city’s power doesn’t flicker. The chiller is off, the pump runs as always, and the reservoir stands full to the brim. Ognjen sits in a corner with a headset in his hand, listening to the world run late: messages, medicine, orders, all waiting in a queue nobody sees. Under the tower the pump keeps counting time evenly, as if nothing were different. Nobody in the hall speaks of the Administration’s message. It sits in everyone’s pocket, unread, like a letter nobody wants to open first.",
+          "lead": "Ognjen and a world running late."
+        },
+        {
+          "t": "Zora opens the bakery at six, as always, with dough that rises. She takes the bread water from the same tap as yesterday. She leaves the first loaf on the doorstep for whoever passes first. Smoke from the bakery rises straight into the calm morning, like a finger pointing at a sky without the Ring.",
+          "lead": "The bakery at six.",
+          "if": {
+            "pick": "s_pumpa"
+          }
+        },
+        {
+          "t": "The city wakes its dark: shutters rise one by one, and people step into the street blinking, as if they had slept underground. Nobody asks what happened. They only ask whether everything is all right, and from everyone get the same answer. Someone on a balcony calls a greeting to a neighbor, for the first time in a long while, loudly, as if checking whether anyone is still there.",
+          "lead": "Shutters rise.",
+          "if": {
+            "pick": "t_tamno"
+          }
+        },
+        {
+          "t": "One line stands on the screen: two machines missing. Lena looks at it for half an hour, then covers it with her palm and stays like that, hand on the glass, like someone holding a door shut. Jovo comes over, says nothing, and sets a cup of tea beside her.",
+          "lead": "A line on the screen.",
+          "if": {
+            "pick": "d_pusti"
+          }
+        },
+        {
+          "t": "Stana takes off her helmet and sits on a step. For the first time tonight she doesn’t look like someone ready to jump. Her gaze rests on the city below, on the yellow windows going out one by one. Through the window blows cold, clean air, without dust or smoke, the kind this place hasn’t had for months.",
+          "lead": "Stana on the step."
+        },
+        {
+          "t": "“The machines will come back. The question is only when someone will want to switch them on.”",
+          "lead": "What Stana says about the machines.",
+          "who": "Stana"
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "By noon messages begin arriving from the valley: trucks are late, medicine comes a day past its date, a factory asks for help. The city answers everyone the same: no connection at the moment. The water is here, the light is here, and the Ring is silent. For the first time you can hear the city’s own sound, with no machines in the background. Another factory sends a one-line message: “We cool with river water. The river has dried up.” Nobody knows what to answer. On the tower a phone rings in the Administration’s empty office, once, twice, then dies.",
+          "lead": "The valley asks for an answer."
+        },
+        {
+          "t": "Jovo takes you and two young people down to the basement to count the batteries left in reserve last night. Not one is empty. Jovo pats them in turn, like horses, and says nothing. But you can hear him counting. The cold basement air smells of oil and dust, and of something else that needs explaining to no one.",
+          "lead": "The basement with the batteries.",
+          "if": {
+            "pick": "k_baterije"
+          }
+        },
+        {
+          "t": "Lena sits beside the dead console, drawing trajectory lines on paper with a pencil. She knows them by heart. She draws them all, one by one, then crosses them out, then draws them again. The paper is already filled to the edge, and she turns the sheet to continue on the other side.",
+          "lead": "Lena and the paper.",
+          "if": {
+            "pick": "j_zatamnjenje"
+          }
+        },
+        {
+          "t": "The square is empty, but on every doorstep stands a bucket, half full. Someone went round when the lights went out, and nobody asks who did it. The wind passes over the stone slabs and lifts a fine dust that settles only at the edge of the square.",
+          "lead": "Buckets on the doorsteps.",
+          "if": {
+            "pick": "n_o"
+          }
+        },
+        {
+          "t": "Toward evening an unmarked truck stops at the gate of the Spire. The driver doesn’t get down. He opens the window, holds out a letter and waits. The guard looks at the letter, then at you, then at the letter again.",
+          "lead": "A truck with no markings."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "stana": {
+      "src": "img/tri-i-deset/stana.webp",
+      "alt": "Stana",
+      "kind": "portrait",
+      "caption": "Stana"
+    },
+    "jovo": {
+      "src": "img/tri-i-deset/jovo.webp",
+      "alt": "Jovo",
+      "kind": "portrait",
+      "caption": "Jovo"
+    },
+    "lena": {
+      "src": "img/tri-i-deset/lena.webp",
+      "alt": "Lena",
+      "kind": "portrait",
+      "caption": "Lena"
+    },
+    "ognjen": {
+      "src": "img/tri-i-deset/ognjen.webp",
+      "alt": "Ognjen",
+      "kind": "portrait",
+      "caption": "Ognjen"
+    },
+    "zora": {
+      "src": "img/tri-i-deset/zora.webp",
+      "alt": "Zora",
+      "kind": "portrait",
+      "caption": "Zora"
+    },
+    "citalac-m": {
+      "src": "img/tri-i-deset/citalac-m.webp",
+      "alt": "You",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "citalac-z": {
+      "src": "img/tri-i-deset/citalac-z.webp",
+      "alt": "You",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "stub": {
+      "src": "img/tri-i-deset/stub.webp",
+      "alt": "The Spire: a tower of antennas above a mountain city",
+      "kind": "place"
+    },
+    "sala": {
+      "src": "img/tri-i-deset/sala.webp",
+      "alt": "The hall with the big wall screen and the night-shift console",
+      "kind": "place"
+    },
+    "terasa": {
+      "src": "img/tri-i-deset/terasa.webp",
+      "alt": "The tower terrace above the city and the Ring",
+      "kind": "place"
+    },
+    "hodnik": {
+      "src": "img/tri-i-deset/hodnik.webp",
+      "alt": "The tower corridor with a broken coffee machine",
+      "kind": "place"
+    },
+    "pult": {
+      "src": "img/tri-i-deset/pult.webp",
+      "alt": "The manual night-shift console with eight screens",
+      "kind": "place"
+    }
+  },
+  "characters": {
+    "Stana": {
+      "img": "stana"
+    },
+    "Jovo": {
+      "img": "jovo"
+    },
+    "Lena": {
+      "img": "lena"
+    },
+    "Ognjen": {
+      "img": "ognjen"
+    },
+    "Zora": {
+      "img": "zora"
+    },
+    "Sova": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

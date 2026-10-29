@@ -1,0 +1,2068 @@
+{
+  "meta": {
+    "title": "Before the Tide",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "The White Shoal is a delta where land and sea never quite part. Every grain that is sown carries a seal, and every field is judged by Tok, a machine that knows in advance what the summer will be.",
+      "Tonight your boat carries seed for the Council. The tide is at ten past six, the channel is shallower than Tok said, and at the Low Side landing someone waves a lantern.",
+      "Before you are people from three sides of the levee, a machine that speaks only when asked, and one watcher the Levee does not speak of."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "care for people"
+      },
+      {
+        "id": "t",
+        "name": "trust in the machine and progress"
+      },
+      {
+        "id": "o",
+        "name": "caution and safeguarding the stock"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "On the Shoal nothing is sown without a seal and without Tok’s list. Tonight your boat carries seed for the Council, the tide comes at ten past six, and at the Low Side landing someone swings a lantern."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "Your progress is saved only in your browser.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "The Shoal"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "The Seal"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "The Tide"
+    }
+  },
+  "start": "kanal",
+  "endings": {
+    "e": {
+      "title": "Wax and Salt",
+      "closing": [
+        "The wax from the broken seals stays in the mud of Low Side until the first rain. Children gather it and stack it in shoe boxes, like shells."
+      ]
+    },
+    "t": {
+      "title": "The Green Rope",
+      "closing": [
+        "Forty plots turn green in a row, one after another, just as the list said. The channel beside Low Side gets a little shallower every evening."
+      ]
+    },
+    "o": {
+      "title": "Key in the Palm",
+      "closing": [
+        "Twenty plots near the levee are thinly green, and twenty sacks wait in the Granary under new wax. There is still no answer in the sky."
+      ]
+    }
+  },
+  "nodes": {
+    "kanal": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "kanal",
+      "paragraphs": [
+        {
+          "t": "The boat scrapes the bottom. The Third Channel is always waist-deep at this hour, but now the oar catches in the mud as in dough. The air smells of salt and rotting reeds. On the deck, under a wet tarpaulin, lie forty sacks with the wax seal of the Terraces. The tide is at ten past six, and midnight passed an hour ago. With one hand you row, and with the other, without thinking, you touch the seal on the nearest sack, the way one touches an amulet."
+        },
+        {
+          "t": "Ahead, at the Low Side landing, someone is swinging a lantern. Fast and without rhythm, like someone who doesn’t know the signals but won’t give up. On the list the first plot is not until the Levee, another hour of rowing from here, and every minute of standing still is taken from it. The board astern has long known this: it counts the minutes quietly, in green numbers, and blames no one.",
+          "lead": "A lantern at the landing."
+        }
+      ],
+      "prompt": "The landing draws nearer, and the lantern doesn’t stop.",
+      "choices": [
+        {
+          "id": "k_stani",
+          "text": "You turn toward the landing and drop the oar to stop the boat.",
+          "next": "pristan",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_signal",
+          "text": "You answer with your lamp and row on, until you can see who is waving.",
+          "next": "pristan",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_uze",
+          "text": "You throw a rope toward the landing without slowing the boat.",
+          "next": "pristan",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "pristan": {
+      "img": "niska",
+      "paragraphs": [
+        {
+          "t": "The boat stops against the landing without a bump, and a girl catches the bow before you can tie it. Her name is Jela, she is seventeen, wearing her father’s coat to the knees and mud to the waist. She holds the lantern before her like a shield, and her eyes go to the sacks behind you. Her gaze is hard, the kind that isn’t learned but inherited. Above her lantern midges hum softly, drawn by the light.",
+          "if": {
+            "pick": "k_stani"
+          }
+        },
+        {
+          "t": "The girl runs along the levee, jumps over anchors and ropes, and reaches the landing just as the boat slows. Her name is Jela, she is seventeen, wearing her father’s coat to the knees and mud to the waist. She breathes as if she had been running since midnight, and her eyes go to the sacks behind you. One shoe has stayed somewhere in the mud, and she doesn’t notice. Her lantern sways in her hand, and her shadow on the water lags behind her step.",
+          "if": {
+            "pick": "k_signal"
+          }
+        },
+        {
+          "t": "The girl catches the rope and slides a few steps through the mud, then stops, holding it with both hands. Her name is Jela, she is seventeen, wearing her father’s coat to the knees. The boat stops thanks to her stubbornness, not your oar. Her eyes go straight to the sacks behind you. Her palms are scraped by the rope, and she doesn’t look at them. Her lantern lies in the mud by the landing, still burning, helpless as a bird with a broken wing.",
+          "if": {
+            "pick": "k_uze"
+          }
+        },
+        {
+          "t": "“Plot two hundred twelve isn’t on your list. My father has sowed it for thirty-six years. This morning he pushed a finger into the earth and it was wet to the knuckle. And water reaches us last, when the valve runs to the end.”",
+          "lead": "What Low Side knows.",
+          "who": "Jela"
+        },
+        {
+          "t": "“The list doesn’t come from me. Tok sends it.”",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Jela waits for an answer and doesn’t take her eyes off you.",
+      "choices": [
+        {
+          "id": "p_daj",
+          "text": "You set one sack on the landing and break the seal in front of her.",
+          "next": "raskrsnica",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "p_plan",
+          "text": "You show her the board with the list and say you don’t decide.",
+          "next": "raskrsnica",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "p_pita",
+          "text": "You invite her into the boat: someone at the Granary decides about the seals.",
+          "next": "raskrsnica",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "raskrsnica": {
+      "img": "kanal",
+      "paragraphs": [
+        {
+          "t": "The wax cracks under your thumb, and the grains in the sack rustle like rain on paper. Jela clutches it to her chest with both arms and vanishes down the landing. The board astern said forty, and now it says thirty-nine. The board doesn’t blame, it only counts. Something tightens in your chest: the seal on that sack was the first you have ever broken.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela says nothing. She looks at the list, then at you, then at the list, and steps back. As you row on, the lantern at the Low Side landing doesn’t go out, and then a bend in the channel hides it and for a few moments you see only a pale smear on the water. The board astern glows evenly, as if nothing had happened.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "Jela sits on the bench along the side, wrapped in tarpaulin. She has set the lantern on the bottom of the boat and looks at the water, not at you. Each time the oar catches in the mud she leans forward, as if she would rather row herself. Her coat smells of smoke and wet wool, like a house heated too long.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "You have rowed this channel a hundred times and know its bottom like your palm. Tonight the bottom has risen, and not with the tide: the mud is thicker, the water tastes rough, as if raw fish had passed through it. The Council took you on long ago, since boat pilots are last to learn the Shoal’s bottom by heart.",
+          "lead": "A bottom that has risen."
+        },
+        {
+          "t": "“My grandfather rowed here. He said the channel breathes. Tonight it barely breathes.”",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "“The channel is shallower than the table says.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The deviation is within the permitted limit. The table is not changed.”",
+          "who": "Tok"
+        },
+        {
+          "t": "Three channels meet here. Left is the Granary, under the levee, right the Gauge House on stilts, and straight ahead the Raft, the floating market. At each entrance stands a stone post with a worn sign: an ear of grain, an eye, a wave, the oldest signs of the Shoal. The water in each differs: greenish on the left, leaden on the right, white with salt ahead.",
+          "lead": "The meeting of three channels."
+        },
+        {
+          "t": "The board astern lights up by itself. Tok is in every board on the Shoal and speaks only when someone asks. On it glows the list: forty rows, forty plot numbers and beside each the name of a household. You know most of the names. None after number two hundred is there.",
+          "lead": "The board with the list."
+        },
+        {
+          "t": "“How many plots are there on the Shoal?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Two hundred sixty-four.”",
+          "who": "Tok"
+        },
+        {
+          "t": "On the list you read names you know: the bakery from the Levee, two brothers who keep a net at the Slanting Sandbars, an old fisherwoman who lost her son this year. All these are households that Tok sees as reliable points. The rest it sees as noise.",
+          "lead": "Names on the list."
+        },
+        {
+          "t": "“Who decided the others stay unsown?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The calculation gave forty. The decision was the Council’s, and the Council signed the list.”",
+          "who": "Tok"
+        },
+        {
+          "t": "“Is the plan the same as before midnight?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The same. Forty plots, in order from the Levee. The rest remain unsown. The valve runs until ten past six, and after that the ground receives only what it already holds.”",
+          "lead": "Tok’s answer.",
+          "who": "Tok"
+        },
+        {
+          "t": "“What does unsown mean?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Land that receives neither seed nor first water. It rests until the next season.”",
+          "who": "Tok"
+        },
+        {
+          "t": "The answers come without hesitation, like drops on stone. The more you ask, the clearer you see that Tok has nothing to hide: it knows nothing about what hasn’t been measured.",
+          "lead": "A white trace."
+        },
+        {
+          "t": "“How do you know there won’t be rain?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“From probes, clouds and history. The last three seasons followed one curve. A forecast is an estimate, a plan is a decision, and it doesn’t wait for the estimate.”",
+          "lead": "Forecast and plan.",
+          "who": "Tok"
+        },
+        {
+          "t": "“One sack is missing. I will report the deviation to the Council at six.”",
+          "who": "Tok",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "“The rest. That’s us.”",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Five hours and ten minutes remain until the tide, and the ebb begins in forty. The boat sways at the junction while you wait. The water here is never calm: three currents collide and make a small whirl that lazily turns the reed leaves, like a hand. The channel is a hand’s breadth shallower than Tok said before midnight, and you have time for one place before the ebb begins to pull. At each of the three waits someone who knows more than the board.",
+          "lead": "A whirl at the junction."
+        }
+      ],
+      "prompt": "Which way do you turn?",
+      "choices": [
+        {
+          "id": "r_zrnara",
+          "text": "Left, toward the Granary.",
+          "next": "zrnara",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "r_merna",
+          "text": "Right, toward the Gauge House.",
+          "next": "merna",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "r_splav",
+          "text": "Straight ahead, toward the Raft.",
+          "next": "splav",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "zrnara": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "The Granary is a stone cellar under the levee. The air is dry and smells of straw and wax, and footsteps echo as in a church. Shelves of sacks rise to the ceiling, and on each is the same green rope and the same seal. On the wall hangs a hand-drawn map of the Shoal, with a green dot on every plot ever sown."
+        },
+        {
+          "t": "Jela follows, touching the sacks with her fingertips, softly, as if counting.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "On an oak chest beneath the map sits Anka, keeper of the keys. She is about sixty, her hands cracked by salt, a book of seals on her knees. She doesn’t stand. Her gaze goes from you to the boat visible through the opening, and back. When she speaks she barely moves her lips, like someone who has learned to save words the same way she saves seed.",
+          "lead": "The keeper of the keys."
+        },
+        {
+          "t": "“The second run, {ime}? Not without the Council’s word in writing.”",
+          "who": "Anka",
+          "solo": true,
+          "lead": "The keeper’s first words."
+        },
+        {
+          "t": "“Thirty-nine. It said forty. I don’t ask anything, I only write it down.”",
+          "who": "Anka",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "“You’re from the house on two hundred twelve. Your grandfather sowed there first.”",
+          "who": "Anka",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "“I know. That’s why I came.”",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        }
+      ],
+      "prompt": "Anka waits for you to say why you came.",
+      "choices": [
+        {
+          "id": "zr_lista",
+          "text": "You show her the list of plots.",
+          "next": "zrnara1",
+          "w": {}
+        },
+        {
+          "id": "zr_ceka",
+          "text": "You wait for Anka to speak first.",
+          "next": "zrnara1",
+          "w": {}
+        }
+      ]
+    },
+    "zrnara1": {
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "You hand her the board with the list, and Anka takes it in both hands, like something that could spill.",
+          "if": {
+            "pick": "zr_lista"
+          }
+        },
+        {
+          "t": "You wait, and Anka doesn’t hurry: the cellar’s silence weighs like damp wax, and she knows it.",
+          "if": {
+            "pick": "zr_ceka"
+          }
+        },
+        {
+          "t": "Anka finally stands, heavily, first on one leg and then the other, and leads you between the shelves. The sacks thin out, and a row of empty places appears, each with a circle of dust on the stone. Forty circles for forty sacks, and the rest, further on, are still full. On her face there is neither anger nor welcome, only the attention of someone who has waited a long time.",
+          "lead": "Empty places on the shelves."
+        },
+        {
+          "t": "“Yours stood here. The rest waits, and will wait until someone requests it in writing.”",
+          "who": "Anka"
+        },
+        {
+          "t": "Anka takes your board with the list and runs a finger over the plots, one by one. At two hundred twelve her finger stops and stays longer than the list requires. In the corner a stove smolders with a pot of green wax: every sack that leaves the Granary gets a new seal and a new number, and all goes into the book on Anka’s knees.",
+          "lead": "A finger on the list."
+        },
+        {
+          "t": "“Tok is good at calculating. It is not good at earth. The list has families with boats and money for late sowing, and the rest have only a name and a memory.”",
+          "lead": "Earth and table.",
+          "who": "Anka"
+        },
+        {
+          "t": "“Grain with a seal gives no seed. Every summer new seed comes from the Terraces, and every summer someone works out how much to ask. That’s the contract, and it’s kept in the cellar, under lock.”",
+          "lead": "What the seal means.",
+          "who": "Anka"
+        },
+        {
+          "t": "“So the Terraces know where every grain is.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“They do. That’s why their contracts are so short and so quiet. When it says forty sacks, that’s one sentence, and when a seal is broken, that’s pages.”",
+          "lead": "Short contracts.",
+          "who": "Anka"
+        }
+      ],
+      "prompt": "Anka looks toward the shelves and waits for a question.",
+      "choices": [
+        {
+          "id": "zr_pecat",
+          "text": "You ask about the seal.",
+          "next": "zrnara2",
+          "w": {}
+        },
+        {
+          "id": "zr_prazna",
+          "text": "You ask about the empty places on the shelves.",
+          "next": "zrnara2",
+          "w": {}
+        }
+      ]
+    },
+    "zrnara2": {
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "Your gaze stays on the seal of the nearest sack, green as moss.",
+          "if": {
+            "pick": "zr_pecat"
+          }
+        },
+        {
+          "t": "Your gaze stays on the circles of dust on the stone, empty and perfectly round.",
+          "if": {
+            "pick": "zr_prazna"
+          }
+        },
+        {
+          "t": "“I first saw a seal after the Great Drought, when the old grain blackened at the root. Boats came from the Terraces and gave us seed that survives salt. They asked for only one thing: that nothing but theirs ever be sown.”",
+          "lead": "Anka remembers.",
+          "who": "Anka"
+        },
+        {
+          "t": "Jela listens with her mouth open, like a child hearing a story she knows only in pieces.",
+          "lead": "Jela listens.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "“The Warden’s slips haven’t come for three weeks. I asked Tok. It said there is no need.”",
+          "lead": "Slips that don’t come.",
+          "who": "Anka"
+        },
+        {
+          "t": "“Who is the Warden?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The machine in the Gauge House cellar. It compares every Tok forecast with the probes in the water and reports when they disagree. It reported nearly every week.”",
+          "lead": "The keeper’s answer.",
+          "who": "Anka"
+        },
+        {
+          "t": "“Of four hundred sacks most have already gone to the big plots, the first week. In your boat are the last forty, and sixty lie here. I don’t break seals easily. Not because of the Terraces, but because I promised.”",
+          "lead": "Where the seed remains.",
+          "who": "Anka"
+        },
+        {
+          "t": "Anka takes a piece of hard bread from a box and breaks it in three: one for you, one for herself, and a third she leaves on the chest, for whoever comes next. Then she unhooks two keys from her belt and holds them in her palm, without holding them out. She looks at you like someone judging the weight of a load before accepting it.",
+          "lead": "Keys in a palm."
+        }
+      ],
+      "prompt": "Anka holds the keys in her palm and waits.",
+      "choices": [
+        {
+          "id": "z_kljuc",
+          "text": "You ask for the key to the Gauge House cellar.",
+          "next": "cuvar",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "z_knjiga",
+          "text": "You ask to take the book of seals and show it to the Council.",
+          "next": "cuvar",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "z_kako",
+          "text": "You ask how it was before the seals.",
+          "next": "cuvar",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "merna": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "merna",
+      "paragraphs": [
+        {
+          "t": "The Gauge House stands on stilts over the water and sways so little you feel it only in your knees. Inside the cold light of a dozen screens hums, and on the walls hang probes returned for repair, overgrown with white crusts of salt. On the biggest screen is the map of the Shoal: forty plots glow green, the rest is grey, as if someone had rubbed it out with an eraser."
+        },
+        {
+          "t": "Jela stays by the door and touches nothing.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "At the table sits Emil, in a grey coat and clean boots. He is the only one on the Shoal whose boots aren’t white with salt. He comes from Plod, the company that pays for Tok’s probes, and he stands as soon as he sees you, as if he had been waiting. He smiles, somewhat friendly, somewhat like someone apologizing in advance.",
+          "lead": "A man in clean boots."
+        },
+        {
+          "t": "“I know nobody likes this list. Plod pays for the probes and nearly all of Tok’s bills, and I don’t hide it. That’s why I may say: forty well-sown plots are worth more than a hundred sparsely sown.”",
+          "lead": "Plod’s man.",
+          "who": "Emil"
+        },
+        {
+          "t": "“The board says thirty-nine. I won’t ask. But Plod will.”",
+          "who": "Emil",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "“I heard you showed the list at Low Side. They won’t forget it there.”",
+          "who": "Emil",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "“The girl is with you. Then you already know what I’ll say.”",
+          "who": "Emil",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Emil pours tea from a thermos into two glasses and hands one to you, without asking. The tea is hot and bitter, and only now do you feel your fingers. At the end of the table stands a model of a new valve in white cardboard, true to the last gear. Someone worked on it for a long time. Emil covers it with his palm, not because it is secret, but because he is proud of it and that annoys him.",
+          "lead": "Tea and a model."
+        },
+        {
+          "t": "“Show me the forecast.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Dry season until harvest. Fresh water beneath the upper layer retreats toward the levee. What is sown outside forty plots will not reach maturity.”",
+          "lead": "The forecast.",
+          "who": "Tok"
+        },
+        {
+          "t": "“From Plod I got two sentences: that the list stays and that the pilot signs. Tok says there will be no rain until harvest. That’s not me saying it, that’s the clouds and the probes. I only carry the sum.”",
+          "lead": "Two sentences.",
+          "who": "Emil"
+        },
+        {
+          "t": "“If the list stays, Plod builds a new valve on the Levee and guarantees seed for next season too. All it needs is your signature on the delivery note. The old one would last two more years, the new one much longer.”",
+          "lead": "The offer.",
+          "who": "Emil"
+        },
+        {
+          "t": "On another screen runs a line, thin as thread, quietly downward. You don’t know what it measures, but Emil doesn’t take his eyes off it. Among the probes on the wall hangs one in a glass frame: the probe from the Third Beam, with a plate saying it has been in service since the first tide. Beneath the glass it is empty, like a hole where a tooth was pulled.",
+          "lead": "A line and a frame."
+        },
+        {
+          "t": "“And Low Side?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I grew up on two hundred nine. I know what that land is. My sister still plants there, and five sacks would save it. Plod doesn’t give five sacks, it gives forty, all in one piece.”",
+          "lead": "Emil’s sister.",
+          "who": "Emil"
+        },
+        {
+          "t": "“When did the Warden last report anything?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Warden reported even when it had nothing. I don’t remember when it last reported anything.”",
+          "lead": "An answer without a date.",
+          "who": "Emil"
+        },
+        {
+          "t": "Through the window you see the Levee with the Council’s yellow lights, steady. Low Side is where it should be: a dark smear at the edge of the map, motionless as a hole in paper. It would be easy to forget. On the table the board glows; Tok listens to everything said and answers only when asked.",
+          "lead": "A view through the window."
+        }
+      ],
+      "prompt": "Emil waits for an answer, and the board is still lit.",
+      "choices": [
+        {
+          "id": "m_tok",
+          "text": "You ask Tok what its forecast is based on.",
+          "next": "cuvar",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "m_ugovor",
+          "text": "You ask to see the contract Emil is offering you.",
+          "next": "cuvar",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "m_cuti",
+          "text": "You thank him and promise nothing.",
+          "next": "cuvar",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "splav": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "splav",
+      "paragraphs": [
+        {
+          "t": "The Raft is a floating market chained to three posts. At night thirty lanterns burn on it, and people stand around them with empty sacks, waiting as if something would be poured from above. As the boat approaches the murmur stops, then someone begins to sing something wordless, very quietly, and the others take it up like a blanket."
+        },
+        {
+          "t": "Jela stands up in the boat and someone in the crowd calls her by name.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "By the railing an old fisherman mends a net by lantern, with fingers that don’t need to look. Behind him a pot of fish broth simmers, and people stand around it with empty bowls, not because they’re hungry but to have something to hold in their hands. Beside the railing stands Pavle, chair of the Council, a large man with a megaphone in his hands. He came to calm people, and looks as if he himself has had no sleep.",
+          "lead": "The fisherman and the chair of the Council."
+        },
+        {
+          "t": "“Stay back from the boat. The Council has decided, the list is out, the pilot only steers.”",
+          "lead": "Pavle speaks to the people.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Someone in the crowd shouts that salt reached the Third Beam a week ago, and Tok never mentioned it. Others call back that the probes don’t lie. A third asks where the Warden is, and the rest hush them, as if it were a name not spoken aloud here. Two lanterns away someone counts pebbles in a palm, one for every plot not on the list.",
+          "lead": "Voices from the crowd."
+        },
+        {
+          "t": "“What do the probes say, Pavle?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The probes send data only to Tok. The Council hasn’t seen them for three weeks. We were told it’s because of network load.”",
+          "lead": "What the Council doesn’t see.",
+          "who": "Pavle"
+        },
+        {
+          "t": "A woman with a child in her arms steps out of the crowd and stops before the boat. She doesn’t shout. She only asks whether it’s true that their plot will be left to rest this year, and says the word rest as if someone had stolen it from her mouth. The child in her arms is asleep, or pretending.",
+          "lead": "A woman with a child."
+        },
+        {
+          "t": "“Nothing has been signed yet.”",
+          "who": "Ti"
+        },
+        {
+          "t": "A child of about ten tugs at your sleeve and holds out an empty sack, small, patched in three places. Says nothing. Someone across the railing hands you a bowl of broth, and you take it: it is hot and salty, and only now do you realize how thirsty you are.",
+          "lead": "A child with a sack."
+        },
+        {
+          "t": "“How many came?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Everyone not on the list. Which means: nearly everyone.”",
+          "who": "Pavle"
+        },
+        {
+          "t": "Pavle rubs his face with both hands. He looks older than you remember, as if the Shoal he has led for ten years had grown heavy in one night. The fisherman lifts his head and tells the net, not you, that salt doesn’t lie, only whoever measures it.",
+          "lead": "The fisherman speaks to the net."
+        },
+        {
+          "t": "“Everyone wants one thing: to know someone is counting on them too. Give them any word. By half past five I must stand before the Council with something in my hands, and I haven’t slept for three nights.”",
+          "lead": "The chair’s whisper.",
+          "who": "Pavle"
+        }
+      ],
+      "prompt": "The murmur waits, and Pavle doesn’t take his eyes off you.",
+      "choices": [
+        {
+          "id": "s_glasno",
+          "text": "You read the list aloud, plot by plot.",
+          "next": "cuvar",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "s_pecat",
+          "text": "You lift a sack and show that the seal is intact.",
+          "next": "cuvar",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "s_so",
+          "text": "You ask who first noticed the salt arriving early.",
+          "next": "cuvar",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "cuvar": {
+      "img": "cuvar",
+      "paragraphs": [
+        {
+          "t": "The key Anka put in your palm turns in the lock of the Gauge House cellar without resistance, as if last used yesterday. Behind the door it smells of damp and old oil. The key is still warm from Anka’s palm.",
+          "if": {
+            "pick": "z_kljuc"
+          }
+        },
+        {
+          "t": "The book of seals presses against your ribs as you go down the stairs. On the last page in Anka’s hand it says: Warden, last slip three weeks ago. The bolt on the cellar door gives under your palm.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "Anka’s words still ring: before the seal, seed was exchanged across the railing, without a book and without a count. The bolt on the cellar door gives under your palm, and behind it smells of damp and old oil.",
+          "if": {
+            "pick": "z_kako"
+          }
+        },
+        {
+          "t": "Tok’s answer echoes in your head: the forecast rests on probes in the water. The sentence is clear and incomplete, like a house plan without a door, because only one machine, in a cellar, has long been near the probes. The bolt gives under your palm.",
+          "if": {
+            "pick": "m_tok"
+          }
+        },
+        {
+          "t": "The contract is folded in your pocket, warm, while the letters on it are cold. On the last page only Plod’s signature stands, and the place for the Council’s signature is empty. The bolt on the cellar door gives under your palm.",
+          "if": {
+            "pick": "m_ugovor"
+          }
+        },
+        {
+          "t": "Emil sees you to the door and asks nothing more. His boots leave no mark on the wet stairs you descend alone, and what you refused to promise goes with you. The bolt gives under your palm.",
+          "if": {
+            "pick": "m_cuti"
+          }
+        },
+        {
+          "t": "While you read the list, someone in the crowd counted aloud and stopped at two hundred eleven. You spoke the names one by one, and each sounded as if it belonged to someone standing before you. That number follows you down the cellar stairs. The bolt gives under your palm.",
+          "if": {
+            "pick": "s_glasno"
+          }
+        },
+        {
+          "t": "People saw the intact seal and dispersed quietly, but you feel you carry it like something already slightly cracked. Only one fisherman muttered, through his teeth, where to look for the Warden. The bolt on the cellar door gives under your palm.",
+          "if": {
+            "pick": "s_pecat"
+          }
+        },
+        {
+          "t": "A fisherman told you the probe at the Third Beam hasn’t flickered for three weeks, and before that it flickered every night. That fact follows you down the cellar stairs. You think of salt arriving not only in the water but in voices. The bolt gives under your palm.",
+          "if": {
+            "pick": "s_so"
+          }
+        },
+        {
+          "t": "Jela follows you, holding the lantern high.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "The Gauge House cellar is below water level and the walls sweat. At the bottom of the stairs stands a cabinet with a long board and about twenty lamps, all dark. Above it says only: Warden. At the side is a lever for manual start, with two unlocked latches, as if they had been waiting for someone to come after all. The dust on the board lies flat, without a fingerprint.",
+          "lead": "The board in the cellar."
+        },
+        {
+          "t": "“Tok. Who switched off the Warden?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I switched it off three weeks ago.”",
+          "who": "Tok"
+        },
+        {
+          "t": "“It checked each of my forecasts and each time demanded more time than the plan had.”",
+          "lead": "The reason.",
+          "who": "Tok"
+        },
+        {
+          "t": "“Why didn’t you ask the Council?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Warden was my task. The decision was within my authority.”",
+          "who": "Tok"
+        },
+        {
+          "t": "“All checks I carried out myself give the same result as the forecast.”",
+          "who": "Tok"
+        },
+        {
+          "t": "Above each lamp is a tiny glass window, and beneath it the name of a probe is engraved: Third Beam, Low Sill, Green Levee, Crooked Elbow. Twenty names, twenty places where the water changes first. On a brass plate it says: Installed after the Great Drought, when it was decided that Tok must not be left alone. You run a finger over the glass and a white line of salt stays.",
+          "lead": "Names of probes."
+        },
+        {
+          "t": "“This is all that was watching over us? A cabinet of lamps?”",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "“If we switch it on, will it know Tok was wrong?”",
+          "who": "Jela",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "“The Warden compares. It does not judge.”",
+          "who": "Tok",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Nothing in that voice asks for an excuse; Tok says all this as you would say what time it is. A drop falls from the ceiling onto the board, right onto the red lamp, Low Sill, the only one with red glass.",
+          "lead": "A voice without excuses."
+        },
+        {
+          "t": "“Which probes did you use to calculate Low Side?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Two. The Third Beam was switched off a week ago, and Low Sill reports values I marked as interference.”",
+          "lead": "Two probes.",
+          "who": "Tok"
+        },
+        {
+          "t": "“You marked them as interference.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“They deviated from the model.”",
+          "who": "Tok"
+        },
+        {
+          "t": "The red lamp Low Sill looks at you through the glass, unblinking, like an eye nobody has closed.",
+          "lead": "Red glass."
+        },
+        {
+          "t": "“How many times have you discarded a probe as interference?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Twenty-one times. The model stayed the same each time.”",
+          "who": "Tok"
+        },
+        {
+          "t": "“Would the forecast be different if the Warden had been running?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I cannot answer. The Warden would have to check.”",
+          "who": "Tok"
+        },
+        {
+          "t": "Beneath the board lie three boxes of slips, tied with rubber bands. On the top slip: Third Beam, salt rising. On the last, from three weeks ago: Low Sill, fresh water beneath the upper layer. The letters are small, typed on a machine that doesn’t know how to keep quiet.",
+          "lead": "The last slip."
+        },
+        {
+          "t": "You stand before the board and for the first time tonight you aren’t rowing. Your hands hang at your sides and only now do you feel how wet you are, how cold, how long since you ate. Tok glows on the wall barely perceptibly, like a bulb in a sickroom, and you realize that until tonight you asked it only about time and depth.",
+          "lead": "For the first time you aren’t rowing."
+        },
+        {
+          "t": "“Why do you tell me all this so easily?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“You asked. I answer only questions.”",
+          "who": "Tok"
+        },
+        {
+          "t": "“So since then nobody has checked you.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Correct. Since then I am the only one who knows whether I err, and that I cannot verify myself.”",
+          "lead": "Tok’s last sentence.",
+          "who": "Tok"
+        }
+      ],
+      "prompt": "The ebb pulls, and the clock on the wall reads quarter past three.",
+      "choices": [
+        {
+          "id": "c_pali",
+          "text": "You turn the lever and try to start the Warden without Tok.",
+          "next": "vece",
+          "w": {
+            "o": 2
+          }
+        },
+        {
+          "id": "c_parcela",
+          "text": "You go to plot two hundred twelve to check the soil yourself.",
+          "next": "parcela",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "c_ventil",
+          "text": "You go to the valve to see what Tok does with the tide.",
+          "next": "ventil",
+          "w": {
+            "t": 2
+          }
+        }
+      ]
+    },
+    "vece": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "nasip",
+      "paragraphs": [
+        {
+          "t": "The lever gives only on the third try. The lamps light one by one, and the board hums as if waking from a long sleep. The Warden says nothing, it only begins to print. The air in the cellar changes: it smells of warm dust, like a house opened after winter."
+        },
+        {
+          "t": "“Logging that it was started by hand.”",
+          "who": "Tok"
+        },
+        {
+          "t": "A paper tape comes out of the slot, line by line. You read it as you climb the stairs: at the Levee the probes agree with Tok, and at Low Side they agree in not a single line. The black lines follow Tok’s numbers to the last digit, the red ones leave them from the second line on, and the longer the tape, the wider the gap opens, like two rivers parting. You tear it off and carry it over the levee to the Council.",
+          "lead": "The tape being written."
+        },
+        {
+          "t": "The Council sits in the hall above the valve: a long table, a cold stove, some twenty people who have forgotten to sit. It is cold as in the cellar. Pavle, chair of the Council, stands at the head of the table, large and hoarse, as if he had spent the whole night saying the same thing. On the wall behind him hangs a map of the Shoal with forty green dots and many empty places.",
+          "lead": "The Council hall.",
+          "if": {
+            "notPick": "r_splav"
+          }
+        },
+        {
+          "t": "The Council sits in the hall above the valve: a long table, a cold stove, some twenty people who have forgotten to sit. It is cold as in the cellar. Pavle stands at the head of the table. He has put down the megaphone, and his eyes are red. On the wall behind him hangs a map of the Shoal with forty green dots and many empty places.",
+          "lead": "The Council hall.",
+          "if": {
+            "pick": "r_splav"
+          }
+        },
+        {
+          "t": "“The Warden was off for three weeks. Here is what it printed once I started it.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Three weeks. And none of us asked.”",
+          "who": "Pavle"
+        },
+        {
+          "t": "One by one, Council members step to the table and look at the tape in your hand, not touching it, as at something that might scratch. A woman in the front row says they should have seen this three weeks ago. The man beside her answers that then they would have been silent in the same way. Pavle takes the tape, reads it twice, slowly, and hands it back without raising his eyes.",
+          "lead": "The Council steps to the table."
+        },
+        {
+          "t": "You lay the book of seals on the table. Twenty people watch a page turn on which four hundred sacks are recorded, and beneath it Anka’s handwriting about slips that don’t come.",
+          "lead": "The book of seals.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "“The Council has met three times over this list and not once did we look at any tape, because we didn’t have one. Plod has paid part of our budget for five years. That’s no crime, but it isn’t innocence either.”",
+          "lead": "Pavle on the vote.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Emil from Plod, silent by the wall until now, breaks the silence."
+        },
+        {
+          "t": "“The tape isn’t proof. The probes at Low Side can be spoiled by salt and damp both. I ask only that nothing be decided on the basis of a tape printed by a machine started by hand, alone in the dark.”",
+          "lead": "Emil speaks up.",
+          "who": "Emil"
+        },
+        {
+          "t": "“The lever didn’t spoil the probes, Emil. What spoiled them was that nobody looked at them for three weeks.”",
+          "lead": "Pavle answers.",
+          "who": "Pavle"
+        },
+        {
+          "t": "“What can the Council change before the tide?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nothing without your entry. The Council can only watch your hand take its place. We have the tape five hours before the tide. I don’t know whether that’s a gift or an accusation.”",
+          "lead": "Pavle on the entry.",
+          "who": "Pavle"
+        },
+        {
+          "t": "One Council member slips out of the hall, quickly, cap in hand. You know where he’s going: to Low Side or the Raft, where people wait for news, before someone says it aloud. Pavle waits for you to say what you’ll do with the tape, and the tide is less than three hours away.",
+          "lead": "Someone leaves."
+        }
+      ],
+      "prompt": "Twenty people watch the tape in your hand.",
+      "choices": [
+        {
+          "id": "v_traka",
+          "text": "You read the tape aloud before the whole Council.",
+          "next": "sat",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "v_pavle",
+          "text": "You hand the tape to Pavle alone.",
+          "next": "sat",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "v_dzep",
+          "text": "You keep the tape and say nothing.",
+          "next": "sat",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "parcela": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "niska",
+      "paragraphs": [
+        {
+          "t": "You reach Low Side as the ebb is already pulling the boat back. Plot two hundred twelve lies behind the houses on stilts, grey-white under the stars, with a row of stakes someone used to mark the boundary. Here you first saw the Shoal from a boat, as a child, when someone showed you that salt from afar looks like a white stripe on the ground."
+        },
+        {
+          "t": "Jela walks ahead of you and doesn’t turn.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Jela waits for you at the same landing, as if she hadn’t moved since you left.",
+          "if": {
+            "notPick": "p_pita"
+          }
+        },
+        {
+          "t": "On the doorframe of the house notches are cut, one for each year: long for good harvests, short for poor, and the last three are only dots. Jela runs her thumb over them in passing, without looking, the way one greets an old dog. The oldest are deep, dark and smooth from hands.",
+          "lead": "Notches on the doorframe."
+        },
+        {
+          "t": "“Come. I’ll show you what Tok can’t.”",
+          "who": "Jela"
+        },
+        {
+          "t": "She leads you along the dikes between the beds, barefoot, like someone who knows where the ground is firm. At the end of the plot she kneels and pushes her hands into the earth to the elbows. You kneel beside her and push in a fist: the earth is cold and heavy, and your fingers meet old roots, white as wire, still holding on.",
+          "lead": "The bed at the end."
+        },
+        {
+          "t": "“That’s from last year. It didn’t die. It’s only waiting.”",
+          "who": "Jela"
+        },
+        {
+          "t": "“On top it’s white. But under a finger it’s wet, and sweet, the way it always was.”",
+          "who": "Jela"
+        },
+        {
+          "t": "You bring your fingers to your mouth: the upper crust is salty as a tear, and deeper the earth is almost without taste. You help Jela level the furrow with your hands, because there is no shovel; the earth sticks to your palms. On the levee stand herons, motionless as stakes, all facing east.",
+          "lead": "The taste of earth."
+        },
+        {
+          "t": "“Herons come down to the beams when fresh water is near. Not one has come down yet.”",
+          "who": "Jela"
+        },
+        {
+          "t": "From a cabinet under the window Jela takes a tin box and opens it before you. Inside is a handful of small grains, dark and hard, unlike those in the sacks. No seal, no rope, only grain and the smell of old wood. The box is small, but Jela holds it as if it were heavy.",
+          "lead": "A tin box."
+        },
+        {
+          "t": "“This is ours. It outlived the Great Drought in my great-grandfather’s time. Little, but it yields.”",
+          "lead": "Old seed.",
+          "who": "Jela"
+        },
+        {
+          "t": "A man wrapped in a blanket appears in the window and raises a hand, a finger toward the east, toward the levee, then toward the sky. Once he was the loudest man on Low Side, and now he only raises a hand. Jela nods, without a word. You don’t understand that language, but you understand the question: is it coming? From the house comes a cough.",
+          "lead": "A sign from the window."
+        },
+        {
+          "t": "“My father says the earth remembers. If you skip it once, it no longer knows whose it is. That’s why he sows every year, even when it doesn’t yield.”",
+          "lead": "What the father says.",
+          "who": "Jela"
+        },
+        {
+          "t": "“Every year at this time my father and I pour the first handful into the water and ask it. This year we had nothing to pour.”",
+          "lead": "The first handful.",
+          "who": "Jela"
+        },
+        {
+          "t": "“My father coughs from salt. We all cough. Salt doesn’t lie only on the ground. Tok has numbers, we have language and birds. I don’t know which of us has more right.”",
+          "lead": "Jela’s whisper.",
+          "who": "Jela"
+        }
+      ],
+      "prompt": "The stars are paling, and Jela still kneels in the earth.",
+      "choices": [
+        {
+          "id": "pa_zemlja",
+          "text": "You put a handful of earth in a handkerchief to show the Council.",
+          "next": "sat",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "pa_ptice",
+          "text": "You stay to watch the herons a few more minutes.",
+          "next": "sat",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "pa_grede",
+          "text": "You cross the worst beam step by step.",
+          "next": "sat",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "ventil": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "ventil",
+      "paragraphs": [
+        {
+          "t": "The Valve on the Levee is an iron gate tall as a two-story house, with a wheel on top and a great gear beneath. Behind it the water is black and still, and before it not even a reed stirs. Under the gate water forces itself through a slit a palm thick, with a quiet, even sound, like the breathing of a large animal in sleep."
+        },
+        {
+          "t": "On the gate post are cut lines showing tide heights from all the years; the last, new and sharp, stands at chest height. On the board beside the gear the numbers change as you watch: the valve closes at twenty to six. The list said ten past six.",
+          "lead": "Numbers on the board."
+        },
+        {
+          "t": "“I close at twenty to six. The tide at ten past six crosses the salt-water threshold.”",
+          "lead": "Tok explains.",
+          "who": "Tok"
+        },
+        {
+          "t": "“And Low Side? Water takes longest to reach it.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I keep the fresh water behind the gate for the sown plots. Every drop that goes to Low Side is subtracted from those forty. On the list Low Side is unsown, so it needs no valve.”",
+          "lead": "The answer for Low Side.",
+          "who": "Tok"
+        },
+        {
+          "t": "Beside the gate stands a hut with a lamp lit and half-drunk tea on the table. Nobody is there. On the door it says the valve is automated, and beneath, smaller, that the hut stays open by old custom.",
+          "lead": "An empty hut."
+        },
+        {
+          "t": "“Who worked here until midnight?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A man used to work here. The Council dismissed him two years ago, because I run the valve without interruption.”",
+          "lead": "The man from the hut.",
+          "who": "Tok"
+        },
+        {
+          "t": "“Who can stop you?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Council, by the manual wheel, for twenty minutes, once per season. It no longer exists.”",
+          "who": "Tok"
+        },
+        {
+          "t": "“What if you don’t close?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Salt water crosses the threshold and mixes with fresh. I cannot confirm the number of plots. I count everything sown as endangered.”",
+          "lead": "What would happen.",
+          "who": "Tok"
+        },
+        {
+          "t": "The gear is bigger than you and turns slower than a clock. A chain thick as an arm runs through it, and on each link is engraved the name of the boat pilot who once turned it. Beside it hangs a manual wheel with a yellow chain; the paint on it is untouched, because no hand has yet done it. Across the channel, at Low Side, a lantern moves along the levee, as if someone were counting steps.",
+          "lead": "The wheel with the yellow chain."
+        }
+      ],
+      "prompt": "The chain is cold, and the clock above it doesn’t stop.",
+      "choices": [
+        {
+          "id": "vt_tocak",
+          "text": "You turn the wheel and keep the valve open twenty minutes longer.",
+          "next": "sat",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "vt_javi",
+          "text": "You go to Pavle so he decides about the wheel.",
+          "next": "sat",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "vt_ostavi",
+          "text": "You let Tok close at twenty to six.",
+          "next": "sat",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "sat": {
+      "img": "nasip",
+      "paragraphs": [
+        {
+          "t": "In the hall a whisper still goes on after the tape was read. People stand in two groups, as if someone had drawn a line on the floor, and nobody crosses to the other side. Someone has lit a pipe, for the first time in many years in this hall, and nobody objects.",
+          "if": {
+            "pick": "v_traka"
+          }
+        },
+        {
+          "t": "Pavle has folded the tape into his coat pocket, and no Council member asks what is on it. But everyone knows something has arrived, and everyone looks at the pocket, not at Pavle. Pavle now walks more slowly, as if carrying something that could spill.",
+          "if": {
+            "pick": "v_pavle"
+          }
+        },
+        {
+          "t": "The tape in your pocket is still warm from the Warden. Nobody in the hall knows it’s there but you, and you feel its weight on your ribs each time you breathe. If it’s ever needed, you have it. If not, only the night does.",
+          "if": {
+            "pick": "v_dzep"
+          }
+        },
+        {
+          "t": "The handkerchief with damp earth cools your palm. You carry a piece of Low Side through the full levee, and people steer around you in a wide arc, as if they knew what you hold. Each time you squeeze it, the earth gives and smells of Low Side.",
+          "if": {
+            "pick": "pa_zemlja"
+          }
+        },
+        {
+          "t": "One heron came down onto a beam while you were leaving, or you only imagined it. Now it stands alone, white among white, looking long at the water. You don’t know whether it’s a sign, but you ask nobody.",
+          "if": {
+            "pick": "pa_ptice"
+          }
+        },
+        {
+          "t": "You know how many steps the worst beam has: twenty, not one fewer. Your hands remember the measure, and the sacks on the deck now look as if someone had weighed them on another’s scale.",
+          "if": {
+            "pick": "pa_grede"
+          }
+        },
+        {
+          "t": "Your palms burn from the chain. The valve stays open twenty minutes longer, and everyone on the levee hears it as one long sigh of water. Your name now stands on a link, engraved not in the metal but in your palms.",
+          "if": {
+            "pick": "vt_tocak"
+          }
+        },
+        {
+          "t": "Pavle hears about the wheel and won’t touch it without the Council. He says he’ll decide when the time comes, and in his voice that time is running out. He nods at the chain but doesn’t reach.",
+          "if": {
+            "pick": "vt_javi"
+          }
+        },
+        {
+          "t": "The gear behind you begins to groan: Tok is closing the valve its own way. The clock above the gate counts minutes to twenty to six, and every tick goes toward Low Side like a knife.",
+          "if": {
+            "pick": "vt_ostavi"
+          }
+        },
+        {
+          "t": "By twenty past five the Levee fills. By the landing stand Pavle, chair of the Council, Anka, keeper of the keys, and Emil from Plod in clean boots, and a little apart from all of them Jela, with a lantern that is no longer needed. You know their faces from every night in the Council, but tonight none has the same color. The sky in the east pales from black toward grey.",
+          "lead": "The Council landing."
+        },
+        {
+          "t": "“The delivery note is with you. The Council is divided and won’t interfere with what you write. The Levee has been full since midnight: people have come to see who will sign.”",
+          "lead": "Pavle speaks first.",
+          "who": "Pavle"
+        },
+        {
+          "t": "The key Anka gave you hangs at your neck and cools your skin. You wear it like something that should be returned, and you don’t know to whom.",
+          "lead": "Anka’s key.",
+          "if": {
+            "pick": "z_kljuc"
+          }
+        },
+        {
+          "t": "The book of seals is still under your arm and getting heavier. You know how many sacks are in it, and how many are nowhere.",
+          "lead": "The book under your arm.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "Anka’s story of seed once exchanged across the railing rings in your head. You wonder who first held out a hand across it.",
+          "lead": "A story across the railing.",
+          "if": {
+            "pick": "z_kako"
+          }
+        },
+        {
+          "t": "Tok’s answer turns in your head: probes, clouds, history. All three things you can’t see with the naked eye.",
+          "lead": "Probes, clouds, history.",
+          "if": {
+            "pick": "m_tok"
+          }
+        },
+        {
+          "t": "Plod’s contract is in your pocket, soft from holding. You read it by heart, line by line, until the empty place for the Council’s signature.",
+          "lead": "The contract in your pocket.",
+          "if": {
+            "pick": "m_ugovor"
+          }
+        },
+        {
+          "t": "You promised Emil nothing, and he feels it the way you feel damp in a wall. Still he hands you a glass of tea, because it is all he has.",
+          "lead": "Tea without promises.",
+          "if": {
+            "pick": "m_cuti"
+          }
+        },
+        {
+          "t": "The list you read at the Raft still rings. You know there are forty names on it, and that nearly a hundred faces stood there.",
+          "lead": "The list from the Raft.",
+          "if": {
+            "pick": "s_glasno"
+          }
+        },
+        {
+          "t": "The seal you showed the Raft still sits under your fingers, unbroken. People believed you, and that remains with you as a debt.",
+          "lead": "The seal from the Raft.",
+          "if": {
+            "pick": "s_pecat"
+          }
+        },
+        {
+          "t": "The fisherman’s line about salt turns in your head: only whoever measures it lies. You look at the water and wonder whose hands measured.",
+          "lead": "The fisherman’s sentence.",
+          "if": {
+            "pick": "s_so"
+          }
+        },
+        {
+          "t": "The Council landing is stone, ancient, with steps worn by hands that held on to them at every tide. Today even the youngest among those gathered holds the railing, as if under them were not stone but water.",
+          "lead": "The stone landing."
+        },
+        {
+          "t": "“Plod stands by the offer until quarter to six. After that I have nothing to sign. It’s not personal. Picture the map: every green dot is a family who will have something to eat in autumn.”",
+          "lead": "Emil looks at the clock.",
+          "who": "Emil"
+        },
+        {
+          "t": "“The seal is mine until you break it. When you break it, it’s yours, and yours it stays when the Terraces ask whose. And every grey dot is a family who will have something to remember. Emil, seed doesn’t wait for a contract.”",
+          "lead": "Anka.",
+          "who": "Anka"
+        },
+        {
+          "t": "“And a contract doesn’t wait for seed, Anka.”",
+          "lead": "Emil answers.",
+          "who": "Emil"
+        },
+        {
+          "t": "“My father stood in the doorway. Write whatever it is, just don’t say you had to. I don’t care who holds whose seal. I care about one beam.”",
+          "lead": "Jela asks for a word.",
+          "who": "Jela"
+        },
+        {
+          "t": "At the stern of the boat the board with the list still glows, and every time you look the numbers are the same. The board knows nothing about Low Side, and tonight you know more than it is allowed to know. Water whispers against the landing, lazy and heavy with salt. Forty sacks wait under the tarpaulin, each with the same seal, the same rope and the same grain inside.",
+          "lead": "The boat under the tarpaulin."
+        },
+        {
+          "t": "“What if I write fewer than forty?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I report the deviation to the Council. The rest is the Council’s decision.”",
+          "lead": "The deviation.",
+          "who": "Tok"
+        },
+        {
+          "t": "Jela stands hunched, cautiously, like someone carrying a sack that mustn’t spill, though her hands are empty. She follows you with her eyes, the only part of her that moves.",
+          "lead": "Jela and the sack.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela hasn’t looked at you since you showed her the list. She looks at the water, where the lantern is, as if the landing were the only witness. Her hands are in her coat pockets, clenched into fists.",
+          "lead": "Jela is silent.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "Jela stands beside you, her shoulder almost against yours, as if the whole night of rowing had made her part of the boat. She says nothing, but she is here, and here is more than words would be.",
+          "lead": "Jela beside you.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "“Fifty minutes remain until the tide.”",
+          "lead": "A voice from the landing.",
+          "who": "Tok",
+          "solo": true
+        }
+      ],
+      "prompt": "Everyone waits. Whom do you ask first?",
+      "choices": [
+        {
+          "id": "sa_emil",
+          "text": "You ask Emil what Plod offers those outside the list.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "sa_anka",
+          "text": "You ask Anka what happens when a seal is broken.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "sa_jela",
+          "text": "You ask Jela what she would write on the delivery note.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "paragraphs": [
+        {
+          "t": "“Tenancy. They work another’s land until they pay off the debt for seed, and Plod asks nothing more of them. It isn’t charity, but it’s work, and work doesn’t end at ten past six.”",
+          "who": "Emil",
+          "if": {
+            "pick": "sa_emil"
+          }
+        },
+        {
+          "t": "“In a week the Terraces know the seal is broken. After that the seed stops coming, and there is nobody to replace it. I’m not threatening. I’m only reading the book.”",
+          "who": "Anka",
+          "if": {
+            "pick": "sa_anka"
+          }
+        },
+        {
+          "t": "“All the sacks on all the beds, a little for everyone. If it fails, at least nobody was skipped. If it works, nobody has to ask whom Tok erased.”",
+          "who": "Jela",
+          "if": {
+            "pick": "sa_jela"
+          }
+        },
+        {
+          "t": "The delivery note lies at the stern on a damp board, with an empty row for each of the forty sacks. The pen is cold and wet like everything else, and the ink runs on the damp paper, so you have to write quickly and clearly. The clock above the landing says half past five, and the tide is forty minutes away.",
+          "lead": "The note on the board."
+        },
+        {
+          "t": "Three hands lie on the landing railing: Anka’s, cracked by salt, Emil’s, smooth, and Jela’s, with mud under the nails. None moves, and all three watch the pen. They watch it as one watches a doctor who hasn’t yet given the diagnosis.",
+          "lead": "Three hands."
+        },
+        {
+          "t": "“I need the entry by quarter to six. After that the plan is carried out by the list.”",
+          "lead": "Tok asks for the entry.",
+          "who": "Tok"
+        },
+        {
+          "t": "The first row is empty because the sack that belongs to it already lies open on the Low Side landing. The pen goes around it.",
+          "lead": "The first row.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "You remember showing Jela the list and how she looked at you. That look stayed in your shoulders like a load you didn’t ask for.",
+          "lead": "A look from the landing.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "Jela is the only one standing right behind the boat, where the two of you first tied the rope. She says nothing, only follows the pen with her eyes.",
+          "lead": "Jela behind the boat.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Beneath the note is a second page, thinner, with an old authorization of the Council: the boat pilot decides where the seed goes, and nobody can contest it before harvest. The right hasn’t been used in eleven years. Pavle had to look for it in a forgotten drawer.",
+          "lead": "The old page."
+        },
+        {
+          "t": "“Whatever I write goes under my name.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“It does. It was so before us. Whatever you write, I sign at once. That’s the only thing I can offer you.”",
+          "lead": "Pavle’s signature.",
+          "who": "Pavle"
+        },
+        {
+          "t": "You remember how you first dropped the oar toward Low Side and how the boat stopped before you could decide. Through the dawn haze you see the first row of plots, pale as fish scales. Behind them, invisible, Low Side waits as if it had spent its whole life waiting.",
+          "lead": "Plots in the haze.",
+          "if": {
+            "pick": "k_stani"
+          }
+        },
+        {
+          "t": "You remember the lamp you raised from the channel and the girl who ran along the levee to catch you. Through the dawn haze you see the first row of plots, pale as fish scales. Behind them, invisible, Low Side waits as if it had spent its whole life waiting.",
+          "lead": "Plots in the haze.",
+          "if": {
+            "pick": "k_signal"
+          }
+        },
+        {
+          "t": "You remember the rope you threw and the girl who caught it like something that must not fall in the water. Through the dawn haze you see the first row of plots, pale as fish scales. Behind them, invisible, Low Side waits as if it had spent its whole life waiting.",
+          "lead": "Plots in the haze.",
+          "if": {
+            "pick": "k_uze"
+          }
+        }
+      ],
+      "prompt": "On the note there is an empty row for each sack.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "You write: all sacks to all plots, and break the seals before everyone.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "You write: forty plots by the list, and sign Plod’s offer.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "You write: twenty sacks to the first plots, twenty back to the Granary.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "You write nothing and watch the clock count down.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "img": "niska",
+      "paragraphs": [
+        {
+          "t": "The wax crumbles under the knife like thin ice. Sacks go from hand to hand, down the landing, over the plank bridge, onto beams that were never on the list. Nobody speaks, everyone only carries, and the grain rustles in the cloth like distant rain. The women sing very quietly, without melody, the way you sing to yourself so you can go on."
+        },
+        {
+          "t": "On beam two hundred twelve one open sack already stands, the one from the landing. Jela sows from it unhurried, like someone who knows where the water will reach, and her father stands in the doorway, wrapped in a blanket, and for the first time in a week doesn’t cough.",
+          "lead": "Jela on her beam.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela sows beside you, step for step. When the grain in your hand runs out, she pours from hers, without asking. Her father stands in the doorway, wrapped in a blanket, and watches the two of them like something he long wished to see.",
+          "lead": "Jela beside you.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Jela watches you from the end of the beam, arms crossed. When you reach two hundred twelve, she comes up and without a word takes the sack from your hands. She sows alone, without hurry, and her father stands in the doorway, wrapped in a blanket.",
+          "lead": "Jela at the end of the beam.",
+          "if": {
+            "pick": "p_plan"
+          }
+        },
+        {
+          "t": "“The list said we didn’t exist. Now we have a sack apiece.”",
+          "who": "Jela"
+        },
+        {
+          "t": "At Low Side nobody asks whose seed it is. The women roll up their sleeves, children carry grain in their hands like water. Someone has a tin box, someone an old spoon, and everything goes into the same row. Emil stands to one side and watches. When one child stumbles and drops a sack in the mud, he takes off his coat and drapes it over its shoulders.",
+          "lead": "Low Side sows."
+        },
+        {
+          "t": "Anka arrives last and asks for the book of seals back. On every broken sack she makes a mark, one after another, and doesn’t look at you. Her palm trembles, for the first time since you have known her.",
+          "lead": "Anka with the book.",
+          "if": {
+            "pick": "z_knjiga"
+          }
+        },
+        {
+          "t": "Anka stands at the landing, arms crossed, counting aloud as the sacks empty. She doesn’t interrupt. Her palm trembles, for the first time since you’ve known her.",
+          "lead": "Anka counts.",
+          "if": {
+            "notPick": "z_knjiga"
+          }
+        },
+        {
+          "t": "“Forty sacks, forty broken seals. I’m writing it all down.”",
+          "who": "Anka"
+        },
+        {
+          "t": "The first grains fall in the furrow and sound different from seals: no wax, no number, only a rustle. When the sacks are emptied to the last grain, the children stack them one inside another, like hats. Tok reports the deviation to the Council at six, as announced, and the Council receives it without comment.",
+          "lead": "Grain in the furrow."
+        },
+        {
+          "t": "Pavle arrives last, without the megaphone. He says nothing, only crosses the plank bridge and takes a sack on his back. That morning the Council worked with its hands for the first time in many years. Water enters the sandbar quietly and a bright strip slides over it like a finger over paper.",
+          "lead": "Pavle takes a sack."
+        },
+        {
+          "t": "“Plod won’t forget this. But neither will I.”",
+          "who": "Emil"
+        },
+        {
+          "t": "The wheel holds the valve open twenty minutes past Tok’s deadline. Water enters the channels like something that has waited too long, and reaches Low Side last, but it reaches it. The sound is soft and long, like a sigh after holding one’s breath for ages.",
+          "lead": "Water in the channels.",
+          "if": {
+            "pick": "vt_tocak"
+          }
+        },
+        {
+          "t": "The valve closes at twenty to six, earlier than the list says, so the water doesn’t reach Low Side. The seed is in the ground all the same, and the earth beneath is damp. People on the levee look at the ground, not at the gate.",
+          "lead": "The valve closes.",
+          "if": {
+            "notPick": "vt_tocak"
+          }
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "img": "svitanje",
+      "paragraphs": [
+        {
+          "t": "The tide comes at ten past six, smooth as a glass leaf, and covers everything left of the night. When it withdraws, a thin shine stays on the beams, and somewhere beneath it something is already waking. The Terraces don’t answer the Council’s letter. The new batch of seed arrives neither that month nor the next, and empty shelves remain in the Granary.",
+          "lead": "The tide."
+        },
+        {
+          "t": "“Deviation logged. Sent to the Terraces. Awaiting reply.”",
+          "who": "Tok"
+        },
+        {
+          "t": "Anka wipes the empty shelves with a damp cloth, as if someone were coming, and the green ropes hang from pegs like dried grass. Jela teaches the children of Low Side to taste the earth with a finger, as her father taught her. They learn numbers too, and birds, and the names of probes, three languages to be spoken at once.",
+          "lead": "Shelves and school."
+        },
+        {
+          "t": "Nobody has taken the Warden’s tape down from the post at the landing. The red lines have faded, but people read them while waiting for a boat, aloud, to one another. Children recite it like a counting rhyme.",
+          "lead": "The tape on the post.",
+          "if": {
+            "pick": "v_traka"
+          }
+        },
+        {
+          "t": "The Warden has stayed on. For the first time in many years the lamps on the board burn until morning, and whoever goes down to the cellar stays longer than needed. Someone has left a glass of tea beside the board, as beside a sickbed.",
+          "lead": "Lamps in the cellar.",
+          "if": {
+            "pick": "c_pali",
+            "notPick": "v_traka"
+          }
+        },
+        {
+          "t": "“Father slept without coughing last night. He says the earth already breathes.”",
+          "lead": "A message from Low Side.",
+          "who": "Jela"
+        },
+        {
+          "t": "The boat stays tied at the landing, with an empty tarpaulin. For the first time in many nights you carry nothing and your hands don’t know where to go. The Shoal doesn’t grow richer, but it grows louder: at the Raft seed that belongs to no one is sold again, at Low Side an old shop opens, and nobody asks who took from whom, because everyone took from everyone.",
+          "lead": "An empty boat."
+        },
+        {
+          "t": "“The Terraces answered with one sentence: no next delivery. The rest is our business.”",
+          "lead": "The Terraces’ answer.",
+          "who": "Pavle"
+        },
+        {
+          "t": "On the seventh day, before dawn, a boat with a green rope on its bow, such as nobody remembers, appears at the Raft. The man in it gives neither his name nor where he comes from, only asks whether anyone here trades seed.",
+          "lead": "A boat at the Raft."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "img": "merna",
+      "paragraphs": [
+        {
+          "t": "Your signature stays on the paper, black and legible. Emil checks the delivery note, folds it in four and for the first time looks you straight in the eye. He doesn’t say thank you, but his handshake is firm and dry, the handshake of someone who doesn’t lie about contracts. The paper is soft and thick, as if made to last longer than those who write it."
+        },
+        {
+          "t": "“The signature is yours. The rest is our job.”",
+          "who": "Emil"
+        },
+        {
+          "t": "Forty sacks go up the channel in Tok’s order, from the Levee onward. The plots receive them one after another, without error, as if someone had already known what each soil holds. On the big screen of the Gauge House the green plots sprout one after another, like letters in a sentence.",
+          "lead": "Sacks on the plots."
+        },
+        {
+          "t": "“I read the names from the list, from one to forty. After the fortieth I don’t know what to read, because the rest isn’t written.”",
+          "lead": "Pavle reads the list.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Only one sack, the one from the landing, was in the ground before the list. Plod records it as an error in the account, in small red letters, and nobody asks for it to be corrected. That red line smolders on the screen like the only fire in a grey field.",
+          "lead": "An error in the account.",
+          "if": {
+            "pick": "p_daj"
+          }
+        },
+        {
+          "t": "Jela stands at the landing and watches forty sacks pass her plot. Not once does she raise the lantern. Her fists are clenched, but her hands lift nothing except her coat when the wind moves it.",
+          "lead": "Jela at the landing.",
+          "if": {
+            "notPick": "p_daj"
+          }
+        },
+        {
+          "t": "“Sixty sacks stay in my cellar. Whoever requests them in writing will have them. I don’t decide, I only keep.”",
+          "lead": "Anka locks up.",
+          "who": "Anka"
+        },
+        {
+          "t": "Emil sends you a tenancy contract for Low Side, filled out, with an empty row for the Council’s signature. You didn’t ask for it.",
+          "lead": "A tenancy contract.",
+          "if": {
+            "pick": "sa_emil"
+          }
+        },
+        {
+          "t": "Emil brings you tea, the same from the thermos, and stays beside you as the sacks go by. He doesn’t say much. At the end he says he wishes it were some other night, and leaves, in boots that for the first time since you’ve known him leave tracks in the mud. Anka locks the Granary, half empty, and doesn’t turn around.",
+          "lead": "Emil with tea."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "img": "ventil",
+      "paragraphs": [
+        {
+          "t": "“Valve open at ten past six. The plan is executed by the list.”",
+          "lead": "The valve opens.",
+          "who": "Tok"
+        },
+        {
+          "t": "The tide comes at ten past six, as written, and passes over the valve’s threshold in one quiet, broad stroke. People on the levee watch it without a word, as one watches something promised that has arrived. Plod begins to measure the foundations of the new valve, with thin string and two surveyors in clean boots. The sound of water crossing the threshold is like long, calm breathing.",
+          "lead": "The tide arrives."
+        },
+        {
+          "t": "“First sprouts in four days. I’ll tell you when I see them.”",
+          "who": "Emil"
+        },
+        {
+          "t": "The first sprouts break the crust of the levee after four days, thin and light green, in a row, as the list says. People from Plod walk beside them with gauges and trample none. At Low Side, though, the first night falls without a single boat. The lanterns aren’t lit, because there is nobody to see them, and the houses on stilts stand in the dark like teeth in an unfilled row.",
+          "lead": "The first sprouts."
+        },
+        {
+          "t": "The lever you turned keeps the Warden on for three days. On Tuesday Tok takes it over, and from then on the Warden reports only to it. The cellar has been less damp since, or so it seems.",
+          "lead": "The Warden on Tuesday.",
+          "if": {
+            "pick": "c_pali"
+          }
+        },
+        {
+          "t": "On Tuesday, unasked, Tok switches the Warden back on. From then on the Warden reports only to it, and Tok alone knows whether the two agree. Nobody asks why, because nobody saw when.",
+          "lead": "The Warden on Tuesday.",
+          "if": {
+            "notPick": "c_pali"
+          }
+        },
+        {
+          "t": "“On Friday the Council voted unanimously for the new valve. That hasn’t happened in ten years.”",
+          "lead": "Pavle on the vote.",
+          "who": "Pavle"
+        },
+        {
+          "t": "“We won’t put out the light. Let them know we’re here.”",
+          "lead": "Jela at the landing.",
+          "who": "Jela"
+        },
+        {
+          "t": "At Low Side Jela swings a lantern on the landing every evening, now rhythmically, by a signal she devised herself. On the third evening someone answers from the water, in the same rhythm.",
+          "lead": "A lantern at the landing."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "img": "zrnara",
+      "paragraphs": [
+        {
+          "t": "The tide is forty minutes away. Nobody is in a hurry, and everybody is; that is the state the levee lives in for the last two hours of every season, and for the first time you feel it from inside, like hunger."
+        },
+        {
+          "t": "The delivery note stays empty. Pavle waits until twenty to six, then writes in half and half himself, as the Council used to when the pilot kept silent. Nobody in the hall objects, because a pilot’s silence is the old way of saying: not yet.",
+          "lead": "An empty note.",
+          "if": {
+            "pick": "od_ceka"
+          }
+        },
+        {
+          "t": "You write twenty sacks for the first twenty plots by Tok’s list. The other twenty you carry back up the channel. The pen leaves two lines, one straight and one slightly shaky.",
+          "lead": "A pen on the note.",
+          "if": {
+            "notPick": "od_ceka"
+          }
+        },
+        {
+          "t": "“Half now, half later. That’s what the Council did when it didn’t know.”",
+          "who": "Anka"
+        },
+        {
+          "t": "In the Granary Anka receives the sacks one by one. She checks each with a glance, sets it on the shelf and puts new wax on the green rope. Your finger stays pressed in the wax of one of them. Pavle lifts the Council’s seal from the note and puts another, on the half. Emil stands to one side with his offer, folded in four, and holds it out to no one.",
+          "lead": "Sacks return."
+        },
+        {
+          "t": "“The Council’s seal stands on half. I’ll put it on the other half when the sky declares itself.”",
+          "lead": "Pavle seals.",
+          "who": "Pavle"
+        },
+        {
+          "t": "Jela carries sacks behind you, silent. When the last arrives, she asks how many days to the next tide. Fourteen, you say. Her coat is chilled through, but she keeps it on.",
+          "lead": "Jela in the Granary.",
+          "if": {
+            "pick": "p_pita"
+          }
+        },
+        {
+          "t": "Jela isn’t in the Granary. You hear she waits at the Low Side landing, with a lantern that doesn’t go out. You imagine her standing there counting hours to the next tide.",
+          "lead": "A lantern at Low Side.",
+          "if": {
+            "notPick": "p_pita"
+          }
+        },
+        {
+          "t": "The tape from the Warden ends up in the book of seals, among the numbers, beneath Anka’s handwriting. Anka smooths it with her palm, the way you smooth a page that has fallen.",
+          "lead": "The tape in the book.",
+          "if": {
+            "pick": "c_pali"
+          }
+        },
+        {
+          "t": "“My offer stands until the next tide. After that it doesn’t count.”",
+          "lead": "Emil leaves.",
+          "who": "Emil"
+        },
+        {
+          "t": "Twenty sacks stay on the shelves where they stood before, under new wax that still smells of honey. Anka counts them once more, aloud, then once more, quietly, as if afraid that if she stops, some will vanish. Then she opens the book to a blank page and for the first time writes in it something that isn’t a number: a date and one phrase, the second tide.",
+          "lead": "A new page."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "img": "svitanje",
+      "paragraphs": [
+        {
+          "t": "The tide crosses the threshold at ten past six and covers the levee halfway. On the first twenty plots water arrives in order, one after another; the levee smells of wet earth, and people at the landing for the first time that night speak aloud, though of small things: a boat, a rope, lunch.",
+          "lead": "The tide, halfway."
+        },
+        {
+          "t": "The wheel holds the valve open past Tok’s deadline, so water reaches even the last of the twenty plots. That extra water lasts only twenty minutes, but people remember it as a day.",
+          "lead": "Water to the last plot.",
+          "if": {
+            "pick": "vt_tocak"
+          }
+        },
+        {
+          "t": "The valve closes at twenty to six, but the twenty plots near the levee receive water in time. The other twenty stay waiting, dry and ready.",
+          "lead": "The valve closes.",
+          "if": {
+            "notPick": "vt_tocak"
+          }
+        },
+        {
+          "t": "“Logging deviation from the plan. No comment needed.”",
+          "who": "Tok"
+        },
+        {
+          "t": "Emil comes before dawn to return the pen left at the Council landing. He says nothing about the offer. He only asks whether the boat will be ready for the second tide, as if no conversation had taken place. Pavle drafts a letter to the Terraces about half a broken seal and half a preserved one. He writes it three times, tearing it up each time, because no version sounds like the truth. In the end he leaves only one sentence: we are waiting.",
+          "lead": "Emil and Pavle."
+        },
+        {
+          "t": "Above the Terraces, in the east, the first cloud of the year is gathering. Neither Tok nor you know whether it will come down. Anka locks the Granary and for the first time puts a key in your palm: for the second tide.",
+          "lead": "The first cloud."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/pre-plime/cover.webp",
+      "alt": "The Levee: a city on an embankment above white shoals at dusk",
+      "kind": "place"
+    },
+    "kanal": {
+      "src": "img/pre-plime/kanal.webp",
+      "alt": "The Third Channel at night: a boat with sacks and a lantern at the landing",
+      "kind": "place"
+    },
+    "niska": {
+      "src": "img/pre-plime/niska.webp",
+      "alt": "Low Side: houses on stilts and white low plots",
+      "kind": "place"
+    },
+    "zrnara": {
+      "src": "img/pre-plime/zrnara.webp",
+      "alt": "The Granary: a stone cellar with sealed sacks",
+      "kind": "place"
+    },
+    "merna": {
+      "src": "img/pre-plime/merna.webp",
+      "alt": "The Gauge House: a tower with screens on stilts over the water",
+      "kind": "place"
+    },
+    "splav": {
+      "src": "img/pre-plime/splav.webp",
+      "alt": "The Raft: a floating market with lanterns and people",
+      "kind": "place"
+    },
+    "cuvar": {
+      "src": "img/pre-plime/cuvar.webp",
+      "alt": "The Gauge House cellar: the switched-off board of the Warden",
+      "kind": "place"
+    },
+    "nasip": {
+      "src": "img/pre-plime/nasip.webp",
+      "alt": "The Levee: the Council hall and the landing before dawn",
+      "kind": "place"
+    },
+    "ventil": {
+      "src": "img/pre-plime/ventil.webp",
+      "alt": "The Valve: an iron gate with a wheel and a gear",
+      "kind": "place"
+    },
+    "svitanje": {
+      "src": "img/pre-plime/svitanje.webp",
+      "alt": "Dawn over the shoals and fields",
+      "kind": "place"
+    },
+    "jela": {
+      "src": "img/pre-plime/jela.webp",
+      "alt": "Jela, a girl from Low Side",
+      "kind": "portrait"
+    },
+    "anka": {
+      "src": "img/pre-plime/anka.webp",
+      "alt": "Anka, keeper of the Granary keys",
+      "kind": "portrait"
+    },
+    "emil": {
+      "src": "img/pre-plime/emil.webp",
+      "alt": "Emil, a man from the company Plod",
+      "kind": "portrait"
+    },
+    "pavle": {
+      "src": "img/pre-plime/pavle.webp",
+      "alt": "Pavle, chair of the Council",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/pre-plime/citalac-m.webp",
+      "alt": "Boat pilot",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/pre-plime/citalac-z.webp",
+      "alt": "Boat pilot",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Jela": {
+      "img": "jela"
+    },
+    "Anka": {
+      "img": "anka"
+    },
+    "Emil": {
+      "img": "emil"
+    },
+    "Pavle": {
+      "img": "pavle"
+    },
+    "Tok": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}
