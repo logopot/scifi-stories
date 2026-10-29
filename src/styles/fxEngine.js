@@ -55,7 +55,7 @@ export function createFxEngine(opts) {
   const screenDescs = [];
   for (const e of fx) {
     if (e.type === 'screen') screenDescs.push(e);
-    else if (e.type === 'screens') screenDescs.push(...e.screens);
+    else if (e.type === 'screens') screenDescs.push(...e.screens.map((d) => ({ ...d, exclude: [...(e.exclude || []), ...(d.exclude || [])], lumaGate: d.lumaGate ?? e.lumaGate })));
   }
   if (screenDescs.length) lights.push({ kind: 'screens', draw: makeScreens(screenDescs, theme, phone).drawLight });
   const smokes = fx.filter((e) => e.type === 'smoke');

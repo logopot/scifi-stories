@@ -15,8 +15,8 @@ export const FX_TYPES = {
   dust: { required: [], optional: ['color', 'density', 'speed'] },
   rain: { required: [], optional: ['color', 'density', 'speed'] },
   mist: { required: [], optional: ['color'] },
-  screen: { required: [], optional: ['x', 'y', 'w', 'h', 'quad', 'style', 'color', 'intensity', 'speed', 'spill'] },
-  screens: { required: ['screens'], optional: [] },
+  screen: { required: [], optional: ['x', 'y', 'w', 'h', 'quad', 'style', 'color', 'intensity', 'speed', 'spill', 'exclude', 'lumaGate'] },
+  screens: { required: ['screens'], optional: ['exclude', 'lumaGate'] },
   water: { required: ['x', 'y', 'w', 'h'], optional: ['ripple', 'glints', 'columns', 'exclude', 'color'] },
 };
 
@@ -26,7 +26,26 @@ export const MAX_SCREENS = 12;
 const RANGES = { ripple: [0, 1], glints: [0, 14], intensity: [0, 1], spill: [0, 1], x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], h: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
 
 // Jedan ekran: pravougaonik (x,y,w,h) ILI quad (4 tačke [x,y]); style, color, intensity, speed, spill.
-const SCREEN_KEYS = ['x', 'y', 'w', 'h', 'quad', 'style', 'color', 'intensity', 'speed', 'spill'];
+const SCREEN_KEYS = ['x', 'y', 'w', 'h', 'quad', 'style', 'color', 'intensity', 'speed', 'spill', 'exclude', 'lumaGate'];
+
+// Izuzete oblasti: [x,y,w,h] | {cx,cy,rx,ry,rot?} | {points: [[x,y],...≥3]} (sve u % slike)
+const checkExclude = (list, where, errs) => {
+  const num = (v, lo, hi) => typeof v === 'number' && Number.isFinite(v) && v >= lo && v <= hi;
+  if (!Array.isArray(list)) return errs.push(`${where}: "exclude" mora biti niz oblasti`);
+  list.forEach((a, i) => {
+    const w2 = `${where}.exclude[${i}]`;
+    if (Array.isArray(a)) {
+      if (!(a.length === 4 && num(a[0], 0, 100) && num(a[1], 0, 100) && num(a[2], 0.01, 100) && num(a[3], 0.01, 100) && a[0] + a[2] <= 100 + 1e-6 && a[1] + a[3] <= 100 + 1e-6)) errs.push(`${w2}: pravougaonik je [x, y, w, h] u opsegu 0–100 (w, h > 0, x+w i y+h najviše 100)`);
+    } else if (a && typeof a === 'object' && a.points !== undefined) {
+      const ok = Array.isArray(a.points) && a.points.length >= 3 && a.points.length <= 40 && a.points.every((p) => Array.isArray(p) && p.length === 2 && num(p[0], 0, 100) && num(p[1], 0, 100));
+      if (!ok || Object.keys(a).some((k) => k !== 'points')) errs.push(`${w2}: poligon je { "points": [[x,y], ...] } sa 3–40 tačaka u opsegu 0–100`);
+    } else if (a && typeof a === 'object') {
+      const ok = num(a.cx, 0, 100) && num(a.cy, 0, 100) && num(a.rx, 0.01, 100) && num(a.ry, 0.01, 100) && (a.rot === undefined || num(a.rot, -360, 360));
+      if (!ok || Object.keys(a).some((k) => !['cx', 'cy', 'rx', 'ry', 'rot'].includes(k))) errs.push(`${w2}: elipsa je { "cx", "cy", "rx", "ry", "rot"? } (cx, cy 0–100, rx, ry > 0, rot u stepenima)`);
+    } else errs.push(`${w2}: oblast mora biti [x,y,w,h], elipsa ili poligon`);
+  });
+  return undefined;
+};
 const checkScreen = (d, where, errs, typed = false) => {
   if (!d || typeof d !== 'object' || Array.isArray(d)) return errs.push(`${where}: ekran mora biti objekat`);
   for (const k of Object.keys(d)) if (!SCREEN_KEYS.includes(k) && !(typed && k === 'type')) errs.push(`${where}: nepoznato polje "${k}"`);
@@ -43,6 +62,8 @@ const checkScreen = (d, where, errs, typed = false) => {
   if (d.intensity !== undefined && !num(d.intensity, 0, 1)) errs.push(`${where}: "intensity" mora biti 0–1`);
   if (d.speed !== undefined && !num(d.speed, 0.2, 2)) errs.push(`${where}: "speed" mora biti 0.2–2`);
   if (d.spill !== undefined && !num(d.spill, 0, 1)) errs.push(`${where}: "spill" mora biti 0–1`);
+  if (d.lumaGate !== undefined && !num(d.lumaGate, 0, 1)) errs.push(`${where}: "lumaGate" mora biti 0–1`);
+  if (d.exclude !== undefined) checkExclude(d.exclude, where, errs);
   return undefined;
 };
 
@@ -62,6 +83,8 @@ export const validateFx = (fx) => {
     if (e.type === 'screens') {
       if (!Array.isArray(e.screens) || e.screens.length < 1 || e.screens.length > MAX_SCREENS) errs.push(`${where} (screens): "screens" je niz od 1–${MAX_SCREENS} ekrana`);
       else e.screens.forEach((d, j) => checkScreen(d, `${where}.screens[${j}]`, errs));
+      if (e.lumaGate !== undefined && !(typeof e.lumaGate === 'number' && e.lumaGate >= 0 && e.lumaGate <= 1)) errs.push(`${where} (screens): "lumaGate" mora biti 0–1`);
+      if (e.exclude !== undefined) checkExclude(e.exclude, `${where} (screens)`, errs);
       return;
     }
     if (e.type === 'screen') checkScreen(e, where, errs, true);

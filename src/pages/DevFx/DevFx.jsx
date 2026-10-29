@@ -14,6 +14,12 @@ const NUMBER_FIELDS = { glow: ['r', 'flicker'], fire: ['r', 'w', 'h'], sun: ['r'
 const STEP = { intensity: 0.05, spill: 0.05, ripple: 0.05, glints: 1, r: 0.1, w: 0.1, flicker: 0.05, density: 0.05, speed: 0.1 };
 const DEFAULTS = { glow: { r: 4 }, fire: { r: 5 }, sun: { r: 12 }, smoke: { w: 4 }, twinkle: { r: 1.4 } };
 const round = (v) => Math.round(v * 10) / 10;
+const round2 = (v) => Math.round(v * 100) / 100;
+// prva tačka ekrana (za marker izbora)
+const p0 = (f) => {
+  const d = f.type === 'screens' ? f.screens[0] : f;
+  return d.quad ? d.quad[0] : [d.x, d.y];
+};
 
 export default function DevFx() {
   const params = new URLSearchParams(window.location.search);
@@ -33,6 +39,7 @@ export default function DevFx() {
   const [capturing, setCapturing] = useState(false);
   const [mode, setMode] = useState(null); // 'exclude' (povuci pravougaonik) | 'column' (klik) za izabranu vodu
   const [preview, setPreview] = useState(null);
+  const [polyPts, setPolyPts] = useState([]); // tačke poligona izuzete oblasti (dvoklik zatvara)
   const [quadPts, setQuadPts] = useState([]); // klik na 4 ugla ekrana (gore-levo, gore-desno, dole-desno, dole-levo)
   const rectStart = useRef(null);
   const previewRef = useRef(null);
@@ -88,7 +95,12 @@ export default function DevFx() {
       }
       return setQuadPts(next.length === 4 ? [] : next);
     }
-    if ((mode === 'exclude' && water) || tool === 'water' || tool === 'screen') {
+    const scr = fx[sel] && (fx[sel].type === 'screen' || fx[sel].type === 'screens') ? fx[sel] : null;
+    if (mode === 'sx-poly' && scr) {
+      const [qx, qy] = pct(e);
+      return setPolyPts((l) => [...l, [qx, qy]]);
+    }
+    if ((mode === 'exclude' && water) || ((mode === 'sx-ellipse' || mode === 'sx-rect') && scr) || tool === 'water' || tool === 'screen') {
       const [rx, ry] = pct(e);
       rectStart.current = [rx, ry];
       previewRef.current = { x: rx, y: ry, w: 0, h: 0 };
@@ -136,7 +148,12 @@ export default function DevFx() {
       setPreview(null);
       if (p && p.w >= 0.5 && p.h >= 0.5) {
         const r = [round(p.x), round(p.y), round(p.w), round(p.h)];
-        if (mode === 'exclude' && fx[sel] && fx[sel].type === 'water') {
+        const sx = fx[sel] && (fx[sel].type === 'screen' || fx[sel].type === 'screens');
+        if ((mode === 'sx-ellipse' || mode === 'sx-rect') && sx) {
+          const area = mode === 'sx-rect' ? r : { cx: round2(p.x + p.w / 2), cy: round2(p.y + p.h / 2), rx: round2(p.w / 2), ry: round2(p.h / 2) };
+          update(sel, { exclude: [...(fx[sel].exclude || []), area] });
+          setMode(null);
+        } else if (mode === 'exclude' && fx[sel] && fx[sel].type === 'water') {
           update(sel, { exclude: [...(fx[sel].exclude || []), r] });
           setMode(null);
         } else if (tool === 'screen' && fx.length < MAX_FX) {
@@ -152,6 +169,13 @@ export default function DevFx() {
     setTimeout(() => {
       drag.current = null;
     }, 0);
+  };
+  const finishPoly = () => {
+    if (mode !== 'sx-poly' || !fx[sel]) return;
+    const pts = polyPts.length > 3 ? polyPts.slice(0, -1) : polyPts; // dvoklik dodaje duplu poslednju tačku
+    if (pts.length >= 3) update(sel, { exclude: [...(fx[sel].exclude || []), { points: pts.map(([x, y]) => [round(x), round(y)]) }] });
+    setPolyPts([]);
+    setMode(null);
   };
   const addGlobal = (type) => {
     if (fx.length >= MAX_FX || fx.some((f) => f.type === type)) return;
@@ -296,6 +320,31 @@ export default function DevFx() {
           </button>
         </S.Bar>
       )}
+      {cur && (cur.type === 'screen' || cur.type === 'screens') && (
+        <S.Bar>
+          <button type="button" aria-pressed={mode === 'sx-ellipse'} onClick={() => (setPolyPts([]), setMode(mode === 'sx-ellipse' ? null : 'sx-ellipse'))}>
+            + izuzmi elipsu (povuci)
+          </button>
+          <button type="button" aria-pressed={mode === 'sx-rect'} onClick={() => (setPolyPts([]), setMode(mode === 'sx-rect' ? null : 'sx-rect'))}>
+            + izuzmi pravougaonik (povuci)
+          </button>
+          <button type="button" aria-pressed={mode === 'sx-poly'} onClick={() => (setPolyPts([]), setMode(mode === 'sx-poly' ? null : 'sx-poly'))}>
+            + izuzmi poligon (klik, dvoklik zatvara)
+          </button>
+          <label>
+            lumaGate{' '}
+            <input type="range" min="0" max="1" step="0.05" value={cur.lumaGate ?? 0} onChange={(e) => update(sel, { lumaGate: Number(e.target.value) || undefined })} /> {(cur.lumaGate ?? 0).toFixed(2)}
+          </label>
+          {(cur.exclude || []).map((a, i) => (
+            <span key={`xe${i}`}>
+              {Array.isArray(a) ? 'pravougaonik' : a.points ? `poligon (${a.points.length})` : 'elipsa'} {i + 1}{' '}
+              <button type="button" onClick={() => update(sel, { exclude: cur.exclude.length > 1 ? cur.exclude.filter((_, j) => j !== i) : undefined })}>
+                ×
+              </button>
+            </span>
+          ))}
+        </S.Bar>
+      )}
       {fx.filter((f) => f.type === 'screen').length > 1 && (
         <S.Bar>
           <button
@@ -343,7 +392,7 @@ export default function DevFx() {
         </S.Bar>
       )}
       {image && (
-        <S.Stage ref={stage} $black={black} $ratio={size ? `${size.w} / ${size.h}` : '16 / 9'} onPointerDown={onStageDown} onPointerMove={onMove} onPointerUp={endDrag}>
+        <S.Stage ref={stage} $black={black} $ratio={size ? `${size.w} / ${size.h}` : '16 / 9'} onPointerDown={onStageDown} onPointerMove={onMove} onPointerUp={endDrag} onDoubleClick={finishPoly}>
           <img src={`/${image.src}`} alt="" style={black ? { opacity: 0 } : undefined} onLoad={(e) => setSize({ w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })} />
           {size && <SceneFx fx={fx} imgSize={size} focus="center center" still look={look} />}
           {fx.map((f, i) =>
@@ -357,8 +406,19 @@ export default function DevFx() {
                     return <polygon key={k} points={q.map((p) => p.join(',')).join(' ')} vectorEffect="non-scaling-stroke" />;
                   })}
                 </S.Overlay>
-                {f.type === 'screen' && (
-                  <S.Marker $selected={i === sel} style={{ left: `${(f.quad ? f.quad[0][0] : f.x)}%`, top: `${(f.quad ? f.quad[0][1] : f.y)}%` }} onPointerDown={(e) => { e.stopPropagation(); setSel(i); }} aria-label="screen" />
+                <S.ExcludeOverlay viewBox="0 0 100 100" preserveAspectRatio="none">
+                  {[...(f.exclude || []), ...(f.type === 'screens' ? f.screens.flatMap((d) => d.exclude || []) : [])].map((a, k) =>
+                    Array.isArray(a) ? (
+                      <rect key={k} x={a[0]} y={a[1]} width={a[2]} height={a[3]} vectorEffect="non-scaling-stroke" />
+                    ) : a.points ? (
+                      <polygon key={k} points={a.points.map((q) => q.join(',')).join(' ')} vectorEffect="non-scaling-stroke" />
+                    ) : (
+                      <ellipse key={k} cx={a.cx} cy={a.cy} rx={a.rx} ry={a.ry} vectorEffect="non-scaling-stroke" />
+                    )
+                  )}
+                </S.ExcludeOverlay>
+                {(f.type === 'screen' || f.type === 'screens') && (
+                  <S.Marker $selected={i === sel} style={{ left: `${p0(f)[0]}%`, top: `${p0(f)[1]}%` }} onPointerDown={(e) => { e.stopPropagation(); setSel(i); }} aria-label="screen" />
                 )}
               </React.Fragment>
             ) : f.type === 'water' ? (
@@ -379,6 +439,9 @@ export default function DevFx() {
               </React.Fragment>
             ) : null
           )}
+          {polyPts.map(([x, y], k) => (
+            <S.Marker key={`p${k}`} $selected style={{ left: `${x}%`, top: `${y}%` }} aria-label={`tačka ${k + 1}`} />
+          ))}
           {quadPts.map(([x, y], k) => (
             <S.Marker key={`q${k}`} $selected style={{ left: `${x}%`, top: `${y}%` }} aria-label={`ugao ${k + 1}`} />
           ))}
