@@ -6,11 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/postbuild.mjs",
     "preview": "vite preview",
     "check-story": "node scripts/check-story.mjs",
     "check-redirects": "node scripts/check-redirects.mjs",
     "check-third-party": "node scripts/check-third-party.mjs",
+    "check-seo": "node scripts/check-seo.mjs",
     "check-parity": "node scripts/check-parity.mjs",
     "redirects": "node scripts/generate-redirects.mjs",
     "check-overflow": "node scripts/check-overflow.mjs",

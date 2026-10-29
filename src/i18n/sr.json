@@ -21,9 +21,7 @@
   },
   "notFound": {
     "title": "Nema takve priče",
-    "text": "Ova adresa ne vodi nigde. Možda je priča premeštena, ili je link pogrešno ukucan.",
-    "metaTitle": "Nema takve priče · {{name}}",
-    "metaDescription": "Tražena stranica ne postoji."
+    "text": "Ova adresa ne vodi nigde. Možda je priča premeštena, ili je link pogrešno ukucan."
   },
   "reader": {
     "loading": "Učitavam priču…",
@@ -43,5 +41,15 @@
   },
   "progress": {
     "label": "Napredak kroz priču, poglavlje {{index}} od {{total}}"
+  },
+  "seo": {
+    "homeTitle": "Priče drugog sveta | Interaktivne naučnofantastične priče",
+    "homeDescription": "Kratke interaktivne naučnofantastične priče na srpskom. Ti si glavni lik i ti biraš šta će se desiti. Besplatno, u pregledaču.",
+    "form": "Interaktivna priča, oko {{minutes}} minuta. Ti biraš šta će se desiti.",
+    "formShort": "Interaktivna priča, oko {{minutes}} min.",
+    "notFoundTitle": "Strana ne postoji",
+    "notFoundDescription": "Tražena strana ne postoji.",
+    "locale": "sr_RS",
+    "breadcrumbHome": "Početna"
   }
 }

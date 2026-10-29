@@ -5,7 +5,6 @@ import Page from '../../components/Page';
 import Paragraph from '../../components/Paragraph';
 import TextLink from '../../components/TextLink';
 import { LEGAL } from '../../config';
-import useDocumentMeta from '../../hooks/useDocumentMeta';
 import contentEn from '../../i18n/legal/en';
 import contentSr from '../../i18n/legal/sr';
 import useLocalePath, { useLang } from '../../i18n/useLocalePath';
@@ -51,7 +50,6 @@ export default function Legal({ pageKey }) {
   const localePath = useLocalePath();
   const page = CONTENT[lang][pageKey];
   const values = { site: t('site.name'), year: String(LEGAL.year) };
-  useDocumentMeta(`${page.title} · ${t('site.name')}`, page.description);
 
   return (
     <Page variant="narrow">

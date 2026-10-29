@@ -12,7 +12,7 @@ import * as S from './StoryCard.styled';
 
 // Plakat-kartica: slika preko cele kartice, naslov gore, podaci i krug sa strelicom dole, sve u temi te priče
 // (ugnježdeni ThemeProvider). Cela kartica je link; priče sa status 'soon' su prigušene i nisu otvorive.
-export default function StoryCard({ entry }) {
+export default function StoryCard({ entry, priority = false }) {
   const { t } = useTranslation();
   const lang = useLang();
   const localePath = useLocalePath();
@@ -28,7 +28,7 @@ export default function StoryCard({ entry }) {
   return (
     <ThemeProvider theme={theme}>
       <S.Card $soon={soon} {...linkProps}>
-        <CardMedia src={entry.cover} position={entry.coverPosition || 'center'} soon={soon} />
+        <CardMedia src={entry.cover} alt={entry.coverAlt} position={entry.coverPosition || 'center'} soon={soon} priority={priority} />
         <S.ScrimTop />
         <S.ScrimBottom />
         <S.Top $badge={badge}>

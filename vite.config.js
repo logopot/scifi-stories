@@ -17,7 +17,9 @@ const bootTheme = () => ({
   },
 });
 
-export default defineConfig({
+// Preview (npm run preview) služi dist/ kao običan sajt: bez SPA rezervnog pravila, nepoznata adresa daje 404.html, kao na Pages.
+export default defineConfig(({ isPreview }) => ({
   plugins: [react(), bootTheme()],
   base: '/',
-});
+  appType: isPreview ? 'mpa' : 'spa',
+}));

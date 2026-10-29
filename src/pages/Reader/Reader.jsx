@@ -7,7 +7,6 @@ import Sky from '../../components/Sky';
 import TextLink from '../../components/TextLink';
 import { createEngine } from '../../engine/engine';
 import { StoryContext } from '../../engine/StoryContext';
-import useDocumentMeta from '../../hooks/useDocumentMeta';
 import useStoryData from '../../hooks/useStoryData';
 import useLocalePath, { useLang } from '../../i18n/useLocalePath';
 import { findByPath, hasLang, localizeEntry, storyPath } from '../../stories';
@@ -44,8 +43,6 @@ function ReaderLoader({ entry, lang }) {
     () => (engine ? { slug: entry.slug, story, engine, cover: entry.cover || null } : null),
     [engine, story, entry.slug, entry.cover]
   );
-
-  useDocumentMeta(`${entry.title} · ${t('site.name')}`, entry.tagline);
 
   return (
     <>

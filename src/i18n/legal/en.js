@@ -3,7 +3,7 @@
 export default {
   privacy: {
     title: 'Privacy Policy',
-    description: 'What data this site uses and what it does not, and your rights.',
+    description: 'Privacy policy: what data this site uses and what it does not, how it is kept, and the rights you have.',
     sections: [
       {
         h: 'What data we use',
@@ -50,7 +50,7 @@ export default {
   },
   disclaimer: {
     title: 'Disclaimer',
-    description: 'The stories are fiction, made with the help of artificial intelligence, and are not professional advice.',
+    description: 'Disclaimer: the stories are fiction, made with the help of artificial intelligence, and are not professional advice.',
     sections: [
       {
         h: 'Fiction',

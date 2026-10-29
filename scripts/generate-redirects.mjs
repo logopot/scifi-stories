@@ -1,7 +1,7 @@
 // Generiše public/_redirects iz registra priča (src/stories/index.js).
 // Upotreba: npm run redirects
 // Redosled pravila (Cloudflare Pages uzima prvo koje se poklopi): (a) opšta pravila, (b) adrese po jezicima za svaku priču
-// koja ima en blok, (c) SPA rezervno pravilo.
+// koja ima en blok, (c) /en/ → /en. Nema rezervnog pravila /* → /index.html 200 (nepoznate adrese vraćaju 404).
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -32,7 +32,9 @@ export const buildRedirects = (list = stories) => {
     lines.push(`/en/${p.path.sr}  /en/${p.path.en}  301`);
     lines.push(`/${p.path.en}  /${p.path.sr}  301`);
   }
-  lines.push('/*  /index.html  200');
+  // Svaka javna strana je statički fajl u dist/ (scripts/prerender.mjs), pa nema SPA rezervnog pravila:
+  // nepoznata adresa dobija 404.html sa statusom 404. /en/ (kosa crta na kraju) vodi na /en.
+  lines.push('/en/  /en  301');
   return `${lines.join('\n')}\n`;
 };
 

@@ -3,7 +3,7 @@
 export default {
   privacy: {
     title: 'Politika privatnosti',
-    description: 'Koje podatke sajt koristi, a koje ne, i vaša prava.',
+    description: 'Politika privatnosti: koje podatke sajt koristi, a koje ne, kako se čuvaju i koja prava imate.',
     sections: [
       {
         h: 'Koje podatke koristimo',
@@ -50,7 +50,7 @@ export default {
   },
   disclaimer: {
     title: 'Odricanje odgovornosti',
-    description: 'Priče su fikcija, nastaju uz pomoć veštačke inteligencije i ne predstavljaju stručni savet.',
+    description: 'Odricanje odgovornosti: priče su fikcija, nastaju uz pomoć veštačke inteligencije i ne predstavljaju stručni savet.',
     sections: [
       {
         h: 'Fikcija',

@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Reader from './pages/Reader';
 import { findLegalByPath, legalPath } from './legalPages';
 import { findByPath } from './stories';
+import useSeo from './seo/useSeo';
 import ThemeController from './styles/ThemeController';
 
 // Razvojna ruta za proveru izgleda strana (scripts/check-layout.mjs); u produkcijskom build-u je nema.
@@ -41,11 +42,18 @@ function PathPage() {
   return <Reader />;
 }
 
+// Ažurira SEO oznake u <head> pri svakoj promeni rute.
+function SeoController() {
+  useSeo();
+  return null;
+}
+
 // Srpski je na korenu (/, /:path), engleski pod /en (/en, /en/:path); jezik se čita iz adrese (LanguageProvider).
 export default function App() {
   return (
     <BrowserRouter>
       <LanguageProvider>
+        <SeoController />
         <ThemeController>
           <Routes>
             {DevScene && (

@@ -4,7 +4,6 @@ import Heading from '../../components/Heading';
 import Page from '../../components/Page';
 import StoryCard from '../../components/StoryCard';
 import Subtitle from '../../components/Subtitle';
-import useDocumentMeta from '../../hooks/useDocumentMeta';
 import { useLang } from '../../i18n/useLocalePath';
 import { storiesFor } from '../../stories';
 import * as S from './Landing.styled';
@@ -13,7 +12,6 @@ export default function Landing() {
   const { t } = useTranslation();
   const lang = useLang();
   const list = storiesFor(lang);
-  useDocumentMeta(t('site.name'), t('landing.subtitle'));
 
   return (
     <Page variant="wide">
@@ -23,10 +21,10 @@ export default function Landing() {
       </S.Intro>
       {list.length === 0 && <Subtitle>{t('landing.empty')}</Subtitle>}
       <div className="row g-4">
-        {list.map((entry) => (
+        {list.map((entry, i) => (
           <div key={entry.slug} className="col-12 col-md-6 col-lg-4">
             <S.Slot>
-              <StoryCard entry={entry} />
+              <StoryCard entry={entry} priority={i === 0} />
             </S.Slot>
           </div>
         ))}

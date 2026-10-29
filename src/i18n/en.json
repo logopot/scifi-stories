@@ -21,9 +21,7 @@
   },
   "notFound": {
     "title": "No such story",
-    "text": "This address leads nowhere. The story may have moved, or the link may have been typed wrong.",
-    "metaTitle": "No such story · {{name}}",
-    "metaDescription": "The page you asked for does not exist."
+    "text": "This address leads nowhere. The story may have moved, or the link may have been typed wrong."
   },
   "reader": {
     "loading": "Loading the story…",
@@ -42,5 +40,15 @@
   },
   "progress": {
     "label": "Story progress, chapter {{index}} of {{total}}"
+  },
+  "seo": {
+    "homeTitle": "Other World Stories | Interactive science fiction stories",
+    "homeDescription": "Short interactive science fiction stories in English. You are the main character and you decide what happens. Free, in your browser.",
+    "form": "An interactive story, about {{minutes}} minutes. You decide what happens.",
+    "formShort": "Interactive story, about {{minutes}} min.",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you asked for does not exist.",
+    "locale": "en_US",
+    "breadcrumbHome": "Home"
   }
 }
