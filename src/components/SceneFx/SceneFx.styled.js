@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { sceneDrift } from '../../styles/animations';
 
 export const Root = styled.div`
   position: absolute;
@@ -8,20 +7,18 @@ export const Root = styled.div`
   pointer-events: none;
 `;
 
-// Isti sloj pomeranja (drift) kao slika, pa svetla prate sliku; počinje zajedno sa slikom (isti trenutak montiranja).
-export const Drift = styled.div`
+const Canvas = styled.canvas`
   position: absolute;
   inset: 0;
-  transform-origin: center;
-  animation: ${sceneDrift} ${({ theme }) => theme.motion.sceneDrift} ease-in-out infinite alternate;
-  will-change: transform;
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 `;
 
-// Pravougaonik koji slika stvarno zauzima uz object-fit: cover; efekti se pozicioniraju u procentima unutar njega.
-export const Rect = styled.div`
-  position: absolute;
+// Svetlo: screen mešanje preko slike (sloj slike i ovaj canvas dele isti stacking context u SceneBackdrop sloju).
+export const Light = styled(Canvas)`
+  mix-blend-mode: screen;
 `;
+
+// Materija (dim, magla, sneg, kiša): običan alfa preko slike.
+export const Matter = styled(Canvas)``;

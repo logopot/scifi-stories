@@ -44,7 +44,7 @@ export const Stage = styled.div`
   max-width: 1100px;
   aspect-ratio: ${({ $ratio }) => $ratio};
   overflow: hidden;
-  background: ${({ theme }) => theme.bgSoft};
+  background: ${({ theme, $black }) => ($black ? 'black' : theme.bgSoft)};
   cursor: crosshair;
   touch-action: none;
   user-select: none;

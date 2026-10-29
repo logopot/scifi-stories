@@ -27,6 +27,10 @@ export default function DevFx() {
   const [color, setColor] = useState('fxWarm');
   const [size, setSize] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [look, setLook] = useState(params.get('look') === 'old' ? 'old' : 'new');
+  const [black, setBlack] = useState(params.get('black') === '1');
+  const [sheet, setSheet] = useState(null);
+  const [capturing, setCapturing] = useState(false);
   const stage = useRef(null);
   const drag = useRef(null);
 
@@ -110,6 +114,42 @@ export default function DevFx() {
     }
   };
 
+  // 6 kadrova u razmaku od pola sekunde u jednu mrežu (3 × 2); radi za novi izgled (canvas). Slika se prikazuje ispod, može se sačuvati.
+  const capture = async () => {
+    const root = stage.current;
+    const [light, matter] = root.querySelectorAll('canvas');
+    const img = root.querySelector('img');
+    if (!light || !size) return;
+    setCapturing(true);
+    const W = 640;
+    const H = Math.round((W * size.h) / size.w);
+    const out = document.createElement('canvas');
+    out.width = W * 3;
+    out.height = H * 2;
+    const ctx = out.getContext('2d');
+    for (let i = 0; i < 6; i++) {
+      const x = (i % 3) * W;
+      const y = Math.floor(i / 3) * H;
+      ctx.globalCompositeOperation = 'source-over';
+      if (black) {
+        ctx.fillStyle = 'black';
+        ctx.fillRect(x, y, W, H);
+      } else ctx.drawImage(img, x, y, W, H);
+      ctx.globalCompositeOperation = 'screen';
+      ctx.drawImage(light, x, y, W, H);
+      ctx.globalCompositeOperation = 'source-over';
+      if (matter) ctx.drawImage(matter, x, y, W, H);
+      ctx.globalAlpha = 0.7;
+      ctx.fillStyle = 'white';
+      ctx.font = '14px sans-serif';
+      ctx.fillText(((i * 500) / 1000).toFixed(1) + ' s', x + 8, y + 18);
+      ctx.globalAlpha = 1;
+      await new Promise((r) => setTimeout(r, 500));
+    }
+    setSheet(out.toDataURL('image/png'));
+    setCapturing(false);
+  };
+
   const cur = fx[sel];
   return (
     <S.Wrap>
@@ -131,6 +171,15 @@ export default function DevFx() {
         </select>
         <button type="button" onClick={copy}>
           {copied ? 'Kopirano' : 'Kopiraj JSON'}
+        </button>
+        <button type="button" aria-pressed={look === 'new'} onClick={() => setLook(look === 'new' ? 'old' : 'new')}>
+          izgled: {look === 'new' ? 'novi' : 'stari'}
+        </button>
+        <button type="button" aria-pressed={black} onClick={() => setBlack(!black)}>
+          samo efekti na crnom
+        </button>
+        <button type="button" onClick={capture} disabled={capturing || look === 'old'}>
+          {capturing ? 'snimam…' : 'snimi sličice'}
         </button>
       </S.Bar>
       <S.Bar>
@@ -173,9 +222,9 @@ export default function DevFx() {
         </S.Bar>
       )}
       {image && (
-        <S.Stage ref={stage} $ratio={size ? `${size.w} / ${size.h}` : '16 / 9'} onPointerDown={onStageDown} onPointerMove={onMove} onPointerUp={endDrag}>
-          <img src={`/${image.src}`} alt="" onLoad={(e) => setSize({ w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })} />
-          {size && <SceneFx fx={fx} imgSize={size} focus="center center" still />}
+        <S.Stage ref={stage} $black={black} $ratio={size ? `${size.w} / ${size.h}` : '16 / 9'} onPointerDown={onStageDown} onPointerMove={onMove} onPointerUp={endDrag}>
+          <img src={`/${image.src}`} alt="" style={black ? { opacity: 0 } : undefined} onLoad={(e) => setSize({ w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })} />
+          {size && <SceneFx fx={fx} imgSize={size} focus="center center" still look={look} />}
           {fx.map((f, i) =>
             f.points ? (
               f.points.map(([x, y], pi) => <S.Marker key={`${i}-${pi}`} $selected={i === sel} style={{ left: `${x}%`, top: `${y}%` }} onPointerDown={(e) => startDrag(e, i, pi)} aria-label={`${f.type} ${pi + 1}`} />)
@@ -189,6 +238,13 @@ export default function DevFx() {
         </S.Stage>
       )}
       {errors.length > 0 && <pre>{errors.join('\n')}</pre>}
+      {sheet && (
+        <p>
+          <a href={sheet} download={`fx-${slug}-${imageId}.png`}>Sačuvaj mrežu kadrova</a>
+          <br />
+          <img src={sheet} alt="mreža od 6 kadrova" style={{ maxWidth: '100%' }} />
+        </p>
+      )}
       <S.Json readOnly value={json} onFocus={(e) => e.target.select()} aria-label="fx JSON" />
     </S.Wrap>
   );
