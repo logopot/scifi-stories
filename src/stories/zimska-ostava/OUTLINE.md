@@ -44,9 +44,9 @@ Težine su simetrične po osama (svaka runda daje svakoj osi isti broj tačaka),
 | `odluka` | nasleđuje `brojnica` |
 | `kraj_e1` | `kapija` |
 | `kraj_e2` | `jutro` |
-| `kraj_t1` | `dvoriste` |
+| `kraj_t1` | nasleđuje `brojnica` |
 | `kraj_t2` | `jutro` |
-| `kraj_o1` | `brojnica` |
+| `kraj_o1` | nasleđuje `brojnica` |
 | `kraj_o2` | `jutro` |
 
 Priča koristi 8 različitih slika mesta (`kapija`, `brojnica`, `uljara`, `zitnica`, `dno`, `kancelarija`, `dvoriste`, `jutro`); `cover` je naslovna i ne koristi se ni u jednom čvoru.

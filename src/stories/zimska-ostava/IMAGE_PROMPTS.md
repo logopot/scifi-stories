@@ -63,10 +63,10 @@ Likovi bez portreta (namerno): Popis (mašina za brojanje) ne govori preko `who`
 | --- | --- |
 | `cover` | naslovna kartica i početni ekran (nijedan čvor ne postavlja `img: cover`) |
 | `kapija` | `kapija`, `red` (nasleđuje), `kapija2`, `kraj_e1` |
-| `brojnica` | `brojnica`, `ranko`, `sirena`, `odluka` (nasleđuje), `kraj_o1` |
+| `brojnica` | `brojnica`, `ranko`, `sirena`, `odluka` (nasleđuje), `kraj_t1` i `kraj_o1` (nasleđuju) |
 | `uljara` | `uljara` |
 | `zitnica` | `zitnica` |
 | `dno` | `spust` (hodnik i Dno u jednoj slici) |
 | `kancelarija` | `kancelarija` |
-| `dvoriste` | `dvoriste`, `kraj_t1` |
+| `dvoriste` | `dvoriste` |
 | `jutro` | `kraj_e2`, `kraj_t2`, `kraj_o2` |
