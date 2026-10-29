@@ -149,6 +149,9 @@ export const fxStyle = {
     alertEvery: [6, 14], // sekunde između alarmnih treperenja
     scanlineAlpha: 0.06,
     spillAlpha: 0.14,
+    excludeFeather: 0.3, // meka ivica izuzetih oblasti (% širine slike)
+    lumaLo: 0.14, // lumaGate: ispod ove svetline (0–1) efekat se gasi
+    lumaHi: 0.3, // iznad ove ostaje pun
     spillMaxW: 14, // najveća širina spill elipse (% širine slike), za duge tanke ekrane
     spillMinH: 1.2, // najmanja visina
   },

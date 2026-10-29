@@ -97,6 +97,25 @@ export const Overlay = styled.svg`
   }
 `;
 
+// Izuzete oblasti ekrana (isprekidano, tekst boja)
+export const ExcludeOverlay = styled.svg`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  rect,
+  polygon,
+  ellipse {
+    fill: none;
+    stroke: ${({ theme }) => theme.text};
+    stroke-width: 1.5px;
+    stroke-dasharray: 4 3;
+    opacity: 0.9;
+  }
+`;
+
 export const Line = styled.div`
   position: absolute;
   width: 0;
