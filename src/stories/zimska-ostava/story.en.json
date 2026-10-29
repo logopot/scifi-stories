@@ -1,0 +1,1831 @@
+{
+  "meta": {
+    "title": "The Winter Store",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "Zavetje is a town in a snowbound valley where winter lasts five months and the fields are not seen until spring. Everything the town has for that winter lies in the Store, an old salt mine cut into the rock above the houses.",
+      "Tonight the keys to the Store are with you. At the Gate a line waits with lanterns, in the Counting Room a machine prints numbers that do not match the shelves, and the sleds arrive at half past five.",
+      "Before you are people from different sides of the gate, a machine that counts what its ledger tells it to, and a door that is written in no book."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "care for people"
+      },
+      {
+        "id": "t",
+        "name": "trust in the system and progress"
+      },
+      {
+        "id": "o",
+        "name": "survival and caution"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "In Zavetje a winter is survived from a single store, and the store opens with a single key. Tonight the key is with you, the sleds arrive at half past five, and at the Gate a line waits with lanterns."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "Your progress is saved only in your browser.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "The Gate"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "The Halls"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "The Order"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "An Hour Less"
+    },
+    "c5": {
+      "mark": "V",
+      "name": "Morning"
+    }
+  },
+  "start": "kapija",
+  "endings": {
+    "e": {
+      "title": "Every Chimney",
+      "closing": [
+        "That night nobody in Zavetje sleeps, and not one stove goes out."
+      ]
+    },
+    "t": {
+      "title": "The Weekly Slip",
+      "closing": [
+        "The sleds are gone, and the Network begins counting the days."
+      ]
+    },
+    "o": {
+      "title": "Key on a Nail",
+      "closing": [
+        "The key stays in your palm, and the other half of winter waits behind the seal."
+      ]
+    }
+  },
+  "nodes": {
+    "kapija": {
+      "chapter": "c1",
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "Snow drives sideways. You stand in the shelter of the Gate, listening to the line behind the bars warm itself with voices. About twenty lanterns sway in the dark. In the passage a chair burns in the iron stove, and by morning the bench will too. A key to two seals hangs at your belt, and your fingers have gone numb."
+        },
+        {
+          "t": "The woman at the bars is Vesna, who leads the Street from the Gate. She has tied a scarf over half her face. She does not shout. Both hands grip the iron, and she looks at you the way you look at a door you know will give.",
+          "lead": "The woman at the bars."
+        },
+        {
+          "t": "“The Street wants the Grain Hall. The children have stopped crying, and that is worse.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "“I hear you. I'm not warm either.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The key was given to you three months ago, when Rade said he'd had enough of stairs. Until then you only carried it for show. You have never stood at the Gate on a night when someone must say yes or no.",
+          "lead": "The key."
+        },
+        {
+          "t": "“The key stays with me until half past five. After that the sleds are waiting for it.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“By half past five three more streets will have burned.”",
+          "who": "Vesna"
+        }
+      ],
+      "prompt": "Vesna keeps her hands on the bars, and snow gathers on her scarf.",
+      "choices": [
+        {
+          "id": "k_ulaz",
+          "text": "You open the small wicket in the gate and let Vesna look for herself.",
+          "next": "red",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_ceka",
+          "text": "You tell Vesna to wait, because before half past five you open nothing.",
+          "next": "red",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_popis",
+          "text": "You say you have to check Tally first.",
+          "next": "red",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "brojnica": {
+      "chapter": "c1",
+      "img": "brojnica",
+      "paragraphs": [
+        {
+          "t": "The lantern you lit burns behind you, and through the open door you can still see its golden glow.",
+          "lead": "A lantern behind you.",
+          "if": {
+            "pick": "s_sibica"
+          }
+        },
+        {
+          "t": "The old man told you only one thing: the sled drivers arrived without a single meal. Drivers, he said, ask nothing, and so nobody knows anything.",
+          "lead": "What the old man heard.",
+          "if": {
+            "pick": "s_pitaj"
+          }
+        },
+        {
+          "t": "Vesna follows you in, shakes the snow from her scarf and stops by the door, because no one offers her a chair. From here the Gate sounds like a distant sea.",
+          "lead": "The Counting Room.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "The Gate stays behind you and sounds like a distant sea: a cough, a footstep, now and then a song. The Counting Room is as warm as a room with one small stove can be.",
+          "lead": "The Counting Room.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "The room is small. On the wall hangs Tally: a brass box with a bell and a roll of paper, hissing like a frying pan, a tiny green lamp above the bell. By the stove, in a chair with no back, sits Rade, the former keyholder, coat open, his cough only just settled.",
+          "lead": "Tally and Rade."
+        },
+        {
+          "t": "On a shelf above Tally stand ledgers, ten or twelve, bound in the same gray cloth. Each has a year on it, and most a dark stain of tea or oil. The last one lies open with a pen beside it.",
+          "lead": "The ledgers above Tally."
+        },
+        {
+          "t": "“My shift ended at six. I stayed because the stove is warm here, and at home there's nothing left to burn.”",
+          "lead": "Rade by the stove.",
+          "who": "Rade"
+        },
+        {
+          "t": "“Then stay, and tell me what's going on.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Rade smiles on one side only, as if only half his face were left for jokes. Behind him hangs a board with the same numbers as over the Gate, in smaller letters, and under them, year after year, signatures: “stock in order.” No two match.",
+          "lead": "Signatures on the wall."
+        },
+        {
+          "t": "“Why is the green lamp lit?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The lamp says the stock is in order. It's been lit since Tally was put to work, and not once has it looked at the shelves.”",
+          "lead": "The green lamp.",
+          "who": "Rade"
+        },
+        {
+          "t": "Tally rings, the hissing stops, and a slip slides out. The numbers are dark and neat: two hundred barrels of oil, three hundred sacks of flour. At the bottom is an empty space, as if nobody had even tried to write what lies beneath.",
+          "lead": "The slip."
+        },
+        {
+          "t": "“Two hundred barrels. That's what it says.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Rade does not answer at once. He looks at the stove for a long while, as if it had the last word. Outside someone raps on the bars, dully, three times, and stops. Nobody lifts their head.",
+          "lead": "Knocking at the bars."
+        },
+        {
+          "t": "“It says. Tally counts what the ledger tells it to, and the ledger counts what we've already given away. A debt is kept as stock. The barrel stands on paper, and the shelf is empty.”",
+          "lead": "What Tally doesn't know.",
+          "who": "Rade"
+        },
+        {
+          "t": "Debt, stock, barrels that stand on paper and are missing from the shelf. Something chills in your chest, like looking down a well.",
+          "lead": "A well."
+        },
+        {
+          "t": "Three hundred sacks. Two hundred barrels. Every evening you read those numbers on the board above the Gate, and every evening it was enough. Now they sound like a prayer written by someone without faith.",
+          "lead": "The numbers on the board."
+        },
+        {
+          "t": "“And the Administration sends sleds for what it says.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“For what it says. And not out of malice. It's just that nobody in the Center has ever gone down to the shelf.”",
+          "lead": "What the Administration can't see.",
+          "who": "Rade"
+        },
+        {
+          "t": "Rade looks straight at you for the first time. His eyes are cloudy, but not empty: the weariness of a man who carried the truth in his pocket for years, like a key, and never dared show it to anyone.",
+          "lead": "Rade's look."
+        },
+        {
+          "t": "“Why did no one say anything?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I did. I wrote it in the ledger thirty times. The ledger was signed once, and my notes stand in the margins.”",
+          "lead": "Rade wrote it down.",
+          "who": "Rade"
+        },
+        {
+          "t": "Rade turns his face toward the small window, as if looking far away. Then he rises, slowly, with effort, and opens the stove to toss in a lump of coal. The flames move, and two shadows appear on the wall, yours and his.",
+          "lead": "The stove."
+        },
+        {
+          "t": "Behind the door, on a nail, hangs a key that is not yours: small, darker than the rest, unmarked. Rade doesn't look at it, and everything in the room looks at exactly that.",
+          "lead": "A key on a nail."
+        },
+        {
+          "t": "“Don't trust the slip. Go look for yourself. There's time for one hall before the sleds. And if you want to know what the ledger doesn't keep, go down the Descent.”",
+          "lead": "Rade points the way.",
+          "who": "Rade"
+        },
+        {
+          "t": "“I'll look. And I'll come back.”",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "There is time for one hall. Where do you go?",
+      "choices": [
+        {
+          "id": "b_uljara",
+          "text": "You go down to the Oil Hall, where what the Administration wants is kept.",
+          "next": "uljara",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "b_zitnica",
+          "text": "You go to the Grain Hall, where what the Street wants is kept.",
+          "next": "zitnica",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "b_spust",
+          "text": "You go down the Descent, where the ledger doesn't reach.",
+          "next": "spust",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "uljara": {
+      "chapter": "c2",
+      "img": "uljara",
+      "paragraphs": [
+        {
+          "t": "The Oil Hall is long as a street, with barrels in rows to the ceiling. The cold here has weight. Your lamp lights a short stretch, and the rest is lost in darkness that smells of iron and old oil.",
+          "lead": "The Oil Hall."
+        },
+        {
+          "t": "Vesna walks behind you counting aloud, as if afraid no one will believe her. After the twentieth barrel she stops counting and just looks.",
+          "lead": "Vesna counts.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Ice gathers under the ceiling, and a drop falls every few breaths. Somewhere behind you something creaks, then fades into silence.",
+          "lead": "A drop.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "You knock on the first barrel, then the second. They sound full, deep, like earth. The third is shallower. The fourth rings like a bell. From there, row after row, the sound changes: full, full, empty, empty, empty.",
+          "lead": "Knocking."
+        },
+        {
+          "t": "“These can't be full.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The knocking leads you deeper. The barrels stand closer here, with narrow passages between them where a child or a dog could fit. On the floor is a trail of wheels, fresh, from a cart that passed only hours ago. Someone has already been here tonight.",
+          "lead": "A fresh trail."
+        },
+        {
+          "t": "Some sixty empty barrels stand among the full ones, lined up so they won't be noticed. Someone dragged them here so Tally could count them. Each has its cap, its number, its place in the ledger, and not one holds a drop.",
+          "lead": "Empty barrels."
+        },
+        {
+          "t": "Going farther, you see chalk marks on the sides. Each reaches back to some old winter: “settled,” “lent to the Center,” “returned on paper.” The barrels aren't a lie. They are an account nobody closed.",
+          "lead": "Chalk marks."
+        },
+        {
+          "t": "The big doors of the Oil Hall are still sealed with lead, as if there were nothing inside to hide. The seal is smooth, stamped with the Administration's mark, and beneath it is a keyhole your key fits.",
+          "lead": "The seal on the doors."
+        },
+        {
+          "t": "“Eighty full. The rest is paper.”",
+          "lead": "You count aloud.",
+          "who": "Ti"
+        },
+        {
+          "t": "Your words echo through the hall and take a long time returning, as if even the wall disagreed with the sum. Overhead ice drips, three times, then stops.",
+          "lead": "Echo."
+        },
+        {
+          "t": "The wheel trail leads to one barrel and stops. It is the only one with its cap open, and around the cap are fresh smears of oil. Someone took one can, no more, and closed it again. Took exactly as much as it takes to warm a single room.",
+          "lead": "One can."
+        },
+        {
+          "t": "“Someone was here before me.”",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Some sixty empty barrels stand among the full ones, and the sleds will be here soon.",
+      "choices": [
+        {
+          "id": "u_broji",
+          "text": "You count the empty barrels and chalk the number on the wall.",
+          "next": "ranko",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "u_dokaz",
+          "text": "You load one empty barrel on a cart to show the Administration.",
+          "next": "ranko",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "zitnica": {
+      "chapter": "c2",
+      "img": "zitnica",
+      "paragraphs": [
+        {
+          "t": "The Grain Hall is under hoarfrost. Sacks are stacked into walls, white as if made of lime, and your breath hangs in the air before slowly falling. The big doors of the hall are sealed with the lead seal your key carries.",
+          "lead": "The Grain Hall."
+        },
+        {
+          "t": "The sacks in the front rows are heavy, full, dry. You pat one with your palm, and the flour answers with a dull, healthy sound. Six rows back the sound changes. Behind the front wall the sacks stand only to hold their shape.",
+          "lead": "Sacks."
+        },
+        {
+          "t": "Vesna runs her palm over a sack and keeps it there a long time, as if checking whether it is warm.",
+          "lead": "Vesna and the sack.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Through the wall, faintly, comes the Gate: a cough, a footstep, a song without words. The hall listens to the same thing you do.",
+          "lead": "A sound through the wall.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "“The front rows are full. Behind them there are only shapes.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On the wall, in chalk, someone wrote numbers long ago: three hundred, two hundred eighty, two hundred fifty. Each winter takes a row, and nobody erases the old number. The last number has stayed the same, as if the wall refused to remember less.",
+          "lead": "Numbers on the wall."
+        },
+        {
+          "t": "You count. What stands in the front rows wouldn't carry Zavetje to spring. But it would feed the Gate for weeks, if shared at once and without counting. The seal swings on your key.",
+          "lead": "The sum."
+        },
+        {
+          "t": "You set your lamp on a sack and take a handful of flour. It is cold as sand, but in your palm it begins to breathe: thin steam from your hand, and underneath it the smell of grain, not of winter. It is good flour. There is just little of it.",
+          "lead": "A handful of flour."
+        },
+        {
+          "t": "Through the wall you now hear a child's voice, thin and insistent. It asks something, and nobody answers. The sound stops the way it began, for no reason, and all that remains is the crackling of frost on the sacks.",
+          "lead": "A child behind the wall."
+        },
+        {
+          "t": "“A seal breaks once. After that, there is no going back.”",
+          "who": "Ti"
+        },
+        {
+          "t": "One sack in the front row has a torn corner. A thin stream pours from the hole, already frozen stiff, like a white beard. Someone has been taking from here, a little, regularly, for years. You don't know who, but you understand why.",
+          "lead": "A torn corner."
+        }
+      ],
+      "prompt": "The seal on the big doors of the Grain Hall hangs from your key.",
+      "choices": [
+        {
+          "id": "z_lomi",
+          "text": "You break the seal and open the big doors toward the Gate.",
+          "next": "ranko",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "z_zadnji",
+          "text": "You go to the back rows to count how much is really left.",
+          "next": "ranko",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "spust": {
+      "chapter": "c2",
+      "img": "dno",
+      "paragraphs": [
+        {
+          "t": "The Descent is a narrow tunnel sloping down through the rock, with rails no cart has run on in living memory. The walls are icy and shine like glass. Your lamp draws a circle on the steps, and beyond it darkness drops away.",
+          "lead": "The Descent."
+        },
+        {
+          "t": "Halfway down a girl in a hood steps into the circle. Her name is Dunja, she is fifteen, and she carries messages through the Store because the lift doesn't work. Her boots are two sizes too big, and the lamp on the band around her forehead hides her eyes. She isn't surprised. As if she'd been waiting for you.",
+          "lead": "Someone on the steps."
+        },
+        {
+          "t": "“The Store is deeper than the ledger says.”",
+          "who": "Dunja"
+        },
+        {
+          "t": "“Deeper? How much deeper?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A whole hall. Its door is low, with an old lead seal. I haven't touched it, but I've heard the barrels ring like full ones.”",
+          "lead": "What Dunja knows.",
+          "who": "Dunja"
+        },
+        {
+          "t": "What Rade called “what the ledger doesn't keep” takes shape: a hall beneath the hall, under the Store itself, that neither Tally nor the Administration knows about.",
+          "lead": "A hall beneath the hall."
+        },
+        {
+          "t": "Dunja's lamp lights the tunnel wall, and scratched into the ice stand years, cut with a knife, one number under another, like a prisoner's tally marks. The last is this year, and beside it is an empty space for the next.",
+          "lead": "Years on the wall."
+        },
+        {
+          "t": "“Why didn't you tell anyone?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Who? Rade doesn't care, you can't tell Tally, and the Administration only comes with an order. No one else has come down.”",
+          "lead": "Why Dunja keeps quiet.",
+          "who": "Dunja"
+        },
+        {
+          "t": "Dunja laughs, briefly, and the sound breaks on the icy walls and returns as if someone else were laughing too. Then she turns serious. She runs a finger along the wall, and a trail of frost remains on the ice, clear as a signature.",
+          "lead": "Laughter on the ice."
+        },
+        {
+          "t": "“It's cold down here too. But down here it's quiet, and up there is the line.”",
+          "who": "Dunja"
+        },
+        {
+          "t": "Icy vapor rises from the wall and unwinds between you. The tunnel bends here and goes deeper still, and the sound of your steps turns deep and slow. Dunja steps ahead first and stops, to see whether you will follow.",
+          "lead": "The tunnel bends."
+        },
+        {
+          "t": "The door at the bottom is low and black with frost. Its seal is of old lead, rough, stamped with a mark nobody in Zavetje can read anymore. Dunja holds the lamp behind you, and the steam of her breath bends the light.",
+          "lead": "The Bottom."
+        },
+        {
+          "t": "Beneath the door is a small service hatch, big enough for one person. Dunja opens it with a knife, and you crawl through. Inside are some sixty barrels lined up like an army and a heap of sacks with a mark you don't know. Everything is old, and nothing is empty.",
+          "lead": "What is in the Bottom."
+        },
+        {
+          "t": "“I knew it. It's full, and nobody knows it's here. Not even the Administration.”",
+          "who": "Dunja"
+        },
+        {
+          "t": "You knock on the barrels, as in the Oil Hall. All of them sound full: deep, dull, like earth after rain. Some hold oil, some something thicker. On one, in red paint, is a year older than your key and older than Rade's.",
+          "lead": "The sound of full barrels."
+        },
+        {
+          "t": "On the wall hangs an old sheet of paper, gray with frost. Maybe it's a map, maybe a list: a drawing of the hall with arrows and columns of numbers, and beside every column one word in the same red ink: “keep.” Whoever wrote this did not believe winter would be short.",
+          "lead": "Paper on the wall."
+        },
+        {
+          "t": "“Who left all this here?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Someone who knew winter would one day come earlier than the ledger says.”",
+          "lead": "An answer from the Bottom.",
+          "who": "Dunja"
+        },
+        {
+          "t": "“If I open this, it can't be closed again.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Dunja doesn't answer. She looks at you, not at the seal, and for the first time looks like what she is: a girl of fifteen waiting for someone to find the same thing she did.",
+          "lead": "Dunja waits."
+        },
+        {
+          "t": "The seal on the main bolt isn't broken. Whoever placed it didn't want anyone to open it in a hurry, and didn't want it forgotten either. The lead is stamped with the same mark as on the heap of sacks: two circles and a line through them.",
+          "lead": "The old seal."
+        },
+        {
+          "t": "From the top of the Descent comes a dull thud, as if someone had set a load down on stone. Dunja hears it before you do. She lifts her lamp and for a moment you see her face: sharp, young, frightened and stubborn.",
+          "lead": "A thud from above."
+        }
+      ],
+      "prompt": "The Bottom is full, and nobody beyond these two lamps knows it exists.",
+      "choices": [
+        {
+          "id": "d_plomba",
+          "text": "You break the old seal and open the Bottom as a third hall.",
+          "next": "ranko",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "d_ostavi",
+          "text": "You leave the seal untouched and close the hatch behind you.",
+          "next": "ranko",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "ranko": {
+      "chapter": "c3",
+      "img": "brojnica",
+      "paragraphs": [
+        {
+          "t": "Someone got into the Counting Room before you. A man in a clean gray coat stands by Tally reading a slip, touching it no more than he must. A leather case lies on the table, white gloves spotless on top of it. His name is Ranko, and he came from the Center by sled.",
+          "lead": "Someone in the Counting Room."
+        },
+        {
+          "t": "His glance falls on the oil on your sleeves, and he doesn't ask where you've been. He knows.",
+          "lead": "Oil on your sleeves.",
+          "if": {
+            "pick": "b_uljara"
+          }
+        },
+        {
+          "t": "Through the wall of the Grain Hall the Gate grows louder, because the big doors are open, and Ranko hears it before you can say a word. He doesn't raise an eyebrow. He only sets the slip down with care.",
+          "lead": "The open doors.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "There is flour on your sleeves, and Ranko notices it and asks nothing. Rade by the stove stays silent about the same thing.",
+          "lead": "Flour on your sleeves.",
+          "if": {
+            "pick": "z_zadnji"
+          }
+        },
+        {
+          "t": "The empty barrel you brought stands by the door, on its cart. Ranko looks at it longer than at the slip, but asks nothing.",
+          "lead": "The empty barrel.",
+          "if": {
+            "pick": "u_dokaz"
+          }
+        },
+        {
+          "t": "Icy dust from the Bottom clings to your knees, and old lead lies in your palm. Rade notices and says nothing, like a man who knew someone would find it.",
+          "lead": "Lead in your palm.",
+          "if": {
+            "pick": "d_plomba"
+          }
+        },
+        {
+          "t": "Dust from the Bottom clings to your boots. Rade notices and says nothing, like a man who knew someone would bring it.",
+          "lead": "Dust from the Bottom.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "“Forgive me for coming in unannounced. I arrived by sled an hour ago. The Administration sends me.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“I haven't read the order yet.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko looks tired and very neat. His eyes are red at the edges, as if he hasn't slept in two days, but his voice stays calm. He keeps his hands folded, like a man who has learned not to startle a room.",
+          "lead": "The man from the Center."
+        },
+        {
+          "t": "He takes an order with three seals from the case and lays it on the table without hurry. The sleds are waiting in the Yard. By half past five all the oil is to be loaded, barrel by barrel, and the blizzard arrives as soon as it gets light.",
+          "lead": "The order."
+        },
+        {
+          "t": "“Show it to me.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The order bears three seals: red, gray and green, each pressed into wax cracked at the edge, as if someone had pressed too hard. Ranko touches them with a fingertip, one by one, and you realize he believes in them more than in any number.",
+          "lead": "Three seals."
+        },
+        {
+          "t": "“The oil goes first, because without oil the Center stops. The flour comes later, and in return the Administration introduces the Network: a weekly slip for every household, the same for all, with no Gate and no line.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“The same for all. And empty.”",
+          "who": "Rade"
+        },
+        {
+          "t": "“Tally says two hundred barrels. The shelf says fewer.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko is careful: he never raises his voice or threatens. There is no contempt or arrogance in his look, only the rare certainty of people who have lived nothing firsthand and know everything. He speaks as if retelling something read in a thousand places.",
+          "lead": "How Ranko speaks."
+        },
+        {
+          "t": "Ranko does not get angry. He smiles the tired, courteous smile of a man who has explained this at many doors. He moves the slip exactly a finger's width, as if every word might damage it.",
+          "lead": "Ranko smiles."
+        },
+        {
+          "t": "“The shelf is passing. The ledger is permanent. What the ledger says is Zavetje.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "Ranko says “the Center” the way people in Zavetje say “spring”: with shy reverence, like a word that belongs to other people. In that moment you realize he has never stood before a shelf himself.",
+          "lead": "The word Center."
+        },
+        {
+          "t": "“Have you ever stood in front of a shelf?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“There you go. That's why I held the key, and not the ledger.”",
+          "who": "Rade"
+        },
+        {
+          "t": "Ranko is the only one in the room who isn't chilled. His coat is warm, his cheeks pink, and when he moves, steam lingers around his shoulders like a halo. Everyone watches him with distrust, and he knows and bears it.",
+          "lead": "A warm coat."
+        },
+        {
+          "t": "Ranko looks at Rade a moment longer, then at you again. The room is quiet, only Tally hissing, and the fire in the stove sinking. The Gate can be heard, like a distant sea that never stops.",
+          "lead": "Silence in the Counting Room."
+        },
+        {
+          "t": "“What happens if I stop?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The sleds stay until half past five, and after that they leave, with you or without you. The blizzard doesn't wait for negotiations.”",
+          "lead": "What the blizzard says.",
+          "who": "Ranko"
+        },
+        {
+          "t": "“I understand. Sign, and everything will go its course.”",
+          "who": "Ranko"
+        }
+      ],
+      "prompt": "Ranko holds the pen and waits. There's time for one more place before the sleds.",
+      "choices": [
+        {
+          "id": "r_gore",
+          "text": "You go with Ranko to the Office to read the order to the end.",
+          "next": "kancelarija",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "r_kapija",
+          "text": "You take Ranko to the Gate to see the people he is addressing.",
+          "next": "kapija2",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "r_dvoriste",
+          "text": "You go out to the Yard to see the sleds and what exactly they are waiting for.",
+          "next": "dvoriste",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "kancelarija": {
+      "chapter": "c3",
+      "img": "kancelarija",
+      "paragraphs": [
+        {
+          "t": "The Office is an upper room above the Gate, with one window and one table. Ranko rearranged it within an hour: case, pen, a clean glass of water. Outside, snow raps on the glass like fingers.",
+          "lead": "The Office."
+        },
+        {
+          "t": "On the wall hangs an inked map of the valley with three roads: one to the Center, two to villages no longer on the list. Beside it, on a nail, hangs a small photograph of a child in a woolen hat. Ranko doesn't look at it while he speaks, but he doesn't take it down.",
+          "lead": "A map and a photograph."
+        },
+        {
+          "t": "“Sit. Read it to the end. I hide nothing; it's just that nobody ever reads me.”",
+          "lead": "Ranko offers a chair.",
+          "who": "Ranko"
+        },
+        {
+          "t": "The order has two pages. The first says what Ranko said: oil, sleds, half past five. The second, in smaller letters: all the oil in the Oil Hall goes to the sleds, and the first slip of the Network arrives in ten days.",
+          "lead": "The second page."
+        },
+        {
+          "t": "“Ten days without oil.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Zavetje has survived worse. The Network is the only way to share oil fairly, and not with those who shout loudest.”",
+          "lead": "What Ranko says.",
+          "who": "Ranko"
+        },
+        {
+          "t": "It doesn't sound like a lie. It sounds like a man who believes in the corridors he has walked: everything is calculated, from the Center to the last stove, and the sum is often right.",
+          "lead": "A sum that makes sense."
+        },
+        {
+          "t": "“And if the sum isn't right?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then someone in the Center will see it first, and report it. That's how it goes. It has always gone that way.”",
+          "lead": "How it goes.",
+          "who": "Ranko"
+        },
+        {
+          "t": "Does anyone in the Center ask anyone in Zavetje? Ranko doesn't answer, and you don't ask aloud. Your eyes pass over the photograph, over the map, over the glass of water nobody has touched.",
+          "lead": "A question without an answer."
+        },
+        {
+          "t": "In the corner of the table lies another sheet, forgotten. On it is written: “level all stores by the end of the week.” Zavetje is third on the list, below two villages that are no longer on the map.",
+          "lead": "The list."
+        },
+        {
+          "t": "Your hand is near the pen. Rade stayed downstairs, and Tally counted what it counted. On the table beside the order lies the empty barrel you brought, a strange kind of witness.",
+          "lead": "The pen.",
+          "if": {
+            "pick": "u_dokaz"
+          }
+        }
+      ],
+      "prompt": "Ranko holds the pen above the line for the signature, and the snow keeps rapping at the window.",
+      "choices": [
+        {
+          "id": "k_potpis",
+          "text": "You sign that you received the order and leave carrying it out until half past five.",
+          "next": "sirena",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "k_odbij",
+          "text": "You hand the order back and say you'll sign only at half past five.",
+          "next": "sirena",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "kapija2": {
+      "chapter": "c3",
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "The Gate has grown in the meantime. Lanterns now run to the end of the road, and behind them you see shapes that came from the upper streets, with children's sleds and sacks over their shoulders. The stove in the passage burns lower and lower, and the air smells of furniture smoke.",
+          "lead": "The Gate."
+        },
+        {
+          "t": "Through the open doors of the Grain Hall sacks pass from hand to hand, in a quiet, practiced chain, as if someone had been preparing it for a long time. Nobody shouts. All you hear is rustling.",
+          "lead": "Sacks from hand to hand.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "Vesna stands in the same place, by the bars, as if she hadn't moved since you left. Snow from her scarf has reached her shoulders.",
+          "lead": "Vesna at the bars.",
+          "if": {
+            "notPick": "z_lomi"
+          }
+        },
+        {
+          "t": "“You brought him. Let him look.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "Ranko walks right along the line, very slowly, and doesn't look at the ground. His eyes stop on a child in an oversized coat holding an empty tin box. The child looks back at him, without fear and without hope.",
+          "lead": "Ranko by the line."
+        },
+        {
+          "t": "“Look at them. This is Zavetje.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I understand. I'm only saying: if we stop, it isn't only Zavetje that stops.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“I'm not asking for the Center to stop. I'm asking that nothing stop here.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "An old woman with a sheet around her shoulders comes up to them. She offers Ranko a drink from her cup, warm linden tea she has kept somewhere. Ranko takes the cup in both hands, the way you take something you don't deserve, and doesn't drink.",
+          "lead": "Linden tea."
+        },
+        {
+          "t": "From the line comes a cough, then another, then a song without words, soft, barely audible. The voice is thin as a wire, but it runs from the feet to the head, and without agreeing, everyone aligns to it until it sounds like one voice.",
+          "lead": "A song from the line."
+        },
+        {
+          "t": "“This isn't in the reports I've read.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“Reports aren't written at the Gate.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "“Everyone here has something. No one has enough.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“That's why the Street counts. Not to ask for more, but to know what there is.”",
+          "lead": "Why the Street counts.",
+          "who": "Vesna"
+        },
+        {
+          "t": "The wind brings smoke from the passage. The lanterns all lean together, as if one breath had moved them, and one goes out. Nobody relights it, because there is no oil to spare on a single lantern.",
+          "lead": "The lantern that goes out."
+        }
+      ],
+      "prompt": "The line waits, and Ranko and Vesna look at you, not at each other.",
+      "choices": [
+        {
+          "id": "g_vesna",
+          "text": "You let Vesna address the line in your name.",
+          "next": "sirena",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "g_ranko",
+          "text": "You let Ranko explain to the line what the Network is.",
+          "next": "sirena",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "g_ceka",
+          "text": "You tell the line you'll have your say at half past five.",
+          "next": "sirena",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "dvoriste": {
+      "chapter": "c3",
+      "img": "dvoriste",
+      "paragraphs": [
+        {
+          "t": "The Yard is a wide flat field under snow, walled by rock on three sides. Five heavy sleds stand in a row, each with a tractor in front, headlights cutting tunnels of light through the blizzard. The drivers warm their hands over the engines. None of them looks at you.",
+          "lead": "The Yard."
+        },
+        {
+          "t": "The planks on the sleds are laid out for two hundred barrels, not one fewer. Someone in the Center calculated exactly how many fit, and then took the number from the ledger.",
+          "lead": "Room for two hundred."
+        },
+        {
+          "t": "Dunja is already there, on the slanted beam of the first sled, with the lamp around her forehead. She waves as if you hadn't seen each other in a long time.",
+          "lead": "Dunja on the sled.",
+          "if": {
+            "pick": "b_spust"
+          }
+        },
+        {
+          "t": "A girl in a hood sits on the slanted beam of the first sled, with a lamp around her forehead. Her name is Dunja, she is fifteen, and she carries messages through the Store.",
+          "lead": "Someone on the sled.",
+          "if": {
+            "notPick": "b_spust"
+          }
+        },
+        {
+          "t": "“The drivers say they're paid by the barrel. Empty or full, no difference.”",
+          "who": "Dunja"
+        },
+        {
+          "t": "“No difference?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The ledger is the ledger. When the sleds reach the Center, they'll count what arrives. The debt will be closed on paper.”",
+          "lead": "What no difference means.",
+          "who": "Dunja"
+        },
+        {
+          "t": "The nearest driver lowers his hood and looks at you for the first time. He has cracked lips and tired eyes, and his hands shake over the engine, not from the cold. He says nothing, as if he knows nobody will answer him.",
+          "lead": "A driver."
+        },
+        {
+          "t": "“Where did you set out from?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“From the Center. Three days over the ice. They say they passed two other stores before this, and in both the sleds were left half empty.”",
+          "lead": "Where the sleds came from.",
+          "who": "Dunja"
+        },
+        {
+          "t": "“And you? What do you get?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The drivers? Food and a day's pay. If they get back. If they're buried in snow, nothing.”",
+          "lead": "What the drivers get.",
+          "who": "Dunja"
+        },
+        {
+          "t": "The nearest driver nods, quietly, as if confirming a sum he calculated long ago. Then he pulls up his hood and turns to the engine, so that only his back shows.",
+          "lead": "The driver nods."
+        },
+        {
+          "t": "The fifth tractor starts its engine. The noise shakes the ice underfoot, then fades. The drivers look at one another, and then all look at you. There's no more time for watching, and the cold cuts through even the thickest coats.",
+          "lead": "Engines."
+        }
+      ],
+      "prompt": "The first driver lowers the hook and waits for a signal.",
+      "choices": [
+        {
+          "id": "d2_utovar",
+          "text": "You give the signal to load the first twenty barrels.",
+          "next": "sirena",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "d2_zadrzi",
+          "text": "You tell the drivers not to touch a single barrel without your word.",
+          "next": "sirena",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "sirena": {
+      "chapter": "c4",
+      "img": "brojnica",
+      "paragraphs": [
+        {
+          "t": "The tower bell strikes three times, long, and the echo rolls down the valley. That is how a change of order is announced in Zavetje, and nobody has heard it in years. Everyone arrives in the Counting Room, snow on their shoulders. Tally hisses louder and a new slip slides out, still warm.",
+          "lead": "The bell."
+        },
+        {
+          "t": "The slip bears a single sentence, no numbers: the sleds leave at half past four. The blizzard is faster than they calculated.",
+          "lead": "A new slip."
+        },
+        {
+          "t": "“That isn't me. That's the Center. The order stands, only the time has shortened.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“So the sleds leave before dawn.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“An hour less. Winter doesn't consult the ledger.”",
+          "who": "Rade"
+        },
+        {
+          "t": "The green lamp on Tally burns as before, calm and indifferent. Ranko looks at it longer than he should, like a man seeing for the first time that a light is only a light. Vesna at the door tightens her scarf, and Dunja slips in and stands against the wall.",
+          "lead": "The green lamp."
+        },
+        {
+          "t": "A wind from the door blows in tiny crystals of frost that circle the room like stars and settle on the slip. Ranko wipes it with his sleeve, but the ice has already gotten into the letters, and they look as if they're weeping.",
+          "lead": "Ice on the slip."
+        },
+        {
+          "t": "The stove crackles. Outside, over the roof, the wind shifts from a roar to a whistle. You have an hour, no more, and four people looking at you, each differently.",
+          "lead": "An hour."
+        },
+        {
+          "t": "“An hour. And after that the sleds leave, whatever happens.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nobody sleeps at the Gate. They're waiting for someone to come out with the key.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "“I know. I can hear them through the wall.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Dunja steals glances at Ranko. She has never seen anyone from the Center, and he looks like an ordinary man who has worn gloves too long. She traces a line on the wall with a finger, and her lips move without sound.",
+          "lead": "Dunja watches Ranko."
+        },
+        {
+          "t": "“You know the way to the Bottom, I can tell by your boots. The key's on the nail behind the door, if you need it.”",
+          "lead": "What Rade knows.",
+          "who": "Rade",
+          "if": {
+            "pick": "b_spust"
+          }
+        },
+        {
+          "t": "“There's one place that isn't in the ledger: the Bottom. The key's on the nail behind the door, if you need it. Dunja knows the way.”",
+          "lead": "What Rade knows.",
+          "who": "Rade",
+          "if": {
+            "notPick": "b_spust"
+          }
+        },
+        {
+          "t": "Ranko turns his head toward Rade, slowly, as if he had just heard something he wasn't meant to. Vesna leans against the doorframe, and Dunja lifts the lamp off her forehead for the first time. Rade looks at no one. He looks at the stove, as if everything he has said stays there.",
+          "lead": "Looks in the Counting Room."
+        },
+        {
+          "t": "“The Bottom? A hall that isn't in the ledger?”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“The Bottom isn't my business. My business is the line waiting outside.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "“Everything that stands is in somebody's ledger. Just not in yours.”",
+          "who": "Rade"
+        },
+        {
+          "t": "Rade raises a hand toward the nail, very briefly, then lowers it. The gesture is small, but everyone sees it: the key nobody was allowed to mention is no longer a secret.",
+          "lead": "A key on the nail."
+        },
+        {
+          "t": "“How many halls does the Store have, Rade?”",
+          "who": "Ti",
+          "solo": true
+        },
+        {
+          "t": "“Three. And the ledger knows of two.”",
+          "who": "Rade",
+          "solo": true
+        }
+      ],
+      "prompt": "What do you do with the last hour?",
+      "choices": [
+        {
+          "id": "p_zvono",
+          "text": "You ring the town bell to gather the Streets at the Gate.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "p_listic",
+          "text": "You enter what you saw into Tally and ask for a slip.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "p_kljuc",
+          "text": "You take the key off the nail and put it in your pocket.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Outside, at the Gate, you hear the line shift. The bell has gathered all the Streets, and there are now more of them than the lanterns can light.",
+          "lead": "The bell gathered the Streets.",
+          "if": {
+            "pick": "p_zvono"
+          }
+        },
+        {
+          "t": "The slip in your hand is the first one that doesn't lie: you entered the numbers, and Tally only printed them. Two hundred has fallen to what the shelf truly holds.",
+          "lead": "A slip without lies.",
+          "if": {
+            "pick": "p_listic"
+          }
+        },
+        {
+          "t": "The key to the Bottom chills your pocket like a stone. Nobody mentions it, and everyone mentions it with their eyes.",
+          "lead": "A key in your pocket.",
+          "if": {
+            "pick": "p_kljuc"
+          }
+        },
+        {
+          "t": "Tally hisses one last time. Rade stands by the stove, Ranko by the table, Vesna at the door, and nobody sits. The key is in your hand, and for the first time tonight you can't tell how much of your fingers' trembling is cold and how much is what's coming.",
+          "lead": "Everyone in the Counting Room."
+        },
+        {
+          "t": "“Two hundred barrels is the ledger. What the shelf holds is another number.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“What's real is what the Center can calculate. The order is clear. When we finish, the Network begins to work.”",
+          "lead": "What Ranko says.",
+          "who": "Ranko"
+        },
+        {
+          "t": "“The Street has said what it needs. We're all waiting for the key.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "In the room you hear every sound nobody normally hears: your pulse in your temples, a boot scraping, coal softly collapsing in the stove. It all adds up to one tone, as if the room were trying to say something it cannot.",
+          "lead": "Every sound."
+        },
+        {
+          "t": "Dunja stands against the wall and watches your hand, not you, trying to read what it will do, the way you read an animal in the dark. Rade looks at no one and presses a fist to his chest, where his cough knocks.",
+          "lead": "Eyes on the key."
+        },
+        {
+          "t": "“One more moment. I'm not finished.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko lays the pen on the table, not loudly, but loudly enough to be heard. For the first time tonight he looks less like an envoy than like a man waiting. The child's photograph is in his pocket, pressed to his chest, as if it stayed there to keep him warm.",
+          "lead": "Ranko waits."
+        },
+        {
+          "t": "“I'm not asking you to believe in the Center. I'm asking you to believe in the sum.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“The stove burns for another hour. Don't count on more than that.”",
+          "who": "Rade"
+        },
+        {
+          "t": "Tally's bell chimes once, softly, and fades. The green lamp burns as on every night, indifferent to everything being prepared in the room. It knows neither red nor yellow, only green.",
+          "lead": "The green lamp."
+        },
+        {
+          "t": "“I can't wait until morning.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The wind outside turns thin and high, like a wire. The window shudders in its frame, and in the room all you hear is your breath and the dull tick of Tally, which now counts nothing.",
+          "lead": "A whistle outside."
+        },
+        {
+          "t": "The door of the Counting Room swings half open, and wind carries snow halfway across the floor. In it stands a child in an oversized coat with a tin box. The child doesn't come in, only looks at you, the way you look at someone who has the key.",
+          "lead": "A child at the door."
+        }
+      ],
+      "prompt": "The sleds leave in an hour. The seals wait for your hand.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "You break the seals of the Oil Hall and the Grain Hall and open the Gate to everyone.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "You sign the order: all the oil goes onto the sleds, and the Network takes over.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "You break only one seal, and the rest stays sealed until spring.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "You do nothing and listen to the stove crackle.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "chapter": "c5",
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "The seal crackles under the key like thin ice, and the big doors of the Oil Hall and the Grain Hall open together, for the first time in one night. Cold pours from the halls like a river, and the line at the Gate moves toward it without pushing or a sound.",
+          "lead": "Seals breaking."
+        },
+        {
+          "t": "Vesna is first through the doors, but takes nothing. She stops, turns to the line and spreads her arms, as if counting. She has been through the halls once, so she knows where everything stands.",
+          "lead": "Vesna at the hall doors.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Vesna doesn't go in. She stands on the threshold counting heads, one by one, as if checking once more that everyone is here.",
+          "lead": "Vesna on the threshold.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "The Grain Hall gives what it began giving earlier: sacks pass from hand to hand, the rhythm the same, only stronger.",
+          "lead": "Sacks in rhythm.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "The child in the oversized coat stops on the threshold of the Oil Hall and looks long at the empty barrels. Then she sets the tin box on the floor, carefully, as if it were precious. She says nothing, and in the end the box fills.",
+          "lead": "The child with the box."
+        },
+        {
+          "t": "“Let every hand carry what it can. And let nobody run.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "“In turn. Children first, and those who can't stand.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The line moves as one body. Someone lights a lantern that had gone out, then another, then a third, and the Gate fills with light slowly, one after another, as if someone were putting color back into a picture.",
+          "lead": "The Gate lights up."
+        },
+        {
+          "t": "Ranko has come to the Gate and stands to one side. He leaves the order on the stone threshold, unsigned. He isn't angry. He only looks like a man who doesn't know what the next line says.",
+          "lead": "An unsigned order."
+        },
+        {
+          "t": "“The sleds will leave empty. I have to take that to the Center.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“Tell them the stoves are burning in Zavetje.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko turns toward the line, nods briefly, in farewell, and goes toward the Yard through the blizzard, without his gloves, because he left them on the table in the Counting Room.",
+          "lead": "Ranko leaves."
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c5",
+      "img": "jutro",
+      "paragraphs": [
+        {
+          "t": "By half past four smoke rises from every roof in Zavetje. It is not straight as before: each chimney breathes differently, one short, another long, a third in circles. From the ridge it looks like people calling to each other.",
+          "lead": "Chimneys."
+        },
+        {
+          "t": "The sleds leave at first light with empty planks, Ranko on the last one. The blizzard arrives at dawn and closes the road behind them. What he will say in the Center, even he doesn't know.",
+          "lead": "The sleds leave."
+        },
+        {
+          "t": "The snow outside stops being an enemy. Children sit on the steps of the Store eating bread from yesterday's flour, and nobody asks where it came from. An old woman with a sheet gives a piece to her neighbor, the neighbor to Vesna, Vesna to someone else.",
+          "lead": "Bread on the steps."
+        },
+        {
+          "t": "The Bottom is open. Dunja leads people down the Descent in groups of five, and each time they come back with one barrel on a cart. It will go on like that until spring.",
+          "lead": "Down the Descent.",
+          "if": {
+            "pick": "d_plomba"
+          }
+        },
+        {
+          "t": "The Bottom stays locked. Dunja knows where it is, Rade knows where it is, and until spring the two of them will keep quiet about it, the way you keep quiet about something that may one day be needed.",
+          "lead": "A secret beneath the Store.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "The Counting Room is crowded for the first time: everyone sits, even on crates. Rade holds a mug of hot water that tastes of salt, and Tally hisses above them, undisturbed. The green lamp burns, as it has all these years.",
+          "lead": "A full room."
+        },
+        {
+          "t": "Rade goes to the stove and leaves its door open. He doesn't ask whether it's allowed, doesn't ask who will pay. Warmth flows out of the room and down the corridor toward the Gate, like a thin voice going to call the others.",
+          "lead": "The open stove."
+        },
+        {
+          "t": "“Nothing in the ledger matches the shelf.”",
+          "who": "Ti",
+          "solo": true
+        },
+        {
+          "t": "“The ledger holds for those who write it. It seems we were writing another one.”",
+          "who": "Rade",
+          "solo": true
+        },
+        {
+          "t": "“The Street says the halls stay open as long as there's something to share.”",
+          "who": "Vesna",
+          "solo": true
+        },
+        {
+          "t": "Dunja takes the lamp off her forehead and sets it on the table, for the first time since you've known her. Without it she looks younger and less frightened, and for the first time she laughs, quietly, her real laugh.",
+          "lead": "Dunja without her lamp."
+        },
+        {
+          "t": "As the blizzard settles, two lights appear on the road below the Store that don't belong to the sleds. They move slowly, straight toward the Gate, and nobody in Zavetje knows who has sent them.",
+          "lead": "Two lights."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "The pen crosses the line, one stroke, and the order is signed. Ranko takes it with care, in both hands, like something long awaited, and for the first time since he walked into the Counting Room he truly smiles.",
+          "lead": "The signature."
+        },
+        {
+          "t": "Through the small window of the Counting Room you can see the Yard. The sound of barrels on the sled planks swallows every other sound. The drivers work without a word, with practiced movements, like people nobody ever asks anything.",
+          "lead": "Loading."
+        },
+        {
+          "t": "The first twenty barrels already lie on the sleds, because you gave the signal earlier. The rest goes fast, like water that has found its way.",
+          "lead": "The first twenty.",
+          "if": {
+            "pick": "d2_utovar"
+          }
+        },
+        {
+          "t": "The drivers wait for your signal, and when it comes, everything moves at once, as if someone had let out a held breath.",
+          "lead": "A signal to the drivers.",
+          "if": {
+            "pick": "d2_zadrzi"
+          }
+        },
+        {
+          "t": "Eighty full barrels fit on the first two sleds. The other three go with empty planks, tarpaulin pulled over nothing. The drivers count, look at one another, and say nothing. The Center will get empty planks in its report, filled in with other numbers.",
+          "lead": "Empty sleds."
+        },
+        {
+          "t": "“Write down the empty planks too. Let them stand in the report.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“That I can write down. Just give me the numbers.”",
+          "lead": "What Ranko can do.",
+          "who": "Ranko"
+        },
+        {
+          "t": "Ranko writes something on a blank sheet: numbers he doesn't know, given to him by you. He neither interrupts nor argues. He writes like a man who for the first time has something that isn't in the ledger.",
+          "lead": "Ranko writes."
+        },
+        {
+          "t": "“The first slip of the Network arrives in ten days. You'll recognize it: it will be the same for everyone.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“Ten days is long, and the stove is small.”",
+          "who": "Rade"
+        },
+        {
+          "t": "“Until then, every household gets half a sack from the Grain Hall.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The engines in the Yard start one by one, and the hum merges into one deep tone, as if the earth were waking. Ranko doesn't look toward them. He gazes at Tally and rests a hand on the box, the way you hold an animal to calm it.",
+          "lead": "The hum of engines."
+        },
+        {
+          "t": "Rade takes off his coat and hangs it on the nail beside Tally. For the first time tonight he looks like a man who has somewhere to go.",
+          "lead": "Rade and the coat."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c5",
+      "img": "jutro",
+      "paragraphs": [
+        {
+          "t": "The sleds leave at dawn, long and slow, a light on each one. The blizzard follows them to the top of the valley and leaves them there. For the first time tonight nobody shouts.",
+          "lead": "The sleds leave."
+        },
+        {
+          "t": "The Yard is empty, and the drivers rest by their engines, hoods over their faces. One holds a small barrel of oil tied with rope and doesn't know whom to leave it with. Dunja walks past and takes it without a word.",
+          "lead": "A small barrel of oil."
+        },
+        {
+          "t": "“Leave her the little barrel. We need it in the Counting Room.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The Store is empty. In the Counting Room Tally hisses and prints slip after slip: zero, zero, zero, exact and orderly. What the ledger falsely counted, it now counts true.",
+          "lead": "Tally counts."
+        },
+        {
+          "t": "The Grain Hall is open, and the Gate has already carried off the first half. The Network will count only what's left.",
+          "lead": "What's left for the Network.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "The Bottom stays where it was: under the old seal, outside the ledger. Ranko never learned of it.",
+          "lead": "The Bottom, off the ledger.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "Rade sits by Tally, not touching the slips, only looking at them. Outside the Gate can be heard, but quieter than before, as if everyone were standing with their bag and their reckoning, waiting for someone to say ten.",
+          "lead": "Numbers and silence."
+        },
+        {
+          "t": "“The Street will wait for the slip. But the Street remembers who held the key.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "“When will it come?”",
+          "who": "Dunja"
+        },
+        {
+          "t": "“Ten days. And ten days is like ten winters.”",
+          "who": "Rade"
+        },
+        {
+          "t": "At the Gate nobody talks about the order. They talk about how long ten days are and how to divide them: three with coal, three with furniture, four with hope. The old man with the matches lights one and, this time, doesn't snuff it out at once.",
+          "lead": "Ten days."
+        },
+        {
+          "t": "The first slip of the Network arrives on the tenth day, exactly as promised. It holds one sentence, the same for every household. Vesna reads it aloud at the Gate, and for a long time nobody speaks.",
+          "lead": "The first slip."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "The seal on the Oil Hall crackles under the key and only one door opens. The others stay sealed. Your hand knows what can't be taught: it doesn't hurry and doesn't shake.",
+          "lead": "One seal."
+        },
+        {
+          "t": "You reseal the others one by one with new lead from Rade's box, the way you close the doors of a house you won't return to until spring. The lead cools in your hands, and the mark you press is the same as before: two circles and a line through them.",
+          "lead": "New seals."
+        },
+        {
+          "t": "“Half a winter is half a winter. And the other half waits.”",
+          "who": "Rade"
+        },
+        {
+          "t": "Ranko doesn't protest. He looks at you a long time, the way you look at accounts that don't agree, then opens the case and puts the order inside, neither torn nor signed.",
+          "lead": "Ranko and the order."
+        },
+        {
+          "t": "“The sleds leave with half. You'll explain the rest to the Center. I won't defend you.”",
+          "who": "Ranko"
+        },
+        {
+          "t": "“I won't ask you to.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko closes the case and ties it twice, like a man preparing to walk on ice. Before he leaves he stops by the stove and stretches out his hands to the flame, briefly, without a word, warming himself for the first time as well.",
+          "lead": "Ranko by the stove."
+        },
+        {
+          "t": "Vesna is still standing in the doorway. She looks at the seal, then at you. She doesn't thank you and isn't angry. She says only that the Street will come for its share three times a week, at the same hour.",
+          "lead": "Vesna in the doorway.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Through the wall you hear the Gate. Vesna has told the line to disperse until tomorrow, and the line disperses, slowly, like a river returning to its bed.",
+          "lead": "The Gate disperses.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Dunja gathers slips off the floor, one by one, and stacks them in a neat pile, as if someone might need them. She asks nothing. Only, as she passes your hand, she touches it briefly, like a key.",
+          "lead": "Dunja and the slips."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c5",
+      "img": "jutro",
+      "paragraphs": [
+        {
+          "t": "Morning comes quietly, without a bell. The sleds leave with half a load, and half the Oil Hall stays behind new seals. The stove in the Counting Room burns on as much oil as it needs, no more.",
+          "lead": "Morning."
+        },
+        {
+          "t": "The Bottom stays locked. Only Dunja, Rade and you know there is another hall beneath the Store.",
+          "lead": "A hall below the Store.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "The Bottom is open, but only to Rade and Dunja, who once a week quietly carry one barrel to the Counting Room.",
+          "lead": "A barrel a week.",
+          "if": {
+            "pick": "d_plomba"
+          }
+        },
+        {
+          "t": "The big doors of the Grain Hall stay open and nobody closes them. Flour goes toward the Gate exactly as fast as there are hands to carry it.",
+          "lead": "The Grain Hall stays open.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "The Gate opens only for an hour a day, at the same time. Vesna comes first, with her scarf and a list of names. By the end of the week that list has more pages than the Gate has lanterns.",
+          "lead": "Order in the line."
+        },
+        {
+          "t": "“Come at the same time. That's all I ask.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Snow rests on the rooftops. At the Gate not a single lantern burns, because nobody needs them anymore. People stand in line, talk, someone laughs, like at a market. For the first time in many nights they aren't afraid of running out of words.",
+          "lead": "Morning at the Gate."
+        },
+        {
+          "t": "“What will we do if winter lasts until summer?”",
+          "who": "Dunja"
+        },
+        {
+          "t": "“Then we'll count again.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Rade lowers himself into the chair with no back, slowly, and for the first time since you've known him he doesn't cough. His coat hangs open, and the green lamp of Tally is reflected in his eyes, calm.",
+          "lead": "Rade rests."
+        },
+        {
+          "t": "Rade takes the key to the Bottom off the nail, holds it on his palm and hands it to you without a word. Outside there is no blizzard for the first time in many days, and the sky is so clear you can see where the road ends.",
+          "lead": "A key in a palm."
+        }
+      ],
+      "end": "o"
+    },
+    "red": {
+      "chapter": "c1",
+      "paragraphs": [
+        {
+          "t": "The little wicket in the gate creaks and gives. Vesna walks through without hurry, like someone who has pictured this for a long time, and stops beside you while the line behind the bars follows her with its eyes.",
+          "lead": "Vesna comes through.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Vesna does not move. She looks at you a moment longer and nods, as if she had known the answer all along. Her hands stay on the bars, and behind her the line quietly packs closer, shoulder to shoulder.",
+          "lead": "Vesna stays.",
+          "if": {
+            "pick": "k_ceka"
+          }
+        },
+        {
+          "t": "Vesna nods, as if she had expected it. One hand slides off the bars and stops just short of the key at your side, not touching it, the way you point at something you could take.",
+          "lead": "A hand by the key.",
+          "if": {
+            "pick": "k_popis"
+          }
+        },
+        {
+          "t": "“The half past five isn't my decision.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I know. That's why I'm asking, not shouting.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "Above the Gate, on a board, it says every evening how much the Store holds: two hundred barrels of oil, three hundred sacks of flour. People read those two numbers like a prayer, and tonight they read them aloud.",
+          "lead": "The board above the Gate."
+        },
+        {
+          "t": "“The board says it's full. Show us that the board tells the truth.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "Under the snow, damp has smeared the letters. Everyone reads them anyway, as if fresh: two hundred, three hundred. Every evening someone wipes them with a sleeve, and every morning someone writes them again, in the same hand and paint.",
+          "lead": "The letters on the board."
+        },
+        {
+          "t": "Three nights ago Vesna asked only for firewood. Tonight she asks for nothing; she lists: the stove, the chair, the bench, a neighbor's table.",
+          "lead": "Vesna lists."
+        },
+        {
+          "t": "“There's been nothing left to burn in that stove for a long time. Tonight it burns everything that ever had a name.”",
+          "who": "Vesna"
+        },
+        {
+          "t": "Behind her the line is quiet. People stand in two and three layers of clothes, each holding something: a bag, an empty tin box, a child's hand. A child in an oversized coat watches you through the bars and does not blink. Nobody shouts; shouting wastes warmth.",
+          "lead": "The quiet line."
+        },
+        {
+          "t": "At the front stands an old man with a box of matches. He lights them one at a time, not to light anything, but to show something is still left to burn. When one remains, he snuffs it out with his palm and pockets it. It is all he has to offer, and he offers it to everyone.",
+          "lead": "The old man with the matches."
+        },
+        {
+          "t": "“Give me a minute.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Snow slides down your collar. You think of Rade down in the Counting Room, by the stove, and how surely he knows what is coming. The key is cold as stone, and the old man waits with his last match between his fingers.",
+          "lead": "The key is cold."
+        }
+      ],
+      "prompt": "The old man holds his last match, and the line behind him waits for you to pass.",
+      "choices": [
+        {
+          "id": "s_sibica",
+          "text": "You take the old man's match and light the dark lantern beside him.",
+          "next": "brojnica",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "s_pitaj",
+          "text": "You ask the old man what he has heard from the Administration's people.",
+          "next": "brojnica",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "s_dalje",
+          "text": "You nod to the old man and go into the Counting Room.",
+          "next": "brojnica",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/zimska-ostava/cover.webp",
+      "alt": "Zavetje in its snowbound valley and the climb to the Store under a winter sky",
+      "kind": "place"
+    },
+    "kapija": {
+      "src": "img/zimska-ostava/kapija.webp",
+      "alt": "The Gate of the Store at night: a line with lanterns and a stove in the passage",
+      "kind": "place"
+    },
+    "brojnica": {
+      "src": "img/zimska-ostava/brojnica.webp",
+      "alt": "The Counting Room: a small room with a stove and the brass machine Tally",
+      "kind": "place"
+    },
+    "uljara": {
+      "src": "img/zimska-ostava/uljara.webp",
+      "alt": "The Oil Hall: rows of barrels in a cold hall",
+      "kind": "place"
+    },
+    "zitnica": {
+      "src": "img/zimska-ostava/zitnica.webp",
+      "alt": "The Grain Hall: sacks under hoarfrost",
+      "kind": "place"
+    },
+    "dno": {
+      "src": "img/zimska-ostava/dno.webp",
+      "alt": "The Descent and the Bottom: an icy tunnel down through the rock and a low door with an old seal",
+      "kind": "place"
+    },
+    "kancelarija": {
+      "src": "img/zimska-ostava/kancelarija.webp",
+      "alt": "The Office above the Gate, its window full of blowing snow",
+      "kind": "place"
+    },
+    "dvoriste": {
+      "src": "img/zimska-ostava/dvoriste.webp",
+      "alt": "The Yard: sleds and tractors under headlights in the blizzard",
+      "kind": "place"
+    },
+    "jutro": {
+      "src": "img/zimska-ostava/jutro.webp",
+      "alt": "Zavetje at first light after the blizzard, smoke rising from the chimneys",
+      "kind": "place"
+    },
+    "rade": {
+      "src": "img/zimska-ostava/rade.webp",
+      "alt": "Rade, the former keyholder",
+      "kind": "portrait"
+    },
+    "vesna": {
+      "src": "img/zimska-ostava/vesna.webp",
+      "alt": "Vesna, who leads the Street",
+      "kind": "portrait"
+    },
+    "ranko": {
+      "src": "img/zimska-ostava/ranko.webp",
+      "alt": "Ranko, envoy of the Administration",
+      "kind": "portrait"
+    },
+    "dunja": {
+      "src": "img/zimska-ostava/dunja.webp",
+      "alt": "Dunja, messenger of the Descent",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/zimska-ostava/citalac-m.webp",
+      "alt": "Night keyholder",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/zimska-ostava/citalac-z.webp",
+      "alt": "Night keyholder",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Rade": {
+      "img": "rade"
+    },
+    "Vesna": {
+      "img": "vesna"
+    },
+    "Ranko": {
+      "img": "ranko"
+    },
+    "Dunja": {
+      "img": "dunja"
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

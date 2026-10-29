@@ -131,6 +131,16 @@ export const stories = [
     coverAlt: "Zavetje u snežnoj kotlini i uspon do Ostave pod zimskim nebom",
     status: "ready",
     load: () => import("./zimska-ostava/story.json"),
+    en: {
+      path: "winter-store",
+      title: "The Winter Store",
+      tagline:
+        "A town in a snowbound valley survives winter on a single store, and tonight the keys are with you.",
+      genre: "Science fiction",
+      coverAlt:
+        "Zavetje in its snowbound valley and the climb to the Store under a winter sky",
+      load: () => import("./zimska-ostava/story.en.json"),
+    },
   },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];

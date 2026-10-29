@@ -21,6 +21,10 @@
 /en/pre-plime/citaj  /en/before-the-tide  301
 /before-the-tide  /pre-plime  301
 /before-the-tide/citaj  /pre-plime  301
+/en/zimska-ostava  /en/winter-store  301
+/en/zimska-ostava/citaj  /en/winter-store  301
+/winter-store  /zimska-ostava  301
+/winter-store/citaj  /zimska-ostava  301
 /en/privatnost  /en/privacy  301
 /privacy  /privatnost  301
 /en/odricanje-odgovornosti  /en/disclaimer  301
