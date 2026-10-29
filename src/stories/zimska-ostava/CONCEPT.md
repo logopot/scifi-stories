@@ -8,7 +8,7 @@ Slug: `zimska-ostava`. Engleska adresa: `winter-store`, engleski naslov „The W
 
 ## Svet i pravila
 
-Zavetje je grad u snežnoj kotlini; zima traje pet meseci, a polja se ne vide do proleća. Sve što grad ima za zimu stoji u Ostavi, staroj rudi soli uklesanoj u stenu iznad grada: u Uljari su bačve sa uljem za peći, u Žitnici brašno i žito, a na dnu je Dno, najdublja hala koju knjige ne vode. Sve tri hale zatvara olovna plomba. Plomba se lomi jednom i ne vraća.
+Tihovo je grad u snežnoj kotlini; zima traje pet meseci, a polja se ne vide do proleća. Sve što grad ima za zimu stoji u Ostavi, staroj rudi soli uklesanoj u stenu iznad grada: u Uljari su bačve sa uljem za peći, u Žitnici brašno i žito, a na dnu je Dno, najdublja hala koju knjige ne vode. Sve tri hale zatvara olovna plomba. Plomba se lomi jednom i ne vraća.
 
 - **Popis** je mašina za brojanje u Brojnici. Ne razgovara, samo štampa listiće. Računa zalihu iz knjige, a knjiga računa i ono što je već obećano drugom (dug), kao da je još na polici.
 - **Uprava** vlada nizinom iz Središta i izdaje naloge. Večerašnji nalog: ulje prvo, sve bačve na sanke u pola šest, pre nego što vejavica zatvori put. Za zauzvrat obećava Mrežu: nedeljne listiće, jednaku raspodelu svakom domaćinstvu.
@@ -55,7 +55,7 @@ Naslovi krajeva (ne imenuju izbor ni osu): „Svi dimnjaci“, „Nedeljni listi
 
 ## Slike (8 mesta + naslovna + portreti)
 
-Naslovna: Zavetje i uspon do Ostave pod snežnim nebom. Mesta: kapija, brojnica, uljara, zitnica, dno (hodnik Spust i Dno), kancelarija, dvoriste, jutro. Portreti: rade, vesna, ranko, dunja, citalac-m, citalac-z. Detalji u `IMAGE_PROMPTS.md`.
+Naslovna: Tihovo i uspon do Ostave pod snežnim nebom. Mesta: kapija, brojnica, uljara, zitnica, dno (hodnik Spust i Dno), kancelarija, dvoriste, jutro. Portreti: rade, vesna, ranko, dunja, citalac-m, citalac-z. Detalji u `IMAGE_PROMPTS.md`.
 
 ## Registar izmišljenih imena i pojmova
 
@@ -63,7 +63,7 @@ Kolone: pojam; šta je (u priči); šta mu odgovara u vestima (samo napomena aut
 
 | Pojam | U priči | Odgovara u vestima | Padeži | Engleski |
 | --- | --- | --- | --- | --- |
-| Zavetje | grad u kotlini | grad koji zavisi od uvezenih zaliha | Zavetje, Zavetja, Zavetju, Zavetje, Zavetje, Zavetjem, Zavetju | Zavetje |
+| Tihovo | grad u kotlini | grad koji zavisi od uvezenih zaliha | Tihovo, Tihova, Tihovu, Tihovo, Tihovo, Tihovom, Tihovu | Tihovo |
 | Ostava | zimska zaliha uklesana u stenu | skladišta nafte, gasa i hrane | Ostava, Ostave, Ostavi, Ostavu, Ostavo, Ostavom, Ostavi | the Store |
 | Uljara | hala sa bačvama ulja | zalihe nafte i dizela | Uljara, Uljare, Uljari, Uljaru, Uljaro, Uljarom, Uljari | the Oil Hall |
 | Žitnica | hala sa brašnom i žitom | zalihe hrane | Žitnica, Žitnice, Žitnici, Žitnicu, Žitnico, Žitnicom, Žitnici | the Grain Hall |

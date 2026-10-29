@@ -1,13 +1,13 @@
 # Zimska ostava → The Winter Store: glossary (sr → en)
 
-Names of people and of the town stay the same (Rade, Vesna, Ranko, Dunja, Zavetje). Ordinary-word place and machine names are translated; the choice below is used throughout the story.
+Names of people and of the town stay the same (Rade, Vesna, Ranko, Dunja, Tihovo). Ordinary-word place and machine names are translated; the choice below is used throughout the story.
 
 ## Places, institutions, machines
 
 | Serbian | English | Note |
 | --- | --- | --- |
 | Zimska ostava | The Winter Store | title; English path `winter-store` |
-| Zavetje | Zavetje | the town; stays |
+| Tihovo | Tihovo | the town; stays |
 | Ostava | the Store | old salt mine cut into the rock above the town |
 | Uljara | the Oil Hall | barrels of oil |
 | Žitnica | the Grain Hall | flour and grain |
