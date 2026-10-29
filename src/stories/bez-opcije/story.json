@@ -409,9 +409,7 @@
         {
           "t": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušli. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu.",
           "lead": "Niska kuća koja miriše na so i mleko.",
-          "with": [
-            "Dalja"
-          ],
+          "with": ["Dalja"],
           "tf": "Kuća je bila niska, hladna i mirisala je na so i mlako mleko. Orsina majka, Dalja, stajala je za stolom i nije se okrenula kad su ušle. Sa stola je sklonjeno sve što je bilo suvišno, osim jednog tanjira koji je stajao sa strane, tačno na mestu gde se tanjir postavlja gostu."
         },
         {
@@ -1680,7 +1678,7 @@
           "lead": "Veles je okrenuo glavu u stranu."
         },
         {
-          "t": "Uhvatili ste točak zajedno, ti i Tehan, ruku do ruke, jedna mlada i jedna stara. Gvožđe je zaškripalo. Prvo nije hteo, pa je popustio, pa je krenuo. Svetlost iznad vas je počela da gasne, red po red, kao što gase sveće: zlatna, pa plavkasta, pa bela.",
+          "t": "Uhvatili ste točak zajedno, ti i Tehan, ruku do ruke, jedna mlada i jedna stara. Gvožđe je zaškripalo. Prvo nije hteo, pa je popustio, pa je krenuo. Svetlost iznad vas je počela da se gasi, red po red, kao što gase sveće: zlatna, pa plavkasta, pa bela.",
           "lead": "Gvožđe je zaškripalo, pa je krenulo."
         },
         {

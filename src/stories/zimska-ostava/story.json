@@ -80,15 +80,11 @@
   "endings": {
     "e": {
       "title": "Svi dimnjaci",
-      "closing": [
-        "Te noći u Tihovu ne spava niko, a nijedna peć ne gasne."
-      ]
+      "closing": ["Te noći u Tihovu ne spava niko, a nijedna peć se ne gasi."]
     },
     "t": {
       "title": "Nedeljni listić",
-      "closing": [
-        "Sanke su otišle, a Mreža počinje da broji dane."
-      ]
+      "closing": ["Sanke su otišle, a Mreža počinje da broji dane."]
     },
     "o": {
       "title": "Ključ na ekseru",
@@ -909,8 +905,8 @@
           "who": "Vesna"
         },
         {
-          "t": "Vetar donosi dim iz prolaza. Fenjeri se naginju svi zajedno, kao da ih je isti dah pomerio, i jedan gasne. Niko ga ne pali, jer ulja nema da se troši na jedan fenjer.",
-          "lead": "Fenjer koji gasne."
+          "t": "Vetar donosi dim iz prolaza. Fenjeri se naginju svi zajedno, kao da ih je isti dah pomerio, i jedan se gasi. Niko ga ne pali, jer ulja nema da se troši na jedan fenjer.",
+          "lead": "Fenjer koji se gasi."
         }
       ],
       "prompt": "Red čeka, a Ranko i Vesna gledaju u tebe, ne jedno u drugo.",
