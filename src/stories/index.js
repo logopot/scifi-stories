@@ -128,7 +128,7 @@ export const stories = [
     genre: "Naučna fantastika",
     minutes: 20,
     cover: "img/zimska-ostava/cover.webp",
-    coverAlt: "Zavetje u snežnoj kotlini i uspon do Ostave pod zimskim nebom",
+    coverAlt: "Tihovo u snežnoj kotlini i uspon do Ostave pod zimskim nebom",
     status: "ready",
     load: () => import("./zimska-ostava/story.json"),
     en: {
@@ -138,7 +138,7 @@ export const stories = [
         "A town in a snowbound valley survives winter on a single store, and tonight the keys are with you.",
       genre: "Science fiction",
       coverAlt:
-        "Zavetje in its snowbound valley and the climb to the Store under a winter sky",
+        "Tihovo in its snowbound valley and the climb to the Store under a winter sky",
       load: () => import("./zimska-ostava/story.en.json"),
     },
   },

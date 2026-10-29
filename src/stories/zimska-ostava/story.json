@@ -3,7 +3,7 @@
     "title": "Zimska ostava",
     "subtitle": "Interaktivna naučnofantastična priča",
     "description": [
-      "Zavetje je grad u snežnoj kotlini gde zima traje pet meseci, a polja se ne vide do proleća. Sve što grad ima za tu zimu stoji u Ostavi, staroj rudi soli uklesanoj u stenu iznad kuća.",
+      "Tihovo je grad u snežnoj kotlini gde zima traje pet meseci, a polja se ne vide do proleća. Sve što grad ima za tu zimu stoji u Ostavi, staroj rudi soli uklesanoj u stenu iznad kuća.",
       "Večeras su ključevi Ostave kod tebe. Na Kapiji čeka red sa fenjerima, u Brojnici mašina štampa brojeve koji se ne slažu sa policama, a sanke stižu u pola šest.",
       "Pred tobom su ljudi sa različitih strana kapije, mašina koja računa ono što joj knjiga kaže i vrata koja ne piše ni u jednoj knjizi."
     ],
@@ -27,7 +27,7 @@
     "finish": "Do kraja",
     "start": {
       "intro": [
-        "U Zavetju se zima preživljava iz jedne ostave, a ostava se otvara jednim ključem. Večeras je ključ kod tebe, sanke stižu u pola šest, a na Kapiji čeka red sa fenjerima."
+        "U Tihovu se zima preživljava iz jedne ostave, a ostava se otvara jednim ključem. Večeras je ključ kod tebe, sanke stižu u pola šest, a na Kapiji čeka red sa fenjerima."
       ],
       "begin": "Počni",
       "continue": "Nastavi čitanje",
@@ -81,7 +81,7 @@
     "e": {
       "title": "Svi dimnjaci",
       "closing": [
-        "Te noći u Zavetju ne spava niko, a nijedna peć ne gasne."
+        "Te noći u Tihovu ne spava niko, a nijedna peć ne gasne."
       ]
     },
     "t": {
@@ -435,7 +435,7 @@
           "lead": "Brojevi na zidu."
         },
         {
-          "t": "Računaš. Ono što stoji u prednjim redovima ne bi izvelo Zavetje do proleća. Ali bi nahranilo Kapiju više nedelja, ako se podeli odmah i bez prebrojavanja. Plomba ti se njiše na ključu.",
+          "t": "Računaš. Ono što stoji u prednjim redovima ne bi izvelo Tihovo do proleća. Ali bi nahranilo Kapiju više nedelja, ako se podeli odmah i bez prebrojavanja. Plomba ti se njiše na ključu.",
           "lead": "Račun."
         },
         {
@@ -530,7 +530,7 @@
           "lead": "Hodnik zavija."
         },
         {
-          "t": "Vrata na dnu niska su i crna od inja. Plomba je od starog olova, gruba, sa utisnutim znakom koji niko u Zavetju više ne čita. Dunja drži lampu iza tebe, a para od njenog daha povija svetlost.",
+          "t": "Vrata na dnu niska su i crna od inja. Plomba je od starog olova, gruba, sa utisnutim znakom koji niko u Tihovu više ne čita. Dunja drži lampu iza tebe, a para od njenog daha povija svetlost.",
           "lead": "Dno."
         },
         {
@@ -693,11 +693,11 @@
           "lead": "Ranko se smeši."
         },
         {
-          "t": "„Polica je prolazna. Knjiga je trajna. Ono što knjiga kaže, to je Zavetje.“",
+          "t": "„Polica je prolazna. Knjiga je trajna. Ono što knjiga kaže, to je Tihovo.“",
           "who": "Ranko"
         },
         {
-          "t": "Ranko izgovara „Središte“ onako kako se u Zavetju izgovara „proleće“: sa sramežljivim poštovanjem, kao reč koja pripada drugim ljudima. U istom trenutku shvataš da ni on nikad nije stajao pred policom.",
+          "t": "Ranko izgovara „Središte“ onako kako se u Tihovu izgovara „proleće“: sa sramežljivim poštovanjem, kao reč koja pripada drugim ljudima. U istom trenutku shvataš da ni on nikad nije stajao pred policom.",
           "lead": "Reč Središte."
         },
         {
@@ -784,7 +784,7 @@
           "who": "Ti"
         },
         {
-          "t": "„Zavetje je preživelo i gore. Mreža je jedini način da se ulje podeli pošteno, a ne onima koji najglasnije viču.“",
+          "t": "„Tihovo je preživelo i gore. Mreža je jedini način da se ulje podeli pošteno, a ne onima koji najglasnije viču.“",
           "lead": "Šta kaže Ranko.",
           "who": "Ranko"
         },
@@ -802,11 +802,11 @@
           "who": "Ranko"
         },
         {
-          "t": "Pita li iko u Središtu nekoga iz Zavetja? Ranko ne odgovara, a ti ne pitaš naglas. Pogledom prelaziš preko fotografije, preko mape, preko čaše vode koju niko nije dotakao.",
+          "t": "Pita li iko u Središtu nekoga iz Tihova? Ranko ne odgovara, a ti ne pitaš naglas. Pogledom prelaziš preko fotografije, preko mape, preko čaše vode koju niko nije dotakao.",
           "lead": "Pitanje bez odgovora."
         },
         {
-          "t": "U uglu stola leži još jedan list, zaboravljen. Na njemu piše: „sve ostave izravnati do kraja nedelje“. Zavetje je na trećem mestu spiska, ispod dva sela koja više nisu na mapi.",
+          "t": "U uglu stola leži još jedan list, zaboravljen. Na njemu piše: „sve ostave izravnati do kraja nedelje“. Tihovo je na trećem mestu spiska, ispod dva sela koja više nisu na mapi.",
           "lead": "Spisak."
         },
         {
@@ -872,11 +872,11 @@
           "lead": "Ranko pored reda."
         },
         {
-          "t": "„Pogledajte ih. Ovo je Zavetje.“",
+          "t": "„Pogledajte ih. Ovo je Tihovo.“",
           "who": "Ti"
         },
         {
-          "t": "„Razumem. Samo kažem: ako stanemo, ne staje samo Zavetje.“",
+          "t": "„Razumem. Samo kažem: ako stanemo, ne staje samo Tihovo.“",
           "who": "Ranko"
         },
         {
@@ -1036,7 +1036,7 @@
       "img": "brojnica",
       "paragraphs": [
         {
-          "t": "Zvono sa tornja udara tri puta, dugo, a odjek odlazi niz kotlinu. Tako se u Zavetju najavljuje promena naloga, i niko ga nije čuo godinama. Svi stižu u Brojnicu, jedan za drugim, sa snegom na ramenima. Popis glasnije cvrči i iz proreza izlazi novi listić, još topao.",
+          "t": "Zvono sa tornja udara tri puta, dugo, a odjek odlazi niz kotlinu. Tako se u Tihovu najavljuje promena naloga, i niko ga nije čuo godinama. Svi stižu u Brojnicu, jedan za drugim, sa snegom na ramenima. Popis glasnije cvrči i iz proreza izlazi novi listić, još topao.",
           "lead": "Zvono."
         },
         {
@@ -1335,7 +1335,7 @@
           "who": "Ranko"
         },
         {
-          "t": "„Reci im da u Zavetju gore peći.“",
+          "t": "„Reci im da u Tihovu gore peći.“",
           "who": "Ti"
         },
         {
@@ -1350,7 +1350,7 @@
       "img": "jutro",
       "paragraphs": [
         {
-          "t": "Do pola pet na svakom krovu Zavetja gori dim. Nije ravan kao pre: svaki dimnjak diše drugačije, jedan kratko, drugi dugo, treći u krugovima. Sa grebena liči na ljude koji se dozivaju.",
+          "t": "Do pola pet na svakom krovu Tihova gori dim. Nije ravan kao pre: svaki dimnjak diše drugačije, jedan kratko, drugi dugo, treći u krugovima. Sa grebena liči na ljude koji se dozivaju.",
           "lead": "Dimnjaci."
         },
         {
@@ -1403,7 +1403,7 @@
           "lead": "Dunja bez lampe."
         },
         {
-          "t": "Dok se vejavica smiruje, na putu ispod Ostave pojavljuju se dva svetla koja ne pripadaju sankama. Idu sporo, tačno ka Kapiji, i niko u Zavetju ne zna ko ih šalje.",
+          "t": "Dok se vejavica smiruje, na putu ispod Ostave pojavljuju se dva svetla koja ne pripadaju sankama. Idu sporo, tačno ka Kapiji, i niko u Tihovu ne zna ko ih šalje.",
           "lead": "Dva svetla."
         }
       ],
@@ -1749,7 +1749,7 @@
   "images": {
     "cover": {
       "src": "img/zimska-ostava/cover.webp",
-      "alt": "Zavetje u kotlini i uspon do Ostave pod snežnim nebom",
+      "alt": "Tihovo u kotlini i uspon do Ostave pod snežnim nebom",
       "kind": "place"
     },
     "kapija": {
@@ -1789,7 +1789,7 @@
     },
     "jutro": {
       "src": "img/zimska-ostava/jutro.webp",
-      "alt": "Zavetje u svitanje posle vejavice, dim iz dimnjaka",
+      "alt": "Tihovo u svitanje posle vejavice, dim iz dimnjaka",
       "kind": "place"
     },
     "rade": {

@@ -3,7 +3,7 @@
     "title": "The Winter Store",
     "subtitle": "An interactive science fiction story",
     "description": [
-      "Zavetje is a town in a snowbound valley where winter lasts five months and the fields are not seen until spring. Everything the town has for that winter lies in the Store, an old salt mine cut into the rock above the houses.",
+      "Tihovo is a town in a snowbound valley where winter lasts five months and the fields are not seen until spring. Everything the town has for that winter lies in the Store, an old salt mine cut into the rock above the houses.",
       "Tonight the keys to the Store are with you. At the Gate a line waits with lanterns, in the Counting Room a machine prints numbers that do not match the shelves, and the sleds arrive at half past five.",
       "Before you are people from different sides of the gate, a machine that counts what its ledger tells it to, and a door that is written in no book."
     ],
@@ -27,7 +27,7 @@
     "finish": "To the end",
     "start": {
       "intro": [
-        "In Zavetje a winter is survived from a single store, and the store opens with a single key. Tonight the key is with you, the sleds arrive at half past five, and at the Gate a line waits with lanterns."
+        "In Tihovo a winter is survived from a single store, and the store opens with a single key. Tonight the key is with you, the sleds arrive at half past five, and at the Gate a line waits with lanterns."
       ],
       "begin": "Begin",
       "continue": "Continue reading",
@@ -81,7 +81,7 @@
     "e": {
       "title": "Every Chimney",
       "closing": [
-        "That night nobody in Zavetje sleeps, and not one stove goes out."
+        "That night nobody in Tihovo sleeps, and not one stove goes out."
       ]
     },
     "t": {
@@ -432,7 +432,7 @@
           "lead": "Numbers on the wall."
         },
         {
-          "t": "You count. What stands in the front rows wouldn't carry Zavetje to spring. But it would feed the Gate for weeks, if shared at once and without counting. The seal swings on your key.",
+          "t": "You count. What stands in the front rows wouldn't carry Tihovo to spring. But it would feed the Gate for weeks, if shared at once and without counting. The seal swings on your key.",
           "lead": "The sum."
         },
         {
@@ -527,7 +527,7 @@
           "lead": "The tunnel bends."
         },
         {
-          "t": "The door at the bottom is low and black with frost. Its seal is of old lead, rough, stamped with a mark nobody in Zavetje can read anymore. Dunja holds the lamp behind you, and the steam of her breath bends the light.",
+          "t": "The door at the bottom is low and black with frost. Its seal is of old lead, rough, stamped with a mark nobody in Tihovo can read anymore. Dunja holds the lamp behind you, and the steam of her breath bends the light.",
           "lead": "The Bottom."
         },
         {
@@ -687,11 +687,11 @@
           "lead": "Ranko smiles."
         },
         {
-          "t": "“The shelf is passing. The ledger is permanent. What the ledger says is Zavetje.”",
+          "t": "“The shelf is passing. The ledger is permanent. What the ledger says is Tihovo.”",
           "who": "Ranko"
         },
         {
-          "t": "Ranko says “the Center” the way people in Zavetje say “spring”: with shy reverence, like a word that belongs to other people. In that moment you realize he has never stood before a shelf himself.",
+          "t": "Ranko says “the Center” the way people in Tihovo say “spring”: with shy reverence, like a word that belongs to other people. In that moment you realize he has never stood before a shelf himself.",
           "lead": "The word Center."
         },
         {
@@ -778,7 +778,7 @@
           "who": "Ti"
         },
         {
-          "t": "“Zavetje has survived worse. The Network is the only way to share oil fairly, and not with those who shout loudest.”",
+          "t": "“Tihovo has survived worse. The Network is the only way to share oil fairly, and not with those who shout loudest.”",
           "lead": "What Ranko says.",
           "who": "Ranko"
         },
@@ -796,11 +796,11 @@
           "who": "Ranko"
         },
         {
-          "t": "Does anyone in the Center ask anyone in Zavetje? Ranko doesn't answer, and you don't ask aloud. Your eyes pass over the photograph, over the map, over the glass of water nobody has touched.",
+          "t": "Does anyone in the Center ask anyone in Tihovo? Ranko doesn't answer, and you don't ask aloud. Your eyes pass over the photograph, over the map, over the glass of water nobody has touched.",
           "lead": "A question without an answer."
         },
         {
-          "t": "In the corner of the table lies another sheet, forgotten. On it is written: “level all stores by the end of the week.” Zavetje is third on the list, below two villages that are no longer on the map.",
+          "t": "In the corner of the table lies another sheet, forgotten. On it is written: “level all stores by the end of the week.” Tihovo is third on the list, below two villages that are no longer on the map.",
           "lead": "The list."
         },
         {
@@ -862,11 +862,11 @@
           "lead": "Ranko by the line."
         },
         {
-          "t": "“Look at them. This is Zavetje.”",
+          "t": "“Look at them. This is Tihovo.”",
           "who": "Ti"
         },
         {
-          "t": "“I understand. I'm only saying: if we stop, it isn't only Zavetje that stops.”",
+          "t": "“I understand. I'm only saying: if we stop, it isn't only Tihovo that stops.”",
           "who": "Ranko"
         },
         {
@@ -1026,7 +1026,7 @@
       "img": "brojnica",
       "paragraphs": [
         {
-          "t": "The tower bell strikes three times, long, and the echo rolls down the valley. That is how a change of order is announced in Zavetje, and nobody has heard it in years. Everyone arrives in the Counting Room, snow on their shoulders. Tally hisses louder and a new slip slides out, still warm.",
+          "t": "The tower bell strikes three times, long, and the echo rolls down the valley. That is how a change of order is announced in Tihovo, and nobody has heard it in years. Everyone arrives in the Counting Room, snow on their shoulders. Tally hisses louder and a new slip slides out, still warm.",
           "lead": "The bell."
         },
         {
@@ -1322,7 +1322,7 @@
           "who": "Ranko"
         },
         {
-          "t": "“Tell them the stoves are burning in Zavetje.”",
+          "t": "“Tell them the stoves are burning in Tihovo.”",
           "who": "Ti"
         },
         {
@@ -1337,7 +1337,7 @@
       "img": "jutro",
       "paragraphs": [
         {
-          "t": "By half past four smoke rises from every roof in Zavetje. It is not straight as before: each chimney breathes differently, one short, another long, a third in circles. From the ridge it looks like people calling to each other.",
+          "t": "By half past four smoke rises from every roof in Tihovo. It is not straight as before: each chimney breathes differently, one short, another long, a third in circles. From the ridge it looks like people calling to each other.",
           "lead": "Chimneys."
         },
         {
@@ -1390,7 +1390,7 @@
           "lead": "Dunja without her lamp."
         },
         {
-          "t": "As the blizzard settles, two lights appear on the road below the Store that don't belong to the sleds. They move slowly, straight toward the Gate, and nobody in Zavetje knows who has sent them.",
+          "t": "As the blizzard settles, two lights appear on the road below the Store that don't belong to the sleds. They move slowly, straight toward the Gate, and nobody in Tihovo knows who has sent them.",
           "lead": "Two lights."
         }
       ],
@@ -1735,7 +1735,7 @@
   "images": {
     "cover": {
       "src": "img/zimska-ostava/cover.webp",
-      "alt": "Zavetje in its snowbound valley and the climb to the Store under a winter sky",
+      "alt": "Tihovo in its snowbound valley and the climb to the Store under a winter sky",
       "kind": "place"
     },
     "kapija": {
@@ -1775,7 +1775,7 @@
     },
     "jutro": {
       "src": "img/zimska-ostava/jutro.webp",
-      "alt": "Zavetje at first light after the blizzard, smoke rising from the chimneys",
+      "alt": "Tihovo at first light after the blizzard, smoke rising from the chimneys",
       "kind": "place"
     },
     "rade": {
