@@ -5,6 +5,7 @@ import * as sprites from './fxSprites';
 import { coverRect, makeWind, parseFocus } from './fxSignals';
 import { makeDust, makeFire, makeGlow, makeSun, makeTwinkle } from './fxLights';
 import { makeMist, makeRain, makeSmoke, makeSnow } from './fxMatter';
+import { makeWater } from './fxWater';
 
 const S = fxStyle;
 const PARTICLE_TYPES = ['snow', 'dust', 'rain'];
@@ -26,6 +27,7 @@ export function createFxEngine(opts) {
   const matterItems = []; // u koordinatama slike (dim, magla)
   const screenItems = []; // u koordinatama ekrana (sneg, kiša)
   const sources = [];
+  const waterItems = []; // voda ima sopstvene male canvase (vidi fxWater.js)
   let hasPainted = false;
   for (const e of fx) {
     const pal = palFor(e);
@@ -43,6 +45,12 @@ export function createFxEngine(opts) {
     else if (e.type === 'twinkle') lights.push(makeTwinkle(e, pal));
   }
   // Budžet čestica: puffovi dima imaju prednost, ostatak ide na sneg / prašinu / kišu srazmerno gustini.
+  for (const e of fx) {
+    if (e.type !== 'water') continue;
+    const water = makeWater(e, theme, phone);
+    waterItems.push(water);
+    lights.push({ kind: 'water', draw: water.drawLight });
+  }
   const smokes = fx.filter((e) => e.type === 'smoke');
   const perSmoke = smokes.length ? Math.max(2, Math.min(S.smoke.puffs, Math.floor((cap * 0.45) / smokes.length), phone ? 3 : 99)) : 0;
   for (const e of smokes) {
@@ -140,9 +148,12 @@ export function createFxEngine(opts) {
     env.w = cw;
     env.h = ch;
     env.wind = wind(env.t, env.still);
+    env.root = root;
+    env.firstEl = light; // komadi vode idu ISPOD sloja svetla (da screen odsjaji budu preko vode)
 
     // svetlo (u koordinatama slike, sa pomeranjem)
     const T = driftMatrix();
+    env.T = T;
     lctx.setTransform(1, 0, 0, 1, 0, 0);
     lctx.globalCompositeOperation = 'source-over';
     lctx.globalAlpha = 1;
@@ -165,6 +176,8 @@ export function createFxEngine(opts) {
       lctx.translate(grainShift % 97, (grainShift * 7) % 89);
       lctx.fillRect(-100, -100, light.width + 200, light.height + 200);
     }
+
+    for (const w of waterItems) w.drawWater(env);
 
     // materija
     mctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -222,6 +235,7 @@ export function createFxEngine(opts) {
       io.disconnect();
       ro.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
+      for (const w of waterItems) w.destroy();
     },
   };
 }

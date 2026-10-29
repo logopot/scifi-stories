@@ -130,6 +130,22 @@ export const fxStyle = {
     gust: { every: [7, 16], len: [1.5, 3], boost: 0.7 },
   },
 
+  // Voda: talasanje naslikane vode + odsjaji + stubovi odsjaja (region u % slike)
+  water: {
+    rippleMax: 1.0, // najveći vodoravni pomak = ripple × ovo (% širine slike); pri ripple 0.4 ≈ 0.4%
+    rowHeight: 3, // visina reda (px slike)
+    fps: 30, // talasanje se računa 30 puta u sekundi
+    cycles: [7, 17, 33], // prostorni ciklusi tri talasa po regionu (gušće ka vrhu / horizontu zbog perspektive)
+    hz: [0.32, 0.75, 1.5],
+    weights: [0.5, 0.3, 0.2],
+    featherX: 0.06, // meki rub regiona (udeo)
+    featherY: 0.12,
+    bigRegion: 0.4, // region širi od 40% slike crta se u nižoj rezoluciji (bigScale)
+    bigScale: 0.6,
+    glints: { max: 14, maxPhone: 7, size: [0.2, 0.6], aspect: 0.2, life: [0.4, 1.5], gap: [0.15, 2.2], alpha: 0.55, nearColumn: 0.6, colSigma: 3.5 },
+    columns: { segments: 16, width: [0.5, 2.8], alpha: 0.34, breakHz: [0.22, 0.55], flicker: 0.25 },
+  },
+
   mist: {
     bands: [
       { y: 0.72, h: 0.3, speed: 0.0042, alpha: 0.08, seed: 3 },

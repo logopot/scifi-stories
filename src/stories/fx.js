@@ -15,10 +15,11 @@ export const FX_TYPES = {
   dust: { required: [], optional: ['color', 'density', 'speed'] },
   rain: { required: [], optional: ['color', 'density', 'speed'] },
   mist: { required: [], optional: ['color'] },
+  water: { required: ['x', 'y', 'w', 'h'], optional: ['ripple', 'glints', 'columns', 'exclude', 'color'] },
 };
 
 export const FIRE_SOURCES = ['painted', 'drawn'];
-const RANGES = { x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], h: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
+const RANGES = { ripple: [0, 1], glints: [0, 14], x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], h: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
 
 // Vraća niz poruka o greškama (prazan niz = ispravno).
 export const validateFx = (fx) => {
@@ -39,6 +40,15 @@ export const validateFx = (fx) => {
     }
     if (e.color !== undefined && !FX_COLORS.includes(e.color)) errs.push(`${where} (${e.type}): nepoznata boja "${e.color}" (dozvoljeno: ${FX_COLORS.join(', ')})`);
     if (e.source !== undefined && !FIRE_SOURCES.includes(e.source)) errs.push(`${where} (${e.type}): "source" mora biti ${FIRE_SOURCES.join(' ili ')}`);
+    if (e.type === 'water') {
+      const rect = (r, rx, ry, rw, rh) => Array.isArray(r) && r.length === 4 && r.every((v) => typeof v === 'number' && Number.isFinite(v)) && r[0] >= 0 && r[1] >= 0 && r[2] > 0 && r[3] > 0 && r[0] + r[2] <= 100 + 1e-6 && r[1] + r[3] <= 100 + 1e-6;
+      if (!rect([e.x, e.y, e.w, e.h])) errs.push(`${where} (water): x, y, w, h moraju biti brojevi, w i h > 0, x+w i y+h najviše 100`);
+      if (e.exclude !== undefined && !(Array.isArray(e.exclude) && e.exclude.every((r) => rect(r)))) errs.push(`${where} (water): "exclude" je niz pravougaonika [x,y,w,h] u opsegu 0–100`);
+      if (e.columns !== undefined) {
+        const okCol = (c) => Array.isArray(c) && c.length >= 2 && c.length <= 3 && typeof c[0] === 'number' && c[0] >= 0 && c[0] <= 100 && typeof c[1] === 'number' && c[1] >= 0 && c[1] <= 1 && (c[2] === undefined || FX_COLORS.includes(c[2]));
+        if (!(Array.isArray(e.columns) && e.columns.length <= 8 && e.columns.every(okCol))) errs.push(`${where} (water): "columns" je niz [x (0–100), jačina (0–1), boja?] (najviše 8; boja iz: ${FX_COLORS.join(', ')})`);
+      }
+    }
     if (e.rays !== undefined && typeof e.rays !== 'boolean') errs.push(`${where} (${e.type}): "rays" mora biti true/false`);
     if (e.points !== undefined) {
       const ok = Array.isArray(e.points) && e.points.length > 0 && e.points.length <= MAX_POINTS &&

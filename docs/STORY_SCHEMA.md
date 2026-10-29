@@ -173,6 +173,7 @@ Slika `kind: "place"` može imati `fx`: niz do 6 efekata (treperenje lampi, vatr
 | `twinkle` | `points: [[x, y], ...]` (do 40), `r?` (prečnik tačke u %), `color?` |
 | `snow`, `dust`, `rain` | bez koordinata; `density?` (0–1), `speed?`, `color?` (čestice na canvasu: najviše ~70 na računaru, ~35 na telefonu) |
 | `mist` | bez koordinata; spori pramenovi magle u donjoj polovini; `color?` |
+| `water` | `x`, `y`, `w`, `h` (pravougaonik vodene površine, gornji levi ugao, % slike); `ripple?` (0–1, podrazumevano 0.4: blago talasanje NAslikane vode — iseče se region iz slike i crta red po red), `glints?` (0–14, podrazumevano 14; sitni odsjaji, najviše 7 na telefonu), `columns?` (`[[x, jačina 0–1, color?], ...]`, najviše 8: stubovi odsjaja ispod izvora svetla), `exclude?` (`[[x, y, w, h], ...]`: delovi koje talasanje ne dira — čamci, stubovi, obala), `color?` (podrazumevano `fxCold`). Slika može imati više `water` unosa; svaki se računa u limit od 6. Uz `prefers-reduced-motion` nema talasanja ni odsjaja, ostaju mirni stubovi. U alatu: dugme „water (povuci)“ pravi pravougaonik povlačenjem, a za izabranu vodu „+ exclude (povuci)“ i „+ stub odsjaja (klik)“ |
 
 `color` je ime tokena teme: `accent`, `fxWarm`, `fxCold`, `fxSun` ili `fxGreen` (nikad hex). Uz `prefers-reduced-motion` nema treperenja ni čestica (svetla ostaju kao blag mirni sjaj). Postavljanje: `npm run dev`, pa `/dev/fx?story=<slug>&image=<id>` (klik dodaje efekat, prevlačenje pomera, „Kopiraj JSON“ kopira niz `fx`).
 
