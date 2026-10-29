@@ -120,6 +120,28 @@ export const stories = [
       load: () => import("./pre-plime/story.en.json"),
     },
   },
+  {
+    slug: "zimska-ostava",
+    path: { sr: "zimska-ostava" },
+    title: "Zimska ostava",
+    tagline: "Grad u kotlini zimu preživljava iz jedne ostave, a večeras su ključevi kod tebe.",
+    genre: "Naučna fantastika",
+    minutes: 20,
+    cover: "img/zimska-ostava/cover.webp",
+    coverAlt: "Zavetje u snežnoj kotlini i uspon do Ostave pod zimskim nebom",
+    status: "ready",
+    load: () => import("./zimska-ostava/story.json"),
+    en: {
+      path: "winter-store",
+      title: "The Winter Store",
+      tagline:
+        "A town in a snowbound valley survives winter on a single store, and tonight the keys are with you.",
+      genre: "Science fiction",
+      coverAlt:
+        "Zavetje in its snowbound valley and the climb to the Store under a winter sky",
+      load: () => import("./zimska-ostava/story.en.json"),
+    },
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];
 

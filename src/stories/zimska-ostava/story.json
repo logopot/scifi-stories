@@ -1,0 +1,1845 @@
+{
+  "meta": {
+    "title": "Zimska ostava",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Zavetje je grad u snežnoj kotlini gde zima traje pet meseci, a polja se ne vide do proleća. Sve što grad ima za tu zimu stoji u Ostavi, staroj rudi soli uklesanoj u stenu iznad kuća.",
+      "Večeras su ključevi Ostave kod tebe. Na Kapiji čeka red sa fenjerima, u Brojnici mašina štampa brojeve koji se ne slažu sa policama, a sanke stižu u pola šest.",
+      "Pred tobom su ljudi sa različitih strana kapije, mašina koja računa ono što joj knjiga kaže i vrata koja ne piše ni u jednoj knjizi."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "briga o ljudima"
+      },
+      {
+        "id": "t",
+        "name": "poverenje u sistem i napredak"
+      },
+      {
+        "id": "o",
+        "name": "opstanak i oprez"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "U Zavetju se zima preživljava iz jedne ostave, a ostava se otvara jednim ključem. Večeras je ključ kod tebe, sanke stižu u pola šest, a na Kapiji čeka red sa fenjerima."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi čitanje",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 20 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Napredak se čuva samo u tvom pregledaču.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Kapija"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Hale"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Nalog"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Sat manje"
+    },
+    "c5": {
+      "mark": "V",
+      "name": "Jutro"
+    }
+  },
+  "start": "kapija",
+  "endings": {
+    "e": {
+      "title": "Svi dimnjaci",
+      "closing": [
+        "Te noći u Zavetju ne spava niko, a nijedna peć ne gasne."
+      ]
+    },
+    "t": {
+      "title": "Nedeljni listić",
+      "closing": [
+        "Sanke su otišle, a Mreža počinje da broji dane."
+      ]
+    },
+    "o": {
+      "title": "Ključ na ekseru",
+      "closing": [
+        "Ključ ostaje na dlanu, a druga polovina zime čeka iza plombe."
+      ]
+    }
+  },
+  "nodes": {
+    "kapija": {
+      "chapter": "c1",
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "Sneg ide vodoravno, a ti stojiš u zaklonu Kapije i slušaš kako red iza rešetke greje sebe glasom. U mraku se njiše dvadesetak fenjera. Na gvozdenoj peći u prolazu gori stolica, a do jutra će i klupa. Za pojasom ti visi ključ od dve plombe, a prsti su ti od hladnoće postali tuđi."
+        },
+        {
+          "t": "Žena na rešetki zove se Vesna i vodi Ulicu sa Kapije. Maramu je vezala preko pola lica. Ne viče. Obe ruke drži na gvožđu i gleda te kao što se gledaju vrata za koja se zna da će popustiti.",
+          "lead": "Žena na rešetki."
+        },
+        {
+          "t": "„Ulica traži Žitnicu. Deca su prestala da plaču, a to je gore.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "„Čujem te. Ni meni nije toplo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ključ ti je dat pre tri meseca, kad je Rade rekao da mu je dosta stepenica. Dotad si ga nosio samo za pokazivanje. Nikad nisi stajao na Kapiji u noći kad neko mora da kaže da ili ne.",
+          "tf": "Ključ ti je dat pre tri meseca, kad je Rade rekao da mu je dosta stepenica. Dotad si ga nosila samo za pokazivanje. Nikad nisi stajala na Kapiji u noći kad neko mora da kaže da ili ne.",
+          "lead": "Ključ."
+        },
+        {
+          "t": "„Ključ je kod mene do pola šest. Posle toga ga čekaju sanke.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Do pola šest izgore još tri ulice.“",
+          "who": "Vesna"
+        }
+      ],
+      "prompt": "Vesna ne spušta ruke sa rešetke, a sneg joj se skuplja na marami.",
+      "choices": [
+        {
+          "id": "k_ulaz",
+          "text": "Otvaraš mali ulaz u kapiji i puštaš Vesnu da pogleda sama.",
+          "next": "red",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_ceka",
+          "text": "Kažeš Vesni da čeka, jer pre pola šest ništa ne otvaraš.",
+          "next": "red",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_popis",
+          "text": "Kažeš da prvo moraš da pogledaš Popis.",
+          "next": "red",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "brojnica": {
+      "chapter": "c1",
+      "img": "brojnica",
+      "paragraphs": [
+        {
+          "t": "Fenjer koji si upalio gori iza tebe, a kroz otvor vrata još vidiš njegov zlatni odsjaj.",
+          "lead": "Fenjer iza tebe.",
+          "if": {
+            "pick": "s_sibica"
+          }
+        },
+        {
+          "t": "Starac ti je rekao samo jedno: da su vozači sanki stigli bez ijednog obroka. Vozači, kaže, ne pitaju ništa, pa zato niko ništa ne zna.",
+          "lead": "Šta je čuo starac.",
+          "if": {
+            "pick": "s_pitaj"
+          }
+        },
+        {
+          "t": "Vesna ulazi za tobom, otresa sneg sa marame i staje kraj vrata, jer joj niko ne nudi stolicu. Odavde Kapija zvuči kao daleko more.",
+          "lead": "Brojnica.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Kapija ostaje iza tebe i zvuči kao daleko more: kašalj, korak, ponekad pesma. U Brojnici je toplo koliko može da bude u sobi sa jednom pećicom.",
+          "lead": "Brojnica.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Soba je mala. Na zidu je Popis: mesingana kutija sa zvonom i rolnom papira, koja tiho cvrči kao tiganj. Iznad zvona gori sićušna zelena lampa. Pored pećice, u stolici bez jednog naslona, sedi Rade, raniji ključar. Kaput mu je otkopčan, a kašalj tek što se smirio.",
+          "lead": "Popis i Rade."
+        },
+        {
+          "t": "Na polici iznad Popisa stoje knjige, deset ili dvanaest, u koricama od iste sive tkanine. Na svakoj je godina, a na većini i tamna mrlja od čaja ili ulja. Poslednja je otvorena, a pored nje leži pero.",
+          "lead": "Knjige iznad Popisa."
+        },
+        {
+          "t": "„Smena mi je završena u šest. Ostao sam jer ovde peć greje, a kod kuće nema šta da gori.“",
+          "lead": "Rade pored pećice.",
+          "who": "Rade"
+        },
+        {
+          "t": "„Onda ostani i reci mi šta se događa.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Rade se osmehuje samo na jednu stranu, kao da mu je za šalu ostala polovina lica. Na zidu iza njega visi tabla sa istim brojevima koji stoje i iznad Kapije, samo sitnijim slovima, a ispod njih godinama redom potpisi: „zaliha u redu“. Nijedan potpis nije isti.",
+          "lead": "Potpisi na zidu."
+        },
+        {
+          "t": "„Zašto zelena lampa gori?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„To lampa javlja da je stanje u redu. Gori otkako je Popis pušten u rad i nijednom nije pogledala u police.“",
+          "lead": "Zelena lampa.",
+          "who": "Rade"
+        },
+        {
+          "t": "Popis zvoni, cvrčanje prestaje i iz proreza izlazi listić. Brojevi su tamni i pravilni: dvesta bačava ulja, tri stotine vreća brašna. Na dnu je prazno mesto, kao da niko nije ni pokušao da upiše ono što je ispod.",
+          "lead": "Listić."
+        },
+        {
+          "t": "„Dvesta bačava. Toliko piše.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Rade ne odgovara odmah. Prvo dugo gleda u peć, kao da ona ima poslednju reč. Napolju neko lupa u rešetku, tupo, tri puta, i prestaje. Niko ne diže glavu.",
+          "lead": "Lupanje na rešetki."
+        },
+        {
+          "t": "„Piše. Popis broji ono što mu knjiga kaže, a knjiga broji i ono što smo već dali. Dug se vodi kao zaliha. Bačva stoji na papiru, a polica je prazna.“",
+          "lead": "Šta Popis ne zna.",
+          "who": "Rade"
+        },
+        {
+          "t": "Dug, zaliha, bačve koje stoje na papiru, a nema ih na polici. Nešto ti se hladi u grudima, kao kad se pogleda niz bunar.",
+          "lead": "Bunar."
+        },
+        {
+          "t": "Tri stotine vreća. Dvesta bačava. Svako veče si te brojeve čitao na tabli iznad Kapije i svako veče ti je to bilo dovoljno. Sad ti zvuče kao molitva koju je neko napisao bez vere.",
+          "tf": "Tri stotine vreća. Dvesta bačava. Svako veče si te brojeve čitala na tabli iznad Kapije i svako veče ti je to bilo dovoljno. Sad ti zvuče kao molitva koju je neko napisao bez vere.",
+          "lead": "Brojevi sa table."
+        },
+        {
+          "t": "„A Uprava šalje sanke po ono što piše.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Po ono što piše. I to ne iz zlobe. Samo niko u Središtu nikad nije sišao na policu.“",
+          "lead": "Šta Uprava ne vidi.",
+          "who": "Rade"
+        },
+        {
+          "t": "Rade te prvi put gleda pravo. Oči su mu mutne, ali ne i prazne. U njima je zamor čoveka koji je godinama nosio istinu u džepu, kao ključ, a nikom nije smeo da je pokaže.",
+          "lead": "Radeov pogled."
+        },
+        {
+          "t": "„Zašto niko nije rekao?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Rekao sam. Upisao sam u knjigu trideset puta. Knjiga je potpisana jednom, a moje primedbe stoje na marginama.“",
+          "lead": "Rade je pisao.",
+          "who": "Rade"
+        },
+        {
+          "t": "Rade okreće lice ka prozorčiću, kao da gleda daleko. Zatim se pokreće, polako, sa mukom, i otvara pećicu da dobaci komad uglja. Vatra se pomera i na zidu se pojavljuju dve senke, tvoja i njegova.",
+          "lead": "Pećica."
+        },
+        {
+          "t": "Iza vrata, na ekseru, visi ključ koji nije tvoj: mali, tamniji od ostalih, bez oznake. Rade ga ne gleda, a sve u sobi gleda upravo njega.",
+          "lead": "Ključ na ekseru."
+        },
+        {
+          "t": "„Ne veruj listiću. Pogledaj sam. Do sanki ima vremena za jednu halu. A ako te zanima ono što knjiga ne vodi, siđi niz Spust.“",
+          "tf": "„Ne veruj listiću. Pogledaj sama. Do sanki ima vremena za jednu halu. A ako te zanima ono što knjiga ne vodi, siđi niz Spust.“",
+          "lead": "Rade pokazuje put.",
+          "who": "Rade"
+        },
+        {
+          "t": "„Pogledam. I vratim se.“",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Vremena ima za jednu halu. Kuda ideš?",
+      "choices": [
+        {
+          "id": "b_uljara",
+          "text": "Silaziš u Uljaru, gde stoji ono što Uprava traži.",
+          "next": "uljara",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "b_zitnica",
+          "text": "Ideš u Žitnicu, gde stoji ono što Ulica traži.",
+          "next": "zitnica",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "b_spust",
+          "text": "Silaziš niz Spust, tamo gde knjiga ne dopire.",
+          "next": "spust",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "uljara": {
+      "chapter": "c2",
+      "img": "uljara",
+      "paragraphs": [
+        {
+          "t": "Uljara je duga kao ulica, a bačve stoje u redovima do tavanice. Hladnoća ovde ima težinu. Lampa ti osvetljava kratak komad reda, a ostatak se gubi u mraku koji miriše na gvožđe i staro ulje.",
+          "lead": "Uljara."
+        },
+        {
+          "t": "Vesna ide za tobom i broji naglas, kao da se boji da joj niko neće poverovati. Posle dvadesete bačve prestaje da broji i samo gleda.",
+          "lead": "Vesna broji.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Pod tavanicom se hvata led, a jedna kap pada na svakih nekoliko udisaja. Negde pozadi nešto škripi, pa se gubi u tišini.",
+          "lead": "Kap.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Kucaš po prvoj bačvi, pa po drugoj. Zvuče puno, duboko, kao zemlja. Treća je plića. Četvrta zvoni kao zvono. Odatle, red za redom, zvuk se menja: puno, puno, prazno, prazno, prazno.",
+          "lead": "Kucanje."
+        },
+        {
+          "t": "„Ovo ne mogu biti pune.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Kucanje te vodi dublje. Bačve ovde stoje tešnje, a između njih ostaju uski prolazi u koje bi stalo jedno dete ili jedan pas. Na podu je trag točkova, svež, od kolica koja su prošla pre samo nekoliko sati. Neko je već bio ovde ove noći.",
+          "lead": "Svež trag."
+        },
+        {
+          "t": "Šezdesetak praznih bačava stoji među punima, poređano tako da se ne primete. Neko ih je dovukao ovamo da čekaju da ih Popis izbroji. Svaka ima svoj čep, svoj broj, svoje mesto u knjizi, i nijedna nema ni kap.",
+          "lead": "Prazne bačve."
+        },
+        {
+          "t": "Idući dalje, vidiš oznake kredom po bokovima. Svaka seže u neku staru zimu: „podmireno“, „pozajmljeno Središtu“, „vraćeno na papiru“. Bačve nisu laž, nego račun koji niko nije zatvorio.",
+          "lead": "Oznake kredom."
+        },
+        {
+          "t": "Velika vrata Uljare i dalje su zapečaćena olovom, kao da unutra nema čega da se krije. Plomba je glatka, sa utisnutim znakom Uprave, a ispod nje je ključaonica u koju staje tvoj ključ.",
+          "lead": "Plomba na vratima."
+        },
+        {
+          "t": "„Osamdeset punih. Ostalo je papir.“",
+          "lead": "Računaš naglas.",
+          "who": "Ti"
+        },
+        {
+          "t": "Reči ti odjekuju po hali, i dugo se vraćaju, kao da se ni zid ne slaže sa računicom. Nad glavom ti kaplje led, tri puta, pa prestaje.",
+          "lead": "Odjek."
+        },
+        {
+          "t": "Trag kolica vodi do jedne bačve i staje. Ona je jedina sa otvorenim čepom, a oko čepa se vide sveže mrlje ulja. Neko je uzeo jednu kantu, ne više, i zatvorio nazad. Uzeo je tačno onoliko koliko treba da se zagreje jedna soba.",
+          "lead": "Jedna kanta."
+        },
+        {
+          "t": "„Neko je ovde bio pre mene.“",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Među punim bačvama stoji šezdesetak praznih, a sanke stižu uskoro.",
+      "choices": [
+        {
+          "id": "u_broji",
+          "text": "Brojiš prazne bačve i kredom upisuješ broj na zid.",
+          "next": "ranko",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "u_dokaz",
+          "text": "Utovaraš jednu praznu bačvu na kolica da je pokažeš Upravi.",
+          "next": "ranko",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "zitnica": {
+      "chapter": "c2",
+      "img": "zitnica",
+      "paragraphs": [
+        {
+          "t": "Žitnica je pod injem. Vreće stoje složene u zidove, bele kao da su od kreča, a dah ti ostaje u vazduhu i polako pada. Velika vrata hale zapečaćena su olovnom plombom koju nosiš na ključu.",
+          "lead": "Žitnica."
+        },
+        {
+          "t": "Vreće u prvim redovima teške su, pune, suve. Dlanom ih potapšeš, a brašno ti odgovara tupim, zdravim zvukom. Šest redova dalje zvuk se menja. Iza prednjeg zida vreće stoje samo da drže oblik.",
+          "lead": "Vreće."
+        },
+        {
+          "t": "Vesna prelazi dlanom preko vreće i dugo ne skida ruku, kao da proverava da li je topla.",
+          "lead": "Vesna i vreća.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Kroz zid, tanko, dopire Kapija: kašalj, korak, pesma bez reči. Hala sluša isto što i ti.",
+          "lead": "Zvuk kroz zid.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "„Prednji redovi su puni. Iza njih su samo oblici.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na zidu, kredom, neko je davno upisao brojeve: tri stotine, dvesta osamdeset, dvesta pedeset. Svaka zima oduzima po jedan red, a niko ne briše stari broj. Poslednji broj ostao je isti, kao da je zid odbio da pamti manje.",
+          "lead": "Brojevi na zidu."
+        },
+        {
+          "t": "Računaš. Ono što stoji u prednjim redovima ne bi izvelo Zavetje do proleća. Ali bi nahranilo Kapiju više nedelja, ako se podeli odmah i bez prebrojavanja. Plomba ti se njiše na ključu.",
+          "lead": "Račun."
+        },
+        {
+          "t": "Ostavljaš lampu na vreći i uzimaš šaku brašna. Hladno je kao pesak, a posle nekoliko trenutaka u dlanu počinje da diše: tanka para od tvoje ruke, a ispod nje miris žita, ne zime. To je dobro brašno. Samo ga je malo.",
+          "lead": "Šaka brašna."
+        },
+        {
+          "t": "Kroz zid se sada čuje detinji glas, tanak i uporan. Pita nešto, a niko ne odgovara. Zvuk prestaje onako kako je počeo, bez ikakvog razloga, i ostaje samo pucketanje inja po vrećama.",
+          "lead": "Dete iza zida."
+        },
+        {
+          "t": "„Plomba se lomi jednom. Posle toga nema vraćanja.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Jedna vreća u prvom redu ima otkinut ugao. Iz rupe se sipa tanak mlaz, već stvrdnut od mraza, kao bela brada. Neko je odavde uzimao, malo, redovno, godinama. Ne znaš ko, ali razumeš zašto.",
+          "lead": "Otkinuti ugao."
+        }
+      ],
+      "prompt": "Plomba na velikim vratima Žitnice visi o tvom ključu.",
+      "choices": [
+        {
+          "id": "z_lomi",
+          "text": "Lomiš plombu i otvaraš velika vrata ka Kapiji.",
+          "next": "ranko",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "z_zadnji",
+          "text": "Ideš do zadnjih redova da izbrojiš koliko je stvarno ostalo.",
+          "next": "ranko",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "spust": {
+      "chapter": "c2",
+      "img": "dno",
+      "paragraphs": [
+        {
+          "t": "Spust je kosi hodnik niz stenu, uzak, sa šinama po kojima nijedna kolica ne idu otkako pamtiš. Zidovi su ledeni i sjajni kao staklo. Lampa ti pravi krug na stepenicama, a van kruga je mrak koji se spušta ispred tebe.",
+          "lead": "Spust."
+        },
+        {
+          "t": "Na pola puta u krug ulazi devojka u kapuljači. Zove se Dunja, ima petnaest godina i nosi poruke kroz Ostavu, jer lift ne radi. Čizme su joj za dva broja veće, a lampa na traci oko čela ne ostavlja da joj vidiš oči. Ne iznenađuje se. Kao da te čeka.",
+          "lead": "Neko na stepenicama."
+        },
+        {
+          "t": "„Ostava je dublja nego što u knjizi piše.“",
+          "who": "Dunja"
+        },
+        {
+          "t": "„Dublja? Koliko dublja?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Jedna cela hala. Vrata su joj niska, sa starim olovom. Nisam ih dirala, ali sam čula bačve kako zvone kao pune.“",
+          "lead": "Šta Dunja zna.",
+          "who": "Dunja"
+        },
+        {
+          "t": "Ono što je Rade nazvao „ono što knjiga ne vodi“ dobija oblik: hala ispod hale, ispod same Ostave, o kojoj ne zna ni Popis ni Uprava.",
+          "lead": "Hala ispod hale."
+        },
+        {
+          "t": "Dunjina lampa osvetljava zid hodnika, a na njemu, ugrebane u led, stoje godine. Neko ih je pisao nožem, jedan broj ispod drugog, kao zarez zatvorenika. Poslednji je ove godine, a pored njega ostaje prazno mesto za sledeću.",
+          "lead": "Godine na zidu."
+        },
+        {
+          "t": "„Zašto nisi nikome rekla?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Kome? Radetu je svejedno, Popisu ne može da se kaže, a Uprava dolazi samo sa nalogom. Niko drugi nije sišao.“",
+          "lead": "Zašto Dunja ćuti.",
+          "who": "Dunja"
+        },
+        {
+          "t": "Dunja se smeje, kratko, i zvuk joj se lomi na ledenim zidovima i vraća kao da se smeje još neko. Zatim postaje ozbiljna. Prstom prelazi preko zida i na ledu ostaje trag od inja, jasan kao potpis.",
+          "lead": "Smeh na ledu."
+        },
+        {
+          "t": "„Hladno je i dole. Ali dole je tišina, a gore je red.“",
+          "who": "Dunja"
+        },
+        {
+          "t": "Ledena para izlazi iz zida i odmotava se između vas. Hodnik ovde zavija i ide još dublje, a zvuk koraka postaje dubok i spor. Dunja prva zakoračuje i zastaje, da vidi hoćeš li krenuti.",
+          "lead": "Hodnik zavija."
+        },
+        {
+          "t": "Vrata na dnu niska su i crna od inja. Plomba je od starog olova, gruba, sa utisnutim znakom koji niko u Zavetju više ne čita. Dunja drži lampu iza tebe, a para od njenog daha povija svetlost.",
+          "lead": "Dno."
+        },
+        {
+          "t": "Ispod vrata je mali servisni poklopac, taman za jednu osobu. Dunja ga otvara nožem, a ti prolaziš kroz njega na kolenima. Unutra su bačve i vreće: šezdesetak bačava, poređanih kao vojska, i hrpa vreća sa znakom koji ne poznaješ. Sve je staro, a ništa nije prazno.",
+          "lead": "Šta je na Dnu."
+        },
+        {
+          "t": "„Znala sam. Ovo je puno, a niko ne zna da je tu. Ni Uprava.“",
+          "who": "Dunja"
+        },
+        {
+          "t": "Kucaš po bačvama, kao u Uljari. Sve zvuče puno: duboko, tupo, kao zemlja posle kiše. Neke su pune ulja, neke nečeg gušćeg. Na jednoj piše crvenom bojom godina koja je starija od tvog ključa i starija od Radetovog.",
+          "lead": "Zvuk punih bačava."
+        },
+        {
+          "t": "Na zidu visi stari papir, sivo od mraza. Možda je to mapa, a možda spisak: crtež hale sa strelicama i nizovima brojeva, i pored svakog niza jedna reč istim crvenim mastilom: „čuvati“. Ovo je pisao neko ko nije verovao da će zima biti kratka.",
+          "lead": "Papir na zidu."
+        },
+        {
+          "t": "„Ko ih je ovde ostavio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Neko ko je znao da će zima jednom doći ranije nego što knjiga kaže.“",
+          "lead": "Odgovor sa Dna.",
+          "who": "Dunja"
+        },
+        {
+          "t": "„Ako ovo otvorim, ne može da se zatvori.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dunja ne odgovara. Gleda tebe, ne plombu, i prvi put izgleda kao ono što jeste: devojka od petnaest godina koja čeka da neko nađe isto što i ona.",
+          "lead": "Dunja čeka."
+        },
+        {
+          "t": "Plomba na glavnom zaporu nije slomljena. Ko ju je stavio, nije hteo da je neko otvori u žurbi, a nije hteo ni da ostane zaboravljena. Na olovu je utisnut isti znak kao na hrpi vreća: dva kruga i crta kroz njih.",
+          "lead": "Stara plomba."
+        },
+        {
+          "t": "Sa vrha Spusta odjekuje tup udarac, kao da je neko spustio teret na kamen. Dunja ga čuje pre tebe. Podiže lampu i lice joj se na trenutak vidi: oštro, mlado, uplašeno i tvrdoglavo.",
+          "lead": "Udarac odozgo."
+        }
+      ],
+      "prompt": "Dno je puno, a o njemu ne zna niko van ove dve lampe.",
+      "choices": [
+        {
+          "id": "d_plomba",
+          "text": "Lomiš staru plombu i otvaraš Dno kao treću halu.",
+          "next": "ranko",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "d_ostavi",
+          "text": "Ostavljaš plombu netaknutu i zatvaraš poklopac za sobom.",
+          "next": "ranko",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "ranko": {
+      "chapter": "c3",
+      "img": "brojnica",
+      "paragraphs": [
+        {
+          "t": "U Brojnici je neko ušao pre tebe. Čovek u čistom sivom kaputu stoji kraj Popisa i čita listić, držeći ga tako da ga ne dotakne više nego što mora. Kožna torba mu je na stolu, a bele rukavice, bez ijedne mrlje, na torbi. Zove se Ranko, a iz Središta je stigao sankama.",
+          "lead": "Neko u Brojnici."
+        },
+        {
+          "t": "Pogled mu pada na ulje na tvojim rukavima i ne pita gde si bio. Zna.",
+          "tf": "Pogled mu pada na ulje na tvojim rukavima i ne pita gde si bila. Zna.",
+          "lead": "Ulje na rukavima.",
+          "if": {
+            "pick": "b_uljara"
+          }
+        },
+        {
+          "t": "Kroz zid Žitnice sve glasnije dopire Kapija, jer su velika vrata otvorena, a Ranko to čuje pre nego što stigneš da kažeš. Ne diže obrvu. Samo pažljivo spušta listić.",
+          "lead": "Otvorena vrata.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "Na rukavima ti je brašno, a Ranko ga primećuje i ne pita ništa. Rade pored pećice ćuti o istoj stvari.",
+          "lead": "Brašno na rukavima.",
+          "if": {
+            "pick": "z_zadnji"
+          }
+        },
+        {
+          "t": "Prazna bačva koju si doneo stoji kraj vrata, na kolicima. Ranko je gleda duže nego listić, ali ne pita ništa.",
+          "tf": "Prazna bačva koju si donela stoji kraj vrata, na kolicima. Ranko je gleda duže nego listić, ali ne pita ništa.",
+          "lead": "Prazna bačva.",
+          "if": {
+            "pick": "u_dokaz"
+          }
+        },
+        {
+          "t": "Ledeni prah sa Dna ostao ti je na kolenima, a staro olovo u dlanu. Rade ga primećuje i ćuti, kao čovek koji je znao da će ga neko naći.",
+          "lead": "Olovo u dlanu.",
+          "if": {
+            "pick": "d_plomba"
+          }
+        },
+        {
+          "t": "Na čizmama ti je prašina sa Dna. Rade je primećuje i ćuti, kao čovek koji je znao da će je neko doneti.",
+          "lead": "Prašina sa Dna.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "„Izvinite što sam ušao bez najave. Stigao sam sankama pre sat vremena. Uprava me šalje.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Nalog još nisam čitao.“",
+          "tf": "„Nalog još nisam čitala.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko ima umoran, vrlo uredan izgled. Oči su mu crvene na ivicama, kao da već dva dana nije spavao, a glas mu ostaje miran. Ruke drži složene, kao čovek koji je naučio da ni jednim pokretom ne uplaši sobu.",
+          "lead": "Čovek iz Središta."
+        },
+        {
+          "t": "Vadi iz torbe nalog sa tri pečata i polaže ga na sto bez žurbe. Sanke čekaju u Dvorištu. Do pola šest utovara se sve ulje, bačva po bačva, a vejavica stiže čim svane.",
+          "lead": "Nalog."
+        },
+        {
+          "t": "„Pokažite mi ga.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Pečati na nalogu su tri: crveni, sivi i zeleni. Svaki je utisnut u vosak koji je pukao na ivici, kao da je neko previše pritisnuo. Ranko ih dodiruje vrhom prsta, jedan po jedan, a ti shvataš da on veruje u njih više nego u bilo koji broj.",
+          "lead": "Tri pečata."
+        },
+        {
+          "t": "„Ulje ide prvo, jer bez ulja Središte staje. Brašno stiže posle, a Uprava zauzvrat uvodi Mrežu: nedeljni listić za svako domaćinstvo, jednak za sve, bez Kapije i bez reda.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Jednak za sve. I prazan.“",
+          "who": "Rade"
+        },
+        {
+          "t": "„Popis kaže dvesta bačava. Polica kaže manje.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko je pažljiv: ne diže glas i ne preti. U njegovom pogledu nema ni prezira ni gordosti, samo ona retka sigurnost koju imaju ljudi koji ništa nisu doživeli sami, a znaju sve. Kad govori, govori kao da prepričava nešto što je pročitao na hiljadu mesta.",
+          "lead": "Kako govori Ranko."
+        },
+        {
+          "t": "Ranko se ne ljuti. Smeši se umornim, ljubaznim osmehom čoveka koji je ovo već objašnjavao na mnogim vratima. Pomera listić tačno za širinu prsta, kao da bi svaka reč mogla da ga ošteti.",
+          "lead": "Ranko se smeši."
+        },
+        {
+          "t": "„Polica je prolazna. Knjiga je trajna. Ono što knjiga kaže, to je Zavetje.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "Ranko izgovara „Središte“ onako kako se u Zavetju izgovara „proleće“: sa sramežljivim poštovanjem, kao reč koja pripada drugim ljudima. U istom trenutku shvataš da ni on nikad nije stajao pred policom.",
+          "lead": "Reč Središte."
+        },
+        {
+          "t": "„Jeste li ikad stajali pred policom?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Eto. Zato sam ja držao ključ, a ne knjigu.“",
+          "who": "Rade"
+        },
+        {
+          "t": "Ranko je jedini u sobi koji nije promrzao. Kaput mu je topao, obrazi rumeni, i svaki put kad se pomeri, para mu se zadrži oko ramena kao oreol. Zbog toga ga svi gledaju sa nepoverenjem, a on to zna i trpi.",
+          "lead": "Topli kaput."
+        },
+        {
+          "t": "Ranko pogleda Radeta još trenutak, pa ponovo tebe. U sobi je tiho, samo Popis cvrči, a vatra u pećici slabi. Čuje se Kapija, kao daleko more koje ne prestaje.",
+          "lead": "Tišina u Brojnici."
+        },
+        {
+          "t": "„Šta se desi ako stanem?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sanke ostaju do pola šest, a posle odlaze, sa vama ili bez vas. Vejavica ne čeka pregovore.“",
+          "lead": "Šta kaže vejavica.",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Razumem. Potpišite, pa će sve ići svojim tokom.“",
+          "who": "Ranko"
+        }
+      ],
+      "prompt": "Ranko drži pero i čeka. Do sanki ima vremena za još jedno mesto.",
+      "choices": [
+        {
+          "id": "r_gore",
+          "text": "Ideš sa Rankom u Kancelariju da pročitaš nalog do kraja.",
+          "next": "kancelarija",
+          "w": {
+            "t": 2
+          }
+        },
+        {
+          "id": "r_kapija",
+          "text": "Vodiš Ranka na Kapiju da vidi ljude kojima se obraća.",
+          "next": "kapija2",
+          "w": {
+            "e": 2
+          }
+        },
+        {
+          "id": "r_dvoriste",
+          "text": "Izlaziš u Dvorište da vidiš sanke i šta tačno čekaju.",
+          "next": "dvoriste",
+          "w": {
+            "o": 2
+          }
+        }
+      ]
+    },
+    "kancelarija": {
+      "chapter": "c3",
+      "img": "kancelarija",
+      "paragraphs": [
+        {
+          "t": "Kancelarija je gornja soba iznad Kapije, sa jednim prozorom i jednim stolom. Ranko ju je za sat vremena preuredio: torba, olovka, čista čaša vode. Napolju sneg lupa u staklo kao prstima.",
+          "lead": "Kancelarija."
+        },
+        {
+          "t": "Na zidu je mapa kotline, nacrtana tušem, sa tri puta: jedan ka Središtu, dva ka selima koja više nisu na spisku. Pored mape, na ekseru, visi mala fotografija deteta sa vunenim šeširom. Ranko je ne gleda dok govori, ali je ne skida sa zida.",
+          "lead": "Mapa i fotografija."
+        },
+        {
+          "t": "„Sedi. Pročitaj do kraja. Ništa ne krijem, samo me niko nikad ne čita.“",
+          "lead": "Ranko nudi stolicu.",
+          "who": "Ranko"
+        },
+        {
+          "t": "Nalog ima dve strane. Na prvoj piše ono što je Ranko rekao: ulje, sanke, pola šest. Na drugoj, sitnijim slovima: sve ulje u Uljari odlazi sankama, a prvi listić Mreže stiže za deset dana.",
+          "lead": "Druga strana."
+        },
+        {
+          "t": "„Deset dana bez ulja.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zavetje je preživelo i gore. Mreža je jedini način da se ulje podeli pošteno, a ne onima koji najglasnije viču.“",
+          "lead": "Šta kaže Ranko.",
+          "who": "Ranko"
+        },
+        {
+          "t": "Ne zvuči kao laž. Zvuči kao čovek koji veruje u hodnike kojima je prošao: sve je izračunato, od Središta do poslednje peći, i račun je često tačan.",
+          "lead": "Račun koji ima smisla."
+        },
+        {
+          "t": "„A ako račun nije tačan?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Onda će neko u Središtu prvi to videti, i javiće. Tako to ide. Tako je uvek išlo.“",
+          "lead": "Kako to ide.",
+          "who": "Ranko"
+        },
+        {
+          "t": "Pita li iko u Središtu nekoga iz Zavetja? Ranko ne odgovara, a ti ne pitaš naglas. Pogledom prelaziš preko fotografije, preko mape, preko čaše vode koju niko nije dotakao.",
+          "lead": "Pitanje bez odgovora."
+        },
+        {
+          "t": "U uglu stola leži još jedan list, zaboravljen. Na njemu piše: „sve ostave izravnati do kraja nedelje“. Zavetje je na trećem mestu spiska, ispod dva sela koja više nisu na mapi.",
+          "lead": "Spisak."
+        },
+        {
+          "t": "Tvoja ruka je blizu pera. Rade je ostao dole, a Popis je izbrojao ono što je izbrojao. Na stolu pored naloga leži i prazna bačva koju si doneo, kao čudan svedok.",
+          "tf": "Tvoja ruka je blizu pera. Rade je ostao dole, a Popis je izbrojao ono što je izbrojao. Na stolu pored naloga leži i prazna bačva koju si donela, kao čudan svedok.",
+          "lead": "Pero.",
+          "if": {
+            "pick": "u_dokaz"
+          }
+        }
+      ],
+      "prompt": "Ranko drži pero iznad linije za potpis, a sneg ne prestaje da lupa u prozor.",
+      "choices": [
+        {
+          "id": "k_potpis",
+          "text": "Potpisuješ da si primio nalog, a izvršenje ostavljaš za pola šest.",
+          "textf": "Potpisuješ da si primila nalog, a izvršenje ostavljaš za pola šest.",
+          "next": "sirena",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "k_odbij",
+          "text": "Vraćaš mu nalog i kažeš da potpisuješ tek u pola šest.",
+          "next": "sirena",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "kapija2": {
+      "chapter": "c3",
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "Kapija je u međuvremenu porasla. Fenjeri sada idu do kraja puta, a iza njih se vide senke koje su stigle iz viših ulica, sa dečjim sankama i vrećama preko ramena. Peć u prolazu gori sve manje, a vazduh miriše na dim od nameštaja.",
+          "lead": "Kapija."
+        },
+        {
+          "t": "Kroz otvorena velika vrata Žitnice vreće idu iz ruke u ruku, u tihom, uvežbanom redu, kao da ih je neko dugo spremao. Niko ne viče. Čuje se samo šuštanje.",
+          "lead": "Vreće iz ruke u ruku.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "Vesna stoji na istom mestu, uz rešetku, kao da se nije micala otkako si otišao. Sneg joj je sa marame stigao do ramena.",
+          "tf": "Vesna stoji na istom mestu, uz rešetku, kao da se nije micala otkako si otišla. Sneg joj je sa marame stigao do ramena.",
+          "lead": "Vesna na rešetki.",
+          "if": {
+            "notPick": "z_lomi"
+          }
+        },
+        {
+          "t": "„Doveo si ga. Neka pogleda.“",
+          "tf": "„Dovela si ga. Neka pogleda.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "Ranko prolazi uz sam red, vrlo sporo, i ne gleda u zemlju. Pogled mu staje na detetu u prevelikom kaputu koje drži praznu limenu kutiju. Dete ga gleda nazad, bez straha i bez nade.",
+          "lead": "Ranko pored reda."
+        },
+        {
+          "t": "„Pogledajte ih. Ovo je Zavetje.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Razumem. Samo kažem: ako stanemo, ne staje samo Zavetje.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Ne tražim da stane Središte. Tražim da ovde ne stane ništa.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "Do njih dolazi starica sa čaršavom na ramenima. Nudi Ranku da pije iz njene čaše, topao čaj od lipe koji je negde sačuvala. Ranko prima čašu obema rukama, kao što se prima nešto što se ne zaslužuje, i ne pije.",
+          "lead": "Čaj od lipe."
+        },
+        {
+          "t": "Iz reda se čuje kašalj, pa još jedan, pa pesma bez reči, tiha, jedva čujna. Glas je tanak kao žica, ali ide od nogu do glave, i svi se bez dogovora ravnaju prema njemu dok ne počne da zvuči kao jedan glas.",
+          "lead": "Pesma iz reda."
+        },
+        {
+          "t": "„Ovo nije u izveštajima koje sam čitao.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Izveštaji se ne pišu na Kapiji.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "„Ovde svako ima po nešto. Niko nema dovoljno.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zato Ulica i broji. Ne da bi tražila, nego da bi znala čega ima.“",
+          "lead": "Zašto Ulica broji.",
+          "who": "Vesna"
+        },
+        {
+          "t": "Vetar donosi dim iz prolaza. Fenjeri se naginju svi zajedno, kao da ih je isti dah pomerio, i jedan gasne. Niko ga ne pali, jer ulja nema da se troši na jedan fenjer.",
+          "lead": "Fenjer koji gasne."
+        }
+      ],
+      "prompt": "Red čeka, a Ranko i Vesna gledaju u tebe, ne jedno u drugo.",
+      "choices": [
+        {
+          "id": "g_vesna",
+          "text": "Puštaš Vesnu da se obrati redu u tvoje ime.",
+          "next": "sirena",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "g_ranko",
+          "text": "Puštaš Ranka da objasni redu šta je Mreža.",
+          "next": "sirena",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "g_ceka",
+          "text": "Kažeš redu da ćeš reći svoje u pola šest.",
+          "next": "sirena",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "dvoriste": {
+      "chapter": "c3",
+      "img": "dvoriste",
+      "paragraphs": [
+        {
+          "t": "Dvorište je veliko ravno polje pod snegom, ograđeno stenom sa tri strane. Pet teških sanki stoji u nizu, a ispred svake traktor sa upaljenim farovima koji prave tunele svetla kroz vejavicu. Vozači greju ruke nad motorima. Nijedan ne gleda u tebe.",
+          "lead": "Dvorište."
+        },
+        {
+          "t": "Daske na sankama poređane su za dvesta bačava, ni jednu manje. Neko u Središtu izračunao je tačno koliko staje, a onda je broj uzeo iz knjige.",
+          "lead": "Prostor za dvesta."
+        },
+        {
+          "t": "Dunja je već tu, na kosoj gredi prve sanke, sa lampom oko čela. Mahne ti kao da se vidite posle dugog vremena.",
+          "lead": "Dunja na sankama.",
+          "if": {
+            "pick": "b_spust"
+          }
+        },
+        {
+          "t": "Devojka u kapuljači sedi na kosoj gredi prve sanke, sa lampom oko čela. Zove se Dunja, ima petnaest godina i nosi poruke kroz Ostavu.",
+          "lead": "Neko na sankama.",
+          "if": {
+            "notPick": "b_spust"
+          }
+        },
+        {
+          "t": "„Vozači kažu da im se plaća po bačvi. Prazne ili pune, svejedno.“",
+          "who": "Dunja"
+        },
+        {
+          "t": "„Svejedno?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Knjiga je knjiga. Kad sanke stignu u Središte, prebrojaće ono što stigne. Dug će se zatvoriti na papiru.“",
+          "lead": "Šta znači svejedno.",
+          "who": "Dunja"
+        },
+        {
+          "t": "Najbliži vozač spušta kapuljaču i prvi put te gleda. Ima ispucale usne i umorne oči, a ruke mu drhte nad motorom, ne od hladnoće. Ne kaže ništa, kao da zna da mu niko neće odgovoriti.",
+          "lead": "Vozač."
+        },
+        {
+          "t": "„Odakle ste krenuli?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Iz Središta. Tri dana su vozili po ledu. Kažu da su pre toga prošli još dve ostave, i u obe su sanke ostale poluprazne.“",
+          "lead": "Odakle sanke.",
+          "who": "Dunja"
+        },
+        {
+          "t": "„A vi? Šta vi dobijate?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Vozači? Hranu i dnevnicu. Ako se vrate. Ako ostanu zatrpani, ne dobijaju ništa.“",
+          "lead": "Šta dobijaju vozači.",
+          "who": "Dunja"
+        },
+        {
+          "t": "Najbliži vozač klima glavom, tiho, kao da potvrđuje račun koji je odavno izračunao. Zatim zatvara kapuljaču i okreće se ka motoru, tako da mu se vidi samo leđa.",
+          "lead": "Vozač klima glavom."
+        },
+        {
+          "t": "Peti traktor pali motor. Buka trese led pod nogama, pa se gubi. Vozači se pogledaju, i svi gledaju u tebe. Nema više vremena za posmatranje, a hladnoća prodire kroz i najdeblje kapute.",
+          "lead": "Motori."
+        }
+      ],
+      "prompt": "Prvi vozač spušta kuku i čeka znak.",
+      "choices": [
+        {
+          "id": "d2_utovar",
+          "text": "Daješ znak da se utovari prvih dvadeset bačava.",
+          "next": "sirena",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "d2_zadrzi",
+          "text": "Kažeš vozačima da ne dirnu nijednu bačvu bez tvoje reči.",
+          "next": "sirena",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "sirena": {
+      "chapter": "c4",
+      "img": "brojnica",
+      "paragraphs": [
+        {
+          "t": "Zvono sa tornja udara tri puta, dugo, a odjek odlazi niz kotlinu. Tako se u Zavetju najavljuje promena naloga, i niko ga nije čuo godinama. Svi stižu u Brojnicu, jedan za drugim, sa snegom na ramenima. Popis glasnije cvrči i iz proreza izlazi novi listić, još topao.",
+          "lead": "Zvono."
+        },
+        {
+          "t": "Na listiću piše samo jedna rečenica, bez brojeva: sanke polaze u pola pet. Vejavica je brža nego što su računali.",
+          "lead": "Novi listić."
+        },
+        {
+          "t": "„To nisam ja. To je Središte. Nalog važi, samo se vreme skratilo.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Znači sanke polaze pre svitanja.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sat manje. Zima ne pita knjigu.“",
+          "who": "Rade"
+        },
+        {
+          "t": "Zelena lampa na Popisu gori kao i pre, mirno i ravnodušno. Ranko je gleda duže nego što bi trebalo, kao čovek koji prvi put vidi da je svetlo samo svetlo. Vesna na vratima steže maramu, a Dunja ulazi bez zvuka i staje uz zid.",
+          "lead": "Zelena lampa."
+        },
+        {
+          "t": "Vetar sa vrata unosi sitne kristale mraza koji kruže po sobi kao zvezde pa se spuštaju na listić. Ranko ga briše rukavom, ali led je već ušao u slova i ona izgledaju kao da plaču.",
+          "lead": "Led na listiću."
+        },
+        {
+          "t": "Peć puca. Napolju, preko krova, vetar prelazi iz huka u zvižduk. Imaš sat, ne više, i četvoro ljudi koji gledaju u tebe, svako drugačije.",
+          "lead": "Sat vremena."
+        },
+        {
+          "t": "„Sat. A posle sata sanke odlaze, ma šta bilo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Na Kapiji niko ne spava. Čekaju da neko izađe sa ključem.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "„Znam. Čujem ih kroz zid.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dunja kriomice razgleda Ranka, kao da ga prvi put vidi izbliza. Nikad nije videla nekoga iz Središta, a on izgleda kao običan čovek koji je predugo držao rukavice na rukama. Prstom prati liniju na zidu, i usne joj se pomeraju bez glasa.",
+          "lead": "Dunja gleda Ranka."
+        },
+        {
+          "t": "„Znaš put do Dna, vidim po čizmama. Ključ je na ekseru iza vrata, ako ti zatreba.“",
+          "lead": "Šta Rade zna.",
+          "who": "Rade",
+          "if": {
+            "pick": "b_spust"
+          }
+        },
+        {
+          "t": "„Postoji jedno mesto koje nije u knjizi: Dno. Ključ je na ekseru iza vrata, ako ti zatreba. Dunja zna put.“",
+          "lead": "Šta Rade zna.",
+          "who": "Rade",
+          "if": {
+            "notPick": "b_spust"
+          }
+        },
+        {
+          "t": "Ranko okreće glavu ka Radetu, polako, kao da je upravo čuo nešto što nije smeo. Vesna se naslanja na dovratak, a Dunja prvi put podiže lampu sa čela. Rade ne gleda nikoga. Gleda u peć, kao da sve što je rekao ostaje tamo.",
+          "lead": "Pogledi u Brojnici."
+        },
+        {
+          "t": "„Dno? Hala koja nije u knjizi?“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Dno nije moja stvar. Moja stvar je red koji čeka napolju.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "„Sve što stoji, to je u nečijoj knjizi. Samo nije u vašoj.“",
+          "who": "Rade"
+        },
+        {
+          "t": "Rade prinosi ruku ekseru, vrlo kratko, pa je spušta. Gest je mali, ali svi ga vide: ključ koji niko nije smeo da pomene više nije tajna. ",
+          "lead": "Ključ na ekseru."
+        },
+        {
+          "t": "„Koliko hala ima Ostava, Rade?“",
+          "who": "Ti",
+          "solo": true
+        },
+        {
+          "t": "„Tri. A knjiga zna za dve.“",
+          "who": "Rade",
+          "solo": true
+        }
+      ],
+      "prompt": "Šta radiš sa poslednjim satom?",
+      "choices": [
+        {
+          "id": "p_zvono",
+          "text": "Zvoniš gradskim zvonom da okupiš Ulice na Kapiji.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "p_listic",
+          "text": "Upisuješ u Popis ono što si video i tražiš listić.",
+          "textf": "Upisuješ u Popis ono što si videla i tražiš listić.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "p_kljuc",
+          "text": "Skidaš ključ sa eksera i stavljaš ga u džep.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Napolju, na Kapiji, čuje se kako se red pomera. Zvono je okupilo sve Ulice, i sada ih ima više nego što fenjeri mogu da osvetle.",
+          "lead": "Zvono je okupilo Ulice.",
+          "if": {
+            "pick": "p_zvono"
+          }
+        },
+        {
+          "t": "Listić koji držiš u ruci prvi je koji ne laže: brojeve si upisao ti, a Popis ih je samo odštampao. Dvesta je pala na ono što polica zaista drži.",
+          "tf": "Listić koji držiš u ruci prvi je koji ne laže: brojeve si upisala ti, a Popis ih je samo odštampao. Dvesta je pala na ono što polica zaista drži.",
+          "lead": "Listić bez laži.",
+          "if": {
+            "pick": "p_listic"
+          }
+        },
+        {
+          "t": "Ključ za Dno hladi ti džep kao kamen. Niko ga ne pominje, a svi ga pominju pogledom.",
+          "lead": "Ključ u džepu.",
+          "if": {
+            "pick": "p_kljuc"
+          }
+        },
+        {
+          "t": "Popis cvrči poslednji put. Rade stoji uz pećicu, Ranko uz sto, Vesna na vratima, a niko ne sedi. Ključ ti je u ruci i prvi put otkako je smena počela ne znaš koliko ti prsti drhte od hladnoće, a koliko od onoga što dolazi.",
+          "lead": "Svi u Brojnici."
+        },
+        {
+          "t": "„Dvesta bačava je knjiga. Ono što polica drži je drugi broj.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Stvarno je ono što Središte može da izračuna. Nalog je jasan. Kad završimo, Mreža počinje da radi.“",
+          "lead": "Šta kaže Ranko.",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Ulica je rekla šta joj treba. Svi čekamo ključ.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "U sobi se čuje svaki zvuk koji obično niko ne čuje: kucanje srca u slepoočnicama, struganje čizme, tiho propadanje uglja u pećici. Sve se sabira u jedan ton, kao da soba pokušava da kaže nešto što joj nije dato.",
+          "lead": "Svaki zvuk."
+        },
+        {
+          "t": "Dunja stoji uz zid i gleda tvoju ruku, ne tebe. Pokušava da pročita šta će ruka uraditi, kao što se čita kretanje životinje u mraku. Rade ne gleda nikoga i pritiska šaku na grudi, a tamo mu kašalj kuca.",
+          "lead": "Pogledi na ključ."
+        },
+        {
+          "t": "„Još trenutak. Nisam završio.“",
+          "tf": "„Još trenutak. Nisam završila.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko spušta pero na sto. Ne glasno, ali dovoljno da se čuje. Prvi put te noći ne izgleda kao izaslanik nego kao čovek koji čeka. Fotografija deteta je u njegovom džepu, pritisnuta uz grudi, kao da je ostala tamo da ga greje.",
+          "lead": "Ranko čeka."
+        },
+        {
+          "t": "„Ne tražim da verujete u Središte. Tražim da verujete u račun.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Peć gori još sat. Ne računaj na više od toga.“",
+          "who": "Rade"
+        },
+        {
+          "t": "Zvono Popisa tiho zveči jednom, pa se gubi. Zelena lampa gori kao i svake noći, ravnodušna prema svemu što se u sobi sprema. Ne zna ni za crveno ni za žuto, samo za zeleno.",
+          "lead": "Zelena lampa."
+        },
+        {
+          "t": "„Ne mogu da čekam do jutra.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Vetar napolju postaje tanak i visok, kao žica. Prozor drhti u ramu, a u sobi se čuje samo tvoj dah i mukli tik Popisa koji sada broji ništa.",
+          "lead": "Zvižduk napolju."
+        },
+        {
+          "t": "Vrata Brojnice se otvaraju na pola, vetar nosi sneg do pola poda, a u tom snegu stoji dete u prevelikom kaputu sa limenom kutijom. Ne ulazi. Samo gleda u tebe, onako kako se gleda u nekoga ko ima ključ.",
+          "lead": "Dete na vratima."
+        }
+      ],
+      "prompt": "Sanke polaze za sat. Plombe čekaju tvoju ruku.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "Lomiš plombe Uljare i Žitnice i otvaraš Kapiju svima.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "Potpisuješ nalog: sve ulje ide na sanke, a Mreža preuzima.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "Lomiš samo jednu plombu, a ostalo ostaje zapečaćeno do proleća.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "Ne radiš ništa i slušaš kako peć puca.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "chapter": "c5",
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "Plomba pucketa pod ključem kao tanak led, a velika vrata Uljare i Žitnice otvaraju se zajedno, prvi put u istoj noći. Hladnoća iz hala izlazi kao reka, a red na Kapiji pomera se ka njoj, bez guranja i bez glasa.",
+          "lead": "Plombe pucaju."
+        },
+        {
+          "t": "Vesna je prva kroz vrata, ali ne uzima ništa. Staje, okreće se ka redu i širi ruke, kao da broji. Jednom je prošla kroz hale, pa zna gde šta stoji.",
+          "lead": "Vesna na vratima hale.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Vesna ne ulazi. Stoji na pragu i broji glave, jednu po jednu, kao da još jednom proverava da li su svi tu.",
+          "lead": "Vesna na pragu.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Žitnica daje ono što je počela da daje i ranije: vreće prolaze iz ruke u ruku, a ritam je isti, samo jači.",
+          "lead": "Vreće u ritmu.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "Dete u prevelikom kaputu prvo staje na prag Uljare i dugo gleda u prazne bačve. Zatim spušta limenu kutiju na pod, pažljivo, kao da je skupa. Nikom ne govori, a ona se na kraju puni.",
+          "lead": "Dete sa kutijom."
+        },
+        {
+          "t": "„Neka svaka ruka ponese koliko može. I neka se ne trči.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "„Redom. Prvo deca i oni koji ne mogu da stoje.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Red se pomera kao jedno telo. Neko pali fenjer koji je do malopre bio ugašen, pa drugi, pa treći, i Kapija se osvetljava polako, redom, kao da neko vraća boju u sliku.",
+          "lead": "Kapija se pali."
+        },
+        {
+          "t": "Ranko je došao do Kapije i sve vreme stoji sa strane. Nalog ostavlja na kamenom pragu, bez potpisa. Ne ljuti se. Samo prvi put izgleda kao čovek koji ne zna šta piše u sledećem redu.",
+          "lead": "Nalog bez potpisa."
+        },
+        {
+          "t": "„Sanke će otići prazne. Sa tim moram da odem u Središte.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Reci im da u Zavetju gore peći.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko se okreće ka redu, kratko klima glavom, kao pozdrav, i odlazi ka Dvorištu, kroz vejavicu, bez rukavica, jer ih je ostavio na stolu u Brojnici.",
+          "lead": "Ranko odlazi."
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c5",
+      "img": "jutro",
+      "paragraphs": [
+        {
+          "t": "Do pola pet na svakom krovu Zavetja gori dim. Nije ravan kao pre: svaki dimnjak diše drugačije, jedan kratko, drugi dugo, treći u krugovima. Sa grebena liči na ljude koji se dozivaju.",
+          "lead": "Dimnjaci."
+        },
+        {
+          "t": "Sanke odlaze u svitanje praznih dasaka, sa Rankom na poslednjim. Vejavica stiže u zoru i zatvara put za njima. Šta će mu reći u Središtu, ne zna ni on.",
+          "lead": "Sanke odlaze."
+        },
+        {
+          "t": "Sneg napolju prestaje da bude neprijatelj. Deca sede na stepeništu Ostave i jedu hleb od jučerašnjeg brašna, a niko ih ne pita odakle je. Starica sa čaršavom nudi komad komšiji, komšija komad Vesni, Vesna komad nekom trećem.",
+          "lead": "Hleb na stepeništu."
+        },
+        {
+          "t": "Dno je otvoreno. Dunja vodi ljude niz Spust u grupama po petoro i svaki put se vraćaju sa po jednom bačvom na kolicima. Tako će ići do proleća.",
+          "lead": "Niz Spust.",
+          "if": {
+            "pick": "d_plomba"
+          }
+        },
+        {
+          "t": "Dno ostaje zaključano. Dunja zna gde je, Rade zna gde je, i do proleća će oboje ćutati o tome, kao što se ćuti o stvari koja jednom može da zatreba.",
+          "lead": "Tajna ispod Ostave.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "U Brojnici je prvi put gužva: svi sede, makar na sanducima. Rade drži šolju vrele vode sa ukusom soli, a Popis cvrči iznad njih, neuznemiren. Zelena lampa gori, kao i sve ove godine.",
+          "lead": "Pun prostor."
+        },
+        {
+          "t": "Rade prilazi pećici i ostavlja vrata otvorena. Ne pita da li je dozvoljeno, ne pita ko će da plati. Toplota izlazi iz sobe niz hodnik, ka Kapiji, kao tanak glas koji ide da pozove ostale.",
+          "lead": "Otvorena pećica."
+        },
+        {
+          "t": "„Ništa u knjizi se ne poklapa sa policom.“",
+          "who": "Ti",
+          "solo": true
+        },
+        {
+          "t": "„Knjiga važi za one koji je pišu. Mi smo, izgleda, pisali drugu.“",
+          "who": "Rade",
+          "solo": true
+        },
+        {
+          "t": "„Ulica poručuje da hale ostaju otvorene dok ima šta da se deli.“",
+          "who": "Vesna",
+          "solo": true
+        },
+        {
+          "t": "Dunja skida lampu sa čela i ostavlja je na sto, prvi put otkako je poznaješ. Bez nje izgleda mlađe i manje uplašeno, i prvi put se smeje, tiho, svojim pravim smehom.",
+          "lead": "Dunja bez lampe."
+        },
+        {
+          "t": "Dok se vejavica smiruje, na putu ispod Ostave pojavljuju se dva svetla koja ne pripadaju sankama. Idu sporo, tačno ka Kapiji, i niko u Zavetju ne zna ko ih šalje.",
+          "lead": "Dva svetla."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "Pero prelazi preko linije, jedan potez, i nalog je potpisan. Ranko ga uzima pažljivo, obema rukama, kao nešto što je dugo čekao, i prvi put otkako je ušao u Brojnicu zaista se osmehuje.",
+          "lead": "Potpis."
+        },
+        {
+          "t": "Kroz prozorče Brojnice vidi se Dvorište. Zvuk bačava na daskama sanki guta svaki drugi zvuk. Vozači rade bez reči, sa uvežbanim pokretima, kao ljudi koje niko ništa ne pita.",
+          "lead": "Utovar."
+        },
+        {
+          "t": "Prvih dvadeset bačava već leži na sankama, jer si im dao znak ranije. Ostatak ide brzo, kao voda koja je našla put.",
+          "tf": "Prvih dvadeset bačava već leži na sankama, jer si im dala znak ranije. Ostatak ide brzo, kao voda koja je našla put.",
+          "lead": "Prvih dvadeset.",
+          "if": {
+            "pick": "d2_utovar"
+          }
+        },
+        {
+          "t": "Vozači čekaju tvoj znak, a kad stigne, sve ide odjednom, kao da je neko pustio zadržan dah.",
+          "lead": "Znak vozačima.",
+          "if": {
+            "pick": "d2_zadrzi"
+          }
+        },
+        {
+          "t": "Osamdeset punih bačava staje na prve dvoje sanki. Ostale tri idu praznih dasaka, sa ceradom spuštenom preko ničega. Vozači prebrojavaju, pogledaju jedni druge i ne kažu ništa. Središte će dobiti prazne daske u svom izveštaju, popunjene drugim brojevima.",
+          "lead": "Prazne sanke."
+        },
+        {
+          "t": "„Zapišite i prazne daske. Neka stoje u izveštaju.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„To mogu da zapišem. Samo mi dajte brojeve.“",
+          "lead": "Šta Ranko može.",
+          "who": "Ranko"
+        },
+        {
+          "t": "Ranko ispisuje nešto na prazan list: brojeve koje ne poznaje, dobijene od tebe. Ne prekida te, ne popravlja te. Beleži kao čovek koji prvi put ima nešto što ne postoji u knjizi.",
+          "lead": "Ranko beleži."
+        },
+        {
+          "t": "„Prvi listić Mreže stiže za deset dana. Prepoznaćete ga: biće isti za sve.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Deset dana je dugo, a peć je mala.“",
+          "who": "Rade"
+        },
+        {
+          "t": "„Do tada, svako domaćinstvo dobija po pola vreće iz Žitnice.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Motori u Dvorištu pale se jedan po jedan, a brujanje se spaja u jedan duboki ton, kao da se zemlja budi. Ranko ne gleda ka njima. Zagleda se u Popis i drži šaku na kutiji, kao što se drži životinja da se smiri.",
+          "lead": "Brujanje motora."
+        },
+        {
+          "t": "Rade skida kaput i kači ga na ekser pored Popisa. Prvi put te noći izgleda kao čovek koji ima kuda da ode.",
+          "lead": "Rade i kaput."
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c5",
+      "img": "jutro",
+      "paragraphs": [
+        {
+          "t": "Sanke odlaze u zoru, duge i spore, sa svetlom na svakoj. Vejavica ih prati do vrha kotline i tu ih ostavlja. Prvi put te noći niko ne viče.",
+          "lead": "Sanke odlaze."
+        },
+        {
+          "t": "Dvorište je prazno, a vozači odmaraju uz motore, sa kapuljačama preko lica. Jedan od njih drži u ruci bačvicu ulja, vezanu užetom, i ne zna kome da je ostavi. Dunja prolazi pored njega i uzima je, bez reči.",
+          "lead": "Bačvica ulja."
+        },
+        {
+          "t": "„Ostavite joj bačvicu. Treba nam u Brojnici.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ostava je prazna. U Brojnici Popis cvrči i štampa listić po listić: nula, nula, nula, tačno i pravilno. Ono što je knjiga lažno brojala, sada broji tačno.",
+          "lead": "Popis broji."
+        },
+        {
+          "t": "Žitnica je otvorena, a Kapija je prvu polovinu već odnela. Mreža će računati samo ono što ostane.",
+          "lead": "Šta ostaje Mreži.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "Dno ostaje tamo gde je bilo: pod starom plombom, van knjige. Ranko nikada nije saznao za njega.",
+          "lead": "Dno van knjige.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "Rade sedi pored Popisa, ne dotiče listiće, samo ih gleda. Napolju se čuje Kapija, ali tiše nego pre, kao da svako stoji sa svojom torbom i sa svojim računom, i čeka da neko izgovori deset.",
+          "lead": "Brojevi i tišina."
+        },
+        {
+          "t": "„Ulica će čekati listić. Ali Ulica pamti ko je držao ključ.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "„Kad će stići?“",
+          "who": "Dunja"
+        },
+        {
+          "t": "„Deset dana. A deset dana je kao deset zima.“",
+          "who": "Rade"
+        },
+        {
+          "t": "Na Kapiji niko ne govori o nalogu. Govore o tome koliko je deset dana i kako ih treba podeliti: tri dana ugljem, tri nameštajem, četiri nadom. Starac sa šibicama pali jednu i ovog puta je ne gasi odmah.",
+          "lead": "Deset dana."
+        },
+        {
+          "t": "Prvi listić Mreže stiže desetog dana, tačno kako je obećano. U njemu je jedna rečenica, ista za svako domaćinstvo. Vesna je čita naglas na Kapiji i dugo niko ne govori.",
+          "lead": "Prvi listić."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "Plomba Uljare pucketa pod ključem i otvara se samo jedna vrata. Ostale ostaju zapečaćene. Ruka zna ono što se ne uči: ne žuri i ne drhti.",
+          "lead": "Jedna plomba."
+        },
+        {
+          "t": "Ostale plombe pečatiš jednu po jednu novim olovom iz Radetove kutije, kao što se zatvaraju vrata kuće u koju se ne vraćaš do proleća. Olovo je toplo od peći i hladi se u rukama, a znak koji utiskuješ je isti kao pre: dva kruga i crta kroz njih.",
+          "lead": "Nove plombe."
+        },
+        {
+          "t": "„Pola zime je pola zime. A druga polovina čeka.“",
+          "who": "Rade"
+        },
+        {
+          "t": "Ranko ne protestuje. Dugo te gleda, kao što se gledaju računi koji se ne slažu, pa otvara torbu i stavlja nalog unutra, ni pocepan ni potpisan.",
+          "lead": "Ranko i nalog."
+        },
+        {
+          "t": "„Sanke polaze sa polovinom. Ostatak ćete objasniti Središtu. Neću vas braniti.“",
+          "who": "Ranko"
+        },
+        {
+          "t": "„Neću ni tražiti.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ranko zatvara torbu i vezuje je dva puta, kao čovek koji se sprema da hoda po ledu. Pre izlaska staje kod pećice i pruža ruke ka plamenu, kratko, bez reči, prvi put se grejući i on.",
+          "lead": "Ranko kraj peći."
+        },
+        {
+          "t": "Vesna i dalje stoji na vratima. Gleda plombu, pa tebe. Ne zahvaljuje i ne ljuti se. Kaže samo da će Ulica dolaziti po svoj deo tri puta nedeljno, u isto vreme.",
+          "lead": "Vesna na vratima.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Kroz zid se čuje Kapija. Vesna je rekla redu da se razilazi do sutra, i red se razilazi, polako, kao reka koja se vraća u korito.",
+          "lead": "Kapija se razilazi.",
+          "if": {
+            "notPick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Dunja skuplja listiće sa poda, jedan po jedan, i slaže ih u uredan snop, kao da će nekome zatrebati. Ništa ne pita. Samo, kada ti prolazi pored ruke, kratko je dodiruje, kao ključ.",
+          "lead": "Dunja i listići."
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c5",
+      "img": "jutro",
+      "paragraphs": [
+        {
+          "t": "Jutro dolazi tiho, bez zvona. Sanke odlaze sa pola tovara, a pola Uljare ostaje iza novih plombi. Peć u Brojnici gori na onoliko ulja koliko treba, ne više.",
+          "lead": "Jutro."
+        },
+        {
+          "t": "Dno ostaje zaključano. Samo Dunja, Rade i ti znate da ispod Ostave stoji još jedna hala.",
+          "lead": "Dno ispod Ostave.",
+          "if": {
+            "pick": "d_ostavi"
+          }
+        },
+        {
+          "t": "Dno je otvoreno, ali samo za Radu i Dunju, koji jednom nedeljno tiho nose po jednu bačvu u Brojnicu.",
+          "lead": "Bačva nedeljno.",
+          "if": {
+            "pick": "d_plomba"
+          }
+        },
+        {
+          "t": "Velika vrata Žitnice ostaju otvorena i niko ih ne zatvara. Brašno ide ka Kapiji tačno koliko ima ruku da ga nose.",
+          "lead": "Žitnica ostaje otvorena.",
+          "if": {
+            "pick": "z_lomi"
+          }
+        },
+        {
+          "t": "Kapija se otvara samo na po sat dnevno, u isto vreme. Vesna dolazi prva, sa maramom i sa listom imena. Do kraja nedelje ta lista ima više papira nego fenjera.",
+          "lead": "Red se uređuje."
+        },
+        {
+          "t": "„Dolazite u isto vreme. To je sve što tražim.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sneg se odmara na krovovima. Na Kapiji ne gori nijedan fenjer, jer više nikome ne trebaju. Ljudi stoje u redu, razgovaraju, neko se smeje, kao na pijaci. Prvi put posle mnogo noći ne boje se da će nekome ponestati reči.",
+          "lead": "Jutro na Kapiji."
+        },
+        {
+          "t": "„Šta ćemo ako zima potraje do leta?“",
+          "who": "Dunja"
+        },
+        {
+          "t": "„Onda ćemo računati ponovo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Rade se spušta u stolicu bez naslona, polako, i prvi put otkako te poznaje ne kašlje. Kaput mu visi otkopčan, a zelena lampa Popisa ogleda mu se u očima, mirna.",
+          "lead": "Rade se odmara."
+        },
+        {
+          "t": "Rade skida ključ za Dno sa eksera, drži ga na dlanu i pruža ti ga bez reči. Napolju, na kotlini, prvi put posle mnogo dana nema vejavice, a nebo je tako čisto da se vidi gde se završava put.",
+          "lead": "Ključ na dlanu."
+        }
+      ],
+      "end": "o"
+    },
+    "red": {
+      "chapter": "c1",
+      "paragraphs": [
+        {
+          "t": "Mali ulaz u kapiji škripi, pa popušta. Vesna prolazi kroz njega bez žurbe, kao neko ko je to dugo zamišljao, i staje pored tebe, a red iza rešetke prati je pogledom.",
+          "lead": "Vesna prolazi.",
+          "if": {
+            "pick": "k_ulaz"
+          }
+        },
+        {
+          "t": "Vesna se ne pomera. Gleda te još trenutak i klima glavom, kao da je odgovor znala unapred. Ruke joj ostaju na rešetki, a iza nje se red tiho sabija, rame uz rame.",
+          "lead": "Vesna ostaje.",
+          "if": {
+            "pick": "k_ceka"
+          }
+        },
+        {
+          "t": "Vesna klima glavom, kao da je to očekivala. Jedna ruka joj klizi sa rešetke i staje tik uz ključ koji ti visi, ne dodirujući ga, kao što se pokazuje nešto što bi mogla da uzme.",
+          "lead": "Ruka uz ključ.",
+          "if": {
+            "pick": "k_popis"
+          }
+        },
+        {
+          "t": "„Ovo sa pola šest nije moja odluka.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Znam. I zato te molim, a ne vičem.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "Iznad Kapije, na tabli, svake večeri piše koliko Ostava drži: dvesta bačava ulja, tri stotine vreća brašna. Ljudi ta dva broja čitaju kao molitvu, a večeras ih čitaju naglas.",
+          "lead": "Tabla iznad Kapije."
+        },
+        {
+          "t": "„Na tabli piše da je puna. Pokaži nam da piše istinu.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "Na tabli, pod snegom, vlaga je razmazala slova. Ipak ih svi čitaju kao da su sveža: dvesta, tri stotine. Svako veče neko ih obriše rukavom i svako jutro ih neko ponovo napiše, istom rukom i istom bojom.",
+          "lead": "Slova na tabli."
+        },
+        {
+          "t": "Pre tri noći Vesna je tražila samo ogrev. Večeras više ništa ne traži, nego nabraja: peć, stolicu, klupu, komšijin sto.",
+          "lead": "Vesna nabraja."
+        },
+        {
+          "t": "„Peć u prolazu odavno nema šta da gori. Večeras gori sve što je imalo ime.“",
+          "who": "Vesna"
+        },
+        {
+          "t": "Iza nje je red tih. Ljudi stoje u dva i tri sloja odeće, i svako drži nešto: torbu, praznu limenu kutiju, dete za ruku. Dete u prevelikom kaputu gleda te kroz rešetku i ne trepće. Niko ne viče, jer vika troši toplotu.",
+          "lead": "Tihi red."
+        },
+        {
+          "t": "Ispred ostalih stoji starac sa kutijom šibica u ruci. Pali ih jednu po jednu, ne da bi nešto upalio, nego da se vidi da još ima šta da gori. Kad ostane poslednja, gasi je dlanom i vraća u džep. To je sve što ima da ponudi, i nudi to svima.",
+          "lead": "Starac sa šibicama."
+        },
+        {
+          "t": "„Daj mi minut.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sneg ti klizi niz vrat. Pomišljaš na Radeta, dole u Brojnici, uz pećicu, i na to da on sigurno zna šta se sprema. Ključ ti je hladan kao kamen, a starac čeka sa poslednjom šibicom u prstima.",
+          "lead": "Ključ je hladan."
+        }
+      ],
+      "prompt": "Starac drži poslednju šibicu, a red iza njega čeka da prođeš.",
+      "choices": [
+        {
+          "id": "s_sibica",
+          "text": "Uzimaš starčevu šibicu i pališ ugašeni fenjer pored njega.",
+          "next": "brojnica",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "s_pitaj",
+          "text": "Pitaš starca šta je čuo od ljudi iz Uprave.",
+          "next": "brojnica",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "s_dalje",
+          "text": "Klimaš starcu i ulaziš u Brojnicu.",
+          "next": "brojnica",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/zimska-ostava/cover.webp",
+      "alt": "Zavetje u kotlini i uspon do Ostave pod snežnim nebom",
+      "kind": "place"
+    },
+    "kapija": {
+      "src": "img/zimska-ostava/kapija.webp",
+      "alt": "Kapija Ostave noću: red sa fenjerima i peć u prolazu",
+      "kind": "place"
+    },
+    "brojnica": {
+      "src": "img/zimska-ostava/brojnica.webp",
+      "alt": "Brojnica: mala soba sa pećicom i mesinganom mašinom Popis",
+      "kind": "place"
+    },
+    "uljara": {
+      "src": "img/zimska-ostava/uljara.webp",
+      "alt": "Uljara: redovi bačava u hladnoj hali",
+      "kind": "place"
+    },
+    "zitnica": {
+      "src": "img/zimska-ostava/zitnica.webp",
+      "alt": "Žitnica: vreće pod injem",
+      "kind": "place"
+    },
+    "dno": {
+      "src": "img/zimska-ostava/dno.webp",
+      "alt": "Spust i Dno: ledeni hodnik niz stenu i niska vrata sa starom plombom",
+      "kind": "place"
+    },
+    "kancelarija": {
+      "src": "img/zimska-ostava/kancelarija.webp",
+      "alt": "Kancelarija iznad Kapije, sa prozorom u mećavi",
+      "kind": "place"
+    },
+    "dvoriste": {
+      "src": "img/zimska-ostava/dvoriste.webp",
+      "alt": "Dvorište: sanke i traktori pod farovima u vejavici",
+      "kind": "place"
+    },
+    "jutro": {
+      "src": "img/zimska-ostava/jutro.webp",
+      "alt": "Zavetje u svitanje posle vejavice, dim iz dimnjaka",
+      "kind": "place"
+    },
+    "rade": {
+      "src": "img/zimska-ostava/rade.webp",
+      "alt": "Rade, raniji ključar",
+      "kind": "portrait"
+    },
+    "vesna": {
+      "src": "img/zimska-ostava/vesna.webp",
+      "alt": "Vesna, predstavnica Ulice",
+      "kind": "portrait"
+    },
+    "ranko": {
+      "src": "img/zimska-ostava/ranko.webp",
+      "alt": "Ranko, izaslanik Uprave",
+      "kind": "portrait"
+    },
+    "dunja": {
+      "src": "img/zimska-ostava/dunja.webp",
+      "alt": "Dunja, glasnica sa Spusta",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/zimska-ostava/citalac-m.webp",
+      "alt": "Noćni čuvar ključeva",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/zimska-ostava/citalac-z.webp",
+      "alt": "Noćna čuvarka ključeva",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Rade": {
+      "img": "rade"
+    },
+    "Vesna": {
+      "img": "vesna"
+    },
+    "Ranko": {
+      "img": "ranko"
+    },
+    "Dunja": {
+      "img": "dunja"
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}
