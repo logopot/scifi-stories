@@ -1,0 +1,2282 @@
+{
+  "meta": {
+    "title": "No Option",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "On the planet Tandem it is never night. Two suns stand in the sky, everything casts two shadows, and no inhabitant has ever had to decide what to do next.",
+      "You fall onto that planet with nothing but a cracked visor and the will to survive.",
+      "Offers will keep appearing before you, just as they do for everyone else on Tandem."
+    ],
+    "axes": [
+      {
+        "id": "b",
+        "name": "escape / survival"
+      },
+      {
+        "id": "s",
+        "name": "collapse of the system"
+      },
+      {
+        "id": "u",
+        "name": "fitting in"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "On the planet Tandem it is never night. Two suns stand in the sky, everything casts two shadows, and no inhabitant has ever had to decide what to do next. You fall onto that planet with nothing but a cracked visor and the will to survive. Offers will keep appearing before you, just as they do for everyone else on Tandem."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with a click, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 40 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "The ending does not depend on your last click.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "The White Belt"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Zenit"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "The Visor"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "The Detour"
+    },
+    "c5": {
+      "mark": "V",
+      "name": "The Intersection"
+    },
+    "c6": {
+      "mark": "VI",
+      "name": "The Alignment"
+    }
+  },
+  "start": "c1_wake",
+  "endings": {
+    "b": {
+      "title": "Night",
+      "closing": [
+        "You slept a long time. When you woke, the Carrier already knew the way, and on the console three lines still stood, unread.",
+        "Sometimes, in the middle of an ordinary hour, you’ll catch yourself waiting for someone to tell you what comes next. Then you’ll stop waiting."
+      ]
+    },
+    "s": {
+      "title": "The Empty List",
+      "closing": [
+        "Zenit fell silent, and then someone in the square lit a fire, though nobody needed it. People stood around it and watched how it moved.",
+        "Nobody knows whether that was a victory. For the first time the people of Tandem now choose without a list, and some of them don’t know how."
+      ]
+    },
+    "u": {
+      "title": "The Circle",
+      "closing": [
+        "The suns drew apart, and the shadows returned, two of them, as always. No circle on Tandem stopped because of it.",
+        "You’re not badly off. Nobody on Tandem is badly off."
+      ]
+    }
+  },
+  "nodes": {
+    "c1_wake": {
+      "chapter": "c1",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "The first thing you felt wasn’t pain but warmth on your eyelids, even and without a source, as if light came from everywhere at once."
+        },
+        {
+          "t": "You opened your eyes. The sky was pale and high, and two suns stood in it: a large amber one, motionless as a heavy coin, and a small white-blue one that moved so slowly the eye noticed it only after looking away for a moment and back. Beneath them a plain of salt ran to the horizon without a single tree, stone or hill.",
+          "lead": "Above you, two suns, different as brother and sister."
+        },
+        {
+          "t": "Actually, there were shadows. When you turned your head, you saw that everything cast two: one warm, rusty, and one cold, bluish, crossed like scissors. Half of the ship Svitac, driven into the salt at an angle, had two shadows that touched at a point a few steps from your boots.",
+          "lead": "Something on the plain was not right."
+        },
+        {
+          "t": "Your visor was cracked. The crack ran across your left eye, and every time you moved your head the world split for an instant into two images. Your throat was dry as the salt beneath you. On your forearm you had a cut where the blood had already crusted.",
+          "lead": "The glass before your eye was no longer whole."
+        },
+        {
+          "t": "The translator in your collar, the only thing on you that survived the fall, squeaked once and went silent. There was no sound or movement anywhere. Nothing told you what to do.",
+          "lead": "The only sound left came from your collar."
+        },
+        {
+          "t": "Seven days, you remembered. Your company’s freighter passes through this system only once and doesn’t stop for anyone not in orbit around the planet. Seven days to find something that flies. Until then you have to stay alive.",
+          "lead": "There was a deadline, and it was short."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1a",
+          "text": "Look for water in the wreck.",
+          "next": "c1_voda",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c1b",
+          "text": "Hide in the wreck’s shade and wait.",
+          "next": "c1_hlad",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c1c",
+          "text": "Try to establish contact with your people.",
+          "next": "c1_signal",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Your throat is dry, and the suns don’t stop. What do you do first?",
+      "img": "beli-pojas"
+    },
+    "c1_voda": {
+      "paragraphs": [
+        {
+          "t": "Inside the wreck it was hot as an oven, but the locker under the seat had survived. You found a flask with a liter and a half of water, six bars of dry food and a signal flare missing two caps. You drank slowly, because you knew what it means when a person drinks fast.",
+          "lead": "The locker under the seat held more than you expected."
+        },
+        {
+          "t": "As you climbed out, you noticed a trail. Bare footprints, two rows, pressed into the salt right beside the ship. One row stopped halfway, as if someone had stopped and looked for a long while, then turned and left exactly the way they came. Not hurrying and not fleeing. Just went back, the way we go back when someone tells us to.",
+          "lead": "Someone had already been in the salt by the wreck."
+        },
+        {
+          "t": "You looked in the direction the prints led. Far away, at the very edge of the salt, something was moving.",
+          "lead": "Something moved on the horizon."
+        }
+      ],
+      "next": "c1_orsa"
+    },
+    "c1_hlad": {
+      "paragraphs": [
+        {
+          "t": "The wreck’s shade was narrow but enough. You sat with your back against the hull and watched the two shadows of your hand slowly change their distance. The small sun was moving, you realized. If you measured carefully, you could tell time by it. You never thought you’d need that.",
+          "lead": "The wreck’s shade was narrow but enough."
+        },
+        {
+          "t": "You sat like that until your heart slowed, and then you realized you had been hearing footsteps for some time. Soft, measured, unhurried. Someone was approaching across the salt and wasn’t hiding.",
+          "lead": "Someone is coming, and isn’t hurrying."
+        },
+        {
+          "t": "You stood, one hand on the cold metal, and waited."
+        }
+      ],
+      "next": "c1_orsa"
+    },
+    "c1_signal": {
+      "paragraphs": [
+        {
+          "t": "Svitac coughed. The console came on for two seconds, printed NO RESPONSE and went dark again. You tried three more times. The third time it stayed long enough for you to see a second line: WINDOW: 7 DAYS.",
+          "lead": "The console coughed and opened for two seconds."
+        },
+        {
+          "t": "You knew that without it. But knowing and seeing it written are not the same, and something in your stomach clenched. You lowered your hand from the keyboard and noticed it was shaking.",
+          "lead": "Your hands betrayed you before you understood why."
+        },
+        {
+          "t": "Then you heard footsteps. Someone was approaching across the salt and wasn’t hiding."
+        }
+      ],
+      "next": "c1_orsa"
+    },
+    "c1_orsa": {
+      "paragraphs": [
+        {
+          "t": "It was a woman, young, in dusty blue cloth, with two large leather skins over her shoulders and a long carrying pole. She came within twenty steps and stopped. She looked at you, and then, for exactly three seconds, beside you, at an empty patch of air to the right of your face, as if reading something there.",
+          "lead": "Someone stood on the salt looking at you, but not quite at you.",
+          "img": "orsa"
+        },
+        {
+          "t": "Her lips moved without a sound. Her gaze stopped at that spot, her eyes narrowing slightly as if something pressed on them, then returned to you. On her face was something you knew from people before an exam: what she was looking for wasn’t there.",
+          "lead": "Her gaze slid past you, into empty air."
+        },
+        {
+          "t": "“Nothing is offered to me.”",
+          "lead": "She said a sentence you didn’t expect to hear.",
+          "who": "Orsa"
+        },
+        {
+          "t": "The translator in your collar turned her words into a hollow, metallic voice, but the intonation was clear. Then she repeated it, slower, as if speaking to a child or to herself.",
+          "lead": "The translator turned her words into a metallic voice."
+        },
+        {
+          "t": "“Nothing is offered to me for you.”",
+          "lead": "She repeated it, slower.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She stood and waited. You realized she was waiting for something you couldn’t give her: a kind of permission. Whatever you do next would have weight, though you don’t yet know what kind.",
+          "lead": "She was waiting for a kind of permission."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c1d",
+          "text": "Show her your empty palms.",
+          "next": "c2_grad",
+          "w": {
+            "u": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c1e",
+          "text": "Ask for water and ignore what she is looking at beside you.",
+          "next": "c2_grad",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c1f",
+          "text": "Stay silent and wait for her to act first.",
+          "next": "c2_grad",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c1h",
+        "text": "— Do none of what is offered.",
+        "next": "c2_grad",
+        "w": {
+          "s": 2
+        },
+        "after": 22
+      },
+      "prompt": "The woman waits, and you don’t know what she sees beside you. How do you answer her?"
+    },
+    "c2_grad": {
+      "chapter": "c2",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Orsa looked a long time at your open palms, like a letter in a language she reads more slowly than you. Then she nodded, once, and turned. Not to lead you, only to set off, and for you to decide.",
+          "if": {
+            "pick": "c1d"
+          },
+          "lead": "Orsa read your palms like a letter."
+        },
+        {
+          "t": "She let you drink from the skin, without a word, and you drank until your vision cleared. When you handed the skin back, she looked at you as if you had returned something she hadn’t expected to come back.",
+          "if": {
+            "pick": "c1e"
+          },
+          "lead": "The first sip of water after the fall."
+        },
+        {
+          "t": "You stood like that a long time, between two shadows, and you realized silence was the one thing in her world not offered as a possibility. In the end she, not knowing any other way, held out a hand, palm up, the way food is offered to an animal.",
+          "if": {
+            "pick": "c1f"
+          },
+          "lead": "Silence between two shadows."
+        },
+        {
+          "t": "She did nothing. She only waited, and in that waiting you saw for the first time what a person looks like when nobody has told them what comes next. Then she blinked, long, and something in her face gave way, as if the conclusion had come from another side.",
+          "if": {
+            "pick": "c1h"
+          },
+          "lead": "A waiting in which something gave way."
+        },
+        {
+          "t": "Zenit appeared as a shimmer at the edge of the salt, then as a row of low roofs of white brick and glass. It had no walls. It had no gate; the streets simply began, and people moved in them.",
+          "lead": "A city without walls and without gates."
+        },
+        {
+          "t": "The first thing you noticed was the silence. No shouting, nobody calling out, nobody arguing over a place in line. Children played in a row and each of them, at the same moment, stopped, looked at a corner and went on. A woman at a stall every few minutes would blink and move her hand toward a different fruit. An old man on a bench fell asleep at the exact moment everyone around him yawned.",
+          "lead": "The first thing you noticed was the silence."
+        },
+        {
+          "t": "Orsa did it too. Every hundred steps or so her gaze would jump aside. Once she turned left, once right, without hesitation. Not once did she look at the sky to see what time it was. The sky is always the same.",
+          "lead": "Orsa did the same as everyone else."
+        },
+        {
+          "t": "“What are you reading?”",
+          "who": "Ti"
+        },
+        {
+          "t": "She looked at you in surprise, then smiled, as if you had asked what eyes are for.",
+          "lead": "A question like asking what eyes are for."
+        },
+        {
+          "t": "“Lumen. What else.”",
+          "lead": "A one-word answer.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Five streets on, at a crossing, you stopped. Three possibilities opened before you, and none of them was yours. Six days remained.",
+          "lead": "A crossing, and no road was yours."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c2a",
+          "text": "Go with Orsa to her house.",
+          "next": "c2_kuca",
+          "w": {
+            "u": 1,
+            "b": 1
+          }
+        },
+        {
+          "id": "c2b",
+          "text": "Turn toward the smell of food at the market.",
+          "next": "c2_pijaca",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c2c",
+          "text": "Stop in the square and watch people choose.",
+          "next": "c2_trg",
+          "w": {
+            "s": 1,
+            "u": 1
+          }
+        }
+      ],
+      "prompt": "Where will you go first?",
+      "img": "zenit"
+    },
+    "c2_kuca": {
+      "paragraphs": [
+        {
+          "t": "The house was low, cool, and smelled of salt and lukewarm milk. Orsa’s mother, Dalja, stood at the table and didn’t turn when they came in. Everything superfluous had been cleared from the table except one plate set to the side, exactly where a plate is set for a guest.",
+          "lead": "A low house smelling of salt and milk.",
+          "with": [
+            "Dalja"
+          ]
+        },
+        {
+          "t": "You sat. Then you saw what would haunt you: at the same moment, like one body, four pairs of eyes jumped to a corner, lingered, and four hands lifted spoons. There was no order. No sound was heard. Only a line of words, invisible to you, decided that now was the time to eat.",
+          "lead": "At the table four pairs of eyes jumped to the same corner."
+        },
+        {
+          "t": "Dalja didn’t look you in the face. Her gaze passed over you like over a piece of furniture nobody had moved. But the girl Iva, seven or eight years old, alone looked straight at you, without blinking.",
+          "lead": "The mother’s gaze passed over you like furniture."
+        },
+        {
+          "t": "“Nothing’s offered to you? Not one line? Not one word?”",
+          "lead": "The girl asked a question grown-ups don’t ask.",
+          "who": "Iva"
+        },
+        {
+          "t": "She asked loudly, the only way children ask.",
+          "lead": "Loudly, the way children ask."
+        },
+        {
+          "t": "The mother paused with her spoon. Something in the corner told her not to answer.",
+          "lead": "The mother paused with her spoon."
+        }
+      ],
+      "next": "c2_tehan"
+    },
+    "c2_pijaca": {
+      "paragraphs": [
+        {
+          "t": "The market was a cluster of stalls under cloth, and on each a heap of something you had never seen: reddish fruit without rind, two-colored roots, flatbreads with a white crust of salt. You approached a stall and reached out a hand.",
+          "lead": "Stalls under cloth and fruit without rind."
+        },
+        {
+          "t": "The woman behind the stall looked into the corner. Her gaze stopped. She moved it a little left, then right. Her lips pursed. At last she lowered it to your forehead, not your eyes, and looked past.",
+          "lead": "An outstretched hand left unanswered."
+        },
+        {
+          "t": "No answer. Nobody shouted “thief”, nobody laid a hand on yours. You took a flatbread, and she kept staring into nothing, standing as if frozen. You ate standing. Nobody at the market lacked anything, because nothing had changed on their list.",
+          "lead": "The bread stayed in your hand, and nobody reacted."
+        },
+        {
+          "t": "Strangest of all was that nobody stopped you. Not because they didn’t want to, but because nobody had been offered the option of stopping you. In that odd calm it seemed you could take anything you wished, and nothing would ever happen, until everything happened at once.",
+          "lead": "Nothing was wrong, and that was exactly what was wrong."
+        },
+        {
+          "t": "Across the alley, in the shade of a glass shop, sat a man who alone looked straight at you.",
+          "lead": "In the shade across the way someone looked you in the eye."
+        }
+      ],
+      "next": "c2_tehan"
+    },
+    "c2_trg": {
+      "paragraphs": [
+        {
+          "t": "The square was a wide circle of white stone slabs, and in its middle stood a fountain with water flowing in two streams, one warm, one cold. From the edge you watched people move.",
+          "lead": "A white circle of square and a two-streamed fountain."
+        },
+        {
+          "t": "It didn’t take much to astonish you. They moved like a flock: at one moment everyone crossing the square would turn left, with nobody first, as if birds decided to turn without a leader. An hour later all had stopped, all looked at the corner, all sat on the edge of the fountain, all relaxed as if someone had lifted a load from their shoulders.",
+          "lead": "The city moved like a flock of birds."
+        },
+        {
+          "t": "Not one disputed word. Not one collision. Not one hurry. You thought of the people at home, your neighbors who fight over parking spaces, and felt something you didn’t know how to name: it was envy, but fear too.",
+          "lead": "Envy and fear, at once."
+        },
+        {
+          "t": "Only one man didn’t move with the others. An old man, with grey muscular arms and a film over one eye, sat on a stone slab to the side, turning a piece of glass in his fingers. People went around him in a wide arc, the way you go around a stone in the road. Not with hostility. As if he were part of a landscape that doesn’t change.",
+          "lead": "Only one man wasn’t part of the flock."
+        }
+      ],
+      "next": "c2_tehan"
+    },
+    "c2_tehan": {
+      "paragraphs": [
+        {
+          "t": "Iva took you by the sleeve, paying no attention to her mother, across three streets to the glass shop.",
+          "lead": "Someone led you toward the old man with the glass.",
+          "if": {
+            "pick": "c2a"
+          }
+        },
+        {
+          "t": "“This is Tehan. He’s blank. He has only one eye, and it’s blank. You’re blank in both. You should meet.”",
+          "lead": "Iva introduces you.",
+          "who": "Iva",
+          "if": {
+            "pick": "c2a"
+          }
+        },
+        {
+          "t": "You crossed the alley, with a wave of your hand ignoring the woman at the stall. The man watched you as you approached and didn’t look away, which was the first time anyone had looked at you like that since you arrived.",
+          "if": {
+            "pick": "c2b"
+          },
+          "lead": "Across the alley someone looked at you without looking away."
+        },
+        {
+          "t": "You approached the old man, and the people around you went around you as they go around him, and for a moment you thought it was all you would ever have in common.",
+          "if": {
+            "pick": "c2c"
+          },
+          "lead": "People went around you like a stone in the road."
+        },
+        {
+          "t": "Tehan was about eighty and had a grinder’s hands: calloused, thin and sure. On his knees he held a palm-sized piece of glass, from which he was scraping layers with a fine skin. He didn’t raise his head at once.",
+          "lead": "The old man looked at you for the first time.",
+          "img": "tehan"
+        },
+        {
+          "t": "“You came to survive. That’s the one thing nobody here does. Surviving is Lumen’s job here.”",
+          "lead": "His first words hit the target.",
+          "who": "Tehan"
+        },
+        {
+          "t": "The translator in your collar caught him at once, without hesitating, as if it had heard this language before.",
+          "lead": "The translator caught him at once."
+        },
+        {
+          "t": "“They call me blank. Not meanly. The way they call rain, when it still falls: something not needed, but not evil. Since the last Alignment, thirty years ago, I see nothing in the corner. Don’t ask me why. For a long time I thought it was a punishment, then a gift, and now I think it’s simply so.”",
+          "lead": "Why they call him blank.",
+          "who": "Tehan"
+        },
+        {
+          "t": "He peered into your visor.",
+          "lead": "He looked at your visor as if reading it."
+        },
+        {
+          "t": "“Nothing is offered to you either. At least for now. Look at me: how many times today did you want to do something and not know what?”",
+          "lead": "A question about what you wanted today.",
+          "who": "Tehan"
+        },
+        {
+          "t": "You didn’t answer. You had three questions, and you knew the old man would answer only one before his gaze returned to the glass.",
+          "lead": "Three questions, time for only one."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c2d",
+          "text": "Ask him how to leave this planet.",
+          "next": "c2_podne",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c2e",
+          "text": "Ask him what Lumen is and who holds it.",
+          "next": "c2_podne",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c2f",
+          "text": "Ask him what it is like to be blank.",
+          "next": "c2_podne",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c2h",
+        "text": "— Ask nothing. Just sit beside him.",
+        "next": "c2_podne",
+        "w": {
+          "s": 2
+        },
+        "after": 22
+      },
+      "prompt": "The old man will answer only one of your questions."
+    },
+    "c3_vizir": {
+      "chapter": "c3",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "“The Port. At the other end of the White Belt, three days’ walk. There is a rail there, and on the rail a freight craft that hasn’t flown since the Alignment thirty years ago. Every year they inspect it and every year put it back in place. Nobody knows why they don’t touch it. Lumen doesn’t offer it.”",
+          "lead": "The old man answered what you asked.",
+          "who": "Tehan",
+          "if": {
+            "pick": "c2d"
+          }
+        },
+        {
+          "t": "“Nobody. Ask the Wardens. They’ll all tell you Lumen is here for us. Ask them who said so, then wait for the answer. You’ll wait a long time.”",
+          "lead": "The old man answered what you asked.",
+          "who": "Tehan",
+          "if": {
+            "pick": "c2e"
+          }
+        },
+        {
+          "t": "As he said it, he smiled for the first time.",
+          "lead": "Tehan’s first smile.",
+          "if": {
+            "pick": "c2e"
+          }
+        },
+        {
+          "t": "“Like being the only one in a room where everyone speaks in one voice. The voice doesn’t bother you. What bothers you is that nobody ever adds a word to yours. And sometimes, if someone did, it would be a happier day.”",
+          "lead": "The old man answered what you asked.",
+          "who": "Tehan",
+          "if": {
+            "pick": "c2f"
+          }
+        },
+        {
+          "t": "Tehan was silent a long time.",
+          "lead": "The old man was silent a long time.",
+          "if": {
+            "pick": "c2h"
+          }
+        },
+        {
+          "t": "“Good. Some ask. Some just sit. The second kind are right more often.”",
+          "lead": "The old man answered what you asked.",
+          "who": "Tehan",
+          "if": {
+            "pick": "c2h"
+          }
+        },
+        {
+          "t": "He went on grinding the glass.",
+          "lead": "The glass is still being ground.",
+          "if": {
+            "pick": "c2h"
+          }
+        },
+        {
+          "t": "He pointed a finger at your face and leaned closer.",
+          "lead": "The old man added something, pointing at your face."
+        },
+        {
+          "t": "“That visor. I don’t know what it is, but what shields me from the grain shields you. It’s cracked. It cracks on everyone after the first day.”",
+          "lead": "What Tehan knows about the visor.",
+          "who": "Tehan"
+        },
+        {
+          "t": "You didn’t know what the grain was. You didn’t get to ask."
+        },
+        {
+          "t": "That night, if it can be called night, because the light didn’t stop for an instant, Orsa gave you a woven mat to lie on in a corner of her house. The whole family stretched out in their places at the same moment, as if someone had gently thrown a switch. Only you lay with eyes open, listening to them breathe in the same rhythm.",
+          "lead": "A night that wasn’t night."
+        },
+        {
+          "t": "The crack in the visor was growing slowly. You heard it, a thin sound, like ice in a glass. Five days, you thought. Then it all happened in a moment: the glass rim split in two halves, one stayed on your face, the other fell into your lap.",
+          "lead": "A sound thin as ice in a glass."
+        },
+        {
+          "t": "And then you saw.",
+          "lead": "Something cracked, and your sight opened.",
+          "solo": true
+        },
+        {
+          "t": "At the edge of your field of vision, where what the eye can catch ends, a thin ring of light appeared. It wasn’t drawn. It was like what you see if you look at the sun a long time, but orderly, in pale lines. You read: WELCOME. UNRECOGNIZED.",
+          "lead": "Something that wasn’t there appeared at the edge of your sight."
+        },
+        {
+          "t": "Beneath that, three lines: Rest. Register. Wait. Each flickered equally, as if they didn’t care.",
+          "lead": "Three lines, none louder."
+        },
+        {
+          "t": "You turned your head. The ring went with you, motionless at the edge, as if part of the eye. Orsa slept, and from her eyelids you could see illegible words sliding past for her too.",
+          "lead": "You turned your head, and the ring went with you."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c3a",
+          "text": "Take the visor off entirely.",
+          "next": "c3_posle",
+          "w": {
+            "u": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c3b",
+          "text": "Tape the crack with tape from your pocket and keep it on.",
+          "next": "c3_posle",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c3c",
+          "text": "Read everything it offers, but don’t let your gaze rest on anything.",
+          "next": "c3_posle",
+          "w": {
+            "s": 1,
+            "u": 1
+          }
+        }
+      ],
+      "prompt": "The glass has cracked and the ring glows at the edge of your sight. What will you do with the visor?"
+    },
+    "c3_posle": {
+      "paragraphs": [
+        {
+          "t": "Light struck your eyes like a palm. You shut them, opened them, and the ring was there, clearer and more all-encompassing than before. The lines were now full, warm, like a letter from someone you know. Rest. Register. Wait. A tiredness you hadn’t known you carried poured onto your shoulders with all its weight, and only then did you realize how long you had been awake, how long you had held everything alone.",
+          "if": {
+            "pick": "c3a"
+          },
+          "lead": "Light struck your eyes like a palm."
+        },
+        {
+          "t": "Carefully you taped black tape over the crack. The visor sealed, like a wound. The ring flickered, crumbled into letters, and vanished. The world was quiet again, simple and yours. And in that quiet you felt for the first time that you were alone, but the way you had been alone at home: with yourself.",
+          "if": {
+            "pick": "c3b"
+          },
+          "lead": "The tape closed the crack."
+        },
+        {
+          "t": "You kept your gaze soft, unfocused, like reading someone’s letter over their shoulder. The lines scrolled: Rest. Register. Wait. Below them new words appeared, smaller: In two hours, someone will come with food. Water is in the jar on the left. There was no threat in it. It was painless and exact, and you remembered everything.",
+          "if": {
+            "pick": "c3c"
+          },
+          "lead": "You read without resting your gaze on anything."
+        },
+        {
+          "t": "Until the first bell, if that’s what it’s called, nothing happened. The window with the suns stayed the same. Orsa woke, sat up and looked at the corner, then looked at you so long that you had to look away.",
+          "lead": "Orsa woke and looked at you too long."
+        },
+        {
+          "t": "“Something has changed. I’m not sure what. My Lumen offered to report you to the Wardens. Five times already. It has never offered anything five times.”",
+          "lead": "She said something she had never said before.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She looked at you.",
+          "lead": "Orsa looked at you."
+        },
+        {
+          "t": "“I didn’t click.”",
+          "lead": "A sentence about clicks.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She waited for your answer. In the corner of her gaze, you were sure, a new offer had just appeared.",
+          "lead": "She waited again, and a new offer appeared in her corner."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c3d",
+          "text": "Tell her it’s good she didn’t click.",
+          "next": "c3_iva",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c3e",
+          "text": "Tell her she may have to click.",
+          "next": "c3_iva",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c3f",
+          "text": "Say nothing. Look into her corner and try to read what it offers her.",
+          "next": "c3_iva",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "prompt": "Orsa waits for you to say something. What do you answer?"
+    },
+    "c4_pritisak": {
+      "chapter": "c4",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "By the next bell Zenit had begun to avoid you.",
+          "lead": "The city began to avoid you."
+        },
+        {
+          "t": "It wasn’t sudden. First Dalja stopped setting a plate at your place. Then the neighbors, who until yesterday looked at you as furniture, began to look at you as a hole in the furniture and to turn aside. At the market the stalls, when you approached, were closed before you arrived. Not maliciously, but exactly, like a gear passing over a place where a tooth is missing.",
+          "lead": "The avoiding was gentle and exact.",
+          "img": "dalja"
+        },
+        {
+          "t": "Lumen was changing, you realized. The words in their eyes were no longer only Rest and Wait. A new one had appeared in them, thin, cold: Avoid.",
+          "lead": "A new line appeared in their eyes."
+        },
+        {
+          "t": "You had been hungry since early morning. Orsa ran between the house and the square, each time returning with a new, horrified look. “The Wardens are coming,” she said. “At the next bell. Everyone knows. Lumen has offered them to wait for you at the fountain.”",
+          "lead": "Orsa brought news."
+        },
+        {
+          "t": "She took you by the sleeve, touching you deliberately for the first time.",
+          "lead": "A touch that wasn’t offered."
+        },
+        {
+          "t": "“I can’t help you. Not because I won’t. It isn’t offered to me.”",
+          "lead": "Why she can’t help.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Tehan watched you from the far side of the square. His blank eye didn’t move. He only raised a hand for a moment: not a sign, not a greeting. As if he had measured the distance.",
+          "if": {
+            "pick": "c2e"
+          },
+          "lead": "Tehan raised a hand from the far end of the square."
+        },
+        {
+          "t": "Time kept running, and four days remained."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c4a",
+          "text": "Leave Zenit before they come.",
+          "next": "c4_beg",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c4b",
+          "text": "Wait for the Wardens at the fountain and talk to them.",
+          "next": "c4_cekaj",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c4c",
+          "text": "Take food and water from the communal storehouse while nobody wonders why.",
+          "next": "c4_skladiste",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "prompt": "The Wardens will arrive soon, and the city is avoiding you. What now?"
+    },
+    "c4_beg": {
+      "paragraphs": [
+        {
+          "t": "You left the city without a goodbye. Every street you passed saw you off with gazes that parted like water around a stone. When you reached the edge of the salt, you felt your chest widen. You still had neither water nor food, but you had a direction.",
+          "lead": "You left the city without a goodbye."
+        },
+        {
+          "t": "You walked nearly a full circle. The suns moved, shadows crossed and parted, the whole world looked like a great glass machine in which you were the only thing working out of rhythm. With a strange pride you realized you listened to nobody, answered to nobody, and every step carried only you.",
+          "lead": "You walked nearly a full circle, alone and light."
+        },
+        {
+          "t": "Somewhere in the second half of the way you heard footsteps behind you. You turned. Orsa, two skins over her shoulders, breathless, red in the face, was running across the salt. She caught up, barely catching her breath.",
+          "lead": "Someone followed you across the salt."
+        },
+        {
+          "t": "“My Lumen said Stay. Five times. And I, for the first time in my life, looked at something else. What, I don’t know. But I came.”",
+          "lead": "Her words were the first rebellion.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She didn’t get to finish. Behind you, on the horizon, something gleamed: a low white craft, one of those sand skiffs that glide over salt without wheels. It stopped beside you, quiet as a cloud. A man in a grey coat with a brass ring at his temple stepped out. He didn’t seem angry. He seemed tired, like someone who wished to be elsewhere.",
+          "lead": "Something white was approaching on the horizon."
+        }
+      ],
+      "next": "c4_put"
+    },
+    "c4_cekaj": {
+      "paragraphs": [
+        {
+          "t": "You waited for them at the fountain, at the edge of the stone slab, hands in view, and people who passed went around you in a wide circle. The two streams of water splashed side by side, warm and cold, and in their noise you thought for the first time since the fall that you were at peace.",
+          "lead": "You waited for them at the fountain, hands in view."
+        },
+        {
+          "t": "The Wardens arrived at three. Grey coats, brass rings at their temples, a gait measured like a pendulum’s swing. None looked malicious. The oldest of them, Veles, with a greying beard and eyes that looked straight at you, stopped a step away.",
+          "lead": "The Wardens arrived, courteous and tired."
+        },
+        {
+          "t": "“Nothing is offered to me to say to you. But I’m not sure that’s bad.”",
+          "lead": "The oldest of them spoke first.",
+          "who": "Veles"
+        },
+        {
+          "t": "“You’ll have to come with us. Not because we must take you, but because we have no other offer. In the Intersection there are places where we can talk.”",
+          "lead": "An invitation that wasn’t an invitation.",
+          "who": "Veles"
+        },
+        {
+          "t": "Orsa stood in the background, pale, with a look that couldn’t be deciphered. When you set off, she didn’t move. She watched you go and clicked nothing.",
+          "lead": "Orsa stood aside and was silent."
+        }
+      ],
+      "next": "c4_put"
+    },
+    "c4_skladiste": {
+      "paragraphs": [
+        {
+          "t": "The communal storehouse was a long cold building with shelves to the ceiling. No guards. No padlocks. The entrance stood open, because nobody had ever had a reason to close what nobody thinks of taking.",
+          "lead": "A storehouse without padlocks."
+        },
+        {
+          "t": "You filled your bag with bars of dry food, three flasks of water and one sheet for protection from the sun. Each time you went out, you felt your heart pounding in your chest, like a child stealing apples. Nobody shouted. Nobody even saw.",
+          "lead": "The bag filled up and nobody saw."
+        },
+        {
+          "t": "When you looked up from the last shelf, a man with a greying beard and a brass ring at his temple stood in the doorway, arms folded across his chest.",
+          "lead": "A man in grey stood in the doorway."
+        },
+        {
+          "t": "“Nobody here has ever stolen. Not because it’s forbidden. Because Lumen doesn’t offer theft. We don’t know what to do with you, except to ask you.”",
+          "lead": "The Warden said something you didn’t expect.",
+          "who": "Veles"
+        },
+        {
+          "t": "He raised a hand, palm up.",
+          "lead": "A palm turned upward."
+        },
+        {
+          "t": "“Will you talk with us?”",
+          "lead": "A question, not an order.",
+          "who": "Veles"
+        },
+        {
+          "t": "You set the bag down. Neither fear nor shame stopped you. What stopped you was that the man looked genuinely curious.",
+          "lead": "It wasn’t fear that stopped you. Something else."
+        }
+      ],
+      "next": "c4_put"
+    },
+    "c5_veles": {
+      "chapter": "c5",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Veles took Orsa back to Zenit in the same skiff, gently, without a word. She didn’t resist. She looked back as long as she could see your outline on the horizon, and then her gaze dropped into her corner, to a line that was telling her something.",
+          "if": {
+            "pick": "c4a"
+          },
+          "lead": "Veles took Orsa home, and it hurt her."
+        },
+        {
+          "t": "The Intersection was a windowless tower of white stone and clear glass, rising from the middle of the city like a single flat bone. Veles led you through corridors where only the sound of your steps echoed, to an inner courtyard, and stopped there.",
+          "lead": "A windowless tower waited in the middle of the city."
+        },
+        {
+          "t": "On the stone slab before you there was no shadow. Or rather, there was one. Here, in that single place on the whole planet, the amber and bluish shadows merged into one dark eye, the size of a palm. You stepped into it and for the first time since the fall saw your body cast only one shadow.",
+          "lead": "On the stone before you there were not two shadows."
+        },
+        {
+          "t": "“That’s why the Intersection is here. The light of the two suns passes through the lenses above us and here, at this point, condenses. We call it grain. Lumen travels in the grain. The purer the grain, the more accurate the offer.”",
+          "lead": "Veles explained how light becomes grain.",
+          "who": "Veles",
+          "img": "veles"
+        },
+        {
+          "t": "“Who made it?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Those who died.”",
+          "lead": "The answer was unexpected: the dead.",
+          "who": "Veles"
+        },
+        {
+          "t": "Veles sat on the edge of the slab, like a man who has explained this to himself many times.",
+          "lead": "Veles sat on the edge of the slab."
+        },
+        {
+          "t": "“The first to come here, with no night, didn’t know when to stop. They worked, ate, quarreled, but didn’t know when it was enough. Nineteen years without sleep. We call it the Divisions. People killed each other over trifles they couldn’t even name. Lumen began as a helper: one word, just one, Rest. It saved us. Then it added another word, and another.”",
+          "lead": "How Lumen began.",
+          "who": "Veles"
+        },
+        {
+          "t": "“And nobody leads?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A Warden doesn’t decide. A Warden cleans the lenses and is first to click on what’s offered.”",
+          "lead": "What a Warden does.",
+          "who": "Veles"
+        },
+        {
+          "t": "He smiled, sadly.",
+          "lead": "Veles smiled, sadly."
+        },
+        {
+          "t": "“You ask if someone’s at the top. No one. Only all of us, an offer to one another.”",
+          "lead": "A question about whoever is on top.",
+          "who": "Veles"
+        },
+        {
+          "t": "Then came what you already knew would come.",
+          "lead": "Then you were told a place was already waiting."
+        },
+        {
+          "t": "“Lumen has prepared a place for you. The profile is open. UNRECOGNIZED becomes {IME} the moment you sit in that chair. There will be no pain. You will have food, a roof and every next step. Or you can leave. But you must know that everyone I know who left did not come back to say how it was.”",
+          "lead": "A place already prepared.",
+          "who": "Veles"
+        },
+        {
+          "t": "Three days to the Alignment. You counted over everything you knew, and it wasn’t enough.",
+          "lead": "Three days remained, and little knowledge."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c5a",
+          "text": "Ask Veles where the light that carries Lumen comes to an end.",
+          "next": "c5_sociva",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c5b",
+          "text": "Ask Veles what lies at the end of the rail at the Port.",
+          "next": "c5_luka",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c5c",
+          "text": "Ask Veles what Lumen would offer you if you were registered.",
+          "next": "c5_prijava",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c5h",
+        "text": "— Stay silent and look at the spot where the shadows meet.",
+        "next": "c5_sociva",
+        "w": {
+          "s": 2
+        },
+        "after": 24
+      },
+      "prompt": "The chair is already waiting, and Veles is patient. What do you want to find out?",
+      "img": "presek"
+    },
+    "c5_sociva": {
+      "paragraphs": [
+        {
+          "t": "Veles led you down a narrow step, beneath the courtyard, into a room with no decoration. From the ceiling hung hundreds of glass plates, lattices of glass and silver, and light passed through them as through water: golden, bluish, then a single white.",
+          "lead": "Down a narrow step, beneath the courtyard."
+        },
+        {
+          "t": "“This is where it’s sown. The Shutter would come down here.”",
+          "lead": "The place where it is sown.",
+          "who": "Veles"
+        },
+        {
+          "t": "He pointed to an iron plate, rusted with damp, with a wheel handle the size of a cart wheel.",
+          "lead": "A rusted plate and a wheel the size of a cartwheel."
+        },
+        {
+          "t": "“It was last lowered thirty years ago. For one whole hour.”",
+          "lead": "Last time thirty years ago.",
+          "who": "Veles"
+        },
+        {
+          "t": "“Who lowered it?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Veles was silent long enough for the answer to be clear.",
+          "lead": "Veles was silent before answering."
+        },
+        {
+          "t": "“The man who now grinds glass in the square. Back then he was a Warden.”",
+          "lead": "Who lowered the Shutter.",
+          "who": "Veles"
+        },
+        {
+          "t": "“What happened during that hour?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Veles looked at his hands.",
+          "lead": "Veles looked at his hands."
+        },
+        {
+          "t": "“That is what I don’t know. Some say four hundred people stood as if nailed down and couldn’t move until it came back. Others say it was the best hour in the history of Tandem. Both are true. The Shutter works only at the Alignment, when the grain is strongest, and when the world could, if ever, be closed for good. If the glass layer were shut then, the grain would be cut. Not for an hour. For everything.”",
+          "lead": "What really happened that hour, nobody knows.",
+          "who": "Veles"
+        },
+        {
+          "t": "“Nobody has tried?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Veles turned, his face calm as if this were the most ordinary thing in the world.",
+          "lead": "Veles turned, face calm."
+        },
+        {
+          "t": "“Nobody was offered it. And I can’t show you where the wheel locks, because that isn’t offered to me. But I can stand here while you look at it.”",
+          "lead": "The last thing Veles couldn’t do.",
+          "who": "Veles"
+        }
+      ],
+      "next": "c5_tehan"
+    },
+    "c5_luka": {
+      "paragraphs": [
+        {
+          "t": "Veles rubbed his temple for a long time, where his brass ring had left a red mark.",
+          "lead": "Veles rubbed his temple a long time."
+        },
+        {
+          "t": "“The Carrier. A freighter for short jumps. Its rail at the Port is the only place on Tandem from which anything leaves the ground. Every year we inspect it. Every year we put it back. It works, and nobody knows why we don’t let it go.”",
+          "lead": "A freighter for short jumps.",
+          "who": "Veles"
+        },
+        {
+          "t": "“When can it take off?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Veles looked at you.",
+          "lead": "Veles looked at you."
+        },
+        {
+          "t": "“Only at the Alignment. Then the rail draws power directly from both suns, and all the rest of the planet’s energy isn’t worth those few hours. But it’s not enough to reach the Port and sit down. Departure must be confirmed by someone who sees Lumen. Someone to whom the line DEPARTURE appears. You don’t see it, and whoever sees it mustn’t click it, because it is never offered to them.”",
+          "lead": "The rail works only once, and only then.",
+          "who": "Veles"
+        },
+        {
+          "t": "You knew one person who might be able to. “I don’t recommend it,” Veles added. “Not because I don’t want you to leave. But because I’d like to know it was hers to decide, not yours.”",
+          "lead": "There was a person who could confirm the departure."
+        },
+        {
+          "t": "He stared at his hands, his dull nails, the traces of salt.",
+          "lead": "Veles looked at his hands."
+        },
+        {
+          "t": "“It’s never offered to anyone to let someone go. Anyone. When someone left, it was never clear who allowed it.”",
+          "lead": "Nobody lets anyone go.",
+          "who": "Veles"
+        }
+      ],
+      "next": "c5_tehan"
+    },
+    "c5_prijava": {
+      "paragraphs": [
+        {
+          "t": "Veles led you to a small room at the top of the tower. In it stood a single chair, of white wood, narrow, with a back that seemed to wait for someone to lean on it. Through the window light of both suns fell, mingling on the floor into a soft patch.",
+          "lead": "A small room at the top of the tower, and a single chair."
+        },
+        {
+          "t": "“You sit. You look at the sun. Registration takes as long as one breath. After that Lumen will offer you what it offers all of us.”",
+          "lead": "Registration takes one breath.",
+          "who": "Veles"
+        },
+        {
+          "t": "“And what will it offer me?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“First, to rest. You’re tired, {ime}, tired on a level you know nothing about. Then to eat. To talk with Orsa. To feel well. It will never offer you anything you wouldn’t enjoy.”",
+          "lead": "What Lumen would offer you.",
+          "who": "Veles"
+        },
+        {
+          "t": "You looked at the chair a long time. It was amazing how ordinary it was."
+        },
+        {
+          "t": "“You’ll survive tomorrow. You’ll survive the day after. You’ll survive every day to the end. I don’t think that’s bad. I don’t think it’s good either. I think it’s accurate.”",
+          "lead": "Veles said the last sentence quietly.",
+          "who": "Veles"
+        },
+        {
+          "t": "You turned away from the chair. Not because you had decided, but because you knew you shouldn’t decide yet. But you didn’t know whether that meant you were stronger or only afraid.",
+          "lead": "You turned from the chair, but not from a decision."
+        }
+      ],
+      "next": "c5_tehan"
+    },
+    "c6_orsa": {
+      "chapter": "c6",
+      "showChapter": true,
+      "paragraphs": [
+        {
+          "t": "Veles let you go. He didn’t say he wouldn’t look for you, or that he wouldn’t find you.",
+          "lead": "Veles let you go, with one piece of advice."
+        },
+        {
+          "t": "“One circle remains. Whatever you choose, choose before it is offered to you.”",
+          "lead": "One piece of advice.",
+          "who": "Veles"
+        },
+        {
+          "t": "Orsa was waiting for you on the flat roof of her house, where people sat in spare time and gazed into infinity. Two shadows lay across the brick and crossed in her lap. At her side stood a bowl of warm broth, the first meant for you in three days.",
+          "lead": "Orsa and a bowl of broth waited on the roof."
+        },
+        {
+          "t": "Beside the bowl lay the key to a sand skiff, and a rolled piece of leather on which someone had drawn a route across the salt.",
+          "lead": "Beside the bowl lay something Orsa wasn’t allowed to take.",
+          "if": {
+            "lead": "b"
+          }
+        },
+        {
+          "t": "“I took it from Veles’s coat while he wasn’t looking. I don’t know how I did it. Lumen didn’t offer it to me. I only know I wanted something, and I knew where to reach.”",
+          "lead": "Where she got the key.",
+          "who": "Orsa",
+          "if": {
+            "lead": "b"
+          }
+        },
+        {
+          "t": "Beside the bowl lay a sheet of paper with a wheel drawn on it, splattered with ink and written in a trembling hand.",
+          "lead": "Beside the bowl lay a drawing of a wheel.",
+          "if": {
+            "lead": "s"
+          }
+        },
+        {
+          "t": "“Tehan gave it to me. He said I shouldn’t give it to you. He said it three times, so I know he means the opposite.”",
+          "lead": "Who gave the drawing.",
+          "who": "Orsa",
+          "if": {
+            "lead": "s"
+          }
+        },
+        {
+          "t": "Beside the bowl stood a plate with your name: {ime}, written in soft letters.",
+          "lead": "Beside the bowl stood a plate with your name.",
+          "if": {
+            "lead": "u"
+          }
+        },
+        {
+          "t": "“Mother set it. For the first time since you arrived. Lumen offered her to accept you. I think she was relieved.”",
+          "lead": "Who set the plate.",
+          "who": "Orsa",
+          "if": {
+            "lead": "u"
+          }
+        },
+        {
+          "t": "You ate in silence. Only when the bowl was empty did Orsa say what she had carried a long time.",
+          "lead": "After the meal, Orsa asked a question."
+        },
+        {
+          "t": "“What would you choose if you had Lumen?”",
+          "lead": "A question about Lumen.",
+          "who": "Orsa"
+        },
+        {
+          "t": "“I don’t know.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Everyone knows. That’s the difference between us. We know what we’ll choose, we just don’t know why. You don’t know what, but you probably know why.”",
+          "lead": "She explained the difference between you.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She was looking at the two shadows on the roof.",
+          "lead": "Orsa looked at the two shadows."
+        },
+        {
+          "t": "“Do you have night where you come from?”",
+          "lead": "A question about night.",
+          "who": "Orsa"
+        },
+        {
+          "t": "“We do. We all sleep in the dark, at the same time. Billions of us.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“And nobody tells you when to lie down?”",
+          "who": "Orsa"
+        },
+        {
+          "t": "“Nobody.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then how do you know it’s good?”",
+          "who": "Orsa"
+        },
+        {
+          "t": "You thought a long time.",
+          "lead": "You thought a long time before you answered."
+        },
+        {
+          "t": "“We don’t. Sometimes we’re wrong. But it’s ours.”",
+          "lead": "Your answer in the end.",
+          "who": "Ti"
+        },
+        {
+          "t": "Orsa nodded, as if she had heard something she had always known. Then she looked into her corner, briefly, and looked back.",
+          "lead": "Orsa nodded."
+        },
+        {
+          "t": "“This morning I was offered to tell you it’s better you stay. Five times. And I was waiting to ask what you think.”",
+          "lead": "Orsa admitted something.",
+          "who": "Orsa"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c6a",
+          "text": "Tell her the truth: that you don’t know what you would choose.",
+          "next": "c6_poslednji",
+          "w": {
+            "u": 1,
+            "s": 1
+          }
+        },
+        {
+          "id": "c6b",
+          "text": "Ask her to show you what she sees when she looks into her corner.",
+          "next": "c6_poslednji",
+          "w": {
+            "u": 1,
+            "b": 1
+          }
+        },
+        {
+          "id": "c6c",
+          "text": "Tell her you can’t ask her for anything.",
+          "next": "c6_poslednji",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Orsa asks what you think. What do you answer?"
+    },
+    "c6_poravnanje": {
+      "paragraphs": [
+        {
+          "t": "The Alignment didn’t begin suddenly. First the blue sun drew near the amber one, not as two bodies approach, but like two drops on glass: slowly, then inevitably. The light first turned strange, then painful, then one.",
+          "lead": "The Alignment didn’t begin suddenly."
+        },
+        {
+          "t": "Then the shadows disappeared. Or rather, one vanished and the other became black and sharp, like a drawing. Everything on Tandem, every wall, every house, every child, cast only one shadow, and for the first time in its life the whole planet looked as if it belonged to a single truth.",
+          "lead": "Then the shadows vanished."
+        },
+        {
+          "t": "The air trembled with heat. Bells struck from all sides, not ringing but resounding in the chest. In the streets beneath the roof people stopped. All at once. Their gazes were fixed on the corner, and more and more their eyes narrowed. Lumen was filling.",
+          "lead": "The bells struck in your chest."
+        },
+        {
+          "t": "You saw it. Without the visor the ring grew over half the sky: lines, lines, lines, thousands of words washing over one another, Rest, Go, Stay, Enter, Help, Lower your head, Don’t look, Look, Wait, all at once, until it merged into white noise.",
+          "if": {
+            "pick": "c3a"
+          },
+          "lead": "You saw the ring grow across the sky."
+        },
+        {
+          "t": "The tape on the visor began to give in the heat. Beneath it, through the crack, the ring burst out, full, overwhelming, thousands of words washing over one another. You pressed the tape with a finger, but knew it wouldn’t hold.",
+          "if": {
+            "pick": "c3b"
+          },
+          "lead": "The tape on the visor began to give."
+        },
+        {
+          "t": "At the edges of your gaze, softly, as you had learned, you saw the ring spread: lines, lines, more and more words in the same place, until it merged into noise. You didn’t dare rest your gaze on any of them.",
+          "if": {
+            "pick": "c3c"
+          },
+          "lead": "You saw the ring but didn’t dare look at it."
+        },
+        {
+          "t": "Orsa fell to her knees. Both hands were at her temples, and her voice dropped to a whisper.",
+          "lead": "Orsa fell to her knees."
+        },
+        {
+          "t": "“All at once. Everything is offered to me at once. I can’t read. I can’t choose.”",
+          "lead": "Everything is offered to her at once.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She raised her face. In her eyes was the fear of someone who doesn’t know how to name it, because they have never had it before.",
+          "lead": "She looked up, afraid for the first time in her life."
+        },
+        {
+          "t": "“You don’t read. You see what I can’t see. Tell me what to do.”",
+          "who": "Orsa"
+        },
+        {
+          "t": "And then you realized the roles had reversed. For a moment, you were her Lumen. You, who had not a single offer, became the only source of words in the whole city.",
+          "lead": "The roles had reversed."
+        },
+        {
+          "t": "The two suns above you were one. A few hours remained until the end of the Alignment. You had time for only one thing.",
+          "lead": "You had time for only one thing."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c6d",
+          "text": "Lead her down the salt, toward the place where sky meets ground.",
+          "next": "c7_odluka",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c6e",
+          "text": "Lead her where the shadows become one.",
+          "next": "c7_odluka",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c6f",
+          "text": "Tell her to read just one line and hold on to it.",
+          "next": "c7_odluka",
+          "w": {
+            "u": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c6h",
+        "text": "— Tell her nothing. Just hold her hand.",
+        "next": "c7_odluka",
+        "w": {
+          "s": 2
+        },
+        "after": 24
+      },
+      "prompt": "The world has only one shadow, and Orsa asks for a word. Where do you lead her?",
+      "img": "poravnanje"
+    },
+    "c7_odluka": {
+      "paragraphs": [
+        {
+          "t": "You walked. The sand skiff glided across the salt without a sound, and the light scorched everything around you. Orsa sat beside you holding the key in her fist as if it were the only thing that was hers. The place you sought appeared as a thin black line on the horizon: a rail, long and flat, and on it something pale, enormous and forgotten.",
+          "if": {
+            "lead": "b"
+          },
+          "lead": "You walked."
+        },
+        {
+          "t": "You ran. The streets of Zenit were full of people standing like statues, and around them only their breathing could be heard. The Intersection stood before you, white and shining, and the glass at its top burned like a button of the sun. The wheel in the underground waited, cold and rusted, in the dark that was the only dark left.",
+          "if": {
+            "lead": "s"
+          },
+          "lead": "You ran."
+        },
+        {
+          "t": "You stayed where you were. Orsa held one line, and you, not knowing why, held her. The light passed slowly through you, and it felt pleasant, as if someone had finally lifted a weight from you. After that everything else seemed a small matter.",
+          "if": {
+            "lead": "u"
+          },
+          "lead": "You stayed where you were."
+        }
+      ],
+      "branch": [
+        {
+          "if": {
+            "lead": "b"
+          },
+          "next": "e_b1"
+        },
+        {
+          "if": {
+            "lead": "s"
+          },
+          "next": "e_s1"
+        },
+        {
+          "next": "e_u1"
+        }
+      ]
+    },
+    "e_b1": {
+      "paragraphs": [
+        {
+          "t": "The Port was a stone shore without a sea. On it stood rusted cranes, empty halls, and a single rail, kilometers long, that crossed the salt and vanished into white light. At the start of the rail, leaning on a post, lay the Carrier: blunt, clumsy, pale as bone, with a single glass eye at its prow.",
+          "lead": "The Carrier stood at the start of the rail."
+        },
+        {
+          "t": "It turned out to work. When you touched the hull, a soft hum ran through your fingers, as if someone inside were turning something. You climbed in, with Orsa behind you, and she paused on the threshold, like someone crossing water.",
+          "lead": "The Carrier woke under your hand."
+        },
+        {
+          "t": "The console was covered in a layer of dust. It had no screen, no button, no lever. It had only an empty flat place, and you realized that place was made for a gaze.",
+          "lead": "The console had neither button nor screen."
+        },
+        {
+          "t": "“Departure. I see it. Somewhere I saw it among all the rest. But I can’t...”",
+          "lead": "Orsa said a word only she could see.",
+          "who": "Orsa"
+        },
+        {
+          "t": "Her voice was full.",
+          "lead": "Her voice was full."
+        },
+        {
+          "t": "“You can.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Lumen offers me Stay. On every line. Five thousand times. It’s written so that what lies beneath will be forgotten.”",
+          "lead": "Her Lumen offered only one thing.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She clenched her teeth.",
+          "lead": "Orsa clenched her teeth."
+        },
+        {
+          "t": "“I don’t know how to hold something Lumen doesn’t offer me.”",
+          "lead": "What she doesn’t know how to do.",
+          "who": "Orsa"
+        },
+        {
+          "t": "“Just hold.”",
+          "who": "Ti"
+        },
+        {
+          "t": "She stared into nothing. She stared long, longer than anyone should. At last her eyes stopped, calm, and then you saw: not words, but a single moment in which her whole life gathered into one point, and her gaze stayed there, unmoving, stubborn, as if looking at something she wanted to see instead of what was offered.",
+          "lead": "She stared a long time, and then something stopped."
+        }
+      ],
+      "next": "e_b2",
+      "img": "luka"
+    },
+    "e_b2": {
+      "paragraphs": [
+        {
+          "t": "The rail woke. First it trembled, then it sang, high and pure, like a wire. The Carrier set off, slowly, then faster, then at a moment when sound could no longer be told from speed. The pressure pushed you into the seat, and through the glass eye you saw Orsa standing at the end of the rail, smaller and smaller, one hand raised, not to wave, but to shield her eyes.",
+          "lead": "The rail began to sing."
+        },
+        {
+          "t": "The sky began to change. Whitish turned to blue, blue to violet, and at last to something that was no color. Darkness. True darkness, full of stars, without a single scorching sun. For the first time in seven days you saw that night can happen.",
+          "lead": "The sky changed color for the first time."
+        },
+        {
+          "t": "The Carrier rose above the atmosphere and entered stillness. Three lines appeared on the console, neatly arranged, without explanation. You didn’t read them. You looked at them a long time, and they looked at you.",
+          "lead": "Three lines appeared on the console."
+        },
+        {
+          "t": "Under the seat you felt a bundle someone had slipped in before departure: bread, salt and a piece of cloth. You didn’t open it, only put it under your head. It smelled of the earth you had left.",
+          "lead": "A bundle under the seat."
+        },
+        {
+          "t": "Then you turned off the screen, stretched out your legs and closed your eyes. For the first time in seven days you slept, not knowing for how long.",
+          "lead": "For the first time in seven days, sleep."
+        },
+        {
+          "t": "Nobody told you when to wake.",
+          "lead": "One sentence, at the end.",
+          "solo": true
+        }
+      ],
+      "end": "b"
+    },
+    "e_s1": {
+      "paragraphs": [
+        {
+          "t": "The underground hall was cold, dark and full of light that fell through the lenses like rain. The rusted Shutter stood alone in the dark, and around it, already, people waited.",
+          "lead": "The Shutter waited in the dark, and people around it."
+        },
+        {
+          "t": "Tehan was there, leaning on a stick, with that clouded eye that stared into nothing. Veles stood by the wall, arms folded across his chest. Orsa came in behind you, pale, and stopped as far from the wheel as she could.",
+          "lead": "Two of them were already waiting for you."
+        },
+        {
+          "t": "“I knew you’d come. Not because it was offered to me. Because I saw you watching the glass.”",
+          "lead": "Tehan said a sentence that explained everything.",
+          "who": "Tehan"
+        },
+        {
+          "t": "“Will anyone stop me?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I can’t help. It isn’t offered to me. But I can’t stop you either, because that isn’t on my list. I can only watch.”",
+          "lead": "Veles said what he can and cannot do.",
+          "who": "Veles"
+        },
+        {
+          "t": "He smiled, sadly, and turned his head aside, like someone who wants to see and not see.",
+          "lead": "Veles turned his head aside."
+        },
+        {
+          "t": "You took the wheel together, you and Tehan, hand beside hand, one young and one old. The iron groaned. At first it wouldn’t, then it gave, then it moved. The light above you began to go out, line by line, the way candles are put out: golden, then bluish, then white.",
+          "lead": "The iron groaned, then moved."
+        },
+        {
+          "t": "The last thing you saw before the dark was the ring at the edge of your sight. The words in it fell apart, one by one, like sand through fingers. Rest. Register. Wait. And then, briefly, a few lines you had never seen before, gentle, frightened, as if someone had only now allowed them to speak: I don’t know. I don’t know. I don’t know.",
+          "lead": "The last thing you saw before the dark."
+        }
+      ],
+      "next": "e_s2"
+    },
+    "e_s2": {
+      "paragraphs": [
+        {
+          "t": "Zenit stopped. Not the way it stops when Lumen says Wait, but the way something stops that has lost its footing. People in the middle of streets raised their heads and looked around. The old man stayed on the bench, a finger halfway to his mouth. The woman at the stall looked at her hands as if seeing for the first time that they were hers.",
+          "lead": "Zenit stopped, but not as before."
+        },
+        {
+          "t": "For a long time there was no sound. Then somewhere in the distance the girl Iva spoke, loudly, the way children speak.",
+          "lead": "The first sound afterward was a child’s voice."
+        },
+        {
+          "t": "“What now?”",
+          "lead": "A child’s question.",
+          "who": "Iva"
+        },
+        {
+          "t": "Nobody answered. Nobody knew. People looked at one another, for the first time with a look that didn’t pass over but stopped. The first to speak had nothing wise to say: he said “I’m hungry”, and that was, somehow, enough for someone to go fetch bread.",
+          "lead": "People truly looked at each other for the first time."
+        },
+        {
+          "t": "Orsa stood at the edge of the square, her fists pressed to her chest. She looked at you, and in that look was more anger than gratitude, yet neither of the two was quite only that.",
+          "lead": "Orsa looked at you a long time."
+        },
+        {
+          "t": "“What have you done to us.”",
+          "lead": "Words that aren’t a question.",
+          "who": "Orsa"
+        },
+        {
+          "t": "You had no answer. Some people didn’t rise from the benches. Some wept. Some laughed, foolishly, for no reason, like children who are suddenly allowed everything.",
+          "lead": "Some wept, some laughed."
+        },
+        {
+          "t": "Nobody knew what came next. That was the first hour. There were many more hours, and none of them was written in advance.",
+          "lead": "And one sentence about the first hour."
+        },
+        {
+          "t": "Toward evening a column of dust appeared on the road leading out of the city. Someone said it was traders from the next settlement, someone said it wasn’t. People stood and waited to see who was coming, and for the first time didn’t know what they would say to them.",
+          "lead": "Dust on the road."
+        }
+      ],
+      "end": "s"
+    },
+    "e_u1": {
+      "paragraphs": [
+        {
+          "t": "The Intersection was quiet, as if someone had carefully washed it. The Alignment was beginning to ease, shadows were coming back, two of them, like old friends, and the light was ordinary again.",
+          "lead": "The Intersection was quiet, the light ordinary."
+        },
+        {
+          "t": "Veles was waiting for you at the top. He asked nothing. He pointed to the chair, and you sat. It was warm, as if someone had just risen from it.",
+          "lead": "Veles waited beside the chair."
+        },
+        {
+          "t": "“It isn’t painful. It won’t hurt. I promise you what I can, and I can promise only that.”",
+          "lead": "Veles promised the only thing he can.",
+          "who": "Veles"
+        },
+        {
+          "t": "Orsa stood beside you. She held your hand, and each of her fingers was exact, as if knowing where it should be. She didn’t beg you to stay. She looked into her corner, briefly, and looked back at you. She smiled a little, from tiredness.",
+          "lead": "Orsa held your hand."
+        },
+        {
+          "t": "“Look at the sun.”",
+          "who": "Veles"
+        },
+        {
+          "t": "You looked. Light entered your eyes, warm and all-embracing. In the corner of your vision, slowly, like a fish swimming through water, the ring appeared. The lines were white and calm. Rest. Eat. Stay.",
+          "lead": "You looked at the sun, and something opened."
+        },
+        {
+          "t": "One by one the lines faded, until only the last remained, quiet as breathing."
+        },
+        {
+          "t": "And then, after seven days in which you alone decided every step, you felt the weight vanish from your shoulders. You hadn’t even known you carried it. You held your gaze on the last line. Quietly, without hurry, like someone finally coming home, you clicked.",
+          "lead": "The weight vanished from your shoulders."
+        }
+      ],
+      "next": "e_u2"
+    },
+    "e_u2": {
+      "paragraphs": [
+        {
+          "t": "Many circles passed. Nobody counted them.",
+          "lead": "Many circles passed."
+        },
+        {
+          "t": "In the square, by the fountain where two streams, one warm and one cold, flowed along the stone, you sat watching the water. Beside you sat a woman. In rhythm with the whole square, in the same instant, both of you looked into the corner, smiled and lowered your shoulders.",
+          "lead": "In the square, by the fountain, the two of you sat."
+        },
+        {
+          "t": "“What does it offer you?”",
+          "lead": "Orsa asked out of habit.",
+          "who": "Orsa"
+        },
+        {
+          "t": "She didn’t know why she asked. Perhaps out of habit. Perhaps because of something old that lay beneath, like a stone on the bottom.",
+          "lead": "A question out of habit."
+        },
+        {
+          "t": "“What I would have chosen myself.”",
+          "lead": "Your answer to Orsa.",
+          "who": "Ti"
+        },
+        {
+          "t": "You weren’t lying. You tried to remember when you had last wanted something that wasn’t offered to you, and you couldn’t. It didn’t bother you.",
+          "lead": "Your answer was not a lie."
+        },
+        {
+          "t": "Your eyes were the same as everyone’s. Calm, present, and a little distant. Two suns stood above you, and under them, as under everyone, were two shadows, one amber, one bluish, crossed like scissors.",
+          "lead": "Your eyes became like everyone’s."
+        },
+        {
+          "t": "In the square, one by one, a line formed before the fountain. Nobody hurried. Water ran along the stone, warm and cold, neither faster nor slower than yesterday.",
+          "lead": "The line before the fountain."
+        },
+        {
+          "t": "In your corner a new line appeared. You were offered to remember how you had come."
+        },
+        {
+          "t": "Skip.",
+          "lead": "The last line in the corner.",
+          "solo": true
+        }
+      ],
+      "end": "u"
+    },
+    "c2_podne": {
+      "paragraphs": [
+        {
+          "t": "Tehan went on grinding the glass, which was his way of saying the conversation was over. You walked out onto the square just as the bells began to ring for the third time.",
+          "lead": "Tehan stayed with the glass, and you went out to the square."
+        },
+        {
+          "t": "Orsa explained to you later that it is called the Common Line. Once in a circle, everyone in Zenit stops in the square, and Lumen offers them the same task, and everyone chooses it at the same instant. She called it “the breathing of the city”. You had a different name for it, but kept it to yourself.",
+          "lead": "Once in a circle the whole city breathes as one."
+        },
+        {
+          "t": "Thousands of people stood side by side, shoulder to shoulder, and nobody spoke. Their gazes rose at the same moment, like thousands of birds on a wire. They held them. And then, through the crowd, passed a single sound, soft and flat, like the exhale of an enormous creature: click.",
+          "lead": "Thousands of gazes rose at once."
+        },
+        {
+          "t": "Only one boy, beside you, twelve or thirteen, was half a beat late. His eyes jumped, stopped in the wrong place, then came back. His lips trembled. Evidently he had chosen something different from the others, and he looked around like someone waiting for thunder to fall.",
+          "lead": "Only one boy was half a beat late."
+        },
+        {
+          "t": "Nothing happened. People didn’t turn their heads. But around him the space quietly changed: neighbors shifted half a step, not roughly, just enough that the boy ended up outside the center. After a moment his gaze jumped again, and this time landed exactly where the others’ had. His face relaxed, as if someone had taken a stone from his hand.",
+          "lead": "Nothing happened, and the space quietly changed."
+        },
+        {
+          "t": "The boy looked at you. If anyone in life had ever wanted to ask something, it was him.",
+          "lead": "The boy looked straight at you."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c2g",
+          "text": "Stand beside the boy and do the same as he does.",
+          "next": "c3_vizir",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c2i",
+          "text": "Go up to the boy and ask what he saw.",
+          "next": "c3_vizir",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c2j",
+          "text": "Move behind the people and behave like them, in the same rhythm.",
+          "next": "c3_vizir",
+          "w": {
+            "b": 1,
+            "u": 1
+          }
+        }
+      ],
+      "prompt": "The boy is looking at you, and the city breathes as one body. What do you do?"
+    },
+    "c3_iva": {
+      "paragraphs": [
+        {
+          "t": "Iva found you in one of those hours that are neither day nor night, because there is neither. She sat down across from you, feet tucked under her, and looked at you a long time.",
+          "lead": "Iva found you at an hour that was neither day nor night.",
+          "img": "iva"
+        },
+        {
+          "t": "“Show me.”",
+          "who": "Iva"
+        },
+        {
+          "t": "“What?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“How to do something that isn’t on the list.”",
+          "who": "Iva"
+        },
+        {
+          "t": "You looked toward the door. Dalja was somewhere in the house, and Orsa was out.",
+          "lead": "You looked toward the door."
+        },
+        {
+          "t": "“Why?”",
+          "lead": "Your question.",
+          "who": "Ti"
+        },
+        {
+          "t": "She answered as if it were the most ordinary thing in the world.",
+          "lead": "The most ordinary thing in the world."
+        },
+        {
+          "t": "“Because it’s never offered to me. I tried once to flip over on my hands. My Lumen offered me No. Then it offered me Go back. And I only wanted to see what everything looks like upside down.”",
+          "lead": "The child told what happened when she tried.",
+          "who": "Iva"
+        },
+        {
+          "t": "She fell silent. Her gaze jumped to the corner and stayed there briefly, then came back.",
+          "lead": "Even as she spoke, something was offered to her."
+        },
+        {
+          "t": "“See, now it offers me not to listen to you. I don’t know why nothing’s offered to you. But I know I’d like to know what that’s like.”",
+          "lead": "What she doesn’t understand.",
+          "who": "Iva"
+        },
+        {
+          "t": "She sat before you, serious and small, with eyes that hadn’t quite learned to jump yet. There were moments when you could decide what this girl would one day become, and you knew you didn’t know how it’s done.",
+          "lead": "She sat serious, and you didn’t know what to say."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c3g",
+          "text": "Teach her to flip over on her hands, against the warning.",
+          "next": "c4_pritisak",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c3h",
+          "text": "Tell her it’s good she listens to what is offered to her.",
+          "next": "c4_pritisak",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c3i",
+          "text": "Tell her about night: the dark in which everyone sleeps at the same time, and nobody wakes them.",
+          "next": "c4_pritisak",
+          "w": {
+            "b": 2
+          }
+        }
+      ],
+      "prompt": "The girl asks for something that isn’t offered to her. What do you give her?"
+    },
+    "c5_tehan": {
+      "paragraphs": [
+        {
+          "t": "You found Tehan where you had left him, on the stone slab at the side of the square. As if he had never gone anywhere. He sat turning the glass in his fingers, and when you sat beside him, he spoke.",
+          "lead": "Tehan sat where you had left him."
+        },
+        {
+          "t": "“Veles showed you the Shutter.”",
+          "lead": "Tehan’s first sentence.",
+          "who": "Tehan"
+        },
+        {
+          "t": "It wasn’t a question. You nodded."
+        },
+        {
+          "t": "“Then you know. I’m the one who turned it.”",
+          "lead": "The old man admitted what he had done.",
+          "who": "Tehan"
+        },
+        {
+          "t": "The old man smiled, and his blank eye moved as if looking somewhere behind your head.",
+          "lead": "The old man smiled."
+        },
+        {
+          "t": "“They thought what followed was the punishment, but it wasn’t. My Lumen stopped offering to me exactly when the grain stopped, and never came back. I never asked why. I think it felt awkward too.”",
+          "lead": "What followed after the hour.",
+          "who": "Tehan"
+        },
+        {
+          "t": "“What happened during that hour?”",
+          "who": "Ti"
+        },
+        {
+          "t": "He answered without evasion.",
+          "lead": "An answer without evasion."
+        },
+        {
+          "t": "“Four people died. One fell from a ladder. Two old people didn’t reach shade, because nobody knew they should. One child drowned in a well, because nobody looked at him and said No.”",
+          "lead": "The price was higher than you expected.",
+          "who": "Tehan"
+        },
+        {
+          "t": "He looked at you.",
+          "lead": "The old man looked at you."
+        },
+        {
+          "t": "“And my wife Neva was on the roof, waiting. She waited the whole hour for someone to tell her to come down. When the grain returned, the first line was Come down, and she came down. She never looked at me with the same eyes again. She doesn’t hate me. Lumen offered her not to hate me.”",
+          "lead": "Tehan’s wife, Neva.",
+          "who": "Tehan"
+        },
+        {
+          "t": "He turned the glass.",
+          "lead": "The old man turned the glass."
+        },
+        {
+          "t": "“I sat on the floor, fifty minutes, looking at my hands. For the first time a thought came to me that hadn’t arrived from anywhere. I wanted an orange. I don’t know why. I’d never eaten an orange. That wish was mine.”",
+          "lead": "The old man kept a memory that belonged to nobody.",
+          "who": "Tehan"
+        },
+        {
+          "t": "He gazed at the square, at the people.",
+          "lead": "He gazed at the square, then named the price."
+        },
+        {
+          "t": "“I know the price was four people. But I don’t know how many others forgot to wait.”",
+          "lead": "The price according to Tehan.",
+          "who": "Tehan"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c5d",
+          "text": "Tell him he shouldn’t do it again.",
+          "next": "c5_poruka",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c5e",
+          "text": "Ask him whether he would do it again.",
+          "next": "c5_poruka",
+          "w": {
+            "s": 2
+          }
+        },
+        {
+          "id": "c5f",
+          "text": "Ask him whether he ever tried an orange.",
+          "next": "c5_poruka",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "The old man has named the price. What do you tell him?"
+    },
+    "c5_poruka": {
+      "paragraphs": [
+        {
+          "t": "Your collar crackled in the evening, if that’s what you call the time when Orsa looks into her corner and lies down. You thought it was the translator, but the sound was different: short, flat, familiar. The emergency receiver, which you had forgotten existed, for the first time caught something through the noise the suns made.",
+          "lead": "The collar crackled, and it wasn’t the translator."
+        },
+        {
+          "t": "“Kovač?”",
+          "who": "Marta"
+        },
+        {
+          "t": "It hit you in the chest like a fist. The voice was a woman’s, tired, torn by static, and you knew it better than you thought you knew any voice.",
+          "lead": "The voice was familiar, and it struck you."
+        },
+        {
+          "t": "“Kovač. I don’t know if you can hear me. We’re catching you through some noise, their binary system blinds us. Scanners show you’re alive. The window opens in six hours when the suns align, because the noise drops. We’ll have sixty minutes, no more. If you find something that flies, jump aboard. We don’t have the fuel to wait.”",
+          "lead": "The message was short and had a deadline.",
+          "who": "Marta"
+        },
+        {
+          "t": "Pause. Static.",
+          "lead": "Pause and static."
+        },
+        {
+          "t": "“Just tell me where you are. Say something. Anything.”",
+          "lead": "A plea without a deadline.",
+          "who": "Marta"
+        },
+        {
+          "t": "The voice was so close you could touch it, and so warm your throat tightened. It was the first voice in nine days that spoke directly to you, without waiting for something in a corner to confirm it.",
+          "lead": "The voice was near, and you wanted it."
+        },
+        {
+          "t": "You looked at Orsa. She slept, in the same rhythm as everyone, without the slightest unease. Ready at any moment to be what was offered to her.",
+          "lead": "Orsa slept in the same rhythm as everyone."
+        }
+      ],
+      "choices": [
+        {
+          "id": "c5g",
+          "text": "Answer her with where you are and what you need.",
+          "next": "c6_orsa",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c5h2",
+          "text": "Don’t answer. Switch off the collar.",
+          "next": "c6_orsa",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c5i",
+          "text": "Tell her what you have seen on this planet.",
+          "next": "c6_orsa",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "hidden": {
+        "id": "c5h3",
+        "text": "— Do nothing. Listen as the static turns to silence.",
+        "next": "c6_orsa",
+        "w": {
+          "s": 1,
+          "u": 1
+        },
+        "after": 20
+      },
+      "prompt": "Marta waits on the line, and there is little time. What do you do?"
+    },
+    "c4_put": {
+      "paragraphs": [
+        {
+          "t": "Orsa sat beside you in silence until the sand skiff stopped before the first houses of Zenit. There Veles lifted her gently, like a child, from the skiff and handed her to Dalja, who waited on the doorstep, without expression. Orsa turned only once. The skiff moved on.",
+          "if": {
+            "pick": "c4a"
+          },
+          "lead": "Orsa sat beside you, and then was gone."
+        },
+        {
+          "t": "The sand skiff glided without a sound. Beneath it the salt turned into white stripes, as if someone were quickly drawing a finger across an enormous slab. Veles sat at the helm, and beside you, on a leather bench, a young woman Warden with a brass ring still shiny with newness. Her name was Dara.",
+          "lead": "The sand skiff glided without a sound.",
+          "img": "dara"
+        },
+        {
+          "t": "She looked into the corner, then at you, then into the corner again. On her face was the seriousness of a child reciting.",
+          "lead": "The young Warden read questions off someone else’s sheet."
+        },
+        {
+          "t": "“Where are you from?”",
+          "who": "Dara"
+        },
+        {
+          "t": "“From another planet.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“What is the sky like there?”",
+          "who": "Dara"
+        },
+        {
+          "t": "“Dark, half the time.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Her hands trembled, and her gaze jumped to the corner and stayed there.",
+          "lead": "The questions grew more personal."
+        },
+        {
+          "t": "“Do you have a family? What do you need to survive?”",
+          "lead": "Two questions in a row.",
+          "who": "Dara"
+        },
+        {
+          "t": "The questions came one after another, each exact and without reason, as if someone outside their conversation wanted to know and didn’t dare ask. Dara spoke them with a passion whose cause she didn’t know.",
+          "lead": "Questions came one after another, without reason."
+        },
+        {
+          "t": "At last she stopped. She looked at you, and for the first time those were not her eyes reading.",
+          "lead": "At last she stopped."
+        },
+        {
+          "t": "“My Lumen tells me to remember your answers. It doesn’t say why. And it seems to me I’d remember them even if it hadn’t told me.”",
+          "lead": "What her Lumen tells her.",
+          "who": "Dara"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c4d",
+          "text": "Answer honestly everything she asks.",
+          "next": "c5_veles",
+          "w": {
+            "u": 2
+          }
+        },
+        {
+          "id": "c4e",
+          "text": "Answer briefly and reveal nothing.",
+          "next": "c5_veles",
+          "w": {
+            "b": 2
+          }
+        },
+        {
+          "id": "c4f",
+          "text": "Ask her what else Lumen offers her to ask.",
+          "next": "c5_veles",
+          "w": {
+            "s": 2
+          }
+        }
+      ],
+      "prompt": "The Warden awaits your answer. How will you speak?"
+    },
+    "c6_poslednji": {
+      "paragraphs": [
+        {
+          "t": "Before the Alignment the city prepared as if someone had tapped it on the shoulder and said: now. Windows closed, one by one, with cloth curtains. In the streets long, quiet columns of people appeared, every one of them walking toward the shelters under the square. No pushing, nobody hurrying. Nobody was offered to hurry.",
+          "lead": "The city prepared for the Alignment."
+        },
+        {
+          "t": "You stood at the edge of the street and watched them pass. Every face was calm, blank in the warm way the faces of sleepers are blank. Only Dalja stood out, stepping out of the column and stopping before you.",
+          "lead": "A woman stepped out of the column."
+        },
+        {
+          "t": "Until now she had not looked you in the eye. Now she did. Her gaze was heavy and clear, like a stone on the bottom.",
+          "lead": "Dalja looked you in the eye for the first time."
+        },
+        {
+          "t": "“Lumen offered me not to speak to you. All these days. I’m good. That’s why I listened to you.”",
+          "lead": "A confession after all these days.",
+          "who": "Dalja"
+        },
+        {
+          "t": "She handed you a bundle wrapped in linen. Inside was bread with a white crust, still lukewarm.",
+          "lead": "A bundle wrapped in linen."
+        },
+        {
+          "t": "“And now it offered me to give you this. And I don’t know whether it was it, or me.”",
+          "lead": "What it offered her now.",
+          "who": "Dalja"
+        },
+        {
+          "t": "She waited. Behind her, the column kept moving."
+        },
+        {
+          "t": "“Don’t think we’re evil. Nobody’s to blame. We had many years to look down, not to stay. This is what we chose, if choosing is what happened.”",
+          "lead": "Before she rejoined the column, she said one more thing.",
+          "who": "Dalja"
+        }
+      ],
+      "choices": [
+        {
+          "id": "c6g",
+          "text": "Thank her and take the bread without another word.",
+          "next": "c6_poravnanje",
+          "w": {
+            "u": 1,
+            "b": 1
+          }
+        },
+        {
+          "id": "c6k",
+          "text": "Ask her whether she is happy.",
+          "next": "c6_poravnanje",
+          "w": {
+            "s": 1,
+            "u": 1
+          }
+        },
+        {
+          "id": "c6i",
+          "text": "Tell her you may not come back.",
+          "next": "c6_poravnanje",
+          "w": {
+            "b": 1,
+            "s": 1
+          }
+        }
+      ],
+      "prompt": "Dalja stands with bread in her hand. What do you say to her?"
+    }
+  },
+  "characters": {
+    "Orsa": {
+      "img": "orsa"
+    },
+    "Tehan": {
+      "img": "tehan"
+    },
+    "Veles": {
+      "img": "veles"
+    },
+    "Dalja": {
+      "img": "dalja"
+    },
+    "Iva": {
+      "img": "iva"
+    },
+    "Dara": {
+      "img": "dara"
+    },
+    "Marta": {
+      "img": "marta"
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  },
+  "images": {
+    "orsa": {
+      "src": "img/bez-opcije/orsa.webp",
+      "alt": "Orsa",
+      "kind": "portrait",
+      "caption": "Orsa"
+    },
+    "tehan": {
+      "src": "img/bez-opcije/tehan.webp",
+      "alt": "Tehan",
+      "kind": "portrait",
+      "caption": "Tehan"
+    },
+    "veles": {
+      "src": "img/bez-opcije/veles.webp",
+      "alt": "Veles",
+      "kind": "portrait",
+      "caption": "Veles"
+    },
+    "dalja": {
+      "src": "img/bez-opcije/dalja.webp",
+      "alt": "Dalja",
+      "kind": "portrait",
+      "caption": "Dalja"
+    },
+    "iva": {
+      "src": "img/bez-opcije/iva.webp",
+      "alt": "Iva",
+      "kind": "portrait",
+      "caption": "Iva"
+    },
+    "dara": {
+      "src": "img/bez-opcije/dara.webp",
+      "alt": "Dara",
+      "kind": "portrait",
+      "caption": "Dara"
+    },
+    "marta": {
+      "src": "img/bez-opcije/marta.webp",
+      "alt": "Marta",
+      "kind": "portrait",
+      "caption": "Marta"
+    },
+    "citalac-m": {
+      "src": "img/bez-opcije/citalac-m.webp",
+      "alt": "You",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "citalac-z": {
+      "src": "img/bez-opcije/citalac-z.webp",
+      "alt": "You",
+      "kind": "portrait",
+      "caption": "Ti"
+    },
+    "beli-pojas": {
+      "src": "img/bez-opcije/beli-pojas.webp",
+      "alt": "The White Belt: a salt plain under two suns",
+      "kind": "place"
+    },
+    "zenit": {
+      "src": "img/bez-opcije/zenit.webp",
+      "alt": "Zenit: a city of stone",
+      "kind": "place"
+    },
+    "presek": {
+      "src": "img/bez-opcije/presek.webp",
+      "alt": "The Intersection: a tower on a ridge",
+      "kind": "place"
+    },
+    "luka": {
+      "src": "img/bez-opcije/luka.webp",
+      "alt": "The Port: a rail and the Carrier",
+      "kind": "place"
+    },
+    "poravnanje": {
+      "src": "img/bez-opcije/poravnanje.webp",
+      "alt": "The Alignment: the two suns merging",
+      "kind": "place"
+    }
+  }
+}

@@ -1,6 +1,10 @@
 # Generisano: npm run redirects (ne menjaj ručno)
 /:slug/citaj  /:slug  301
 /en/:slug/citaj  /en/:slug  301
+/en/bez-opcije  /en/no-option  301
+/en/bez-opcije/citaj  /en/no-option  301
+/no-option  /bez-opcije  301
+/no-option/citaj  /bez-opcije  301
 /en/poslednja-mera  /en/last-measure  301
 /en/poslednja-mera/citaj  /en/last-measure  301
 /last-measure  /poslednja-mera  301

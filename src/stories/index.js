@@ -20,6 +20,15 @@ export const stories = [
     coverAlt: "Zenit: grad od kamena",
     status: "ready",
     load: () => import("./bez-opcije/story.json"),
+    en: {
+      path: "no-option",
+      title: "No Option",
+      tagline:
+        "On the planet Tandem it is never night, and offers appear before you.",
+      genre: "Science fiction",
+      coverAlt: "Zenit: a city of stone",
+      load: () => import("./bez-opcije/story.en.json"),
+    },
   },
   {
     slug: "poslednja-mera",
