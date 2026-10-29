@@ -15,11 +15,36 @@ export const FX_TYPES = {
   dust: { required: [], optional: ['color', 'density', 'speed'] },
   rain: { required: [], optional: ['color', 'density', 'speed'] },
   mist: { required: [], optional: ['color'] },
+  screen: { required: [], optional: ['x', 'y', 'w', 'h', 'quad', 'style', 'color', 'intensity', 'speed', 'spill'] },
+  screens: { required: ['screens'], optional: [] },
   water: { required: ['x', 'y', 'w', 'h'], optional: ['ripple', 'glints', 'columns', 'exclude', 'color'] },
 };
 
 export const FIRE_SOURCES = ['painted', 'drawn'];
-const RANGES = { ripple: [0, 1], glints: [0, 14], x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], h: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
+export const SCREEN_STYLES = ['data', 'scan', 'pulse', 'alert'];
+export const MAX_SCREENS = 12;
+const RANGES = { ripple: [0, 1], glints: [0, 14], intensity: [0, 1], spill: [0, 1], x: [0, 100], y: [0, 100], r: [0.1, 60], w: [0.1, 100], h: [0.1, 100], flicker: [0, 1], density: [0, 1], speed: [0.1, 5] };
+
+// Jedan ekran: pravougaonik (x,y,w,h) ILI quad (4 tačke [x,y]); style, color, intensity, speed, spill.
+const SCREEN_KEYS = ['x', 'y', 'w', 'h', 'quad', 'style', 'color', 'intensity', 'speed', 'spill'];
+const checkScreen = (d, where, errs, typed = false) => {
+  if (!d || typeof d !== 'object' || Array.isArray(d)) return errs.push(`${where}: ekran mora biti objekat`);
+  for (const k of Object.keys(d)) if (!SCREEN_KEYS.includes(k) && !(typed && k === 'type')) errs.push(`${where}: nepoznato polje "${k}"`);
+  const num = (v, lo, hi) => typeof v === 'number' && Number.isFinite(v) && v >= lo && v <= hi;
+  if (d.quad !== undefined) {
+    const ok = Array.isArray(d.quad) && d.quad.length === 4 && d.quad.every((p) => Array.isArray(p) && p.length === 2 && num(p[0], 0, 100) && num(p[1], 0, 100));
+    if (!ok) errs.push(`${where}: "quad" mora imati tačno 4 tačke [x,y] (0–100): gore-levo, gore-desno, dole-desno, dole-levo`);
+  } else {
+    const ok = num(d.x, 0, 100) && num(d.y, 0, 100) && num(d.w, 0.1, 100) && num(d.h, 0.1, 100) && d.x + d.w <= 100 + 1e-6 && d.y + d.h <= 100 + 1e-6;
+    if (!ok) errs.push(`${where}: ekran traži "quad" ili x, y, w, h (w, h > 0; x+w i y+h najviše 100)`);
+  }
+  if (d.style !== undefined && !SCREEN_STYLES.includes(d.style)) errs.push(`${where}: nepoznat style "${d.style}" (dozvoljeno: ${SCREEN_STYLES.join(', ')})`);
+  if (d.color !== undefined && !FX_COLORS.includes(d.color)) errs.push(`${where}: nepoznata boja "${d.color}"`);
+  if (d.intensity !== undefined && !num(d.intensity, 0, 1)) errs.push(`${where}: "intensity" mora biti 0–1`);
+  if (d.speed !== undefined && !num(d.speed, 0.2, 2)) errs.push(`${where}: "speed" mora biti 0.2–2`);
+  if (d.spill !== undefined && !num(d.spill, 0, 1)) errs.push(`${where}: "spill" mora biti 0–1`);
+  return undefined;
+};
 
 // Vraća niz poruka o greškama (prazan niz = ispravno).
 export const validateFx = (fx) => {
@@ -34,6 +59,12 @@ export const validateFx = (fx) => {
     const allowed = new Set(['type', ...spec.required, ...spec.optional]);
     for (const k of Object.keys(e)) if (!allowed.has(k)) errs.push(`${where} (${e.type}): nepoznato polje "${k}"`);
     for (const k of spec.required) if (e[k] === undefined) errs.push(`${where} (${e.type}): nedostaje "${k}"`);
+    if (e.type === 'screens') {
+      if (!Array.isArray(e.screens) || e.screens.length < 1 || e.screens.length > MAX_SCREENS) errs.push(`${where} (screens): "screens" je niz od 1–${MAX_SCREENS} ekrana`);
+      else e.screens.forEach((d, j) => checkScreen(d, `${where}.screens[${j}]`, errs));
+      return;
+    }
+    if (e.type === 'screen') checkScreen(e, where, errs, true);
     for (const [k, [lo, hi]] of Object.entries(RANGES)) {
       if (e[k] === undefined) continue;
       if (typeof e[k] !== 'number' || !Number.isFinite(e[k]) || e[k] < lo || e[k] > hi) errs.push(`${where} (${e.type}): "${k}" mora biti broj ${lo}–${hi}`);

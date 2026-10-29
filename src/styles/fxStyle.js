@@ -130,6 +130,29 @@ export const fxStyle = {
     gust: { every: [7, 16], len: [1.5, 3], boost: 0.7 },
   },
 
+  // Ekrani (screen/screens): tok podataka, skeniranje, pulsiranje, alarm + spill i scanline
+  screen: {
+    scale: 0.75, // rezolucija offscreen canvasa ekrana (× CSS px)
+    bigFrac: 0.4, // ekran širi od 40% slike je veliki: niža rezolucija i bez scanline
+    bigScale: 0.5,
+    fps: 30, // ekrani se ažuriraju 30 puta u sekundi
+    phoneFps: 30, // isto na telefonu
+    inset: 0.04, // svetlo se skuplja ka sredini da ostane unutar stakla
+    dataRows: 9, // koliko redova toka podataka stane na ekran
+    dataSpeed: 1.2, // redova u sekundi (× speed)
+    dataAlpha: 0.95,
+    baseGlow: 0.28,
+    scanPeriod: [4, 9], // sekunde po prolazu pojasa
+    scanAlpha: 0.85,
+    pulseAlpha: 0.6,
+    alertAlpha: 1.1,
+    alertEvery: [6, 14], // sekunde između alarmnih treperenja
+    scanlineAlpha: 0.06,
+    spillAlpha: 0.14,
+    spillMaxW: 14, // najveća širina spill elipse (% širine slike), za duge tanke ekrane
+    spillMinH: 1.2, // najmanja visina
+  },
+
   // Voda: talasanje naslikane vode + odsjaji + stubovi odsjaja (region u % slike)
   water: {
     rippleMax: 1.0, // najveći vodoravni pomak = ripple × ovo (% širine slike); pri ripple 0.4 ≈ 0.4%

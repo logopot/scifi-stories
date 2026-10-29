@@ -81,6 +81,22 @@ export const Box = styled.div`
   pointer-events: none;
 `;
 
+// SVG sloj za prikaz ekrana (pravougaonik ili quad)
+export const Overlay = styled.svg`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  polygon {
+    fill: none;
+    stroke: ${({ theme }) => theme.accent};
+    stroke-width: 1.5px;
+    opacity: 0.9;
+  }
+`;
+
 export const Line = styled.div`
   position: absolute;
   width: 0;

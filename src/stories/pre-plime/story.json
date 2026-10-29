@@ -2159,14 +2159,6 @@
           "flicker": 0.1
         },
         {
-          "type": "glow",
-          "x": 50.6,
-          "y": 35.6,
-          "r": 5,
-          "color": "fxCold",
-          "flicker": 0.1
-        },
-        {
           "type": "twinkle",
           "points": [
             [
@@ -2215,6 +2207,88 @@
               38,
               8
             ]
+          ]
+        },
+        {
+          "type": "screens",
+          "screens": [
+            {
+              "x": 37.3,
+              "y": 37.6,
+              "w": 2.3,
+              "h": 4.4,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 0.9,
+              "spill": 0.4
+            },
+            {
+              "x": 40,
+              "y": 37.3,
+              "w": 2.3,
+              "h": 4.5,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 1.2,
+              "spill": 0.4
+            },
+            {
+              "x": 42.7,
+              "y": 37.1,
+              "w": 2.2,
+              "h": 4.5,
+              "style": "pulse",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 0.8,
+              "spill": 0.4
+            },
+            {
+              "x": 49.6,
+              "y": 34.6,
+              "w": 2.8,
+              "h": 3.1,
+              "style": "scan",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 1,
+              "spill": 0.4
+            },
+            {
+              "x": 53.5,
+              "y": 35.5,
+              "w": 2.2,
+              "h": 3.8,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 1.1,
+              "spill": 0.4
+            },
+            {
+              "x": 50.4,
+              "y": 24.5,
+              "w": 2.2,
+              "h": 4.2,
+              "style": "pulse",
+              "color": "fxCold",
+              "intensity": 0.5,
+              "speed": 0.7,
+              "spill": 0.4
+            },
+            {
+              "x": 48.1,
+              "y": 25.2,
+              "w": 1.5,
+              "h": 3.7,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.4,
+              "speed": 1,
+              "spill": 0.3
+            }
           ]
         }
       ]

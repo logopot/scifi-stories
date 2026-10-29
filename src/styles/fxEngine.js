@@ -6,6 +6,7 @@ import { coverRect, makeWind, parseFocus } from './fxSignals';
 import { makeDust, makeFire, makeGlow, makeSun, makeTwinkle } from './fxLights';
 import { makeMist, makeRain, makeSmoke, makeSnow } from './fxMatter';
 import { makeWater } from './fxWater';
+import { makeScreens } from './fxScreens';
 
 const S = fxStyle;
 const PARTICLE_TYPES = ['snow', 'dust', 'rain'];
@@ -51,6 +52,12 @@ export function createFxEngine(opts) {
     waterItems.push(water);
     lights.push({ kind: 'water', draw: water.drawLight });
   }
+  const screenDescs = [];
+  for (const e of fx) {
+    if (e.type === 'screen') screenDescs.push(e);
+    else if (e.type === 'screens') screenDescs.push(...e.screens);
+  }
+  if (screenDescs.length) lights.push({ kind: 'screens', draw: makeScreens(screenDescs, theme, phone).drawLight });
   const smokes = fx.filter((e) => e.type === 'smoke');
   const perSmoke = smokes.length ? Math.max(2, Math.min(S.smoke.puffs, Math.floor((cap * 0.45) / smokes.length), phone ? 3 : 99)) : 0;
   for (const e of smokes) {

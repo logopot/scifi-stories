@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SceneFx from '../../components/SceneFx';
-import { FX_COLORS, FX_TYPES, MAX_FX, MAX_POINTS, validateFx } from '../../stories/fx';
+import { FX_COLORS, FX_TYPES, MAX_FX, MAX_POINTS, SCREEN_STYLES, validateFx } from '../../stories/fx';
 import { stories } from '../../stories';
 import * as S from './DevFx.styled';
 
@@ -10,8 +10,8 @@ import * as S from './DevFx.styled';
 // parametre, "Kopiraj JSON" kopira niz `fx` za tu sliku (zalepi ga u images[id].fx u story.json i story.en.json).
 const COORD_TYPES = ['glow', 'fire', 'sun', 'smoke', 'twinkle'];
 const GLOBAL_TYPES = ['snow', 'dust', 'rain', 'mist'];
-const NUMBER_FIELDS = { glow: ['r', 'flicker'], fire: ['r', 'w', 'h'], sun: ['r'], smoke: ['w'], twinkle: ['r'], snow: ['density', 'speed'], dust: ['density', 'speed'], rain: ['density', 'speed'], mist: [], water: ['ripple', 'glints'] };
-const STEP = { ripple: 0.05, glints: 1, r: 0.1, w: 0.1, flicker: 0.05, density: 0.05, speed: 0.1 };
+const NUMBER_FIELDS = { glow: ['r', 'flicker'], fire: ['r', 'w', 'h'], sun: ['r'], smoke: ['w'], twinkle: ['r'], snow: ['density', 'speed'], dust: ['density', 'speed'], rain: ['density', 'speed'], mist: [], water: ['ripple', 'glints'], screen: ['intensity', 'speed', 'spill'], screens: [] };
+const STEP = { intensity: 0.05, spill: 0.05, ripple: 0.05, glints: 1, r: 0.1, w: 0.1, flicker: 0.05, density: 0.05, speed: 0.1 };
 const DEFAULTS = { glow: { r: 4 }, fire: { r: 5 }, sun: { r: 12 }, smoke: { w: 4 }, twinkle: { r: 1.4 } };
 const round = (v) => Math.round(v * 10) / 10;
 
@@ -33,6 +33,7 @@ export default function DevFx() {
   const [capturing, setCapturing] = useState(false);
   const [mode, setMode] = useState(null); // 'exclude' (povuci pravougaonik) | 'column' (klik) za izabranu vodu
   const [preview, setPreview] = useState(null);
+  const [quadPts, setQuadPts] = useState([]); // klik na 4 ugla ekrana (gore-levo, gore-desno, dole-desno, dole-levo)
   const rectStart = useRef(null);
   const previewRef = useRef(null);
   const stage = useRef(null);
@@ -77,7 +78,17 @@ export default function DevFx() {
       update(sel, { columns: [...(water.columns || []), [cx, 0.6, 'fxWarm']] });
       return setMode(null);
     }
-    if ((mode === 'exclude' && water) || tool === 'water') {
+    if (tool === 'quad') {
+      const [qx, qy] = pct(e);
+      const next = [...quadPts, [qx, qy]];
+      if (next.length === 4 && fx.length < MAX_FX) {
+        setFx((list) => [...list, withColor({ type: 'screen', quad: next, style: 'data' })]);
+        setSel(fx.length);
+        return setQuadPts([]);
+      }
+      return setQuadPts(next.length === 4 ? [] : next);
+    }
+    if ((mode === 'exclude' && water) || tool === 'water' || tool === 'screen') {
       const [rx, ry] = pct(e);
       rectStart.current = [rx, ry];
       previewRef.current = { x: rx, y: ry, w: 0, h: 0 };
@@ -128,6 +139,9 @@ export default function DevFx() {
         if (mode === 'exclude' && fx[sel] && fx[sel].type === 'water') {
           update(sel, { exclude: [...(fx[sel].exclude || []), r] });
           setMode(null);
+        } else if (tool === 'screen' && fx.length < MAX_FX) {
+          setFx((list) => [...list, withColor({ type: 'screen', x: r[0], y: r[1], w: r[2], h: r[3], style: 'data' })]);
+          setSel(fx.length);
         } else if (tool === 'water' && fx.length < MAX_FX) {
           setFx((list) => [...list, withColor({ type: 'water', x: r[0], y: r[1], w: r[2], h: r[3] })]);
           setSel(fx.length);
@@ -231,9 +245,9 @@ export default function DevFx() {
         </button>
       </S.Bar>
       <S.Bar>
-        {[...COORD_TYPES, 'water', ...GLOBAL_TYPES].map((t) => (
-          <button key={t} type="button" aria-pressed={tool === t} onClick={() => (COORD_TYPES.includes(t) || t === 'water' ? setTool(t) : addGlobal(t))}>
-            {t === 'water' ? 'water (povuci)' : COORD_TYPES.includes(t) ? t : `+ ${t}`}
+        {[...COORD_TYPES, 'water', 'screen', 'quad', ...GLOBAL_TYPES].map((t) => (
+          <button key={t} type="button" aria-pressed={tool === t} onClick={() => (COORD_TYPES.includes(t) || ['water', 'screen', 'quad'].includes(t) ? (setTool(t), setQuadPts([])) : addGlobal(t))}>
+            {t === 'water' ? 'water (povuci)' : t === 'screen' ? 'screen (povuci)' : t === 'quad' ? 'screen (4 ugla klikom)' : COORD_TYPES.includes(t) ? t : `+ ${t}`}
           </button>
         ))}
         <select value={color} onChange={(e) => setColor(e.target.value)} aria-label="Boja novog efekta">
@@ -253,6 +267,13 @@ export default function DevFx() {
               <input type="number" step={STEP[k]} value={cur[k] ?? ''} onChange={(e) => update(sel, { [k]: e.target.value === '' ? undefined : Number(e.target.value) })} />
             </label>
           ))}
+          {cur.type === 'screen' && (
+            <select value={cur.style || 'data'} onChange={(e) => update(sel, { style: e.target.value === 'data' ? undefined : e.target.value })} aria-label="Stil ekrana">
+              {SCREEN_STYLES.map((s) => (
+                <option key={s}>{s}</option>
+              ))}
+            </select>
+          )}
           {FX_TYPES[cur.type].optional.includes('rays') && (
             <label>
               <input type="checkbox" checked={Boolean(cur.rays)} onChange={(e) => update(sel, { rays: e.target.checked || undefined })} /> rays
@@ -272,6 +293,20 @@ export default function DevFx() {
           </select>
           <button type="button" onClick={() => (setFx((list) => list.filter((_, j) => j !== sel)), setSel(-1))}>
             Obriši
+          </button>
+        </S.Bar>
+      )}
+      {fx.filter((f) => f.type === 'screen').length > 1 && (
+        <S.Bar>
+          <button
+            type="button"
+            onClick={() => {
+              const group = fx.filter((f) => f.type === 'screen').map(({ type, ...d }) => d);
+              setFx((list) => [...list.filter((f) => f.type !== 'screen'), { type: 'screens', screens: group.slice(0, 12) }]);
+              setSel(-1);
+            }}
+          >
+            Spoji sve screen u jedan grupni unos (screens)
           </button>
         </S.Bar>
       )}
@@ -314,6 +349,18 @@ export default function DevFx() {
           {fx.map((f, i) =>
             f.points ? (
               f.points.map(([x, y], pi) => <S.Marker key={`${i}-${pi}`} $selected={i === sel} style={{ left: `${x}%`, top: `${y}%` }} onPointerDown={(e) => startDrag(e, i, pi)} aria-label={`${f.type} ${pi + 1}`} />)
+            ) : f.type === 'screen' || f.type === 'screens' ? (
+              <React.Fragment key={i}>
+                <S.Overlay viewBox="0 0 100 100" preserveAspectRatio="none">
+                  {(f.type === 'screens' ? f.screens : [f]).map((d, k) => {
+                    const q = d.quad || [[d.x, d.y], [d.x + d.w, d.y], [d.x + d.w, d.y + d.h], [d.x, d.y + d.h]];
+                    return <polygon key={k} points={q.map((p) => p.join(',')).join(' ')} vectorEffect="non-scaling-stroke" />;
+                  })}
+                </S.Overlay>
+                {f.type === 'screen' && (
+                  <S.Marker $selected={i === sel} style={{ left: `${(f.quad ? f.quad[0][0] : f.x)}%`, top: `${(f.quad ? f.quad[0][1] : f.y)}%` }} onPointerDown={(e) => { e.stopPropagation(); setSel(i); }} aria-label="screen" />
+                )}
+              </React.Fragment>
             ) : f.type === 'water' ? (
               <React.Fragment key={i}>
                 <S.Box $selected={i === sel} style={{ left: `${f.x}%`, top: `${f.y}%`, width: `${f.w}%`, height: `${f.h}%` }} />
@@ -332,6 +379,9 @@ export default function DevFx() {
               </React.Fragment>
             ) : null
           )}
+          {quadPts.map(([x, y], k) => (
+            <S.Marker key={`q${k}`} $selected style={{ left: `${x}%`, top: `${y}%` }} aria-label={`ugao ${k + 1}`} />
+          ))}
           {preview && <S.Box $exclude={mode === 'exclude'} style={{ left: `${preview.x}%`, top: `${preview.y}%`, width: `${preview.w}%`, height: `${preview.h}%` }} />}
         </S.Stage>
       )}

@@ -1761,11 +1761,78 @@
           "flicker": 0.05
         },
         {
-          "type": "glow",
-          "x": 24.2,
-          "y": 39.5,
-          "r": 1.2,
-          "flicker": 0.1
+          "type": "screens",
+          "screens": [
+            {
+              "quad": [
+                [
+                  22.1,
+                  37.1
+                ],
+                [
+                  27,
+                  37.1
+                ],
+                [
+                  27,
+                  41
+                ],
+                [
+                  22.1,
+                  41
+                ]
+              ],
+              "style": "pulse",
+              "color": "fxWarm",
+              "intensity": 0.5,
+              "speed": 0.7,
+              "spill": 0.4
+            },
+            {
+              "x": 29,
+              "y": 36.7,
+              "w": 39.5,
+              "h": 0.5,
+              "style": "alert",
+              "color": "fxWarm",
+              "intensity": 0.7,
+              "speed": 0.8,
+              "spill": 0.5
+            },
+            {
+              "x": 76.3,
+              "y": 36.7,
+              "w": 7.4,
+              "h": 0.5,
+              "style": "pulse",
+              "color": "fxWarm",
+              "intensity": 0.6,
+              "speed": 1.2,
+              "spill": 0.4
+            },
+            {
+              "x": 29.4,
+              "y": 41.2,
+              "w": 33.6,
+              "h": 0.5,
+              "style": "pulse",
+              "color": "fxCold",
+              "intensity": 0.7,
+              "speed": 0.6,
+              "spill": 0.5
+            },
+            {
+              "x": 29.7,
+              "y": 45.7,
+              "w": 24.3,
+              "h": 0.5,
+              "style": "pulse",
+              "color": "fxSun",
+              "intensity": 0.6,
+              "speed": 0.9,
+              "spill": 0.5
+            }
+          ]
         }
       ]
     },

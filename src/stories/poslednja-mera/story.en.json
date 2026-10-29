@@ -1480,12 +1480,30 @@
       "kind": "place",
       "fx": [
         {
-          "type": "glow",
-          "x": 53.7,
-          "y": 52.4,
-          "r": 3,
+          "type": "screen",
+          "quad": [
+            [
+              52.2,
+              50.3
+            ],
+            [
+              55.4,
+              50.3
+            ],
+            [
+              55.4,
+              55.4
+            ],
+            [
+              52.2,
+              55.4
+            ]
+          ],
+          "style": "data",
           "color": "fxCold",
-          "flicker": 0.1
+          "intensity": 0.6,
+          "speed": 0.9,
+          "spill": 0.5
         }
       ]
     },
