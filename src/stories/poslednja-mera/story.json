@@ -1412,22 +1412,67 @@
     "utociste": {
       "src": "img/poslednja-mera/utociste.webp",
       "alt": "Utočište: grad ispod Visoke brane i suvo dno jezera",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 73.9,
+          "y": 48.4,
+          "r": 6,
+          "color": "fxSun",
+          "flicker": 0
+        },
+        {
+          "type": "glow",
+          "x": 34.2,
+          "y": 52.4,
+          "r": 1.6,
+          "flicker": 0.1
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
     },
     "brana": {
       "src": "img/poslednja-mera/brana.webp",
       "alt": "Kruna Visoke brane iznad Sabirnika",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "mist"
+        }
+      ]
     },
     "revir": {
       "src": "img/poslednja-mera/revir.webp",
       "alt": "Revir: niska kuća sa belim krstom",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 91.7,
+          "y": 48.6,
+          "r": 3,
+          "flicker": 0.2
+        }
+      ]
     },
     "kontrola": {
       "src": "img/poslednja-mera/kontrola.webp",
       "alt": "Staklena kocka u kojoj radi Merač",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 53.7,
+          "y": 52.4,
+          "r": 3,
+          "color": "fxCold",
+          "flicker": 0.1
+        }
+      ]
     },
     "prolaz": {
       "src": "img/poslednja-mera/prolaz.webp",
@@ -1437,7 +1482,19 @@
     "rezerva": {
       "src": "img/poslednja-mera/rezerva.webp",
       "alt": "Rezerva: crna voda u kamenoj cisterni",
-      "kind": "place"
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 80.8,
+          "y": 58.8,
+          "r": 3.5,
+          "flicker": 0.35
+        },
+        {
+          "type": "mist"
+        }
+      ]
     }
   },
   "characters": {
