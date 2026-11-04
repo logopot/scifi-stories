@@ -142,6 +142,18 @@ export const stories = [
       load: () => import("./zimska-ostava/story.en.json"),
     },
   },
+  {
+    slug: "ruke-na-konopcu",
+    path: { sr: "ruke-na-konopcu" },
+    title: "Ruke na konopcu",
+    tagline: "U lučkom gradu na litici mašina veže lađe, a magla stiže pre jutarnjeg otkaza.",
+    genre: "Naučna fantastika",
+    minutes: 20,
+    cover: "img/ruke-na-konopcu/cover.webp",
+    coverAlt: "Velmar: grad na litici i jarboli sa lađama iznad mora oblaka u sumrak",
+    status: "ready",
+    load: () => import("./ruke-na-konopcu/story.json"),
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];
 

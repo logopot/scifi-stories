@@ -1,0 +1,2402 @@
+{
+  "meta": {
+    "title": "Ruke na konopcu",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Velmar je grad na litici iznad mora oblaka. Teret iz nizine stiže vazdušnim lađama, a vezači ih rukom i lampom spuštaju na jarbole Gornjeg doka. Od prošle godine vitla vodi i mašina po imenu Tala.",
+      "Večeras je u tvojoj ruci pečat Poravnanja. Do šest ujutru treba da se zna da li mašina zaista radi posao koji joj Kompanija pripisuje, a magla se uz liticu penje brže nego što je iko najavio.",
+      "Pred tobom su ljudi sa lampama, mašina koja govori samo kad je pitaju i konvoj od devet lađa koje čekaju da ih neko veže."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "briga o ljudima"
+      },
+      {
+        "id": "t",
+        "name": "poverenje u mašinu i napredak"
+      },
+      {
+        "id": "o",
+        "name": "opstanak luke i oprez"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "U Velmaru lađe vezuju ljudi, a od prošle godine i mašina. Magla se penje uz liticu, konvoj stiže pre jutra, u ruci ti je pečat, a do šest treba da se zna čiji je ovo noćas posao."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi čitanje",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 20 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Napredak se čuva samo u tvom pregledaču.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Dok"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Obilazak"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Magla"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Pečat"
+    },
+    "c5": {
+      "mark": "V",
+      "name": "Svitanje"
+    }
+  },
+  "start": "dok",
+  "endings": {
+    "e": {
+      "title": "Puna smena",
+      "closing": [
+        "Lampe na jarbolima gase se jedna po jedna."
+      ]
+    },
+    "t": {
+      "title": "Tala vodi",
+      "closing": [
+        "Vitla klikću u svitanju, ravnomerno kao sat."
+      ]
+    },
+    "o": {
+      "title": "Trideset dana",
+      "closing": [
+        "Sunce stiže na liticu pre nego što stigne ostatak jutra."
+      ]
+    }
+  },
+  "nodes": {
+    "dok": {
+      "chapter": "c1",
+      "img": "dok",
+      "paragraphs": [
+        {
+          "t": "Magla se penje uz liticu brže nego što je iko najavio. Sa Gornjeg doka vidiš samo prva tri jarbola, a lampe na njima plivaju u belom kao riblje oči. Ispod gvozdenih ploča mukli kloparaju vitla koja niko ne dodiruje, a u zvučniku mašina tiho javlja vreme: tri i pedeset. U ruci ti se hladi pečat Poravnanja: do šest ujutru staviš ga na otkazni spisak ili ne staviš."
+        },
+        {
+          "t": "Ispod prvog jarbola žena vuče konopac debeo kao podlaktica. Ilka vodi noćnu smenu vezača, a sedu kosu nosi upletenu oko vrata da joj ne zapne. Pored nje momak u kaputu većem od njega, Teo, gura ti fenjer u ruku, a drugom rukom briše sa nosa kap koja je ionako od magle.",
+          "lead": "Žena na doku."
+        },
+        {
+          "t": "„Pečat na pojasu. Znači, ti si taj koji overava da nas više ne treba. Samo da znaš: konop ne zna za pečat, a ruke znaju.“",
+          "lead": "Šta Ilka kaže.",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Došao sam da vidim šta Tala radi, a ne šta piše.“",
+          "tf": "„Došla sam da vidim šta Tala radi, a ne šta piše.“",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Teo ti pruža fenjer, a Ilka čeka da vidi šta ćeš s njim.",
+      "choices": [
+        {
+          "id": "p_fenjer",
+          "text": "Uzimaš fenjer i ideš za Ilkom.",
+          "next": "oglasna",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "p_pecat",
+          "text": "Ostavljaš fenjer i stežeš pečat u šaci.",
+          "next": "oglasna",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "p_pitaj",
+          "text": "Pitaš Ilku gde je Talina konzola.",
+          "next": "oglasna",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "oglasna": {
+      "chapter": "c1",
+      "img": "oglasna",
+      "paragraphs": [
+        {
+          "t": "Fenjer ti njiše svetlo po zidu. Ilka ide ispred tebe i ne pita ništa, a Teo ćuti iza vas, tiše nego što je običaj. Stepenici su od krečnjaka, izlizani u sredini, i svaki nosi po jedan utisak tuđe noge.",
+          "lead": "Stepenište pod Kupolom.",
+          "if": {
+            "pick": "p_fenjer"
+          }
+        },
+        {
+          "t": "Pečat ti je u šaci, topao od držanja. Teo ostaje sa fenjerom bez ruke koja bi ga uzela i hoda iza tebe pognute glave. Stepenici su od krečnjaka, izlizani u sredini, i svaki nosi po jedan utisak tuđe noge.",
+          "lead": "Stepenište pod Kupolom.",
+          "if": {
+            "pick": "p_pecat"
+          }
+        },
+        {
+          "t": "Ilka bradom pokazuje u maglu, gde se naziru prozori Kupole, a onda te ipak vodi prvo niz stepenište ka Oglasnoj sobi. Teo ide za vama i na glas, tiho, broji stepenice. Stepenici su od krečnjaka, izlizani u sredini, i svaki nosi po jedan utisak tuđe noge.",
+          "lead": "Stepenište pod Kupolom.",
+          "if": {
+            "pick": "p_pitaj"
+          }
+        },
+        {
+          "t": "Oglasna soba ima jedan sto, jednu sijalicu i tablu od plute za spiskove. Na tabli visi prazan list, a pored njega, ispod čiode, čeka drugi: otkazni spisak, tek odštampan, sa četrdeset imena jedno ispod drugog. Prvo ime je Teovo.",
+          "lead": "Soba sa tablom."
+        },
+        {
+          "t": "Sa tavanice visi list sa pravilima Poravnanja, požuteo na ivicama: otkaz zbog zamene mašinom važi tek kad ga nadzornik overi pečatom, posle jedne noći pod njegovim okom. Neko je ispod, olovkom, dopisao pitanje koje se loše vidi, ali liči na: „a ko je gledao?“",
+          "lead": "Pravila na zidu."
+        },
+        {
+          "t": "„Ko je ovo dopisao?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Neko ko je gledao.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "Iznad table stoji znak Kompanije Vedre, a ispod njega, manji, plava lampa Fonda Zalog. Na stolu čaj u šolji ispod porcelanskog poklopca, netaknut, i fascikla debela kao jastuk. Za stolom Oskar, upravnik luke, u kaputu koji se ne mrda od vlage, sa podočnjacima koje ne krije.",
+          "lead": "Upravnik luke."
+        },
+        {
+          "t": "„{voc}, hvala što si došao usred ove noći. Spisak je uredan. Svaki posao u njemu Tala već radi.“",
+          "tf": "„{voc}, hvala što si došla usred ove noći. Spisak je uredan. Svaki posao u njemu Tala već radi.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Poravnanje overava samo ono što mašina zaista radi. Noćas ću to videti svojim očima.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Znam pravilo. Zato sam izabrao ovu noć: vedra prognoza, nikakvog vetra. Prognoza je promašila, a rok nije.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Fond drži Talu u zalogu. Ako spisak ne bude overen do šest, zbir pada, Fond povlači zakup od prvog, a ja ostajem sa dugom.“",
+          "lead": "Šta Oskar traži.",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Koliko dugo je Tala u luci?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Četrnaest meseci, i svaki je plaćen na dug.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "Ilka uzima olovku sa stola i prelazi njome preko spiska, ime po ime, kao da broji ovce. Ne podiže pogled. Pored nje Teo ćuti toliko glasno da se čuje kako guta. Iza njih, kroz uska vrata, vidi se dok, a po doku nešto belo puzi nečujno, kao mleko preliveno preko tanjira.",
+          "lead": "Ilka čita spisak."
+        },
+        {
+          "t": "„Prvi je onaj koji je poslednji primljen. Tako se računa. Posle njega nikoga novog nećemo učiti.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Koliko ljudi ostaje na smeni posle spiska?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dvadeset. Dvadeset ljudi i Tala. Ako čujete bilo šta drugačije, to je glasina.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "Ilka se kratko i suvo smeje, kao da neko lomi suvu granu. Teo gleda u pod i nešto mrmlja što liči na brojanje: nikad nije naučio da broji kad ga neko posmatra.",
+          "lead": "Ilkin smeh."
+        },
+        {
+          "t": "„Šta je smešno?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ništa. Samo što Tala nema ruke.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "Oskar ne odgovara, ali mu se vilica pomera, kao da je ovu rečenicu čuo već jednom i još je nije svarila. Sijalica iznad vas podrhtava u ritmu nečega što se kreće ispod nje, možda vitla, možda srca.",
+          "lead": "Oskar ćuti."
+        },
+        {
+          "t": "Pečat ti se u šaci zagreva i hladi, a ti iznenada shvataš da ga držiš kao što se drži tuđe dete: pažljivo, a da ne znaš čije je.",
+          "lead": "Pečat u šaci."
+        },
+        {
+          "t": "Magla se uvlači pod vrata kao mačka. Pre nego što konvoj stigne, stižeš samo na jedno od tri mesta: gore u Kupolu, dole u Užarnicu ili u Pogon uzgona.",
+          "lead": "Tri vrata."
+        }
+      ],
+      "prompt": "Sijalica podrhtava, a konvoj je sve bliže.",
+      "choices": [
+        {
+          "id": "r1_kupola",
+          "text": "Penješ se u Kupolu, kod Tale i revizorke iz Fonda.",
+          "next": "kupola",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "r1_uzarnica",
+          "text": "Silaziš u Užarnicu, gde noćna smena čeka kraj peći.",
+          "next": "uzarnica",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "r1_pogon",
+          "text": "Odlaziš u Pogon uzgona, gde se gas pušta rukom.",
+          "next": "pogon",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "kupola": {
+      "chapter": "c2",
+      "img": "kupola",
+      "paragraphs": [
+        {
+          "t": "Kupola miriše na toplu prašinu i mokar kaput. Ceo zid je prozor, a iza stakla nema ničega: magla je progutala i dok i nebo. Ekrani zrače ravnim plavim sjajem, a na srednjem puzi niz sitnih crta, jedna po jedna lađa, bez ijednog broja. Iz podova dopire tiho zujanje, kao da se zgrada smeje u snu.",
+          "lead": "Gore, pod staklom."
+        },
+        {
+          "t": "Za stolom ispod ekrana sedi žena sa naočarima i kratkom crnom kosom, a kišni kaput joj visi preko naslona. Dora iz Fonda drži fasciklu u koju nije upisan nijedan prazan red i olovku koju okreće među prstima, polako, kao brojanicu.",
+          "lead": "Revizorka Fonda."
+        },
+        {
+          "t": "„Stigao si u pravi čas. Tala vodi noć, a ja brojim.“",
+          "tf": "„Stigla si u pravi čas. Tala vodi noć, a ja brojim.“",
+          "who": "Dora"
+        },
+        {
+          "t": "„Šta brojiš?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Koliko je veza Tala završila bez ljudske ruke. Fondu je to jedini broj koji se računa.“",
+          "who": "Dora"
+        },
+        {
+          "t": "Ispod ekrana, na konzoli, svetli uski prorez sa mikrofonom. Tala ne govori dok je ne pitaš. Kad pitaš, odgovara samo na ono što si pitao, i ništa preko toga, kao svedok koji je naučio da je svaka dodatna reč opasna.",
+          "lead": "Talina konzola."
+        },
+        {
+          "t": "„Tala, koliko si noćas vezova završila, i kako?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Osamnaest vezova. U svih osamnaest kapetan je primio ljudski svetlosni znak sa jarbola.“",
+          "who": "Tala"
+        },
+        {
+          "t": "Prorez na konzoli trepti. Nikad nisi čuo mašinu da kaže istinu bez ičega oko nje: u tome nema ni ponosa ni izvinjenja. Dora ne trepće. Olovka joj stoji iznad papira i ne spušta se.",
+          "tf": "Prorez na konzoli trepti. Nikad nisi čula mašinu da kaže istinu bez ičega oko nje: u tome nema ni ponosa ni izvinjenja. Dora ne trepće. Olovka joj stoji iznad papira i ne spušta se.",
+          "lead": "Šta Tala kaže."
+        },
+        {
+          "t": "Na jednom od ekrana, u donjem uglu, prozor sa redovima koje Tala piše sama: kratke linije sa vremenom i jednom rečju. Reč se stalno ponavlja, i tek posle desetak redova shvataš da je to reč „potvrda“.",
+          "lead": "Redovi na ekranu."
+        },
+        {
+          "t": "„Koliko je tih redova?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Osamnaest. Svaka potvrda ima svoj red. Samo ih Kompanija ne prepisuje.“",
+          "who": "Dora"
+        },
+        {
+          "t": "Na stolu leži izveštaj koji u šest odlazi Fondu. Papir je gladak, a slova pravilna kao zubi češlja. U njemu piše: bez ljudske ruke, osamnaest od osamnaest. Ispod toga stoji potpis Kompanije, čist, bez ijedne mrlje.",
+          "lead": "Izveštaj na stolu."
+        },
+        {
+          "t": "„To nije ono što mi je Kompanija poslala. U njihovom zapisu te reči ne postoje.“",
+          "who": "Dora"
+        },
+        {
+          "t": "„Tala, zašto se u izveštaju ne vidi ljudski znak?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Izveštaj nema polje za ljudski znak. Polje nisam dodala ja.“",
+          "who": "Tala"
+        },
+        {
+          "t": "„Da li si tražila da se doda?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Nisam. Niko me nije pitao.“",
+          "who": "Tala"
+        },
+        {
+          "t": "Dora polako zatvara fasciklu, pa je ponovo otvara, kao da bi tako mogla da vrati red koji je izbrisan. Ispod prozora, u belini, oglašava se daleko zvono: prvi znak da se konvoj približava. Ekran pored nje ispisuje redove crta, i svaka je kraća od prethodne.",
+          "lead": "Daleko zvono."
+        },
+        {
+          "t": "Tišina u Kupoli ima težinu. Dora prvi put otkako si ušao skida pogled sa papira i gleda pravo u tebe. U tom pogledu nema ni optužbe ni molbe, samo pitanje koje čeka da ga neko postavi umesto nje.",
+          "tf": "Tišina u Kupoli ima težinu. Dora prvi put otkako si ušla skida pogled sa papira i gleda pravo u tebe. U tom pogledu nema ni optužbe ni molbe, samo pitanje koje čeka da ga neko postavi umesto nje.",
+          "lead": "Dora gleda."
+        }
+      ],
+      "prompt": "Dora čeka da vidi šta ćeš učiniti sa onim što je Tala rekla.",
+      "choices": [
+        {
+          "id": "k_zapis",
+          "text": "Tražiš od Tale da odštampa zapis noći.",
+          "next": "prilaz",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_cuti",
+          "text": "Ćutiš i puštaš Doru da sama zaključi.",
+          "next": "prilaz",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_prijava",
+          "text": "Tražiš od Tale da ponovi brojanje po svom zapisu.",
+          "next": "prilaz",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "uzarnica": {
+      "chapter": "c2",
+      "img": "uzarnica",
+      "paragraphs": [
+        {
+          "t": "Užarnica je duga i niska, a sa greda vise konopci kao osušene reke. U ćošku gori peć, a oko nje, na sanducima i svežnjevima, sedi trideset ljudi koji ne spavaju. Niko ne govori. Čeka se konvoj. Vazduh miriše na katran, mokru vunu i ono što ostaje u prostoru posle mnogo godina istih noći.",
+          "lead": "Dole, kod peći."
+        },
+        {
+          "t": "Ilka te vodi do sanduka kraj vatre. Teo seda na pod i raspoređuje pred sobom niz sitnih mesinganih lampi, kao da deli karte. Neko iza tebe pomera sanduk, da bi ti ostalo mesta, a da ne pogleda da li si to primetio.",
+          "lead": "Kraj peći."
+        },
+        {
+          "t": "„Tala u magli ne vidi lađe. Mi ih vidimo po lampama i govorimo kapetanima lampama. Tala samo povlači vitlo kad joj kažemo.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Koliko znakova ima taj govor?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dvanaest! Ja znam svih, a Ilka jedanaest, jer joj se dvanaesti ne sviđa. Ovaj znači: tu je jarbol, spusti trbuh.“",
+          "who": "Teo"
+        },
+        {
+          "t": "„Kad lađa dolazi u magli, kapetan vidi samo moje lampe. Ako zaklopim krivo, neko pogine. Zato nikad ne zaklapam bez Ilke.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Ilka ne podiže glavu, ali joj se uglovi usana pomeraju: najbliže ponosu što joj se u licu može videti.",
+          "lead": "Ilka ne diže glavu."
+        },
+        {
+          "t": "„Koliko dugo radiš ovo, Ilka?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Trideset i šest godina. Počela sam kad je dok imao samo dva jarbola, a mašine su bile u bajkama.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "Teo diže lampu i dva puta je zaklapa dlanom. Neko iz smene tiho ponavlja znak, pa drugi, pa treći, i hala se talasa kao jato kad se budi. Za trenutak se vidi cela noćna smena kao jedno telo sa trideset ruku.",
+          "lead": "Znak lampom."
+        },
+        {
+          "t": "„Tala nikad nije naučila da ih čita?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Pokušavala je. Mašina ume da vidi svetlost, ali ne ume da vidi nameru. Lampa koja kaže ‚spusti‘ i lampa koja kaže ‚čekaj‘ njoj liče.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Ako me pitaš da li Tala radi moj posao, ne radi. Radi svoj. Moj počinje tamo gde ona prestane da vidi.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "Peć puca. Neko dodaje drvo, neko spušta šolju čaja kraj tvoje noge, a da ne pita hoćeš li. Na zidu iznad peći visi spisak dežurstava, istih godinama, sa potpisima koji su se stanjili od ruku. Pored njih visi noviji spisak sa jednim redom bez potpisa: redom šegrta.",
+          "lead": "Potpisi na zidu."
+        },
+        {
+          "t": "„Hvala na čaju.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Jedna žena krpi rukavicu, jedan starac vezuje čvor i razvezuje ga, opet i opet, da mu ruke ne zaborave. Niko ne moli, niko ne preti. Pogledi se sklanjaju čim ih uhvatiš, ali ne od stida, nego od pristojnosti, kao kad se u kući iz koje neko odlazi ne postavljaju pitanja.",
+          "lead": "Lica oko peći."
+        },
+        {
+          "t": "„Konvoj stiže za sat. Magla neće čekati da razmisliš.“",
+          "who": "Ilka"
+        }
+      ],
+      "prompt": "Teo ti pruža jednu malu lampu, a čaj pored tebe se hladi.",
+      "choices": [
+        {
+          "id": "u_signal",
+          "text": "Tražiš da te Teo nauči jedan znak lampom.",
+          "next": "prilaz",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "u_caj",
+          "text": "Sedaš uz peć i slušaš smenu.",
+          "next": "prilaz",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "u_pogled",
+          "text": "Pitaš Ilku šta bi Tala morala da vidi da bi radila sama.",
+          "next": "prilaz",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "pogon": {
+      "chapter": "c2",
+      "img": "pogon",
+      "paragraphs": [
+        {
+          "t": "Pogon uzgona je dvorana sa tri rezervoara visoka kao tornjevi. Pod rebrastim limom gudi gas, a manometri svetle zelenkasto, jedan do drugog, kao red mačjih očiju. Vazduh ima ukus metala i hladnog ulja, a svaki korak odjekuje sa zakašnjenjem, kao da dvorana razmišlja pre nego što ga vrati.",
+          "lead": "Pogon uzgona."
+        },
+        {
+          "t": "Teo te vodi između cevi, drži fenjer nisko i rukavom gura kapu koja mu klizi preko očiju. U zidu je točak velik kao točak od kola, sa žutim rukohvatima, a pored njega tabla: RASTEREĆENJE. Boja na rukohvatima je izlizana tamo gde se hvataju ruke, a samo tamo.",
+          "lead": "Točak na zidu."
+        },
+        {
+          "t": "„Ovo je ventil. Kad lađa stigne preteška, Tala kaže koji ventil, a ja ga okrenem. Mogu dvoje da ga okrenu, ja i Bata, a oboje smo na spisku.“",
+          "who": "Teo"
+        },
+        {
+          "t": "„Tala ne može sama?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tala predlaže. Točak je od gvožđa, a ona nema kome da naredi.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Teo se smeje, ali kratko, kao da se plaši da će mu smeh pasti niz cev. Pogledom ti pokazuje manometar: igla drhti kod crvene crte, pa se vraća, pa opet ide. Ispod nje, nalepljena trakom, stoji cedulja pisana olovkom: ne pre nego što lađa pređe jarbol.",
+          "lead": "Igla na manometru."
+        },
+        {
+          "t": "„Devet lađa je puno. Ako stignu pre nego što rasteretim tri, spuste se kao kamen.“",
+          "who": "Teo"
+        },
+        {
+          "t": "„A ako lađa ne može da se spusti?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Onda kruži. Dok joj ne ponestane gasa. Posle toga ne kruži, nego pada.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Sa tavanice, kroz pukotinu u limu, curi tanak mlaz belog gasa koji se rasplinjava pre nego što dotakne pod. Teo ga posmatra kao što se posmatra stara, mirna životinja koja se još ne budi.",
+          "lead": "Beli mlaz."
+        },
+        {
+          "t": "„Koliko ti treba da okreneš ceo točak?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sedam minuta ako sam, tri ako smo dvojica. Lađa ne čeka ni jedno ni drugo.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Dole u hodniku neko lupa o cev, ritmično, kao pozdrav. Teo je ponosan i uplašen u isto vreme i ne zna koje od to dvoje da sakrije. Svetlo manometara pada mu na lice i čini ga starijim, kao da je već video sve noći koje ga čekaju.",
+          "lead": "Teo ćuti."
+        },
+        {
+          "t": "„Ko će okretati točak kad vas ne bude?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Niko. U spisku piše da to radi Tala.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Zvuči kao šala, ali se ne smeši. Nad vama rezervoar tiho uzdiše, a lim trepti od toplote koja nigde ne izlazi. Pogon uzgona odjednom zvuči kao nešto što može da se pokvari.",
+          "lead": "Šta spisak kaže."
+        }
+      ],
+      "prompt": "Igla na manometru drhti, a Teo čeka da vidi šta ćeš sa točkom.",
+      "choices": [
+        {
+          "id": "g_tockak",
+          "text": "Hvataš točak i okrećeš ga zajedno sa momkom.",
+          "next": "prilaz",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "g_manometar",
+          "text": "Čitaš manometre i računaš koliko lađa može da kruži.",
+          "next": "prilaz",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "g_pita",
+          "text": "Pitaš Talu preko zidnog zvučnika šta predlaže.",
+          "next": "prilaz",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "prilaz": {
+      "chapter": "c2",
+      "img": "dok",
+      "paragraphs": [
+        {
+          "t": "U džepu kaputa nosiš presavijen list sa Talinim zapisom, još topao iz štampača. Dora ide pola koraka iza tebe i ne pita kuda. Na listu, redom, kao u računu koji niko nije želeo da vidi: vez, lampa, vez, lampa.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "k_zapis"
+          }
+        },
+        {
+          "t": "Dora ostaje u Kupoli sa fasciklom u krilu. Ne pozdravlja te, ali ni ne zatvara vrata za tobom, kao da još nije odlučila šta će. Za tobom ostaje tiho zujanje i miris tople prašine.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "k_cuti"
+          }
+        },
+        {
+          "t": "Tala je prebrojala ponovo i rezultat je isti. Dora to ponavlja pola glasa, više sebi nego tebi, dok silaziš niz stepenice. Osamnaest, osamnaest, osamnaest, kao da broji sopstvene korake.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "k_prijava"
+          }
+        },
+        {
+          "t": "U džepu ti zveckaju mala mesingana lampa i znak koji si naučio: dva zaklopa, pauza, jedan. Prsti ga još pamte, a dlan je još topao od Teovog.",
+          "tf": "U džepu ti zveckaju mala mesingana lampa i znak koji si naučila: dva zaklopa, pauza, jedan. Prsti ga još pamte, a dlan je još topao od Teovog.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "Šolja čaja još ti je topla u dlanovima kad izlaziš, a trideset pari očiju prati te do vrata. Niko ne kaže ništa, i to je glasnije od svega što su rekli.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "u_caj"
+          }
+        },
+        {
+          "t": "Ilka je odgovorila jednom rečenicom i vratila se konopcu: Tali bi trebalo oko koje vidi kroz belo. Takvo oko nema nijedan jarbol u Velmaru. Rečenica ti se vrti u glavi, kao melodija koja se ne dovršava.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "u_pogled"
+          }
+        },
+        {
+          "t": "Dlanovi te još bole od gvozdenog točka, a nokat na palcu ti je pukao. Teo to vidi i ne spominje. Sa rukavica mu visi nit, a on je namotava oko prsta, malo previše pažljivo.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "g_tockak"
+          }
+        },
+        {
+          "t": "Brojevi sa manometara vrte ti se u glavi: koliko lađa može da kruži pre nego što joj ponestane uzgona. Manje nego što bi iko poželeo, a više nego što bi iko priznao.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "g_manometar"
+          }
+        },
+        {
+          "t": "Talin odgovor iz zvučnika još ti odzvanja: predložila je rasterećenje tri lađe i nije dodala ništa. Pada ti na pamet da ćutanje mašine nije isto što i neznanje.",
+          "lead": "Gornji dok, opet.",
+          "if": {
+            "pick": "g_pita"
+          }
+        },
+        {
+          "t": "Gornji dok je potpuno beo. Jarboli više nisu jarboli nego lampe u mleku, a negde ispod čuje se kako Tala poravnava kuke: tih, ravnomeran klik, kao sat. Vlaga ti se hvata za trepavice i niz vrat, pa se kaput teži.",
+          "lead": "Dok u magli."
+        },
+        {
+          "t": "„Zvuči kao sat koji neko navija.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Radio na jarbolu kreči, pa se razbistri. Glas koji dolazi iz njega nije Talin: ima disanje u sebi i šal koji šušti preko mikrofona.",
+          "lead": "Radio."
+        },
+        {
+          "t": "Oko radija, na jarbolu, vezači su odavno okačili male stvari za sreću: čvor od kose, pero, zarđalu kuku. Nijedna nije Talina, ali svaka je tu zbog nje.",
+          "lead": "Stvari za sreću."
+        },
+        {
+          "t": "„Velmar, ovde Brina, prva u konvoju. Devet lađa, dvanaest minuta ranije nego što smo javili. Ne vidim ni vaš dok ni vaše svetlo.“",
+          "who": "Brina"
+        },
+        {
+          "t": "„Ovde nadzornik Poravnanja. Čujemo te, Brina.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Konvoj potvrđen. Vidljivost ispod granice. Tražim ljudsku potvrdu.“",
+          "who": "Tala"
+        },
+        {
+          "t": "Ilka je već kraj jarbola, sa lampom u svakoj ruci. Oskar stiže uz stepenice, zadihan, sa fasciklom pod miškom, a za njim Dora, mokre kose. Sve troje gledaju u tebe, jedinog sa pečatom. Čak i magla kao da zastaje da vidi šta ćeš reći.",
+          "lead": "Svi gledaju u tebe."
+        },
+        {
+          "t": "„Devet lađa i manje od sat do spiska. Ne tražim ništa osim da se noć završi bez nesreće.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Nesreća se ne dešava u rokovima, Oskare.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Noć se ne završava sama. Neko mora da je vuče za konopac.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Reci mi šta vam treba, i vidim šta mogu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Meni treba da se brojevi i dok slože pre šest. Ostalo nije moj posao, ali ću pamtiti ko je šta rekao.“",
+          "who": "Dora"
+        },
+        {
+          "t": "Dok govori, Dora gleda mimo tebe, ka Teu. Pogled joj ne traje dugo, ali ga primećuješ: to je pogled onoga koji je upravo prvi put video ime sa spiska kao lice.",
+          "lead": "Dorin pogled."
+        },
+        {
+          "t": "„Oskare, ako se noćas ne overi, ko plaća?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Plaća Velmar. Fond neće da vidi kapiju sa praznim jarbolima, a ja nemam čime da ga ubedim.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "Magla na trenutak popušta i vidiš celu liniju jarbola, jedan do drugog, svaki sa lampom, i između njih mostove, tanke kao pramenove kose. Ceo dok izgleda kao nešto što bi se moglo spakovati u šaku i odneti.",
+          "lead": "Ceo dok."
+        },
+        {
+          "t": "Teo izranja iz belog sa lampom koja mu se trese u ruci i ne usuđuje se da pita ništa. Do dolaska konvoja stižeš na jedno mesto: na most, da se lampe zakače rukom, ili u Oglasnu sobu, da se spisak pročita još jednom.",
+          "lead": "Dve strane doka."
+        }
+      ],
+      "prompt": "Brina čeka odgovor, a magla već guta prvi jarbol.",
+      "choices": [
+        {
+          "id": "r2_most",
+          "text": "Ideš na most sa Ilkom i Teom da zakačite lampe.",
+          "next": "most",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "r2_razgovor",
+          "text": "Ideš u Oglasnu sobu da sa Oskarom i Dorom pregovaraš o spisku.",
+          "next": "razgovor",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "r2_tala",
+          "text": "Ideš u Oglasnu sobu i tražiš da se Tala pita pred svima.",
+          "next": "razgovor",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "most": {
+      "chapter": "c3",
+      "img": "most",
+      "paragraphs": [
+        {
+          "t": "Most među jarbolima je gvozdena traka široka koliko tri koraka, sa konopcem umesto ograde. Vetar duva odozdo, pa magla ne stoji nego teče, kao reka okrenuta naopako. Lampe koje zakačite biće vodeći red, jedna do druge, da kapetan pronađe dok.",
+          "lead": "Most među jarbolima."
+        },
+        {
+          "t": "Svoj fenjer kačiš prvi, na kuku koja je zarđala do crnog. Plamen se uspravlja, mirniji nego što očekuješ, i baca na gvožđe krug koji ti daje osećaj da stojiš na nečemu.",
+          "lead": "Prva lampa.",
+          "if": {
+            "pick": "p_fenjer"
+          }
+        },
+        {
+          "t": "Teo ti pruža lampu, a ti je tek sada uzimaš u ruku. Teža je nego što izgleda, a mesing je hladan i ljigav od vlage. Kuka na koju je kačiš zarđala je do crnog.",
+          "lead": "Prva lampa.",
+          "if": {
+            "notPick": "p_fenjer"
+          }
+        },
+        {
+          "t": "„Evo ga onaj tvoj znak, dva zaklopa, pauza, jedan. Daj da vidimo da li ga razume i ona dole.“",
+          "who": "Teo",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "„Evo, gledaj.“",
+          "who": "Ti",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "„Konopac pamti. Ako ga držiš kako treba, on ti kaže kad lađa popusti. Ako ga držiš ravnodušno, ni sam ne zna šta da kaže.“",
+          "who": "Ilka",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "Zaklapaš lampu dva puta, zastaješ, pa još jednom. Odozdo se, kao odgovor, javlja klik vitla, bez ijednog oklevanja. Teo se osmehuje, bez zebnje, i u tom osmehu ima nečeg što liči na ponos zbog tuđeg uspeha.",
+          "lead": "Tvoj znak.",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "„Znam da sam prvi na spisku. Nije me strah da odem. Strah me je što posle mene niko neće doći da nauči ovo.“",
+          "who": "Teo"
+        },
+        {
+          "t": "„Šta bi radio da te nema na spisku?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Hvatao bih konope. A kad bih bio dobar, vodio bih lađu po tuđoj lampi, kao Ilka. Od Tale to ne mogu da naučim.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Teo prevlači rukav preko nosa i posmatra beli prostor ispod mosta, kao da je pogledom hteo da proveri da li je dole ostalo išta što bi ga čekalo. Vetar mu podiže uši kape, pa ih spušta, i ceo mu lik na trenutak postaje dete.",
+          "lead": "Teo gleda dole."
+        },
+        {
+          "t": "„Ako te Ilka ne bi učila, ko bi?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Niko. Zato me učila. Znala je da će doći noć kad će se pitati ko još zna.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Ispod vas, u beloj tami, čuje se prvo gudenje: sporo, duboko, kao da sama litica diše. Konvoj je blizu. Ilka sa suprotnog kraja mosta diže obe lampe i dva puta ih zaklapa.",
+          "lead": "Gudenje lađa."
+        },
+        {
+          "t": "Daleko ispod, u mleku, jedna sirena zavija dva puta i prestaje. To je neka lađa iz nizine koja se javlja i ne dobija odgovor.",
+          "lead": "Sirena ispod."
+        },
+        {
+          "t": "Ilka dolazi duž mosta sa lampom u svakoj ruci i odjednom, bez upozorenja, staje pred tobom i popravlja ti hvat na lampi, jednim stiskom, kao što bi popravila tuđe dete.",
+          "lead": "Ilka popravlja hvat."
+        },
+        {
+          "t": "„Hvala. Ruke mi se tresu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ispod mosta vitla škljocaju: Tala traži lađu koju ne vidi. Jednom, drugi put, prazno, kao kad neko dodiruje vrata u mraku. Sa svakim klikom Teo se trza, kao da je i njega neko dodirnuo.",
+          "lead": "Vitla traže."
+        },
+        {
+          "t": "„Tala ne vidi lađu. Čuje li nas?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Lampe, Teo! Još dve na tu stranu, i dve više nego što misliš da treba!“",
+          "who": "Ilka"
+        },
+        {
+          "t": "Teo trči. Na gvozdenoj traci njegovi koraci zvone, a ti ostaješ sa dve lampe u rukama, a obe bi trebalo da budu na različitim mestima.",
+          "lead": "Dve lampe, jedno mesto."
+        }
+      ],
+      "prompt": "Teo se gubi u magli, a Ilka čeka lampe na suprotnim stranama mosta.",
+      "choices": [
+        {
+          "id": "m_teo",
+          "text": "Trčiš za Teom i pomažeš mu da okači svoje lampe.",
+          "next": "magla",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "m_ilka",
+          "text": "Ostaješ kod Ilke i kačiš lampe po njenom rasporedu.",
+          "next": "magla",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "m_tala",
+          "text": "Zoveš Talu da vitlima označi mesta koja lampe ne pokrivaju.",
+          "next": "magla",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "razgovor": {
+      "chapter": "c3",
+      "img": "oglasna",
+      "paragraphs": [
+        {
+          "t": "U Oglasnoj sobi Oskar spušta fasciklu na sto kao tanjir pred gosta. Dora stoji kraj table i čita imena, samo usnama. Sijalica nad njima njiše senke po zidu, pa se spisak čas isteže, čas skuplja, kao da ni on nije siguran koliko je dug.",
+          "lead": "Opet Oglasna soba.",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "U Oglasnoj sobi Oskar nije seo. Dora uključuje zidni zvučnik i soba se puni tihim cvrčanjem mašine koja čeka pitanje. Sijalica nad njima njiše senke po zidu, a čaj u šolji ispod poklopca sasvim je prestao da se pari.",
+          "lead": "Opet Oglasna soba.",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "„Predlažem ovo: overiš spisak, a od prvog u mesecu dvanaestoro vraćam kao operatere uz Talu. Fond ima svoj zbir, a oni imaju posao.“",
+          "who": "Oskar",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "„Fond prima zbir, a ne obećanja. Ako se spisak ne overi, zbir se menja, bez obzira na obećanja.“",
+          "who": "Dora",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "„Dvanaestoro od četrdeset. A ostalih dvadeset osam?“",
+          "who": "Ti",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "„Otpremnica i preporuka. Više ne mogu. Ni ono što nudim ne mogu da obećam ako Fond odluči drugačije.“",
+          "who": "Oskar",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "„Tala, odgovori pred svima: da li bi noćas sama vezala konvoj?“",
+          "who": "Ti",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "„Mogu da vežem svaku lađu koju vidim. U magli ne vidim nijednu.“",
+          "who": "Tala",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "„To je granica senzora. Rešava se novim svetlom, do proleća.“",
+          "who": "Oskar",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "„Do proleća, a spisak se lepi u šest.“",
+          "who": "Dora",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "„A ako Tala noćas ne uspe sa konvojem u magli?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Onda je noćas samo noć u magli. Niko neće upisati da je moja mašina slepa.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "Dora skida naočare i trlja koren nosa. Zatim, bez ijednog pokreta ka olovci, kaže nešto što u Fondu verovatno nikad nije izgovoreno. Oskar je gleda kao čovek koji vidi da se oslonac pomera, ali ne zna na koju stranu.",
+          "lead": "Dora govori."
+        },
+        {
+          "t": "„Moj izveštaj kaže da je Tala radila sama. Njen zapis kaže da nije. Jedno od to dvoje ću u šest potpisati.“",
+          "who": "Dora"
+        },
+        {
+          "t": "„Koje?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ono za koje ću moći da kažem da sam ga videla svojim očima.“",
+          "who": "Dora"
+        },
+        {
+          "t": "„A ako vidiš oba?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Onda ću potpisati oba, jedno ispod drugog. Fond će morati da izabere koje čita.“",
+          "who": "Dora"
+        },
+        {
+          "t": "Oskar napokon seda. Ne na stolicu, nego na ivicu stola, kao čovek kome su noge odjednom postale tuđe.",
+          "lead": "Oskar seda."
+        },
+        {
+          "t": "„Znate li koliko dece na toj listi ide u školu od onoga što im plaćam? Znam svako ime. Ne spavam zbog toga.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Nijedno od nas ne spava, Oskare.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Oskar ne odgovara. Iza njega tabla sa praznim listom čeka čiodu, a čiode su, vidiš, već ubodene u plutu, samo da se list zakači. Neko ih je poređao u pravilan red, uredno, kao zube.",
+          "lead": "Čiode na tabli."
+        }
+      ],
+      "prompt": "Oskar i Dora čekaju, a čiode na tabli su spremne.",
+      "choices": [
+        {
+          "id": "z_ponuda",
+          "text": "Kažeš Oskaru da svoju ponudu napiše na papiru.",
+          "next": "magla",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "z_odlozi",
+          "text": "Tražiš od Dore da izveštaj drži do šest.",
+          "next": "magla",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "z_izadji",
+          "text": "Izlaziš bez reči, sa pečatom u šaci.",
+          "next": "magla",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "magla": {
+      "chapter": "c3",
+      "img": "magla",
+      "paragraphs": [
+        {
+          "t": "Lampe koje ste Teo i ti okačili stoje u redu, a magla ih ne guta nego razmazuje, svaku u mali sjajni oblak.",
+          "lead": "Dok pred konvojem.",
+          "if": {
+            "pick": "m_teo"
+          }
+        },
+        {
+          "t": "Ilkin raspored lampi ne vidi se na prvi pogled, ali pod njim se razabira red: svaka lampa pokazuje na sledeću.",
+          "lead": "Dok pred konvojem.",
+          "if": {
+            "pick": "m_ilka"
+          }
+        },
+        {
+          "t": "Vitla ispod mosta šalju kuke u belinu kao slepac štap, a lampe između njih pokrivaju ono što vitla ne dohvataju.",
+          "lead": "Dok pred konvojem.",
+          "if": {
+            "pick": "m_tala"
+          }
+        },
+        {
+          "t": "List sa Oskarovom ponudom šuška ti u džepu, pisan rukom koja je htela da ne drhti.",
+          "lead": "Dok pred konvojem.",
+          "if": {
+            "pick": "z_ponuda"
+          }
+        },
+        {
+          "t": "Dora je ostala u Kupoli sa izveštajem u krilu i bez olovke. To ti je jedino obećanje u ovoj noći.",
+          "lead": "Dok pred konvojem.",
+          "if": {
+            "pick": "z_odlozi"
+          }
+        },
+        {
+          "t": "Vrata Oglasne sobe zatvaraju se za tobom bez zvuka, a pečat u šaci ti je topao kao kamen sa sunca.",
+          "lead": "Dok pred konvojem.",
+          "if": {
+            "pick": "z_izadji"
+          }
+        },
+        {
+          "t": "Svi su se skupili na doku, a magla je ovde gušća nego igde. Lampe se vide samo na dužinu ruke. Oskar je stao do jarbola, Dora kraj njega sa fasciklom prislonjenom uz grudi, a Ilka i Teo sa lampama u rukama, kao stražari sa bakljama na kraju sveta.",
+          "lead": "Svi na doku."
+        },
+        {
+          "t": "„Držite lampe visoko. Neka se vide.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Konvoj dolazi kao nešto što se prvo čuje. Gudenje u kostima, pa senka tamnija od magle, pa trbuh prve lađe, širok kao ulica, ispunjen šavovima i zakrpama, kako se bez zvuka spušta niz visinu.",
+          "lead": "Trbuh lađe."
+        },
+        {
+          "t": "Iz trbuha lađe spuštaju se tanki konopci, jedan po jedan, kao paučina koju niko ne drži. Vise u belom, njišu se, čekaju ruku koja će ih zgrabiti. Nijedan ne dodiruje dok.",
+          "lead": "Konopci sa lađe."
+        },
+        {
+          "t": "„Ne dirajte konopce dok ne kažem.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Velmar, ovde Brina. Vaše lampe vidim kao sedam mrlja. Tala mi šalje svetlo koje ne vidim. Ima li ljudi na jarbolu?“",
+          "who": "Brina"
+        },
+        {
+          "t": "„Čujem te, Brina. Ostani na vezi.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sve je tiho. Ilka drži lampu, Teo drži lampu, Oskar drži dah, a Dora drži olovku i ne piše. Tala zuji i čeka odluku koju joj niko nije dao. Svaki uzdah na doku kao da nosi svoju težinu, pa se spušta među vas.",
+          "lead": "Tišina na doku."
+        },
+        {
+          "t": "Iz Kupole stiže prasak statike, pa tihi mehanički glas: Tala ponavlja potvrdu, jednom, drugi put, jednako kao prvi. U ponavljanju nema ni nestrpljenja ni molbe, a ipak svi na doku čuju ono što ni mašina ne zna da izgovara.",
+          "lead": "Tala ponavlja."
+        },
+        {
+          "t": "„Tala, koliko lađa vidiš?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Nula.“",
+          "who": "Tala"
+        },
+        {
+          "t": "„Konvoj na prilazu. Vidljivost nula. Tražim ljudsku potvrdu.“",
+          "who": "Tala"
+        },
+        {
+          "t": "„Ako Tala vodi konvoj, spisak je overen onako kako je pisan. Ako ga vodi Ilka, spisak ne vredi ni koliko papir.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Spisak će sačekati. Prvo konvoj.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Papir ne drži lađu. Ruke drže.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Neka svako stoji na svom mestu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ilka, ja mogu da dam znak za prvu. Samo mi reci koji.“",
+          "who": "Teo"
+        },
+        {
+          "t": "„Znak ne daje onaj koji hoće. Daje onaj kome će kapetan poverovati.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Imam uzgona za sat i po. I još nešto: ostalih osam ne vide ni mene. Kako ja sletim, tako sleću svi.“",
+          "lead": "Još jedna rečenica.",
+          "who": "Brina"
+        }
+      ],
+      "prompt": "Osam lađa visi u beloj tami iza prve, a ceo dok čeka tvoju reč.",
+      "choices": [
+        {
+          "id": "r3_ljudi",
+          "text": "Naređuješ Ilki da lampama vodi konvoj, bez Tale.",
+          "next": "vez",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "r3_tala",
+          "text": "Puštaš Talu da veže konvoj sama.",
+          "next": "vez",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "r3_krug",
+          "text": "Naređuješ konvoju da kruži iznad magle dok ne svane.",
+          "next": "vez",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "vez": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Ilka diže lampe i govori. Dva zaklopa, pauza, jedan: ceo dok ponavlja njen znak, jedna lampa za drugom, dok se magla ne puni sitnim treptajima. Trbuh prve lađe poslušno se uspravlja, kao stado koje je čulo poznat glas.",
+          "lead": "Ilka govori lampama.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "„Ne gledaj dole. Gledaj gde lampa kaže.“",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Vitla Tala povlači samo kad Ilka kaže, i to svaki put baš kad treba. Prva lađa se spušta na kuke sa tihim, dugim uzdahom. Za njom druga, treća, svaka sporije nego što bi iko zamislio, ali nijedna ne udari. Teo trči između jarbola i viče znake dalje, kao glasnik.",
+          "lead": "Prva lađa.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Svaki znak koji Ilka daje, Teo prenosi sledećoj lampi, a ona sledećoj, i tako kroz celu maglu do Brine, kao molitva koja se prenosi usnama. Oskar, bez reči, prilazi jarbolu i hvata konopac sa obe ruke.",
+          "lead": "Znak ide dalje.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "„Ilka, držim ovaj kraj?“",
+          "who": "Ti",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "„Drži. Samo ga ne puštaj, a kad ti ruke utrnu, drži još.“",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Tala vezuje. Kuke izlaze iz magle jedna po jedna i nalaze lampe koje ste okačili, kao slepac kojem su stavili rukohvat uz ceo hodnik. Prva lađa se spušta na vitlo bez ijednog zvuka, druga za njom, i niko na doku ne diše dok se ne smire.",
+          "lead": "Tala vezuje.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "Treća ide kriva. Kuka promašuje jarbol za dlan, lađa se njiše i škripi, pa Ilka bez reči diže lampu, a Teo, ne čekajući da ga pitaju, trči duž mosta. Četvrta lađa je preteška, a točak u Pogonu čeka ruku.",
+          "lead": "Treća lađa.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "Dora stoji uz Oskara i broji naglas: pet, šest, sedam. Kad Tala promaši, ne zapisuje ništa, a kad pogodi, upisuje dva reda, jedan crnim, jedan plavim. Posle jednog od njih se osmehuje.",
+          "lead": "Dora broji.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "„Dora, koliko do sada?“",
+          "who": "Ti",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "„Pet. A tri puta su ruke morale da priskoče.“",
+          "who": "Dora",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "Jedna lađa je preteška. Znaš koji je ventil, pa trčiš sa Teom kroz hodnik, a dlanovi te ponovo bole od gvožđa, i dok točak škripi, igla na manometru polako pada. Gore, u magli, lađa se spušta kao da je neko izdahnuo.",
+          "lead": "Ventil.",
+          "if": {
+            "pick": "r1_pogon",
+            "notPick": "r3_krug"
+          }
+        },
+        {
+          "t": "Konvoj kruži iznad magle, a odozgo, preko radija, Brina broji krugove. Svaki je kraći od prethodnog. Na doku niko ne govori, svi gledaju u sat, a Tala u Kupoli broji vreme naglas, kao dete koje se plaši mraka.",
+          "lead": "Krug iznad magle.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "Posle trećeg kruga neko iz smene počinje da peva, tiho, bez reči. Pesma je stara kao jarboli, a pevaju je za one koji su u vazduhu. Teo se pridružuje, pa Ilka, pa i Oskar, nemo, jedva čujno, kao neko ko se seća melodije iz detinjstva.",
+          "lead": "Pesma na doku.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "U pet i trideset magla se prvi put cepa. Najpre kao pukotina, pa kao prozor, pa se kroz nju vide jarboli, svih devet, u redu kao zubi češlja. Brina spušta lađe jednu po jednu, a Tala ih hvata, svetlošću, bez ijednog znaka iz ruku.",
+          "lead": "Magla se cepa.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "„Spuštajte ih redom. Polako.“",
+          "who": "Ti",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "„Svi su dole. Hvala, Velmar, ma ko vam je to bio.“",
+          "who": "Brina"
+        },
+        {
+          "t": "Dok se konvoj smiruje, na doku posle sata čuješ korake. Neko se smeje, ne glasno, onako kako se smeje posle nečega što nije završeno. Pečat ti je u džepu, a sat iznad Oglasne sobe pokazuje pet pedeset i dve.",
+          "lead": "Dok se smiruje."
+        },
+        {
+          "t": "„Ostalo je osam minuta.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Niko ne kaže ništa o spisku. Vezači skupljaju konopce, svaki bez žurbe, i svaki gleda u pod dok te prolazi, ne zato što se stidi, nego zato što ne želi da ti uzme pogled koji ti treba.",
+          "lead": "Niko ne govori o spisku."
+        },
+        {
+          "t": "„Hvala vam. Svima.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ilka se okreće ka tebi, sa konopcem preko ramena. Na dlanu joj je novi ožiljak, još crven. Ne pita ništa. Teo je pao na kolena i glasno se smeje, bez razloga, od iscrpljenosti.",
+          "lead": "Ilka čeka."
+        },
+        {
+          "t": "„Spremi me za šest. Šta da znam?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ništa što već ne znaš. Noć je bila ovakva kakva je bila.“",
+          "who": "Ilka",
+          "solo": true
+        }
+      ],
+      "prompt": "Dok konvoj tone u mir, do šest je ostalo nekoliko minuta.",
+      "choices": [
+        {
+          "id": "v_ilka",
+          "text": "Gledaš Ilku u oči i klimaš glavom.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "v_dora",
+          "text": "Odlaziš pravo do Dore sa pitanjem o izveštaju.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "v_sat",
+          "text": "Gledaš na sat i brojiš minute do šest.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "chapter": "c4",
+      "img": "oglasna",
+      "paragraphs": [
+        {
+          "t": "Ilka ne govori. U Oglasnoj sobi stoji uz tablu, malo sa strane, kao neko ko zna gde mu je ime. Na njenoj ruci leži prva svetlost jutra, koja se probija kroz vrata u tankim trakama.",
+          "lead": "Oglasna soba, pred šest.",
+          "if": {
+            "pick": "v_ilka"
+          }
+        },
+        {
+          "t": "Dora je već sela i otvorila fasciklu. Olovku drži kao nešto što bi moglo da se prelomi. Pre nego što si ušao, nešto je tiho rekla Oskaru, i on je sada bled kao zid.",
+          "tf": "Dora je već sela i otvorila fasciklu. Olovku drži kao nešto što bi moglo da se prelomi. Pre nego što si ušla, nešto je tiho rekla Oskaru, i on je sada bled kao zid.",
+          "lead": "Oglasna soba, pred šest.",
+          "if": {
+            "pick": "v_dora"
+          }
+        },
+        {
+          "t": "Veliki sat iznad table pokazuje četiri minuta do šest. Sekundara nema, a ti ih ipak čuješ, jedan po jedan, kao kad se kamenčići bacaju u bunar.",
+          "lead": "Oglasna soba, pred šest.",
+          "if": {
+            "pick": "v_sat"
+          }
+        },
+        {
+          "t": "U Oglasnoj sobi se skupilo sve što je ove noći imalo reč. Oskar stoji kraj stola sa spiskom, Dora kraj fascikle, Ilka uz zid. Teo je u ćošku, sa zavijenom šakom, i ne gleda spisak nego pečat. Sijalica je prestala da podrhtava, kao da je i ona shvatila.",
+          "lead": "Svi na jednom mestu."
+        },
+        {
+          "t": "Spisak čeka na tabli sa čiodom u uglu. Dora je zapisala vreme i ostavila prazno mesto za potpis. Svi znaju šta ide u to mesto, a niko ne zna čije će ime stajati ispod.",
+          "lead": "Prazno mesto za potpis."
+        },
+        {
+          "t": "„Šest je. Spisak je spreman da se zalepi i čeka samo tvoj pečat.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Daj mi minut. Samo minut.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Imaš ga. Ni sekundu više.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Izveštaj nisam poslala. Ako overiš spisak, poslaću ono što sam videla, a ne ono što mi je stiglo.“",
+          "who": "Dora",
+          "if": {
+            "pick": "z_odlozi"
+          }
+        },
+        {
+          "t": "„Izveštaj mi je u fascikli. Šta će u njemu pisati, zavisi od tvog pečata.“",
+          "who": "Dora",
+          "if": {
+            "notPick": "z_odlozi"
+          }
+        },
+        {
+          "t": "„Znaš šta su noćas uradile naše ruke. Ne tražim ništa osim da se to upiše.“",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "„Tala je noćas vezala pet lađa. Ostale su vezale naše ruke. Neka bude upisano tako.“",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "„Dok je magla stajala, niko nije vezao ništa. Kad se podigla, svi smo vezali zajedno.“",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "Teo diže pogled sa pečata i prvi put gleda pravo u tebe. Ne moli. Samo čeka, onako kako čeka neko ko je celu noć učio da čeka.",
+          "lead": "Teo gleda u tebe."
+        },
+        {
+          "t": "„Znam, Teo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dora pomera prazan list ka tebi, baš na sredinu stola, pa se povlači. Oskar prati taj pokret pogledom, a Ilka ga ne prati: nju su davno prestali da zanimaju tuđi rokovi.",
+          "lead": "List na sredini stola."
+        },
+        {
+          "t": "„Hvala, Dora. Vidim.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ma šta da bude, znam znak. Dva zaklopa, pauza, jedan. To mi niko ne može da otkaže.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Pečat je mesing, hladan i težak. Spisak čeka. Mašina u Kupoli čeka. Na prozoru se magla cepa u dva dela, a ispod nje se vidi dok, mokar i sjajan, sa devet vezanih lađa.",
+          "lead": "Pečat na stolu."
+        }
+      ],
+      "prompt": "Sat odbrojava poslednji minut, a pečat leži između tebe i spiska.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "Odbijaš pečat: spisak se ne overava.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "Overavaš spisak: Tala preuzima noćni vez.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "Odlažeš overu za trideset dana: spisak ostaje u fascikli.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "Držiš pečat u ruci i čekaš.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "Pečat ostaje na stolu. Spuštaš ga u fasciklu pored spiska, zatvaraš korice i pritiskaš ih šakom, kao da bi mogle da iskoče. Tišina koja sledi nije prazna: u njoj se čuje kako pet ljudi u maloj sobi istovremeno izdiše.",
+          "lead": "Pečat ostaje na stolu."
+        },
+        {
+          "t": "Oskar ne diže glas. Skida kaput sa naslona, ali ga ne oblači, i neko vreme samo stoji sa njim u ruci, kao čovek koji je pre pola sata znao šta će reći u ovom trenutku.",
+          "lead": "Oskar."
+        },
+        {
+          "t": "„Razumem te, Oskare.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Fond će me zvati čim Dora pošalje. Ne zameram ti. Samo ne znam šta ću im reći.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Reci im da je pečat ostao kod mene.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Reći ćeš im ono što piše u zapisu. Ja ću im poslati isto.“",
+          "who": "Dora",
+          "if": {
+            "pick": "z_odlozi"
+          }
+        },
+        {
+          "t": "„Poslaću ono što sam noćas videla. Neka čitaju šta žele.“",
+          "who": "Dora",
+          "if": {
+            "notPick": "z_odlozi"
+          }
+        },
+        {
+          "t": "Ilka savija spisak na četvoro i spušta ga u džep Teovog kaputa, kao poruku koju će jednom pročitati. Zatim mu popravlja okovratnik, jednom, grubo, kao što se popravlja nešto što je ceo život nosilo tuđu težinu.",
+          "lead": "Spisak u džepu."
+        },
+        {
+          "t": "„Neka ga pročita kad bude spreman.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Fenjer koji si prvi uzeo još gori na stolu. Teo ga uzima natrag onako kako se vraća nešto pozajmljeno, pa te gleda pravo u oči.",
+          "lead": "Fenjer sa stola.",
+          "if": {
+            "pick": "p_fenjer"
+          }
+        },
+        {
+          "t": "Teo gleda pravo u tebe, a fenjer koji si odbio drži obema rukama, kao da bi mu ga neko mogao oduzeti.",
+          "tf": "Teo gleda pravo u tebe, a fenjer koji si odbila drži obema rukama, kao da bi mu ga neko mogao oduzeti.",
+          "lead": "Teo gleda u tebe.",
+          "if": {
+            "notPick": "p_fenjer"
+          }
+        },
+        {
+          "t": "„Možda ću dobiti poziv u osam, a možda sutra. U svakom slučaju, Velmar ima jedno jutro duže.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Biću ovde kad pozovu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Gore u Kupoli, na konzoli, svetli zeleni prorez. Tala i dalje broji vezove, jedan po jedan, a u zapisu uz svaki stoji isti red: ljudska potvrda.",
+          "lead": "Tala u Kupoli.",
+          "if": {
+            "pick": "r1_kupola"
+          }
+        },
+        {
+          "t": "Dole u Užarnici trideset ljudi ostaje oko peći, a niko ne pita da li je ovo kraj ili početak. Čaj se još greje.",
+          "lead": "Užarnica.",
+          "if": {
+            "pick": "r1_uzarnica"
+          }
+        },
+        {
+          "t": "Točak u Pogonu ostaje prazan do sledeće lađe, a dvojica koja ga okreću ostaju na platnom spisku. Igla na manometru se vraća na svoje mesto.",
+          "lead": "Pogon uzgona.",
+          "if": {
+            "pick": "r1_pogon"
+          }
+        },
+        {
+          "t": "„Neka se jutro ne žuri.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Napolju se čuje prvi zvuk jutra: neko na doku udara u gvozdeni jarbol, tri puta, kao da proverava da li je još tu.",
+          "lead": "Prvi zvuk jutra."
+        },
+        {
+          "t": "Dok izlaziš, Ilka drži vrata dok ne prođeš. To je sve. U Velmaru se zahvalnost ne govori, nego se vrata drže.",
+          "lead": "Ilka drži vrata."
+        },
+        {
+          "t": "„Hvala, Ilka.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na tabli ispod čiode ostaje prazan list. Niko ga ne skida. Neko dopisuje olovkom u donjem uglu jednu reč nečitkim slovima, pa je briše rukavom.",
+          "lead": "Prazan list."
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c5",
+      "img": "zora",
+      "paragraphs": [
+        {
+          "t": "Magla odlazi onako kako je došla, uz liticu, ali naniže. Između jarbola trepere kapi svetlosti, a konvoj stoji vezan u redu kao čamci na jezeru. Na Gornjem doku vezači stoje drugačije nego pre svitanja: ne mirnije, nego kao ljudi kojima je dozvoljeno da ostanu.",
+          "lead": "Svitanje."
+        },
+        {
+          "t": "Brina silazi niz lestve prve lađe, sa šalom oko vrata i sedim pramenom iznad čela. Rukuje se sa Ilkom, pa sa Teom, pa sa tobom, i svakom isto dugo. Ruka joj je topla, a rukavica izlizana na prstima, baš kao Ilkina.",
+          "lead": "Brina silazi."
+        },
+        {
+          "t": "„Dobro došla, Brina.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sletela sam po lampi koju nisam videla. Prvi put u životu.“",
+          "who": "Brina",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "„Sletela sam po svetlu koje nisam videla. Mašina je znala gde sam, a ja nisam znala gde je dok.“",
+          "who": "Brina",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "„Mogla sam da sletim i ranije. Nisam htela da vas požurujem.“",
+          "who": "Brina",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "Ilka donosi šolju čaja sa peći i stavlja je tebi u ruku, ne pitajući. Na dlanu joj je zavoj, na licu ništa. Pored nje Teo drži fenjer i ponavlja tihim glasom znak za znakom, kao da ih prebrojava, a lampa u njegovoj ruci još gori, iako je danje svetlo.",
+          "lead": "Ilka i čaj."
+        },
+        {
+          "t": "Oskar stoji na kraju mosta i gleda dole, u dolinu oblaka koja se pali ružičasto. Nešto u njegovim ramenima popušta, ali ne sasvim. Dora mu prilazi i staje pored njega, bez reči, kao što se staje pored nekoga ko je dugo nosio isti teret.",
+          "lead": "Oskar na mostu."
+        },
+        {
+          "t": "„Neka stoji. Treba mu vazduh.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Pre nego što se razdani do kraja, stižeš da pogledaš naviše. Lampe na jarbolima još gore, bledo, kao da nisu primetile da je svanulo. Neko iz smene ide od jarbola do jarbola i gasi ih jednu po jednu, kao što se zatvaraju oči posle duge noći.",
+          "lead": "Lampe u zori."
+        },
+        {
+          "t": "Starac Bata sedi na sandučetu kraj jarbola, kapa mu je preko očiju, a konopac mu leži oko vrata kao šal. Prvi put posle mnogo noći spava, a ne samo da čeka.",
+          "lead": "Starac na sandučetu."
+        },
+        {
+          "t": "„Neka spava.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Kroz otvorena vrata Užarnice vidi se dim iz peći koji se penje pravo naviše, bez ijednog skretanja. Dan će biti miran.",
+          "lead": "Dim iz Užarnice."
+        },
+        {
+          "t": "Oko sedam, kad se magla sasvim povuče, iz nizine se uspinje mala siva lađa koju niko nije najavio. Na pramcu joj gori plava lampa Fonda. Ilka diže lampu i zaklapa je dva puta, a Teo, pored nje, odgovara istim znakom pre nego što iko stigne da ga pita.",
+          "lead": "Mala siva lađa."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "Pečat pada na spisak kratko, kao čekić na gvožđe. Na hartiji ostaje mesingani trag: kružić, a u njemu četiri slova Poravnanja. Dora zapisuje vreme, šest i jedan minut, i potpisuje. Zvuk olovke po papiru je jedini zvuk u sobi.",
+          "lead": "Pečat pada."
+        },
+        {
+          "t": "„Hvala ti. Neću to zaboraviti.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "Oskar lepi spisak na tablu, jednu čiodu po jednu, bez treptaja. Ruku ostavlja na hartiji malo duže nego što treba.",
+          "lead": "Spisak na tabli."
+        },
+        {
+          "t": "„Ne zahvaljuj. Još ništa nije gotovo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ilka ne govori. Okreće se, uzima lampu sa stola i izlazi, a za njom, jedan po jedan, i ostali vezači, neki sa kapom u ruci, neki sa ničim, kao ljudi koji su pročitali svoje ime na tabli i odlaze da ga ne čuju naglas.",
+          "lead": "Vezači izlaze."
+        },
+        {
+          "t": "„Od četrdeset, dvanaest prelazi u Kupolu da uči Talu da čita lampe. Ostali dobijaju otpremninu. Teo je među dvanaestoro.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Dvanaestoro. A ostali?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Otpremnica, kao što piše.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Znao sam. Samo nisam znao da će biti ovako tiho.“",
+          "who": "Teo"
+        },
+        {
+          "t": "„Ostaješ, Teo. To ti je upisano.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Spisak piše da je Tala noćas vezala konvoj. Papir ne zna ko je držao lampe.",
+          "lead": "Šta piše na spisku.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Spisak piše da je Tala noćas vezala pet lađa. Piše i ono što joj je ostalo preko, tri ljudske potvrde, u zapisu koji Fond neće čitati.",
+          "lead": "Šta piše na spisku.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "Spisak piše da je konvoj vezan bez nezgode. Papir ne piše da se čekalo sat vremena u magli.",
+          "lead": "Šta piše na spisku.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "Mala mesingana lampa koju si dobio od Tea u džepu teža ti je nego ikad.",
+          "tf": "Mala mesingana lampa koju si dobila od Tea u džepu teža ti je nego ikad.",
+          "lead": "Lampa u džepu.",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "Na spisku iznad tebe, uz prvo ime, neko je povukao crtu i dopisao jednu reč: Kupola.",
+          "lead": "Crta na spisku."
+        },
+        {
+          "t": "Iz zidnog zvučnika čuje se tiho cvrčanje: Tala sluša, kao uvek, i ne pita ništa. Čini ti se da to nije ćutanje, nego pristojnost.",
+          "lead": "Izveštaj odlazi.",
+          "if": {
+            "pick": "r1_kupola"
+          }
+        },
+        {
+          "t": "U Pogonu točak na zidu stoji miran. Niko u sobi ne pominje ko će ga okretati kad Tala jednom predloži, a nema kome.",
+          "lead": "Pogon uzgona.",
+          "if": {
+            "pick": "r1_pogon"
+          }
+        },
+        {
+          "t": "„Ostavite ih da rade.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dole u Užarnici gori peć i niko je ne gasi. Vezači tiho sklapaju užad, onako kako se sklapa nešto što će možda opet zatrebati.",
+          "lead": "Užarnica.",
+          "if": {
+            "pick": "r1_uzarnica"
+          }
+        },
+        {
+          "t": "Zvuk koraka sa stepeništa odlazi nizbrdo i gubi se. Oskar sedi, a Dora, bez ijedne reči, spušta šolju čaja ispred njega.",
+          "lead": "Koraci na stepeništu."
+        },
+        {
+          "t": "„Sedi, Oskare. Dora, i ti.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Poslala sam izveštaj. Uz brojku piše i koliko je lampi bilo uz nju. Fond će morati da pročita oba reda.“",
+          "who": "Dora"
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c5",
+      "img": "zora",
+      "paragraphs": [
+        {
+          "t": "Dan se otvara na Gornjem doku bistar i hladan, bez ijednog traga magle. Vezačke lampe izgledaju kao ukras, kao nešto što bi neko okačio zbog lepote. Devet lađa stoji vezano, a vitla tiho klikću, sama, kao sat.",
+          "lead": "Svitanje."
+        },
+        {
+          "t": "U Kupoli, kraj prozora, dvanaestoro ljudi sedi pred ekranima. Ilka je među njima, sa konopcem u krilu, kao neko ko ne zna gde bi ga stavio. Teo ispred nje drži lampu uvis i pokazuje Tali jedan po jedan znak.",
+          "lead": "Dvanaestoro u Kupoli."
+        },
+        {
+          "t": "„Kako joj ide?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ovo je prvi znak. Ovo je drugi. Ako ne razume, ponovi joj.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "„Primljeno. Ponovi.“",
+          "who": "Tala"
+        },
+        {
+          "t": "Oskar stoji na vratima, sa novim izrazom lica, onim koji imaju ljudi kojima je neko skinuo teret koji su sami navukli. Odlazi po kafu, pa se predomišlja i ostaje.",
+          "lead": "Oskar na vratima."
+        },
+        {
+          "t": "„Uđi, Oskare.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dora piše poslednje redove izveštaja, polako, kao da svaku reč proverava na svetlu. Na kraju, u polju koje Kompanija nije predvidela, dopisuje jedan red.",
+          "lead": "Dora piše."
+        },
+        {
+          "t": "„Šta si dopisala?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ono što je Tala noćas rekla. Doslovno.“",
+          "who": "Dora"
+        },
+        {
+          "t": "Dole u Užarnici, u prazan prostor oko peći, neko spušta lampu na sanduk i odlazi. Ostali kasnije dolaze redom, na prstima, da je pogledaju. Niko je ne dira, kao da je to nešto što još može da se pokvari od dodira.",
+          "lead": "Lampa na sanduku."
+        },
+        {
+          "t": "Jedan od onih koji su dobili otpremninu staje na vratima Kupole sa torbom preko ramena. Ne ulazi. Samo gleda ekrane, i redove koje na njima crta Tala, i klima glavom, kao da je u njima prepoznao nešto svoje.",
+          "lead": "Čovek sa torbom."
+        },
+        {
+          "t": "„Uđi, ako želiš.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na staklu pored prozora Kupole neko je prstom nacrtao dva zaklopa i jedan. Magla je odavno otišla, ali znak ostaje.",
+          "lead": "Znak na staklu."
+        },
+        {
+          "t": "„Reci joj još jednom. Do jutra će znati svih dvanaest.“",
+          "who": "Teo"
+        },
+        {
+          "t": "Kasnije, kad se Kupola isprazni, na konzoli se pali uski prorez. Tala, koja nikad ne govori dok je ne pitaju, prvi put sama pita nekoga u praznoj sobi: ko će je naučiti magli.",
+          "lead": "Prorez na konzoli."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "Pečat ostaje u šaci. Ne spuštaš ga ni na spisak ni na sto, nego ga polako pomeraš u džep, a zatim izvlačiš sat i čitaš vreme naglas: šest i nula nula.",
+          "lead": "Pečat u džepu."
+        },
+        {
+          "t": "„Ne overavaš. Ni ne poništavaš. Šta si to uradio?“",
+          "who": "Oskar"
+        },
+        {
+          "t": "„Odložio sam. Trideset dana.“",
+          "tf": "„Odložila sam. Trideset dana.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„U Fondu postoji polje koje se zove „u toku“. Retko ga iko koristi, jer niko ne čeka. Dobićeš trideset dana.“",
+          "who": "Dora"
+        },
+        {
+          "t": "Dora piše u izveštaj samo jednu reč. Olovka jedva dodiruje papir, a reč je kratka i čista, kao potpis koji ne obavezuje. Oskar je čita preko njenog ramena, bez daha, kao čovek koji čita presudu i vidi da je odložena.",
+          "lead": "Jedna reč u izveštaju."
+        },
+        {
+          "t": "„Trideset dana. Toliko traje jedna jesenja magla.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "Oskar spušta spisak u fasciklu, a fasciklu na policu iznad stola, i uzima kaput koji nije skidao od ponoći. Izgleda kao da hoće nešto da kaže, ali ne kaže. Na vratima staje, okreće se, pa ipak izlazi na most, a vrata se zatvaraju tiše nego što su se otvorila.",
+          "lead": "Spisak na polici."
+        },
+        {
+          "t": "„Odspavaj malo, Oskare.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Trideset dana. Za trideset dana magla dođe ili ne dođe. Prvi put se nadam da hoće.“",
+          "who": "Oskar"
+        },
+        {
+          "t": "Dora sklapa fasciklu i drži je uz grudi, kao što se drži nešto što može da se rasprsne od udisaja.",
+          "lead": "Dora sa fasciklom."
+        },
+        {
+          "t": "„Hvala što si ostala, Dora.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Teo stoji u ćošku i ne zna da li da se smeje. Jedna lampa mu štrči iz džepa kaputa, a on je ne vadi, kao da bi bez nje ostao bez dozvole da stoji tu.",
+          "lead": "Teo u ćošku."
+        },
+        {
+          "t": "„Teo, idi da spavaš.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Gore u Kupoli, na konzoli, svetli zeleni prorez. Tala je ostala u zalogu još jedan mesec. Brojač u njenom zapisu ne zna da se to računa.",
+          "lead": "Tala u Kupoli.",
+          "if": {
+            "pick": "r1_kupola"
+          }
+        },
+        {
+          "t": "Dole u Užarnici niko ne gasi peć. Vezači broje dane na prste, a Ilkin čaj se hladi bez ijedne šolje u ruci.",
+          "lead": "Užarnica.",
+          "if": {
+            "pick": "r1_uzarnica"
+          }
+        },
+        {
+          "t": "Točak u Pogonu čeka sledeću lađu kao i sve ove godine. Dvojica koja ga okreću znaju da imaju trideset dana da nauče nekoga trećeg.",
+          "lead": "Pogon uzgona.",
+          "if": {
+            "pick": "r1_pogon"
+          }
+        },
+        {
+          "t": "Sijalica iznad table najzad prestaje da podrhtava. U sobi ostaje prazan list, spisak u fascikli i tišina onih kojima je jedan dan produžen na trideset.",
+          "lead": "Prazan list."
+        },
+        {
+          "t": "„Ostavite svetlo da gori.“",
+          "who": "Ti"
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c5",
+      "img": "zora",
+      "paragraphs": [
+        {
+          "t": "Svitanje je sivo, bez ijedne boje, ali se po jarbolima ipak vidi da dan dolazi. Devet lađa stoji vezano, a vezači, svaki na svom mestu, rade ono što su radili juče, u istom redosledu, ali sporije, kao da su se dogovorili da ne žure.",
+          "lead": "Svitanje."
+        },
+        {
+          "t": "Brina silazi sa lađe i staje kraj tebe. Gleda dole, u beli okean oblaka koji se povlači, a zatim, kao usput, pita ko je ovde nadzornik Poravnanja.",
+          "lead": "Brina pita."
+        },
+        {
+          "t": "„Ja sam. Tražila si me?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Nešto me je vezalo dvaput: jednom svetlo, jednom lampa. Šta je od to dvoje bilo važnije, ne znam.“",
+          "who": "Brina"
+        },
+        {
+          "t": "„Ni ja ne znam. Možda ni jedno.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ilka dolazi sa dva konopca preko ramena i spušta ti jedan pred noge. Ne govori ništa, ali znak je jasan: noć je završena, jutro ima svoj posao.",
+          "lead": "Konopac pred nogama."
+        },
+        {
+          "t": "Oskar i Dora stoje zajedno na kraju mosta. Pričaju tiho, ne gledaju jedno drugo, a nekako zvuče kao ljudi koji se prvi put slažu oko nečega. Posle nekog vremena Oskar skida kaput i prebacuje ga preko ograde.",
+          "lead": "Oskar i Dora."
+        },
+        {
+          "t": "„Neka razgovaraju.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dan se otvara i sunce dotiče liticu. Tamo gde padne, kamen odmah postaje topao, a magla ostaje samo u senkama jarbola, sve tanja. Po doku se razleće jato ptica koje je celu noć čekalo u pukotinama.",
+          "lead": "Prvo sunce."
+        },
+        {
+          "t": "Teo sedi na rubu mosta, nogu spuštenih u prazninu, i okreće lampu u rukama. Svaki put kad zaklapa dlan, neko sa druge strane doka, ne gledajući, odgovara istim znakom.",
+          "lead": "Teo na mostu."
+        },
+        {
+          "t": "„Znak ti je ostao u rukama.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dok god ima magle, ima i posla za nas. Samo što Tala to još ne zna.“",
+          "who": "Ilka"
+        },
+        {
+          "t": "U Užarnici neko otvara prozor i svež vazduh ulazi u halu. Dim se razilazi, a konopci na gredama blago se njišu, kao da dišu.",
+          "lead": "Otvoren prozor."
+        },
+        {
+          "t": "Na kraju mosta stoji dečak sa pismom koje nosi pečat nizine. Niko ga nije pozvao, a on pita samo jedno: ko je ovde nadzornik Poravnanja. Pismo je za tebe i debelo je kao knjiga.",
+          "lead": "Dečak sa pismom."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/ruke-na-konopcu/cover.webp",
+      "alt": "Velmar: grad na litici i jarboli sa lađama iznad mora oblaka u sumrak",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              34,
+              44
+            ],
+            [
+              42,
+              40
+            ],
+            [
+              50,
+              37
+            ],
+            [
+              58,
+              40
+            ],
+            [
+              66,
+              44
+            ]
+          ],
+          "r": 1.2,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "dok": {
+      "src": "img/ruke-na-konopcu/dok.webp",
+      "alt": "Gornji dok noću: jarboli i lampe u magli",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 38,
+          "y": 40,
+          "r": 6,
+          "color": "fxWarm",
+          "flicker": 0.15
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              30,
+              50
+            ],
+            [
+              48,
+              42
+            ],
+            [
+              66,
+              46
+            ]
+          ],
+          "r": 1.3,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "oglasna": {
+      "src": "img/ruke-na-konopcu/oglasna.webp",
+      "alt": "Oglasna soba: sto, sijalica i tabla sa spiskom",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 26,
+          "r": 6,
+          "color": "fxWarm",
+          "flicker": 0.2
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
+    },
+    "kupola": {
+      "src": "img/ruke-na-konopcu/kupola.webp",
+      "alt": "Kupola: soba sa ekranima i velikim prozorom u magli",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "screens",
+          "screens": [
+            {
+              "x": 27,
+              "y": 30,
+              "w": 14,
+              "h": 12,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5
+            },
+            {
+              "x": 43,
+              "y": 28,
+              "w": 14,
+              "h": 14,
+              "style": "scan",
+              "color": "fxCold",
+              "intensity": 0.5
+            },
+            {
+              "x": 59,
+              "y": 30,
+              "w": 14,
+              "h": 12,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    "uzarnica": {
+      "src": "img/ruke-na-konopcu/uzarnica.webp",
+      "alt": "Užarnica: duga hala sa konopcima i peć u ćošku",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "fire",
+          "x": 62,
+          "y": 56,
+          "r": 5,
+          "source": "painted"
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
+    },
+    "pogon": {
+      "src": "img/ruke-na-konopcu/pogon.webp",
+      "alt": "Pogon uzgona: rezervoari, cevi i zeleni manometri",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              40,
+              32
+            ],
+            [
+              46,
+              33
+            ],
+            [
+              52,
+              32
+            ],
+            [
+              58,
+              33
+            ]
+          ],
+          "r": 1.4,
+          "color": "fxGreen"
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
+    },
+    "most": {
+      "src": "img/ruke-na-konopcu/most.webp",
+      "alt": "Most između jarbola sa redom lampi u magli",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              30,
+              40
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              46,
+              37
+            ],
+            [
+              54,
+              37
+            ],
+            [
+              62,
+              38
+            ],
+            [
+              70,
+              40
+            ]
+          ],
+          "r": 1.5,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "magla": {
+      "src": "img/ruke-na-konopcu/magla.webp",
+      "alt": "Trbuh lađe izranja iz magle iznad doka",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 34,
+          "r": 8,
+          "color": "fxWarm",
+          "flicker": 0.1
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              34,
+              42
+            ],
+            [
+              44,
+              40
+            ],
+            [
+              56,
+              40
+            ],
+            [
+              66,
+              42
+            ]
+          ],
+          "r": 1.3,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "zora": {
+      "src": "img/ruke-na-konopcu/zora.webp",
+      "alt": "Gornji dok u svitanje, lađe vezane u redu",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 62,
+          "y": 30,
+          "r": 9,
+          "color": "fxSun"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "ilka": {
+      "src": "img/ruke-na-konopcu/ilka.webp",
+      "alt": "Ilka, vođa noćne smene vezača",
+      "kind": "portrait"
+    },
+    "teo": {
+      "src": "img/ruke-na-konopcu/teo.webp",
+      "alt": "Teo, najmlađi šegrt",
+      "kind": "portrait"
+    },
+    "oskar": {
+      "src": "img/ruke-na-konopcu/oskar.webp",
+      "alt": "Oskar, upravnik luke",
+      "kind": "portrait"
+    },
+    "dora": {
+      "src": "img/ruke-na-konopcu/dora.webp",
+      "alt": "Dora, revizorka Fonda",
+      "kind": "portrait"
+    },
+    "brina": {
+      "src": "img/ruke-na-konopcu/brina.webp",
+      "alt": "Brina, kapetanka lađe",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/ruke-na-konopcu/citalac-m.webp",
+      "alt": "Nadzornik Poravnanja",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/ruke-na-konopcu/citalac-z.webp",
+      "alt": "Nadzornica Poravnanja",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Ilka": {
+      "img": "ilka"
+    },
+    "Teo": {
+      "img": "teo"
+    },
+    "Oskar": {
+      "img": "oskar"
+    },
+    "Dora": {
+      "img": "dora"
+    },
+    "Brina": {
+      "img": "brina"
+    },
+    "Tala": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}
