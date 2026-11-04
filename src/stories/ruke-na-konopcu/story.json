@@ -256,7 +256,7 @@
           "lead": "Pečat u šaci."
         },
         {
-          "t": "Magla se uvlači pod vrata kao mačka. Pre nego što konvoj stigne, stižeš samo na jedno od tri mesta: gore u Kupolu, dole u Užarnicu ili u Pogon uzgona.",
+          "t": "Magla se uvlači pod vrata kao mačka. Pre nego što konvoj stigne, stižeš samo na jedno od tri mesta: gore u Kupolu, dole u Donju salu, gde se vezuju konopci, ili u Pogon uzgona.",
           "lead": "Tri vrata."
         }
       ],
@@ -272,7 +272,7 @@
         },
         {
           "id": "r1_uzarnica",
-          "text": "Silaziš u Užarnicu, gde noćna smena čeka kraj peći.",
+          "text": "Silaziš u Donju salu, gde noćna smena čeka kraj peći.",
           "next": "uzarnica",
           "w": {
             "e": 1
@@ -409,7 +409,7 @@
       "img": "uzarnica",
       "paragraphs": [
         {
-          "t": "Užarnica je duga i niska, a sa greda vise konopci kao osušene reke. U ćošku gori peć, a oko nje, na sanducima i svežnjevima, sedi trideset ljudi koji ne spavaju. Niko ne govori. Čeka se konvoj. Vazduh miriše na katran, mokru vunu i ono što ostaje u prostoru posle mnogo godina istih noći.",
+          "t": "Donja sala je duga i niska, a sa greda vise konopci kao osušene reke. U ćošku gori peć, a oko nje, na sanducima i svežnjevima, sedi trideset ljudi koji ne spavaju. Niko ne govori. Čeka se konvoj. Vazduh miriše na katran, mokru vunu i ono što ostaje u prostoru posle mnogo godina istih noći.",
           "lead": "Dole, kod peći."
         },
         {
@@ -1607,8 +1607,8 @@
           }
         },
         {
-          "t": "Dole u Užarnici trideset ljudi ostaje oko peći, a niko ne pita da li je ovo kraj ili početak. Čaj se još greje.",
-          "lead": "Užarnica.",
+          "t": "Dole u Donjoj sali trideset ljudi ostaje oko peći, a niko ne pita da li je ovo kraj ili početak. Čaj se još greje.",
+          "lead": "Donja sala.",
           "if": {
             "pick": "r1_uzarnica"
           }
@@ -1705,8 +1705,8 @@
           "who": "Ti"
         },
         {
-          "t": "Kroz otvorena vrata Užarnice vidi se dim iz peći koji se penje pravo naviše, bez ijednog skretanja. Dan će biti miran.",
-          "lead": "Dim iz Užarnice."
+          "t": "Kroz otvorena vrata Donje sale vidi se dim iz peći koji se penje pravo naviše, bez ijednog skretanja. Dan će biti miran.",
+          "lead": "Dim iz Donje sale."
         },
         {
           "t": "Oko sedam, kad se magla sasvim povuče, iz nizine se uspinje mala siva lađa koju niko nije najavio. Na pramcu joj gori plava lampa Fonda. Ilka diže lampu i zaklapa je dva puta, a Teo, pored nje, odgovara istim znakom pre nego što iko stigne da ga pita.",
@@ -1810,8 +1810,8 @@
           "who": "Ti"
         },
         {
-          "t": "Dole u Užarnici gori peć i niko je ne gasi. Vezači tiho sklapaju užad, onako kako se sklapa nešto što će možda opet zatrebati.",
-          "lead": "Užarnica.",
+          "t": "Dole u Donjoj sali gori peć i niko je ne gasi. Vezači tiho sklapaju užad, onako kako se sklapa nešto što će možda opet zatrebati.",
+          "lead": "Donja sala.",
           "if": {
             "pick": "r1_uzarnica"
           }
@@ -1876,7 +1876,7 @@
           "who": "Dora"
         },
         {
-          "t": "Dole u Užarnici, u prazan prostor oko peći, neko spušta lampu na sanduk i odlazi. Ostali kasnije dolaze redom, na prstima, da je pogledaju. Niko je ne dira, kao da je to nešto što još može da se pokvari od dodira.",
+          "t": "Dole u Donjoj sali, u prazan prostor oko peći, neko spušta lampu na sanduk i odlazi. Ostali kasnije dolaze redom, na prstima, da je pogledaju. Niko je ne dira, kao da je to nešto što još može da se pokvari od dodira.",
           "lead": "Lampa na sanduku."
         },
         {
@@ -1966,8 +1966,8 @@
           }
         },
         {
-          "t": "Dole u Užarnici niko ne gasi peć. Vezači broje dane na prste, a Ilkin čaj se hladi bez ijedne šolje u ruci.",
-          "lead": "Užarnica.",
+          "t": "Dole u Donjoj sali niko ne gasi peć. Vezači broje dane na prste, a Ilkin čaj se hladi bez ijedne šolje u ruci.",
+          "lead": "Donja sala.",
           "if": {
             "pick": "r1_uzarnica"
           }
@@ -2043,7 +2043,7 @@
           "who": "Ilka"
         },
         {
-          "t": "U Užarnici neko otvara prozor i svež vazduh ulazi u halu. Dim se razilazi, a konopci na gredama blago se njišu, kao da dišu.",
+          "t": "U Donjoj sali neko otvara prozor i svež vazduh ulazi u halu. Dim se razilazi, a konopci na gredama blago se njišu, kao da dišu.",
           "lead": "Otvoren prozor."
         },
         {
@@ -2206,7 +2206,7 @@
     },
     "uzarnica": {
       "src": "img/ruke-na-konopcu/uzarnica.webp",
-      "alt": "Užarnica: duga hala sa konopcima i peć u ćošku",
+      "alt": "Donja sala: duga hala sa konopcima i peć u ćošku",
       "kind": "place",
       "fx": [
         {
