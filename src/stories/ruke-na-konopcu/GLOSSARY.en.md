@@ -13,7 +13,7 @@ Names of people and of the town stay the same (Ilka, Teo, Oskar, Dora, Brina, Ta
 | most | the gantry | the narrow iron walkway between masts |
 | lađa | airship | cargo airship; “convoy” for the nine |
 | Kupola | the Dome | control room with glass wall and screens |
-| Užarnica | the Rope Loft | hall of the night crew |
+| Donja sala | the Rope Loft | hall of the night crew |
 | Pogon uzgona | the Lift Works | gas plant; “lift” = buoyancy gas |
 | Oglasna soba | the Notice Room | room with the board for lists |
 | Tala | Tala | the machine that runs the winches and guide lights; stays |

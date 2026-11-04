@@ -39,7 +39,7 @@ Ose: `e` (briga o ljudima), `t` (poverenje u mašinu i napredak), `o` (opstanak 
 - **t „Tala vodi“:** spisak se overava. Tala preuzima noćni vez, deo ljudi prelazi u Kupolu da je uči magli. Otvoreno: Tala postavlja pitanje koje joj niko nije postavio.
 - **o „Trideset dana“:** overa se odlaže za trideset dana; spisak ostaje u fascikli, a Fond to upisuje kao „u toku“. Luka i zakup opstaju, pitanje ostaje otvoreno. Otvoreno: pismo iz nizine.
 
-Callbacks (pregled): fenjer ili pečat (S1), mesto obilaska (R1), Teo/lampe na mostu ili Oskarova ponuda (R2), način sletanja konvoja (R3), mali izbori u Kupoli, Užarnici i Pogonu.
+Callbacks (pregled): fenjer ili pečat (S1), mesto obilaska (R1), Teo/lampe na mostu ili Oskarova ponuda (R2), način sletanja konvoja (R3), mali izbori u Kupoli, Donjoj sali i Pogonu.
 
 ## Izmišljeni nazivi i izrazi
 
@@ -58,7 +58,7 @@ Callbacks (pregled): fenjer ili pečat (S1), mesto obilaska (R1), Teo/lampe na m
 | pečat | overa nadzornika | pečat / pečata / pečatu / pečat / pečate / pečatom / pečatu | seal |
 | otkazni spisak | spisak otpuštenih „zbog AI“ | spisak / spiska / spisku / spisak / spisku / spiskom / spisku | the notice list |
 | Kupola | dispečerski centar sa Talinom konzolom | Kupola / Kupole / Kupoli / Kupolu / Kupolo / Kupolom / Kupoli | the Dome |
-| Užarnica | hala vezača | Užarnica / Užarnice / Užarnici / Užarnicu / Užarnice / Užarnicom / Užarnici | the Rope Loft |
+| Donja sala | hala vezača, gde se vezuju konopci | Donja sala / Donje sale / Donjoj sali / Donju salu / Donje sale / Donjom salom / Donjoj sali | the Rope Loft |
 | Pogon uzgona | postrojenje za gas | Pogon / Pogona / Pogonu / Pogon / Pogone / Pogonom / Pogonu | the Lift Works |
 | Oglasna soba | soba sa tablom za spiskove | soba / sobe / sobi / sobu / sobo / sobom / sobi | the Notice Room |
 | most | pešački prelaz između jarbola | most / mosta / mostu / most / moste / mostom / mostu | the gantry |
