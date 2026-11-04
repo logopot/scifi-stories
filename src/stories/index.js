@@ -153,6 +153,16 @@ export const stories = [
     coverAlt: "Velmar: grad na litici i jarboli sa lađama iznad mora oblaka u sumrak",
     status: "ready",
     load: () => import("./ruke-na-konopcu/story.json"),
+    en: {
+      path: "hands-on-line",
+      title: "Hands on the Line",
+      tagline:
+        "In a cliff-top harbor town a machine moors the airships, and the fog beats the morning layoffs.",
+      genre: "Science fiction",
+      coverAlt:
+        "Velmar: a cliff-top town and mooring masts with airships above a sea of clouds at dusk",
+      load: () => import("./ruke-na-konopcu/story.en.json"),
+    },
   },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];

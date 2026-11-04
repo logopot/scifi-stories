@@ -1,0 +1,2392 @@
+{
+  "meta": {
+    "title": "Hands on the Line",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "Velmar is a town on a cliff above a sea of clouds. Freight arrives from the lowlands on airships, and linehands bring them down onto the masts of the Upper Dock by hand and by lamp. Since last year a machine named Tala has worked the winches too.",
+      "Tonight the seal of the Settlement Board is in your hand. By six in the morning it must be known whether the machine truly does the work the Company credits it with, and the fog is climbing the cliff faster than anyone predicted.",
+      "Before you are people with lamps, a machine that speaks only when asked, and a convoy of nine airships waiting for someone to moor them."
+    ],
+    "axes": [
+      {
+        "id": "e",
+        "name": "care for people"
+      },
+      {
+        "id": "t",
+        "name": "trust in the machine and progress"
+      },
+      {
+        "id": "o",
+        "name": "survival of the harbor and caution"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "In Velmar airships are moored by people, and since last year by a machine too. The fog climbs the cliff, the convoy arrives before morning, the seal is in your hand, and by six it must be known whose work this night is."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "Your progress is saved only in your browser.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "The Dock"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "The Rounds"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Fog"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "The Seal"
+    },
+    "c5": {
+      "mark": "V",
+      "name": "Dawn"
+    }
+  },
+  "start": "dok",
+  "endings": {
+    "e": {
+      "title": "A Full Shift",
+      "closing": [
+        "The lamps on the masts go out one by one."
+      ]
+    },
+    "t": {
+      "title": "Tala Leads",
+      "closing": [
+        "The winches click in the dawn, steady as a clock."
+      ]
+    },
+    "o": {
+      "title": "Thirty Days",
+      "closing": [
+        "The sun reaches the cliff before the rest of the morning does."
+      ]
+    }
+  },
+  "nodes": {
+    "dok": {
+      "chapter": "c1",
+      "img": "dok",
+      "paragraphs": [
+        {
+          "t": "The fog climbs the cliff faster than anyone predicted. From the Upper Dock you can see only the first three masts, their lamps floating in the white like fish eyes. Under the iron plates winches mutter that nobody is touching, and from a loudspeaker the machine quietly reports the time: three fifty. In your hand the seal of the Settlement Board is going cold: by six in the morning you will stamp the notice list with it, or you will not."
+        },
+        {
+          "t": "Under the first mast a woman hauls a rope as thick as a forearm. Ilka leads the night crew of linehands, and she wears her gray hair braided around her neck so it cannot catch. Beside her a boy in a coat too big for him, Teo, pushes a lantern into your hand and wipes his nose with the other, though the drip is only fog.",
+          "lead": "The woman on the dock."
+        },
+        {
+          "t": "“A seal on your belt. So you're the one who certifies we aren't needed anymore. Just know this: a rope doesn't know about seals, but hands do.”",
+          "lead": "What Ilka says.",
+          "who": "Ilka"
+        },
+        {
+          "t": "“I came to see what Tala does, not what the paper says.”",
+          "who": "Ti"
+        }
+      ],
+      "prompt": "Teo holds the lantern out to you, and Ilka waits to see what you will do with it.",
+      "choices": [
+        {
+          "id": "p_fenjer",
+          "text": "You take the lantern and follow Ilka.",
+          "next": "oglasna",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "p_pecat",
+          "text": "You leave the lantern and tighten your grip on the seal.",
+          "next": "oglasna",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "p_pitaj",
+          "text": "You ask Ilka where Tala's console is.",
+          "next": "oglasna",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "oglasna": {
+      "chapter": "c1",
+      "img": "oglasna",
+      "paragraphs": [
+        {
+          "t": "The lantern swings its light along the wall. Ilka walks ahead of you and asks nothing, and Teo is quiet behind you, quieter than usual. The steps are limestone, worn hollow in the middle, and each one holds the print of someone else's foot.",
+          "lead": "The stairs under the Dome.",
+          "if": {
+            "pick": "p_fenjer"
+          }
+        },
+        {
+          "t": "The seal is in your fist, warm from holding. Teo is left with the lantern and no hand to take it, and he trails behind you with his head down. The steps are limestone, worn hollow in the middle, and each one holds the print of someone else's foot.",
+          "lead": "The stairs under the Dome.",
+          "if": {
+            "pick": "p_pecat"
+          }
+        },
+        {
+          "t": "Ilka points her chin into the fog, where the windows of the Dome show faintly, but then she leads you down the stairs to the Notice Room first. Teo follows, counting the steps under his breath. The steps are limestone, worn hollow in the middle, and each one holds the print of someone else's foot.",
+          "lead": "The stairs under the Dome.",
+          "if": {
+            "pick": "p_pitaj"
+          }
+        },
+        {
+          "t": "The Notice Room has one table, one bulb and a cork board for lists. A blank sheet hangs on the board, and beside it, under a pin, waits another: the notice list, just printed, forty names one under another. The first name is Teo's.",
+          "lead": "The room with the board."
+        },
+        {
+          "t": "From the ceiling hangs a sheet of the Board's rules, yellowed at the edges: a dismissal for replacement by a machine is valid only once an inspector certifies it with a seal, after one night under their eye. Someone has penciled a question underneath, hard to read, but it looks like: “and who was watching?”",
+          "lead": "The rules on the wall."
+        },
+        {
+          "t": "“Who wrote this?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Someone who was watching.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "Above the board hangs the sign of the Vedra Company, and under it, smaller, the blue lamp of the Zalog Fund. On the table, an untouched cup of tea under a porcelain lid, and a folder as thick as a pillow. Behind the table stands Oskar, the harbor manager, in a coat that will not dry, with shadows under his eyes that he does not hide.",
+          "lead": "The harbor manager."
+        },
+        {
+          "t": "“{voc}, thank you for coming in the middle of this night. The list is in order. Tala already does every job in it.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“The Board certifies only what the machine truly does. Tonight I'll see that with my own eyes.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I know the rule. That's why I picked this night: clear forecast, no wind. The forecast missed, but the deadline didn't.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“The Fund holds Tala as collateral. If the list isn't certified by six, the total drops, the Fund calls the lease from the first of the month, and I'm left with the debt.”",
+          "lead": "What Oskar wants.",
+          "who": "Oskar"
+        },
+        {
+          "t": "“How long has Tala been in the harbor?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Fourteen months, and every one of them paid for on credit.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "Ilka takes a pencil from the table and runs it down the list, name by name, as if counting sheep. She does not look up. Beside her Teo is silent so loudly you can hear him swallow. Through the narrow door you can see the dock, and over it something white creeps soundlessly, like milk spilled across a plate.",
+          "lead": "Ilka reads the list."
+        },
+        {
+          "t": "“The first one is the last one hired. That's how it's counted. After him we won't be training anyone new.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“How many people stay on the shift after the list?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Twenty. Twenty people and Tala. If you hear anything else, it's a rumor.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "Ilka laughs, short and dry, like someone snapping a dry branch. Teo looks at the floor and mutters something that sounds like counting: he never learned to count while anyone was watching.",
+          "lead": "Ilka's laugh."
+        },
+        {
+          "t": "“What's funny?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nothing. Just that Tala has no hands.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "Oskar does not answer, but his jaw moves, as if he has heard that sentence once before and has not yet digested it. The bulb above you trembles in time with something moving below it, maybe the winches, maybe hearts.",
+          "lead": "Oskar says nothing."
+        },
+        {
+          "t": "The seal warms and cools in your fist, and you suddenly realize you are holding it the way you hold someone else's child: carefully, without knowing whose it is.",
+          "lead": "The seal in your hand."
+        },
+        {
+          "t": "The fog slips under the door like a cat. Before the convoy arrives you can reach only one of three places: up to the Dome, down to the Rope Loft, or to the Lift Works.",
+          "lead": "Three doors."
+        }
+      ],
+      "prompt": "The bulb trembles, and the convoy is closer every minute.",
+      "choices": [
+        {
+          "id": "r1_kupola",
+          "text": "You climb to the Dome, to Tala and the auditor from the Fund.",
+          "next": "kupola",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "r1_uzarnica",
+          "text": "You go down to the Rope Loft, where the night crew waits by the stove.",
+          "next": "uzarnica",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "r1_pogon",
+          "text": "You head for the Lift Works, where gas is let out by hand.",
+          "next": "pogon",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "kupola": {
+      "chapter": "c2",
+      "img": "kupola",
+      "paragraphs": [
+        {
+          "t": "The Dome smells of warm dust and wet coats. One whole wall is window, and behind the glass there is nothing: the fog has swallowed the dock and the sky. The screens give off a flat blue glow, and across the middle one crawls a string of small dashes, one airship after another, without a single number. A faint hum comes from the floor, as if the building were laughing in its sleep.",
+          "lead": "Up under the glass."
+        },
+        {
+          "t": "At a desk under the screens sits a woman with glasses and short black hair, a rain coat hanging over her chair. Dora from the Fund holds a folder with not one empty row in it and turns a pencil between her fingers, slowly, like a rosary.",
+          "lead": "The Fund's auditor."
+        },
+        {
+          "t": "“You're just in time. Tala runs the night, and I count.”",
+          "who": "Dora"
+        },
+        {
+          "t": "“What do you count?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“How many moorings Tala finished with no human hand. For the Fund it's the only number that matters.”",
+          "who": "Dora"
+        },
+        {
+          "t": "On the console below the screens a narrow slot with a microphone glows. Tala doesn't speak until you ask. When you do, she answers only what you asked and nothing past it, like a witness who has learned that every extra word is dangerous.",
+          "lead": "Tala's console."
+        },
+        {
+          "t": "“Tala, how many moorings have you completed tonight, and how?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Eighteen moorings. In all eighteen the captain received a human lamp signal from the mast.”",
+          "who": "Tala"
+        },
+        {
+          "t": "The slot on the console flickers. You have never heard a machine tell the truth with nothing around it: there is neither pride nor apology in it. Dora does not blink. Her pencil hovers above the paper and does not come down.",
+          "lead": "What Tala says."
+        },
+        {
+          "t": "On one of the screens, low in the corner, a window of rows that Tala writes herself: short lines with a time and a single word. The word keeps repeating, and only after ten rows or so do you realize it is the word “confirmation.”",
+          "lead": "Rows on the screen."
+        },
+        {
+          "t": "“How many of those rows are there?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Eighteen. Every confirmation has its own row. The Company just doesn't copy them.”",
+          "who": "Dora"
+        },
+        {
+          "t": "On the desk lies the report that goes to the Fund at six. The paper is smooth and the letters are regular as the teeth of a comb. It says: no human hand, eighteen of eighteen. Under that, the Company's signature, clean, without a single smudge.",
+          "lead": "The report on the desk."
+        },
+        {
+          "t": "“That isn't what the Company sent me. In their record those words don't exist.”",
+          "who": "Dora"
+        },
+        {
+          "t": "“Tala, why doesn't the report show the human signal?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The report has no field for a human signal. I did not add the field.”",
+          "who": "Tala"
+        },
+        {
+          "t": "“Did you ask for it to be added?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I did not. Nobody asked me.”",
+          "who": "Tala"
+        },
+        {
+          "t": "Dora slowly closes the folder, then opens it again, as if that could put back a row that was erased. Beyond the window, in the white, a distant bell sounds: the first sign that the convoy is near. The screen beside her draws lines of dashes, each shorter than the last.",
+          "lead": "A distant bell."
+        },
+        {
+          "t": "The silence in the Dome has weight. For the first time since you came in, Dora lifts her eyes from the paper and looks straight at you. There is no accusation in the look, and no plea, only a question waiting for someone to ask it in her place.",
+          "lead": "Dora looks at you."
+        }
+      ],
+      "prompt": "Dora waits to see what you will do with what Tala said.",
+      "choices": [
+        {
+          "id": "k_zapis",
+          "text": "You ask Tala to print the record of the night.",
+          "next": "prilaz",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "k_cuti",
+          "text": "You say nothing and let Dora reach her own conclusion.",
+          "next": "prilaz",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "k_prijava",
+          "text": "You ask Tala to recount by her own record.",
+          "next": "prilaz",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "uzarnica": {
+      "chapter": "c2",
+      "img": "uzarnica",
+      "paragraphs": [
+        {
+          "t": "The Rope Loft is long and low, and ropes hang from the beams like dried-up rivers. A stove burns in the corner, and around it, on crates and bundles, thirty people sit who are not sleeping. Nobody talks. They are waiting for the convoy. The air smells of tar, wet wool and whatever stays in a room after many years of the same nights.",
+          "lead": "Down by the stove."
+        },
+        {
+          "t": "Ilka leads you to a crate by the fire. Teo sits on the floor and lays out a row of small brass lamps in front of him, as if dealing cards. Someone behind you moves a crate to make room, without looking to see whether you noticed.",
+          "lead": "By the stove."
+        },
+        {
+          "t": "“In fog Tala can't see the airships. We see them by their lamps, and we speak to the captains with lamps. Tala only pulls the winch when we tell her to.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“How many signals does that language have?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Twelve! I know all of them, and Ilka knows eleven, because she doesn't like the twelfth. This one means: here is the mast, lower your belly.”",
+          "who": "Teo"
+        },
+        {
+          "t": "“When an airship comes in fog, the captain sees only my lamps. If I flash it crooked, somebody dies. That's why I never flash without Ilka.”",
+          "who": "Teo"
+        },
+        {
+          "t": "Ilka does not lift her head, but the corners of her mouth move: as close to pride as her face can show.",
+          "lead": "Ilka does not look up."
+        },
+        {
+          "t": "“How long have you done this, Ilka?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Thirty-six years. I started when the dock had only two masts, and machines were in fairy tales.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "Teo raises a lamp and covers it twice with his palm. Someone from the crew quietly repeats the signal, then another, then a third, and the hall ripples like a flock waking. For a moment the whole night crew looks like one body with thirty hands.",
+          "lead": "A lamp signal."
+        },
+        {
+          "t": "“Tala never learned to read them?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“She tried. The machine can see light, but not intent. A lamp that says ‘lower’ and a lamp that says ‘wait’ look the same to her.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“If you're asking whether Tala does my job: she doesn't. She does her own. Mine starts where she stops seeing.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "The stove crackles. Someone adds wood, someone sets a cup of tea by your foot without asking if you want it. On the wall above the stove hangs the duty roster, the same for years, its signatures worn thin by hands. Beside it hangs a newer list with one row left unsigned: the apprentices' row.",
+          "lead": "Signatures on the wall."
+        },
+        {
+          "t": "“Thanks for the tea.”",
+          "who": "Ti"
+        },
+        {
+          "t": "A woman mends a glove, an old man ties a knot and unties it, again and again, so his hands do not forget. Nobody pleads, nobody threatens. Eyes slide away the moment you catch them, not from shame but from courtesy, the way nobody asks questions in a house someone is leaving.",
+          "lead": "Faces around the stove."
+        },
+        {
+          "t": "“The convoy arrives in an hour. The fog won't wait for you to think it over.”",
+          "who": "Ilka"
+        }
+      ],
+      "prompt": "Teo holds out a small lamp to you, and the tea beside you is going cold.",
+      "choices": [
+        {
+          "id": "u_signal",
+          "text": "You ask Teo to teach you one lamp signal.",
+          "next": "prilaz",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "u_caj",
+          "text": "You sit by the stove and listen to the crew.",
+          "next": "prilaz",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "u_pogled",
+          "text": "You ask Ilka what Tala would have to see in order to work alone.",
+          "next": "prilaz",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "pogon": {
+      "chapter": "c2",
+      "img": "pogon",
+      "paragraphs": [
+        {
+          "t": "The Lift Works is a hall with three tanks as tall as towers. Gas hums under the ribbed sheet metal, and the gauges glow greenish, side by side, like a row of cat eyes. The air tastes of metal and cold oil, and every step echoes late, as if the hall thinks before giving it back.",
+          "lead": "The Lift Works."
+        },
+        {
+          "t": "Teo leads you between the pipes, holding the lantern low and pushing back his cap, which keeps sliding over his eyes. In the wall is a wheel as big as a cartwheel with yellow handles, and beside it a sign: RELIEF. The paint on the handles is worn off exactly where hands grip, and only there.",
+          "lead": "A wheel on the wall."
+        },
+        {
+          "t": "“This is the valve. When an airship comes in too heavy, Tala says which valve, and I turn it. Two people can turn it, me and Bata, and both of us are on the list.”",
+          "who": "Teo"
+        },
+        {
+          "t": "“Tala can't do it herself?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Tala suggests. The wheel is iron, and she has no one to order.”",
+          "who": "Teo"
+        },
+        {
+          "t": "Teo laughs, but briefly, as if afraid the laugh will fall down the pipe. He nods you toward a gauge: the needle shivers by the red line, then returns, then goes again. Under it, taped on, a penciled note: not before the airship passes the mast.",
+          "lead": "The needle on the gauge."
+        },
+        {
+          "t": "“Nine airships are full. If they arrive before I've relieved three, they come down like a stone.”",
+          "who": "Teo"
+        },
+        {
+          "t": "“And if an airship can't come down?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then it circles. Until the gas runs out. After that it doesn't circle, it falls.”",
+          "who": "Teo"
+        },
+        {
+          "t": "From the ceiling, through a crack in the metal, a thin jet of white gas leaks and dissolves before it touches the floor. Teo watches it the way you watch an old, calm animal that has not woken yet.",
+          "lead": "A white jet."
+        },
+        {
+          "t": "“How long does it take you to turn the whole wheel?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Seven minutes alone, three if there are two of us. An airship waits for neither.”",
+          "who": "Teo"
+        },
+        {
+          "t": "Somewhere down the corridor someone knocks on a pipe, rhythmically, like a greeting. Teo is proud and frightened at the same time and does not know which to hide. The light of the gauges falls on his face and makes him older, as if he had already seen all the nights ahead of him.",
+          "lead": "Teo is silent."
+        },
+        {
+          "t": "“Who will turn the wheel when you're gone?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nobody. The list says Tala does it.”",
+          "who": "Teo"
+        },
+        {
+          "t": "It sounds like a joke, but he does not smile. Above you a tank sighs quietly, and the metal shimmers with heat that has nowhere to go. All at once the Lift Works sounds like something that can break.",
+          "lead": "What the list says."
+        }
+      ],
+      "prompt": "The needle on the gauge shivers, and Teo waits to see what you will do with the wheel.",
+      "choices": [
+        {
+          "id": "g_tockak",
+          "text": "You grab the wheel and turn it together with the boy.",
+          "next": "prilaz",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "g_manometar",
+          "text": "You read the gauges and work out how long an airship can circle.",
+          "next": "prilaz",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "g_pita",
+          "text": "You ask Tala through the wall speaker what she suggests.",
+          "next": "prilaz",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "prilaz": {
+      "chapter": "c2",
+      "img": "dok",
+      "paragraphs": [
+        {
+          "t": "In your pocket you carry a folded sheet with Tala's record, still warm from the printer. Dora walks half a step behind you and does not ask where. On the sheet, row after row, like a bill nobody wanted to see: mooring, lamp, mooring, lamp.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "k_zapis"
+          }
+        },
+        {
+          "t": "Dora stays in the Dome with the folder in her lap. She does not say goodbye, but she does not close the door behind you either, as if she has not yet decided what to do. Behind you stay the quiet hum and the smell of warm dust.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "k_cuti"
+          }
+        },
+        {
+          "t": "Tala has recounted, and the result is the same. Dora repeats it half aloud, more to herself than to you, as you go down the stairs. Eighteen, eighteen, eighteen, as if counting her own steps.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "k_prijava"
+          }
+        },
+        {
+          "t": "In your pocket a small brass lamp clinks, and the signal you learned: two covers, a pause, one. Your fingers still remember it, and your palm is still warm from Teo's.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "The cup of tea is still warm in your palms when you leave, and thirty pairs of eyes follow you to the door. Nobody says anything, and that is louder than anything they might have said.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "u_caj"
+          }
+        },
+        {
+          "t": "Ilka answered in one sentence and went back to her rope: Tala would need an eye that sees through white. No mast in Velmar has such an eye. The sentence turns in your head like a melody that never finishes.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "u_pogled"
+          }
+        },
+        {
+          "t": "Your palms still ache from the iron wheel, and the nail on your thumb has split. Teo sees it and says nothing. A thread hangs from his glove, and he winds it around his finger, a little too carefully.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "g_tockak"
+          }
+        },
+        {
+          "t": "The numbers from the gauges spin in your head: how long an airship can circle before its lift runs out. Less than anyone would wish, and more than anyone would admit.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "g_manometar"
+          }
+        },
+        {
+          "t": "Tala's answer from the speaker still echoes: she proposed relieving three airships and added nothing. It occurs to you that a machine's silence is not the same as ignorance.",
+          "lead": "The Upper Dock again.",
+          "if": {
+            "pick": "g_pita"
+          }
+        },
+        {
+          "t": "The Upper Dock is completely white. The masts are no longer masts but lamps in milk, and somewhere below you can hear Tala aligning the hooks: a soft, even click, like a clock. Damp clings to your eyelashes and runs down your neck, and your coat gets heavy.",
+          "lead": "The dock in fog."
+        },
+        {
+          "t": "“It sounds like a clock someone is winding.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The radio on the mast crackles, then clears. The voice that comes out of it is not Tala's: there is breath in it, and a scarf rustling across the microphone.",
+          "lead": "The radio."
+        },
+        {
+          "t": "Around the radio, on the mast, the linehands hung small things for luck long ago: a knot of hair, a feather, a rusted hook. None of them is Tala's, but every one is there because of her.",
+          "lead": "Things for luck."
+        },
+        {
+          "t": "“Velmar, this is Brina, first in the convoy. Nine airships, twelve minutes ahead of what we reported. I can't see your dock or your light.”",
+          "who": "Brina"
+        },
+        {
+          "t": "“Settlement Board inspector here. We hear you, Brina.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Convoy confirmed. Visibility below limit. Requesting human confirmation.”",
+          "who": "Tala"
+        },
+        {
+          "t": "Ilka is already at the mast, a lamp in each hand. Oskar arrives up the steps, out of breath, a folder under his arm, and behind him Dora, her hair wet. All three look at you, the only one with the seal. Even the fog seems to pause to see what you will say.",
+          "lead": "Everyone looks at you."
+        },
+        {
+          "t": "“Nine airships and less than an hour to the list. I ask for nothing except that the night ends without a disaster.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“Disasters don't keep deadlines, Oskar.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A night doesn't end by itself. Somebody has to pull it in by the rope.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“Tell me what you need, and I'll see what I can do.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“What I need is for the numbers and the dock to agree before six. The rest isn't my job, but I'll remember who said what.”",
+          "who": "Dora"
+        },
+        {
+          "t": "While she speaks, Dora looks past you, toward Teo. The look does not last, but you notice it: it is the look of someone who has just seen a name on a list as a face.",
+          "lead": "Dora's look."
+        },
+        {
+          "t": "“Oskar, if it isn't certified tonight, who pays?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Velmar pays. The Fund doesn't want to see a gate with empty masts, and I have nothing to convince it with.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "For a moment the fog gives way and you see the whole line of masts, one beside another, each with its lamp, and between them the gantries, thin as strands of hair. The whole dock looks like something you could pack into a fist and carry away.",
+          "lead": "The whole dock."
+        },
+        {
+          "t": "Teo emerges from the white with a lamp shaking in his hand and does not dare ask anything. Before the convoy arrives you can reach one place: the gantry, where lamps are hung by hand, or the Notice Room, to read the list once more.",
+          "lead": "Two sides of the dock."
+        }
+      ],
+      "prompt": "Brina is waiting for an answer, and the fog is already swallowing the first mast.",
+      "choices": [
+        {
+          "id": "r2_most",
+          "text": "You go to the gantry with Ilka and Teo to hang the lamps.",
+          "next": "most",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "r2_razgovor",
+          "text": "You go to the Notice Room to negotiate the list with Oskar and Dora.",
+          "next": "razgovor",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "r2_tala",
+          "text": "You go to the Notice Room and demand that Tala be asked in front of everyone.",
+          "next": "razgovor",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "most": {
+      "chapter": "c3",
+      "img": "most",
+      "paragraphs": [
+        {
+          "t": "The gantry between the masts is an iron strip three paces wide, with a rope for a railing. The wind blows from below, so the fog does not stand still but flows, like a river turned upside down. The lamps you hang will make a guiding line, one beside another, so the captain can find the dock.",
+          "lead": "The gantry between the masts."
+        },
+        {
+          "t": "You hang your own lantern first, on a hook rusted black. The flame stands upright, steadier than you expected, and throws a circle onto the iron that gives you the feeling of standing on something.",
+          "lead": "The first lamp.",
+          "if": {
+            "pick": "p_fenjer"
+          }
+        },
+        {
+          "t": "Teo hands you a lamp, and only now do you take one in your hand. It is heavier than it looks, and the brass is cold and slick with damp. The hook you hang it on is rusted black.",
+          "lead": "The first lamp.",
+          "if": {
+            "notPick": "p_fenjer"
+          }
+        },
+        {
+          "t": "“There's that signal of yours: two covers, a pause, one. Let's see if she down there understands it too.”",
+          "who": "Teo",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "“Here, watch.”",
+          "who": "Ti",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "“A rope remembers. Hold it right and it tells you when the airship gives. Hold it carelessly and it doesn't know what to say either.”",
+          "who": "Ilka",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "You cover the lamp twice, stop, then once more. From below, as an answer, comes the click of a winch, with no hesitation at all. Teo smiles without his usual unease, and in that smile there is something like pride in another person's success.",
+          "lead": "Your signal.",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "“I know I'm first on the list. I'm not afraid to go. I'm afraid that after me nobody will come to learn this.”",
+          "who": "Teo"
+        },
+        {
+          "t": "“What would you do if you weren't on the list?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Catch ropes. And once I got good, I'd bring in an airship by someone else's lamp, like Ilka. I can't learn that from Tala.”",
+          "who": "Teo"
+        },
+        {
+          "t": "Teo drags his sleeve across his nose and looks at the white space under the gantry, as if checking whether anything is left down there that might be waiting for him. The wind lifts the ear flaps of his cap, then lowers them, and for a moment his whole figure is a child's.",
+          "lead": "Teo looks down."
+        },
+        {
+          "t": "“If Ilka hadn't taught you, who would have?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nobody. That's why she did. She knew a night would come when people would ask who still knows.”",
+          "who": "Teo"
+        },
+        {
+          "t": "Below you, in the white dark, comes the first drone: slow, deep, as if the cliff itself were breathing. The convoy is near. At the far end of the gantry Ilka raises both lamps and covers them twice.",
+          "lead": "The drone of the airships."
+        },
+        {
+          "t": "Far below, in the milk, a siren wails twice and stops. It is some airship from the lowlands, calling and getting no answer.",
+          "lead": "A siren below."
+        },
+        {
+          "t": "Ilka comes along the gantry with a lamp in each hand and suddenly, without warning, stops in front of you and fixes your grip on the lamp with one squeeze, the way you would fix a child's.",
+          "lead": "Ilka fixes your grip."
+        },
+        {
+          "t": "“Thanks. My hands are shaking.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Under the gantry the winches click: Tala searching for an airship she cannot see. Once, twice, empty, like someone feeling at a door in the dark. With every click Teo flinches, as if someone had touched him too.",
+          "lead": "The winches search."
+        },
+        {
+          "t": "“Tala can't see the airship. Can she hear us?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Lamps, Teo! Two more on that side, and two more than you think you need!”",
+          "who": "Ilka"
+        },
+        {
+          "t": "Teo runs. His steps ring on the iron strip, and you are left with two lamps in your hands, both of which ought to be in different places.",
+          "lead": "Two lamps, one place."
+        }
+      ],
+      "prompt": "Teo vanishes into the fog, and Ilka is waiting for lamps on opposite sides of the gantry.",
+      "choices": [
+        {
+          "id": "m_teo",
+          "text": "You run after Teo and help him hang his lamps.",
+          "next": "magla",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "m_ilka",
+          "text": "You stay with Ilka and hang the lamps the way she lays them out.",
+          "next": "magla",
+          "w": {
+            "o": 1
+          }
+        },
+        {
+          "id": "m_tala",
+          "text": "You call Tala to mark with her winches the places the lamps do not cover.",
+          "next": "magla",
+          "w": {
+            "t": 1
+          }
+        }
+      ]
+    },
+    "razgovor": {
+      "chapter": "c3",
+      "img": "oglasna",
+      "paragraphs": [
+        {
+          "t": "In the Notice Room Oskar sets the folder on the table like a plate before a guest. Dora stands by the board and reads the names, her lips moving without sound. The bulb swings the shadows along the wall, so the list stretches and shrinks, as if it were not sure itself how long it was.",
+          "lead": "The Notice Room again.",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "In the Notice Room Oskar has not sat down. Dora switches on the wall speaker, and the room fills with the soft crackle of a machine waiting for a question. The bulb swings the shadows along the wall, and the tea under its lid has stopped steaming altogether.",
+          "lead": "The Notice Room again.",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "“Here's my proposal: you certify the list, and from the first of the month I bring twelve back as operators beside Tala. The Fund has its total, and they have work.”",
+          "who": "Oskar",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "“The Fund accepts a total, not promises. If the list isn't certified, the total changes, whatever the promises.”",
+          "who": "Dora",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "“Twelve of forty. And the other twenty-eight?”",
+          "who": "Ti",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "“Severance and a reference. I can't do more. And even what I'm offering I can't promise if the Fund decides otherwise.”",
+          "who": "Oskar",
+          "if": {
+            "pick": "r2_razgovor"
+          }
+        },
+        {
+          "t": "“Tala, answer in front of everyone: could you moor the convoy alone tonight?”",
+          "who": "Ti",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "“I can moor any airship I see. In fog I see none.”",
+          "who": "Tala",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "“That's a sensor limit. It gets solved with a new light, by spring.”",
+          "who": "Oskar",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "“By spring, and the list goes up at six.”",
+          "who": "Dora",
+          "if": {
+            "pick": "r2_tala"
+          }
+        },
+        {
+          "t": "“And if Tala fails tonight with the convoy in the fog?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then tonight is simply a foggy night. Nobody will write down that my machine is blind.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "Dora takes off her glasses and rubs the bridge of her nose. Then, without moving toward her pencil, she says something that has probably never been said at the Fund. Oskar looks at her like a man who sees his support shifting and does not know which way.",
+          "lead": "Dora speaks."
+        },
+        {
+          "t": "“My report says Tala worked alone. Her record says she didn't. I will sign one of the two at six.”",
+          "who": "Dora"
+        },
+        {
+          "t": "“Which?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The one I can say I saw with my own eyes.”",
+          "who": "Dora"
+        },
+        {
+          "t": "“And if you see both?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Then I'll sign both, one under the other. The Fund will have to choose which to read.”",
+          "who": "Dora"
+        },
+        {
+          "t": "Oskar finally sits. Not on a chair but on the edge of the table, like a man whose legs have suddenly become someone else's.",
+          "lead": "Oskar sits."
+        },
+        {
+          "t": "“Do you know how many children on that list go to school on what I pay their parents? I know every name. I don't sleep because of it.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“None of us is sleeping, Oskar.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Oskar does not answer. Behind him the board with the blank sheet waits for a pin, and the pins, you notice, are already stuck in the cork, just waiting for the sheet. Someone has set them in a neat row, like teeth.",
+          "lead": "Pins on the board."
+        }
+      ],
+      "prompt": "Oskar and Dora are waiting, and the pins on the board are ready.",
+      "choices": [
+        {
+          "id": "z_ponuda",
+          "text": "You tell Oskar to put his offer on paper.",
+          "next": "magla",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "z_odlozi",
+          "text": "You ask Dora to hold her report until six.",
+          "next": "magla",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "z_izadji",
+          "text": "You leave without a word, the seal in your fist.",
+          "next": "magla",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "magla": {
+      "chapter": "c3",
+      "img": "magla",
+      "paragraphs": [
+        {
+          "t": "The lamps that Teo and you hung stand in a row, and the fog does not swallow them but smears them, each into a small glowing cloud.",
+          "lead": "The dock before the convoy.",
+          "if": {
+            "pick": "m_teo"
+          }
+        },
+        {
+          "t": "Ilka's arrangement of lamps is not obvious at first glance, but under it a pattern shows: each lamp points to the next.",
+          "lead": "The dock before the convoy.",
+          "if": {
+            "pick": "m_ilka"
+          }
+        },
+        {
+          "t": "The winches under the gantry send their hooks into the white like a blind man's cane, and the lamps between them cover what the winches cannot reach.",
+          "lead": "The dock before the convoy.",
+          "if": {
+            "pick": "m_tala"
+          }
+        },
+        {
+          "t": "The sheet with Oskar's offer rustles in your pocket, written by a hand that was trying not to shake.",
+          "lead": "The dock before the convoy.",
+          "if": {
+            "pick": "z_ponuda"
+          }
+        },
+        {
+          "t": "Dora stayed in the Dome with her report in her lap and no pencil. That is the only promise you have in this night.",
+          "lead": "The dock before the convoy.",
+          "if": {
+            "pick": "z_odlozi"
+          }
+        },
+        {
+          "t": "The door of the Notice Room closes behind you without a sound, and the seal in your fist is warm as a stone from the sun.",
+          "lead": "The dock before the convoy.",
+          "if": {
+            "pick": "z_izadji"
+          }
+        },
+        {
+          "t": "Everyone has gathered on the dock, and the fog is thicker here than anywhere. Lamps are visible only at arm's length. Oskar stands by a mast, Dora beside him with her folder pressed to her chest, and Ilka and Teo hold lamps, like sentries with torches at the end of the world.",
+          "lead": "Everyone on the dock."
+        },
+        {
+          "t": "“Hold the lamps high. Let them be seen.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The convoy comes as something heard first. A drone in your bones, then a shadow darker than the fog, then the belly of the first airship, wide as a street, full of seams and patches, lowering itself soundlessly down out of the height.",
+          "lead": "The belly of the airship."
+        },
+        {
+          "t": "From the airship's belly thin ropes descend, one by one, like cobweb nobody is holding. They hang in the white, sway, wait for a hand to grab them. None touches the dock.",
+          "lead": "Ropes from the airship."
+        },
+        {
+          "t": "“Nobody touches the ropes until I say.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Velmar, this is Brina. I see your lamps as seven smudges. Tala is sending me a light I can't see. Are there people on the mast?”",
+          "who": "Brina"
+        },
+        {
+          "t": "“I hear you, Brina. Stay on the line.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Everything is quiet. Ilka holds a lamp, Teo holds a lamp, Oskar holds his breath, and Dora holds a pencil and does not write. Tala hums, waiting for a decision nobody has given her. Every breath on the dock seems to have weight and to sink among you.",
+          "lead": "Silence on the dock."
+        },
+        {
+          "t": "A burst of static comes from the Dome, then a soft mechanical voice: Tala repeats the confirmation request, once, twice, exactly as the first time. There is no impatience in the repetition and no plea, and yet everyone on the dock hears what even the machine does not know she is saying.",
+          "lead": "Tala repeats."
+        },
+        {
+          "t": "“Tala, how many airships do you see?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“None.”",
+          "who": "Tala"
+        },
+        {
+          "t": "“Convoy on approach. Visibility zero. Requesting human confirmation.”",
+          "who": "Tala"
+        },
+        {
+          "t": "“If Tala brings in the convoy, the list is certified as written. If Ilka brings it in, the list isn't worth the paper.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“The list can wait. The convoy comes first.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Paper doesn't hold an airship. Hands do.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“Let everyone stay at their place.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Ilka, I can give the signal for the first one. Just tell me which.”",
+          "who": "Teo"
+        },
+        {
+          "t": "“A signal isn't given by the one who wants to. It's given by the one the captain will believe.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“I have lift for an hour and a half. And one more thing: the other eight can't see even me. However I land, that's how they all land.”",
+          "lead": "One more sentence.",
+          "who": "Brina"
+        }
+      ],
+      "prompt": "Eight airships hang in the white dark behind the first, and the whole dock waits for your word.",
+      "choices": [
+        {
+          "id": "r3_ljudi",
+          "text": "You order Ilka to bring in the convoy by lamps, without Tala.",
+          "next": "vez",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "r3_tala",
+          "text": "You let Tala moor the convoy alone.",
+          "next": "vez",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "r3_krug",
+          "text": "You order the convoy to circle above the fog until daylight.",
+          "next": "vez",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "vez": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Ilka raises her lamps and speaks. Two covers, a pause, one: the whole dock repeats her signal, one lamp after another, until the fog fills with tiny flickers. The belly of the first airship rights itself obediently, like a herd that has heard a familiar voice.",
+          "lead": "Ilka speaks with lamps.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "“Don't look down. Look where the lamp tells you.”",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Tala pulls the winches only when Ilka says, and every time exactly when she should. The first airship settles onto the hooks with a long, quiet sigh. After it the second, the third, each slower than anyone would have imagined, but not one strikes. Teo runs between the masts, shouting the signals onward like a herald.",
+          "lead": "The first airship.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Every signal Ilka gives, Teo passes to the next lamp, and it to the next, all the way through the fog to Brina, like a prayer passed along on lips. Oskar, without a word, goes to a mast and takes hold of a rope with both hands.",
+          "lead": "The signal goes on.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "“Ilka, am I holding this end?”",
+          "who": "Ti",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "“Hold it. Just don't let go, and when your hands go numb, hold on longer.”",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "Tala moors. The hooks come out of the fog one by one and find the lamps you hung, like a blind man given a handrail along the whole corridor. The first airship settles onto the winch with no sound at all, the second after it, and nobody on the dock breathes until they are still.",
+          "lead": "Tala moors.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "The third comes in crooked. The hook misses the mast by a hand, the airship sways and creaks, and Ilka without a word raises a lamp, while Teo, without waiting to be asked, runs along the gantry. The fourth airship is too heavy, and the wheel in the Lift Works waits for a hand.",
+          "lead": "The third airship.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "Dora stands beside Oskar and counts aloud: five, six, seven. When Tala misses she writes nothing, and when she hits she writes two rows, one in black, one in blue. After one of them she smiles.",
+          "lead": "Dora counts.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "“Dora, how many so far?”",
+          "who": "Ti",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "“Five. And three times hands had to step in.”",
+          "who": "Dora",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "One airship is too heavy. You know which valve, so you run with Teo down the corridor, your palms aching again from the iron, and as the wheel groans the needle on the gauge slowly falls. Up in the fog an airship comes down as if someone had exhaled.",
+          "lead": "The valve.",
+          "if": {
+            "pick": "r1_pogon",
+            "notPick": "r3_krug"
+          }
+        },
+        {
+          "t": "The convoy circles above the fog, and from above, over the radio, Brina counts the circles. Each is shorter than the last. On the dock nobody speaks, everyone watches the clock, and Tala in the Dome counts the time aloud, like a child afraid of the dark.",
+          "lead": "A circle above the fog.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "After the third circle someone from the crew begins to sing, quietly, without words. The song is as old as the masts, and it is sung for those in the air. Teo joins in, then Ilka, even Oskar, soundlessly, barely audible, like someone remembering a tune from childhood.",
+          "lead": "A song on the dock.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "At five thirty the fog splits for the first time. First a crack, then a window, then through it the masts show, all nine, in a row like the teeth of a comb. Brina lowers the airships one by one, and Tala catches them with light, without a single signal from hands.",
+          "lead": "The fog splits.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "“Bring them down in order. Slowly.”",
+          "who": "Ti",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "“All down. Thank you, Velmar, whoever you were.”",
+          "who": "Brina"
+        },
+        {
+          "t": "As the convoy settles, after an hour of silence you hear footsteps on the dock. Somebody laughs, not loudly, the way one laughs after something that is not finished. The seal is in your pocket, and the clock above the Notice Room shows five fifty-two.",
+          "lead": "The convoy settles."
+        },
+        {
+          "t": "“Eight minutes left.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Nobody says a word about the list. The linehands coil their ropes, each without hurry, and each looks at the floor as they pass you, not from shame but because they do not want to take the look you need.",
+          "lead": "Nobody mentions the list."
+        },
+        {
+          "t": "“Thank you. All of you.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ilka turns to you with a rope over her shoulder. On her palm is a new scar, still red. She asks nothing. Teo has dropped to his knees and is laughing out loud for no reason, from exhaustion.",
+          "lead": "Ilka waits."
+        },
+        {
+          "t": "“Get me ready for six. What should I know?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nothing you don't already know. The night was what it was.”",
+          "who": "Ilka",
+          "solo": true
+        }
+      ],
+      "prompt": "As the convoy sinks into calm, only a few minutes are left before six.",
+      "choices": [
+        {
+          "id": "v_ilka",
+          "text": "You look Ilka in the eye and nod.",
+          "next": "odluka",
+          "w": {
+            "e": 1
+          }
+        },
+        {
+          "id": "v_dora",
+          "text": "You go straight to Dora with a question about the report.",
+          "next": "odluka",
+          "w": {
+            "t": 1
+          }
+        },
+        {
+          "id": "v_sat",
+          "text": "You look at the clock and count the minutes to six.",
+          "next": "odluka",
+          "w": {
+            "o": 1
+          }
+        }
+      ]
+    },
+    "odluka": {
+      "chapter": "c4",
+      "img": "oglasna",
+      "paragraphs": [
+        {
+          "t": "Ilka says nothing. In the Notice Room she stands by the board, a little to one side, like someone who knows where her name is. On her arm lies the first light of morning, coming through the door in thin strips.",
+          "lead": "The Notice Room, before six.",
+          "if": {
+            "pick": "v_ilka"
+          }
+        },
+        {
+          "t": "Dora has already sat down and opened her folder. She holds the pencil as if it might snap. Before you came in she said something quietly to Oskar, and he is now pale as the wall.",
+          "lead": "The Notice Room, before six.",
+          "if": {
+            "pick": "v_dora"
+          }
+        },
+        {
+          "t": "The big clock above the board shows four minutes to six. It has no second hand, and yet you hear them, one after another, like pebbles dropped into a well.",
+          "lead": "The Notice Room, before six.",
+          "if": {
+            "pick": "v_sat"
+          }
+        },
+        {
+          "t": "Everyone who had a say tonight has gathered in the Notice Room. Oskar stands by the table with the list, Dora by her folder, Ilka against the wall. Teo is in the corner with a bandaged hand, and he is looking not at the list but at the seal. The bulb has stopped trembling, as if it too had understood.",
+          "lead": "All in one place."
+        },
+        {
+          "t": "The list waits on the board with a pin in its corner. Dora has written down the time and left a blank for the signature. Everyone knows what goes in that blank, and nobody knows whose name will stand under it.",
+          "lead": "A blank for a signature."
+        },
+        {
+          "t": "“It's six. The list is ready to go up and waits only for your seal.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“Give me a minute. Just one minute.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“You have it. Not a second more.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“I haven't sent the report. If you certify the list, I'll send what I saw, not what was handed to me.”",
+          "who": "Dora",
+          "if": {
+            "pick": "z_odlozi"
+          }
+        },
+        {
+          "t": "“The report is in my folder. What it says depends on your seal.”",
+          "who": "Dora",
+          "if": {
+            "notPick": "z_odlozi"
+          }
+        },
+        {
+          "t": "“You know what our hands did tonight. I ask nothing except that it be written down.”",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "“Tala moored five airships tonight. Our hands moored the rest. Let it be written that way.”",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "“While the fog stood, nobody moored anything. When it lifted, we all moored together.”",
+          "who": "Ilka",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "Teo lifts his eyes from the seal and, for the first time, looks straight at you. He does not plead. He only waits, the way someone waits who has spent the whole night learning how.",
+          "lead": "Teo looks at you."
+        },
+        {
+          "t": "“I know, Teo.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Dora slides the blank sheet toward you, right to the middle of the table, then withdraws. Oskar follows the movement with his eyes, and Ilka does not: other people's deadlines stopped interesting her long ago.",
+          "lead": "The sheet in the middle of the table."
+        },
+        {
+          "t": "“Thanks, Dora. I see it.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Whatever happens, I know the signal. Two covers, a pause, one. Nobody can cancel that.”",
+          "who": "Teo"
+        },
+        {
+          "t": "The seal is brass, cold and heavy. The list waits. The machine in the Dome waits. In the window the fog parts in two, and beneath it you see the dock, wet and shining, with nine moored airships.",
+          "lead": "The seal on the table."
+        }
+      ],
+      "prompt": "The clock counts down the last minute, and the seal lies between you and the list.",
+      "choices": [
+        {
+          "id": "od_e",
+          "text": "You refuse the seal: the list is not certified.",
+          "next": "kraj_e1",
+          "w": {
+            "e": 4
+          }
+        },
+        {
+          "id": "od_t",
+          "text": "You certify the list: Tala takes over the night mooring.",
+          "next": "kraj_t1",
+          "w": {
+            "t": 4
+          }
+        },
+        {
+          "id": "od_o",
+          "text": "You postpone certification for thirty days: the list stays in the folder.",
+          "next": "kraj_o1",
+          "w": {
+            "o": 4
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "You hold the seal in your hand and wait.",
+        "next": "kraj_o1",
+        "w": {
+          "o": 2,
+          "e": 1
+        },
+        "after": 20
+      }
+    },
+    "kraj_e1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "The seal stays on the table. You drop it into the folder beside the list, close the cover and press it down with your hand, as if it might spring open. The silence that follows is not empty: in it you can hear five people in a small room breathe out at once.",
+          "lead": "The seal stays on the table."
+        },
+        {
+          "t": "Oskar does not raise his voice. He takes his coat off the chair back but does not put it on, and for a while he just stands holding it, like a man who half an hour ago knew what he would say at this moment.",
+          "lead": "Oskar, coat in hand."
+        },
+        {
+          "t": "“I understand, Oskar.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Fund will call me the moment Dora sends hers. I don't blame you. I just don't know what I'll tell them.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“Tell them the seal stayed with me.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“You'll tell them what the record says. I'll send them the same.”",
+          "who": "Dora",
+          "if": {
+            "pick": "z_odlozi"
+          }
+        },
+        {
+          "t": "“I'll send what I saw tonight. Let them read what they like.”",
+          "who": "Dora",
+          "if": {
+            "notPick": "z_odlozi"
+          }
+        },
+        {
+          "t": "Ilka folds the list in four and tucks it into the pocket of Teo's coat, like a message he will read one day. Then she straightens his collar, once, roughly, the way you straighten something that has carried other people's weight all its life.",
+          "lead": "The list in a pocket."
+        },
+        {
+          "t": "“Let him read it when he's ready.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The lantern you took first is still burning on the table. Teo takes it back the way you return something borrowed, and looks you straight in the eye.",
+          "lead": "The lantern from the table.",
+          "if": {
+            "pick": "p_fenjer"
+          }
+        },
+        {
+          "t": "Teo looks straight at you, and the lantern you refused he holds in both hands, as if someone might take it from him.",
+          "lead": "Teo looks at you.",
+          "if": {
+            "notPick": "p_fenjer"
+          }
+        },
+        {
+          "t": "“Maybe I'll get a call at eight, maybe tomorrow. Either way, Velmar has one more morning.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“I'll be here when they call.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Up in the Dome, on the console, a green slot glows. Tala is still counting moorings, one by one, and beside every one in her record stands the same line: human confirmation.",
+          "lead": "Tala in the Dome.",
+          "if": {
+            "pick": "r1_kupola"
+          }
+        },
+        {
+          "t": "Down in the Rope Loft thirty people stay around the stove, and nobody asks whether this is an ending or a beginning. The tea is still warm.",
+          "lead": "The Rope Loft.",
+          "if": {
+            "pick": "r1_uzarnica"
+          }
+        },
+        {
+          "t": "The wheel in the Lift Works stays empty until the next airship, and the two who turn it stay on the payroll. The needle on the gauge goes back to its place.",
+          "lead": "The Lift Works.",
+          "if": {
+            "pick": "r1_pogon"
+          }
+        },
+        {
+          "t": "“Let the morning take its time.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Outside you hear the first sound of morning: someone on the dock strikes an iron mast, three times, as if checking that it is still there.",
+          "lead": "The first sound of morning."
+        },
+        {
+          "t": "As you leave, Ilka holds the door until you have passed. That is all. In Velmar gratitude is not spoken, doors are held.",
+          "lead": "Ilka holds the door."
+        },
+        {
+          "t": "“Thank you, Ilka.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On the board, under the pin, the blank sheet stays. Nobody takes it down. Someone writes one word in pencil in the lower corner, in illegible letters, then rubs it out with a sleeve.",
+          "lead": "The blank sheet."
+        }
+      ],
+      "next": "kraj_e2"
+    },
+    "kraj_e2": {
+      "chapter": "c5",
+      "img": "zora",
+      "paragraphs": [
+        {
+          "t": "The fog leaves the way it came, up the cliff, but downward. Drops of light tremble between the masts, and the convoy stands moored in a row like boats on a lake. On the Upper Dock the linehands stand differently than before dawn: not calmer, but like people who have been allowed to stay.",
+          "lead": "Dawn."
+        },
+        {
+          "t": "Brina climbs down the ladder of the first airship, a scarf around her neck and a gray lock over her forehead. She shakes hands with Ilka, then with Teo, then with you, holding each just as long. Her hand is warm, and her glove is worn through at the fingertips, just like Ilka's.",
+          "lead": "Brina comes down."
+        },
+        {
+          "t": "“Welcome down, Brina.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I landed by a lamp I couldn't see. First time in my life.”",
+          "who": "Brina",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "“I landed by a light I couldn't see. The machine knew where I was, and I didn't know where the dock was.”",
+          "who": "Brina",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "“I could have landed earlier. I didn't want to rush you.”",
+          "who": "Brina",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "Ilka brings a cup of tea from the stove and puts it in your hand without asking. There is a bandage on her palm, nothing on her face. Beside her Teo holds a lantern and repeats signal after signal in a low voice, as if counting them, and the lamp in his hand is still burning though it is daylight.",
+          "lead": "Ilka and the tea."
+        },
+        {
+          "t": "Oskar stands at the end of the gantry looking down into the valley of clouds, which is turning pink. Something in his shoulders gives way, but not entirely. Dora comes up and stands beside him, without a word, the way you stand next to someone who has carried the same weight for a long time.",
+          "lead": "Oskar on the gantry."
+        },
+        {
+          "t": "“Let him stand. He needs the air.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Before the day is fully up you manage to look upward. The lamps on the masts are still burning, pale, as if they had not noticed it was light. Someone from the crew goes from mast to mast putting them out one by one, the way eyes close after a long night.",
+          "lead": "Lamps at dawn."
+        },
+        {
+          "t": "Old Bata sits on a crate by a mast, his cap over his eyes, a rope around his neck like a scarf. For the first time in many nights he is sleeping, not just waiting.",
+          "lead": "An old man on a crate."
+        },
+        {
+          "t": "“Let him sleep.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Through the open door of the Rope Loft you can see the smoke from the stove rising straight up, without a single sideways drift. The day will be calm.",
+          "lead": "Smoke from the Rope Loft."
+        },
+        {
+          "t": "Around seven, when the fog has withdrawn completely, a small gray airship rises from the lowlands, one nobody announced. On its bow burns the blue lamp of the Fund. Ilka raises a lamp and covers it twice, and Teo, beside her, answers with the same signal before anyone can ask him.",
+          "lead": "A small gray airship."
+        }
+      ],
+      "end": "e"
+    },
+    "kraj_t1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "The seal comes down on the list, short, like a hammer on iron. A brass mark stays on the paper: a small circle with four letters of the Board inside. Dora writes down the time, one minute past six, and signs. The pencil on the paper is the only sound in the room.",
+          "lead": "The seal comes down."
+        },
+        {
+          "t": "“Thank you. I won't forget this.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "Oskar pins the list to the board, one pin at a time, without blinking. He leaves his hand on the paper a little longer than he needs to.",
+          "lead": "The list on the board."
+        },
+        {
+          "t": "“Don't thank me. Nothing is finished yet.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ilka says nothing. She turns, takes a lamp from the table and goes out, and after her, one by one, the other linehands, some with a cap in hand, some with nothing, like people who have read their name on a board and leave so as not to hear it aloud.",
+          "lead": "The linehands leave."
+        },
+        {
+          "t": "“Of the forty, twelve move to the Dome to teach Tala to read lamps. The rest get severance. Teo is among the twelve.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“Twelve. And the rest?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Severance, as it says.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“I knew it. I just didn't know it would be so quiet.”",
+          "who": "Teo"
+        },
+        {
+          "t": "“You stay, Teo. It's written down.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The list says Tala moored the convoy tonight. Paper does not know who held the lamps.",
+          "lead": "What the list says.",
+          "if": {
+            "pick": "r3_ljudi"
+          }
+        },
+        {
+          "t": "The list says Tala moored five airships tonight. It does not say what she was left with besides: three human confirmations, in a record the Fund will not read.",
+          "lead": "What the list says.",
+          "if": {
+            "pick": "r3_tala"
+          }
+        },
+        {
+          "t": "The list says the convoy was moored without incident. Paper does not say that for an hour everyone waited in the fog.",
+          "lead": "What the list says.",
+          "if": {
+            "pick": "r3_krug"
+          }
+        },
+        {
+          "t": "The small brass lamp you got from Teo is heavier in your pocket than ever.",
+          "lead": "A lamp in your pocket.",
+          "if": {
+            "pick": "u_signal"
+          }
+        },
+        {
+          "t": "On the list above you, beside the first name, someone has drawn a line through it and written one word: Dome.",
+          "lead": "A line on the list."
+        },
+        {
+          "t": "From the wall speaker comes a soft crackle: Tala is listening, as always, and asks nothing. It occurs to you that this is not silence but courtesy.",
+          "lead": "The report goes out.",
+          "if": {
+            "pick": "r1_kupola"
+          }
+        },
+        {
+          "t": "In the Lift Works the wheel on the wall stands still. Nobody in the room mentions who will turn it when Tala next suggests, and there is no one to suggest to.",
+          "lead": "The Lift Works.",
+          "if": {
+            "pick": "r1_pogon"
+          }
+        },
+        {
+          "t": "“Leave them to their work.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Down in the Rope Loft the stove is burning and nobody puts it out. The linehands quietly coil their ropes, the way you coil something that may be needed again.",
+          "lead": "The Rope Loft.",
+          "if": {
+            "pick": "r1_uzarnica"
+          }
+        },
+        {
+          "t": "The sound of footsteps on the stairs goes downhill and fades. Oskar is still standing, and Dora, without a word, pushes a chair toward him.",
+          "lead": "Footsteps on the stairs."
+        },
+        {
+          "t": "“Sit, Oskar. Dora, you too.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I sent the report. Beside the number it says how many lamps stood behind it. The Fund will have to read both rows.”",
+          "who": "Dora"
+        }
+      ],
+      "next": "kraj_t2"
+    },
+    "kraj_t2": {
+      "chapter": "c5",
+      "img": "zora",
+      "paragraphs": [
+        {
+          "t": "The day opens over the Upper Dock clear and cold, without a trace of fog. The linehands' lamps look like decoration now, like something hung up for beauty. Nine airships stand moored, and the winches click quietly, on their own, like a clock.",
+          "lead": "Dawn."
+        },
+        {
+          "t": "In the Dome, by the window, twelve people sit before the screens. Ilka is among them, a rope in her lap, like someone who does not know where to put it. Teo stands in front of her, holding a lamp up and showing Tala the signals one by one.",
+          "lead": "Twelve in the Dome."
+        },
+        {
+          "t": "“How is she doing?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“This is the first signal. This is the second. If she doesn't understand, repeat it for her.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "“Received. Repeat.”",
+          "who": "Tala"
+        },
+        {
+          "t": "Oskar stands in the doorway with a new look on his face, the kind people have when someone has lifted a weight they put on themselves. He goes to get coffee, then changes his mind and stays.",
+          "lead": "Oskar in the doorway."
+        },
+        {
+          "t": "“Come in, Oskar.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Dora writes the last lines of her report, slowly, as if testing every word against the light. At the end, in a field the Company never planned, she adds one line.",
+          "lead": "Dora writes."
+        },
+        {
+          "t": "“What did you add?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“What Tala said tonight. Word for word.”",
+          "who": "Dora"
+        },
+        {
+          "t": "Down in the Rope Loft, in the empty space around the stove, someone sets a lamp on a crate and leaves. The others come later, in turn, on tiptoe, to look at it. Nobody touches it, as if it were something that could still break at a touch.",
+          "lead": "A lamp on a crate."
+        },
+        {
+          "t": "One of those who got severance appears at the door of the Dome with a bag over his shoulder. He does not come in. He only watches the screens, and the lines Tala draws on them, and nods, as if he has recognized something of his own in them.",
+          "lead": "A man with a bag."
+        },
+        {
+          "t": "“Come in, if you like.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On the glass beside the Dome window someone has drawn with a finger two covers and one. The fog left long ago, but the sign stays.",
+          "lead": "A sign on the glass."
+        },
+        {
+          "t": "“Tell her once more. By morning she'll know all twelve.”",
+          "who": "Teo"
+        },
+        {
+          "t": "Later, when the Dome empties, a narrow slot lights on the console. Tala, who never speaks until she is asked, asks someone in the empty room for the first time: who will teach her about fog.",
+          "lead": "The slot on the console."
+        }
+      ],
+      "end": "t"
+    },
+    "kraj_o1": {
+      "chapter": "c5",
+      "paragraphs": [
+        {
+          "t": "The seal stays in your fist. You lay it neither on the list nor on the table but slowly move it into your pocket, then take out your watch and read the time aloud: six o'clock sharp.",
+          "lead": "The seal in your pocket."
+        },
+        {
+          "t": "“You don't certify. And you don't void. What have you done?”",
+          "who": "Oskar"
+        },
+        {
+          "t": "“I postponed. Thirty days.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Fund has a field called ‘pending.’ Hardly anyone uses it, because nobody waits. You'll get thirty days.”",
+          "who": "Dora"
+        },
+        {
+          "t": "Dora writes a single word in the report. The pencil barely touches the paper, and the word is short and clean, like a signature that binds no one. Oskar reads it over her shoulder, breathless, like a man reading a verdict and seeing that it has been postponed.",
+          "lead": "One word in the report."
+        },
+        {
+          "t": "“Thirty days. That's how long one autumn fog lasts.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "Oskar puts the list in the folder and the folder on the shelf above the table, then takes the coat he has not taken off since midnight. He looks as if he wants to say something but does not. At the door he stops, turns, then steps out onto the gantry anyway, and the door closes more quietly than it opened.",
+          "lead": "The list on the shelf."
+        },
+        {
+          "t": "“Get some sleep, Oskar.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Thirty days. In thirty days the fog comes or it doesn't. For the first time I hope it does.”",
+          "who": "Oskar"
+        },
+        {
+          "t": "Dora closes the folder and holds it to her chest, the way you hold something that could burst at a breath.",
+          "lead": "Dora with the folder."
+        },
+        {
+          "t": "“Thank you for staying, Dora.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Teo stands in the corner and does not know whether to laugh. A lamp sticks out of his coat pocket, and he does not take it out, as if without it he would lose his permission to stand there.",
+          "lead": "Teo in the corner."
+        },
+        {
+          "t": "“Teo, go and sleep.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Up in the Dome, on the console, a green slot glows. Tala has stayed in collateral for another month. The counter in her record does not know that this counts.",
+          "lead": "Tala in the Dome.",
+          "if": {
+            "pick": "r1_kupola"
+          }
+        },
+        {
+          "t": "Down in the Rope Loft nobody puts out the stove. The linehands count the days on their fingers, and Ilka's tea cools with no cup in anyone's hand.",
+          "lead": "The Rope Loft.",
+          "if": {
+            "pick": "r1_uzarnica"
+          }
+        },
+        {
+          "t": "The wheel in the Lift Works waits for the next airship as it has all these years. The two who turn it know they have thirty days to teach a third.",
+          "lead": "The Lift Works.",
+          "if": {
+            "pick": "r1_pogon"
+          }
+        },
+        {
+          "t": "The bulb above the board finally stops trembling. In the room remain a blank sheet, a list in a folder, and the silence of people whose one day has been stretched to thirty.",
+          "lead": "The blank sheet."
+        },
+        {
+          "t": "“Leave the light on.”",
+          "who": "Ti"
+        }
+      ],
+      "next": "kraj_o2"
+    },
+    "kraj_o2": {
+      "chapter": "c5",
+      "img": "zora",
+      "paragraphs": [
+        {
+          "t": "The dawn is gray, without a single color, but you can still see on the masts that day is coming. Nine airships stand moored, and the linehands, each at their place, do what they did yesterday, in the same order, but slower, as if they had agreed not to hurry.",
+          "lead": "Dawn."
+        },
+        {
+          "t": "Brina climbs down from her airship and stops beside you. She looks down at the white ocean of clouds drawing back, then asks, as if in passing, who the Settlement Board inspector is here.",
+          "lead": "Brina asks."
+        },
+        {
+          "t": "“That's me. Were you looking for me?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Something moored me twice: once a light, once a lamp. Which of the two mattered more, I don't know.”",
+          "who": "Brina"
+        },
+        {
+          "t": "“I don't know either. Maybe neither.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ilka comes with two ropes over her shoulder and drops one at your feet. She says nothing, but the sign is clear: the night is over, and the morning has its own work.",
+          "lead": "A rope at your feet."
+        },
+        {
+          "t": "Oskar and Dora stand together at the end of the gantry. They talk quietly, not looking at each other, and somehow sound like people agreeing about something for the first time. After a while Oskar takes off his coat and drapes it over the rail.",
+          "lead": "Oskar and Dora."
+        },
+        {
+          "t": "“Let them talk.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The day opens and the sun touches the cliff. Where it falls, the stone turns warm at once, and the fog is left only in the shadows of the masts, thinner and thinner. A flock of birds that waited all night in the cracks scatters over the dock.",
+          "lead": "The first sun."
+        },
+        {
+          "t": "Teo sits on the edge of the gantry, legs hanging over the void, turning a lamp in his hands. Every time he covers it with his palm, someone across the dock, without looking, answers with the same signal.",
+          "lead": "Teo on the gantry."
+        },
+        {
+          "t": "“The signal stayed in your hands.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“As long as there's fog, there's work for us. Tala just doesn't know that yet.”",
+          "who": "Ilka"
+        },
+        {
+          "t": "In the Rope Loft someone opens a window, and fresh air comes into the hall. The smoke thins, and the ropes on the beams sway gently, as if breathing.",
+          "lead": "An open window."
+        },
+        {
+          "t": "At the end of the gantry stands a boy with a letter that bears a lowlands seal. Nobody called him, and he asks only one thing: who here is the Settlement Board inspector. The letter is for you, and it is as thick as a book.",
+          "lead": "A boy with a letter."
+        }
+      ],
+      "end": "o"
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/ruke-na-konopcu/cover.webp",
+      "alt": "Velmar: a cliff-top town and mooring masts with airships above a sea of clouds at dusk",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              34,
+              44
+            ],
+            [
+              42,
+              40
+            ],
+            [
+              50,
+              37
+            ],
+            [
+              58,
+              40
+            ],
+            [
+              66,
+              44
+            ]
+          ],
+          "r": 1.2,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "dok": {
+      "src": "img/ruke-na-konopcu/dok.webp",
+      "alt": "The Upper Dock at night: masts and lamps in the fog",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 38,
+          "y": 40,
+          "r": 6,
+          "color": "fxWarm",
+          "flicker": 0.15
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              30,
+              50
+            ],
+            [
+              48,
+              42
+            ],
+            [
+              66,
+              46
+            ]
+          ],
+          "r": 1.3,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "oglasna": {
+      "src": "img/ruke-na-konopcu/oglasna.webp",
+      "alt": "The Notice Room: a table, a bulb and a board with a list",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 26,
+          "r": 6,
+          "color": "fxWarm",
+          "flicker": 0.2
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
+    },
+    "kupola": {
+      "src": "img/ruke-na-konopcu/kupola.webp",
+      "alt": "The Dome: a room of screens with a large window onto fog",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "screens",
+          "screens": [
+            {
+              "x": 27,
+              "y": 30,
+              "w": 14,
+              "h": 12,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5
+            },
+            {
+              "x": 43,
+              "y": 28,
+              "w": 14,
+              "h": 14,
+              "style": "scan",
+              "color": "fxCold",
+              "intensity": 0.5
+            },
+            {
+              "x": 59,
+              "y": 30,
+              "w": 14,
+              "h": 12,
+              "style": "data",
+              "color": "fxCold",
+              "intensity": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    "uzarnica": {
+      "src": "img/ruke-na-konopcu/uzarnica.webp",
+      "alt": "The Rope Loft: a long hall with ropes and a stove in the corner",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "fire",
+          "x": 62,
+          "y": 56,
+          "r": 5,
+          "source": "painted"
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
+    },
+    "pogon": {
+      "src": "img/ruke-na-konopcu/pogon.webp",
+      "alt": "The Lift Works: tanks, pipes and green gauges",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              40,
+              32
+            ],
+            [
+              46,
+              33
+            ],
+            [
+              52,
+              32
+            ],
+            [
+              58,
+              33
+            ]
+          ],
+          "r": 1.4,
+          "color": "fxGreen"
+        },
+        {
+          "type": "dust",
+          "density": 0.4
+        }
+      ]
+    },
+    "most": {
+      "src": "img/ruke-na-konopcu/most.webp",
+      "alt": "The gantry between the masts with a row of lamps in the fog",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              30,
+              40
+            ],
+            [
+              38,
+              38
+            ],
+            [
+              46,
+              37
+            ],
+            [
+              54,
+              37
+            ],
+            [
+              62,
+              38
+            ],
+            [
+              70,
+              40
+            ]
+          ],
+          "r": 1.5,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "magla": {
+      "src": "img/ruke-na-konopcu/magla.webp",
+      "alt": "The belly of an airship emerging from the fog above the dock",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 34,
+          "r": 8,
+          "color": "fxWarm",
+          "flicker": 0.1
+        },
+        {
+          "type": "twinkle",
+          "points": [
+            [
+              34,
+              42
+            ],
+            [
+              44,
+              40
+            ],
+            [
+              56,
+              40
+            ],
+            [
+              66,
+              42
+            ]
+          ],
+          "r": 1.3,
+          "color": "fxWarm"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "zora": {
+      "src": "img/ruke-na-konopcu/zora.webp",
+      "alt": "The Upper Dock at dawn, airships moored in a row",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 62,
+          "y": 30,
+          "r": 9,
+          "color": "fxSun"
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "ilka": {
+      "src": "img/ruke-na-konopcu/ilka.webp",
+      "alt": "Ilka, leader of the night crew of linehands",
+      "kind": "portrait"
+    },
+    "teo": {
+      "src": "img/ruke-na-konopcu/teo.webp",
+      "alt": "Teo, the youngest apprentice",
+      "kind": "portrait"
+    },
+    "oskar": {
+      "src": "img/ruke-na-konopcu/oskar.webp",
+      "alt": "Oskar, the harbor manager",
+      "kind": "portrait"
+    },
+    "dora": {
+      "src": "img/ruke-na-konopcu/dora.webp",
+      "alt": "Dora, auditor from the Fund",
+      "kind": "portrait"
+    },
+    "brina": {
+      "src": "img/ruke-na-konopcu/brina.webp",
+      "alt": "Brina, an airship captain",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/ruke-na-konopcu/citalac-m.webp",
+      "alt": "Settlement Board inspector",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/ruke-na-konopcu/citalac-z.webp",
+      "alt": "Settlement Board inspector",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Ilka": {
+      "img": "ilka"
+    },
+    "Teo": {
+      "img": "teo"
+    },
+    "Oskar": {
+      "img": "oskar"
+    },
+    "Dora": {
+      "img": "dora"
+    },
+    "Brina": {
+      "img": "brina"
+    },
+    "Tala": {
+      "img": null
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}
