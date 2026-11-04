@@ -441,6 +441,55 @@ const zimskaOstava = {
   fontHeading: fonts.ui,
 };
 
+// Ruke na konopcu: maslinasto-grafitna noć u magli, svetlo ljubičasti akcenat zore i ćilibarska svetlost lampi.
+const rukeNaKonopcu = {
+  name: 'ruke-na-konopcu',
+  mode: 'dark',
+  sky: 'stars',
+  bg: '#171a17',
+  bgSoft: '#1f241f',
+  surface: '#272d27',
+  text: '#ece9e2',
+  textMuted: '#bdbdb1',
+  textFaint: '#8f9487',
+  accent: '#c9a8e6',
+  accentStrong: '#6b4a92',
+  onAccent: '#ffffff',
+  secondary: '#e3a867',
+  fxWarm: '#e8b270',
+  fxCold: '#b7c7d6',
+  fxSun: '#f4c9a0',
+  fxGreen: '#8fd6a0',
+  glowA: 'rgba(201, 168, 230, 0.2)',
+  glowB: 'rgba(227, 168, 103, 0.2)',
+  border: 'rgba(236, 233, 226, 0.2)',
+  selection: 'rgba(201, 168, 230, 0.35)',
+  focusRing: '#c9a8e6',
+  shadow: 'rgba(0, 0, 0, 0.6)',
+  scrim: 'rgba(21, 24, 21, 0.9)',
+  onImage: '#f3f1ea',
+  btnBg: 'transparent',
+  btnText: '#d9c0f0',
+  btnBorder: '#c9a8e6',
+  btnBgHover: '#6b4a92',
+  btnTextHover: '#ffffff',
+  btnBorderHover: '#6b4a92',
+  btnBgActive: '#583b79',
+  btnQuietText: '#ecc189',
+  btnQuietBorder: '#b98a4a',
+  btnQuietBgHover: '#ecc189',
+  btnQuietTextHover: '#171a17',
+  choiceBg: 'transparent',
+  choiceBorder: 'rgba(236, 233, 226, 0.2)',
+  choiceBgSelected: '#c9a8e6',
+  choiceTextSelected: '#171a17',
+  choiceDot: '#c9a8e6',
+  btnDisabledBg: '#232823',
+  btnDisabledText: '#838a7f',
+  fontBody: fonts.serif,
+  fontHeading: fonts.ui,
+};
+
 export const siteTheme = withLogo(siteBase);
 
 // slug priče -> tema
@@ -451,6 +500,7 @@ export const themes = {
   'tamni-sat': withLogo(tamniSat),
   'pre-plime': withLogo(prePlime),
   'zimska-ostava': withLogo(zimskaOstava),
+  'ruke-na-konopcu': withLogo(rukeNaKonopcu),
   'tihi-sat': withLogo(tihiSat),
   'zelena-granica': withLogo(zelenaGranica),
 };

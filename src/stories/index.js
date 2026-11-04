@@ -142,6 +142,28 @@ export const stories = [
       load: () => import("./zimska-ostava/story.en.json"),
     },
   },
+  {
+    slug: "ruke-na-konopcu",
+    path: { sr: "ruke-na-konopcu" },
+    title: "Ruke na konopcu",
+    tagline: "U lučkom gradu na litici mašina veže lađe, a magla stiže pre jutarnjeg otkaza.",
+    genre: "Naučna fantastika",
+    minutes: 20,
+    cover: "img/ruke-na-konopcu/cover.webp",
+    coverAlt: "Velmar: grad na litici i jarboli sa lađama iznad mora oblaka u sumrak",
+    status: "ready",
+    load: () => import("./ruke-na-konopcu/story.json"),
+    en: {
+      path: "hands-on-line",
+      title: "Hands on the Line",
+      tagline:
+        "In a cliff-top harbor town a machine moors the airships, and the fog beats the morning layoffs.",
+      genre: "Science fiction",
+      coverAlt:
+        "Velmar: a cliff-top town and mooring masts with airships above a sea of clouds at dusk",
+      load: () => import("./ruke-na-konopcu/story.en.json"),
+    },
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];
 
