@@ -461,7 +461,7 @@
           "who": "Ilka"
         },
         {
-          "t": "Peć puca. Neko dodaje drvo, neko spušta šolju čaja kraj tvoje noge, a da ne pita hoćeš li. Na zidu iznad peći visi spisak dežurstava, istih godinama, sa potpisima koji su se stanjili od ruku. Pored njih visi noviji spisak sa jednim redom bez potpisa: redom šegrta.",
+          "t": "Peć puca. Neko dodaje drvo, neko spušta šolju čaja kraj tvoje noge, a da ne pita hoćeš li. Na zidu iznad peći visi spisak dežurstava, istih godinama, sa potpisima koji su se stanjili od ruku. Pored njih visi noviji spisak, a u njemu jedan red bez potpisa: red šegrta.",
           "lead": "Potpisi na zidu."
         },
         {
@@ -1817,7 +1817,7 @@
           }
         },
         {
-          "t": "Zvuk koraka sa stepeništa odlazi nizbrdo i gubi se. Oskar sedi, a Dora, bez ijedne reči, spušta šolju čaja ispred njega.",
+          "t": "Zvuk koraka sa stepeništa odlazi nizbrdo i gubi se. Oskar još stoji, a Dora, bez ijedne reči, pomera stolicu ka njemu.",
           "lead": "Koraci na stepeništu."
         },
         {
@@ -1919,7 +1919,7 @@
           "who": "Ti"
         },
         {
-          "t": "„U Fondu postoji polje koje se zove „u toku“. Retko ga iko koristi, jer niko ne čeka. Dobićeš trideset dana.“",
+          "t": "„U Fondu postoji polje koje se zove ‚u toku‘. Retko ga iko koristi, jer niko ne čeka. Dobićeš trideset dana.“",
           "who": "Dora"
         },
         {
