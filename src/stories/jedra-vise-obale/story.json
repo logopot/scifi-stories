@@ -1,0 +1,2038 @@
+{
+  "meta": {
+    "title": "Jedra do Više obale",
+    "subtitle": "Interaktivna naučnofantastična priča",
+    "description": [
+      "Na planeti Rojni more raste, a Niska obala tone. Staro teretno jedro Dugi Dah tri dana plovi između plutajućih sela ka Višoj obali, gde Zavod Višeg dana drži kapiju i spisak od četrdeset mesta.",
+      "Ti si običan putnik sa kartom u džepu, jedan od onih koji su se ukrcali poslednji. Oko tebe su devojčica koja broji jedra i mesece, kapetan čije šale niko ne razume, računovođa koji ne voli kad se brojevi ne slažu i lekarka sa sandukom.",
+      "Svakog dana brod pristaje u novom selu, a dva meseca na nebu primiču se jedan drugom. Kapija se zatvara kad se poklope."
+    ],
+    "axes": [
+      {
+        "id": "a",
+        "name": "ustupiti svoje mesto"
+      },
+      {
+        "id": "b",
+        "name": "ostaviti porodicu van kapije"
+      },
+      {
+        "id": "c",
+        "name": "ući svi i ostaviti otvoreno"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Dalje",
+    "finish": "Do kraja",
+    "start": {
+      "intro": [
+        "Dugi Dah plovi tri dana ka Višoj obali, a dva meseca na nebu primiču se jedan drugom. U džepu ti je karta, na palubi mesto, a kapija se zatvara kad se meseci poklope."
+      ],
+      "begin": "Počni",
+      "continue": "Nastavi čitanje",
+      "tip": "Svaki pasus je jedna strana. Dalje ideš dugmetom, razmakom ili strelicom →, a opcije biraš klikom ili tasterima 1–9. Priča se sama čuva. Računaj na oko 20 minuta.",
+      "genders": {
+        "m": "Muški",
+        "f": "Ženski"
+      },
+      "note": "Napredak se čuva samo u tvom pregledaču.",
+      "nameLabel": "Kako se zoveš? (možeš da ostaviš prazno)",
+      "namePlaceholder": "Tvoje ime",
+      "genderLabel": "Rod u kome se piše o tebi:",
+      "hintFound": "Prepoznato ime. Rod možeš da promeniš.",
+      "hintUnknown": "Ne prepoznajem to ime. Izaberi rod u kome ćemo pisati o tebi.",
+      "hintNeed": "Izaberi rod da bismo mogli da počnemo.",
+      "chosen": "Igraš kao:",
+      "defaults": {
+        "m": "Lazar",
+        "f": "Milica"
+      }
+    },
+    "mirror": {
+      "kicker": "Kraj",
+      "restart": "Počni ispočetka"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Dan prvi"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Dan drugi"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Dan treći"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "Kapija"
+    }
+  },
+  "start": "paluba",
+  "endings": {
+    "a": {
+      "title": "Čun na moru",
+      "closing": [
+        "More posle kiše je glatko kao list papira."
+      ]
+    },
+    "b": {
+      "title": "Kroz kapiju",
+      "closing": [
+        "Fenjer u čunu gori do jutra."
+      ]
+    },
+    "c": {
+      "title": "Četrdeset i jedno",
+      "closing": [
+        "Kapija ostaje otvorena koliko da prođe jedan brod."
+      ]
+    }
+  },
+  "nodes": {
+    "paluba": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "paluba",
+      "paragraphs": [
+        {
+          "t": "Zora na Dugom Dahu je siva i vlažna. Dva meseca vise na nebu, bleda kao dve kapi mleka u vodi, a četiri jedra pucketaju na vetru koji ne staje ni noću. Paluba miriše na katran, so i hladno uže, a ti se oslanjaš na ogradu i tek se budiš.",
+          "lead": "Zora na palubi."
+        },
+        {
+          "t": "Na buretu kraj jarbola sedi devojčica od deset godina, kose tvrde od soli, sa komadom krede u šaci. Po dasci bureta belasa se red crtica, po jedna za svako jedro i za svaki mesec. Kad te ugleda, ne prestaje da broji.",
+          "lead": "Devojčica sa kredom."
+        },
+        {
+          "t": "„Četiri jedra, dva meseca i jedan putnik koji spava stojeći. Ti si poslednji ušao na brod u luci, zar ne? Kapetan kaže da to nešto znači.“",
+          "tf": "„Četiri jedra, dva meseca i jedan putnik koji spava stojeći. Ti si poslednji ušla na brod u luci, zar ne? Kapetan kaže da to nešto znači.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Dobro jutro. A šta bi to trebalo da znači?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ne znam. Lovro ne objašnjava šale, a ovo valjda jeste šala. Meni je važnije ono gore.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Šta je tamo gore tako važno?“",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina ispruža ruku ka nebu i dlanom meri razmak između dva meseca, kao što se meri komad hleba. Usne joj se pomeraju, a kreda ostaje u vazduhu iznad bureta.",
+          "lead": "Mina meri."
+        },
+        {
+          "t": "„Tri dlana. Juče su bila četiri. Kad ih ne bude, kapija na Višoj obali se zatvara i neće se otvoriti još jedanaest godina.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Znači, imamo tri dana.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tri dana i tri sela. Ja brojim i jedno i drugo.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "Brod nema ni motor ni dimnjak. Ima samo vetar, koji duva s krme otkad se pamti, i dvanaest pari ruku koje znaju kako da ga zamole. Jedra su zakrpljena toliko puta da liče na mapu nekog izmišljenog kraja.",
+          "lead": "Brod bez motora."
+        },
+        {
+          "t": "„Vetar nikad ne staje?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ni noću. Zato brod nikad ne kasni, samo stigne kad treba.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "Ispod cerade na pramcu spavaju ostali putnici, svako na svojoj prostirci, svako sa po jednom torbom. Ko vozi ljude, vozi i spisak: oko vrata ti visi pločica sa brojem četrdeset, hladna kao novčić.",
+          "lead": "Putnici ispod cerade."
+        },
+        {
+          "t": "„Ti si broj četrdeset. Poslednji. Ratko kaže da je poslednji broj uvek najteži za nošenje.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        }
+      ],
+      "prompt": "Jutro tek počinje, a na palubi ima tri mesta na kojima možeš da staneš.",
+      "choices": [
+        {
+          "id": "s1_mina",
+          "text": "Staješ do Mine, uz ogradu.",
+          "next": "jutro"
+        },
+        {
+          "id": "s1_katarka",
+          "text": "Naslanjaš se na katarku, u hlad jedra.",
+          "next": "jutro"
+        },
+        {
+          "id": "s1_hana",
+          "text": "Sedaš kod otvora, pored žene sa drvenim sandukom.",
+          "next": "jutro"
+        }
+      ]
+    },
+    "jutro": {
+      "chapter": "c1",
+      "paragraphs": [
+        {
+          "t": "Mina ti bez pitanja stavlja kredu u šaku i pokazuje na bure: neka i ti nešto izbrojiš. Dodaješ crticu za galeba, a ona je briše, jer galeb se pomera, a ona broji samo ono što stoji.",
+          "lead": "Jutro na brodu.",
+          "if": {
+            "pick": "s1_mina"
+          }
+        },
+        {
+          "t": "U hladu katarke je svežije nego što si očekivao. Jedro iznad tebe zakrpljeno je plavim i smeđim krpama, svaka je krpa nekad bila neki drugi brod, a sve ih drži jedan običan kanap.",
+          "tf": "U hladu katarke je svežije nego što si očekivala. Jedro iznad tebe zakrpljeno je plavim i smeđim krpama, svaka je krpa nekad bila neki drugi brod, a sve ih drži jedan običan kanap.",
+          "lead": "Jutro na brodu.",
+          "if": {
+            "pick": "s1_katarka"
+          }
+        },
+        {
+          "t": "Žena sa sandukom podiže pogled i meri te kao nepoznat lek. Hana je lekarka, a sivu pletenicu nosi prebačenu preko ramena. Bez reči ti pruža sušenu šljivu, pa se vraća sanduku, čiji poklopac drži obema rukama.",
+          "lead": "Jutro na brodu.",
+          "if": {
+            "pick": "s1_hana"
+          }
+        },
+        {
+          "t": "Kapetan Lovro ide palubom sporo, kao da broji daske. Ima oko šezdeset godina, lice izbrazdano vetrom i kapu koja je nekad bila crvena. Staje kraj tebe i gleda u more, u istom smeru kao i ti, a da ne pita šta tamo vidiš.",
+          "lead": "Kapetan na palubi."
+        },
+        {
+          "t": "„Dobro je što je more mokro. Da je suvo, morao bih da ga peglam.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„Nisam znao da more treba peglati.“",
+          "tf": "„Nisam znala da more treba peglati.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Niko se ne smeje. Mina klima glavom, ozbiljno, kao da je dobila podatak za svoje crtice, a vetar nosi šalu preko palube i niko je ne hvata.",
+          "lead": "Niko se ne smeje."
+        },
+        {
+          "t": "„Mostić diže poslednji, a poslednji ne duguje nikom ništa. Zato njega pitamo kad se svi svađaju oko jedne stolice.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„Ko se svađa oko stolice?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ako te zanima nešto ozbiljno, pitaj mene. Zub je kad se meseci poklope: more naraste za prst, a Niska obala izgubi još jedan red kuća.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Koliko je do sada izgubila?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ceo grad. Zato idemo gore, na Višu obalu. Niko ne ide dole.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Dugi Dah je prevezao dve plime, ovo mu je treća. Svaki put isti broj mesta, četrdeset. Brod ne zna da računa, ali pamti.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„A ko je birao tih četrdeset?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zavod. Oni drže kapiju i spisak. Mi samo nosimo ljude do njih, kao pisma.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„Mina broji da bi znala. Većina nas broji da bi se plašila.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "Lovro ti pruža kraj užeta, a pogled mu ostaje na moru, kao da pruža i neko pitanje.",
+          "lead": "Šta Lovro pruža."
+        }
+      ],
+      "prompt": "Uže je u Lovrovoj ruci, a on čeka da vidi šta ćeš s njim.",
+      "choices": [
+        {
+          "id": "s2_pitaj",
+          "text": "Pitaš ga šta je mislio.",
+          "next": "pesak"
+        },
+        {
+          "id": "s2_smej",
+          "text": "Smeješ se, iako ne razumeš.",
+          "next": "pesak"
+        },
+        {
+          "id": "s2_cvor",
+          "text": "Uzimaš uže i vežeš čvor.",
+          "next": "pesak"
+        }
+      ]
+    },
+    "pesak": {
+      "chapter": "c1",
+      "img": "pesak",
+      "paragraphs": [
+        {
+          "t": "„To je pravilo broda. Staro je kao brod, a brod je star kao ja, samo manje škripi.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_pitaj"
+          }
+        },
+        {
+          "t": "„Eto. Bar jedan. Ti ćeš daleko stići.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_smej"
+          }
+        },
+        {
+          "t": "„Dobar čvor. Njega ćeš večeras vezati u Pesku, jer ga niko drugi ovde ne zna.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_cvor"
+          }
+        },
+        {
+          "t": "„Hvala, kapetane.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Pesak se pomalja iz izmaglice oko podneva: stotinu splavova od belog drveta, vezanih jedan uz drugi, sa kolibama od jedra i krovovima od školjki. Po splavovima trče deca, a u sredini je pijaca na kojoj se sve plaća solju i uslugom.",
+          "lead": "Selo na vodi."
+        },
+        {
+          "t": "„Nisam znao da se na vodi može živeti ovako.“",
+          "tf": "„Nisam znala da se na vodi može živeti ovako.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na splavovima se suši riba na užadima razapetim kao zastave. Žene prodaju so u papirnim kornetima, a starci sede na ivicama platformi, nogu u vodi, i gledaju brod koji ne mogu da kupe.",
+          "lead": "Život na splavovima."
+        },
+        {
+          "t": "Na doku stoji čovek u svetloj košulji i širokom šeširu, okružen sanducima složenim kao kule. Savo trguje svim što plovi između tri sela, a osmeh mu je takav da mu čovek oprosti unapred.",
+          "lead": "Trgovac na doku."
+        },
+        {
+          "t": "„Putnik koji u Pesku nije kupio ništa nije ni putovao. Kažem to iz iskustva, a ja nikad ne lažem. To mi je jedina mana u poslu.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "„Imam kartu. To mi je dovoljno.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sa kraja doka dečak vuče mrežu u kojoj nema ničega, a ipak je vuče ozbiljno, kao da je puna. Savo ga ne gleda, ali mu u prolazu spušta u džep jedan novčić, tako brzo da bi čovek pomislio da mu se pričinilo.",
+          "lead": "Dečak sa mrežom."
+        },
+        {
+          "t": "„Šta je on ulovio?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ništa. Zato je tako ozbiljan.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Savo kaže da nikad ne laže. Ratko kaže da to nije isto što i reći sve.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„A ko je Ratko?“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko je neko koga još nisi video, ali Mina o njemu govori kao o vremenu: kao o nečemu što se ne može zaobići. Savo se smeška, kao da mu je rečenica laskala.",
+          "lead": "Savo se smeška."
+        },
+        {
+          "t": "„Ratko broji, ja prodajem, a svet nekako stane između nas. Odavde na Višu obalu putuje jedna karta na deset godina. Ostali gledaju brod i kažu da je lepo jedro.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "„Deset godina je dug rok.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Hana silazi na dok sa sandukom pod miškom i nestaje među kolibama. Savo širi ruke nad svojom robom, a Mina te vuče za rukav, jer zna da se na pijaci ništa ne dobija džabe.",
+          "lead": "Pijaca u Pesku."
+        }
+      ],
+      "prompt": "Savo širi ruke nad sanducima, a Mina te vuče za rukav.",
+      "choices": [
+        {
+          "id": "s3_perla",
+          "text": "Kupuješ Mini staklenu perlu.",
+          "next": "vece1"
+        },
+        {
+          "id": "s3_med",
+          "text": "Kupuješ teglicu meda za Hanu.",
+          "next": "vece1"
+        },
+        {
+          "id": "s3_gledas",
+          "text": "Ne kupuješ ništa i gledaš kako Savo trguje.",
+          "next": "vece1"
+        }
+      ]
+    },
+    "vece1": {
+      "chapter": "c1",
+      "img": "paluba",
+      "paragraphs": [
+        {
+          "t": "Pesak ostaje iza krme, a ti shvataš da si opet poslednji. Lovro je viknuo da se diže mostić, a ti si tek tada stigao do njega, pa ga sam podižeš i zakačiš. Lovro klima glavom, bez reči, kao da je neka računica izašla.",
+          "tf": "Pesak ostaje iza krme, a ti shvataš da si opet poslednji. Lovro je viknuo da se diže mostić, a ti si tek tada stigla do njega, pa ga sam podižeš i zakačiš. Lovro klima glavom, bez reči, kao da je neka računica izašla.",
+          "lead": "Mostić."
+        },
+        {
+          "t": "„Izvini, kapetane. Opet sam zakasnio.“",
+          "tf": "„Izvini, kapetane. Opet sam zakasnila.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Staklena perla visi Mini oko vrata na koncu. Drži je uz mesec i proverava, kao da bi mesec mogao da se ljuti: perla je plavija od neba.",
+          "lead": "Perla na koncu.",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "Hana prima teglicu meda i prvi put se osmehuje. Odmah je otvara i njime maže Lovrovo koleno, jer kapetan, kaže ona, ceo dan hramlje, a to ne priznaje.",
+          "lead": "Med za koleno.",
+          "if": {
+            "pick": "s3_med"
+          }
+        },
+        {
+          "t": "Savo je za to vreme prodao pet sanduka i jedan osmeh, a Mina je svaki njegov potez zabeležila krečom. Nju je zanimalo samo koliko puta je rekao „ne lažem“. Izbrojala je sedam.",
+          "lead": "Mina i Savo.",
+          "if": {
+            "pick": "s3_gledas"
+          }
+        },
+        {
+          "t": "Sunce klizi ka vodi, a meseci se bledo primiču jedan drugom. Brod škripi tiho, kao stara kuća koja se smiruje pred spavanje. Na pramcu neko pevuši, a neko drugi ga ne prekida.",
+          "lead": "Veče na vodi."
+        },
+        {
+          "t": "„Brod se smirio. Prvi put danas.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Sutra Gvožđe. Gvožđani nikad ne žure, a kad žure, to je zato što su nešto zaboravili.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„Šta ima u Gvožđu?“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ispod cerade neko tiho prebrojava novčiće, pa se predomišlja i broji ponovo. Na pramcu starac vezuje i razvezuje isti čvor, a dvoje mladih deli jednu šolju čaja i ne govori. Svi na brodu nešto drže u rukama, kao da bi im inače pobeglo.",
+          "lead": "Putnici uveče."
+        },
+        {
+          "t": "„Svi nešto drže. Ja držim kartu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina sedi na buretu sa podvučenim nogama i gleda mesece, a kad se okreće ka tebi, lice joj je ozbiljno kao da prelazi preko prava.",
+          "lead": "Mina se okreće."
+        },
+        {
+          "t": "„Dva dlana i po. Ratko kaže da Viša obala ima mesta za četrdeset. Misliš li da je to dovoljno?“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        }
+      ],
+      "prompt": "Mina čeka odgovor, a ruka joj je još ispružena ka mesecima.",
+      "choices": [
+        {
+          "id": "s4_ima",
+          "text": "Kažeš da valjda ima mesta za sve.",
+          "next": "gvozdje"
+        },
+        {
+          "id": "s4_ne",
+          "text": "Kažeš da ne znaš i da ćete videti.",
+          "next": "gvozdje"
+        },
+        {
+          "id": "s4_meseci",
+          "text": "Pokazuješ joj mesece i pitaš koliko je ostalo.",
+          "next": "gvozdje"
+        }
+      ]
+    },
+    "gvozdje": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "gvozdje",
+      "paragraphs": [
+        {
+          "t": "„Rekao si da će biti mesta. Ratko kaže da on ne bi pogodio, pa zato ne kladi.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina",
+          "if": {
+            "pick": "s4_ima"
+          }
+        },
+        {
+          "t": "„Rekao si da ne znaš. Prvi put čujem da odrastao kaže tako. Zapisaću to.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina",
+          "if": {
+            "pick": "s4_ne"
+          }
+        },
+        {
+          "t": "„Dva dlana. Meseci se ne žure, a nama se žuri.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina",
+          "if": {
+            "pick": "s4_meseci"
+          }
+        },
+        {
+          "t": "Gvožđe je selo od starih trupova: crveni, zarđali brodovi vezani lancima u krug, a između njih tanke gvozdene mostine po kojima odjekuje svaki korak. Vazduh miriše na rđu i na ribu, a sa lanaca vise mreže sa kojih kaplje svetlost.",
+          "lead": "Selo od starih trupova."
+        },
+        {
+          "t": "„Ovo je više grad nego selo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Po palubama starih trupova ljudi žive kao u ulicama: sa prozorima, saksijama i psima, a sve se blago njiše, kao da je grad zaspao na talasu. Deca preskaču sa broda na brod, preko lanaca, i niko ih ne zove.",
+          "lead": "Ulice od trupova."
+        },
+        {
+          "t": "„U Gvožđu svaka ulica ima svoj lanac. Kad lanac popusti, ulica odluta sa talasom, pa je posle traže po moru.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„A ljudi? Oni odlutaju sa ulicom?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tek pošto se ulica izvini.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "Lovro kaže da brod stoji u Gvožđu do sumraka, jer se ovde menja užad, a posao sa Gvožđanima ne ide brzo. Putnici se razilaze po mostinama kao deca po dvorištu.",
+          "lead": "Brod stoji do sumraka."
+        },
+        {
+          "t": "„Do sumraka je dugo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Lekarka Hana uzima svoj drveni sanduk i staje na mostić. Hoda brzo, kao neko koga čekaju, a pletenicu je omotala oko vrata da joj ne smeta.",
+          "lead": "Hana polazi."
+        },
+        {
+          "t": "„U Gvožđu je apotekar koji mi duguje flašicu leka protiv groznice. Na Višoj obali nema lekara za tri sela. Treba mi neko ko ume da nosi i da ćuti.“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana"
+        }
+      ],
+      "prompt": "Hana stoji na mostiću i čeka, a Mina već gleda u lance.",
+      "choices": [
+        {
+          "id": "s5_sanduk",
+          "text": "Nosiš Hanin sanduk.",
+          "next": "mostic"
+        },
+        {
+          "id": "s5_mina",
+          "text": "Vodiš Minu, da ne zaluta po lancima.",
+          "next": "mostic"
+        },
+        {
+          "id": "s5_pijaca",
+          "text": "Ideš sam na pijacu, a Hana neka krene bez tebe.",
+          "textf": "Ideš sama na pijacu, a Hana neka krene bez tebe.",
+          "next": "mostic"
+        }
+      ]
+    },
+    "mostic": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "Sanduk je teži nego što izgleda, a apotekar duže broji nego što prodaje. Hana ti drži vrata, ti držiš sanduk, i nekako se, između dva lanca, nađete sa flašicom i sa modricom na kuku. Usput Hana priča o kostima, kao da priča o prijateljima.",
+          "lead": "Sa Hanom u Gvožđu.",
+          "if": {
+            "pick": "s5_sanduk"
+          }
+        },
+        {
+          "t": "Mina se drži za tvoj rukav i hoda tako da ne gazi na spojeve lanaca. Za svaki spoj kaže po jedan broj, a ti brojiš s njom. Hana se vraća sa flašicom i kaže jedno suvo „hvala“, što je kod nje način da kaže mnogo.",
+          "lead": "Sa Minom po lancima.",
+          "if": {
+            "pick": "s5_mina"
+          }
+        },
+        {
+          "t": "Na pijaci u Gvožđu kupuješ šaku suvih smokava i slušaš starca koji plete mrežu i ne prestaje da priča. Kaže da Viša obala svaku plimu prima manje ljudi, a da se mesta nikad ne objavljuju naglas.",
+          "lead": "Pijaca u Gvožđu.",
+          "if": {
+            "pick": "s5_pijaca"
+          }
+        },
+        {
+          "t": "Sunce zalazi iza zarđalih trupova, a Lovro sa broda viče da je vreme. Mostić je već do pola podignut kad shvataš da si opet poslednji. Uz krmu, u senci, nešto se miče: žena vodi dečaka za ruku, a starica nosi zavežljaj, i sve troje se penju krmenom merdevinom, brzo i bez zvuka.",
+          "lead": "Sumrak u Gvožđu."
+        },
+        {
+          "t": "„Kapetane, neko se penje na krmu!“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na doku, pored tvog mostića, stoji Savo sa podignutom šakom, kao da nekoga pozdravlja ili nešto blagosilja.",
+          "lead": "Savo na doku."
+        },
+        {
+          "t": "„Ne gledaj me tako. Ja ne lažem.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "„Čiji su to ljudi?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Putnici, kao i ti. Samo što oni ne vole da ih gleda neko koga ne poznaju.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "Dižeš mostić, drugi put zaredom poslednji. Lovro ne kaže ništa, samo spušta kapu preko očiju. Na krmi žena sa dečakom stoji ispod cerade i ne zna kuda da pogleda, a starica brzo namešta zavežljaj, kao da može da ga sakrije.",
+          "lead": "Mostić, opet."
+        },
+        {
+          "t": "Ispod cerade je mrak, a u mraku se čuje samo disanje: tiho, ujednačeno, kao da su odavno naučili da dišu bez zvuka. Dečak gleda u tebe, a ne trepće.",
+          "lead": "Disanje u mraku."
+        }
+      ],
+      "prompt": "Mostić je podignut, a na krmi neko čeka da neko nešto kaže.",
+      "choices": [
+        {
+          "id": "s6_zavezljaj",
+          "text": "Prilaziš i pomažeš starici sa zavežljajem.",
+          "next": "kajuta"
+        },
+        {
+          "id": "s6_klimas",
+          "text": "Klimaš dečaku glavom i ostaješ na mostiću.",
+          "next": "kajuta"
+        },
+        {
+          "id": "s6_cuti",
+          "text": "Okrećeš se ka Lovru, kao da ništa nisi video.",
+          "next": "kajuta"
+        }
+      ]
+    },
+    "kajuta": {
+      "chapter": "c2",
+      "img": "kajuta",
+      "paragraphs": [
+        {
+          "t": "Zavežljaj je lakši nego što izgleda, a unutra nešto zvecka: starica kaže da su to tegle, i prvi put se osmehuje. Dečak te posmatra ozbiljno, kao Mina.",
+          "lead": "Zavežljaj.",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "Dečak ti klima nazad, ozbiljno, kao da je dogovor sklopljen. Starica ga uzima za ruku i uvodi ispod cerade.",
+          "lead": "Dečak klima.",
+          "if": {
+            "pick": "s6_klimas"
+          }
+        },
+        {
+          "t": "Lovro ne pita šta si gledao. Na krmi se neko tiho nasmeje i prestane, a ceradu navuku do kraja.",
+          "lead": "Cerada.",
+          "if": {
+            "pick": "s6_cuti"
+          }
+        },
+        {
+          "t": "Kajuta je niska i žuta od lampe. Na zidu visi spisak mesta: četrdeset redova, uz svako ime sitna crta tušem, a uz neka i po jedna reč. Pored jednog piše „lekarka“, pored drugog „krpač“, pored trećeg samo „kasno“. Ispod lampe sedi Ratko, nizak čovek sa rukama crnim od katrana i čelom koje se stalno nabira.",
+          "lead": "Kajuta sa spiskom."
+        },
+        {
+          "t": "„Tu su svi koji putuju?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dvoje su sišli u Gvožđu. Ostalo je trideset osam imena, a ja na palubi brojim četrdeset i jednu osobu. Ili ne umem da brojim, a ne umem samo kad sam umoran.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko"
+        },
+        {
+          "t": "„A šta se dešava kad se brojevi ne slože?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Kapija broji ljude, ne imena. Staro pravilo broda kaže da tada odlučuje onaj ko je poslednji stupio na palubu. Taj nikome ništa ne duguje.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko"
+        },
+        {
+          "t": "Ratko pritiska prstom poslednji red na spisku, pa gleda tebe, pa opet spisak. Poslednje ime je tvoje, a pored njega stoji oznaka koju nisi primetio kad si se upisivao: „kasno“. U kajuti je tiho kao u zatvorenoj kutiji.",
+          "tf": "Ratko pritiska prstom poslednji red na spisku, pa gleda tebe, pa opet spisak. Poslednje ime je tvoje, a pored njega stoji oznaka koju nisi primetila kad si se upisivao: „kasno“. U kajuti je tiho kao u zatvorenoj kutiji.",
+          "lead": "Poslednji red."
+        },
+        {
+          "t": "„A šta je sa onim ko ostane van?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Čeka sledeću plimu. Jedanaest godina. Neki to prežive, a neki se za to vreme naviknu na more.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko"
+        },
+        {
+          "t": "„Jedanaest godina je mnogo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Pravilo nije moje. Ja ga samo znam, kao što se zna gde je rupa u podu. Nikad ga nismo koristili, a plime je bilo dve.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko"
+        },
+        {
+          "t": "Ratko mazne prstom po spisku, pa po šavu u daskama iznad glave, kao da su to dva iste vrste problema. Dvanaest godina je krpač, a tri računovođa, i oba posla se, kaže, svode na isto: gledati gde curi.",
+          "lead": "Gde curi."
+        }
+      ],
+      "prompt": "Ratko drži olovku iznad spiska i čeka.",
+      "choices": [
+        {
+          "id": "s7_krmena",
+          "text": "Pominješ šta si video na krmenoj merdevini.",
+          "next": "horizont"
+        },
+        {
+          "id": "s7_cuti",
+          "text": "Ne pominješ ništa i gledaš spisak.",
+          "next": "horizont"
+        },
+        {
+          "id": "s7_pomoc",
+          "text": "Nudiš da zajedno prebrojite palubu.",
+          "next": "horizont"
+        }
+      ]
+    },
+    "horizont": {
+      "chapter": "c2",
+      "img": "paluba",
+      "paragraphs": [
+        {
+          "t": "„Ceradu na krmi nisam dizao. Ne dižem ništa što neko drži zatvoreno, dok mi ne zatreba.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko",
+          "if": {
+            "pick": "s7_krmena"
+          }
+        },
+        {
+          "t": "Ratko spušta olovku bez reči, a kap katrana ostaje na spisku kao mala senka. Ti izlaziš na palubu sa osećanjem da si nešto zaboravio.",
+          "tf": "Ratko spušta olovku bez reči, a kap katrana ostaje na spisku kao mala senka. Ti izlaziš na palubu sa osećanjem da si nešto zaboravila.",
+          "lead": "Na palubu.",
+          "if": {
+            "pick": "s7_cuti"
+          }
+        },
+        {
+          "t": "Brojite zajedno: Ratko naglas, ti prstom po vazduhu. Svaki put dođete do istog broja i oboje ga ne volite. Na izlasku Ratko kaže da je brojanje, u stvari, samo pažnja, i ništa više.",
+          "lead": "Na palubu.",
+          "if": {
+            "pick": "s7_pomoc"
+          }
+        },
+        {
+          "t": "Veče je zaplovilo palubom. Meseci su se primakli, dva prsta razmaka, a njihova bleda svetlost pada na jedra i čini ih providnim.",
+          "lead": "Veče na palubi."
+        },
+        {
+          "t": "„Meseci su sve bliže.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Tamo! Beli čamac sa fenjerom. Zavodov je. Oni uvek dolaze pred plimu, da prebroje ko stiže.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Gde? Ne vidim ništa.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na horizontu, tanak kao crta kredom, klizi jedan beli čamac. Fenjer na njegovom jarbolu gori kao mala, uporna zvezda. Lovro ga gleda dugo, a ruke mu na kormilu nisu sasvim mirne.",
+          "lead": "Čamac na horizontu."
+        },
+        {
+          "t": "„Zavod voli da dođe kad brod ne očekuje. Dobro je što ga ja očekujem uvek, pa me nikad ne iznenadi.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„A šta bi Zavod tražio od nas?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zavod broji ljude, a ja brojim bolesne. Na Višoj obali biću jedina za tri sela. Zato me ne pitaj da li me je strah, nego da li mogu da pomognem.“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana"
+        },
+        {
+          "t": "„Šta Zavod radi kad prebroji?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ništa. Zapiše. Ratko kaže da je to najgore što neko može da uradi, jer se ne zna šta je zapisao.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "Hana drži sanduk u krilu, kao dete koje spava. Mina te vuče za rukav ka ogradi, a čamac u daljini ne menja kurs, ni brže ni sporije, samo pliva.",
+          "lead": "Hana i Mina."
+        }
+      ],
+      "prompt": "Čamac Zavoda kliza po horizontu, a Mina i Hana svaka vuče na svoju stranu.",
+      "choices": [
+        {
+          "id": "s8_dvogled",
+          "text": "Uzimaš Lovrov dvogled i gledaš čamac.",
+          "next": "burad"
+        },
+        {
+          "id": "s8_mina",
+          "text": "Podižeš Minu da bolje vidi.",
+          "next": "burad"
+        },
+        {
+          "id": "s8_hana",
+          "text": "Sedaš do Hane i pitaš je za Višu obalu.",
+          "next": "burad"
+        }
+      ]
+    },
+    "burad": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "burad",
+      "paragraphs": [
+        {
+          "t": "U dvogledu je čamac pun belih košulja i jedne lampe. Ljudi u njemu ne govore, samo broje. Spuštaš dvogled pre nego što neko pogleda tebe.",
+          "lead": "Jutro, Burad.",
+          "if": {
+            "pick": "s8_dvogled"
+          }
+        },
+        {
+          "t": "Mina je laka, a ti je držiš za pojas dok se naginje preko ograde. Čamac je još samo tačka, ali ona kaže da u njemu ima četiri čoveka, a ti joj veruješ.",
+          "lead": "Jutro, Burad.",
+          "if": {
+            "pick": "s8_mina"
+          }
+        },
+        {
+          "t": "Hana ti priča o tri sela u kojima nema nikoga ko zna da namesti slomljenu kost. Priča mirno, bez molbe, a tebi je teže što je tako mirna.",
+          "lead": "Jutro, Burad.",
+          "if": {
+            "pick": "s8_hana"
+          }
+        },
+        {
+          "t": "Burad je ostrvo od bureta: hiljade praznih i punih bureta vezanih mrežama, sa slanim poljima po vrhu. Ovde brod uzima vodu i užad, a ostrvo se njiše kao da diše. Meseci su se skoro dotakli.",
+          "lead": "Ostrvo od bureta."
+        },
+        {
+          "t": "„Ostrvo diše. Nikad nisam video tako nešto.“",
+          "tf": "„Ostrvo diše. Nikad nisam videla tako nešto.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na jednom buretu, kao da je stigao pre jutra, sedi Savo. Brži čamac, kaže njegov osmeh, a kad ti priđe, osmeh nestaje i ostaje samo čovek.",
+          "lead": "Savo na ostrvu."
+        },
+        {
+          "t": "„Savo? Kako si stigao pre nas?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Prodao sam mesto u Gvožđu. Dva su bila prazna, a žena je tražila samo jedno, pa sam joj prodao jedno. Ostalo je došlo uz nju. Ne lažem: nikad nisam rekao da je mesto za troje.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "„A Ratkov spisak?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Spisak ne zna za njih. Zato kapija vidi četrdeset i jednu glavu, a samo četrdeset mesta.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "„Zašto mi to govoriš tek sada?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Zato što ne lažem, ali ne volim kad se pitanje postavi prerano. Ono sazri samo od sebe, kao smokva.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo"
+        },
+        {
+          "t": "Na krmi, uz ogradu, stoji žena sa dečakom za ruku i starica sa zavežljajem. Sena je mlada i umorna, a dečak Jaro ima šest godina i ozbiljno lice. Gledaju ostrvo kao da ga gledaju poslednji put.",
+          "lead": "Porodica sa krme."
+        },
+        {
+          "t": "„Nismo hteli da se krijemo. Savo je rekao da je bolje tako dok ne stignemo.“",
+          "lead": "Šta Sena kaže.",
+          "who": "Sena"
+        },
+        {
+          "t": "„Ostanite tu, uz ogradu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sena ne podiže pogled sa palube. Jaro, pored nje, broji bureta koja plove kraj broda, naglas, onako kako to rade deca kad ne mogu ništa drugo.",
+          "lead": "Jaro broji."
+        },
+        {
+          "t": "Starica sa zavežljajem sedi na svežnju užadi i ne kaže ništa. Ruke su joj nežne i izborane, a kad se Jaro okrene, ona ga dodirne po kosi, kratko, kao da proverava da li je tu.",
+          "lead": "Starica ćuti."
+        }
+      ],
+      "prompt": "Savo čeka da vidi kako ćeš primiti ono što je rekao, a Sena gleda u palubu.",
+      "choices": [
+        {
+          "id": "s9_zasto",
+          "text": "Pitaš Sava zašto je to uradio.",
+          "next": "oluja"
+        },
+        {
+          "id": "s9_cenu",
+          "text": "Pitaš Sava za koliko je prodao mesto.",
+          "next": "oluja"
+        },
+        {
+          "id": "s9_brod",
+          "text": "Ne odgovaraš i vraćaš se na brod.",
+          "next": "oluja"
+        }
+      ]
+    },
+    "oluja": {
+      "chapter": "c3",
+      "img": "jarbol",
+      "paragraphs": [
+        {
+          "t": "„Zato što je žena tri puta dolazila kod mene, a ja volim kad neko dođe tri puta. Ostalo ti ne mogu reći.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo",
+          "if": {
+            "pick": "s9_zasto"
+          }
+        },
+        {
+          "t": "„Za jedno mesto, ni kovanicu više. Možda sam trgovac, ali nisam lopov.“",
+          "lead": "Šta Savo kaže.",
+          "who": "Savo",
+          "if": {
+            "pick": "s9_cenu"
+          }
+        },
+        {
+          "t": "Savo ostaje na buretu sa rukama na kolenima, kao čovek koji je rekao dovoljno i čeka da mu neko kaže koliko je to.",
+          "lead": "Savo ćuti.",
+          "if": {
+            "pick": "s9_brod"
+          }
+        },
+        {
+          "t": "Posle podne vetar menja ton: ne duva više ravno, nego šiba. Zapadni deo neba boje je modrice, jedra se pune i teraju brod ka Višoj obali brže nego što bi iko poželeo.",
+          "lead": "Vetar menja ton."
+        },
+        {
+          "t": "„Vetar je promenio smer!“",
+          "who": "Ti"
+        },
+        {
+          "t": "Talasi prestaju da budu talasi i postaju zidovi, sivi i spori, a između njih je brod samo pokret. Jedra se napinju tako jako da trešti ceo jarbol. Na pramcu neko vrišti ime koje se ne čuje, a Mina se drži za bure kao za ostatak sveta.",
+          "lead": "Talasi."
+        },
+        {
+          "t": "„Držite se za nešto!“",
+          "who": "Ti"
+        },
+        {
+          "t": "Kiša dolazi odjednom, kao da je neko okrenuo posudu. Palubom trče ljudi, a Ratko vuče uže sa jednog kraja, dok se glavno jedro napinje i škripi kao da hoće da pukne.",
+          "lead": "Kiša."
+        },
+        {
+          "t": "„Kapetane, šta da radim?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Spuštamo gornje jedro! Dobro je što pada: bar neće trebati da perem palubu.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "Greda koja drži jedro puca sa treskom i klati se nad palubom, a onda udara kapetana u rame. Lovro pada na kolena, a kapa mu leti u more i okreće se u vodi kao mali crveni cvet.",
+          "lead": "Greda."
+        },
+        {
+          "t": "„Ne pomeraj ga! Rame je slomljeno, a ja imam samo dve ruke!“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana"
+        },
+        {
+          "t": "Greda se još njiše iznad vas, Lovro leži na mokroj dasci, a Mina stoji nasred kiše i ne trči nigde, jer niko nije rekao kuda.",
+          "lead": "Greda se njiše."
+        }
+      ],
+      "prompt": "Greda se njiše iznad palube, a kiša ne prestaje.",
+      "choices": [
+        {
+          "id": "s10_uze",
+          "text": "Hvataš uže grede i držiš.",
+          "next": "pravilo"
+        },
+        {
+          "id": "s10_lovro",
+          "text": "Pomažeš Hani da pridrži Lovra.",
+          "next": "pravilo"
+        },
+        {
+          "id": "s10_mina",
+          "text": "Odvlačiš Minu ispod cerade.",
+          "next": "pravilo"
+        }
+      ]
+    },
+    "pravilo": {
+      "chapter": "c3",
+      "img": "kajuta",
+      "paragraphs": [
+        {
+          "t": "Dlanovi te peku od užeta, a Ratko ti, ne pitajući, prevezuje kožu krpom natopljenom katranom. Greda je vezana, ali ruke još pamte njenu težinu.",
+          "lead": "U kajuti.",
+          "if": {
+            "pick": "s10_uze"
+          }
+        },
+        {
+          "t": "Lovro je bled, a ti si mu držao rame. Sada te drži za rukav jedinom rukom koja mu radi, kao da se plaši da ne odeš.",
+          "tf": "Lovro je bled, a ti si mu držaola rame. Sada te drži za rukav jedinom rukom koja mu radi, kao da se plaši da ne odeš.",
+          "lead": "U kajuti.",
+          "if": {
+            "pick": "s10_lovro"
+          }
+        },
+        {
+          "t": "Mina se tek sada otima iz tvoje ruke, mokra do kože i ljuta što je odvučena. Ipak ostaje blizu, kao da će, ako se makne, nešto propustiti.",
+          "lead": "U kajuti.",
+          "if": {
+            "pick": "s10_mina"
+          }
+        },
+        {
+          "t": "Lovro leži na klupi sa rukom uz grudi, a Hana vezuje rame trakama platna. Kapetan se smeši, ali bez šale: prvi put ga čuješ bez nje. Kroz mali prozor vidi se zapad, a meseci su se skoro poklopili.",
+          "lead": "Kapetan ležeći."
+        },
+        {
+          "t": "„Kapetane, kako je rame?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„{voc}, Ratko ti je rekao pravilo. Danas ti ga ponavljam bez šale: nas je više nego mesta, a poslednji na brodu kaže ko ostaje van. To si ti.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„A šta Zavod radi sa onima koji stignu, a nema mesta?“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Ništa. Kapija ne gura nikoga. Samo ne otvara.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "Ratko gleda u spisak, Hana u kapetana, Mina u tebe. Niko ne traži ništa naglas, a ipak čuješ da svi čekaju. Sa krme dolazi tiho zvono, kao da je neko udario po praznom buretu: kapija je u vidiku.",
+          "lead": "Svi čekaju."
+        },
+        {
+          "t": "„Ja samo brojim. Brojim i kad ne želim.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko"
+        },
+        {
+          "t": "„Ja samo lečim. Odluke nisu moj posao.“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana"
+        },
+        {
+          "t": "„Ni ja nisam odlučivao, a ipak smo ovde.“",
+          "tf": "„Ni ja nisam odlučivala, a ipak smo ovde.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Lovro zatvara oči, pa ih otvara. Nešto u njegovom licu popušta: čovek koji deset godina nosi pravilo kao šalu, a sada mora da ga izgovori ozbiljno.",
+          "lead": "Lovro zatvara oči."
+        },
+        {
+          "t": "Mina ne kaže ništa. Kredu drži u šaci tako čvrsto da joj belasaju zglobovi, a kad te pogleda, ne traži ništa: samo pazi da ne propusti trenutak u kojem ćeš nešto reći.",
+          "lead": "Mina ćuti."
+        }
+      ],
+      "prompt": "Zvono sa kapije odjekuje, a u kajuti niko ne priča.",
+      "choices": [
+        {
+          "id": "s11_ratko",
+          "text": "Tražiš od Ratka da još jednom prebroji.",
+          "next": "odluka"
+        },
+        {
+          "id": "s11_sena",
+          "text": "Odlaziš na krmu, do porodice sa merdevine.",
+          "next": "odluka"
+        },
+        {
+          "id": "s11_hana",
+          "text": "Pitaš Hanu šta bi bilo na Višoj obali bez nje.",
+          "next": "odluka"
+        }
+      ]
+    },
+    "odluka": {
+      "chapter": "c4",
+      "showChapter": true,
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "„Prebrojao sam do glave: četrdeset i jedna. Kapija ne prašta brojanje.“",
+          "lead": "Šta Ratko kaže.",
+          "who": "Ratko",
+          "if": {
+            "pick": "s11_ratko"
+          }
+        },
+        {
+          "t": "„Tri sela, jedan sanduk i jedna lekarka. Ne tražim da mene biraš. Samo da znaš koliko je to.“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana",
+          "if": {
+            "pick": "s11_hana"
+          }
+        },
+        {
+          "t": "„Mi nismo tražili ništa. Ako treba, sići ćemo sva troje. Ne rastavljamo se.“",
+          "lead": "Šta Sena kaže.",
+          "who": "Sena",
+          "if": {
+            "pick": "s11_sena"
+          }
+        },
+        {
+          "t": "Viša obala u sumrak je nisko, tamno zeleno ostrvo, a kapija na njoj dva uska stuba od belog kamena sa lukom od užadi. Iznad stubova, nisko, oba meseca leže jedan na drugom kao jedna velika bela zenica. Voda oko stubova raste sporo, zub po zub.",
+          "lead": "Kapija."
+        },
+        {
+          "t": "„Evo je. To je Viša obala.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sa kapije dopire rog, jedan ton, pa drugi, a zatim glas koji ne traži odgovor nego broj: četrdeset mesta, koliko vas je. Dugi Dah staje na pola dužine broda od stubova. Lovro klima glavom prema tebi, jer drugo ne može.",
+          "lead": "Rog sa kapije."
+        },
+        {
+          "t": "Brod je mokar i miriše na so i drvo. Jedra vise obešena kao odela posle bdenja, a Ratko drži spisak obema rukama, kao da bi mogao da odleti. Mina je spustila kredu u krilo. Hana drži sanduk pred sobom, kao štit.",
+          "lead": "Brod posle oluje."
+        },
+        {
+          "t": "„Dobro je što nema vetra. Barem ne moram da vičem.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„Ne moraš da vičeš, kapetane.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na palubi je tišina u kojoj se čuju sve sitnice: voda o bokove, Ratkova olovka, Minina kreda. Sena drži Jarovu ruku. Savo nije ovde, ali njegovo „ne lažem“ lebdi nad palubom kao pitanje koje niko ne postavlja.",
+          "lead": "Tišina na palubi."
+        }
+      ],
+      "prompt": "Sa kapije čeka glas, a na palubi svi gledaju u tebe.",
+      "choices": [
+        {
+          "id": "od_a",
+          "text": "Kažeš da ti ostaješ van, u malom čunu.",
+          "next": "kraj_a1",
+          "w": {
+            "a": 1
+          }
+        },
+        {
+          "id": "od_b",
+          "text": "Kažeš da porodica sa merdevine ostaje van.",
+          "next": "kraj_b1",
+          "w": {
+            "b": 1
+          }
+        },
+        {
+          "id": "od_c",
+          "text": "Kažeš da ulaze svih četrdeset i jedno.",
+          "next": "kraj_c1",
+          "w": {
+            "c": 1
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "Ćutiš i čekaš da neko drugi progovori.",
+        "next": "kraj_c1",
+        "w": {
+          "c": 1
+        },
+        "after": 30
+      }
+    },
+    "kraj_a1": {
+      "chapter": "c4",
+      "img": "more",
+      "paragraphs": [
+        {
+          "t": "Spuštaju čun uz bok Dugog Daha, a Ratko drži uže dok mu ruke ne zadrhte. U čunu su veslo, bure vode, ćebe i fenjer. Kapija je dovoljno blizu da joj čuješ rog, a dovoljno daleko da ti ostane samo more.",
+          "lead": "Čun uz bok."
+        },
+        {
+          "t": "„Dovoljno je, Ratko. Pusti uže.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Niko ne diže glas. Ratko prepisuje poslednji red na spisku, pa ga precrtava i gleda u stranu, a Lovro, na klupi, spušta kapu preko očiju. Sena stoji sa Jarom i ne zna da li sme da zahvali ili ne.",
+          "lead": "Ratko precrtava."
+        },
+        {
+          "t": "„Ako tebe nema, ko je poslednji? Nisam računala da neko može da ostane napolju.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Ni ja nisam računao na to.“",
+          "tf": "„Ni ja nisam računala na to.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina ti trpa u šaku komad krede i kaže da je to za sve što se ne pomera. Brojaćeš more, kaže, jer se more pomera, pa će ti biti zanimljivo.",
+          "lead": "Kreda za more.",
+          "if": {
+            "pick": "s1_mina"
+          }
+        },
+        {
+          "t": "„Brojaću more.“",
+          "who": "Ti",
+          "if": {
+            "pick": "s1_mina"
+          }
+        },
+        {
+          "t": "Staklena perla je na tvom dlanu: Mina ju je skinula sa vrata i stisnula ti je u šaku, a oči joj sjaje kao da u njima gledaju oba meseca.",
+          "lead": "Perla.",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "„Čuvaću je.“",
+          "who": "Ti",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "„Kad stignem, napisaću pismo i poslaću ga Zavodovim čamcem. Ako ga ne prime, napisaću drugo.“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana"
+        },
+        {
+          "t": "„Pišite. Odgovoriću, ako pismo stigne.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dobar čvor, onaj iz Peska. Držaće i čun. A ako pukne, dobro je što je more mokro: bar nećeš pasti na suvo.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_cvor"
+          }
+        },
+        {
+          "t": "Hana se saginje preko ograde i spušta ti u čun zavijen komad platna: hleb, so i flašicu leka protiv groznice. Ne objašnjava. Lekarka ne pita da li je lek potreban, samo ga daje.",
+          "lead": "Hana daje."
+        },
+        {
+          "t": "„Hvala, Hana.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Veslo je hladno i glatko, a kad čun dodirne vodu, brod iznad tebe postaje visok kao zid. Dugi Dah ulazi između dva bela stuba, a kapija ga guta kao veliki, spor udisaj. Neko maše sa krme, pa još neko.",
+          "lead": "Brod ulazi."
+        },
+        {
+          "t": "„Pozdravite sve.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ostaješ sa veslom i s dva meseca koja se spajaju iznad tebe. Čuješ rog, jednom, pa još jednom, pa se kapija zatvara kao vrata na kojima nema nikakvih reči.",
+          "lead": "Kapija se zatvara."
+        },
+        {
+          "t": "„Idite. Ja ću već nekako.“",
+          "who": "Ti"
+        }
+      ],
+      "next": "kraj_a2"
+    },
+    "kraj_a2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Kiša je prestala, a more je glatko kao list papira. Plima te podiže polako i bez zvuka, kao da te neko nosi na dlanu. Svetlost dva meseca pada na vodu kao na jedan beli tanjir.",
+          "lead": "Posle kiše."
+        },
+        {
+          "t": "Pada noć, ali nije tamna: meseci stoje jedan preko drugog i bacaju svetlost kao jedna lampa. Piješ vodu iz bureta, ćebe je grubo i miriše na brod. Mislio si da ćeš se plašiti, a samo slušaš kako voda dodiruje drvo.",
+          "tf": "Pada noć, ali nije tamna: meseci stoje jedan preko drugog i bacaju svetlost kao jedna lampa. Piješ vodu iz bureta, ćebe je grubo i miriše na brod. Mislila si da ćeš se plašiti, a samo slušaš kako voda dodiruje drvo.",
+          "lead": "Noć na čunu."
+        },
+        {
+          "t": "„Mirno je. Mirnije nego što sam mislio.“",
+          "tf": "„Mirno je. Mirnije nego što sam mislila.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Staklenu perlu držiš uz mesec, kao što je držala Mina, i čekaš da se promeni. Ne menja se, ali je iste boje kao voda.",
+          "lead": "Perla uz mesec.",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "Misliš na brod koji je sada u luci, na Hanin sanduk na stolu, na Lovrovo rame i na Ratkov spisak sa još jednom crtom. Misli idu kroz glavu kao ribe kroz mrežu: neke ostaju, a većina prolazi.",
+          "lead": "Misli na brodu."
+        },
+        {
+          "t": "„Stići će. Moraju da stignu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Pre sna prelaziš dlanom preko drveta čuna: so, tragovi noža, jedan mali krug ugreban u klupi. Neko je ovde nekad čekao, pa mu je dosadilo, pa je nacrtao krug.",
+          "lead": "Krug u klupi."
+        },
+        {
+          "t": "„Neko je ovde već čekao.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Brojiš kao što bi brojala Mina: jedan čun, jedno veslo, jedan putnik, dva meseca koja više nisu dva. Ratko bi rekao da se to ne računa, a Mina da se računa sve.",
+          "lead": "Brojiš."
+        },
+        {
+          "t": "U kasnu noć čuješ glas sa Više obale, daleko i jedva čujan: neko peva, a pesma ide uz vodu. Ne razumeš reči, ali razumeš da ih pevaju za one koji su napolju.",
+          "lead": "Pesma sa obale."
+        },
+        {
+          "t": "„Pevajte. Ja slušam.“",
+          "who": "Ti"
+        },
+        {
+          "t": "U svitanje, tamo gde je more mirno kao posle kiše, vidiš jedno malo jedro. Ne znaš čije je. Podižeš veslo, a jedro se okreće ka tebi.",
+          "lead": "Jedro u svitanje."
+        }
+      ],
+      "end": "a"
+    },
+    "kraj_b1": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Rog sa kapije odgovara na tvoje reči jednim dugim tonom. Ratko zapisuje, a olovka mu cvili po spisku. Okreće papir ka tebi bez ijedne reči: trideset osam imena i dva prazna mesta, koja niko neće popuniti.",
+          "lead": "Rog odgovara."
+        },
+        {
+          "t": "„Zapiši, Ratko.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sena ne govori. Uzima Jara za ruku, staricu ispod ruke i ide ka čunu koji spuštaju uz bok. Dečak se okreće i gleda tebe, ozbiljno kao Mina, bez ijedne optužbe: samo gleda.",
+          "lead": "Porodica silazi."
+        },
+        {
+          "t": "„Ponesite ćebad. Ne zaboravite ćebad.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dečak Jaro tiho pita da li će se videti kapija iz čamca. Ratko mu kaže da hoće, tokom cele noći, i da će im, ako treba, svetlo ostati upaljeno.",
+          "lead": "Jaro pita."
+        },
+        {
+          "t": "Starica ti ostavlja zavežljaj sa teglama: neka ostane na brodu, kaže, jer njima neće trebati. Ruka joj je topla i vlažna.",
+          "lead": "Zavežljaj.",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "„Hvala. Čuvaću ih.“",
+          "who": "Ti",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "„Ratko kaže da je jedno mesto manje jedna glava manje. Ali ja sam izbrojala: tri su glave.“",
+          "lead": "Šta Mina kaže.",
+          "who": "Mina"
+        },
+        {
+          "t": "„Znam, Mina. Znam.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko, ne dižući pogled, ubacuje u čun svoj džepni nož i klupko katranisanog kanapa. Za šavove, mrmlja, a čelo mu je namršteno više nego obično.",
+          "lead": "Ratko daje."
+        },
+        {
+          "t": "„Neka ponesu i lampu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Iz mraka izranja mali čamac, a u njemu Savo. Kaže da može da ih odveze do Burada, ali ne i da ih vrati na Višu obalu. Ni ovog puta ne laže.",
+          "lead": "Savo u čamcu."
+        },
+        {
+          "t": "„Jaro je zapamtio put do Burada. Brojao je bureta.“",
+          "lead": "Šta Sena kaže.",
+          "who": "Sena"
+        },
+        {
+          "t": "„Neka vas Savo dobro vodi.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Dugi Dah polako ulazi između dva bela stuba. Iza njih, na vodi, ostaje mali čamac sa fenjerom, sve manji, dok ga plima ne podigne za jedan zub.",
+          "lead": "Brod ulazi."
+        }
+      ],
+      "next": "kraj_b2"
+    },
+    "kraj_b2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Viša obala uveče miriše na vlažan kamen i hleb. Po obali gore lampe, a putnici silaze jedan po jedan, tiho, kao da ulaze u kuću u kojoj neko spava. Hana odmah nalazi mesto za sanduk, na stolu kraj kapije, i prvi pacijent već čeka.",
+          "lead": "Viša obala."
+        },
+        {
+          "t": "„Treba li ti pomoć oko sanduka, Hana?“",
+          "who": "Ti"
+        },
+        {
+          "t": "U kapijskoj luci, pod lampama, nekoliko ljudi sa Više obale čeka sa ćebadima i hlebom. Niko ne pita ko je ostao napolju. Pitaju samo da li je neko bolestan.",
+          "lead": "Dočekuju ih."
+        },
+        {
+          "t": "Hana prvom pacijentu pregleda zglob, mrmlja nešto sebi i vezuje ga udlagom. Pacijent je dečak od možda šest godina i ne ume da ne gleda ka kapiji.",
+          "lead": "Prvi pacijent."
+        },
+        {
+          "t": "„Boli li?“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko prebrojava još jednom: trideset osam na spisku i trideset osam na obali. Ne diže pogled, a olovku drži kao da je teža nego jutros.",
+          "lead": "Ratkov spisak."
+        },
+        {
+          "t": "Lovro sedi na klupi na doku sa rukom u povezu i gleda kapiju. Ne priča šale, a kad prolaziš pored njega, samo ti dodirne rukav.",
+          "lead": "Lovro na klupi."
+        },
+        {
+          "t": "„Odmori se, kapetane.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Tegle iz starčinog zavežljaja stoje pored tebe na doku, a u jednoj je smokva. Otvaraš je, jer ne možeš drugačije, i smokva je slatka kao sve što je nečije.",
+          "lead": "Tegla.",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "Mina stoji na kraju doka sa kredom i broji. Kad je pitaš šta, ne okreće se: „Jedan fenjer. Jedan je više nego nula.“ Daleko, tek kao tačka, još se vidi svetlost čamca.",
+          "lead": "Mina na doku."
+        },
+        {
+          "t": "„Brojaj i za mene.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Na obali neko počinje da peva staru pesmu o plimi. Pesma ide preko vode, možda do čamca, a možda samo do sledećeg dana.",
+          "lead": "Pesma na obali."
+        },
+        {
+          "t": "„Čuje li se do čamca?“",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina spušta kredu pored tvoje noge. Na dasci doka crta krug, a u njemu jednu crticu. „Sutra ćemo opet“, kaže, i ne objašnjava šta, a ti ne pitaš.",
+          "lead": "Krug na dasci."
+        }
+      ],
+      "end": "b"
+    },
+    "kraj_c1": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Odgovaraš glasno, brojem koji svi na palubi već znaju: četrdeset i jedno. Glas ti ne drhti, a čudno zvuči u tišini, kao da si bacio kamen u bunar i čekaš da čuješ dno.",
+          "tf": "Odgovaraš glasno, brojem koji svi na palubi već znaju: četrdeset i jedno. Glas ti ne drhti, a čudno zvuči u tišini, kao da si bacila kamen u bunar i čekaš da čuješ dno.",
+          "lead": "Tvoj glas."
+        },
+        {
+          "t": "Na kapiji se dugo ništa ne dešava. Zatim se rog javlja jednom, kratko, a fenjer na stubu pomera se levo pa desno, kao čovek koji se češka po glavi.",
+          "lead": "Kapija ćuti."
+        },
+        {
+          "t": "„Čekamo.“",
+          "who": "Ti"
+        },
+        {
+          "t": "„Dobro je što je kapija spora. Imaće vremena da razmisli.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "Ovaj put se neko smeje. Ratko, tiho, kroz nos, pa i Hana, a Mina, koja ne razume šalu, smeje se zato što se svi smeju. Sena zadržava dah, a Jaro, bez upozorenja, počinje da broji naglas: jedan, dva, tri.",
+          "lead": "Smeh na palubi."
+        },
+        {
+          "t": "„Ne zaboravite da dišete.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina staje do tebe i gleda kapiju, a ne tebe. Kreda joj je u džepu, i prvi put otkako je poznaješ ne broji ništa.",
+          "lead": "Mina do tebe."
+        },
+        {
+          "t": "„Mina, možeš da odmoriš glavu.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Sena se približava, a Jaro joj se krije iza kaputa. Ne traži ništa, samo stoji pored tebe i drži dečaka za ramena, kao što se drži nešto što može da nestane.",
+          "lead": "Sena do tebe."
+        },
+        {
+          "t": "„Ne bojte se.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Voda oko broda blago raste. Mostić, koji si dvaput dizao poslednji, škripi na svom užetu, a ti ga gledaš kao svedoka.",
+          "lead": "Mostić škripi."
+        },
+        {
+          "t": "„Dugo smo ga dizali, on i ja.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Čovek sa kapije spušta fenjer na dasku i pita, bez ljutnje, ko je poslednji stupio na palubu. Ti dižeš ruku. Pravilo ne traži ništa više od toga.",
+          "lead": "Pitanje sa kapije."
+        },
+        {
+          "t": "„Ja sam.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Čvor koji si vezao u Pesku još drži brodsko uže, pa se Dugi Dah ne pomera ni za dlan, ma kako ga plima vukla.",
+          "lead": "Čvor drži.",
+          "if": {
+            "pick": "s2_cvor"
+          }
+        },
+        {
+          "t": "Ratko prebrojava još jednom, pa još jednom, a u spisku pravi dva nova reda i u njih upisuje ono što još ne zna.",
+          "lead": "Ratko piše.",
+          "if": {
+            "pick": "s7_pomoc"
+          }
+        },
+        {
+          "t": "„Kapija ne mora da kaže da. Dovoljno je da ne kaže ne.“",
+          "lead": "Šta Hana kaže.",
+          "who": "Hana"
+        },
+        {
+          "t": "„Dovoljno je i to.“",
+          "who": "Ti"
+        }
+      ],
+      "next": "kraj_c2"
+    },
+    "kraj_c2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "Pod kapijom se okupljaju ljudi sa Više obale: neko sa lampom, neko sa ćebetom, a neko samo da vidi. Niko ne govori glasno, kao u kući u kojoj se rađa dete ili umire starac.",
+          "lead": "Ljudi na obali."
+        },
+        {
+          "t": "Hana bez reči otvara sanduk i ređa flašice po poklopcu, kao da se sprema za posao koji je čeka bez obzira na kapiju. Svaka flašica ima svoje mesto.",
+          "lead": "Hana se sprema."
+        },
+        {
+          "t": "„Hana, ima vremena.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Čovek sa kapije diže fenjer i broji. Počinje od krme: jedan, dva. Glas mu je miran i suv, kao glas nekoga ko to radi svake plime, a ne zna kako će se završiti.",
+          "lead": "Kapija broji."
+        },
+        {
+          "t": "„Brojte polako.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina broji s njim, tiho, deset koraka iza njegovog glasa. Kad on stigne do tridesete, ona zastaje da uhvati dah, pa se sustižu, pa se mimoilaze, i na četrdesetoj oboje staju.",
+          "lead": "Dvoje broje."
+        },
+        {
+          "t": "„Pravilo kaže da poslednji odlučuje. Ne kaže da mora biti brz.“",
+          "lead": "Šta Lovro kaže.",
+          "who": "Lovro"
+        },
+        {
+          "t": "„Ne žurim.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ne čuje se ništa. Voda oko stubova diže se za još jedan zub, a brod se podiže s njom, mirno, kao da je i on uračunat. Sena ne diše, a Hana drži sanduk obema rukama.",
+          "lead": "Tišina posle četrdesete."
+        },
+        {
+          "t": "„Mina, drži se.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko spušta olovku na spisak i prvi put otkako ga poznaješ ne zapisuje ništa. Lovro, na klupi, gleda preko vode u Višu obalu i ne šali se.",
+          "lead": "Ništa se ne zapisuje."
+        },
+        {
+          "t": "Savo, daleko iza, na svom čamcu, diže šešir ka brodu i ne prilazi bliže. Prvi put ga vidiš kako ništa ne prodaje.",
+          "lead": "Savo u daljini."
+        },
+        {
+          "t": "„Ni Savo ne zna kako će se završiti.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Meseci su sada tačno jedan preko drugog. Mina je zaspala na tvom ramenu, a kreda joj je ispala iz ruke i otkotrljala se do ivice palube. Ne dižeš je.",
+          "lead": "Mina spava."
+        },
+        {
+          "t": "„Tiho. Neka spava.“",
+          "who": "Ti"
+        },
+        {
+          "t": "Kapija ostaje otvorena širinom tačno jednog broda, ni manje ni više. Neko sa druge strane pali drugi fenjer, pa treći, a ti čekaš da neko izgovori sledeći broj.",
+          "lead": "Kapija otvorena."
+        }
+      ],
+      "end": "c"
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/jedra-vise-obale/cover.webp",
+      "alt": "Dugi Dah, staro teretno jedro, plovi ka Višoj obali pod dva meseca",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 36,
+          "y": 22,
+          "r": 4,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 60,
+          "y": 24,
+          "r": 3.5,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 22,
+          "ripple": 0.3,
+          "glints": 10,
+          "columns": [
+            [
+              48,
+              0.5,
+              "fxCold"
+            ]
+          ]
+        }
+      ]
+    },
+    "paluba": {
+      "src": "img/jedra-vise-obale/paluba.webp",
+      "alt": "Paluba Dugog Daha u zoru: jedra i dva bleda meseca",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 36,
+          "y": 20,
+          "r": 4,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 62,
+          "y": 22,
+          "r": 3.5,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "pesak": {
+      "src": "img/jedra-vise-obale/pesak.webp",
+      "alt": "Selo Pesak: splavovi od belog drveta i koliba od jedra",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 52,
+          "y": 18,
+          "r": 8,
+          "color": "fxSun",
+          "rays": true
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 64,
+          "w": 70,
+          "h": 22,
+          "ripple": 0.3,
+          "glints": 10,
+          "columns": [
+            [
+              52,
+              0.5,
+              "fxSun"
+            ]
+          ]
+        }
+      ]
+    },
+    "gvozdje": {
+      "src": "img/jedra-vise-obale/gvozdje.webp",
+      "alt": "Selo Gvožđe: zarđali trupovi vezani lancima",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 46,
+          "y": 40,
+          "r": 3,
+          "color": "fxWarm",
+          "flicker": 0.25
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 20,
+          "ripple": 0.3,
+          "glints": 8
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "burad": {
+      "src": "img/jedra-vise-obale/burad.webp",
+      "alt": "Burad: ostrvo od bureta i slanih polja",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 58,
+          "y": 16,
+          "r": 7,
+          "color": "fxSun",
+          "rays": true
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 20,
+          "ripple": 0.3,
+          "glints": 8,
+          "columns": [
+            [
+              58,
+              0.4,
+              "fxSun"
+            ]
+          ]
+        }
+      ]
+    },
+    "kajuta": {
+      "src": "img/jedra-vise-obale/kajuta.webp",
+      "alt": "Brodska kajuta sa spiskom mesta na zidu",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 28,
+          "r": 6,
+          "color": "fxWarm",
+          "flicker": 0.25
+        },
+        {
+          "type": "dust",
+          "density": 0.3
+        }
+      ]
+    },
+    "jarbol": {
+      "src": "img/jedra-vise-obale/jarbol.webp",
+      "alt": "Jarbol i jedra u oluji",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "rain",
+          "density": 0.6
+        },
+        {
+          "type": "glow",
+          "x": 52,
+          "y": 34,
+          "r": 3,
+          "color": "fxWarm",
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "kapija": {
+      "src": "img/jedra-vise-obale/kapija.webp",
+      "alt": "Kapija Više obale u sumrak, dva meseca iznad nje",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 14,
+          "r": 7,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 40,
+          "r": 3.5,
+          "color": "fxWarm",
+          "flicker": 0.25
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 20,
+          "ripple": 0.3,
+          "glints": 8,
+          "columns": [
+            [
+              50,
+              0.5,
+              "fxCold"
+            ]
+          ]
+        }
+      ]
+    },
+    "more": {
+      "src": "img/jedra-vise-obale/more.webp",
+      "alt": "Mirno more posle kiše i dva meseca jedan preko drugog",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 18,
+          "r": 6,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "water",
+          "x": 12,
+          "y": 58,
+          "w": 76,
+          "h": 28,
+          "ripple": 0.3,
+          "glints": 10,
+          "columns": [
+            [
+              50,
+              0.6,
+              "fxCold"
+            ]
+          ]
+        }
+      ]
+    },
+    "lovro": {
+      "src": "img/jedra-vise-obale/lovro.webp",
+      "alt": "Lovro, kapetan Dugog Daha",
+      "kind": "portrait"
+    },
+    "mina": {
+      "src": "img/jedra-vise-obale/mina.webp",
+      "alt": "Mina, devojčica koja broji",
+      "kind": "portrait"
+    },
+    "ratko": {
+      "src": "img/jedra-vise-obale/ratko.webp",
+      "alt": "Ratko, krpač šavova i čuvar spiska",
+      "kind": "portrait"
+    },
+    "hana": {
+      "src": "img/jedra-vise-obale/hana.webp",
+      "alt": "Hana, lekarka",
+      "kind": "portrait"
+    },
+    "savo": {
+      "src": "img/jedra-vise-obale/savo.webp",
+      "alt": "Savo, trgovac",
+      "kind": "portrait"
+    },
+    "sena": {
+      "src": "img/jedra-vise-obale/sena.webp",
+      "alt": "Sena, majka sa krmene merdevine",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/jedra-vise-obale/citalac-m.webp",
+      "alt": "Putnik",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/jedra-vise-obale/citalac-z.webp",
+      "alt": "Putnica",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Lovro": {
+      "img": "lovro"
+    },
+    "Mina": {
+      "img": "mina"
+    },
+    "Ratko": {
+      "img": "ratko"
+    },
+    "Hana": {
+      "img": "hana"
+    },
+    "Savo": {
+      "img": "savo"
+    },
+    "Sena": {
+      "img": "sena"
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

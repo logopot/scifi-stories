@@ -490,6 +490,55 @@ const rukeNaKonopcu = {
   fontHeading: fonts.ui,
 };
 
+// Jedra do Više obale: izbeljeno tirkizno more, so i pesak, jedan topli akcent.
+const jedraViseObale = {
+  name: 'jedra-vise-obale',
+  mode: 'dark',
+  sky: 'stars',
+  bg: '#10262a',
+  bgSoft: '#173238',
+  surface: '#1c3a40',
+  text: '#eef0e6',
+  textMuted: '#bdcdc8',
+  textFaint: '#8fa6a2',
+  accent: '#e3a85f',
+  accentStrong: '#8a5a1f',
+  onAccent: '#ffffff',
+  secondary: '#79c3bd',
+  fxWarm: '#f0b970',
+  fxCold: '#bfe3e0',
+  fxSun: '#f6dcae',
+  fxGreen: '#8fd8b4',
+  glowA: 'rgba(121, 195, 189, 0.22)',
+  glowB: 'rgba(227, 168, 95, 0.2)',
+  border: 'rgba(238, 240, 230, 0.2)',
+  selection: 'rgba(227, 168, 95, 0.35)',
+  focusRing: '#e3a85f',
+  shadow: 'rgba(0, 0, 0, 0.6)',
+  scrim: 'rgba(16, 38, 42, 0.9)',
+  onImage: '#f3f1e7',
+  btnBg: 'transparent',
+  btnText: '#f0c183',
+  btnBorder: '#e3a85f',
+  btnBgHover: '#8a5a1f',
+  btnTextHover: '#ffffff',
+  btnBorderHover: '#8a5a1f',
+  btnBgActive: '#744a17',
+  btnQuietText: '#9fd6d0',
+  btnQuietBorder: '#6aa8a3',
+  btnQuietBgHover: '#9fd6d0',
+  btnQuietTextHover: '#10262a',
+  choiceBg: 'transparent',
+  choiceBorder: 'rgba(238, 240, 230, 0.2)',
+  choiceBgSelected: '#e3a85f',
+  choiceTextSelected: '#10262a',
+  choiceDot: '#e3a85f',
+  btnDisabledBg: '#1d3438',
+  btnDisabledText: '#86a09c',
+  fontBody: fonts.serif,
+  fontHeading: fonts.ui,
+};
+
 export const siteTheme = withLogo(siteBase);
 
 // slug priče -> tema
@@ -501,6 +550,7 @@ export const themes = {
   'pre-plime': withLogo(prePlime),
   'zimska-ostava': withLogo(zimskaOstava),
   'ruke-na-konopcu': withLogo(rukeNaKonopcu),
+  'jedra-vise-obale': withLogo(jedraViseObale),
   'tihi-sat': withLogo(tihiSat),
   'zelena-granica': withLogo(zelenaGranica),
 };
