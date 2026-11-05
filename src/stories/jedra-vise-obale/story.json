@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "Dugi Dah plovi tri dana ka Višoj obali, a dva meseca na nebu primiču se jedan drugom. U džepu ti je karta, na palubi mesto, a kapija se zatvara kad se meseci poklope."

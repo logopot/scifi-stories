@@ -25,6 +25,8 @@
   "ui": {
     "next": "Next",
     "finish": "To the end",
+
+    "swipe": "or swipe left",
     "start": {
       "intro": [
         "Refuge is a city below the High Dam, at the bottom of a valley that once held a lake. Water here is shared by measure, and the measure is calculated by a system called Merač. You arrive with one task and three days. Offers will appear before you."

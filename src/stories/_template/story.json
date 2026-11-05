@@ -13,6 +13,7 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": ["Uvodni tekst na početnom ekranu."],
       "begin": "Počni",

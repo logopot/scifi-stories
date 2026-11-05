@@ -25,6 +25,8 @@
   "ui": {
     "next": "Next",
     "finish": "To the end",
+
+    "swipe": "or swipe left",
     "start": {
       "intro": [
         "Prevoj is a mountain city, and above it stands the Spire, a tower of antennas. At its top the last human shift is working. You arrive at 22:40 with the Administration’s seal and one task, and a cloud of debris crosses the sky above the city at ten past three."

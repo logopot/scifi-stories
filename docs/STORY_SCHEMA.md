@@ -38,6 +38,7 @@ Tekstovi koje čitač prikazuje (svi obavezni, validator ih proverava):
 | Putanja | Gde se koristi |
 | --- | --- |
 | `ui.next` | Dugme za sledeću stranu kad strana nema `lead`. |
+| `ui.swipe` | Sitan nagoveštaj ispod dugmeta za sledeću stranu na telefonu (prvih par strana po sesiji): "ili prevuci ulevo" / "or swipe left". |
 | `ui.finish` | Dugme na poslednjoj strani kraja (scena sa `end`). |
 | `ui.start.intro` | Niz pasusa na početnom ekranu. |
 | `ui.start.begin` | Dugme „Počni“. |

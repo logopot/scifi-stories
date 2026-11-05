@@ -13,6 +13,7 @@
   "ui": {
     "next": "Next",
     "finish": "To the end",
+    "swipe": "or swipe left",
     "start": {
       "intro": ["Opening text on the start screen."],
       "begin": "Begin",
