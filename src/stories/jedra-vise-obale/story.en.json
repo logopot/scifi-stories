@@ -1,0 +1,2022 @@
+{
+  "meta": {
+    "title": "Sails to the Higher Shore",
+    "subtitle": "An interactive science fiction story",
+    "description": [
+      "On the planet Rojna the sea is rising and the Lower Shore is sinking. The old cargo sailer Dugi Dah spends three days sailing between floating villages toward the Higher Shore, where the Board of the Higher Day keeps the gate and a list of forty places.",
+      "You are an ordinary passenger with a ticket in your pocket, one of those who boarded last. Around you are a girl who counts sails and moons, a captain whose jokes nobody understands, a bookkeeper who dislikes it when numbers do not agree, and a doctor with a chest.",
+      "Each day the ship calls at a new village, and the two moons in the sky move closer to each other. The gate closes when they line up."
+    ],
+    "axes": [
+      {
+        "id": "a",
+        "name": "give up your own place"
+      },
+      {
+        "id": "b",
+        "name": "leave the family outside the gate"
+      },
+      {
+        "id": "c",
+        "name": "all go in and leave it open"
+      }
+    ]
+  },
+  "ui": {
+    "next": "Next",
+    "finish": "To the end",
+    "start": {
+      "intro": [
+        "The Dugi Dah sails three days toward the Higher Shore, and the two moons in the sky move closer to each other. You have a ticket in your pocket and a place on the deck, and the gate closes when the moons line up."
+      ],
+      "begin": "Begin",
+      "continue": "Continue reading",
+      "tip": "Each paragraph is one page. Move on with the button, the space bar or the → arrow, and pick options by clicking or with keys 1–9. The story saves itself. Allow about 20 minutes.",
+      "genders": {
+        "m": "Masculine",
+        "f": "Feminine"
+      },
+      "note": "Your progress is saved only in your browser.",
+      "nameLabel": "What is your name? (you can leave it empty)",
+      "namePlaceholder": "Your name",
+      "genderLabel": "The form used when writing about you:",
+      "hintFound": "Name recognised. You can change the form.",
+      "hintUnknown": "I do not recognise that name. Pick the form we should use when writing about you.",
+      "hintNeed": "Pick a form so we can begin.",
+      "chosen": "You play as:",
+      "defaults": {
+        "m": "Alex",
+        "f": "Alex"
+      }
+    },
+    "mirror": {
+      "kicker": "The end",
+      "restart": "Start over"
+    }
+  },
+  "chapters": {
+    "c1": {
+      "mark": "I",
+      "name": "Day One"
+    },
+    "c2": {
+      "mark": "II",
+      "name": "Day Two"
+    },
+    "c3": {
+      "mark": "III",
+      "name": "Day Three"
+    },
+    "c4": {
+      "mark": "IV",
+      "name": "The Gate"
+    }
+  },
+  "start": "paluba",
+  "endings": {
+    "a": {
+      "title": "The Skiff at Sea",
+      "closing": [
+        "The sea after rain is smooth as a sheet of paper."
+      ]
+    },
+    "b": {
+      "title": "Through the Gate",
+      "closing": [
+        "The lantern in the boat burns until morning."
+      ]
+    },
+    "c": {
+      "title": "Forty-One",
+      "closing": [
+        "The gate stays open just long enough for one ship to pass."
+      ]
+    }
+  },
+  "nodes": {
+    "paluba": {
+      "chapter": "c1",
+      "showChapter": true,
+      "img": "paluba",
+      "paragraphs": [
+        {
+          "t": "Dawn on the Dugi Dah is gray and damp. Two moons hang in the sky, pale as two drops of milk in water, and four sails crackle in a wind that does not stop even at night. The deck smells of tar, salt and cold rope, and you lean on the rail, only just waking.",
+          "lead": "Dawn on deck."
+        },
+        {
+          "t": "On a barrel by the mast sits a girl of ten, her hair stiff with salt, a piece of chalk in her fist. A row of tally marks shows white on the barrel lid, one for every sail and one for every moon. When she sees you, she does not stop counting.",
+          "lead": "The girl with the chalk."
+        },
+        {
+          "t": "“Four sails, two moons and one passenger who sleeps standing up. You were the last one to board in the harbor, weren't you? The captain says that means something.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“Good morning. And what is that supposed to mean?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I don't know. Lovro never explains his jokes, and this one must be a joke. What's up there matters more to me.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“What's so important up there?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina stretches her arm toward the sky and measures the gap between the two moons with her palm, the way you measure a loaf of bread. Her lips move, and the chalk stays in the air above the barrel.",
+          "lead": "Mina measures."
+        },
+        {
+          "t": "“Three palms. Yesterday it was four. When it's gone, the gate on the Higher Shore closes, and it won't open again for eleven years.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“So we have three days.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Three days and three villages. I count both.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "The ship has no engine and no chimney. It has only the wind, which has blown from the stern for as long as anyone remembers, and twelve pairs of hands that know how to ask it. The sails are patched so often they look like a map of an invented country.",
+          "lead": "A ship without an engine."
+        },
+        {
+          "t": "“Does the wind never stop?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Not even at night. That's why the ship is never late. It just arrives when it should.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "Under the tarp at the bow the other passengers sleep, each on a mat, each with one bag. Whoever carries people carries a list too: around your neck hangs a tag with the number forty, cold as a coin.",
+          "lead": "Passengers under the tarp."
+        },
+        {
+          "t": "“You're number forty. The last one. Ratko says the last number is always the heaviest to carry.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        }
+      ],
+      "prompt": "The morning is only beginning, and there are three places on the deck where you could stand.",
+      "choices": [
+        {
+          "id": "s1_mina",
+          "text": "You stand beside Mina, at the rail.",
+          "next": "jutro"
+        },
+        {
+          "id": "s1_katarka",
+          "text": "You lean against the mast, in the shade of the sail.",
+          "next": "jutro"
+        },
+        {
+          "id": "s1_hana",
+          "text": "You sit by the hatch, next to the woman with the wooden chest.",
+          "next": "jutro"
+        }
+      ]
+    },
+    "jutro": {
+      "chapter": "c1",
+      "paragraphs": [
+        {
+          "t": "Mina presses the chalk into your hand without being asked and points at the barrel: you should count something too. You add a mark for a seagull, and she wipes it off, because a seagull moves, and she counts only what stands still.",
+          "lead": "Morning aboard.",
+          "if": {
+            "pick": "s1_mina"
+          }
+        },
+        {
+          "t": "In the shade of the mast it is cooler than you expected. The sail above you is patched with blue and brown rags, each once a different ship, and one plain string holds them all together.",
+          "lead": "Morning aboard.",
+          "if": {
+            "pick": "s1_katarka"
+          }
+        },
+        {
+          "t": "The woman with the chest looks up and sizes you up like an unfamiliar medicine. Hana is a doctor, and she wears her gray braid over her shoulder. Without a word she hands you a dried plum, then goes back to her chest, whose lid she holds with both hands.",
+          "lead": "Morning aboard.",
+          "if": {
+            "pick": "s1_hana"
+          }
+        },
+        {
+          "t": "Captain Lovro walks the deck slowly, as if counting planks. He is about sixty, with a face carved by wind and a cap that used to be red. He stops beside you and looks out to sea, the same way you do, without asking what you see there.",
+          "lead": "The captain on deck."
+        },
+        {
+          "t": "“Good thing the sea is wet. If it were dry, I'd have to iron it.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“I didn't know the sea needed ironing.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Nobody laughs. Mina nods gravely, as if she has been given a fact for her tally marks, and the wind carries the joke across the deck where no one catches it.",
+          "lead": "Nobody laughs."
+        },
+        {
+          "t": "“The last one to lift the gangplank owes nobody anything. That's why we ask him when everyone is fighting over a single chair.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“Who fights over a chair?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“If you want something serious, ask me. A tooth is when the moons line up: the sea rises a finger's width, and the Lower Shore loses another row of houses.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“How much has it lost so far?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A whole city. That's why we're going up, to the Higher Shore. Nobody goes down.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“The Dugi Dah has carried two tides, and this is its third. Every time the same number of places: forty. The ship can't count, but it remembers.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“And who picked those forty?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Board. They keep the gate and the list. We just carry people to them, like letters.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“Mina counts to know. Most of us count to be afraid.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "Lovro holds out the end of a rope, his eyes still on the sea, as if he were holding out a question too.",
+          "lead": "What Lovro holds out."
+        }
+      ],
+      "prompt": "The rope is in Lovro's hand, and he is waiting to see what you will do with it.",
+      "choices": [
+        {
+          "id": "s2_pitaj",
+          "text": "You ask him what he meant.",
+          "next": "pesak"
+        },
+        {
+          "id": "s2_smej",
+          "text": "You laugh, though you don't understand.",
+          "next": "pesak"
+        },
+        {
+          "id": "s2_cvor",
+          "text": "You take the rope and tie a knot.",
+          "next": "pesak"
+        }
+      ]
+    },
+    "pesak": {
+      "chapter": "c1",
+      "img": "pesak",
+      "paragraphs": [
+        {
+          "t": "“That's the ship's rule. It's as old as the ship, and the ship is as old as I am, only it creaks less.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_pitaj"
+          }
+        },
+        {
+          "t": "“There. At least one. You'll get far.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_smej"
+          }
+        },
+        {
+          "t": "“A good knot. You'll tie us up with it tonight in Pesak, since nobody else here knows it.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_cvor"
+          }
+        },
+        {
+          "t": "“Thanks, Captain.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Pesak emerges from the haze around noon: a hundred rafts of white wood lashed side by side, huts of sailcloth, roofs of seashells. Children run across the rafts, and in the middle is a market where everything is paid for in salt and favors.",
+          "lead": "A village on the water."
+        },
+        {
+          "t": "“I didn't know you could live on water like this.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Fish dry on lines stretched like flags. Women sell salt in paper cones, and old men sit on the edges of the platforms, feet in the water, watching a ship they can never afford.",
+          "lead": "Life on the rafts."
+        },
+        {
+          "t": "On the dock stands a man in a light shirt and a wide hat, ringed by crates stacked like towers. Savo trades in everything that sails between the three villages, and his smile is the kind that makes a person forgive him in advance.",
+          "lead": "The trader on the dock."
+        },
+        {
+          "t": "“A traveler who bought nothing in Pesak hasn't traveled. I say that from experience, and I never lie. It's my only flaw in business.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "“I have a ticket. That's enough for me.”",
+          "who": "Ti"
+        },
+        {
+          "t": "At the end of the dock a boy hauls a net with nothing in it, yet he hauls it gravely, as if it were full. Savo doesn't look at him, but in passing drops a coin into his pocket, so quickly you might think you imagined it.",
+          "lead": "The boy with the net."
+        },
+        {
+          "t": "“What did he catch?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nothing. That's why he's so serious.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“Savo says he never lies. Ratko says that's not the same as telling everything.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“And who is Ratko?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko is someone you haven't met yet, but Mina speaks of him the way she would of the weather: something you can't get around. Savo smiles, as if the sentence flattered him.",
+          "lead": "Savo smiles."
+        },
+        {
+          "t": "“Ratko counts, I sell, and somehow the world fits between us. From here to the Higher Shore goes one ticket in ten years. The rest watch the ship and say what a fine sail it has.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "“Ten years is a long wait.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Hana steps onto the dock with her chest under her arm and disappears among the huts. Savo spreads his hands over his goods, and Mina tugs your sleeve, because she knows nothing at a market comes for free.",
+          "lead": "The market in Pesak."
+        }
+      ],
+      "prompt": "Savo spreads his hands over the crates, and Mina tugs at your sleeve.",
+      "choices": [
+        {
+          "id": "s3_perla",
+          "text": "You buy Mina a glass bead.",
+          "next": "vece1"
+        },
+        {
+          "id": "s3_med",
+          "text": "You buy Hana a jar of honey.",
+          "next": "vece1"
+        },
+        {
+          "id": "s3_gledas",
+          "text": "You buy nothing and watch Savo trade.",
+          "next": "vece1"
+        }
+      ]
+    },
+    "vece1": {
+      "chapter": "c1",
+      "img": "paluba",
+      "paragraphs": [
+        {
+          "t": "Pesak falls astern, and you realize you were last again. Lovro called out to raise the gangplank, and only then did you reach it, so you raise it yourself and hook it fast. Lovro nods without a word, as if some sum has come out right.",
+          "lead": "The gangplank."
+        },
+        {
+          "t": "“Sorry, Captain. Late again.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The glass bead hangs from a string around Mina's neck. She holds it up against a moon and checks it, as if the moon might object: the bead is bluer than the sky.",
+          "lead": "The bead on a string.",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "Hana accepts the jar of honey and smiles for the first time. She opens it at once and rubs it on Lovro's knee, because the captain, she says, has limped all day and won't admit it.",
+          "lead": "Honey for the knee.",
+          "if": {
+            "pick": "s3_med"
+          }
+        },
+        {
+          "t": "Meanwhile Savo has sold five crates and one smile, and Mina has marked each of his moves in chalk. All she cared about was how many times he said “I don't lie.” She counted seven.",
+          "lead": "Mina and Savo.",
+          "if": {
+            "pick": "s3_gledas"
+          }
+        },
+        {
+          "t": "The sun slides toward the water, and the moons move palely closer. The ship creaks softly, like an old house settling for sleep. Someone hums at the bow, and no one interrupts.",
+          "lead": "Evening on the water."
+        },
+        {
+          "t": "“The ship has calmed down. First time today.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Gvožđe tomorrow. People in Gvožđe never hurry, and when they do, it's because they forgot something.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“What's in Gvožđe?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Under the tarp someone quietly counts coins, changes their mind, and counts again. At the bow an old man ties and unties the same knot, and two young people share one cup of tea without speaking. Everyone aboard is holding something, as if it would run away otherwise.",
+          "lead": "Passengers at dusk."
+        },
+        {
+          "t": "“Everyone's holding something. I'm holding a ticket.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina sits on a barrel with her knees drawn up, watching the moons, and when she turns to you her face is solemn, as if she were reading out a law.",
+          "lead": "Mina turns."
+        },
+        {
+          "t": "“Two and a half palms. Ratko says the Higher Shore has room for forty. Do you think that's enough?”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        }
+      ],
+      "prompt": "Mina is waiting for an answer, her hand still stretched toward the moons.",
+      "choices": [
+        {
+          "id": "s4_ima",
+          "text": "You say there will surely be room for everyone.",
+          "next": "gvozdje"
+        },
+        {
+          "id": "s4_ne",
+          "text": "You say you don't know and that you'll see.",
+          "next": "gvozdje"
+        },
+        {
+          "id": "s4_meseci",
+          "text": "You point to the moons and ask how much is left.",
+          "next": "gvozdje"
+        }
+      ]
+    },
+    "gvozdje": {
+      "chapter": "c2",
+      "showChapter": true,
+      "img": "gvozdje",
+      "paragraphs": [
+        {
+          "t": "“You said there would be room. Ratko says he wouldn't guess, so he doesn't bet.”",
+          "lead": "What Mina says.",
+          "who": "Mina",
+          "if": {
+            "pick": "s4_ima"
+          }
+        },
+        {
+          "t": "“You said you don't know. First time a grown-up has said that. I'll write it down.”",
+          "lead": "What Mina says.",
+          "who": "Mina",
+          "if": {
+            "pick": "s4_ne"
+          }
+        },
+        {
+          "t": "“Two palms. The moons aren't in a hurry, but we are.”",
+          "lead": "What Mina says.",
+          "who": "Mina",
+          "if": {
+            "pick": "s4_meseci"
+          }
+        },
+        {
+          "t": "Gvožđe is a village of old hulls: rust-red ships chained in a ring, thin iron walkways between them that ring under every step. The air smells of rust and fish, and the nets hanging from the chains drip light.",
+          "lead": "A village of old hulls."
+        },
+        {
+          "t": "“This is more a town than a village.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On the decks of the old hulls people live as if on streets, with windows, flowerpots and dogs, and everything sways gently, as if the town had fallen asleep on a wave. Children hop from ship to ship across the chains, and nobody calls them back.",
+          "lead": "Streets made of hulls."
+        },
+        {
+          "t": "“In Gvožđe every street has its own chain. When the chain gives, the street drifts off with the wave, and then they search for it out at sea.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“And the people? Do they drift off with the street?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Only after the street apologizes.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "Lovro says the ship will stay in Gvožđe until dusk, because this is where the ropes are changed, and business with the people of Gvožđe never goes fast. The passengers scatter across the walkways like children across a yard.",
+          "lead": "The ship stays until dusk."
+        },
+        {
+          "t": "“Dusk is a long way off.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Hana, the doctor, picks up her wooden chest and steps onto the gangplank. She walks fast, like someone who is expected, her braid wound around her neck so it won't get in the way.",
+          "lead": "Hana sets off."
+        },
+        {
+          "t": "“There's an apothecary in Gvožđe who owes me a bottle of fever medicine. On the Higher Shore there's no doctor for three villages. I need someone who can carry and keep quiet.”",
+          "lead": "What Hana says.",
+          "who": "Hana"
+        }
+      ],
+      "prompt": "Hana waits on the gangplank, and Mina is already staring at the chains.",
+      "choices": [
+        {
+          "id": "s5_sanduk",
+          "text": "You carry Hana's chest.",
+          "next": "mostic"
+        },
+        {
+          "id": "s5_mina",
+          "text": "You take Mina along, so she doesn't wander among the chains.",
+          "next": "mostic"
+        },
+        {
+          "id": "s5_pijaca",
+          "text": "You go to the market alone, and Hana can go without you.",
+          "next": "mostic"
+        }
+      ]
+    },
+    "mostic": {
+      "chapter": "c2",
+      "paragraphs": [
+        {
+          "t": "The chest is heavier than it looks, and the apothecary takes longer to count than to sell. Hana holds the doors, you hold the chest, and somehow, between two chains, you end up with the bottle and a bruise on your hip. All the way Hana talks about bones as if she were talking about friends.",
+          "lead": "With Hana in Gvožđe.",
+          "if": {
+            "pick": "s5_sanduk"
+          }
+        },
+        {
+          "t": "Mina holds on to your sleeve and walks so as not to step on the chain links. For each link she says a number, and you count along. Hana comes back with the bottle and says a dry “thanks,” which is her way of saying a great deal.",
+          "lead": "With Mina among the chains.",
+          "if": {
+            "pick": "s5_mina"
+          }
+        },
+        {
+          "t": "At the market in Gvožđe you buy a handful of dried figs and listen to an old man who weaves a net and never stops talking. He says the Higher Shore takes fewer people every tide, and that the places are never announced aloud.",
+          "lead": "The market in Gvožđe.",
+          "if": {
+            "pick": "s5_pijaca"
+          }
+        },
+        {
+          "t": "The sun sets behind the rusted hulls, and Lovro shouts from the ship that it is time. The gangplank is already half raised when you realize you are last again. By the stern, in the shadow, something moves: a woman leads a boy by the hand, an old woman carries a bundle, and all three climb the stern ladder, fast and without a sound.",
+          "lead": "Dusk in Gvožđe."
+        },
+        {
+          "t": "“Captain, somebody's climbing onto the stern!”",
+          "who": "Ti"
+        },
+        {
+          "t": "On the dock beside your gangplank stands Savo, one hand raised, as if greeting someone or blessing something.",
+          "lead": "Savo on the dock."
+        },
+        {
+          "t": "“Don't look at me like that. I don't lie.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "“Whose people are those?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Travelers, like you. They just don't like to be watched by someone they don't know.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "You raise the gangplank, last for the second day in a row. Lovro says nothing, just pulls his cap over his eyes. At the stern the woman and the boy stand under the tarp, not knowing where to look, and the old woman quickly rearranges her bundle, as if she could hide it.",
+          "lead": "The gangplank, again."
+        },
+        {
+          "t": "Under the tarp it is dark, and in the dark you hear only breathing, quiet and even, as if they had long ago learned to breathe without a sound. The boy looks at you and does not blink.",
+          "lead": "Breathing in the dark."
+        }
+      ],
+      "prompt": "The gangplank is up, and at the stern someone waits for somebody to say something.",
+      "choices": [
+        {
+          "id": "s6_zavezljaj",
+          "text": "You step over and help the old woman with her bundle.",
+          "next": "kajuta"
+        },
+        {
+          "id": "s6_klimas",
+          "text": "You nod to the boy and stay at the gangplank.",
+          "next": "kajuta"
+        },
+        {
+          "id": "s6_cuti",
+          "text": "You turn to Lovro, as if you had seen nothing.",
+          "next": "kajuta"
+        }
+      ]
+    },
+    "kajuta": {
+      "chapter": "c2",
+      "img": "kajuta",
+      "paragraphs": [
+        {
+          "t": "The bundle is lighter than it looks, and something clinks inside: the old woman says they are jars, and smiles for the first time. The boy watches you gravely, like Mina.",
+          "lead": "The bundle.",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "The boy nods back, solemnly, as if a deal has been struck. The old woman takes his hand and leads him under the tarp.",
+          "lead": "The boy nods.",
+          "if": {
+            "pick": "s6_klimas"
+          }
+        },
+        {
+          "t": "Lovro doesn't ask what you were looking at. At the stern someone laughs softly and stops, and the tarp is pulled all the way down.",
+          "lead": "The tarp.",
+          "if": {
+            "pick": "s6_cuti"
+          }
+        },
+        {
+          "t": "The cabin is low and yellow with lamplight. On the wall hangs the list of places: forty rows, a small ink mark beside each name, and beside some a single word. Beside one it says “doctor,” beside another “caulker,” beside a third only “late.” Under the lamp sits Ratko, a short man with hands black from tar and a forehead that never stops creasing.",
+          "lead": "The cabin with the list."
+        },
+        {
+          "t": "“Is everyone who's traveling on there?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Two got off at Gvožđe. That leaves thirty-eight names, and on deck I count forty-one people. Or I can't count, and I can only not count when I'm tired.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko"
+        },
+        {
+          "t": "“And what happens when the numbers don't agree?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The gate counts people, not names. The old rule of the ship says that then the one who last stepped aboard decides. He owes nobody anything.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko"
+        },
+        {
+          "t": "Ratko presses a finger on the last line of the list, then looks at you, then at the list again. The last name is yours, and beside it is a mark you didn't notice when you signed: “late.” The cabin is as quiet as a closed box.",
+          "lead": "The last line."
+        },
+        {
+          "t": "“And what happens to the one who stays out?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“He waits for the next tide. Eleven years. Some survive it, and some get used to the sea in the meantime.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko"
+        },
+        {
+          "t": "“Eleven years is a long time.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The rule isn't mine. I only know it, the way you know where the hole in the floor is. We've never used it, and there have been two tides.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko"
+        },
+        {
+          "t": "Ratko runs a finger over the list, then over a seam in the planks overhead, as if they were two problems of the same kind. He has been a caulker for twelve years and a bookkeeper for three, and both jobs, he says, come down to the same thing: watching where it leaks.",
+          "lead": "Where it leaks."
+        }
+      ],
+      "prompt": "Ratko holds his pencil above the list and waits.",
+      "choices": [
+        {
+          "id": "s7_krmena",
+          "text": "You mention what you saw on the stern ladder.",
+          "next": "horizont"
+        },
+        {
+          "id": "s7_cuti",
+          "text": "You say nothing and look at the list.",
+          "next": "horizont"
+        },
+        {
+          "id": "s7_pomoc",
+          "text": "You offer to count the deck together.",
+          "next": "horizont"
+        }
+      ]
+    },
+    "horizont": {
+      "chapter": "c2",
+      "img": "paluba",
+      "paragraphs": [
+        {
+          "t": "“I haven't lifted the tarp at the stern. I don't lift anything somebody is keeping closed, until I have to.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko",
+          "if": {
+            "pick": "s7_krmena"
+          }
+        },
+        {
+          "t": "Ratko puts down his pencil without a word, and a drop of tar stays on the list like a small shadow. You go out on deck with the feeling that you have forgotten something.",
+          "lead": "On deck.",
+          "if": {
+            "pick": "s7_cuti"
+          }
+        },
+        {
+          "t": "You count together, Ratko aloud, you with a finger in the air. Every time you reach the same number, and neither of you likes it. On your way out Ratko says that counting is really only attention, nothing more.",
+          "lead": "On deck.",
+          "if": {
+            "pick": "s7_pomoc"
+          }
+        },
+        {
+          "t": "Evening has drifted across the deck. The moons have come closer, two fingers apart, and their pale light falls on the sails and makes them transparent.",
+          "lead": "Evening on deck."
+        },
+        {
+          "t": "“The moons are getting closer.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“There! A white boat with a lantern. It's the Board's. They always come before the tide, to count who's arriving.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“Where? I can't see anything.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On the horizon, thin as a line of chalk, a white boat glides. The lantern on its mast burns like a small, stubborn star. Lovro watches it for a long time, and his hands on the tiller are not quite steady.",
+          "lead": "A boat on the horizon."
+        },
+        {
+          "t": "“The Board likes to come when a ship isn't expecting it. Good thing I always expect it, so it never surprises me.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“And what would the Board want from us?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The Board counts people, and I count the sick. On the Higher Shore I'll be the only one for three villages. So don't ask whether I'm afraid, ask whether I can help.”",
+          "lead": "What Hana says.",
+          "who": "Hana"
+        },
+        {
+          "t": "“What does the Board do when it has counted?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nothing. It writes it down. Ratko says that is what he fears most, because you never know what was written.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "Hana holds her chest on her lap like a sleeping child. Mina tugs you toward the rail, and the boat in the distance holds its course, neither faster nor slower, just floating.",
+          "lead": "Hana and Mina."
+        }
+      ],
+      "prompt": "The Board's boat glides along the horizon, and Mina and Hana each pull you a different way.",
+      "choices": [
+        {
+          "id": "s8_dvogled",
+          "text": "You take Lovro's spyglass and watch the boat.",
+          "next": "burad"
+        },
+        {
+          "id": "s8_mina",
+          "text": "You lift Mina so she can see better.",
+          "next": "burad"
+        },
+        {
+          "id": "s8_hana",
+          "text": "You sit beside Hana and ask her about the Higher Shore.",
+          "next": "burad"
+        }
+      ]
+    },
+    "burad": {
+      "chapter": "c3",
+      "showChapter": true,
+      "img": "burad",
+      "paragraphs": [
+        {
+          "t": "In the spyglass the boat is full of white shirts and a single lamp. The people in it do not speak, they only count. You lower the glass before anyone looks at you.",
+          "lead": "Morning, Burad.",
+          "if": {
+            "pick": "s8_dvogled"
+          }
+        },
+        {
+          "t": "Mina is light, and you hold her by the belt as she leans over the rail. The boat is only a dot, but she says there are four men in it, and you believe her.",
+          "lead": "Morning, Burad.",
+          "if": {
+            "pick": "s8_mina"
+          }
+        },
+        {
+          "t": "Hana tells you about three villages where nobody knows how to set a broken bone. She tells it calmly, without pleading, and it is harder for you that she is so calm.",
+          "lead": "Morning, Burad.",
+          "if": {
+            "pick": "s8_hana"
+          }
+        },
+        {
+          "t": "Burad is an island of barrels: thousands of empty and full barrels lashed together with nets, with salt fields on top. Here the ship takes on water and rope, and the island sways as if it were breathing. The moons have almost touched.",
+          "lead": "An island of barrels."
+        },
+        {
+          "t": "“The island is breathing. I've never seen anything like it.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On one of the barrels, as if he had arrived before morning, sits Savo. A faster boat, says his smile, and when you walk up, the smile goes, and only the man remains.",
+          "lead": "Savo on the island."
+        },
+        {
+          "t": "“Savo? How did you get here before us?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“I sold a place in Gvožđe. Two were empty, and the woman wanted only one, so I sold her one. The rest came along with her. I don't lie: I never said the place was for three.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "“And Ratko's list?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“The list doesn't know about them. That's why the gate sees forty-one heads and only forty places.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "“Why are you telling me this only now?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Because I don't lie, but I don't like a question asked too early. It ripens by itself, like a fig.”",
+          "lead": "What Savo says.",
+          "who": "Savo"
+        },
+        {
+          "t": "At the stern, by the rail, stand a woman with a boy by the hand and an old woman with a bundle. Sena is young and tired, and the boy, Jaro, is six and has a solemn face. They look at the island as if for the last time.",
+          "lead": "The family from the stern."
+        },
+        {
+          "t": "“We didn't want to hide. Savo said it was better this way until we arrived.”",
+          "lead": "What Sena says.",
+          "who": "Sena"
+        },
+        {
+          "t": "“Stay there, by the rail.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Sena doesn't lift her eyes from the deck. Jaro, beside her, counts the barrels floating past the ship, aloud, the way children do when they can do nothing else.",
+          "lead": "Jaro counts."
+        },
+        {
+          "t": "The old woman with the bundle sits on a coil of rope and says nothing. Her hands are gentle and wrinkled, and when Jaro turns away she touches his hair, briefly, as if checking that he is there.",
+          "lead": "The old woman is silent."
+        }
+      ],
+      "prompt": "Savo waits to see how you take what he said, and Sena looks at the deck.",
+      "choices": [
+        {
+          "id": "s9_zasto",
+          "text": "You ask Savo why he did it.",
+          "next": "oluja"
+        },
+        {
+          "id": "s9_cenu",
+          "text": "You ask Savo how much he sold the place for.",
+          "next": "oluja"
+        },
+        {
+          "id": "s9_brod",
+          "text": "You say nothing and go back aboard.",
+          "next": "oluja"
+        }
+      ]
+    },
+    "oluja": {
+      "chapter": "c3",
+      "img": "jarbol",
+      "paragraphs": [
+        {
+          "t": "“Because the woman came to me three times, and I like it when someone comes three times. The rest I can't tell you.”",
+          "lead": "What Savo says.",
+          "who": "Savo",
+          "if": {
+            "pick": "s9_zasto"
+          }
+        },
+        {
+          "t": "“For one place, not a coin more. I may be a trader, but I'm not a thief.”",
+          "lead": "What Savo says.",
+          "who": "Savo",
+          "if": {
+            "pick": "s9_cenu"
+          }
+        },
+        {
+          "t": "Savo stays on the barrel with his hands on his knees, like a man who has said enough and waits for someone to tell him how much that was.",
+          "lead": "Savo is silent.",
+          "if": {
+            "pick": "s9_brod"
+          }
+        },
+        {
+          "t": "In the afternoon the wind changes its tone: it no longer blows steadily, it lashes. The western sky is the color of a bruise, the sails fill, and drive the ship toward the Higher Shore faster than anyone would wish.",
+          "lead": "The wind changes."
+        },
+        {
+          "t": "“The wind has shifted!”",
+          "who": "Ti"
+        },
+        {
+          "t": "The waves stop being waves and turn into walls, gray and slow, and between them the ship is only motion. The sails strain so hard that the whole mast cracks. At the bow someone screams a name that can't be heard, and Mina clings to a barrel as if it were the rest of the world.",
+          "lead": "Waves."
+        },
+        {
+          "t": "“Hold on to something!”",
+          "who": "Ti"
+        },
+        {
+          "t": "The rain comes all at once, as if someone had overturned a bowl. People run across the deck, Ratko hauls on a rope from one end, and the mainsail strains and groans as if about to burst.",
+          "lead": "Rain."
+        },
+        {
+          "t": "“Captain, what do I do?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Lower the topsail! Good thing it's raining: at least I won't have to wash the deck.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "The boom that holds the sail snaps with a crack and swings over the deck, then strikes the captain's shoulder. Lovro drops to his knees, and his cap flies into the sea and spins on the water like a small red flower.",
+          "lead": "The boom."
+        },
+        {
+          "t": "“Don't move him! The shoulder is broken, and I have only two hands!”",
+          "lead": "What Hana says.",
+          "who": "Hana"
+        },
+        {
+          "t": "The boom still swings above you, Lovro lies on the wet planks, and Mina stands in the middle of the rain and runs nowhere, because nobody said where.",
+          "lead": "The boom swings."
+        }
+      ],
+      "prompt": "The boom swings above the deck, and the rain does not stop.",
+      "choices": [
+        {
+          "id": "s10_uze",
+          "text": "You grab the boom's rope and hold on.",
+          "next": "pravilo"
+        },
+        {
+          "id": "s10_lovro",
+          "text": "You help Hana hold Lovro still.",
+          "next": "pravilo"
+        },
+        {
+          "id": "s10_mina",
+          "text": "You pull Mina under the tarp.",
+          "next": "pravilo"
+        }
+      ]
+    },
+    "pravilo": {
+      "chapter": "c3",
+      "img": "kajuta",
+      "paragraphs": [
+        {
+          "t": "Your palms burn from the rope, and Ratko, without asking, binds your skin with a cloth soaked in tar. The boom is tied down, but your hands still remember its weight.",
+          "lead": "In the cabin.",
+          "if": {
+            "pick": "s10_uze"
+          }
+        },
+        {
+          "t": "Lovro is pale, and you held his shoulder. Now he grips your sleeve with the one hand that works, as if afraid you will leave.",
+          "lead": "In the cabin.",
+          "if": {
+            "pick": "s10_lovro"
+          }
+        },
+        {
+          "t": "Mina only now wrenches free of your hand, soaked to the skin and angry at being dragged. Still she stays close, as if she will miss something if she moves.",
+          "lead": "In the cabin.",
+          "if": {
+            "pick": "s10_mina"
+          }
+        },
+        {
+          "t": "Lovro lies on the bench with his arm against his chest while Hana binds the shoulder with strips of cloth. The captain smiles, but without a joke: it is the first time you have heard him without one. Through the small window you can see the west, and the moons have almost merged.",
+          "lead": "The captain lying down."
+        },
+        {
+          "t": "“Captain, how's the shoulder?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“{voc}, Ratko told you the rule. Today I repeat it without a joke: there are more of us than places, and the last one aboard says who stays out. That's you.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“And what does the Board do with those who arrive when there's no room?”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Nothing. The gate pushes nobody. It just doesn't open.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "Ratko looks at the list, Hana at the captain, Mina at you. Nobody asks for anything aloud, yet you can hear that everyone is waiting. From the stern comes a soft bell, as if someone had struck an empty barrel: the gate is in sight.",
+          "lead": "Everyone waits."
+        },
+        {
+          "t": "“I only count. I count even when I don't want to.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko"
+        },
+        {
+          "t": "“I only heal. Decisions aren't my job.”",
+          "lead": "What Hana says.",
+          "who": "Hana"
+        },
+        {
+          "t": "“I didn't decide anything either, and yet here we are.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Lovro closes his eyes, then opens them. Something in his face gives way: a man who has carried the rule as a joke for ten years and now has to say it in earnest.",
+          "lead": "Lovro closes his eyes."
+        },
+        {
+          "t": "Mina says nothing. She grips the chalk so hard her knuckles go white, and when she looks at you she asks for nothing: she only watches so as not to miss the moment you say something.",
+          "lead": "Mina is silent."
+        }
+      ],
+      "prompt": "The bell from the gate rings out, and in the cabin nobody speaks.",
+      "choices": [
+        {
+          "id": "s11_ratko",
+          "text": "You ask Ratko to count once more.",
+          "next": "odluka"
+        },
+        {
+          "id": "s11_sena",
+          "text": "You go to the stern, to the family from the ladder.",
+          "next": "odluka"
+        },
+        {
+          "id": "s11_hana",
+          "text": "You ask Hana what the Higher Shore would be without her.",
+          "next": "odluka"
+        }
+      ]
+    },
+    "odluka": {
+      "chapter": "c4",
+      "showChapter": true,
+      "img": "kapija",
+      "paragraphs": [
+        {
+          "t": "“I counted to the last head: forty-one. The gate does not forgive a miscount.”",
+          "lead": "What Ratko says.",
+          "who": "Ratko",
+          "if": {
+            "pick": "s11_ratko"
+          }
+        },
+        {
+          "t": "“Three villages, one chest and one doctor. I'm not asking you to choose me. Just that you know how much that is.”",
+          "lead": "What Hana says.",
+          "who": "Hana",
+          "if": {
+            "pick": "s11_hana"
+          }
+        },
+        {
+          "t": "“We asked for nothing. If it has to be, all three of us will get off. We don't part.”",
+          "lead": "What Sena says.",
+          "who": "Sena",
+          "if": {
+            "pick": "s11_sena"
+          }
+        },
+        {
+          "t": "The Higher Shore at dusk is a low, dark green island, and its gate two narrow pillars of white stone with an arch of rope. Above the pillars, low, both moons lie one on the other like one big white pupil. The water around the pillars rises slowly, tooth by tooth.",
+          "lead": "The gate."
+        },
+        {
+          "t": "“There it is. The Higher Shore.”",
+          "who": "Ti"
+        },
+        {
+          "t": "A horn sounds from the gate, one note, then another, and then a voice that wants no answer but a number: forty places, how many are you. The Dugi Dah stops half a ship's length from the pillars. Lovro nods toward you, because he can do nothing else.",
+          "lead": "The horn from the gate."
+        },
+        {
+          "t": "The ship is wet and smells of salt and wood. The sails hang like clothes after a vigil, and Ratko holds the list in both hands, as if it might fly away. Mina has dropped the chalk into her lap. Hana holds her chest before her like a shield.",
+          "lead": "The ship after the storm."
+        },
+        {
+          "t": "“Good thing there's no wind. At least I don't have to shout.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“You don't have to shout, Captain.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On deck there is a silence in which every small thing can be heard: water against the hull, Ratko's pencil, Mina's chalk. Sena holds Jaro's hand. Savo isn't here, but his “I don't lie” hovers over the deck like a question nobody asks.",
+          "lead": "Silence on deck."
+        }
+      ],
+      "prompt": "From the gate a voice waits, and on deck everyone is looking at you.",
+      "choices": [
+        {
+          "id": "od_a",
+          "text": "You say you will stay out, in the small skiff.",
+          "next": "kraj_a1",
+          "w": {
+            "a": 1
+          }
+        },
+        {
+          "id": "od_b",
+          "text": "You say the family from the ladder stays out.",
+          "next": "kraj_b1",
+          "w": {
+            "b": 1
+          }
+        },
+        {
+          "id": "od_c",
+          "text": "You say all forty-one are coming in.",
+          "next": "kraj_c1",
+          "w": {
+            "c": 1
+          }
+        }
+      ],
+      "hidden": {
+        "id": "od_ceka",
+        "text": "You stay silent and wait for someone else to speak.",
+        "next": "kraj_c1",
+        "w": {
+          "c": 1
+        },
+        "after": 30
+      }
+    },
+    "kraj_a1": {
+      "chapter": "c4",
+      "img": "more",
+      "paragraphs": [
+        {
+          "t": "They lower the skiff alongside the Dugi Dah, and Ratko holds the rope until his hands shake. In the skiff are an oar, a barrel of water, a blanket and a lantern. The gate is near enough that you can hear its horn, and far enough that you are left with only the sea.",
+          "lead": "The skiff alongside."
+        },
+        {
+          "t": "“That's enough, Ratko. Let go of the rope.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Nobody raises a voice. Ratko copies out the last line of the list, then crosses it out and looks away, and Lovro, on the bench, pulls his cap over his eyes. Sena stands with Jaro, not knowing whether she may thank you or not.",
+          "lead": "Ratko crosses out."
+        },
+        {
+          "t": "“If you're not here, who is the last? I never figured anybody could be left outside.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“I didn't figure on it either.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina stuffs a piece of chalk into your fist and says it's for everything that doesn't move. You'll count the sea, she says, because the sea does move, so it will be interesting.",
+          "lead": "Chalk for the sea.",
+          "if": {
+            "pick": "s1_mina"
+          }
+        },
+        {
+          "t": "“I'll count the sea.”",
+          "who": "Ti",
+          "if": {
+            "pick": "s1_mina"
+          }
+        },
+        {
+          "t": "The glass bead lies in your palm: Mina took it from her neck and pressed it into your hand, and her eyes shine as if both moons were looking out of them.",
+          "lead": "The bead.",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "“I'll keep it safe.”",
+          "who": "Ti",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "“When I arrive, I'll write you a letter and send it by the Board's boat. If they won't accept it, I'll write another.”",
+          "lead": "What Hana says.",
+          "who": "Hana"
+        },
+        {
+          "t": "“Write. I'll answer, if the letter reaches me.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“A good knot, that one from Pesak. It'll hold the skiff too. And if it gives, good thing the sea is wet: at least you won't land on dry ground.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro",
+          "if": {
+            "pick": "s2_cvor"
+          }
+        },
+        {
+          "t": "Hana leans over the rail and lowers a bundle of cloth into the skiff: bread, salt, and a bottle of fever medicine. She doesn't explain. A doctor doesn't ask whether the medicine is needed, she just gives it.",
+          "lead": "Hana gives."
+        },
+        {
+          "t": "“Thank you, Hana.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The oar is cold and smooth, and when the skiff touches the water, the ship above you rises like a wall. The Dugi Dah glides between the two white pillars, and the gate swallows it like one great, slow breath. Someone waves from the stern, then someone else.",
+          "lead": "The ship goes in."
+        },
+        {
+          "t": "“Say goodbye to everyone for me.”",
+          "who": "Ti"
+        },
+        {
+          "t": "You are left with the oar and the two moons merging above you. You hear the horn once, then once more, and the gate closes like a door with no words on it.",
+          "lead": "The gate closes."
+        },
+        {
+          "t": "“Go on. I'll manage somehow.”",
+          "who": "Ti"
+        }
+      ],
+      "next": "kraj_a2"
+    },
+    "kraj_a2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "The rain has stopped, and the sea is smooth as a sheet of paper. The tide lifts you slowly and without a sound, as if someone were carrying you on a palm. The light of two moons falls on the water as on one white plate.",
+          "lead": "After the rain."
+        },
+        {
+          "t": "Night falls, but it isn't dark: the moons stand one over the other and cast light like a single lamp. You drink water from the barrel, the blanket is rough and smells of the ship. You thought you would be afraid, and you only listen to the water touching wood.",
+          "lead": "Night in the skiff."
+        },
+        {
+          "t": "“It's calm. Calmer than I thought it would be.”",
+          "who": "Ti"
+        },
+        {
+          "t": "You hold the glass bead up to a moon, as Mina did, and wait for it to change. It doesn't change, but it is the exact color of the water.",
+          "lead": "The bead against the moon.",
+          "if": {
+            "pick": "s3_perla"
+          }
+        },
+        {
+          "t": "You think of the ship, now in harbor, of Hana's chest on a table, of Lovro's shoulder and of Ratko's list with one more line struck out. The thoughts pass through your head like fish through a net: a few stay, most go through.",
+          "lead": "Thoughts of the ship."
+        },
+        {
+          "t": "“They'll make it. They have to.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Before sleep you run a palm over the wood of the skiff: salt, knife marks, a small circle scratched into the bench. Someone once waited here, then got bored, then drew a circle.",
+          "lead": "A circle in the bench."
+        },
+        {
+          "t": "“Somebody has waited here before.”",
+          "who": "Ti"
+        },
+        {
+          "t": "You count the way Mina would: one skiff, one oar, one passenger, two moons that are no longer two. Ratko would say that doesn't count, and Mina would say everything counts.",
+          "lead": "You count."
+        },
+        {
+          "t": "Late in the night you hear a voice from the Higher Shore, far away and barely audible: someone is singing, and the song travels up the water. You can't make out the words, but you understand that they are sung for those who are outside.",
+          "lead": "A song from the shore."
+        },
+        {
+          "t": "“Keep singing. I'm listening.”",
+          "who": "Ti"
+        },
+        {
+          "t": "At dawn, where the sea is calm as after rain, you see one small sail. You don't know whose it is. You raise the oar, and the sail turns toward you.",
+          "lead": "A sail at dawn."
+        }
+      ],
+      "end": "a"
+    },
+    "kraj_b1": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "The horn from the gate answers your words with one long note. Ratko writes, his pencil squeaking across the list. Wordlessly he turns the paper toward you: thirty-eight names and two empty places that nobody will fill.",
+          "lead": "The horn answers."
+        },
+        {
+          "t": "“Write it down, Ratko.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Sena doesn't speak. She takes Jaro by the hand, the old woman by the arm, and goes toward the skiff they are lowering alongside. The boy turns and looks at you, gravely like Mina, with no accusation at all: he only looks.",
+          "lead": "The family climbs down."
+        },
+        {
+          "t": "“Take the blankets. Don't forget the blankets.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Little Jaro quietly asks whether the gate will be visible from the boat. Ratko tells him it will, all night long, and that they will keep a light burning for them if need be.",
+          "lead": "Jaro asks."
+        },
+        {
+          "t": "The old woman leaves you the bundle of jars: let it stay on the ship, she says, they won't need it. Her hand is warm and damp.",
+          "lead": "The bundle.",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "“Thank you. I'll take care of them.”",
+          "who": "Ti",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "“Ratko says one place fewer means one head fewer. But I counted: there are three heads.”",
+          "lead": "What Mina says.",
+          "who": "Mina"
+        },
+        {
+          "t": "“I know, Mina. I know.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko, without raising his eyes, drops his pocketknife and a ball of tarred twine into the skiff. For seams, he mutters, his brow more knotted than usual.",
+          "lead": "Ratko gives."
+        },
+        {
+          "t": "“Let them take a lamp too.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Out of the dark comes a small boat, and in it Savo. He says he can take them to Burad, but not back to the Higher Shore. This time too, he doesn't lie.",
+          "lead": "Savo in a boat."
+        },
+        {
+          "t": "“Jaro memorized the way to Burad. He counted the barrels.”",
+          "lead": "What Sena says.",
+          "who": "Sena"
+        },
+        {
+          "t": "“May Savo steer you well.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The Dugi Dah slowly glides between the two white pillars. Behind them, on the water, a small boat with a lantern is left, growing smaller, until the tide lifts it by one tooth.",
+          "lead": "The ship goes in."
+        }
+      ],
+      "next": "kraj_b2"
+    },
+    "kraj_b2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "The Higher Shore smells of damp stone and bread in the evening. Lamps burn along the shore, and the passengers go ashore one by one, quietly, as if entering a house where someone is asleep. Hana finds a place for her chest at once, on a table by the gate, and the first patient is already waiting.",
+          "lead": "The Higher Shore."
+        },
+        {
+          "t": "“Do you need a hand with the chest, Hana?”",
+          "who": "Ti"
+        },
+        {
+          "t": "In the harbor under the lamps a few people from the Higher Shore wait with blankets and bread. Nobody asks who was left outside. They only ask whether anyone is sick.",
+          "lead": "They are welcomed."
+        },
+        {
+          "t": "Hana examines the first patient's wrist, mutters something to herself and binds it with a splint. The patient is a boy of maybe six, who can't help looking toward the gate.",
+          "lead": "The first patient."
+        },
+        {
+          "t": "“Does it hurt?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko counts once more: thirty-eight on the list and thirty-eight on shore. He doesn't raise his eyes, and he holds his pencil as if it were heavier than this morning.",
+          "lead": "Ratko's list."
+        },
+        {
+          "t": "Lovro sits on a bench on the dock, his arm in a sling, looking at the gate. He tells no jokes, and as you pass he only touches your sleeve.",
+          "lead": "Lovro on the bench."
+        },
+        {
+          "t": "“Rest, Captain.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The jars from the old woman's bundle stand beside you on the dock, and one holds a fig. You open it, because you can't help it, and the fig is sweet, the way everything is sweet that belongs to someone.",
+          "lead": "The jar.",
+          "if": {
+            "pick": "s6_zavezljaj"
+          }
+        },
+        {
+          "t": "Mina stands at the end of the dock with her chalk, counting. When you ask her what, she doesn't turn around: “One lantern. One is more than zero.” Far off, only a dot, the light of the boat is still visible.",
+          "lead": "Mina on the dock."
+        },
+        {
+          "t": "“Count for me too.”",
+          "who": "Ti"
+        },
+        {
+          "t": "On shore someone begins to sing an old song about the tide. The song travels over the water, maybe to the boat, maybe only to the next day.",
+          "lead": "A song on the shore."
+        },
+        {
+          "t": "“Can it be heard all the way to the boat?”",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina sets her chalk down by your foot. On the planks of the dock she draws a circle, and in it one tally mark. “Tomorrow we'll do it again,” she says, and doesn't explain what, and you don't ask.",
+          "lead": "A circle on the planks."
+        }
+      ],
+      "end": "b"
+    },
+    "kraj_c1": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "You answer aloud, with the number everyone on deck already knows: forty-one. Your voice does not shake, and it sounds strange in the silence, as if you had dropped a stone down a well and were waiting to hear the bottom.",
+          "lead": "Your voice."
+        },
+        {
+          "t": "For a long time nothing happens at the gate. Then the horn sounds once, briefly, and the lantern on the pillar moves left and then right, like a man scratching his head.",
+          "lead": "The gate is silent."
+        },
+        {
+          "t": "“We wait.”",
+          "who": "Ti"
+        },
+        {
+          "t": "“Good thing the gate is slow. It'll have time to think.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "This time somebody laughs. Ratko, softly, through his nose, and Hana too, and Mina, who doesn't get the joke, laughs because everyone does. Sena holds her breath, and Jaro, without warning, starts counting aloud: one, two, three.",
+          "lead": "Laughter on deck."
+        },
+        {
+          "t": "“Don't forget to breathe.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina comes to stand beside you and looks at the gate, not at you. The chalk is in her pocket, and for the first time since you met, she counts nothing.",
+          "lead": "Mina beside you."
+        },
+        {
+          "t": "“Mina, you can rest your head.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Sena draws near, with Jaro hiding behind her coat. She asks for nothing, only stands beside you and holds the boy by the shoulders, the way you hold something that could vanish.",
+          "lead": "Sena beside you."
+        },
+        {
+          "t": "“Don't be afraid.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The water around the ship rises gently. The gangplank, which you raised last twice, creaks on its rope, and you look at it as at a witness.",
+          "lead": "The gangplank creaks."
+        },
+        {
+          "t": "“We raised it a long time, it and I.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The man from the gate lowers his lantern to the planks and asks, without anger, who was the last to step aboard. You raise your hand. The rule asks nothing more than that.",
+          "lead": "The question from the gate."
+        },
+        {
+          "t": "“That's me.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The knot you tied in Pesak still holds the ship's rope, so the Dugi Dah doesn't move a palm's width, however the tide pulls.",
+          "lead": "The knot holds.",
+          "if": {
+            "pick": "s2_cvor"
+          }
+        },
+        {
+          "t": "Ratko counts once more, then again, and in the list he makes two new lines and writes into them what he does not yet know.",
+          "lead": "Ratko writes.",
+          "if": {
+            "pick": "s7_pomoc"
+          }
+        },
+        {
+          "t": "“The gate doesn't have to say yes. It's enough that it doesn't say no.”",
+          "lead": "What Hana says.",
+          "who": "Hana"
+        },
+        {
+          "t": "“That's enough too.”",
+          "who": "Ti"
+        }
+      ],
+      "next": "kraj_c2"
+    },
+    "kraj_c2": {
+      "chapter": "c4",
+      "paragraphs": [
+        {
+          "t": "People from the Higher Shore gather under the gate: some with a lamp, some with a blanket, some only to watch. Nobody speaks loudly, as in a house where a child is being born or an old man is dying.",
+          "lead": "People on the shore."
+        },
+        {
+          "t": "Hana opens her chest without a word and lines up the bottles on the lid, as if preparing for work that awaits her whatever the gate decides. Every bottle has its place.",
+          "lead": "Hana prepares."
+        },
+        {
+          "t": "“Hana, there's time.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The man from the gate raises his lantern and counts. He starts from the stern: one, two. His voice is calm and dry, the voice of someone who does this every tide and still doesn't know how it will end.",
+          "lead": "The gate counts."
+        },
+        {
+          "t": "“Count slowly.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Mina counts with him, softly, ten steps behind his voice. When he reaches thirty, she stops to catch her breath, then they catch up, then miss each other, and at forty both stop.",
+          "lead": "Two counting."
+        },
+        {
+          "t": "“The rule says the last one decides. It doesn't say he has to be quick.”",
+          "lead": "What Lovro says.",
+          "who": "Lovro"
+        },
+        {
+          "t": "“I'm not in a hurry.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Nothing is heard. The water around the pillars rises by another tooth, and the ship rises with it, calmly, as if it too were counted. Sena doesn't breathe, and Hana grips her chest with both hands.",
+          "lead": "Silence after forty."
+        },
+        {
+          "t": "“Mina, hold on.”",
+          "who": "Ti"
+        },
+        {
+          "t": "Ratko lays his pencil on the list and, for the first time since you've known him, writes nothing. Lovro, on the bench, looks across the water at the Higher Shore and makes no jokes.",
+          "lead": "Nothing is written."
+        },
+        {
+          "t": "Savo, far behind on his boat, raises his hat toward the ship and comes no closer. For the first time you see him selling nothing.",
+          "lead": "Savo in the distance."
+        },
+        {
+          "t": "“Not even Savo knows how this will end.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The moons are now exactly one over the other. Mina has fallen asleep on your shoulder, and the chalk has dropped from her hand and rolled to the edge of the deck. You don't pick it up.",
+          "lead": "Mina sleeps."
+        },
+        {
+          "t": "“Quiet. Let her sleep.”",
+          "who": "Ti"
+        },
+        {
+          "t": "The gate stays open exactly one ship wide, no more, no less. Someone on the other side lights another lantern, then a third, and you wait for someone to say the next number.",
+          "lead": "The gate stays open."
+        }
+      ],
+      "end": "c"
+    }
+  },
+  "images": {
+    "cover": {
+      "src": "img/jedra-vise-obale/cover.webp",
+      "alt": "The old cargo sailer Dugi Dah heads for the Higher Shore under two moons",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 36,
+          "y": 22,
+          "r": 4,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 60,
+          "y": 24,
+          "r": 3.5,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 22,
+          "ripple": 0.3,
+          "glints": 10,
+          "columns": [
+            [
+              48,
+              0.5,
+              "fxCold"
+            ]
+          ]
+        }
+      ]
+    },
+    "paluba": {
+      "src": "img/jedra-vise-obale/paluba.webp",
+      "alt": "The deck of the Dugi Dah at dawn: sails and two pale moons",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 36,
+          "y": 20,
+          "r": 4,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 62,
+          "y": 22,
+          "r": 3.5,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "pesak": {
+      "src": "img/jedra-vise-obale/pesak.webp",
+      "alt": "The village of Pesak: white wooden rafts and sailcloth huts",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 52,
+          "y": 18,
+          "r": 8,
+          "color": "fxSun",
+          "rays": true
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 64,
+          "w": 70,
+          "h": 22,
+          "ripple": 0.3,
+          "glints": 10,
+          "columns": [
+            [
+              52,
+              0.5,
+              "fxSun"
+            ]
+          ]
+        }
+      ]
+    },
+    "gvozdje": {
+      "src": "img/jedra-vise-obale/gvozdje.webp",
+      "alt": "The village of Gvožđe: rusted hulls chained together",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 46,
+          "y": 40,
+          "r": 3,
+          "color": "fxWarm",
+          "flicker": 0.25
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 20,
+          "ripple": 0.3,
+          "glints": 8
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "burad": {
+      "src": "img/jedra-vise-obale/burad.webp",
+      "alt": "Burad: an island of barrels and salt fields",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "sun",
+          "x": 58,
+          "y": 16,
+          "r": 7,
+          "color": "fxSun",
+          "rays": true
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 20,
+          "ripple": 0.3,
+          "glints": 8,
+          "columns": [
+            [
+              58,
+              0.4,
+              "fxSun"
+            ]
+          ]
+        }
+      ]
+    },
+    "kajuta": {
+      "src": "img/jedra-vise-obale/kajuta.webp",
+      "alt": "The ship's cabin with the list of places on the wall",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 28,
+          "r": 6,
+          "color": "fxWarm",
+          "flicker": 0.25
+        },
+        {
+          "type": "dust",
+          "density": 0.3
+        }
+      ]
+    },
+    "jarbol": {
+      "src": "img/jedra-vise-obale/jarbol.webp",
+      "alt": "The mast and sails in a storm",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "rain",
+          "density": 0.6
+        },
+        {
+          "type": "glow",
+          "x": 52,
+          "y": 34,
+          "r": 3,
+          "color": "fxWarm",
+          "flicker": 0.3
+        },
+        {
+          "type": "mist"
+        }
+      ]
+    },
+    "kapija": {
+      "src": "img/jedra-vise-obale/kapija.webp",
+      "alt": "The gate of the Higher Shore at dusk, two moons above it",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 14,
+          "r": 7,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 40,
+          "r": 3.5,
+          "color": "fxWarm",
+          "flicker": 0.25
+        },
+        {
+          "type": "water",
+          "x": 15,
+          "y": 66,
+          "w": 70,
+          "h": 20,
+          "ripple": 0.3,
+          "glints": 8,
+          "columns": [
+            [
+              50,
+              0.5,
+              "fxCold"
+            ]
+          ]
+        }
+      ]
+    },
+    "more": {
+      "src": "img/jedra-vise-obale/more.webp",
+      "alt": "Calm sea after rain and two moons one over the other",
+      "kind": "place",
+      "fx": [
+        {
+          "type": "glow",
+          "x": 50,
+          "y": 18,
+          "r": 6,
+          "color": "fxCold",
+          "flicker": 0.1
+        },
+        {
+          "type": "water",
+          "x": 12,
+          "y": 58,
+          "w": 76,
+          "h": 28,
+          "ripple": 0.3,
+          "glints": 10,
+          "columns": [
+            [
+              50,
+              0.6,
+              "fxCold"
+            ]
+          ]
+        }
+      ]
+    },
+    "lovro": {
+      "src": "img/jedra-vise-obale/lovro.webp",
+      "alt": "Lovro, captain of the Dugi Dah",
+      "kind": "portrait"
+    },
+    "mina": {
+      "src": "img/jedra-vise-obale/mina.webp",
+      "alt": "Mina, a girl who counts",
+      "kind": "portrait"
+    },
+    "ratko": {
+      "src": "img/jedra-vise-obale/ratko.webp",
+      "alt": "Ratko, caulker and keeper of the list",
+      "kind": "portrait"
+    },
+    "hana": {
+      "src": "img/jedra-vise-obale/hana.webp",
+      "alt": "Hana, a doctor",
+      "kind": "portrait"
+    },
+    "savo": {
+      "src": "img/jedra-vise-obale/savo.webp",
+      "alt": "Savo, a trader",
+      "kind": "portrait"
+    },
+    "sena": {
+      "src": "img/jedra-vise-obale/sena.webp",
+      "alt": "Sena, a mother from the stern ladder",
+      "kind": "portrait"
+    },
+    "citalac-m": {
+      "src": "img/jedra-vise-obale/citalac-m.webp",
+      "alt": "Traveler",
+      "kind": "portrait"
+    },
+    "citalac-z": {
+      "src": "img/jedra-vise-obale/citalac-z.webp",
+      "alt": "Traveler",
+      "kind": "portrait"
+    }
+  },
+  "characters": {
+    "Lovro": {
+      "img": "lovro"
+    },
+    "Mina": {
+      "img": "mina"
+    },
+    "Ratko": {
+      "img": "ratko"
+    },
+    "Hana": {
+      "img": "hana"
+    },
+    "Savo": {
+      "img": "savo"
+    },
+    "Sena": {
+      "img": "sena"
+    },
+    "__reader__": {
+      "who": "Ti",
+      "imgM": "citalac-m",
+      "imgF": "citalac-z"
+    }
+  }
+}

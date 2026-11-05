@@ -29,6 +29,10 @@
 /en/ruke-na-konopcu/citaj  /en/hands-on-line  301
 /hands-on-line  /ruke-na-konopcu  301
 /hands-on-line/citaj  /ruke-na-konopcu  301
+/en/jedra-vise-obale  /en/higher-shore  301
+/en/jedra-vise-obale/citaj  /en/higher-shore  301
+/higher-shore  /jedra-vise-obale  301
+/higher-shore/citaj  /jedra-vise-obale  301
 /en/privatnost  /en/privacy  301
 /privacy  /privatnost  301
 /en/odricanje-odgovornosti  /en/disclaimer  301
