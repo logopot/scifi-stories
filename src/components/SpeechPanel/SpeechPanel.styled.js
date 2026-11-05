@@ -84,6 +84,28 @@ export const Portrait = styled.div`
   }
 `;
 
+// Ime pri dnu portreta (samo telefon, kad su na strani oba portreta); boja je uvek svetla jer stoji preko slike.
+export const Caption = styled.span`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: ${({ theme }) => theme.space[150]} ${({ theme }) => theme.space[60]} ${({ theme }) => theme.space[60]};
+  background: linear-gradient(to top, rgba(10, 18, 22, 0.88), rgba(10, 18, 22, 0));
+  color: #f3ead7;
+  font-family: ${({ theme }) => theme.fonts.ui};
+  font-size: ${({ theme }) => theme.fs[78]};
+  font-weight: 600;
+  letter-spacing: ${({ theme }) => theme.tracking[22]};
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+
+  ${md} {
+    display: none;
+  }
+`;
+
 // Desktop: unutrašnji skrol (ploča ne prelazi oko 70% visine ekrana); portret je izvan njega, pa ne sme da se odseče.
 // Uz portret ostaje prazan prostor sa njegove strane.
 export const Scroll = styled.div`
@@ -221,7 +243,10 @@ export const Name = styled.span`
       ${$right ? 'right' : 'left'}: calc(${$both ? theme.sizes.scenePortraitMobileBoth : theme.sizes.scenePortraitMobile} + ${theme.space[100]});
     `}
 
+  ${({ $both }) => $both && css`display: none;`}
+
   ${md} {
     position: static;
+    display: block;
   }
 `;
