@@ -164,6 +164,27 @@ export const stories = [
       load: () => import("./ruke-na-konopcu/story.en.json"),
     },
   },
+  {
+    slug: "jedra-vise-obale",
+    path: { sr: "jedra-vise-obale" },
+    title: "Jedra do Više obale",
+    tagline: "More na planeti raste, a mesta na Višoj obali ima za jedan manje nego što je ljudi.",
+    genre: "Naučna fantastika",
+    minutes: 20,
+    cover: "img/jedra-vise-obale/cover.webp",
+    coverAlt: "Stari teretni brod Dugi Dah plovi ka Višoj obali pod dva meseca",
+    status: "ready",
+    load: () => import("./jedra-vise-obale/story.json"),
+    en: {
+      path: "higher-shore",
+      title: "Sails to the Higher Shore",
+      tagline:
+        "The sea on this planet keeps rising, and the Higher Shore has one place fewer than there are people.",
+      genre: "Science fiction",
+      coverAlt: "The old cargo sailer Dugi Dah heads for the Higher Shore under two moons",
+      load: () => import("./jedra-vise-obale/story.en.json"),
+    },
+  },
   // Rezervisana mesta (tamna i svetla tema). Za brisanje: ukloni unos ovde i temu u themes.js.
 ];
 
