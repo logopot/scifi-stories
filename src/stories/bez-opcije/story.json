@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "Na planeti Tandem nikada nije noć. Dva sunca stoje na nebu, svaka stvar baca po dve senke, a nijedan stanovnik nikada nije morao da odluči šta će sledeće da uradi. Na tu planetu padaš ti, bez ičega osim napuklog vizira i želje da preživiš. Pred tobom će se pojavljivati ponude, baš kao i svima ostalima na Tandemu."

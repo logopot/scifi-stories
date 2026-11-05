@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "Utočište je grad ispod Visoke brane, na dnu doline u kojoj je nekada bilo jezero. Voda se ovde deli po meri, a meru izračunava sistem koji se zove Merač. Ti dolaziš sa jednim zadatkom i tri dana vremena. Pred tobom će se pojavljivati ponude."

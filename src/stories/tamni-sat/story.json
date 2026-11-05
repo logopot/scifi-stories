@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "Greben je prekidačka stanica na grebenu između Svetlih polja i grada Lantara. Večeras ti je prva smena, vrućina steže vod, a u Kuli već čekaju da se javiš."

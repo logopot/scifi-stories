@@ -25,6 +25,8 @@
   "ui": {
     "next": "Next",
     "finish": "To the end",
+
+    "swipe": "or swipe left",
     "start": {
       "intro": [
         "Greben is a switching station on the ridge between the Bright Fields and the city of Lantar. Tonight is your first shift, the heat is straining the line, and the Tower is already waiting for you to answer."

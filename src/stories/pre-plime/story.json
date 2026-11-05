@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "Na Plićaku se ništa ne seje bez pečata i bez Tokove liste. Večeras tvoj čamac vozi seme za Veće, plima stiže u šest i deset, a na pristanu Niske strane neko ljulja fenjer."

@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "U Tihovu se zima preživljava iz jedne ostave, a ostava se otvara jednim ključem. Večeras je ključ kod tebe, sanke stižu u pola šest, a na Kapiji čeka red sa fenjerima."

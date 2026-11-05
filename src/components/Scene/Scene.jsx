@@ -19,6 +19,27 @@ import * as S from './Scene.styled';
 const DEFAULT_IDLE_SECONDS = 20;
 const CLICK_GUARD_MS = 350; // sprečava da dupli klik preskoči stranu
 const TYPING_TAGS = ['INPUT', 'TEXTAREA', 'SELECT'];
+const SWIPE_MIN_PX = 50; // najmanji vodoravni pomak za listanje prevlačenjem
+const SWIPE_RATIO = 1.5; // vodoravni pomak mora biti bar toliko puta veći od vertikalnog
+const SWIPE_HINT_KEY = 'swipeHintShown';
+const SWIPE_HINT_PAGES = 3; // nagoveštaj "ili prevuci ulevo" se prikazuje na prvih par strana po sesiji
+// Gest koji počinje na dugmetu, vezi, polju za unos ili u otvorenom panelu nije listanje.
+const SWIPE_IGNORE = 'button, a, input, textarea, select, [role="dialog"], [contenteditable="true"]';
+
+const readSwipeShown = () => {
+  try {
+    return Number(sessionStorage.getItem(SWIPE_HINT_KEY)) || 0;
+  } catch {
+    return 0;
+  }
+};
+const writeSwipeShown = (n) => {
+  try {
+    sessionStorage.setItem(SWIPE_HINT_KEY, String(n));
+  } catch {
+    /* sessionStorage nije dostupan: nagoveštaj se samo ne pamti */
+  }
+};
 
 export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0 }) {
   const { story, engine } = useStory();
@@ -27,6 +48,7 @@ export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0
   const pages = useMemo(() => engine.buildPages(node, picks, player), [nodeId]); // eslint-disable-line react-hooks/exhaustive-deps
   const [page, setPage] = useState(initialPage);
   const [ghostVisible, setGhostVisible] = useState(false);
+  const [swipeNote, setSwipeNote] = useState(false);
   const lastTurn = useRef(0);
 
   const isLast = page >= pages.length - 1;
@@ -63,6 +85,9 @@ export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0
   );
 
   const proceed = useCallback(() => {
+    const now = Date.now();
+    if (now - lastTurn.current < CLICK_GUARD_MS) return;
+    lastTurn.current = now;
     if (node.end) {
       dispatch({ type: 'FINISH', ending: node.end });
       return;
@@ -112,6 +137,56 @@ export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [isLast, hasChoices, node, turn, choose, proceed]);
+
+  // Prevlačenje na telefonu: ulevo = dalje (na poslednjoj strani bez izbora isto što i dugme), udesno = nazad.
+  // Na poslednjoj strani sa izborima ulevo ne radi ništa: izbor se bira samo dodirom. Skrol se ne dira (passive).
+  useEffect(() => {
+    let start = null;
+    const onStart = (e) => {
+      const t = e.touches[0];
+      start = e.touches.length === 1 && t && !(e.target instanceof Element && e.target.closest(SWIPE_IGNORE)) ? { x: t.clientX, y: t.clientY } : null;
+    };
+    const onEnd = (e) => {
+      const s = start;
+      start = null;
+      const t = e.changedTouches[0];
+      if (!s || !t) return;
+      const dx = t.clientX - s.x;
+      const dy = t.clientY - s.y;
+      if (Math.abs(dx) < SWIPE_MIN_PX || Math.abs(dx) < SWIPE_RATIO * Math.abs(dy)) return;
+      writeSwipeShown(SWIPE_HINT_PAGES); // ko je prevukao, nagoveštaj mu više ne treba
+      if (dx > 0) turn(-1);
+      else if (!isLast) turn(1);
+      else if (!hasChoices) proceed();
+    };
+    const onCancel = () => {
+      start = null;
+    };
+    window.addEventListener('touchstart', onStart, { passive: true });
+    window.addEventListener('touchend', onEnd, { passive: true });
+    window.addEventListener('touchcancel', onCancel, { passive: true });
+    return () => {
+      window.removeEventListener('touchstart', onStart);
+      window.removeEventListener('touchend', onEnd);
+      window.removeEventListener('touchcancel', onCancel);
+    };
+  }, [isLast, hasChoices, turn, proceed]);
+
+  // Nagoveštaj prevlačenja: samo na ekranu osetljivom na dodir, na strani sa dugmetom "dalje", prvih par strana po sesiji.
+  const hasNextHint = !isLast || !hasChoices;
+  useEffect(() => {
+    if (!hasNextHint || !window.matchMedia || !window.matchMedia('(pointer: coarse)').matches) {
+      setSwipeNote(false);
+      return;
+    }
+    const shown = readSwipeShown();
+    if (shown >= SWIPE_HINT_PAGES) {
+      setSwipeNote(false);
+      return;
+    }
+    writeSwipeShown(shown + 1);
+    setSwipeNote(true);
+  }, [nodeId, page]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const current = pages[page];
 
@@ -191,10 +266,12 @@ export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0
           })}
 
           {!isLast && <Hint onClick={() => turn(1)}>{nextLead || story.ui.next}</Hint>}
+          {!isLast && swipeNote && story.ui.swipe && <S.SwipeNote>{story.ui.swipe}</S.SwipeNote>}
           {choicesBlock}
           {isLast && !hasChoices && (
             <Hint onClick={proceed}>{node.end ? story.ui.finish : sceneLead || story.ui.next}</Hint>
           )}
+          {isLast && !hasChoices && swipeNote && story.ui.swipe && <S.SwipeNote>{story.ui.swipe}</S.SwipeNote>}
 
           {pages.length > 1 && <PageNumber page={page + 1} total={pages.length} />}
         </PageBox>

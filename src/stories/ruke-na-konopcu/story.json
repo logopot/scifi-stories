@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "U Velmaru lađe vezuju ljudi, a od prošle godine i mašina. Magla se penje uz liticu, konvoj stiže pre jutra, u ruci ti je pečat, a do šest treba da se zna čiji je ovo noćas posao."

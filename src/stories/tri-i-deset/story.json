@@ -25,6 +25,8 @@
   "ui": {
     "next": "Dalje",
     "finish": "Do kraja",
+
+    "swipe": "ili prevuci ulevo",
     "start": {
       "intro": [
         "Prevoj je planinski grad, a nad njim stoji Stub, toranj sa antenama. Na njegovom vrhu radi poslednja ljudska smena. Ti stižeš u 22:40 sa pečatom Uprave i jednim zadatkom, a oblak otpada prelazi nebo iznad grada u tri i deset."
