@@ -7,6 +7,7 @@ import * as S from './SpeechPanel.styled';
 // Panel sa tekstom strane. Od md: pri dnu ekrana (tamna staklasta ploča); na telefonu: običan tok ispod slike.
 // Govornici strane (`speakers`: do dva, { side: 'left' | 'right', portrait }) staju uz ploču: lik koji nije čitalac levo,
 // čitalac desno; kad govore oba, vide se oba portreta. `name` je ime u zaglavlju, uz portret na strani `nameSide`.
+// Na telefonu, kad su na strani oba portreta, svaki nosi svoje ime pri dnu (Caption), a ime u zaglavlju se ne prikazuje.
 // Lik bez slike (ili slika koja se ne učita) ostaje samo ime. `resetKey` vraća unutrašnji skrol na vrh.
 // `title` (naslov početnog i završnog ekrana) na telefonu stoji preko donjeg dela slike, na ploči je prvi u tekstu.
 // `columns` (početni ekran): od md je ploča mreža sa dve kolone; naslov je u prvoj, a deca (display: contents) u mreži.
@@ -37,6 +38,7 @@ export default function SpeechPanel({ name, nameSide = 'left', speakers = [], re
               alt=""
               onError={() => setFailed((f) => [...f, s.portrait])}
             />
+            {both && s.name && <S.Caption>{s.name}</S.Caption>}
           </S.Portrait>
         ))}
         <S.Scroll ref={scroll} $left={left} $right={right} $both={both}>

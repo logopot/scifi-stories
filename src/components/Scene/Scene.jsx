@@ -157,8 +157,8 @@ export default function Scene({ nodeId, picks, player, dispatch, initialPage = 0
   const head = other || readerLine;
   const portraitOf = (c) => (c && c.image ? c.image.src : null);
   const speakers = [
-    other && { side: 'left', portrait: portraitOf(other) },
-    readerLine && { side: 'right', portrait: portraitOf(readerLine) },
+    other && { side: 'left', portrait: portraitOf(other), name: other.name },
+    readerLine && { side: 'right', portrait: portraitOf(readerLine), name: readerLine.name },
   ].filter(Boolean);
   return (
     <S.Article>
